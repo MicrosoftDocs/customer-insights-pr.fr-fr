@@ -1,0 +1,74 @@
+---
+title: Connecteur Power Apps
+description: Connectez-vous à Power Apps et Power Automate.
+ms.date: 08/21/2020
+ms.reviewer: nikeller
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+manager: shellyha
+ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405638"
+---
+# <a name="microsoft-power-apps-connector-preview"></a><span data-ttu-id="dc39d-103">Connecteur Microsoft Power Apps (préversion)</span><span class="sxs-lookup"><span data-stu-id="dc39d-103">Microsoft Power Apps connector (preview)</span></span>
+
+<span data-ttu-id="dc39d-104">Importez des profils client unifiés dans vos applications personnalisées avec Power Apps.</span><span class="sxs-lookup"><span data-stu-id="dc39d-104">Bring unified customer profiles into your personalized apps with Power Apps.</span></span>
+
+## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a><span data-ttu-id="dc39d-105">Connectez-vous à Power Apps et à Dynamics 365 Customer Insights</span><span class="sxs-lookup"><span data-stu-id="dc39d-105">Connect Power Apps and Dynamics 365 Customer Insights</span></span>
+
+<span data-ttu-id="dc39d-106">Customer Insights est l’une des nombreuses [sources disponibles pour les données dans Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).</span><span class="sxs-lookup"><span data-stu-id="dc39d-106">Customer Insights is one of the many [available sources for data in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).</span></span>
+
+<span data-ttu-id="dc39d-107">Consultez la documentation de Power Apps pour savoir comment [ajouter une connexion de données à une application](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection).</span><span class="sxs-lookup"><span data-stu-id="dc39d-107">Refer to the Power Apps documentation to learn how to [add a data connection to an app](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection).</span></span> <span data-ttu-id="dc39d-108">Nous vous recommandons de consulter également l’article [Comment Power Apps utilise la délégation pour gérer de grands ensembles de données dans les applications canevas](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).</span><span class="sxs-lookup"><span data-stu-id="dc39d-108">We recommend you also review [how Power Apps uses delegation to handle large datasets in Canvas apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).</span></span>
+
+## <a name="available-entities"></a><span data-ttu-id="dc39d-109">Entités disponibles</span><span class="sxs-lookup"><span data-stu-id="dc39d-109">Available entities</span></span>
+
+<span data-ttu-id="dc39d-110">Après avoir ajouté Customer Insights en tant que connexion de données, vous pouvez choisir les entités suivantes dans Power Apps :</span><span class="sxs-lookup"><span data-stu-id="dc39d-110">After adding Customer Insights as a data connection, you can choose the following entities in Power Apps:</span></span>
+
+- <span data-ttu-id="dc39d-111">Client : pour utiliser les données du [profil client unifié](customer-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="dc39d-111">Customer: to use data from the [unified customer profile](customer-profiles.md).</span></span>
+- <span data-ttu-id="dc39d-112">Activité client unifiée : pour afficher la [chronologie des activités](activities.md) sur l’application.</span><span class="sxs-lookup"><span data-stu-id="dc39d-112">Unified Customer Activity: to display the [activity timeline](activities.md) on the app.</span></span>
+
+## <a name="limitations"></a><span data-ttu-id="dc39d-113">Limitations</span><span class="sxs-lookup"><span data-stu-id="dc39d-113">Limitations</span></span>
+
+### <a name="retrievable-entities"></a><span data-ttu-id="dc39d-114">Entités récupérables</span><span class="sxs-lookup"><span data-stu-id="dc39d-114">Retrievable entities</span></span>
+
+<span data-ttu-id="dc39d-115">Vous ne pouvez récupérer que les entités **Client**, **UnifiedActivity**, et **Segments** à l’aide du connecteur Power Apps.</span><span class="sxs-lookup"><span data-stu-id="dc39d-115">You can only retrieve the **Customer**, **UnifiedActivity**, and **Segments** entities through the Power Apps connector.</span></span> <span data-ttu-id="dc39d-116">D’autres entités sont affichées, car le connecteur sous-jacent les prend en charge par le biais des déclencheurs dans Power Automate.</span><span class="sxs-lookup"><span data-stu-id="dc39d-116">Other entities are shown because the underlying connector supports them through triggers in Power Automate.</span></span>  
+
+### <a name="delegation"></a><span data-ttu-id="dc39d-117">Délégation</span><span class="sxs-lookup"><span data-stu-id="dc39d-117">Delegation</span></span>
+
+<span data-ttu-id="dc39d-118">La délégation fonctionne pour l’entité Client et l’entité UnifiedActivity.</span><span class="sxs-lookup"><span data-stu-id="dc39d-118">Delegation works for the Customer entity and UnifiedActivity entity.</span></span> 
+
+- <span data-ttu-id="dc39d-119">Délégation pour l'entité **Client** : pour utiliser la délégation pour cette entité, les champs doivent être indexés dans [Index Rechercher et filtrer](search-filter-index.md).</span><span class="sxs-lookup"><span data-stu-id="dc39d-119">Delegation for **Customer** entity: To use delegation for this entity, the fields need to be indexed in [Search & filter index](search-filter-index.md).</span></span>  
+
+- <span data-ttu-id="dc39d-120">Délégation pour **UnifiedActivity** : La délégation pour cette entité ne fonctionne que pour les champs **ActivityId** et **N° de client**.</span><span class="sxs-lookup"><span data-stu-id="dc39d-120">Delegation for **UnifiedActivity**: Delegation for this entity only works for the fields **ActivityId** and **CustomerId**.</span></span>  
+
+- <span data-ttu-id="dc39d-121">Pour plus d’informations sur la délégation, voir [Fonctions et opérations délégables Power Apps](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps).</span><span class="sxs-lookup"><span data-stu-id="dc39d-121">For more information about delegation, see [Power Apps delegable functions and operations](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps).</span></span> 
+
+## <a name="example-gallery-control"></a><span data-ttu-id="dc39d-122">Exemple de contrôle de galerie</span><span class="sxs-lookup"><span data-stu-id="dc39d-122">Example gallery control</span></span>
+
+<span data-ttu-id="dc39d-123">Par exemple, vous ajoutez des profils clients à un [contrôle de galerie](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).</span><span class="sxs-lookup"><span data-stu-id="dc39d-123">For example, you add customer profiles to a [gallery control](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).</span></span>
+
+1. <span data-ttu-id="dc39d-124">Ajoutez un contrôle **Galerie** à une application que vous créez.</span><span class="sxs-lookup"><span data-stu-id="dc39d-124">Add a **Gallery** control to an app you're building.</span></span>
+
+> [!div class="mx-imgBorder"]
+> <span data-ttu-id="dc39d-125">![Ajouter un élément de galerie](media/connector-powerapps9.png "Ajouter un élément de galerie")</span><span class="sxs-lookup"><span data-stu-id="dc39d-125">![Add a gallery element](media/connector-powerapps9.png "Add a gallery element")</span></span>
+
+1. <span data-ttu-id="dc39d-126">Sélectionnez **Client** comme source de données pour les éléments.</span><span class="sxs-lookup"><span data-stu-id="dc39d-126">Select **Customer** as the data source for items.</span></span>
+
+    > [!div class="mx-imgBorder"]
+    > <span data-ttu-id="dc39d-127">![Sélectionner une source de données](media/choose-datasource-powerapps.png "Sélectionner une source de données")</span><span class="sxs-lookup"><span data-stu-id="dc39d-127">![Select a data source](media/choose-datasource-powerapps.png "Select a data source")</span></span>
+
+1. <span data-ttu-id="dc39d-128">Vous pouvez modifier le volet de données sur la droite pour sélectionner le champ de l’entité Client à afficher dans la galerie.</span><span class="sxs-lookup"><span data-stu-id="dc39d-128">You can change the data panel on the right to select which field for the Customer entity to show on the gallery.</span></span>
+
+1. <span data-ttu-id="dc39d-129">Si vous souhaitez afficher n’importe quel champ du client sélectionné dans la galerie, renseignez la propriété de texte d’une étiquette : **{Name_of_the_gallery}.Selected.{property_name}**</span><span class="sxs-lookup"><span data-stu-id="dc39d-129">If you want to show any field from the selected customer on the gallery, fill in the Text property of a label:  **{Name_of_the_gallery}.Selected.{property_name}**</span></span>
+
+    <span data-ttu-id="dc39d-130">Exemple : Gallery1.Selected.addresse1_ville</span><span class="sxs-lookup"><span data-stu-id="dc39d-130">Example: Gallery1.Selected.address1_city</span></span>
+
+1. <span data-ttu-id="dc39d-131">Pour afficher la chronologie unifiée pour un client, ajouter un élément de galerie et ajouter la propriété Éléments : **Filter(’UnifiedActivity’, CustomerId = {Customer_Id})**</span><span class="sxs-lookup"><span data-stu-id="dc39d-131">To display the unified timeline for a customer, add a Gallery element, and add the Items property: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**</span></span>
+
+    <span data-ttu-id="dc39d-132">Exemple : Filter(’UnifiedActivity’, CustomerId = Gallery1.Selected.CustomerId)</span><span class="sxs-lookup"><span data-stu-id="dc39d-132">Example: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)</span></span>
