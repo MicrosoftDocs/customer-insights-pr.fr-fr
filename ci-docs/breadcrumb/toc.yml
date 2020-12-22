@@ -1,0 +1,11 @@
+- name: Documents
+  tocHref: /
+  topicHref: /
+  items:
+    - name: "Dynamics\_365"
+      tocHref: /dynamics365/
+      topicHref: /dynamics365/
+      items:
+        - name: "Customer\_Insights"
+          tocHref: /dynamics365/customer-insights/
+          topicHref: /dynamics365/customer-insights/

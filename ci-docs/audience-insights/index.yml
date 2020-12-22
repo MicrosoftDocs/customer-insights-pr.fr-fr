@@ -1,0 +1,79 @@
+### YamlMime:Landing
+title: Fonctionnalité Audience Insights de Dynamics 365 Customer Insights
+summary: Ingérez, unifiez et organisez les données clients de plusieurs sources. Créez et gérez des profils client et une segmentation en temps réel. Intégrez les données client à d'autres systèmes pour les rendre encore plus exploitables.
+metadata:
+  title: Documentation de Audience Insights
+  description: Centre d'aide avec des liens clés pour Audience Insights.
+  ms.service: customer-insights
+  ms.subservice: audience-insights
+  ms.topic: landing-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.date: 10/16/2020
+  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4405672"
+landingContent:
+- title: À propos de Audience Insights
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Vue d’ensemble du produit
+      url: overview.md
+    - text: Fonctionnalités nouvelles et mises à jour
+      url: whats-new-audience-insights.md
+    - text: Site de la communauté
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+- title: Ingestion de sources de données
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Ajouter des sources de données
+      url: data-sources.md
+    - text: Actualisation incrémentielle
+      url: incremental-refresh-data-sources.md
+    - text: Comprendre les entités
+      url: entities.md
+- title: Unifier les données
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Mappage
+      url: map-entities.md
+    - text: Correspondance
+      url: match-entities.md
+    - text: Fusionner
+      url: merge-entities.md
+- title: Affiner les profils client
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurez des relations
+      url: relationships.md
+    - text: Répertorier les activités du client
+      url: activities.md
+    - text: Apportez vos propres modèles Machine Learning
+      url: custom-models.md
+- title: Exporter des données client
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurer les destinations d'exportation
+      url: export-destinations.md
+    - text: Cartes client dans les applications Dynamics 365
+      url: customer-card-add-in.md
+    - text: Connecteur Power BI
+      url: export-power-bi.md
+- title: Administrer l’application
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configuration du système
+      url: system.md
+    - text: Définir des autorisations utilisateur
+      url: permissions.md
+    - text: Gérer plusieurs environnements
+      url: manage-environments.md
