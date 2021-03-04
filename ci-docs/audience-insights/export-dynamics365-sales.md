@@ -1,51 +1,57 @@
 ---
 title: Exporter des données Customer Insights vers Dynamics 365 Sales
 description: Découvrez comment configurer la connexion à Dynamics 365 Sales.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643815"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269005"
 ---
-# <a name="connector-for-dynamics-365-sales-preview"></a><span data-ttu-id="87a73-103">Connecteur pour Dynamics 365 Sales (préversion)</span><span class="sxs-lookup"><span data-stu-id="87a73-103">Connector for Dynamics 365 Sales (preview)</span></span>
+# <a name="connector-for-dynamics-365-sales-preview"></a><span data-ttu-id="028e2-103">Connecteur pour Dynamics 365 Sales (préversion)</span><span class="sxs-lookup"><span data-stu-id="028e2-103">Connector for Dynamics 365 Sales (preview)</span></span>
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-<span data-ttu-id="87a73-104">Utilisez vos données client pour créer des listes marketing, effectuer le suivi de workflows et publier des promotions avec Dynamics 365 Sales.</span><span class="sxs-lookup"><span data-stu-id="87a73-104">Use your customer data to create marketing lists, follow up workflows, and send out promotions with Dynamics 365 Sales.</span></span>
+<span data-ttu-id="028e2-104">Utilisez vos données client pour créer des listes marketing, effectuer le suivi de workflows et publier des promotions avec Dynamics 365 Sales.</span><span class="sxs-lookup"><span data-stu-id="028e2-104">Use your customer data to create marketing lists, follow up workflows, and send out promotions with Dynamics 365 Sales.</span></span>
 
-## <a name="prerequisite"></a><span data-ttu-id="87a73-105">Éléments requis</span><span class="sxs-lookup"><span data-stu-id="87a73-105">Prerequisite</span></span>
+## <a name="prerequisite"></a><span data-ttu-id="028e2-105">Conditions préalables</span><span class="sxs-lookup"><span data-stu-id="028e2-105">Prerequisite</span></span>
 
-<span data-ttu-id="87a73-106">Enregistrements de contact [de Dynamics 365 Sales ingérés à l'aide de Common Data Service](connect-power-query.md).</span><span class="sxs-lookup"><span data-stu-id="87a73-106">Contact records [from Dynamics 365 Sales ingested using Common Data Service](connect-power-query.md).</span></span>
+1. <span data-ttu-id="028e2-106">Les enregistrements de contact doivent être présents dans Dynamics 365 Sales avant de pouvoir exporter un segment de Customer Insights vers Sales.</span><span class="sxs-lookup"><span data-stu-id="028e2-106">Contact records must be present in Dynamics 365 Sales before you can export a segment from Customer Insights to Sales.</span></span> <span data-ttu-id="028e2-107">En savoir plus sur la façon d’intégrer des contacts dans [Dynamics 365 Sales utilisant Common Data Services](connect-power-query.md).</span><span class="sxs-lookup"><span data-stu-id="028e2-107">Read more on how to ingest contacts in [Dynamics 365 Sales using Common Data Services](connect-power-query.md).</span></span>
 
-## <a name="configure-the-connector-for-sales"></a><span data-ttu-id="87a73-107">Configurer le connecteur pour Sales</span><span class="sxs-lookup"><span data-stu-id="87a73-107">Configure the connector for Sales</span></span>
+   > [!NOTE]
+   > <span data-ttu-id="028e2-108">L’exportation de segments des informations sur l’audience vers Sales ne créera pas des enregistrements de contact dans les instances Sales.</span><span class="sxs-lookup"><span data-stu-id="028e2-108">Exporting segments from audience insights to Sales will not create new contact records in the Sales instances.</span></span> <span data-ttu-id="028e2-109">Les enregistrements de contact de Sales doivent être intégrés aux informations sur l’audience et utilisés comme source de données.</span><span class="sxs-lookup"><span data-stu-id="028e2-109">The contact records from Sales must be ingested in audience insights and used as a data source.</span></span> <span data-ttu-id="028e2-110">Ils doivent également être inclus dans l’entité Client unifiée pour mapper les ID client avec les ID de contact avant que les segments puissent être exportés.</span><span class="sxs-lookup"><span data-stu-id="028e2-110">They also need to be included in the unified Customer entity to map customer IDs to contact IDs before segments can be exported.</span></span>
 
-1. <span data-ttu-id="87a73-108">Dans Audience Insights, accédez à **Administration** > **Destinations d'exportation**.</span><span class="sxs-lookup"><span data-stu-id="87a73-108">In audience insights, go to **Admin** > **Export destinations**.</span></span>
+## <a name="configure-the-connector-for-sales"></a><span data-ttu-id="028e2-111">Configurer le connecteur pour Sales</span><span class="sxs-lookup"><span data-stu-id="028e2-111">Configure the connector for Sales</span></span>
 
-1. <span data-ttu-id="87a73-109">Sous **Dynamics 365 Sales**, sélectionnez **Configurer**.</span><span class="sxs-lookup"><span data-stu-id="87a73-109">Under **Dynamics 365 Sales**, select **Set up**.</span></span>
+1. <span data-ttu-id="028e2-112">Dans les informations sur l’audience, accédez à **Administration** > **Destinations d’exportation**.</span><span class="sxs-lookup"><span data-stu-id="028e2-112">In audience insights, go to **Admin** > **Export destinations**.</span></span>
 
-1. <span data-ttu-id="87a73-110">Donnez à votre destination d’exportation un nom reconnaissable dans le champ **Nom complet**.</span><span class="sxs-lookup"><span data-stu-id="87a73-110">Give your export destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="028e2-113">Sous **Dynamics 365 Sales**, sélectionnez **Configurer**.</span><span class="sxs-lookup"><span data-stu-id="028e2-113">Under **Dynamics 365 Sales**, select **Set up**.</span></span>
 
-1. <span data-ttu-id="87a73-111">Entrez l’URL Sales de votre organisation dans le champ **Adresse du serveur**.</span><span class="sxs-lookup"><span data-stu-id="87a73-111">Enter your organization's Sales URL in the **Server address** field.</span></span>
+1. <span data-ttu-id="028e2-114">Donnez à votre destination d’exportation un nom reconnaissable dans le champ **Nom complet**.</span><span class="sxs-lookup"><span data-stu-id="028e2-114">Give your export destination a recognizable name in the **Display name** field.</span></span>
 
-1. <span data-ttu-id="87a73-112">Dans la section **Compte administrateur du serveur**, sélectionnez **Se connecter** et choisissez un compte Dynamics 365 Sales.</span><span class="sxs-lookup"><span data-stu-id="87a73-112">In the **Server admin account** section, select **Sign in** and choose a Dynamics 365 Sales account.</span></span>
+1. <span data-ttu-id="028e2-115">Entrez l’URL Sales de votre organisation dans le champ **Adresse du serveur**.</span><span class="sxs-lookup"><span data-stu-id="028e2-115">Enter your organization's Sales URL in the **Server address** field.</span></span>
 
-1. <span data-ttu-id="87a73-113">Mappez un champ d'ID de client à l'ID de contact Dynamics 365.</span><span class="sxs-lookup"><span data-stu-id="87a73-113">Map a customer ID field to the Dynamics 365 Contact ID.</span></span>
+1. <span data-ttu-id="028e2-116">Dans la section **Compte administrateur du serveur**, sélectionnez **Se connecter** et choisissez un compte Dynamics 365 Sales.</span><span class="sxs-lookup"><span data-stu-id="028e2-116">In the **Server admin account** section, select **Sign in** and choose a Dynamics 365 Sales account.</span></span>
 
-1. <span data-ttu-id="87a73-114">Cliquez sur **Suivant**.</span><span class="sxs-lookup"><span data-stu-id="87a73-114">Select **Next**.</span></span>
+1. <span data-ttu-id="028e2-117">Mappez un champ d’ID de client à l’ID de contact Dynamics 365.</span><span class="sxs-lookup"><span data-stu-id="028e2-117">Map a customer ID field to the Dynamics 365 Contact ID.</span></span>
 
-1. <span data-ttu-id="87a73-115">Choisissez un ou plusieurs segments.</span><span class="sxs-lookup"><span data-stu-id="87a73-115">Choose one or more segments.</span></span>
+1. <span data-ttu-id="028e2-118">Cliquez sur **Suivant**.</span><span class="sxs-lookup"><span data-stu-id="028e2-118">Select **Next**.</span></span>
 
-1. <span data-ttu-id="87a73-116">Sélectionnez **Enregistrer**.</span><span class="sxs-lookup"><span data-stu-id="87a73-116">Select **Save**.</span></span>
+1. <span data-ttu-id="028e2-119">Choisissez un ou plusieurs segments.</span><span class="sxs-lookup"><span data-stu-id="028e2-119">Choose one or more segments.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="87a73-117">Exporter les données</span><span class="sxs-lookup"><span data-stu-id="87a73-117">Export the data</span></span>
+1. <span data-ttu-id="028e2-120">Sélectionnez **Enregistrer**.</span><span class="sxs-lookup"><span data-stu-id="028e2-120">Select **Save**.</span></span>
 
-<span data-ttu-id="87a73-118">Vous pouvez [exporter les données à la demande](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="87a73-118">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="87a73-119">L’exportation sera également exécutée à chaque [actualisation planifiée](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="87a73-119">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+## <a name="export-the-data"></a><span data-ttu-id="028e2-121">Exporter les données</span><span class="sxs-lookup"><span data-stu-id="028e2-121">Export the data</span></span>
+
+<span data-ttu-id="028e2-122">Vous pouvez [exporter les données à la demande](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="028e2-122">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="028e2-123">L’exportation sera également exécutée à chaque [actualisation planifiée](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="028e2-123">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -4,31 +4,31 @@
   href: overview.md
 - name: Accéder à votre environnement
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Audience Insights
+- name: Informations sur l’audience
   items:
-    - name: Centre d'aide
+    - name: Centre d’aide
       href: audience-insights/index.yml
-    - name: Vue d'ensemble de la fonctionnalité
+    - name: Vue d’ensemble de la fonctionnalité
       href: audience-insights/overview.md
     - name: Essai gratuit
       href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Fonctionnalités nouvelles et mises à jour
       href: audience-insights/whats-new-audience-insights.md
-    - name: Prise en main
+    - name: Créer un environnement
+      href: audience-insights/home.md
+    - name: Modules d’apprentissage
       items:
-        - name: Créer un environnement
-          href: audience-insights/home.md
         - name: Ingérer des données
           href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
         - name: Créer un profil client unifié
           href: 'https://docs.microsoft.com/learn/modules/unified-customer-profile/'
-        - name: Utiliser l'application
+        - name: Utiliser l’application
           href: 'https://docs.microsoft.com/learn/modules/working-with-customer-insights/'
         - name: Enrichir des données et des prédictions
           href: 'https://docs.microsoft.com/learn/modules/enrich-data/'
     - name: Sources de données
       items:
-        - name: Vue d'ensemble des sources de données
+        - name: Vue d’ensemble des sources de données
           href: audience-insights/data-sources.md
         - name: Ajouter des sources de données via les connecteurs Power Query
           href: audience-insights/connect-power-query.md
@@ -44,11 +44,11 @@
           href: audience-insights/entities.md
     - name: Unification des données
       items:
-        - name: Vue d'ensemble de l'unification
+        - name: Vue d’ensemble de l’unification des données
           href: audience-insights/data-unification.md
         - name: Mapper les entités et attributs
           href: audience-insights/map-entities.md
-        - name: Mettre en correspondance les entités
+        - name: Mettre en correspondance des entités
           href: audience-insights/match-entities.md
         - name: Fusionner des entités
           href: audience-insights/merge-entities.md
@@ -64,7 +64,7 @@
       items:
         - name: Enrichir des profils client
           href: audience-insights/enrichment-hub.md
-        - name: Affinités en matière de marque et d'intérêt
+        - name: Affinités en matière de marque et d’intérêt
           href: audience-insights/enrichment-microsoft-graph.md
         - name: Enrichissement avec HERE Technologies
           href: audience-insights/enrichment-here.md
@@ -72,7 +72,7 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Enrichissement avec Experian
           href: audience-insights/enrichment-experian.md
-        - name: Enrichissement avec l'importation personnalisée SFTP
+        - name: Enrichissement avec l’importation personnalisée SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segments et mesures
       items:
@@ -80,34 +80,46 @@
           href: audience-insights/segments.md
         - name: Rester informé sur les segments
           href: audience-insights/segment-insights.md
+        - name: Voir les segments suggérés
+          href: audience-insights/suggested-segments.md
         - name: Trouver des clients similaires
           href: audience-insights/find-similar-customer-segments.md
         - name: Définir des mesures et des Indicateurs de performance clés
           href: audience-insights/measures.md
     - name: Prédictions
       items:
-        - name: Renseigner les données à l'aide de prévisions de valeur
+        - name: Renseigner les données à l’aide de prévisions de valeur
           href: audience-insights/predictions.md
         - name: Prédire le taux de désabonnement
           href: audience-insights/predict-subscription-churn.md
-        - name: Exemple de guide pour la prédiction de l'attrition des abonnements
+        - name: Exemple de guide pour la prédiction de l’attrition des abonnements
           href: audience-insights/sample-guide-predict-subscription-churn.md
-        - name: Prédire l'attrition transactionnelle
+        - name: Prédire l’attrition transactionnelle
           href: audience-insights/predict-transactional-churn.md
-        - name: Exemple de guide pour la prédiction de l'attrition transactionnelle
+        - name: Exemple de guide pour la prédiction de l’attrition transactionnelle
           href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: Prédire la valeur de durée de vie du client
+          href: audience-insights/predict-customer-lifetime-value.md
+        - name: Prédire les recommandations de produits
+          href: audience-insights/predict-product-recommendation.md
+        - name: Exemple de guide pour la prédiction de recommandation de produit
+          href: audience-insights/sample-guide-predict-product-recommendation.md
         - name: Implémenter des modèles de Machine Learning personnalisés
           href: audience-insights/custom-models.md
         - name: Expériences avec Azure Machine Learning
           href: audience-insights/azure-machine-learning-experiments.md
         - name: Expériences avec Azure Machine Learning Studio
           href: audience-insights/machine-learning-studio-experiments.md
-    - name: Options d'exportation
+    - name: Options d’exportation
       items:
-        - name: Découvrir les destinations d'exportation
+        - name: Vue d’ensemble des destinations d’exportation
           href: audience-insights/export-destinations.md
+        - name: Autopilot
+          href: audience-insights/export-autopilot.md
         - name: Stockage Blob Azure
           href: audience-insights/export-azure-blob-storage.md
+        - name: Azure Data Lake Storage Gen2
+          href: audience-insights/export-azure-data-lake-storage-gen2.md
         - name: DotDigital
           href: audience-insights/export-dotdigital.md
         - name: Dynamics 365 Customer Service (complément)
@@ -118,7 +130,7 @@
           href: audience-insights/export-dynamics365-sales.md
         - name: Centre des ventes Dynamics 365 (complément)
           href: audience-insights/customer-card-add-in.md
-        - name: Gestionnaire d'annonces Facebook
+        - name: Gestionnaire d’annonces Facebook
           href: audience-insights/export-facebook.md
         - name: Google Ads
           href: audience-insights/export-google-ads.md
@@ -136,6 +148,8 @@
           href: audience-insights/export-power-apps.md
         - name: Power Automate
           href: audience-insights/export-power-automate.md
+        - name: SendGrid
+          href: audience-insights/export-sendgrid.md
         - name: SFTP
           href: audience-insights/export-sftp.md
     - name: Administration
@@ -146,17 +160,19 @@
           href: audience-insights/permissions.md
         - name: Gérer plusieurs environnements
           href: audience-insights/manage-environments.md
-        - name: Se connecter à un compte de stockage ADLS à l'aide d'un principal de service
+        - name: Se connecter à un compte de stockage ADLS à l’aide d’un principal de service
           href: audience-insights/connect-service-principal.md
         - name: Langues prises en charge
           href: audience-insights/supported-languages.md
     - name: Extensibilité
       items:
+        - name: Intégrez les données web à partir des informations sur l’engagement
+          href: audience-insights/integrate-engagement-insights.md
         - name: "Vérifier les schémas des entités dans Common\_Data\_Model"
           href: audience-insights/entity-schemas.md
         - name: Utiliser les API
           href: audience-insights/apis.md
-        - name: Références d'API
+        - name: Références d’API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
     - name: Limites du service
       href: audience-insights/service-limits.md
@@ -164,16 +180,12 @@
       href: audience-insights/gdpr.md
 - name: Insights sur l’engagement (version préliminaire)
   items:
-    - name: Centre d'aide
+    - name: Centre d’aide
       href: engagement-insights/index.yml
-    - name: Vue d'ensemble de la fonctionnalité
+    - name: Vue d’ensemble de la fonctionnalité
       href: engagement-insights/overview.md
     - name: Essai gratuit
       href: 'https://pi.dynamics.com/'
-    - name: Démarrage rapide
-      items:
-        - name: Démarrage rapide de la version préliminaire publique
-          href: engagement-insights/quickstart.md
     - name: Prise en main
       items:
         - name: Prise en main
@@ -184,7 +196,7 @@
           href: engagement-insights/instrument-website.md
         - name: Concepts et terminologie
           href: engagement-insights/glossary.md
-    - name: "Événements\_"
+    - name: Événements
       items:
         - name: Créer et modifier des événements
           href: engagement-insights/refined-events.md
@@ -200,7 +212,7 @@
           href: engagement-insights/profile-reports.md
     - name: Ressources du développeur
       items:
-        - name: Vue d'ensemble des ressources du développeur
+        - name: Vue d’ensemble des ressources du développeur
           href: engagement-insights/developer-resources.md
         - name: Didacticiel sur le SDK web
           href: engagement-insights/advanced-SDK-implementation.md
@@ -214,7 +226,7 @@
           href: engagement-insights/manage-environments-workspaces.md
         - name: Configurer les connexions
           href: engagement-insights/configure-connections.md
-        - name: Gérer les cookies et le consentement de l'utilisateur
+        - name: Gérer les cookies et le consentement de l’utilisateur
           href: engagement-insights/user-consent-storage.md
     - name: RGPD
       items:
@@ -223,4 +235,4 @@
     - name: Limites du service
       href: engagement-insights/quotas.md
 - name: Contacter le support
-  href: 'https://go.microsoft.com/fwlink/?linkid=2145734'
+  href: 'https://admin.powerplatform.microsoft.com/support'
