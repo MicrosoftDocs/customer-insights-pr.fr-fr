@@ -1,27 +1,27 @@
 ---
-title: Prédiction de la résiliation d'abonnement
+title: Prédiction de la résiliation d’abonnement
 description: Déterminez si un client risque de ne plus utiliser les produits ou services d’abonnement de votre société.
 ms.date: 08/19/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 03178fc1bfe611b1b0ced08bbbef876035875825
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: c12adab2e4573b1315d74f2111cf13b9f4ee6045
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643725"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268361"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Prédiction du taux de désabonnement (aperçu)
 
 La prédiction du taux de désabonnement permet de déterminer si un client risque de ne plus utiliser les produits ou services d’abonnement de votre société. Vous pouvez créer une nouvelle prédiction du taux de désabonnement sur la page **Intelligence** > **Prédictions**. Sélectionnez **Mes prédictions** pour voir les autres prédictions que vous avez créées.
 
 > [!TIP]
-> Essayez le didacticiel de prédiction de l'attrition des abonnements en utilisant des exemples de données : [Exemple de guide de prédiction de l'attrition des abonnements](sample-guide-predict-subscription-churn.md).
+> Essayez le didacticiel de prédiction de l’attrition des abonnements en utilisant des exemples de données : [Exemple de guide de prédiction de l’attrition des abonnements](sample-guide-predict-subscription-churn.md).
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -54,7 +54,7 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
 
 ## <a name="create-a-subscription-churn-prediction"></a>Créer une prédiction du taux de désabonnement
 
-1. Dans Audience Insights, accédez à **Intelligence** > **Prédictions**.
+1. Dans les informations sur l’audience, accédez à **Intelligence** > **Prédictions**.
 1. Sélectionnez la vignette **Modèle de taux de désabonnement (aperçu)** et sélectionnez **Utiliser ce modèle**.
    > [!div class="mx-imgBorder"]
    > ![Vignette modèle de taux de désabonnement avec le bouton Utiliser ce modèle](media/subscription-churn-usethismodel.PNG "Vignette modèle de taux de désabonnement avec le bouton Utiliser ce modèle")
@@ -100,7 +100,7 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
 
 ### <a name="set-schedule-and-review-configuration"></a>Définir le calendrier et revoir la configuration
 
-1. Définissez une fréquence pour renouveler l’entraînement de votre modèle. Ce paramètre est important pour mettre à jour la précision des prédictions lorsque de nouvelles données sont ingérées dans Audience Insights. La plupart des entreprises peuvent se réentraîner une fois par mois et obtenir une bonne précision pour leur prédiction.
+1. Définissez une fréquence pour renouveler l’entraînement de votre modèle. Ce paramètre est important pour mettre à jour la précision des prédictions lorsque de nouvelles données sont ingérées dans les informations sur l’audience. La plupart des entreprises peuvent se réentraîner une fois par mois et obtenir une bonne précision pour leur prédiction.
 1. Cliquez sur **Suivant**.
 1. Vérifiez la configuration. Vous pouvez revenir à n’importe quelle partie de la configuration de prédiction en sélectionnant **Modifier** sous la valeur indiquée. Ou vous pouvez sélectionner une étape de configuration dans l’indicateur de progression.
 1. Si toutes les valeurs sont configurées correctement, sélectionnez **Enregistrer et exécuter** pour commencer le processus de prédiction. Sur l’onglet **Mes prédictions**, vous pouvez voir l’état de vos prévisions. Le processus peut prendre plusieurs heures pour se terminer selon la quantité de données utilisées dans la prédiction.
@@ -164,3 +164,6 @@ Les prédictions seront automatiquement actualisées sur le même paramètre [pl
 
 > [!NOTE]
 > La suppression d’un prévision supprimera son entité de sortie.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

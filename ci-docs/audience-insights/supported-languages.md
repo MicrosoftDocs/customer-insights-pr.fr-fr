@@ -1,5 +1,5 @@
 ---
-title: Langues prises en charge pour Audience Insights
+title: Langues prises en charge pour les informations sur l’audience
 description: Comprenez et configurez la prise en charge des langues.
 ms.date: 04/27/2020
 ms.service: customer-insights
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: philk
 manager: shellyha
-ms.openlocfilehash: 856ac34f53c2395224c4ee4ce94e5b72a3495b89
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405687"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268177"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>Langues prises en charge pour la fonctionnalité Audience Insights
+# <a name="supported-languages-for-audience-insights-capability"></a>Langues prises en charge pour la fonctionnalité d’informations sur l’audience
 
-La fonctionnalité Audience Insights de Dynamics 365 Customer Insights prend en charg un certain nombre de langues. Cette rubrique répertorie les langues disponibles et fournit une prise en charge pour passer d'une langue à une autre, ainsi qu'une vue d'ensemble du contenu traduit.
+La fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights prend en charg un certain nombre de langues. Cette rubrique répertorie les langues disponibles et fournit une prise en charge pour passer d’une langue à une autre, ainsi qu’une vue d’ensemble du contenu traduit.
 
 ## <a name="languages"></a>Langues
 
@@ -69,9 +69,9 @@ La fonctionnalité Audience Insights de Dynamics 365 Customer Insights prend en 
 
 ## <a name="whats-translated"></a>Contenu traduit
 
-L'application utilise votre préférence de langue pour afficher des éléments tels que le menu, le libellé de l'étiquette et les messages système dans votre langue préférée.
+L’application utilise votre préférence de langue pour afficher des éléments tels que le menu, le libellé de l’étiquette et les messages système dans votre langue préférée.
 
-Étant donné que la plupart des fonctionnalités sont basées sur vos données, certains éléments restent dans leur langue d'origine. Par exemple :
+Étant donné que la plupart des fonctionnalités sont basées sur vos données, certains éléments restent dans leur langue d’origine. Par exemple :
 
 - Vos données, y compris les entités et les segments
 - Le nom de votre environnement
@@ -79,3 +79,6 @@ L'application utilise votre préférence de langue pour afficher des éléments 
 ## <a name="choose-your-language-settings"></a>Choisir vos paramètres de langue  
 
 Changez votre langue préférée [sur la page **Système**](system.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

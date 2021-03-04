@@ -1,20 +1,20 @@
 ---
 title: Connecteur Power Apps
 description: Connectez-vous à Power Apps et Power Automate.
-ms.date: 08/21/2020
+ms.date: 01/19/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405638"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268913"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Connecteur Microsoft Power Apps (préversion)
 
@@ -31,7 +31,7 @@ Consultez la documentation de Power Apps pour savoir comment [ajouter une connex
 Après avoir ajouté Customer Insights en tant que connexion de données, vous pouvez choisir les entités suivantes dans Power Apps :
 
 - Client : pour utiliser les données du [profil client unifié](customer-profiles.md).
-- Activité client unifiée : pour afficher la [chronologie des activités](activities.md) sur l’application.
+- UnifiedActivity : pour afficher la [chronologie des activités](activities.md) sur l’application.
 
 ## <a name="limitations"></a>Limitations
 
@@ -43,7 +43,7 @@ Vous ne pouvez récupérer que les entités **Client**, **UnifiedActivity**, et 
 
 La délégation fonctionne pour l’entité Client et l’entité UnifiedActivity. 
 
-- Délégation pour l'entité **Client** : pour utiliser la délégation pour cette entité, les champs doivent être indexés dans [Index Rechercher et filtrer](search-filter-index.md).  
+- Délégation pour l’entité **Client** : pour utiliser la délégation pour cette entité, les champs doivent être indexés dans [Index Rechercher et filtrer](search-filter-index.md).  
 
 - Délégation pour **UnifiedActivity** : La délégation pour cette entité ne fonctionne que pour les champs **ActivityId** et **N° de client**.  
 
@@ -72,3 +72,6 @@ Par exemple, vous ajoutez des profils clients à un [contrôle de galerie](https
 1. Pour afficher la chronologie unifiée pour un client, ajouter un élément de galerie et ajouter la propriété Éléments : **Filter(’UnifiedActivity’, CustomerId = {Customer_Id})**
 
     Exemple : Filter(’UnifiedActivity’, CustomerId = Gallery1.Selected.CustomerId)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

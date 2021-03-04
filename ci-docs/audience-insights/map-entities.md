@@ -1,24 +1,24 @@
 ---
-title: Mapper des entités pour l'unification des données
+title: Mapper des entités pour l’unification des données
 description: Mappez des données pour créer des profils clients unifiés.
 ms.date: 09/25/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: e98c7717f7707d43a9fd1fc6f6b0e9c49e4e7ee0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0088daae0be0cb3e71f87387648430d2353081c9
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405673"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267032"
 ---
 # <a name="map-entities-and-attributes"></a>Mapper les entités et attributs
 
-Le **Mappage** est la première étape du processus d'unification des données de Audience Insights. Le mappage comprend trois phases :
+Le **Mappage** est la première étape du processus d’unification des données des informations sur l’audience. Le mappage comprend trois phases :
 
 - *Sélection d’entité* : Identifier les entités pouvant être combinées et qui peuvent conduire à un jeu de données contenant des informations plus complètes sur vos clients.
 - *Sélection d’attribut* : Pour chaque entité, identifiez les colonnes à combiner et les réconcilier lors des étapes d’unification suivantes, à savoir la *mise en correspondance* et la *fusion*. Ces colonnes sont appelées *Attributs*.
@@ -28,7 +28,7 @@ Pour plus d’informations sur le flux général d’unification des données, c
 
 ## <a name="select-the-first-entities"></a>Sélectionner les premières entités
 
-1. Dans Audience Insights, accédez à **Données** > **Unifier** > **Mapper**.
+1. Dans les informations sur l’audience, accédez à **Données** > **Unifier** > **Mapper**.
 
 2. Lancer la phase de mappage en sélectionnant **Sélectionner des entités**.
 
@@ -52,10 +52,10 @@ Après avoir sélectionné vos entités, la page **Mapper** répertorie les enti
 
 - **Clé primaire** : Sélectionnez un attribut comme clé primaire pour chacune de vos entités. Pour qu’un attribut soit une clé primaire valide, il ne doit inclure aucune valeur en double, aucune valeur manquante, ni aucune valeur nulle. Les attributs de type de données Chaîne, Entier et GUID sont pris en charge en tant que clés primaires et seront affichés dans un champ dans lequel vous pourrez effectuer votre sélection.
 
-- **Type de sémantique d’attribut :** Catégories dans lesquelles tombent vos attributs, telles que l’adresse de messagerie ou le nom. Pour utiliser des modèles IA pour la prédiction intelligente de la sémantique, gagner du temps et améliorer la précision, définissez **Mappage intelligent** sur **Activé**. Le mappage intelligent met en évidence la recommandation sémantique basée sur l'IA dans le champ **Type**. Si vous définissez cette option sur **Désactivé**, vous verrez nos recommandations de mappage normales. Vous pouvez sélectionner n'importe quel type sémantique dans la liste des options disponibles et remplacer la sélection suggérée.
+- **Type de sémantique d’attribut :** Catégories dans lesquelles tombent vos attributs, telles que l’adresse de messagerie ou le nom. Pour utiliser des modèles IA pour la prédiction intelligente de la sémantique, gagner du temps et améliorer la précision, définissez **Mappage intelligent** sur **Activé**. Le mappage intelligent met en évidence la recommandation sémantique basée sur l’IA dans le champ **Type**. Si vous définissez cette option sur **Désactivé**, vous verrez nos recommandations de mappage normales. Vous pouvez sélectionner n’importe quel type sémantique dans la liste des options disponibles et remplacer la sélection suggérée.
 
 > [!div class="mx-imgBorder"]
-> ![Type d'attribut et prédiction sémantique](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Type d'attribut et prédiction sémantique")
+> ![Type d’attribut et prédiction sémantique](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Type d’attribut et prédiction sémantique")
 
 Il est aussi possible d’ajouter un type de sémantique personnalisé. Sélectionnez le champ de type pour un attribut, puis tapez le nom de votre type de sémantique. De cette manière, vous pouvez également modifier les types d’attributs qui ont été identifiés par le système.
 
@@ -64,7 +64,7 @@ Tous les attributs pour lesquels un type de sémantique est automatiquement iden
 Les attributs qui ne sont pas automatiquement mappés à un type de sémantique sont regroupés dans la section **Définir les données dans les champs non mappés**. Sélectionnez le champ de type de sémantique pour les attributs non mappés ou entrez votre nom de type d’attribut personnalisé.
 
 > [!div class="mx-imgBorder"]
-> ![Clé primaire et type d'attribut](media/data-manager-configure-map-add-attributes.png "Clé primaire et type d’attribut")
+> ![Clé primaire et type d’attribut](media/data-manager-configure-map-add-attributes.png "Clé primaire et type d’attribut")
 
 > [!NOTE]
 > Un champ doit correspondre au type de sémantique Person.FullName pour renseigner le nom du client dans la fiche client. Sinon, les cartes client apparaîtront sans nom. 
@@ -102,3 +102,6 @@ Dans le cadre du processus d’unification des données, accédez à la page **M
 
 > [!TIP]
 > Consultez la vidéo suivante : [Mise en route : Création d’un profil client unifié](https://youtu.be/oBfGEhucAxs).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
