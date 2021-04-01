@@ -1,31 +1,31 @@
 ---
 title: Langues prises en charge pour les informations sur l’audience
 description: Comprenez et configurez la prise en charge des langues.
-ms.date: 04/27/2020
+ms.date: 02/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268177"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595469"
 ---
 # <a name="supported-languages-for-audience-insights-capability"></a>Langues prises en charge pour la fonctionnalité d’informations sur l’audience
 
-La fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights prend en charg un certain nombre de langues. Cette rubrique répertorie les langues disponibles et fournit une prise en charge pour passer d’une langue à une autre, ainsi qu’une vue d’ensemble du contenu traduit.
+Les informations sur l’audience pour Dynamics 365 Customer Insights sont traduites dans de nombreuses langues. La liste suivante contient les langues disponibles et des informations sur ce qui est traduit. Vous pouvez également en savoir plus sur la modification des paramètres de langue. 
 
 ## <a name="languages"></a>Langues
 
 | Nom de la langue (anglais)|  Nom de la langue (langue maternelle) |
 | ------------- | ------------- |
 | Basque | euskara |
-| Bulgare | Български |
+| Bulgare | български |
 | Catalan | català |
 | Chinois (simplifié) | 中文(简体) |
 | Chinois (traditionnel) | 中文(繁體) |
@@ -42,20 +42,20 @@ La fonctionnalité d’informations sur l’audience de Dynamics 365 Customer In
 | Grec | Ελληνικά |
 | Hindi | हिंदी |
 | Hongrois | magyar |
-| Indonésien | Bahasa Indonesia |
+| Indonésien | Indonésie |
 | Italien | italiano |
 | Japonais | 日本語 |
-| Kazakh | Қазақ |
+| Kazakh | қазақ тілі |
 | Coréen | 한국어 |
 | Letton | latviešu |
 | Lituanien | lietuvių |
-| Malais | Bahasa Melayu |
-| Norvégien (Bokmål) | norsk (bokmål) |
-| Polonais | Polski |
+| Malais | Melayu |
+| Norvégien (Bokmål) | norsk bokmål |
+| Polonais | polski |
 | Portugais (Brésil) | português |
 | Portugais (Portugal) | português |
 | Roumain | română |
-| Russe | Русский |
+| Russe | pусский |
 | Serbe (cyrillique) | српски |
 | Serbe (latin) | srpski |
 | Slovaque | slovenčina |

@@ -2,19 +2,19 @@
 title: Prédiction de la valeur de la durée de vie du client
 description: Prévoyez le potentiel de revenus des clients actifs à l’avenir.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268591"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595804"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Prédiction de la valeur de durée de vie du client (version préliminaire)
 
@@ -194,11 +194,11 @@ La page de résultats comporte trois sections principales de données.
   
   - **Taux de réussite de la prédiction des clients à forte valeur ajoutée**
 
-  Voyez la différence entre la prévision des clients à forte valeur ajoutée à l’aide du modèle IA et le modèle de référence. Par exemple, un taux de réussite de 84 % signifie que sur tous les clients à forte valeur ajoutée dans les données d’entraînement, le modèle IA a pu capturer avec une précision 84 %. Nous comparons ensuite ce taux de réussite avec le taux de réussite du modèle de référence pour rendre compte du changement relatif. Cette valeur est utilisée pour attribuer une note au modèle.
+    Voyez la différence entre la prévision des clients à forte valeur ajoutée à l’aide du modèle IA et le modèle de référence. Par exemple, un taux de réussite de 84 % signifie que sur tous les clients à forte valeur ajoutée dans les données d’entraînement, le modèle IA a pu capturer avec une précision 84 %. Nous comparons ensuite ce taux de réussite avec le taux de réussite du modèle de référence pour rendre compte du changement relatif. Cette valeur est utilisée pour attribuer une note au modèle.
 
   - **Mesures d’erreur**
     
-  Une autre métrique vous permet d’examiner les performances globales du modèle en termes d’erreur de prédiction des valeurs futures. Nous utilisons la métrique globale de l’erreur quadratique moyenne (RMSE) pour évaluer cette erreur. La RMSE est un moyen standard de mesurer l’erreur d’un modèle dans la prédiction de données quantitatives. La RMSE du modèle IA est comparée à la RMSE du modèle de base et la différence relative est rapportée.
+    Une autre métrique vous permet d’examiner les performances globales du modèle en termes d’erreur de prédiction des valeurs futures. Nous utilisons la métrique globale de l’erreur quadratique moyenne (RMSE) pour évaluer cette erreur. La RMSE est un moyen standard de mesurer l’erreur d’un modèle dans la prédiction de données quantitatives. La RMSE du modèle IA est comparée à la RMSE du modèle de base et la différence relative est rapportée.
 
   Le modèle IA donne la priorité au classement précis des clients en fonction de la valeur qu’ils apportent à votre entreprise. Ainsi, seul le taux de réussite de la prédiction des clients à forte valeur ajoutée est utilisé pour calculer la note finale du modèle. La métrique RMSE est sensible aux valeurs aberrantes. Dans les scénarios où vous avez un petit pourcentage de clients avec des valeurs d’achat extrêmement élevées, la métrique RMSE globale peut ne pas donner une image complète des performances du modèle.   
 

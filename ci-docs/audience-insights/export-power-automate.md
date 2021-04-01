@@ -2,19 +2,19 @@
 title: Connecteur Power Automate | Microsoft Docs
 description: Créer des flux dans Microsoft Power Automate de Dynamics 365 Customer Insights.
 ms.date: 01/20/2021
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: e973bb11b31c9e70b695ebec8aa2700fdaa5e44f
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268821"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597922"
 ---
 # <a name="power-automate-connector-preview"></a>Connecteur Power Automate (préversion)
 
@@ -34,7 +34,7 @@ Utilisez des déclencheurs pour créer des flux de cloud et automatiser des tâc
 [Configurer vos déclencheurs dans Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
 
 ## <a name="power-automate-actions"></a>Actions Power Automate
-Le connecteur Power Automate fournit d’autres actions que les déclencheurs disponibles. Pour plus d’informations, voir le [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
+Le connecteur Power Automate fournit d’autres actions que les déclencheurs disponibles. Pour plus d’informations, voir le [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
 
 ## <a name="create-a-power-automate-flow"></a>Créer un flux Power Automate
 
@@ -44,7 +44,7 @@ Le connecteur Power Automate fournit d’autres actions que les déclencheurs di
 
 1. Connecteur Customer Insights (version préliminaire) dans les applications Power Automate. **Connectez-vous** à Power Automate.
 
-1. Choisissez l’un des déclencheurs disponibles et ajoutez d’autres étapes à votre nouveau flux. Pour plus d’informations, voir [Créer un flux de cloud dans Power Automate](https://docs.microsoft.com/power-automate/get-started-logic-flow).
+1. Choisissez l’un des déclencheurs disponibles et ajoutez d’autres étapes à votre nouveau flux. Pour plus d’informations, voir [Créer un flux de cloud dans Power Automate](/power-automate/get-started-logic-flow).
 
 Exemples d’utilisation des flux : 
 - Publiez un message à un canal Microsoft Teams si une actualisation de source de données échoue. 

@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267903"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597416"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utiliser des modèles basés sur Azure Machine Learning
 
@@ -29,9 +29,9 @@ Les données unifiées dans Dynamics 365 Customer Insights sont une source pour 
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Configurer l’espace de travail Azure Machine Learning
 
-1. Consultez [Créer un espace de travail Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) pour voir les différentes options de création de l’espace de travail. Pour optimiser les performances, créez l’espace de travail dans une région Azure qui est géographiquement la plus proche de votre environnement Customer Insights.
+1. Consultez [Créer un espace de travail Azure Machine Learning](/azure/machine-learning/concept-workspace#-create-a-workspace) pour voir les différentes options de création de l’espace de travail. Pour optimiser les performances, créez l’espace de travail dans une région Azure qui est géographiquement la plus proche de votre environnement Customer Insights.
 
-1. Accédez à votre espace de travail via [Azure Machine Learning Studio](https://ml.azure.com/). Vous pouvez [interagir](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) avec votre espace de travail de plusieurs façons.
+1. Accédez à votre espace de travail via [Azure Machine Learning Studio](https://ml.azure.com/). Vous pouvez [interagir](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) avec votre espace de travail de plusieurs façons.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Utiliser le concepteur Azure Machine Learning
 
@@ -39,13 +39,13 @@ Le concepteur Azure Machine Learning fournit un canevas visuel dans lequel vous 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Utilisation du SDK Azure Machine Learning
 
-Les scientifiques de données et les développeurs de l’IA utilisent le [SDK Azure Machine Learning](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) pour créer des workflows Machine Learning. Actuellement, les modèles entraînés à l’aide du SDK ne peuvent pas être intégrés directement à Customer Insights. Un pipeline d’inférence par lots qui utilise ce modèle est nécessaire pour l’intégration avec Customer Insights.
+Les scientifiques de données et les développeurs de l’IA utilisent le [SDK Azure Machine Learning](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) pour créer des workflows Machine Learning. Actuellement, les modèles entraînés à l’aide du SDK ne peuvent pas être intégrés directement à Customer Insights. Un pipeline d’inférence par lots qui utilise ce modèle est nécessaire pour l’intégration avec Customer Insights.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Exigences du pipeline par lots pour l’intégration avec Customer Insights
 
 ### <a name="dataset-configuration"></a>Configuration de l’ensemble de données
 
-Vous devez créer des ensembles de données pour utiliser les données d’entité de Customer Insights dans votre pipeline d’inférence par lots. Ces ensembles de données doivent être enregistrés dans l’espace de travail. Actuellement, nous ne prenons en charge que les [ensembles de données tabulaires](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) au format .csv. Les ensembles de données correspondant aux données d’entité doivent être paramétrés en tant que paramètre de pipeline.
+Vous devez créer des ensembles de données pour utiliser les données d’entité de Customer Insights dans votre pipeline d’inférence par lots. Ces ensembles de données doivent être enregistrés dans l’espace de travail. Actuellement, nous ne prenons en charge que les [ensembles de données tabulaires](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) au format .csv. Les ensembles de données correspondant aux données d’entité doivent être paramétrés en tant que paramètre de pipeline.
    
 * Paramètres de l’ensemble de données dans le concepteur
    
@@ -76,7 +76,7 @@ Vous devez créer des ensembles de données pour utiliser les données d’entit
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Importer les données du pipeline dans Customer Insights
 
-* Le concepteur fournit le [Module d’exportation de données](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data) qui permet d’exporter la sortie d’un pipeline vers le stockage Azure. Actuellement, le module doit utiliser le type de magasin de données **Stockage Blob Azure** et paramétrer le **Magasin de données** et le **Chemin d’accès** relatif. Customer Insights remplace ces deux paramètres lors de l’exécution du pipeline par un magasin de données et un chemin d’accès accessible au produit.
+* Le concepteur fournit le [Module d’exportation de données](/azure/machine-learning/algorithm-module-reference/export-data) qui permet d’exporter la sortie d’un pipeline vers le stockage Azure. Actuellement, le module doit utiliser le type de magasin de données **Stockage Blob Azure** et paramétrer le **Magasin de données** et le **Chemin d’accès** relatif. Customer Insights remplace ces deux paramètres lors de l’exécution du pipeline par un magasin de données et un chemin d’accès accessible au produit.
    > [!div class="mx-imgBorder"]
    > ![Configuration du module d’exportation de données](media/intelligence-designer-importdata.png "Configuration du module d’exportation de données")
    

@@ -2,19 +2,19 @@
 title: Exporter des données Customer Insights vers un stockage Blob Azure
 description: Découvrez comment configurer la connexion au stockage Blob Azure.
 ms.date: 09/18/2020
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ecacf20365e78ced8859dfa54b1b16cb923c00eb
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 0986ee5caf5fa079994ca584fb2c4d9294ddb80b
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269189"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596174"
 ---
 # <a name="connector-for-azure-blob-storage-preview"></a>Connecteur pour le stockage Blob Azure (préversion)
 
@@ -27,8 +27,8 @@ Stockez vos données Customer Insights dans un stockage Blob Azure ou utilisez-l
 1. Sous **Stockage Blob Azure**, sélectionnez **Configurer**.
 
 1. Saisissez le **Nom du compte**, la **Clé de compte** et le **Conteneur** pour votre compte de stockage Blob Azure.
-    - Pour en savoir plus sur la recherche du nom et de la clé de compte de stockage Blob Azure, consultez [Gérer les paramètres du compte de stockage dans le portail Azure](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
-    - Pour savoir comment créer un conteneur, voir [Créer un conteneur](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+    - Pour en savoir plus sur la recherche du nom et de la clé de compte de stockage Blob Azure, consultez [Gérer les paramètres du compte de stockage dans le portail Azure](/azure/storage/common/storage-account-manage).
+    - Pour savoir comment créer un conteneur, voir [Créer un conteneur](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. Donnez à votre destination un nom reconnaissable dans le champ **Nom complet**.
 

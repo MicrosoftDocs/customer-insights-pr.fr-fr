@@ -1,20 +1,20 @@
 ---
 title: Créer et gérer des segments
 description: Créez des segments de clients pour les regrouper en fonction de divers attributs.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270353"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597048"
 ---
 # <a name="create-and-manage-segments"></a>Créer et gérer des segments
 
@@ -35,19 +35,19 @@ Les segments sont gérés sur la page **Segments**.
 
 1. Dans les informations sur l’audience, accédez à la page **Segments**.
 
-2. Sélectionnez **Nouveau** > **Segment vide**.
+1. Sélectionnez **Nouveau** > **Segment vide**.
 
-3. Dans le volet **Nouveau segment**, choisissez un type de segment et indiquez un **Nom**.
+1. Dans le volet **Nouveau segment**, choisissez un type de segment et indiquez un **Nom**.
 
    Vous pouvez aussi fournir un nom complet et une description qui aide à identifier le segment.
 
-4. Sélectionnez **Suivant** pour arriver sur la page **Générateur de segments** où vous devez définir un groupe. Un groupe est un ensemble de clients.
+1. Sélectionnez **Suivant** pour arriver sur la page **Générateur de segments** où vous devez définir un groupe. Un groupe est un ensemble de clients.
 
-5. Choisissez l’entité qui comprend l’attribut selon lequel vous souhaitez segmenter.
+1. Choisissez l’entité qui comprend l’attribut selon lequel vous souhaitez segmenter.
 
-6. Choisissez l’attribut de segmentation. Cet attribut peut avoir un des quatre types de valeur : numérique, chaîne, date ou booléen.
+1. Choisissez l’attribut de segmentation. Cet attribut peut avoir un des quatre types de valeur : numérique, chaîne, date ou booléen.
 
-7. Choisissez un opérateur et une valeur pour l’attribut sélectionné.
+1. Choisissez un opérateur et une valeur pour l’attribut sélectionné.
 
    > [!div class="mx-imgBorder"]
    > ![Filtre de groupe personnalisé](media/customer-group-numbers.png "Filtre du groupe de clients")
@@ -64,9 +64,14 @@ Les segments sont gérés sur la page **Segments**.
    > [!div class="mx-imgBorder"]
    > ![Chemin d’accès de la relation lors de la création d’un segment](media/segments-multiple-relationships.png "Chemin d’accès de la relation lors de la création d’un segment")
 
-9. Sélectionnez **Enregistrer** pour enregistrer votre segment. Votre segment sera enregistré et traité si toutes les exigences sont validées. Sinon, il sera enregistré en tant que brouillon.
+1. Par défaut, les segments génèrent une entité de sortie qui contient tous les attributs des profils client qui correspondent aux filtres définis. Si un segment est basé sur d’autres entités que l’entité *Client*, vous pouvez ajouter d’autres attributs de ces entités à l’entité de sortie. Sélectionnez **Attributs du projet** pour choisir les attributs qui seront ajoutés à l’entité de sortie.  
 
-10. Sélectionnez **Revenir aux segments** pour revenir à la page **Segments**.
+   
+   Exemple : un segment est basé sur une entité qui contient des données d’activité client liées à l’entité *Client*. Le segment recherche tous les clients qui ont appelé le service d’assistance au cours des 60 derniers jours. Vous pouvez choisir d’ajouter la durée de l’appel et le nombre d’appels à tous les enregistrements client correspondants dans l’entité de sortie. Ces informations peuvent être utiles pour envoyer un e-mail contenant des liens utiles vers des articles d’aide en ligne et des questions fréquentes (FAQ) aux clients qui ont appelé fréquemment.
+
+1. Sélectionnez **Enregistrer** pour enregistrer votre segment. Votre segment sera enregistré et traité si toutes les exigences sont validées. Sinon, il sera enregistré en tant que brouillon.
+
+1. Sélectionnez **Revenir aux segments** pour revenir à la page **Segments**.
 
 ## <a name="manage-existing-segments"></a>Gérer les segments existants
 
@@ -85,6 +90,7 @@ L’action suivante est disponible lorsque vous sélectionnez un segment :
 
 - **Afficher** les détails du segment, y compris un aperçu de la tendance du nombre de membres du segment.
 - **Modifier** le segment pour modifier ses propriétés.
+- **Créez un doublon** d’un segment. Vous pouvez choisir de modifier ses propriétés immédiatement ou simplement d’enregistrer le doublon.
 - **Actualiser** le segment pour inclure les dernières données.
 - **Activer** ou **Désactiver** le segment. Les segments ont deux états possibles : actif ou inactif. Ces états sont utiles lors de l’édition d’un segment. Pour les segments inactifs, la définition de segment existe, mais elle ne contient pas encore de clients. Lorsque vous activez un segment, son état passe de « inactif » à « actif » et il commence à rechercher des clients qui correspondent à la définition du segment. Si une [actualisation programmée](system.md#schedule-tab) est configurée, les segments inactifs ont leur **Statut** répertorié comme **Ignoré**, indiquant qu’une actualisation n’a même pas été tentée. Lorsqu’un segment inactif est activé, il s’actualise et sera inclus dans les actualisations programmées.
   Vous pouvez également utiliser la fonctionnalité **Planifier plus tard** dans la liste déroulante **Activer/Désactiver** pour spécifier une date et une heure futures d’activation et de désactivation d’un segment particulier.

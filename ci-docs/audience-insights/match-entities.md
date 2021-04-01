@@ -1,133 +1,137 @@
 ---
 title: Mettre en correspondance des entités pour l’unification des données
 description: Mettez en correspondance des données pour créer des profils clients unifiés.
-ms.date: 10/14/2020
+ms.date: 02/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: adkuppa
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267475"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595561"
 ---
 # <a name="match-entities"></a>Mettre en correspondance des entités
 
-Une fois la phase de mise en correspondance terminée, vous êtes prêt à mettre vos entités en correspondance. La phase de correspondance spécifie comment combiner vos ensembles de données dans un jeu de données de profil client unifié. La phase de mise en correspondance nécessite au moins [deux entités mappées](map-entities.md).
+La phase de correspondance spécifie comment combiner vos ensembles de données dans un jeu de données de profil client unifié. Après avoir terminé la [phase de correspondance](map-entities.md) dans le processus d’unification des données, vous êtes prêt à mettre vos entités en correspondance. La phase de mise en correspondance nécessite au moins deux entités mappées.
+
+La page de mise en correspondance se compose de trois sections : 
+- Mesures clés qui résument le nombre d’enregistrements correspondants
+- Ordre de correspondance et règles de correspondance entre entités
+- Règles de déduplication des entités de correspondance
 
 ## <a name="specify-the-match-order"></a>Indiquer l’ordre de mise en correspondance
 
 Allez à **Données** > **Unifier** > **Mettre en correspondance** et sélectionnez **Définir l’ordre** pour démarrer la phase de mise en correspondance.
 
-Chaque correspondance unifie deux ou plusieurs entités en une seule, tout en conservant chaque enregistrement unique d’un client. Dans l’exemple suivant, l’utilisateur a sélectionné trois entités : **ContactCSV : TestData** comme entité **Principale**, **WebAccountCSV : TestData** comme **Entité 2**, et **CallRecordSmall : TestData** comme **Entité 3**. Le schéma au-dessus de ces sélections illustre comment l’ordre de mise en correspondance sera exécuté.
+Chaque correspondance unifie deux entités ou plus en une seule entité consolidée. Dans le même temps, elle conserve les enregistrements de client uniques. Par exemple, nous avons sélectionné deux entités : **eCommerce:eCommerceContacts** comme entité principale et **LoyaltyScheme:loyCustomers** comme deuxième entité. L’ordre des entités spécifie dans quel ordre le système essaiera de faire correspondre les enregistrements.
 
-> [!div class="mx-imgBorder"]
-> ![Modifier l’ordre de correspondance des données](media/configure-data-match-order-edit-page.png "Modifier l’ordre de correspondance des données")
+:::image type="content" source="media/match-page.png" alt-text="Capture d’écran de la page Mise en correspondance dans la zone Unifier du processus d’unification des données.":::
   
-L’entité **Principale** est associée à **Entité 2**. Le jeu de données résultant de la première correspondance est mis en correspondance avec l’**Entité 3**.
-Dans cet exemple, nous n’avons sélectionné que deux correspondances, mais le système peut en prendre davantage en charge.
+L’entité principale *eCommerce:eCommerceContacts* correspond à l’entité suivante *LoyaltyScheme:loyCustomers*. Le jeu de données qui résulte de la première étape de correspondance est mis en correspondance avec l’entité suivante si vous avez plusieurs entités.
 
 > [!IMPORTANT]
-> L’entité que vous choisissez comme votre entité **Principale** servira de base pour votre jeu de données principal unifié. Toutes les futures entités qui seront sélectionnées au cours de la phase de mise en correspondance seront ajoutées à cette entité. En même temps, cela ne signifie pas que l’entité unifiée comprendra *toutes* les données incluses dans cette entité.
+> L’entité que vous choisissez comme entité principale servira de base pour votre jeu de données de profils unifié. Toutes les futures entités qui seront sélectionnées au cours de la phase de mise en correspondance seront ajoutées à cette entité. Cela ne signifie pas que l’entité unifiée comprendra *toutes* les données incluses dans cette entité.
 >
 > Deux considérations peuvent vous aider à choisir la hiérarchie de vos entités :
 >
-> - Quelle entité considérez-vous posséder les données les plus complètes et fiables sur vos clients ?
-> - L’entité qui vous venez d’identifier a-t-elle des attributs qui sont partagés par d’autres entités (par exemple, nom, numéro de téléphone ou adresse de messagerie) ? Si ce n’est pas le cas, sélectionnez la deuxième entité la plus fiable.
+> - Choisissez l’entité avec les données de profil les plus complètes et les plus fiables sur vos clients en tant qu’entité principale.
+> - Choisissez l’entité qui a plusieurs attributs en commun avec d’autres entités (par exemple, nom, numéro de téléphone ou adresse e-mail) comme entité principale.
 
-Sélectionnez **Terminé** pour enregistrer votre ordre de correspondance.
+Après avoir spécifié l’ordre de correspondance, vous verrez les paires de correspondance définies dans la section **Détails des enregistrements correspondants** dans **Données** > **Unifier** > **Mettre en correspondance**. Les mesures clés seront vides jusqu’à la fin du processus de correspondance.
 
-## <a name="define-rules-for-your-first-match-pair"></a>Définir les règles pour la première paire de correspondance
+## <a name="define-rules-for-match-pairs"></a>Définir les règles pour les paires de correspondance
 
-Après avoir spécifié l’ordre des correspondances, vous verrez les correspondances définies sur la page **Correspondance**. Les vignettes en haut de l’écran seront vides jusqu’à vous exécutiez votre ordre de correspondance.
+Les règles de correspondance spécifient la logique par laquelle une paire spécifique d’entités sera mise en correspondance.
 
-> [!div class="mx-imgBorder"]
-> ![Définir des règles](media/configure-data-match-need-rules.png "Définir les règles")
+L’avertissement **Nécessite des règles** situé en regard d’un nom d’entité suggère qu’aucune règle de correspondance n’est définie pour une paire de correspondance. 
 
-L’avertissement **Nécessite des règles** suggère qu’aucune règle de correspondance n’est définie pour une paire de correspondance. Les règles de correspondance spécifient la logique par laquelle une paire spécifique d’entités sera mise en correspondance.
+:::image type="content" source="media/match-rule-add.png" alt-text="Capture d’écran de la section Détails des enregistrements correspondants avec contrôle pour ajouter des règles en surbrillance.":::
 
-1. Pour définir votre première règle, ouvrez le volet **Définition de règle** en sélectionnant la ligne correspondante dans la table de correspondances (1) puis en sélectionnant **Créer une nouvelle règle** (2).
+1. Sélectionnez **Ajouter des règles** sous une entité dans la section **Détails des enregistrements correspondants** pour définir les règles de correspondance.
 
-   > [!div class="mx-imgBorder"]
-   > ![Créer une règle](media/configure-data-match-new-rule2.png "Créer une règle")
+1. Dans le volet **Créer une règle**, configurez les conditions de la règle.
 
-2. Dans le volet **Modifier la règle**, configurez les conditions de cette règle. Chaque condition est représentée par deux lignes qui contiennent des sélections obligatoires.
+   :::image type="content" source="media/match-rule-conditions.png" alt-text="Capture d’écran d’une règle de correspondance ouverte avec conditions ajoutées.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Volet Nouvelle règle](media/configure-data-match-new-rule-condition.png "Volet Nouvelle règle")
+   - **Entité/Champ (première ligne)**  : Choisissez une entité associée et un attribut pour spécifier une propriété d’enregistrement susceptible d’être unique pour un client. Par exemple, un numéro de téléphone ou une adresse e-mail. Évitez de faire correspondre par attributs du type Activité. Par exemple, un ID d’achat ne trouvera probablement aucune correspondance dans d’autres types d’enregistrement.
 
-   Entité/Champ (En premier) - Un attribut qui sera utilisé pour mettre en correspondance à partir de la première entité de la paire de correspondance. Les exemples peuvent inclure un numéro de téléphone ou une adresse e-mail. Choisissez un attribut susceptible d’être unique pour le client.
+   - **Entité/Champ (deuxième ligne)**  : Choisissez un attribut lié à l’attribut de l’entité spécifié dans la première ligne.
 
-   > [!TIP]
-   > Évitez de faire correspondre la base des attributs du type Activité. En d’autres termes, si un attribut semble être une activité, il peut être un critère de correspondance médiocre.  
+   - **Normaliser** : Sélectionnez l’une des options de normalisation suivantes pour les attributs sélectionnés. 
+     - Espace blanc : supprime tous les espaces. *Hello   World* devient *HelloWorld*.
+     - Symboles : supprime tous les symboles et caractères spéciaux. *Head&Shoulder* devient *HeadShoulder*.
+     - Texte en minuscules : convertit tous les caractères en minuscules. *TOUT EN MAJUSCULE et Casse du titre* devient *tout en majuscule et casse du titre*.
+     - Unicode en ASCII : convertit la notation Unicode en caractères ASCII. */u00B2* devient *2*.
+     - Chiffres : convertit d’autres systèmes numériques, tels que les chiffres romains, en chiffres arabes. *VIII* devient *8*.
+     - Types sémantiques : standardise les noms, les titres, les numéros de téléphone, les adresses, etc. 
 
-   Entité/Champ (En deuxième) - Un attribut qui sera utilisé pour mettre en correspondance à partir de la deuxième entité de la paire de correspondance.
+   - **Précision** : Définissez le niveau de précision à appliquer pour cette condition. 
+     - **De base** : Choisissez l’une des options disponibles : *Faible*, *Moyen*, *Élevé* et *Exact*. Sélectionnez **Exact** pour ne faire correspondre que les enregistrements qui correspondent à 100 %. Sélectionnez un des autres niveaux pour mettre en correspondance les enregistrements qui ne sont pas identiques à 100 pour cent.
+     - **Personnalisé** : Définissez un pourcentage auquel les enregistrements doivent correspondre. Le système ne fera correspondre que les enregistrements dépassant ce seuil.
 
-   Normaliser - **Méthode de normalisation** : Diverses options de normalisation sont disponibles pour les attributs sélectionnés. Par exemple, supprimer la ponctuation ou supprimer les espaces
+1. Fournissez un **Nom** pour la règle.
 
-   Pour la normalisation du nom de l’organisation (préversion), vous pouvez également sélectionner **Type (téléphone, nom, organisation)**
+1. [Ajoutez d’autres conditions](#add-conditions-to-a-rule) ou sélectionnez **Terminé** pour finaliser la règle.
 
-   > [!div class="mx-imgBorder"]
-   > ![Normalisation - B2B](media/match-normalization-b2b.png "Normalisation - B2B")
+1. Vous pouvez également [ajouter d’autres règles](#add-rules-to-a-match-pair).
 
-   Niveau de précision - Le niveau de précision qui sera utilisé pour cette condition. La définition d’un niveau de précision pour une condition de correspondance peut avoir deux types : **De base** et **Personnalisé**.  
-   - De base : vous propose quatre options parmi lesquelles choisir : Faible, Moyen, Élevé et Exact. Sélectionnez **Exact** pour ne faire correspondre que les enregistrements qui correspondent à 100 %. Sélectionnez un des autres niveaux pour mettre en correspondance les enregistrements qui ne sont pas identiques à 100 pour cent.
-   - Personnalisé : utilisez le curseur pour définir le pourcentage personnalisé auquel les enregistrements doivent correspondre ou entrez une valeur dans le champ **Personnalisé**. Le système ne fera correspondre que les enregistrements dépassant ce seuil sous forme de paires de correspondances. Les valeurs du curseur sont comprises entre 0 et 1. 0,64 représente donc 64 %.
+1. Sélectionnez **Enregistrer** pour appliquer vos modifications.
 
-3. Sélectionnez **Terminé** pour enregistrer la règle.
+### <a name="add-conditions-to-a-rule"></a>Ajouter des conditions à une règle
 
-### <a name="add-multiple-conditions"></a>Ajouter plusieurs conditions
+Pour faire correspondre des entités uniquement si les attributs remplissent plusieurs conditions, ajoutez d’autres conditions à une règle de correspondance. Les conditions sont connectées avec un opérateur ET logique et ne sont donc exécutées que si toutes les conditions sont remplies.
 
-Pour mettre en correspondance vos entités que si plusieurs conditions sont réunies, ajoutez d’autres conditions qui sont liées par un opérateur ET.
+1. Accédez à **Données** > **Unifier** > **Mise en correspondance** et sélectionnez **Modifier** sur la règle à laquelle vous souhaitez ajouter des conditions.
 
-1. Dans le volet **Modifier la règle**, sélectionnez **Ajouter une condition**. Vous pouvez également supprimer des conditions en sélectionnant le bouton Supprimer à côté d’une condition existante.
+1. Dans le volet **Modifier la règle**, sélectionnez **Ajouter une condition**.
 
-2. Sélectionnez **Terminé** pour enregistrer la règle.
+1. Sélectionnez **Terminé** pour enregistrer la règle.
 
-## <a name="add-multiple-rules"></a>Ajouter plusieurs règles
+### <a name="add-rules-to-a-match-pair"></a>Ajouter des règles à une paire de correspondance
 
-Chaque condition s’applique à une seule paire d’attributs, lorsque les règles représentent des ensembles de conditions. Pour que vos entités correspondent à différents ensembles d’attributs, vous pouvez ajouter d’autres règles.
+Les règles de correspondance représentent des ensembles de conditions. Pour faire correspondre des entités en fonction de conditions basées sur plusieurs attributs, ajoutez d’autres règles
 
-1. Dans les informations sur l’audience, accédez à **Données** > **Unifier** > **Mettre en correspondance**.
+1.  Accédez à **Données** > **Unifier** > **Mise en correspondance** et sélectionnez **Ajouter une règle** sur l’entité à laquelle vous souhaitez ajouter des règles.
 
-2. Sélectionnez l’entité à mettre à jour, puis sélectionnez **Ajouter des règles**.
-
-3. Suivez la procédure décrite dans [Définir les règles pour la première paire de correspondance](#define-rules-for-your-first-match-pair).
+2. Suivez les étapes de la section [Définir les règles pour les paires de correspondance](#define-rules-for-match-pairs).
 
 > [!NOTE]
 > L’ordre des règles est important. L’algorithme de correspondance tente d’effectuer une mise en correspondance sur la base de votre première règle et passe à la deuxième règle uniquement si aucune correspondance n’a été identifiée avec la première règle.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Définir la déduplication d’une entité de mise en correspondance
 
-En plus de spécifier les règles de mise en correspondance entre entités comme indiqué dans les sections ci-dessus, vous pouvez également spécifier des règles de déduplication. La *Déduplication* est un processus. Elle identifie les enregistrements en double, les fusionne en un seul enregistrement et lie tous les enregistrements sources à cet enregistrement fusionné avec d’autres ID de l’enregistrement fusionné.
+En plus des [règles de correspondance entre entités](#define-rules-for-match-pairs), vous pouvez également spécifier des règles de déduplication. La *déduplication* est un autre processus de mise en correspondance des enregistrements. Elle identifie les enregistrements en double et les fusionne en un seul enregistrement. Les enregistrements source sont liés à l’enregistrement fusionné avec d’autres ID.
 
-Une fois qu’un enregistrement dédupliqué est identifié, cet enregistrement sera utilisé dans le processus de mise en correspondance entre entités. La déduplication est mise en œuvre au niveau de l’entité et peut être appliquée à chaque entité utilisée dans le processus de mise en correspondance.
+Les enregistrements dédupliqués seront utilisés dans le processus de mise en correspondance entre entités. La déduplication se produit sur des entités individuelles et peut être configurée pour chaque entité utilisée dans des paires de correspondance.
+
+La spécification des règles de déduplication n’est pas obligatoire. Si aucune règle de ce type n’est configurée, les règles définies par le système sont appliquées. Elles combinent tous les enregistrements en un seul enregistrement avant de transmettre les données d’entité à la correspondance entre entités pour améliorer les performances.
 
 ### <a name="add-deduplication-rules"></a>Ajouter des règles de déduplication
 
-1. Dans les informations sur l’audience, accédez à **Données** > **Unifier** > **Mettre en correspondance**.
+1. Accédez à **Données** > **Unifier** > **Mise en correspondance**.
 
-1. Dans la section **Doublons fusionnés**, sélectionnez **Définir les entités**.
+1. Dans la section **Doublons fusionnés**, sélectionnez **Définir les entités**. Si des règles de déduplication sont déjà créées, sélectionnez **Modifier**.
 
-1. Dans la section **Préférences de fusion**, sélectionnez les entités auxquelles vous souhaitez appliquer la déduplication.
+1. Dans le volet **Préférences de fusion**, choisissez les entités pour lesquelles vous souhaitez exécuter la déduplication.
 
-1. Spécifiez comment fusionner les enregistrements en double et choisissez l’une des trois options de fusion :
-   - *Les plus remplis* : identifie l’enregistrement avec les attributs les plus remplis comme enregistrement gagnant. Il s’agit de l’option de fusion par défaut.
-   - *Les plus récents* : identifie l’enregistrement gagnant en fonction du plus récent. Nécessite une date ou un champ numérique pour définir la récence.
-   - *Les moins récents* : identifie l’enregistrement gagnant en fonction du moins récent. Nécessite une date ou un champ numérique pour définir la récence.
+1. Spécifiez comment combiner les enregistrements en double et choisissez l’une des trois options :
+   - **Les plus remplis** : identifie l’enregistrement avec les champs d’attributs les plus remplis comme enregistrement gagnant. Il s’agit de l’option de fusion par défaut.
+   - **Les plus récents** : identifie l’enregistrement gagnant en fonction du plus récent. Nécessite une date ou un champ numérique pour définir la récence.
+   - **Les moins récents** : identifie l’enregistrement gagnant en fonction du moins récent. Nécessite une date ou un champ numérique pour définir la récence.
  
    > [!div class="mx-imgBorder"]
    > ![Étape 1 des règles de déduplication](media/match-selfconflation.png "Étape 1 des règles de déduplication")
  
-1. Une fois les entités sélectionnées et leur préférence de fusion définie, sélectionnez **Créer une nouvelle règle** pour définir les règles de déduplication au niveau de l’entité.
-   - **Sélectionner un champ** répertorie tous les champs disponibles de l’entité sur laquelle vous souhaitez dédupliquer les données sources.
-   - Spécifiez les paramètres de normalisation et de précision de la même façon que dans le processus de mise en correspondance entre entités.
-   - Vous pouvez définir des conditions supplémentaires en sélectionnant **Ajouter une condition**.
+1. Une fois les entités sélectionnées et leur préférence de fusion définie, sélectionnez **Ajouter une règle** pour définir les règles de déduplication au niveau de l’entité.
+   - **Sélectionner un champ** répertorie tous les champs disponibles de cette entité. Choisissez le champ dans lequel vous souhaitez rechercher les doublons. Choisissez des champs susceptibles d’être uniques pour chaque client. Par exemple, une adresse e-mail ou la combinaison du nom, de la ville et du numéro de téléphone.
+   - Spécifiez les paramètres de normalisation et de précision.
+   - Définissez d’autres conditions en sélectionnant **Ajouter une condition**.
  
    > [!div class="mx-imgBorder"]
    > ![Étape 2 des règles de déduplication](media/match-selfconflation-rules.png "Étape 2 des règles de déduplication")
@@ -138,28 +142,13 @@ Une fois qu’un enregistrement dédupliqué est identifié, cet enregistrement 
 
 1. Cet enregistrement gagnant est ensuite transmis à la mise en correspondance entre entités, avec les enregistrements non gagnants (par exemple, les autres ID) pour améliorer la qualité de la correspondance.
 
-1. Toutes les règles de mise en correspondance personnalisées définies pour toujours correspondre et ne jamais correspondre remplacent les règles de déduplication. Si une règle de déduplication identifie des enregistrements correspondants et si une règle de mise en correspondance personnalisée est définie pour ne jamais correspondre à ces enregistrements, ces deux enregistrements ne seront pas mis en correspondance.
+1. Toutes les règles de correspondance personnalisées définies remplacent les règles de déduplication. Si une règle de déduplication identifie des enregistrements correspondants et si une règle de mise en correspondance personnalisée est définie pour ne jamais correspondre à ces enregistrements, ces deux enregistrements ne seront pas mis en correspondance.
 
-1. Une fois le processus de mise en correspondance exécuté, vous verrez les statistiques de déduplication.
-   
-> [!NOTE]
-> La spécification des règles de déduplication n’est pas obligatoire. Si aucune règle de ce type n’est configurée, les règles définies par le système sont appliquées. Elles regroupent tous les enregistrements qui partagent la même combinaison de valeurs (correspondance exacte) à partir de la clé primaire et les champs des règles de mise en correspondance en un seul enregistrement avant de transmettre les données d’entité au processus de mise en correspondance entre entités pour améliorer les performances et l’intégrité du système.
+1. Après [l’exécution du processus de mise en correspondance](#run-the-match-process), vous verrez les statistiques de déduplication dans les vignettes de mesures clés.
 
-## <a name="run-your-match-order"></a>Exécuter votre ordre de mise en correspondance
+### <a name="deduplication-output-as-an-entity"></a>Sortie de déduplication en tant qu’entité
 
-Une fois les règles de mise en correspondance définies, notamment les règles de mise en correspondance entre entités et de déduplication, vous pouvez exécuter l’ordre de mise en correspondance. Sur la page **Mettre en correspondance**, sélectionnez **Exécuter** pour démarrer le processus. L’exécution de l’algorithme de correspondance peut prendre un certain temps. Vous ne pouvez pas modifier les propriétés de la page **Mettre en correspondance** tant que le processus n’est pas terminé. Vous trouverez l’entité de profil client unifiée qui a été créée sur la page **Entités**. Votre entité client unifiée est appelée **ConflationMatchPairs : CustomerInsights**.
-
-Pour apporter des modifications supplémentaires et réexécuter l’étape, vous pouvez annuler une mise en correspondance en cours. Sélectionnez le texte **Actualisation en cours...** et sélectionnez **Annuler la tâche** en bas du volet latéral qui s’affiche.
-
-Une fois le processus de mise en correspondance terminé, le texte **Actualisation en cours...** est modifié en **Opération réussie**. Vous pouvez alors utiliser à nouveau toutes les fonctionnalités de la page.
-
-La première correspondance entraîne la création d’une entité principale unifiée. Toutes les correspondances suivantes entraînent l’expansion de cette entité.
-
-> [!TIP]
-> Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d’autres processus en aval](system.md#refresh-policies). Vous pouvez sélectionner le statut d’un processus pour afficher des détails sur la progression de toute la tâche. Après avoir sélectionné **Voir les détails** pour l’une des tâches du travail, vous voyez des informations complémentaires : la durée de traitement, la date du dernier traitement et toutes les erreurs et avertissements associés à la tâche.
-
-## <a name="deduplication-output-as-an-entity"></a>Sortie de déduplication en tant qu’entité
-En plus de l’entité maître principale créée dans le cadre de la mise en correspondance entre entités, le processus de déduplication génère également une nouvelle entité pour chaque entité à partir de l’ordre de correspondance afin d’identifier les enregistrements dédupliqués. Ces entités peuvent être trouvées avec **ConflationMatchPairs:CustomerInsights** dans la section **Système** de la page **Entités**, avec le nom **Deduplication_Datasource_Entity**.
+Le processus de déduplication crée une nouvelle entité pour chaque entité à partir des paires de correspondance afin d’identifier les enregistrements dédupliqués. Ces entités peuvent être trouvées avec **ConflationMatchPairs:CustomerInsights** dans la section **Système** de la page **Entités**, avec le nom **Deduplication_DataSource_Entity**.
 
 Une entité de sortie de déduplication contient les informations suivantes :
 - ID/clés
@@ -168,77 +157,71 @@ Une entité de sortie de déduplication contient les informations suivantes :
   - Deduplication_WinnerId : ce champ contient l’ID gagnant des groupes ou clusters identifiés. Si Deduplication_WinnerId est identique à la valeur de clé primaire d’un enregistrement, cela signifie que l’enregistrement est l’enregistrement gagnant.
 - Champs utilisés pour définir les règles de déduplication.
 - Champs de règle et de score pour indiquer les règles de déduplication appliquées et le score renvoyé par l’algorithme de correspondance.
+   
+## <a name="run-the-match-process"></a>Exécuter le processus de mise en correspondance
+
+Avec les règles de mise en correspondance définies, notamment les règles de mise en correspondance entre entités et de déduplication, vous pouvez exécuter le processus de mise en correspondance. 
+
+Accédez à **Données** > **Unifier** > **Mise en correspondance** et sélectionnez **Exécuter** pour démarrer le processus. L’algorithme de correspondance prend un certain temps et vous ne pouvez pas modifier la configuration tant qu’il n’est pas terminé. Pour apporter des modifications, vous pouvez annuler l’exécution. Sélectionnez le statut de la tâche et sélectionnez **Annuler la tâche** sur le volet **Détails de la progression**.
+
+Vous trouverez le résultat d’une exécution réussie, l’entité de profil client unifiée, sur la page **Entités**. Votre entité client unifiée est appelée **Clients** dans la section **Profils**. La première exécution de la mise en correspondance réussie crée l’entité *Client* unifiée. Toutes les correspondances suivantes développent cette entité.
+
+> [!TIP]
+> Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d’autres processus en aval](system.md#refresh-policies). Vous pouvez sélectionner le statut d’un processus pour afficher des détails sur la progression de toute la tâche. Après avoir sélectionné **Voir les détails** pour l’une des tâches du travail, vous voyez des informations complémentaires : la durée de traitement, la date du dernier traitement et toutes les erreurs et avertissements associés à la tâche.
 
 ## <a name="review-and-validate-your-matches"></a>Examiner et valider vos correspondances
 
-Évaluer la qualité de vos paires de correspondance et les améliorer :
+Accédez à **Données** > **Unifier** > **Mise en correspondance** pour évaluer la qualité de vos paires de correspondance et les affiner si nécessaire.
 
-- Sur la page **Mettre en correspondance**, vous trouverez deux vignettes montrant les informations initiales sur vos données.
+Les vignettes en haut de la page affichent les mesures clés, résumant le nombre d’enregistrements correspondants et de doublons.
 
-  - **Clients uniques** : affiche le nombre des profils uniques que le système a identifiés.
-  - **Enregistrements mis en correspondance** : affiche le nombre de correspondances sur toutes vos paires de correspondances.
+:::image type="content" source="media/match-KPIs.png" alt-text="Capture d’écran recadrée des mesures clés de la page Mise en correspondance avec chiffres et détails.":::
 
-- Dans la table **Ordre de correspondance**, vous pouvez évaluer les résultats de chaque paire de correspondance en comparant le nombre d’enregistrements qui sont sortis de cette entité de paire de correspondance par rapport au pourcentage des enregistrements mis en correspondance avec succès.
+- **Enregistrements source uniques** indique le nombre d’enregistrements source individuels qui ont été traités lors de la dernière mise en correspondance.
+- **Enregistrements correspondants et non correspondants** met en évidence le nombre d’enregistrements uniques restants après le traitement des règles de correspondance.
+- **Enregistrements correspondants uniquement** affiche le nombre de correspondances sur toutes vos paires de correspondances.
 
-- Dans la section **Règles** d’une entité dans la table **Ordre de correspondance**, vous trouverez le pourcentage d’enregistrements correctement mis en correspondance au niveau de la règle. En sélectionnant le symbole de table à côté d’une règle, vous pouvez afficher tous ces enregistrements au niveau de la règle. Nous vous recommandons de consulter un sous-ensemble des enregistrements pour vérifier qu’ils correspondent bien.
+Vous pouvez évaluer les résultats de chaque paire de correspondance et ses règles dans le tableau **Détails des enregistrements correspondants**. Comparez le nombre d’enregistrements provenant d’une paire de correspondance avec le pourcentage d’enregistrements correctement mis en correspondance.
 
-- Vous pouvez faire des expériences avec différents seuils de précision autour de vos conditions afin d’identifier la valeur optimale.
+Passez en revue les règles d’une paire de correspondance pour voir le pourcentage d’enregistrements correctement mis en correspondance au niveau de la règle. Sélectionnez les points de suspension (...), puis sélectionnez **Aperçu de la correspondance** pour afficher tous ces enregistrements au niveau de la règle. Nous vous recommandons de consulter certains des enregistrements pour vérifier qu’ils correspondent bien.
 
-  1. Sélectionnez les points de suspension (...) pour la règle de paire de correspondance que vous souhaitez expérimenter et sélectionnez **Modifier**.
+Essayez différents seuils de précision sur les conditions pour trouver la valeur optimale.
 
-  2. Sélectionnez la condition que vous souhaitez expérimenter. Chaque critère est représenté par une ligne dans le volet **Règle de correspondance**.
+  1. Sélectionnez les points de suspension (...) pour la règle que vous souhaitez expérimenter et sélectionnez **Modifier**.
 
-  3. Ce que vous verrez sur la page **Aperçu des critères** dépend du niveau de précision que vous avez sélectionné pour une condition. Recherchez le nombre d’enregistrements concordants et non concordants pour la condition sélectionnée.
+  2. Modifiez les valeurs de précision dans les conditions que vous souhaitez réviser.
 
-     Vous pouvez comprendre dans le détail les effets des différents seuils. Vous pouvez comparer le nombre d’enregistrements qui sont mis en correspondance en fonction de chaque seuil, ainsi qu’afficher les enregistrements sous chaque option. Sélectionnez chacune des vignettes et consultez les données dans la section de tableau.
+  3. Sélectionnez **Aperçu** pour consulter le nombre d’enregistrements correspondants et non correspondants pour la condition sélectionnée.
 
-## <a name="optimize-your-matches"></a>Optimiser vos correspondances
+## <a name="manage-match-rules"></a>Gérer les règles de correspondance
 
-Augmentez la qualité en reconfigurant certains de vos paramètres de correspondance :
+Vous pouvez reconfigurer et affiner la plupart des paramètres de correspondance.
 
-- **Modifier l’ordre de correspondance** en sélectionnant **Modifier** et modifiez les champs d’ordre de correspondance.
+:::image type="content" source="media/match-rules-management.png" alt-text="Capture d’écran du menu déroulant avec les options de règle de correspondance.":::
 
-  > [!div class="mx-imgBorder"]
-  > ![Modifier l’ordre de correspondance des données](media/configure-data-match-order-edit.png "Modifier l’ordre de correspondance des données")
+- **Modifier l’ordre de vos règles** si vous avez défini plusieurs règles. Vous pouvez réorganiser les règles de correspondance en sélectionnant les options **Déplacer vers le haut** et **Déplacer vers le bas** ou par glisser-déplacer.
 
-- **Modifier l’ordre de vos règles** si vous avez défini plusieurs règles. Vous pouvez réorganiser les règles de correspondance en sélectionnant les options **Déplacer vers le haut** et **Déplacer vers le bas** de la grille des règles de correspondance.
-
-  > [!div class="mx-imgBorder"]
-  > ![Modifier l’ordre des règles](media/configure-data-change-rule-order.png "Modifier l’ordre des règles")
-
-- **Dupliquer vos règles** si vous avez défini une règle de correspondance et souhaitez créer une règle similaire avec des modifications. Faites-le en sélectionnant **Dupliquer**.
-
-  > [!div class="mx-imgBorder"]
-  > ![Dupliquer une règle](media/configure-data-duplicate-rule.png "Dupliquer une règle")
+- **Modifiez les conditions des règles** en sélectionnant **Modifier** et choisissez différents champs.
 
 - **Désactiver une règle** pour conserver une règle de correspondance tout en l’excluant du processus de correspondance.
 
-  > [!div class="mx-imgBorder"]
-  > ![Désactiver une règle](media/configure-data-deactivate-rule.png "Désactiver une règle")
+- **Dupliquez vos règles** si vous avez défini une règle de correspondance et souhaitez créer une règle similaire avec des modifications, sélectionnez **Dupliquer**.
 
-- **Modifiez vos règles** en sélectionnant le symbole **Modifier**. Vous pouvez appliquer les modifications suivantes :
+- **Supprimez une règle** en sélectionnant le symbole **de suppression**.
 
-  - Modifier les attributs d’une condition : sélectionnez de nouveaux attributs dans la ligne de condition spécifique.
-  - Modifier le seuil d’une condition : ajustez le curseur de précision.
-  - Modifier la méthode de normalisation d’une condition : mettez à jour la méthode de normalisation.
+## <a name="specify-custom-match-conditions"></a>Spécifier des conditions de correspondance personnalisées
 
-## <a name="specify-your-custom-match-records"></a>Spécifier vos enregistrements de correspondance personnalisés
+Vous pouvez spécifier des conditions pour que certains enregistrements doivent toujours correspondre ou ne jamais correspondre. Ces règles peuvent être téléchargées pour remplacer le processus de correspondance standard. Par exemple, s’il y a John Doe I et John Doe II dans nos enregistrements, le système peut les associer comme une même personne. Les règles de correspondance personnalisées vous permettent de spécifier que leurs profils font référence à différentes personnes. 
 
-Vous pouvez spécifier des conditions pour que certains enregistrements doivent toujours correspondre ou ne jamais correspondre. Ces règles peuvent être téléchargées en bloc dans le processus de correspondance.
+1. Accédez à **Données** > **Unifier** > **Mise en correspondance** et sélectionnez **Correspondance personnalisée** dans la section **Détails des enregistrements correspondants**.
 
-1. Sélectionnez l’option **Correspondance personnalisée** dans l’écran **Ordre de correspondance**.
+  :::image type="content" source="media/custom-match-create.png" alt-text="Capture d’écran de la section des règles de correspondance avec le contrôle Correspondance personnalisée mis en surbrillance.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Créer une correspondance personnalisée](media/custom-match-create.png "Créer une correspondance personnalisée")
+1. Si vous n’avez pas défini de règles de correspondance personnalisée, un nouveau volet **Correspondance personnalisée** affiche plus de détails.
 
-2. Si vous n’avez aucune entité téléchargée, vous verrez une nouvelle boîte de dialogue **Correspondance personnalisée** qui vous oblige à remplir certains détails. Si vous avez fourni ces informations plus tôt, passez à l’étape 8.
+1. Sélectionnez **Remplir le modèle** pour obtenir un fichier modèle qui peut spécifier les enregistrements à partir desquels les entités doivent toujours correspondre ou ne jamais correspondre. Vous devez renseigner séparément les "enregistrements qui doivent toujours correspondre" et les "enregistrements qui ne doivent jamais correspondre" dans deux fichiers différents.
 
-   > [!div class="mx-imgBorder"]
-   > ![Boîte de dialogue Nouvelle correspondance personnalisée](media/custom-match-new-dialog-box.png "Boîte de dialogue Nouvelle correspondance personnalisée")
-
-3. Sélectionnez **Remplir le modèle** pour obtenir un fichier modèle qui peut spécifier les enregistrements à partir desquels les entités doivent toujours correspondre ou ne jamais correspondre. Vous devez renseigner séparément les "enregistrements qui doivent toujours correspondre" et les "enregistrements qui ne doivent jamais correspondre" dans deux fichiers différents.
-
-4. Le modèle contient des champs pour spécifier l’entité et les valeurs de clé primaire d’entité à utiliser dans la correspondance personnalisée. Par exemple, si vous souhaitez que la clé primaire 12345 de l’entité Ventes corresponde toujours à la clé primaire 34567 de l’entité Contact, vous devrez spécifier comme suit :
+1. Le modèle contient des champs pour spécifier l’entité et les valeurs de clé primaire d’entité à utiliser dans la correspondance personnalisée. Par exemple, si vous souhaitez que la clé primaire *12345* de l’entité *Ventes* corresponde toujours à la clé primaire *34567* de l’entité *Contact*, remplissez le modèle :
     - Entité 1 : Ventes
     - Clé d’entité 1 : 12345
     - Entité 2 : Contact
@@ -248,22 +231,22 @@ Vous pouvez spécifier des conditions pour que certains enregistrements doivent 
    
    Si vous souhaitez spécifier une correspondance personnalisée pour la déduplication sur une entité, fournissez la même entité que Entity1 et Entity2 et définissez les différentes valeurs de clé primaire.
 
-5. Après avoir ajouté tous les remplacements que vous souhaitez appliquer, enregistrez le fichier modèle.
+1. Après avoir ajouté tous les remplacements que vous souhaitez appliquer, enregistrez le fichier modèle.
 
-6. Accédez à **Données** > **Sources de données** et ingérez les fichiers de modèle en tant que nouvelles entités. Une fois ingérés, vous pouvez les utiliser pour spécifier la configuration de correspondance.
+1. Accédez à **Données** > **Sources de données** et ingérez les fichiers de modèle en tant que nouvelles entités. Une fois ingérés, vous pouvez les utiliser pour spécifier la configuration de correspondance.
 
-7. Une fois le téléchargement des fichiers et des entités disponibles, sélectionnez à nouveau l’option **Correspondance personnalisée**. Vous verrez des options pour spécifier les entités que vous souhaitez inclure. Sélectionnez les entités requises dans le menu déroulant.
+1. Une fois le téléchargement des fichiers et des entités disponibles, sélectionnez à nouveau l’option **Correspondance personnalisée**. Vous verrez des options pour spécifier les entités que vous souhaitez inclure. Sélectionnez les entités requises dans le menu déroulant.
 
-   > [!div class="mx-imgBorder"]
-   > ![Remplacements de correspondance personnalisés](media/custom-match-overrides.png "Remplacements de correspondance personnalisés")
+   :::image type="content" source="media/custom-match-overrides.png" alt-text="Capture d’écran de la boîte de dialogue pour choisir les remplacements pour un scénario de correspondance personnalisée.":::
 
-8. Sélectionnez les entités que vous souhaitez utiliser pour **Toujours correspondre** et **Ne jamais correspondre**, sélectionnez **Terminé**.
+1. Sélectionnez les entités que vous souhaitez utiliser pour **Toujours correspondre** et **Ne jamais correspondre**, sélectionnez **Terminé**.
 
-9. Sélectionnez **Enregistrer** sur la page **Correspondance** pour la configuration de correspondance personnalisée que vous venez de définir.
+1. Sélectionnez **Enregistrer** sur la page **Correspondance** pour appliquer la configuration de correspondance personnalisée.
 
-10. Sélectionnez **Exécuter** sur la page **Correspondance** pour démarrer le processus de correspondance et la configuration de correspondance personnalisée sera prise en compte. Toutes les règles système correspondantes sont remplacées par le jeu de configuration.
+1. Sélectionnez **Exécuter** sur la page **Mettre en correspondance** pour démarrer le processus. Les autres règles de correspondance spécifiées sont remplacées par la configuration de correspondance personnalisée.
 
-11. Une fois la correspondance terminée, vous pouvez vérifier **ConflationMatchPair** pour confirmer que les remplacements sont appliqués dans les correspondances de confusion.
+> [!TIP]
+> Accédez à **Données** > **Entités** et passez en revue l’entité **ConflationMatchPair** pour confirmer que les remplacements sont appliqués.
 
 ## <a name="next-step"></a>Étape suivante
 

@@ -2,23 +2,23 @@
 title: Ingérer des données via un connecteur Power Query
 description: Connecteurs pour sources de données basées sur Power Query.
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267766"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596910"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connexion à une source de données Power Query
 
-Power Query propose un large éventail de connecteurs pour ingérer des données. La plupart de ces connecteurs sont pris en charge par Dynamics 365 Customer Insights. L’ajout de sources de données basées sur des connecteurs Power Query suit généralement la procédure décrite dans la section suivante. Cependant, selon le connecteur que vous utilisez, des informations différentes sont requises. Pour plus d’informations, consultez la documentation sur les connecteurs individuels dans la [Référence des connecteurs Power Query](https://docs.microsoft.com/power-query/connectors/).
+Power Query propose un large éventail de connecteurs pour ingérer des données. La plupart de ces connecteurs sont pris en charge par Dynamics 365 Customer Insights. L’ajout de sources de données basées sur des connecteurs Power Query suit généralement la procédure décrite dans la section suivante. Cependant, selon le connecteur que vous utilisez, des informations différentes sont requises. Pour plus d’informations, consultez la documentation sur les connecteurs individuels dans la [Référence des connecteurs Power Query](/power-query/connectors/).
 
 ## <a name="create-a-new-data-source"></a>Créer une source de données
 
@@ -44,7 +44,7 @@ Power Query propose un large éventail de connecteurs pour ingérer des données
    > [!div class="mx-imgBorder"]
    > ![Boîte de dialogue Modifier les requêtes](media/data-manager-configure-edit-queries.png "Boîte de dialogue Modifier les requêtes")
 
-1. Vous pouvez également transformer vos données. Sélectionnez une entité à modifier ou transformer. Utilisez les options de la fenêtre Power Query pour appliquer les transformations. Chaque transformation est répertoriée sous **Étapes appliquées**. Power Query fournit de nombreuses options de transformation prédéfinies. Pour plus d’informations, consultez [Transformations Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations).
+1. Vous pouvez également transformer vos données. Sélectionnez une entité à modifier ou transformer. Utilisez les options de la fenêtre Power Query pour appliquer les transformations. Chaque transformation est répertoriée sous **Étapes appliquées**. Power Query fournit de nombreuses options de transformation prédéfinies. Pour plus d’informations, consultez [Transformations Power Query](/power-query/power-query-what-is-power-query#transformations).
 
 1. Vous pouvez ajouter des entités supplémentaires à votre source de données en sélectionnant **Obtenir des données** dans la boîte de dialogue **Modifier les requêtes**.
 
@@ -59,7 +59,7 @@ Power Query propose un large éventail de connecteurs pour ingérer des données
 
 ## <a name="available-power-query-data-sources"></a>Sources de données Power Query disponibles
 
-Consultez la [Référence des connecteurs Power Query](https://docs.microsoft.com/power-query/connectors/) pour voir la liste à jour des connecteurs que vous pouvez sélectionner pour importer des données dans Customer Insights. 
+Consultez la [Référence des connecteurs Power Query](/power-query/connectors/) pour voir la liste à jour des connecteurs que vous pouvez sélectionner pour importer des données dans Customer Insights. 
 
 Les connecteurs portant une coche dans la colonne **Customer Insights (Dataflows)** sont disponibles pour créer de nouvelles sources de données basées sur Power Query. Consultez la documentation d’un connecteur spécifique pour en savoir plus sur ses prérequis, ses limitations et autres détails.
 

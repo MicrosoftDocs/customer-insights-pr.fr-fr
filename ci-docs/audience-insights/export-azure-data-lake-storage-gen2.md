@@ -2,19 +2,19 @@
 title: Exporter des données Customer Insights vers des hôtes Azure Data Lake Storage Gen2
 description: Découvrez comment configurer la connexion à Azure Data Lake Storage Gen2.
 ms.date: 02/04/2021
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: b00c3d6178150cbc93fe800779f094809d4dc67b
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 7c0eef575f745efa6312d7141a6dd96607f9797e
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477176"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596634"
 ---
 # <a name="connector-for-azure-data-lake-storage-gen2-preview"></a>Connecteur pour Azure Data Lake Storage Gen2 (version préliminaire)
 
@@ -29,8 +29,8 @@ Stockez vos données Customer Insights dans Azure Data Lake Storage Gen2 ou util
 1. Donnez à votre destination un nom reconnaissable dans le champ **Nom complet**.
 
 1. Entrez **Nom du compte**, **Clé de compte** et **conteneur** pour votre Azure Data Lake Storage Gen2.
-    - Pour savoir comment créer un compte de stockage à utiliser avec Azure Data Lake Storage Gen2, voir [Créer un compte de stockage](https://docs.microsoft.com/azure/storage/blobs/create-data-lake-storage-account). 
-    - Pour en savoir plus sur la recherche du nom et de la clé de compte du compte de stockage Azure Data Lake Gen2, voir [Gérer les paramètres du compte de stockage dans le portail Azure](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
+    - Pour savoir comment créer un compte de stockage à utiliser avec Azure Data Lake Storage Gen2, voir [Créer un compte de stockage](/azure/storage/blobs/create-data-lake-storage-account). 
+    - Pour en savoir plus sur la recherche du nom et de la clé de compte du compte de stockage Azure Data Lake Gen2, voir [Gérer les paramètres du compte de stockage dans le portail Azure](/azure/storage/common/storage-account-manage).
 
 1. Cliquez sur **Suivant**.
 

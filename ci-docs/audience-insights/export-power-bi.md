@@ -2,19 +2,19 @@
 title: Connecteur Power BI
 description: Découvrez comment utiliser le connecteur Dynamics 365 Customer Insights dans Power BI.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477085"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596036"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connecteur pour Power BI (préversion)
 
@@ -23,7 +23,7 @@ Créez des visualisations pour vos données avec Power BI Desktop. Générez des
 ## <a name="prerequisites"></a>Conditions préalables
 
 - Vous disposez de profils clients unifiés.
-- La dernière version de [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) est installée sur votre ordinateur. [En savoir plus sur Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- La dernière version de [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) est installée sur votre ordinateur. [En savoir plus sur Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Configurer le connecteur pour Power BI
 
@@ -47,7 +47,7 @@ Créez des visualisations pour vos données avec Power BI Desktop. Générez des
 
 ## <a name="large-data-sets"></a>Jeux de données volumineux
 
-Le connecteur Customer Insights pour Power BI est conçu pour fonctionner avec des jeux de données contenant jusqu’à 1 million de profils client. L’importation de jeux de données plus volumineux peut fonctionner, mais cela prend beaucoup de temps. De plus, le processus peut s’exécuter dans un délai d’attente en raison des limites de Power BI. Pour plus d’informations, voir [Power BI : Recommandations concernant les jeux de données volumineux](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+Le connecteur Customer Insights pour Power BI est conçu pour fonctionner avec des jeux de données contenant jusqu’à 1 million de profils client. L’importation de jeux de données plus volumineux peut fonctionner, mais cela prend beaucoup de temps. De plus, le processus peut s’exécuter dans un délai d’attente en raison des limites de Power BI. Pour plus d’informations, voir [Power BI : Recommandations concernant les jeux de données volumineux](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Utiliser un sous-ensemble de données
 
@@ -70,4 +70,3 @@ Vous pouvez identifier et supprimer les relations en double.
 Après avoir supprimé les relations dupliquées, essayez de reconfigurer le connecteur Power BI. L’environnement devrait être disponible dès maintenant.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

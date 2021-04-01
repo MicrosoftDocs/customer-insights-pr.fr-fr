@@ -2,19 +2,19 @@
 title: Connecteur Power Apps
 description: Connectez-vous à Power Apps et Power Automate.
 ms.date: 01/19/2021
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268913"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598152"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Connecteur Microsoft Power Apps (préversion)
 
@@ -22,9 +22,9 @@ Importez des profils client unifiés dans vos applications personnalisées avec 
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Connectez-vous à Power Apps et à Dynamics 365 Customer Insights
 
-Customer Insights est l’une des nombreuses [sources disponibles pour les données dans Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
+Customer Insights est l’une des nombreuses [sources disponibles pour les données dans Power Apps](/powerapps/maker/canvas-apps/working-with-data-sources).
 
-Consultez la documentation de Power Apps pour savoir comment [ajouter une connexion de données à une application](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). Nous vous recommandons de consulter également l’article [Comment Power Apps utilise la délégation pour gérer de grands ensembles de données dans les applications canevas](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+Consultez la documentation de Power Apps pour savoir comment [ajouter une connexion de données à une application](/powerapps/maker/canvas-apps/add-data-connection). Nous vous recommandons de consulter également l’article [Comment Power Apps utilise la délégation pour gérer de grands ensembles de données dans les applications canevas](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="available-entities"></a>Entités disponibles
 
@@ -47,11 +47,11 @@ La délégation fonctionne pour l’entité Client et l’entité UnifiedActivit
 
 - Délégation pour **UnifiedActivity** : La délégation pour cette entité ne fonctionne que pour les champs **ActivityId** et **N° de client**.  
 
-- Pour plus d’informations sur la délégation, voir [Fonctions et opérations délégables Power Apps](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+- Pour plus d’informations sur la délégation, voir [Fonctions et opérations délégables Power Apps](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
 
 ## <a name="example-gallery-control"></a>Exemple de contrôle de galerie
 
-Par exemple, vous ajoutez des profils clients à un [contrôle de galerie](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).
+Par exemple, vous ajoutez des profils clients à un [contrôle de galerie](/powerapps/maker/canvas-apps/add-gallery).
 
 1. Ajoutez un contrôle **Galerie** à une application que vous créez.
 

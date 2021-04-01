@@ -2,19 +2,19 @@
 title: Segments suggérés optimisés par Machine Learning
 description: Laissez Machine Learning vous aider à trouver de nouveaux segments intéressants en fonction des attributs des clients.
 ms.date: 02/01/2021
-ms.reviewer: jimsonc
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: JimsonChalissery
+ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: 54655d57f4f0f723b497fe47891fd397ccb9dbf4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: bbc22adcd7b6e756fa6128abd855795de7480f2d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268223"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597093"
 ---
 # <a name="suggested-segments-preview"></a>Segments suggérés (version préliminaire)
 

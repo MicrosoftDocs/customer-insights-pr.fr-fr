@@ -2,19 +2,19 @@
 title: Enrichir les profils clients avec Microsoft Graph
 description: Utilisez les données propriétaires de Microsoft Graph pour enrichir vos données client avec les affinités pour des marques et des intérêts.
 ms.date: 12/10/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: kishorem-MS
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: aa46dac4f9c0d27881371877b14a92a6725710da
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269327"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596450"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enrichir les profils client avec les affinités pour des marques et des intérêts (préversion)
 
@@ -33,7 +33,7 @@ Pour configurer l’enrichissement des affinités pour des centres intérêts, a
 
 Nous utilisons les données de recherche en ligne de Microsoft Graph pour trouver des affinités avec des marques et des intérêts dans divers segments démographiques (définis selon l’âge, le sexe ou le lieu). Le volume de recherche en ligne pour une marque ou un intérêt détermine le degré d’affinité d’un segment démographique, par rapport à d’autres segments, pour cette marque ou cet intérêt.
 
-[En savoir plus sur Microsoft Graph](https://docs.microsoft.com/graph/overview).
+[En savoir plus sur Microsoft Graph](/graph/overview).
 
 ## <a name="affinity-level-and-score"></a>Niveau d’affinité et score
 
