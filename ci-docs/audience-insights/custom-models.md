@@ -1,19 +1,20 @@
 ---
 title: Modèles personnalisés Machine Learning | Microsoft Docs
 description: Utilisez des modèles personnalisés de Azure Machine Learning dans Dynamics 365 Customer Insights.
-ms.date: 11/19/2020
-ms.reviewer: zacook
-ms.service: dynamics-365-ai
+ms.date: 03/22/2021
+ms.reviewer: mhart
+ms.service: customer-insights
+ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
+author: zacookmsft
+ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
+ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267231"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "5700665"
 ---
 # <a name="custom-machine-learning-models"></a>Modèles personnalisés Machine Learning
 
@@ -21,13 +22,18 @@ ms.locfileid: "5267231"
 
 ## <a name="responsible-ai"></a>IA responsable
 
-Les prédictions offrent des fonctionnalités pour créer de meilleures expériences client, améliorer les fonctionnalités métier et les flux de revenus. Nous vous recommandons fortement d’équilibrer la valeur de votre prédiction par rapport à son impact et aux tendances qui peuvent être introduites de manière éthique. En savoir plus sur la manière dont Microsoft [gère l’IA responsable](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Vous pouvez également découvrir les [techniques et processus pour un apprentissage automatique responsable](https://docs.microsoft.com/azure/machine-learning/concept-responsible-ml) spécifique à Azure Machine Learning.
+Les prédictions offrent des fonctionnalités pour créer de meilleures expériences client, améliorer les fonctionnalités métier et les flux de revenus. Nous vous recommandons fortement d’équilibrer la valeur de votre prédiction par rapport à son impact et aux tendances qui peuvent être introduites de manière éthique. En savoir plus sur la manière dont Microsoft [gère l’IA responsable](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Vous pouvez également découvrir les [techniques et processus pour un apprentissage automatique responsable](/azure/machine-learning/concept-responsible-ml) spécifique à Azure Machine Learning.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
-- Actuellement, cette fonctionnalité prend en charge les services web publiés via [Machine Learning Studio (classique)](https://studio.azureml.net) et les [Pipelines par lots Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines).
+- Actuellement, cette fonctionnalité prend en charge les services web publiés via [Machine Learning Studio (classique)](https://studio.azureml.net) et les [Pipelines par lots Azure Machine Learning](/azure/machine-learning/concept-ml-pipelines).
 
-- Un compte de stockage Azure Data Lake Gen2 doit être associé à votre instance Azure Studio pour utiliser cette fonctionnalité. Pour plus d’informations, voir [Créer un compte de stockage Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)
+- Un compte de stockage Azure Data Lake Gen2 doit être associé à votre instance Azure Studio pour utiliser cette fonctionnalité. Pour plus d’informations, voir [Créer un compte de stockage Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+
+- Pour les espaces de travail Azure Machine Learning avec pipelines, vous avez besoin des autorisations d’administrateur pour l’accès propriétaire ou utilisateur sur l’espace de travail Azure Machine Learning.
+
+   > [!NOTE]
+   > Les données sont transférées entre vos instances Customer Insights et les pipelines ou les services web Azure sélectionnés dans le workflow. Lorsque vous transférez des données vers un service Azure, assurez-vous que le service est configuré pour traiter les données comme il se doit et à partir de l’emplacement requis afin de respecter les exigences légales ou réglementaires pour votre entreprise.
 
 ## <a name="add-a-new-workflow"></a>Ajouter un nouveau workflow
 
@@ -45,8 +51,8 @@ Les prédictions offrent des fonctionnalités pour créer de meilleures expérie
 1. Sélectionnez les **Espaces de travail** associés à votre service web. Deux sections sont répertoriées, une pour Azure Machine Learning v1 (Machine Learning Studio (classique)) et une pour Azure Machine Learning v2 (Azure Machine Learning). Si vous ne savez pas quel espace de travail est approprié pour votre service web Machine Learning Studio (classique), sélectionnez **Tout**.
 
 1. Choisissez le service web Machine Learning Studio (classique) ou le pipeline Azure Machine Learning dans la liste déroulante **Service web contenant votre modèle**. Ensuite, cliquez sur **Suivant**.
-   - En savoir plus sur la [publication d’un service web dans Machine Learning Studio (classique)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - En savoir plus sur la [publication d’un pipeline dans Azure Machine Learning à l’aide du concepteur](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ou du [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Votre pipeline doit être publié dans un [point de terminaison de pipeline](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - En savoir plus sur la [publication d’un service web dans Machine Learning Studio (classique)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
+   - En savoir plus sur la [publication d’un pipeline dans Azure Machine Learning à l’aide du concepteur](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ou du [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Votre pipeline doit être publié dans un [point de terminaison de pipeline](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Pour chaque **Entrée du service web**, sélectionnez l’**Entité** correspondante dans les informations sur l’audience et sélectionnez **Suivant**.
    > [!NOTE]
@@ -54,7 +60,7 @@ Les prédictions offrent des fonctionnalités pour créer de meilleures expérie
 
    > [!div class="mx-imgBorder"]
    > ![Configurer un workflow](media/intelligence-screen2-updated.png "Configurer un workflow")
-   
+
 1. Dans l’étape **Paramètres de sortie du modèle**, définissez les propriétés suivantes :
    - Machine Learning Studio (classique)
       1. Entrez le **Nom de l’entité** de sortie dans laquelle vous voulez envoyer les résultats de sortie du service web.
@@ -62,12 +68,12 @@ Les prédictions offrent des fonctionnalités pour créer de meilleures expérie
       1. Entrez le **Nom de l’entité** de sortie dans laquelle vous voulez envoyer les résultats de sortie du pipeline.
       1. Sélectionnez le **Nom du paramètre du magasin de données de sortie** de votre pipeline par lots dans la liste déroulante.
       1. Sélectionnez le **Nom du paramètre du chemin d’accès de sortie** de votre pipeline par lots dans la liste déroulante.
-      
+
       > [!div class="mx-imgBorder"]
       > ![Volet des paramètres de sortie du modèle](media/intelligence-screen3-outputparameters.png "Volet des paramètres de sortie du modèle")
 
 1. Sélectionnez l’attribut correspondant dans la liste déroulante **ID de client dans les résultats** qui identifie les clients, puis sélectionnez **Enregistrer**.
-   
+
    > [!div class="mx-imgBorder"]
    > ![Associer les résultats au volet Données client](media/intelligence-screen4-relatetocustomer.png "Associer les résultats au volet Données client")
 
@@ -95,7 +101,7 @@ Les prédictions offrent des fonctionnalités pour créer de meilleures expérie
       1. Sélectionnez le **Nom du paramètre du chemin d’accès de sortie** pour votre pipeline de test.
 
 1. Sélectionnez l’attribut correspondant dans la liste déroulante **ID de client dans les résultats** qui identifie les clients, puis sélectionnez **Enregistrer**.
-   Vous devez choisir un attribut dans la sortie d’inférence avec des valeurs similaires à la colonne ID de client de l’entité Client. Si cette colonne n’est pas présente dans votre ensemble de données, choisissez un attribut qui identifie de manière unique la ligne.
+   Choisissez un attribut dans la sortie d’inférence avec des valeurs similaires à la colonne ID de client de l’entité Client. Si cette colonne n’est pas présente dans votre ensemble de données, choisissez un attribut qui identifie de manière unique la ligne.
 
 ## <a name="run-a-workflow"></a>Exécuter un workflow
 
@@ -113,5 +119,28 @@ Votre workflow s’exécute également automatiquement à chaque actualisation p
 
 Votre workflow sera supprimé. L’[entité](entities.md) qui a été créée lorsque vous avez créé le workflow persiste et peut être consultée à partir de la page **Entités**.
 
+## <a name="results"></a>Résultats
+
+Les résultats d’un workflow sont stockés dans l’entité configurée lors de la phase Paramètres de sortie du modèle. Vous pouvez accéder à ces données à partir de la [page des entités](entities.md) ou avec l’[accès API](apis.md).
+
+### <a name="api-access"></a>Accès API
+
+Pour que la requête OData spécifique récupère les données d’une entité de modèle personnalisé, utilisez le format suivant :
+
+`https://api.ci.ai.dynamics.com/v1/instances/<your instance id>/data/<custom model output entity name>%3Ffilter%3DCustomerId%20eq%20'<guid value>'`
+
+1. Remplacez `<your instance id>` par l’ID de votre environnement Customer Insights, qui se situe dans la barre d’adresse de votre navigateur lorsque vous accédez à Customer Insights.
+
+1. Remplacez `<custom model output entity>` par le nom d’entité que vous avez fourni lors de l’étape Paramètres de sortie du modèle de la configuration du modèle personnalisé.
+
+1. Remplacez `<guid value>` par l’ID client du client pour lequel vous souhaitez accéder à l’enregistrement. Vous pouvez généralement trouver cet ID sur la [page des profils clients](customer-profiles.md) dans le champ CustomerID.
+
+## <a name="frequently-asked-questions"></a>Forums Aux Questions
+
+- Pourquoi ne puis-je pas voir mon pipeline lors de la configuration d’un workflow de modèle personnalisé ?    
+  Ce problème est souvent causé par un problème de configuration dans le pipeline. Assurez-vous que le [paramètre d’entrée est configuré](azure-machine-learning-experiments.md#dataset-configuration), et que [le magasin de données de sortie et les paramètres du chemin](azure-machine-learning-experiments.md#import-pipeline-data-into-customer-insights) sont également configurés.
+
+- Que signifie l’erreur « Impossible d’enregistrer le workflow d’intelligence » ?    
+  Les utilisateurs voient généralement ce message d’erreur s’ils ne disposent pas des privilèges d’administrateur pour l’accès propriétaire ou utilisateur sur l’espace de travail. L’utilisateur a besoin d’un niveau d’autorisations plus élevé pour permettre à Customer Insights de traiter le workflow en tant que service plutôt que d’utiliser les informations d’identification de l’utilisateur pour les exécutions suivantes du workflow.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

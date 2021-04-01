@@ -2,19 +2,19 @@
 title: Ingestion de données en temps réel et limitations
 description: Informations générales sur les fonctionnalités en temps réel dans les informations sur l’audience.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3c84cfe7441eb026c1fd45eda1f72421388d01d7
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270277"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598566"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestion de données en temps réel (préversion)
 
@@ -54,7 +54,7 @@ L’API en temps réel vous permet de publier une nouvelle activité de votre sy
 
 Vous pouvez vous connecter à l’API en temps réel de deux façons :
 
-- [indirectement](#connect-via-the-dynamics-365-customer-insights-connector), en utilisant le connecteur [Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/)
+- [indirectement](#connect-via-the-dynamics-365-customer-insights-connector), en utilisant le connecteur [Dynamics 365 Customer Insights](/connectors/customerinsights/)
 - [directement](#connect-directly-to-the-real-time-api), avec un code
 
 Les deux façons partagent les conditions préalables suivantes :
@@ -66,13 +66,13 @@ Les deux façons partagent les conditions préalables suivantes :
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Connexion via le connecteur Dynamics 365 Customer Insights
 
-L’API en temps réel peut ingérer des données à partir d’un connecteur dédié Power Platform, le [connecteur Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/), sans qu’il soit nécessaire d’écrire et de déployer du code.    
-Le connecteur peut effectuer les mêmes actions en temps réel que l’API. Une licence valide est nécessaire pour les connecteurs premium. Pour plus d’informations, voir [FAQ sur les licences Power Apps et Power Automate](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
+L’API en temps réel peut ingérer des données à partir d’un connecteur dédié Power Platform, le [connecteur Dynamics 365 Customer Insights](/connectors/customerinsights/), sans qu’il soit nécessaire d’écrire et de déployer du code.    
+Le connecteur peut effectuer les mêmes actions en temps réel que l’API. Une licence valide est nécessaire pour les connecteurs premium. Pour plus d’informations, voir [FAQ sur les licences Power Apps et Power Automate](/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps et/ou Power Automate](https://docs.microsoft.com/connectors/)
-- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps et/ou Power Automate](/connectors/)
+- Azure [Logic Apps](/azure/connectors/apis-list)
 
-Pour plus d’informations sur la création de flux, consultez la [documentation de Power Automate](https://docs.microsoft.com/power-automate/).
+Pour plus d’informations sur la création de flux, consultez la [documentation de Power Automate](/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Connexion directe à l’API en temps réel
 

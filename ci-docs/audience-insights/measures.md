@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269925"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654729"
 ---
 # <a name="define-and-manage-measures"></a>Définir et gérer des mesures
 
@@ -72,8 +72,8 @@ Cette section vous guide tout au long de la création d’une mesure à partir d
    1. Sélectionnez **Modifier les dimensions** pour ajouter des attributs de données par lesquels vous souhaitez regrouper les valeurs de mesure. Par exemple, ville ou sexe. Par défaut, la dimension *CustomerID* est sélectionnée pour créer des *mesures au niveau du client*. Vous pouvez supprimer la dimension par défaut si vous souhaitez créer des *mesures au niveau de l’entreprise*.
    1. Sélectionnez **Terminé** pour ajouter les dimensions à la mesure.
 
-1. S’il existe plusieurs chemins d’accès entre l’entité de données que vous avez mappée et l’entité client, vous devez choisir l’un des [chemins d’accès de relation d’entité](relationships.md). Les résultats de la mesure peuvent varier en fonction du chemin sélectionné.
-   1. Sélectionnez **Préférences de données** et choisissez le chemin de l’entité à utiliser pour identifier votre mesure.
+1. S’il existe plusieurs chemins d’accès entre l’entité de données que vous avez mappée et l’entité *Client*, vous devez choisir l’un des [chemins d’accès de relation d’entité](relationships.md). Les résultats de la mesure peuvent varier en fonction du chemin sélectionné. 
+   1. Sélectionnez **Préférences de données** et choisissez le chemin de l’entité à utiliser pour identifier votre mesure. S’il n’y a qu’un seul chemin vers l’entité *Client*, ce contrôle ne s’affichera pas.
    1. Sélectionnez **Terminé** pour appliquer votre sélection. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Sélectionnez le chemin d’accès pour la mesure.":::

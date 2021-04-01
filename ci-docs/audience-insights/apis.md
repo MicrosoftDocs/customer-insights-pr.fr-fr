@@ -1,20 +1,20 @@
 ---
 title: Utiliser les API
 description: Utilisez les API et comprenez leurs limitations.
-ms.date: 12/04/2020
+ms.date: 03/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
+ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 966db1a22e7dece1bcd89733880bce059151157f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
+ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267521"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "5710457"
 ---
 # <a name="work-with-customer-insights-apis"></a>Utiliser les API de Customer Insights
 
@@ -36,7 +36,7 @@ Cet article vous aide à accéder aux API de Customer Insights, à créer une in
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Activer les API de Customer Insights":::
 
-1. Sélectionnez **Explorer nos API** pour essayer les API.
+1. Sélectionnez **Explorer nos API** pour [essayer les API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
 1. Choisissez une opération d’API et sélectionnez **Essayer**.
 
@@ -47,6 +47,9 @@ Cet article vous aide à accéder aux API de Customer Insights, à créer une in
 1. Faites défiler vers le bas du volet latéral et sélectionnez **Envoyer**.
 
 La réponse HTTP apparaîtra bientôt en-dessous.
+
+
+   :::image type="content" source="media/try-apis.gif" alt-text="Gif animé montrant comment sélectionner et tester les API.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Créer une nouvelle inscription d’application dans le portail Azure
 
@@ -61,6 +64,8 @@ Les étapes suivantes vous aident à commencer à utiliser les API de Customer I
 
 1. Dans votre nouvelle inscription d’application, accédez à **Autorisations de l’API**.
 
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Gif animé pour définir l’autorisation de l’API lors de l’inscription d’application.":::
+
 1. Sélectionnez **Ajouter une autorisation** et sélectionnez **Customer Insights** dans le volet latéral.
 
 1. Pour le **Type d’autorisation**, sélectionnez **Autorisations déléguées** et sélectionnez l’autorisation **user_impersonation**.
@@ -71,9 +76,11 @@ Les étapes suivantes vous aident à commencer à utiliser les API de Customer I
 
 Vous pouvez utiliser l’ID d’application/de client pour cette inscription d’application avec la bibliothèque d’authentification Microsoft (MSAL) pour obtenir un jeton porteur à envoyer avec votre demande à l’API.
 
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animé pour accorder le consentement administrateur.":::
+
 Pour plus d’informations sur MSAL, consultez [Vue d’ensemble de la bibliothèque d’authentification Microsoft (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
 
-Pour plus d’informations sur l’inscription d’application dans Azure, consultez [Nouvelle expérience d’inscription d’application dans le portail Azure](https://docs.microsoft.com/azure/active-directory/develop/app-registration-portal-training-guide).
+Pour plus d’informations sur l’inscription d’application dans Azure, consultez [Nouvelle expérience d’inscription d’application dans le portail Azure](/azure/active-directory/develop/app-registration-portal-training-guide).
 
 Pour plus d’informations sur l’utilisation de nos bibliothèques client, consultez [Bibliothèques client de Customer Insights](#customer-insights-client-libraries).
 
@@ -101,6 +108,8 @@ La [section Inscription d’application](#create-a-new-app-registration-in-the-a
 
 1. Sélectionnez **Accorder un consentement d’administrateur pour...** pour terminer l’inscription de l’application.
 
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animé pour accorder le consentement administrateur.":::
+
 1. Pour conclure, nous devons ajouter le nom de l’inscription d’application en tant qu’utilisateur dans Customer Insights.    
    Ouvrez Customer Insights, accédez à **Administration** > **Autorisations** et sélectionnez **Ajouter un utilisateur**.
 
@@ -108,7 +117,7 @@ La [section Inscription d’application](#create-a-new-app-registration-in-the-a
 
 ## <a name="customer-insights-client-libraries"></a>Bibliothèques client de Customer Insights
 
-Cette section vous aide à utiliser les bibliothèques client disponibles pour les API de Customer Insights.
+Cette section vous aide à utiliser les bibliothèques client disponibles pour les API de Customer Insights. Tout le code source de la bibliothèque et tous les exemples d’applications se trouvent sur la [page GitHub Customer Insights](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
 
 ### <a name="c-nuget"></a>C# NuGet
 
@@ -127,7 +136,7 @@ Découvrez comment utiliser les bibliothèques client C# de NuGet.org. Pour plus
 
 #### <a name="use-the-c-client-library"></a>Utiliser la bibliothèque client C#
 
-1. Utilisez la [Bibliothèque d’authentification Microsoft (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) pour obtenir un `AccessToken` en utilisant votre [Inscription d’application Azure](#create-a-new-app-registration-in-the-azure-portal) existante.
+1. Utilisez la [Bibliothèque d’authentification Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) pour obtenir un `AccessToken` en utilisant votre [Inscription d’application Azure](#create-a-new-app-registration-in-the-azure-portal) existante.
 
 1. Une fois l’authentification et l’acquisition d’un jeton réalisées avec succès, construisez un nouveau jeton ou utilisez un jeton `HttpClient` existant avec le paramètre **DefaultRequestHeaders "Authorisation"** supplémentaire défini sur le **<access token> du porteur** et le paramètre **Ocp-Apim-Subscription-Key** défini sur la [**clé d’abonnement** de votre environnement Customer Insights](#get-started-trying-the-customer-insights-apis).    
    Rédéfinissez l’en-tête **Autorisation**, le cas échéant. Par exemple, lorsque le jeton a expiré.
@@ -141,5 +150,12 @@ Découvrez comment utiliser les bibliothèques client C# de NuGet.org. Pour plus
 1. La réponse sera probablement de type `object`, car la méthode peut renvoyer plusieurs types (par exemple, `IList<InstanceInfo>` et `ApiErrorResult`). Pour vérifier le type de retour, vous pouvez convertir en toute sécurité les objets dans les types de réponse spécifiés sur la [Page des détails de l’API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) pour cette opération.    
    Si des informations supplémentaires sur la demande sont nécessaires, utilisez les **méthodes de message http** pour accéder à l’objet de réponse brute.
 
+### <a name="nodejs-package"></a>Package NodeJS
+
+Utilisez les bibliothèques clientes NodeJS disponibles via NPM : https://www.npmjs.com/package/@microsoft/customerinsights
+
+### <a name="python-package"></a>Package Python
+
+Utilisez les bibliothèques clientes Python disponibles via PyPi : https://pypi.org/project/customerinsights/
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
