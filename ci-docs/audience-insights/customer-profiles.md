@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: d6a9e7872a488b6d68afce35b547f93cc4a7c652
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596864"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896324"
 ---
 # <a name="customer-profiles"></a>Profils clients
 
@@ -59,7 +59,7 @@ Les détails du client comprennent :
 
 -   **Vignette du profil client :** cette vignette indique les différentes valeurs de l’entité de profil client unifié. Ces détails peuvent comprendre l’adresse e-mail, le nom, la ville, etc. 
 
--   **Intérêts potentiels, marques potentielles :** indique si vous avez configuré un enrichissement interne. Il représente les intérêts et affinités potentiels pour des marques que pourrait avoir un client avec un profil similaire à ce client. Pour plus d’informations, consultez [Enrichissement des profils clients avec des affinités de marque et d’intérêt](enrichment-microsoft-graph.md).
+-   **Intérêts potentiels, marques potentielles :** indique si vous avez configuré un enrichissement interne. Il représente les intérêts et affinités potentiels pour des marques que pourrait avoir un client avec un profil similaire à ce client. Pour plus d’informations, consultez [Enrichissement des profils clients avec des affinités de marque et d’intérêt](enrichment-microsoft.md).
 
 -   **Mesures :** indique si vous avez configuré une ou plusieurs mesures d’un type spécifique : mesures d’attribut client. Elles englobent les KPI calculés de vos clients au niveau de chaque client. Pour plus d’informations, consultez [Définir et gérer les mesures](measures.md).
 

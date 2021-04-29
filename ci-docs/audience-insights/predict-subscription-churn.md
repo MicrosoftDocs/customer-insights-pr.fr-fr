@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595653"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906899"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Prédiction du taux de désabonnement (aperçu)
 
@@ -49,6 +49,12 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
         - **Horodatage :** Date et heure de l’événement identifiées par la clé primaire.
         - **Événement :** Nom de l’événement que vous souhaitez utiliser. Par exemple, un champ appelé « UserAction » dans un service de vidéo en streaming peut avoir la valeur « Affiché ».
         - **Détails :** Informations détaillées sur l’événement. Par exemple, un champ appelé « ShowTitle » dans un service de vidéo en streaming peut avoir la valeur d’une vidéo regardée par un client.
+- Caractéristiques des données suggérées :
+    - Données historiques suffisantes : données d’abonnement pour au moins le double de la période de temps sélectionnée. De préférence, deux à trois ans de données d’abonnement.
+    - Statut de l’abonnement : les données comprennent les abonnements actifs et inactifs pour chaque client ; il y a donc plusieurs entrées par ID de client.
+    - Nombre de clients : au moins 10 profils client, de préférence plus de 1 000 clients uniques. Le modèle échouera s’il y a moins de 10 clients et des données historiques insuffisantes.
+    - Intégrité des données : moins de 20 % des valeurs manquantes dans le champ de données de l’entité fournie.
+   
    > [!NOTE]
    > Vous aurez besoin d’au moins deux enregistrements d’activité pour 50 % des clients pour lesquels vous souhaitez calculer le taux d’attrition.
 
@@ -67,7 +73,7 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
 ### <a name="define-customer-churn"></a>Définir l’attrition client
 
 1. Entrez le nombre de **Jours depuis la fin de l’abonnement** qu’un client est parti selon votre entreprise. Cette période est généralement significative pour les activités commerciales, telles que les offres ou autres efforts de marketing visant à éviter de perdre le client.
-1. Entrez le nombre de **Jours à rechercher dans le futur pour prédire le taux d’attrition** pour définir une fenêtre pour laquelle prédire le taux d’attrition. Par exemple, pour prédire le risque d’attrition de vos clients au cours des 90 prochains jours afin de vous aligner sur vos efforts de rétention marketing. Prédire le risque d’attrition sur des périodes plus ou moins longues peut rendre plus difficile la prise en compte des facteurs de votre profil de risque d’attrition, mais cela dépend fortement de vos besoins commerciaux spécifiques. Sélectionner **Suivant** pour continuer
+1. Entrez le nombre de **Jours à rechercher dans le futur pour prédire le taux d’attrition** pour définir une fenêtre pour laquelle prédire le taux d’attrition. Par exemple, pour prédire le risque d’attrition de vos clients au cours des 90 prochains jours afin de vous aligner sur vos efforts de rétention marketing. Prédire le risque d’attrition sur des périodes plus ou moins longues peut rendre plus difficile de prendre en compte les facteurs de votre profil de risque d’attrition, en fonction des exigences spécifiques de votre entreprise. Sélectionner **Suivant** pour continuer
    >[!TIP]
    > Vous pouvez sélectionner **Enregistrer et fermer** à tout moment pour enregistrer la prédiction en tant que brouillon. Vous trouverez le projet de prédiction dans l’onglet **Mes prédictions** pour continuer.
 
@@ -113,7 +119,8 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
 1. Sélectionnez la prédiction à réviser.
    - **Nom de la prédiction :** Nom de la prédiction fourni lors de sa création.
    - **Type de prédiction :** Type de modèle utilisé pour la prédiction
-   - **Entité de sortie :** Nom de l’entité pour stocker la sortie de la prédiction. Vous pouvez trouver une entité portant ce nom sur **Données** > **Entités**.
+   - **Entité de sortie :** Nom de l’entité pour stocker la sortie de la prédiction. Vous pouvez trouver une entité portant ce nom sur **Données** > **Entités**.    
+     Dans l’entité de sortie, *ChurnScore* est la probabilité prédite d’attrition et *IsChurn* est une étiquette binaire basée sur *ChurnScore* avec un seuil de 0,5. Le seuil par défaut peut ne pas fonctionner pour votre scénario. [Créez un nouveau segment](segments.md#create-a-new-segment) avec votre seuil préféré.
    - **Champ prévu :** Ce champ est renseigné uniquement pour certains types de prédictions et n’est pas utilisé dans la prédiction du taux de désabonnement.
    - **Statut :** Statut actuel de l’exécution de la prédiction.
         - **Mis en file d’attente :** La prédiction attend actuellement l’exécution d’autres processus.

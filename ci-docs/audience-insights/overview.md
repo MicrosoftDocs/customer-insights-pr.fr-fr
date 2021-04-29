@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598627"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896462"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Vue d’ensemble des informations sur l’audience pour Dynamics 365 Customer Insights
 
@@ -27,9 +27,9 @@ Les informations sur l’audience vous aident à mieux comprendre vos clients. C
   - Connectez et unifiez les données facilement : intégrez des données transactionnelles, d’observation, et de comportement à partir de [sources de données populaires en profitant de connecteurs prêts à l’emploi](data-sources.md).
   - Transformez les données client unifiées : construisez des profils client unifiés conformes au [Common Data Model](/common-data-model/). Résolvez les identités client avec les recommandations fournies par IA/ML.
 
-- **Enrichir avec les informations sur l’audience contenues dans Microsoft Graph**
+- **Enrichir avec l’intelligence de l’audience**
 
-  - Établissez des profils client plus riches en y [intégrant les informations sur l’audience contenues dans Microsoft Graph](enrichment-microsoft-graph.md).  
+  - Créez des profils client plus complets en [incorporant des données enrichies](enrichment-hub.md).  
 
 - **Actionner vos processus d’entreprise et des expériences client personnalisées**
 
@@ -43,7 +43,7 @@ Les informations sur l’audience vous aident à mieux comprendre vos clients. C
 
   - Accès à un ensemble complet de connecteurs pour ingérer toutes vos données clientes.
   - Possibilité d’unifier les données clients et de les transformer au format [Common Data Model](/common-data-model/).
-  - Enrichissement des informations client avec les renseignements tirés de l’audience dans Microsoft Graph, comme les affinités et les intérêts pour la marque.
+  - Enrichissement des informations client avec les renseignements tirés de l’intelligence de l’audience, comme l’affinité avec la marque et les intérêts.
   - Configuration et expérience de débogage « clics sans code » permettant de configurer facilement les informations sur l’audience et d’identifier les problèmes potentiels.
   - Nettoyage et standardisation des données client de diverses sources disparates avec des recommandations fournies par l’IA.  
 

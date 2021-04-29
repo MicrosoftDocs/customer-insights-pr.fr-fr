@@ -1,7 +1,7 @@
 ---
 title: Utiliser des sources de données pour ingérer des données
 description: Découvrez comment importer des données depuis des sources diverses.
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595944"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887891"
 ---
 # <a name="data-sources-overview"></a>Vue d’ensemble des sources de données
 
@@ -32,8 +32,15 @@ Vous pouvez ajouter une source de données de trois manières principales :
 - [À partir d’un dossier Common Data Model](connect-common-data-model.md)
 - [À partir de votre propre lac Common Data Service](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> Vous ne pouvez pas encore ajouter de données à partir de sources de données locales.
+## <a name="add-data-from-on-premises-data-sources"></a>Ajouter des données de sources de données locales
+
+L’ingestion de données de sources de données locales dans Audience Insights est prise en charge en fonction des flux de données Power Platform. Les flux de données peuvent être activés dans Customer Insights en [fournissant l’URL de l’environnement Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) lors de la configuration de l’environnement.
+
+Les sources de données créées après l’association d’un environnement Dataverse à Customer Insights utiliseront les [flux de données Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) par défaut. Les flux de données prennent en charge la connectivité locale à l’aide des passerelles de données. Supprimez et recréez les sources de données qui existaient avant l’association d’un environnement Dataverse pour utiliser les passerelles de données locales.
+
+Les passerelles de données d’un environnement Power BI ou Power Apps existant seront visibles et vous pourrez les réutiliser dans Customer Insights. La page des sources de données affiche des liens pour accéder à l’environnement Power Platform dans lequel vous pouvez afficher et configurer les passerelles de données locales.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Capture d’écran de la page des sources de données affichant des liens qui pointent vers l’environnement Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Évaluer les données ingérées
 
@@ -65,7 +72,7 @@ Pour actualiser une source de données à la demande, procédez comme suit :
 
 2. Sélectionnez les points de suspension verticaux en regard de la source de données que vous souhaitez actualiser, puis sélectionnez **Actualiser** dans la liste déroulante.
 
-3. La source de données est maintenant déclenchée pour une actualisation manuelle. L’actualisation d’une source de données mettra à jour le schéma de l’entité ainsi que les données de toutes les entités spécifiées dans la source de données.
+3. La source de données est maintenant déclenchée pour une actualisation manuelle. Si vous actualisez une source de données, à la fois le schéma de l’entité et les données seront mis à jour pour toutes les entités spécifiées dans la source de données.
 
 4. Sélectionnez **Arrêtez l’actualisation** si vous souhaitez annuler une actualisation existante et rétablir le dernier statut d’actualisation de la source de données.
 

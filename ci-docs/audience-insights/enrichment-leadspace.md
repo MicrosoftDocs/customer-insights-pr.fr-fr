@@ -1,7 +1,7 @@
 ---
 title: Enrichissement des profils d’entreprise avec l’enrichissement tiers de Leadspace
 description: Informations générales sur l’enrichissement tiers de Leadspace.
-ms.date: 11/24/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,46 +9,67 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 41c56aece043c2d7658fd2655713e1e98775edec
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597646"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895910"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Enrichissement des profils d’entreprise avec Leadspace (aperçu)
 
-Leadspace est une entreprise de science des données qui fournit une plateforme de données client B2B. Elle permet aux clients ayant un profil client unifié pour les entreprises d’enrichir leurs données. Les enrichissements comprennent des attributs supplémentaires tels que la taille de l’entreprise, sa localisation, son secteur d’activité, etc.
+Leadspace est une entreprise de science des données qui fournit une plateforme de données client B2B. Elle permet aux clients ayant un profil client unifié pour les entreprises d’enrichir leurs données. Les enrichissements comprennent d’autres attributs tels que la taille de la société, son emplacement, son secteur d’activité, et plus encore.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
 Pour configurer Leadspace, les conditions préalables suivantes doivent être respectées :
 
-- Vous disposez d’une licence Leadspace active et de la « clé perpétuelle » (appelée **Jeton Leadspace**). Contactez directement [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) pour en savoir plus sur leur produit.
-- Vous disposez d’autorisations [Administrateur](permissions.md#administrator).
+- Vous disposez d’une licence Leadspace active.
 - Vous avez des [profils clients unifiés](customer-profiles.md) pour les entreprises.
+- Une connexion Leadspace a déjà été configurée par un administrateur ou vous disposez d’autorisations [administrateur](permissions.md#administrator) et de la « clé perpétuelle » (appelée **Jeton Leadspace**). Contactez [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) directement pour obtenir des détails sur leur produit.
 
-## <a name="configuration"></a>configuration
+## <a name="configure-the-enrichment"></a>Configurer l’enrichissement
 
 1. Dans les informations sur l’audience, accédez à **Données** > **Enrichissement**.
 
-1. Sélectionnez **Enrichir mes données** sur la vignette Leadspace.
+1. Sélectionnez **Enrichir mes données** sur la vignette de Leadspace et sélectionnez **Démarrer**.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Capture d’écran de la vignette de Leadspace.":::
 
-1. Sélectionnez **Démarrer**, puis entrez un **Jeton Leadspace** actif (clé perpétuelle). Vérifiez et donnez votre consentement pour **Confidentialité et conformité des données** en cochant la case **J’accepte**. Confirmez les deux entrées en sélectionnant **Se connecter à Leadspace**.
+1. Sélectionnez une [connexion](connections.md) dans le menu déroulant. Contactez un administrateur si aucune connexion n’est disponible. Si vous êtes un administrateur, vous pouvez créer une connexion en sélectionnant **Ajouter une connexion** et en choisissant **Leadspace**. 
 
-1. Sélectionnez **Mapper des données** et choisissez le jeu de données à enrichir avec les données d’entreprise de Leadspace. Vous pouvez sélectionner l’entité *Client* pour enrichir tous vos profils clients ou sélectionner une entité segment pour enrichir uniquement les profils clients contenus dans ce segment.
+1. Sélectionnez **Se connecter à Leadspace** pour confirmer la connexion.
 
-   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Choisissez entre le profil client et l’enrichissement du segment.":::
+1. Sélectionnez **Suivant** et choisissez le **Jeu de données client** que vous souhaitez enrichir avec les données d’entreprise de Leadspace. Vous pouvez sélectionner l’entité **Client** pour enrichir tous vos profils clients ou sélectionner une entité segment pour enrichir uniquement les profils clients contenus dans ce segment.
 
-1. Cliquez sur **Suivant** et définissez quels champs de vos profils unifiés doivent être utilisés pour rechercher les données d’entreprise correspondantes de Leadspace. Le champ **Nom de la société** est obligatoire. Pour une plus grande précision de la correspondance, jusqu’à deux autres champs, **Site web de la société** et **Emplacement de la société**, peuvent être ajoutés.
+    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Capture d’écran lors du choix du jeu de données client.":::
+
+1. Sélectionnez **Suivant** et définissez les champs de vos profils unifiés qui sont utilisés pour rechercher les données d’entreprise correspondantes de Leadspace. Le champ **Nom de la société** est obligatoire. Pour une plus grande précision de la correspondance, jusqu’à deux autres champs, **Site web de la société** et **Emplacement de la société**, peuvent être ajoutés.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Volet de mappage de champ de Leadspace.":::
-   
-1. Sélectionnez **Appliquer** pour terminer le mappage de champ.
 
-1. Sélectionnez **Exécuter** pour enrichir les profils d’entreprise. La durée d’un enrichissement dépend du nombre de profils clients unifiés.
+1. Sélectionnez **Suivant** pour terminer le mappage de champs.
+
+1. Fournissez un nom pour l’enrichissement et sélectionnez **Enregistrer l’enrichissement** après avoir vérifié vos choix.
+
+
+## <a name="configure-the-connection-for-leadspace"></a>Configurer la connexion pour Leadspace 
+
+Vous devez être un administrateur pour configurer les connexions. Sélectionnez **Ajouter une connexion** lors de la configuration d’un enrichissement *ou* accédez à **Administrateur** > **Connexions** et sélectionnez **Configurer** sur la vignette de Leadspace.
+
+1. Sélectionnez **Démarrer** 
+
+1. Entrez un nom pour la connexion dans la zone **Nom d’affichage**.
+
+1. Fournissez un jeton Leadspace valide.
+
+1. Vérifiez et donnez votre consentement pour la **Confidentialité et conformité des données** en cochant la case **J’accepte**
+
+1. Sélectionnez **Vérifier** pour valider la configuration.
+
+1. Une fois la vérification terminée, sélectionnez **Enregistrer**.
+   
+   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Page de configuration de la connexion de Leadspace.":::
 
 ## <a name="enrichment-results"></a>Résultats d’enrichissement
 

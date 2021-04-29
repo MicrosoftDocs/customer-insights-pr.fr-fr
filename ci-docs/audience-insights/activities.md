@@ -1,7 +1,7 @@
 ---
 title: Activités du client
 description: Définissez les activités client et affichez-les dans la chronologie client.
-ms.date: 10/13/2020
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,79 +9,88 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: fbfa9d7e00859cc80c24b98bd2dc806f1fda7803
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
+ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596726"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "5866404"
 ---
 # <a name="customer-activities"></a>Activités du client
 
-Combinez les activités clientes de [différentes sources de données](data-sources.md) dans Dynamics 365 Customer Insights pour créer une chronologie client qui répertorie les activités par ordre chronologique. Vous pouvez inclure la chronologie dans les applications Customer Engagement dans Dynamics 365 via le [Complément de carte client](customer-card-add-in.md), ou dans un tableau de bord Power BI.
+Combinez les activités client de [différentes sources de données](data-sources.md) dans Dynamics 365 Customer Insights pour créer une chronologie qui répertorie les activités dans l’ordre chronologique. Incluez la chronologie dans les applications Dynamics 365 avec la solution [Complément de carte client](customer-card-add-in.md), ou dans un tableau de bord Power BI.
 
 ## <a name="define-an-activity"></a>Définir une activité
 
-Vos sources de données incluent des entités avec des données transactionnelles et d’activité provenant de plusieurs sources de données. Identifiez ces entités et sélectionnez les activités que vous souhaitez afficher sur la chronologie du client. Sélectionnez l’entité qui comprend votre activité ou vos activités cibles.
+Vos sources de données peuvent inclure des entités avec des données transactionnelles et d’activité provenant de plusieurs sources de données. Identifiez ces entités et sélectionnez les activités que vous souhaitez afficher sur la chronologie du client. Sélectionnez l’entité qui comprend votre activité ou vos activités cibles.
+
+> [!NOTE]
+> Une entité doit avoir au moins un attribut de type **Date** à inclure dans une chronologie client et vous ne pouvez pas ajouter d’entités sans champs **Date**. Le contrôle **Ajouter une activité** est désactivé si aucune entité de ce type n’est trouvée.
 
 1. Dans les informations sur l’audience, accédez à **Données** > **Activités**.
 
-1. Sélectionnez **Ajouter une activité**.
+1. Sélectionnez **Ajouter une activité** pour démarrer l’expérience guidée du processus de configuration de l’activité.
 
-   > [!NOTE]
-   > Une entité doit avoir au moins un attribut de type **Date** à inclure dans une chronologie client et vous ne pouvez pas ajouter d’entités sans champs **Date**. Le contrôle **Ajouter une activité** est désactivé si aucune entité de ce type n’est trouvée.
+1. Dans l’étape **Données de l’activité**, définissez les valeurs des champs suivants :
 
-1. Dans le volet **Ajouter une activité**, définissez les valeurs des champs suivants :
-
+   - **Nom de l’activité** : Sélectionnez un nom pour votre activité.
    - **Entité** : Sélectionnez une entité qui contient des données transactionnelles ou d’activité.
    - **Clé primaire** : Sélectionnez le champ qui identifie de manière unique un enregistrement. Il ne doit contenir aucune valeur en double, vide ou manquante.
-   - **Horodateur** : Sélectionnez le champ qui représente l’heure de début de votre activité.
-   - **Événement** : Sélectionnez le champ représentant l’événement de l’activité.
-   - **Adresse Web** : Sélectionnez le champ qui représente une URL fournissant des informations supplémentaires sur cette activité. Par exemple, le système transactionnel d’où provient cette activité. Cette URL peut être n’importe quel champ de la source de données, ou elle peut être construite comme un nouveau champ à l’aide d’une transformation Power Query. Ces données URL seront stockées dans l’entité Activité unifiée, qui peut être consommée en aval à l’aide d’API.
-   - **Détails** : Vous pouvez éventuellement sélectionner ce champ pour fournir plus de détails.
-   - **Icône** : Vous pouvez éventuellement sélectionner l’icône représentant cette activité.
-   - **Type d’activité** : Définissez la référence du type d’activité au Common Data Model qui décrit le mieux la définition sémantique de l’activité.
 
-1. Dans la section **Définir la relation**, configurez les détails permettant de connecter vos données d’activité à leur client correspondant.
+   :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Configurez les données de l’activité avec le nom, l’entité et la clé primaire.":::
 
-    - **Champ d’entité d’activité** : Sélectionnez le champ de votre entité d’activité qui permettra d’établir une relation avec une autre entité.
-    - **Entité client** : Sélectionnez l’entité client source correspondante avec laquelle votre entité d’activité sera en relation. Vous ne pouvez créer une relation qu’avec les entités client sources utilisées dans le processus d’unification des données.
-    - **Champ d’entité client** : Ce champ affiche la clé primaire de l’entité client source sélectionnée dans le processus de mise en correspondance. Ce champ de clé primaire dans l’entité client source permet d’établir une relation avec l’entité d’activité.
-    - **Nom** : S’il existe déjà une relation entre cette entité d’activité et l’entité client source sélectionnée, le nom de la relation sera en mode lecture seule. S’il n’existe aucune relation de ce type, une nouvelle relation sera créée avec le nom fourni ici.
+1. Sélectionnez **Suivant** pour passer à l’étape suivante.
+
+1. Dans l’étape **Relation**, configurez les détails pour connecter vos données d’activité au client correspondant. Cette étape visualise la connexion entre les entités.  
+
+   - **Premier** : champ externe de votre entité d’activité qui sera utilisé pour établir une relation avec une autre entité.
+   - **Second** : entité client source correspondante avec laquelle votre entité d’activité sera en relation. Vous ne pouvez établir de relation qu’avec les entités client sources utilisées dans le processus d’unification des données.
+   - **Troisième** : s’il existe déjà une relation entre cette entité d’activité et l’entité client source sélectionnée, le nom de la relation sera en mode lecture seule. Si cette relation n’existe pas, une nouvelle relation sera créée avec le nom que vous indiquez dans cette zone.
+
+   :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Définissez la relation entre les entités.":::
+
+1. Sélectionnez **Suivant** pour passer à l’étape suivante. 
+
+1. Dans l’étape **Unification de l’activité**, choisissez l’événement de l’activité et l’heure de début de votre activité. 
+   - **Champs obligatoires**
+      1. **Activité de l’événement** : champ correspondant à l’événement de cette activité
+      2. **Horodateur** : champ qui représente l’heure de début de votre activité.
+
+   - **Champs facultatifs**
+      1. **Détails supplémentaires** : champ avec des informations pertinentes pour cette activité.
+      2. **Icône** : icône qui représente le mieux ce type d’activité.
+      3. **Adresse web** : champ contenant une URL avec des informations sur cette activité. Par exemple, le système transactionnel d’où provient cette activité. Cette URL peut être n’importe quel champ de la source de données, ou elle peut être construite comme un nouveau champ à l’aide d’une transformation Power Query. Les données de l’URL seront stockées dans l’entité *Activité unifiée*, qui peut être consommée en aval en utilisant les [API](apis.md).
    
-   > [!div class="mx-imgBorder"]
-   > ![Définir la relation entre les entités](media/activities-entities-define.png "Définir la relation entre les entités")
+   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Spécifiez les données de l’activité client dans une entité Activité unifiée.":::
 
-1. Sélectionnez **Enregistrer** pour appliquer vos modifications.
+1. Sélectionnez **Suivant** pour passer à l’étape suivante. Vous pouvez sélectionner **Terminer et réviser** pour enregistrer l’activité maintenant avec le type d’activité défini sur **Autre**. 
 
-1. Dans la page **Activité**, sélectionnez **Exécuter**.
+1. Dans l’étape **Type d’activité**, choisissez le type d’activité et, éventuellement, sélectionnez si vous souhaitez mapper sémantiquement certains des types d’activités pour les utiliser dans d’autres zones de Customer Insights. Actuellement, les types d’activités *Abonnement* & *SalesOrderLine* peuvent être mappés sémantiquement après avoir accepté de mapper les champs. Si un type d’activité n’est pas pertinent pour la nouvelle activité, vous pouvez choisir *Autre* ou *Créer* pour un type d’activité personnalisé.
+
+1. Sélectionnez **Suivant** pour passer à l’étape suivante. 
+
+1. Dans l’étape **Réviser**, vérifiez vos sélections. Vous pouvez revenir à l’une des étapes précédentes et mettre à jour les informations, si nécessaire.
+
+   :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Révisez les champs spécifiés d’une activité.":::
+   
+1. Sélectionnez **Enregistrer l’activité** pour appliquer vos modifications et sélectionnez **Terminé** pour revenir à **Données** > **Activités**. Ici vous voyez les activités qui sont définies pour s’afficher dans la chronologie. 
+
+1. Dans la page **Activités**, sélectionnez **Exécuter** pour traiter l’activité. 
 
 > [!TIP]
 > Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d’autres processus en aval](system.md#refresh-policies). Vous pouvez sélectionner le statut d’un processus pour afficher des détails sur la progression de toute la tâche. Après avoir sélectionné **Voir les détails** pour l’une des tâches du travail, vous voyez des informations complémentaires : la durée de traitement, la date du dernier traitement et toutes les erreurs et avertissements associés à la tâche.
 
-## <a name="edit-an-activity"></a>Modifier une activité
 
-1. Dans les informations sur l’audience, accédez à **Données** > **Activités**.
+## <a name="manage-existing-activities"></a>Gérer les activités existantes
 
-2. Sélectionnez l’entité d’activité que vous souhaitez modifier et sélectionnez **Modifier**. Vous pouvez également pointer sur la ligne d’entité et sélectionner l’icône **Modifier**.
+Dans **Données** > **Activités**, vous pouvez afficher toutes vos activités enregistrées et les gérer. Chaque activité est représentée par une ligne qui comprend également des détails sur la source, l’entité et le type d’activité.
 
-3. Cliquez sur l’icône **Modifier**.
+Les actions suivantes sont disponibles lorsque vous sélectionnez une activité. 
 
-4. Dans le volet **Modifier l’activité**, mettez à jour les valeurs et sélectionnez **Enregistrer**.
+- **Modifier** : ouvre la configuration de l’activité dans l’étape de révision. Vous pouvez modifier tout ou partie de la configuration actuelle à partir de cette étape. Une fois la configuration modifiée, sélectionnez **Enregistrer l’activité**, puis sélectionnez **Exécuter** pour traiter les modifications.
 
-5. Dans la page **Activité**, sélectionnez **Exécuter**.
+- **Renommer** : ouvre une boîte de dialogue dans laquelle vous pouvez entrer un autre nom pour l’activité sélectionnée. Sélectionnez **Enregistrer** pour appliquer vos modifications.
 
-## <a name="delete-an-activity"></a>Supprimer une activité
-
-1. Dans les informations sur l’audience, accédez à **Données** > **Activités**.
-
-2. Sélectionnez l’entité d’activité que vous souhaitez supprimer et sélectionnez **Supprimer**. Vous pouvez également pointer sur la ligne d’entité et sélectionner l’icône **Supprimer**. En outre, vous pouvez sélectionner simultanément plusieurs entités d’activité à supprimer.
-   > [!div class="mx-imgBorder"]
-   > ![Modifier ou supprimer la relation d’entité](media/activities-entities-edit-delete.png "Modifier ou supprimer la relation d’entité")
-
-3. Sélectionnez l’icône **Supprimer**.
-
-4. Confirmez votre suppression.
-
+- **Supprimer** : ouvre une boîte de dialogue pour confirmer la suppression de l’activité sélectionnée. Vous pouvez également supprimer plusieurs activités à la fois en sélectionnant les activités, puis en sélectionnant l’icône de suppression. Sélectionnez **Supprimer** pour confirmer la suppression.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

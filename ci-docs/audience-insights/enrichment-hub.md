@@ -1,7 +1,7 @@
 ---
 title: Enrichir les profils clients unifiés
 description: Utilisez des fonctionnalités pour enrichir vos données client.
-ms.date: 11/02/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 36e6f7f8fcd64fc2591e913910918b83bf27567b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597692"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896002"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enrichissement des profils clients (aperçu)
 
@@ -27,8 +27,8 @@ Vous devez disposer des autorisations Collaborateur ou Administrateur pour crée
 
 Sur l’onglet **Découvrir**, vous trouverez les enrichissements suivants :
 
-- [Marques](enrichment-microsoft-graph.md) fournies par Microsoft Graph.
-- [Centres d’intérêt](enrichment-microsoft-graph.md) fournis par Microsoft Graph.
+- [Marques](enrichment-microsoft.md) fournies par Microsoft
+- [Intérêts](enrichment-microsoft.md) fournis par Microsoft
 - [Données de la société](enrichment-leadspace.md) fournies par Leadspace
 - [Données démographiques](enrichment-experian.md) fournies par Experian
 - [Données de localisation](enrichment-here.md) fournies par HERE Technologies
@@ -40,7 +40,7 @@ Sur l’onglet **Mes enrichissements**, vous pouvez voir les enrichissements que
 
 Allez à **Mes enrichissements** pour voir tous les enrichissements configurés. Chaque enrichissement est représenté sous la forme d’une ligne contenant des informations supplémentaires sur l’enrichissement.
 
-Sélectionnez un enrichissement pour voir les options disponibles. Vous pouvez également sélectionner les points de suspension (...) sur un élément de liste pour voir les options.
+Sélectionnez un enrichissement pour voir les options disponibles. Vous pouvez également sélectionner les points de suspension (...) d’un élément de liste pour voir les options.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Options pour gérer les enrichissements dans la liste des enrichissements":::
 
@@ -52,5 +52,12 @@ Sélectionnez un enrichissement pour voir les options disponibles. Vous pouvez �
 
 Vous pouvez exécuter ou désactiver plusieurs enrichissements à la fois en les sélectionnant dans la liste. Les options d’affichage et de modification ne sont pas disponibles en tant qu’action en bloc et ne fonctionnent que pour un enrichissement à la fois.
 
+## <a name="enrichments-and-connections"></a>Enrichissements et connexions
+
+Les enrichissements tiers sont configurés à l’aide de [connexions](connections.md), qu’un administrateur configure avec les informations d’identification et donne son consentement pour les transferts de données. La connexion peut être utilisée par les administrateurs et les contributeurs pour configurer les enrichissements.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Enrichissements multiples du même type
+
+L’entité à enrichir est spécifiée lors de la configuration de l’enrichissement, ce qui vous permet d’enrichir uniquement un sous-ensemble de vos profils. Par exemple, enrichissez les données uniquement pour un segment spécifique. Vous pouvez configurer plusieurs enrichissements du même type et réutiliser la même connexion. Certains enrichissements auront des limites au nombre d’enrichissements du même type pouvant être créés. Les limites et l’utilisation actuelle sont visibles sur la page **Enrichissement**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

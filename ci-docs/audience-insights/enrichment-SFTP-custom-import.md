@@ -1,7 +1,7 @@
 ---
 title: Enrichissement avec l’importation personnalisée SFTP
 description: Informations générales sur l’enrichissement avec l’importation personnalisée SFTP.
-ms.date: 11/18/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595852"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896278"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enrichir les profils clients avec des données personnalisées (version préliminaire)
 
@@ -24,29 +24,48 @@ L’importation personnalisée SFTP (Secure File Transfer Protocol) vous permet 
 
 Pour configurer l’importation personnalisée SFTP, les conditions préalables suivantes doivent être remplies :
 
-- Vous disposez des informations d’identification utilisateur (nom d’utilisateur et mot de passe) de l’emplacement SFTP à partir duquel les données vont être importées.
-- Vous disposez de l’URL et du numéro de port (généralement 22) de l’hôte STFP.
-- Vous disposez du nom et de l’emplacement du fichier à importer sur l’hôte SFTP.
-- Un fichier *model.json* spécifie le schéma des données à importer. Ce fichier doit se trouver dans le même répertoire que le fichier à importer.
-- Vous disposez d’autorisations [Administrateur](permissions.md#administrator).
+- Vous disposez du nom de fichier et de l’emplacement (chemin d’accès) du fichier à importer dans l’hôte SFTP.
+- Il existe un fichier *model.json* qui spécifie le [schéma Common Data Model](/common-data-model/) pour les données à importer. Ce fichier doit se trouver dans le même répertoire que le fichier à importer.
+- Une connexion SFTP a déjà été configurée par un administrateur *ou* vous disposez d’autorisations [administrateur](permissions.md#administrator). Vous aurez besoin des informations d’identification de l’utilisateur, de l’URL et du numéro de port de l’emplacement SFTP à partir duquel vous souhaitez importer des données.
 
-## <a name="configuration"></a>configuration
+
+## <a name="configure-the-import"></a>Configurer l’importation
 
 1. Accédez à **Données** > **Enrichissement** et sélectionnez l’onglet **Découvrir**.
 
-1. Sur la **vignette d’importation personnalisée SFTP**, sélectionnez **Enrichir mes données**.
+1. Sur la **Vignette d’importation personnalisée SFTP**, sélectionnez **Enrichir mes données**, puis sélectionnez **Démarrer**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Vignette d’importation personnalisée SFTP](media/SFTP_Custom_Import_tile.png "Vignette d’importation personnalisée SFTP")
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Vignette d’importation personnalisée SFTP.":::
 
-1. Sélectionnez **Démarrer** et fournissez les informations d’identification et l’adresse du serveur SFTP. Par exemple, sftp://mysftpserver.com:22.
+1. Sélectionnez une [connexion](connections.md) dans le menu déroulant. Contactez un administrateur si aucune connexion n’est disponible. Si vous êtes un administrateur, vous pouvez créer une connexion en sélectionnant **Ajouter une connexion** et en choisissant **Importation personnalisée SFTP** dans le menu déroulant.
 
-1. Entrez le nom du fichier contenant les données et le chemin d’accès au fichier sur le serveur SFTP s’il ne se trouve pas dans le dossier racine.
+1. Sélectionnez **Se connecter à l’importation personnalisée** pour confirmer la connexion sélectionnée.
 
-1. Confirmez toutes les entrées en sélectionnant **Se connecter à l’importation personnalisée**.
+1.  Sélectionnez **Suivant** et entrez le **Nom de fichier** et le **Chemin d’accès** du fichier de données que vous souhaitez importer.
 
-   > [!div class="mx-imgBorder"]
-   > ![Menu volant de configuration de l’importation personnalisée SFTP](media/SFTP_Custom_Import_Configuration_flyout.png "Menu volant de configuration de l’importation personnalisée SFTP")
+    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Capture d’écran lors de la saisie de l’emplacement des données.":::
+
+1. Sélectionnez **Suivant** et fournissez un nom pour l’enrichissement et un nom pour l’entité de sortie. 
+
+1. Sélectionnez **Enregistrer l’enrichissement** après avoir vérifié vos choix.
+
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Configurer la connexion pour l’importation personnalisée SFTP 
+
+Vous devez être un administrateur pour configurer les connexions. Sélectionnez **Ajouter une connexion** lors de la configuration d’un enrichissement *ou* accédez à **Administrateur** > **Connexions** et sélectionnez **Configurer** sur la vignette d’importation personnalisée.
+
+1. Entrez un nom pour la connexion dans la zone **Nom d’affichage**.
+
+1. Entrez un nom d’utilisateur, un mot de passe et une URL d’hôte valides pour le serveur STFP sur lequel résident les données à importer.
+
+1. Vérifiez et donnez votre consentement pour **Confidentialité et conformité des données** en cochant la case **J’accepte**.
+
+1. Sélectionnez **Vérifier** pour valider la configuration.
+
+1. Une fois la vérification terminée, la connexion peut être enregistrée en cliquant sur **Enregistrer**.
+
+> [!div class="mx-imgBorder"]
+   > ![Page de configuration de la connexion d’Experian](media/enrichment-SFTP-connection.png "Page de configuration de la connexion d’Experian")
+
 
 ## <a name="defining-field-mappings"></a>Définition des mappages de champ 
 
@@ -105,8 +124,5 @@ Vous pouvez accéder à une vue détaillée de chaque profil enrichi en sélecti
 ## <a name="next-steps"></a>Étapes suivantes
 
 Exploitez vos données client enrichies. Créez des [segments](segments.md), des [mesures](measures.md) et [exportez les données](export-destinations.md) pour offrir des expériences personnalisées à vos clients.
-
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

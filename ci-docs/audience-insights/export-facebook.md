@@ -1,7 +1,7 @@
 ---
 title: Exporter des données Customer Insights vers Facebook Ads Manager
-description: Découvrez comment configurer la connexion au Gestionnaire d’annonces Facebook.
-ms.date: 06/05/2020
+description: Apprenez à configurer la connexion et à exporter vers Facebook Ads Manager.
+ms.date: 04/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,64 +9,83 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3e2b52fe743563e4bf61d870cbf1718e6c752a67
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ca32906a98bc734639fb369d6f5a92e8888fd850
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596679"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906807"
 ---
-# <a name="connector-for-facebook-ads-manager-preview"></a>Connecteur pour le gestionnaire d’annonces Facebook (préversion)
+# <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Exporter une liste de segments vers Facebook Ads Manager (version préliminaire)
 
-Exportez des segments de profils client unifiés vers le gestionnaire d’annonces Facebook pour créer des campagnes sur Facebook et Instagram.
+Exportez des segments de profils client unifiés vers Facebook Ads Manager pour créer des campagnes sur Facebook et Instagram.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites-for-connection"></a>Conditions préalables à une connexion
 
-- Vous devez avoir un [compte **Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) comprenant un [compte professionnel **Facebook**](https://business.facebook.com/).
+- Vous devez disposer d’un [Compte **Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) comprenant un [Compte professionnel **Facebook**](https://business.facebook.com/).
 - Vous devez être un administrateur du [compte **Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
-## <a name="connect-to-facebook-ads-manager"></a>Se connecter au gestionnaire d’annonces Facebook
+## <a name="known-limitations"></a>Limitations connues
 
-1. Accédez à **Administration** > **Destinations d’exportation**.
+- Jusqu’à 10 millions de profils clients par exportation vers Facebook Ads Manager.
+- L’exportation vers Facebook Ads Manager est limitée aux segments.
+- Créez ou mettez à jour des audiences personnalisées dans Facebook de type *liste de clients* uniquement.
+- L’exportation de segments avec un total de 10 millions de profils peut prendre jusqu’à 90 minutes.
 
-1. Sous le **gestionnaire d’annonces Facebook**, sélectionnez **Configurer**.
+## <a name="set-up-connection-to-facebook-ads-manager"></a>Configurer la connexion à Facebook Ads Manager
 
-1. Donnez à votre destination d’exportation un nom reconnaissable dans le champ **Nom complet**.
+Avant que les utilisateurs puissent créer une exportation, un administrateur doit configurer la connexion au service et autoriser les contributeurs à utiliser la connexion.
 
-1. Sélectionner **Continue avec Facebook** pour vous connecter à votre compte publicitaire Facebook.
+1. Accédez à **Administrateur** > **Connexions**.
 
-1. Activez l’autorisation **ads_management** après l’authentification dans Facebook.
+1. Sélectionnez **Ajouter une connexion** et choisissez **Facebook Ads Manager** pour configurer la connexion.
 
-1. Sélectionnez le **Compte d’annonces Facebook** que vous souhaitez utiliser.
+1. Donnez à votre connexion un nom reconnaissable dans le champ **Nom d’affichage**. Le nom et le type de connexion décrivent cette connexion. Nous vous recommandons de choisir un nom qui explique l’objectif et la cible de la connexion.
 
-1. Sélectionnez une **Audience personnalisée existante** dans la liste déroulante ou créez une **Nouvelle audience personnalisée**. Pour plus d’informations, voir [**Audiences dans le gestionnaire d’annonces Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+1. Choisissez qui peut utiliser cette connexion. Si vous n’effectuez aucune action, la valeur par défaut sera **Administrateurs**. Pour plus d’informations, voir [Autoriser les contributeurs à utiliser une connexion pour les exportations](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Sélectionnez **J’accepte** de confirmer la **Confidentialité et conformité des données**.
+1. S’authentifier avec Facebook Ads : 
 
-1. Sélectionnez **Suivant** pour configurer l’exportation.
+   1. Sélectionner **Continue avec Facebook** pour vous connecter à votre compte Facebook Ads.
 
-## <a name="configure-the-connector"></a>Configurer le connecteur
+   1. Activez l’autorisation **ads_management** après l’authentification dans Facebook.
 
-1. Dans le champ **Sélectionner votre champ d’identificateur de la clé**, sélectionnez **E-mail**, **Nom et adresse** ou **Téléphone** à envoyer au gestionnaire d’annonces Facebook.
+   1. Sélectionnez le **Compte Facebook Ads** que vous souhaitez utiliser.
+
+   1. Sélectionnez une **Audience personnalisée existante** dans la liste déroulante ou créez une **Nouvelle audience personnalisée**. Pour plus d’informations, voir [**Audiences dans Facebook Ads Manager**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+      > [!NOTE]
+      > Vous ne pouvez que créer ou mettre à jour des audiences personnalisées sur Facebook de type *liste de clients* avec cette exportation. Dans certains cas, des audiences personnalisées de différents types s’affichent dans la liste déroulante. Si vous sélectionnez un type autre que *liste de clients*, cela entraînera l’échec de l’exportation. 
+
+1. Passez en revue la **Confidentialité et conformité des données** et sélectionnez **J’accepte**.
+
+1. Sélectionnez **Enregistrer** pour terminer la connexion.
+
+## <a name="configure-an-export"></a>Configurer une exportation
+
+Vous pouvez configurer cette exportation si vous avez accès à une connexion de ce type. Pour plus d’informations, voir [Autorisations nécessaires pour configurer une exportation](export-destinations.md#set-up-a-new-export).
+
+1. Accédez à **Données** > **Exportations**.
+
+1. Pour créer une nouvelle exportation, sélectionnez **Ajouter une destination**. 
+
+1. Dans **Connexion pour l’exportation**, choisissez une connexion dans la section **Facebook Ads Manager**. Si ce nom de section ne s’affiche pas, cela signifie qu’aucune connexion de ce type n’est disponible.
+
+1. Dans le champ **Sélectionner votre champ d’identificateur de la clé**, sélectionnez **E-mail**, **Nom et adresse** ou **Téléphone** à envoyer à Facebook Ads Manager. 
+
+1. Donnez à votre connexion un nom reconnaissable dans le champ **Nom d’affichage**.
 
 1. Mappez les attributs correspondants de votre entité client unifiée pour l’identifiant de clé sélectionné.
    > [CONSEIL] Les meilleures chances pour une correspondance se produisent si vous sélectionnez **E-mail** comme identificateur de la clé. L’ajout d’identificateurs supplémentaires peut améliorer la correspondance.
 
-1. Sélectionnez **Ajouter un attribut** pour mapper des attributs supplémentaires à envoyer au gestionnaire d’annonces Facebook. Les attributs du gestionnaire d’annonces Facebook correspondent aux noms conviviaux des utilisateurs suivants : **FN** = **Prénom**, **LN** = **Nom de famille**, **FI** = **Première initiale**, **PHONE** = **Téléphone**, **GEN** = **Sexe**, **DOB** = **Date de naissance**, **ST** = **État**, **CT** = **Ville**, **ZIP** = **Code postal**, **COUNTRY** = **Pays/Région**
+1. Sélectionnez **Ajouter un attribut** pour mapper d’autres attributs à envoyer vers Facebook Ads Manager. Les attributs de Facebook Ads Manager correspondent aux noms conviviaux suivants : **FN** = **Prénom**, **LN** = **Nom de famille**, **FI** = **Première initiale**, **PHONE** = **Téléphone**, **GEN** = **Sexe**, **DOB** = **Date de naissance**, **ST** = **État**, **CT** = **Ville**, **ZIP** = **Code postal**, **COUNTRY** = **Pays/Région**
 
 1. Sélectionnez les segments que vous souhaitez exporter.
 
 1. Sélectionnez **Enregistrer**.
 
-## <a name="export-the-data"></a>Exporter les données
+L’enregistrement d’une exportation n’exécute pas l’exportation immédiatement.
 
-Vous pouvez [exporter les données à la demande](export-destinations.md). L’exportation sera également exécutée à chaque [actualisation planifiée](system.md#schedule-tab).
-
-## <a name="known-limitations"></a>Limitations connues
-
-- Jusqu’à 10 millions de profils clients par exportation vers le Gestionnaire publicités Facebook 
-- L’exportation vers le Gestionnaire de publicités Facebook est limitée aux segments
-- L’exportation de segments avec un total de 10 million de profils peut prendre jusqu’à 90 minutes pour se terminer
+L’exportation s’exécute avec chaque [actualisation planifiée](system.md#schedule-tab). Vous pouvez également [exporter des données à la demande](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données
 

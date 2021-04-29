@@ -1,7 +1,7 @@
 ---
 title: Connecteur LiveRamp
-description: Découvrez comment exporter des données vers LiveRamp.
-ms.date: 12/02/2020
+description: Apprenez à configurer la connexion et à exporter vers LiveRamp.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,31 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6ef4388b0e8ba8bc5866807765d8a872d41c9c14
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597554"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760324"
 ---
-# <a name="liverampreg-connector-preview"></a>Connecteur&reg; LiveRamp (aperçu)
+# <a name="export-segments-to-liverampreg-preview"></a>Exporter des segments vers LiveRamp&reg; (version préliminaire)
 
-Activez vos données dans LiveRamp pour vous connecter à plus de 500 plateformes à travers les écosystèmes numériques, sociaux et télévisuels. Exploitez vos données dans LiveRamp pour cibler, supprimer et personnaliser des campagnes publicitaires.
+Activez vos données dans LiveRamp pour vous connecter à plus de 500 plateformes dans les écosystèmes numériques, sociaux et télévisés. Exploitez vos données dans LiveRamp pour cibler, supprimer et personnaliser des campagnes publicitaires.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites-for-a-connection"></a>Conditions préalables à une connexion
 
 - Vous avez besoin d’un abonnement LiveRamp pour utiliser ce connecteur.
 - Pour obtenir un abonnement, [contactez LiveRamp](https://liveramp.com/contact/) directement. [En savoir plus sur LiveRamp Onboarding](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="connect-to-liveramp"></a>Se connecter à LiveRamp
+## <a name="set-up-connection-to-liveramp"></a>Configurer la connexion à LiveRamp
 
-1. Dans les informations sur l’audience, accédez à **Administration** > **Destinations d’exportation**.
+1. Accédez à **Administrateur** > **Connexions**.
 
-1. Dans la vignette **LiveRamp**, sélectionnez **Configurer**.
+1. Sélectionnez **Ajouter une connexion** et choisissez **LiveRamp** pour configurer la connexion.
 
-1. Donnez à votre destination un nom reconnaissable dans le champ **Nom complet**.
+1. Donnez à votre connexion un nom reconnaissable dans le champ **Nom d’affichage**. Le nom et le type de connexion décrivent cette connexion. Nous vous recommandons de choisir un nom qui explique l’objectif et la cible de la connexion.
+
+1. Choisissez qui peut utiliser cette connexion. Si vous n’effectuez aucune action, la valeur par défaut sera Administrateurs. Pour plus d’informations, voir [Autoriser les contributeurs à utiliser une connexion pour les exportations](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Fournissez un **Nom d’utilisateur** et un **Mot de passe** pour votre compte LiveRamp Secure FTP (SFTP).
 Ces informations d’identification peuvent être différentes de vos informations d’identification à LiveRamp Onboarding.
@@ -40,15 +42,25 @@ Ces informations d’identification peuvent être différentes de vos informatio
 
 1. Une fois la vérification réussie, donnez votre consentement pour **Confidentialité et conformité des données** en cochant la case **J’accepte**.
 
-1. Sélectionnez **Suivant** pour configurer le connecteur LiveRamp.
+1. Sélectionnez **Enregistrer** pour terminer la connexion.
 
-## <a name="configure-the-connector"></a>Configurer le connecteur
+## <a name="configure-an-export"></a>Configurer une exportation
+
+Vous pouvez configurer cette exportation si vous avez accès à une connexion de ce type. Pour plus d’informations, voir [Autorisations nécessaires pour configurer une exportation](export-destinations.md#set-up-a-new-export).
+
+1. Accédez à **Données** > **Exportations**.
+
+1. Pour créer une nouvelle exportation, sélectionnez **Ajouter une destination**.
+
+1. Dans le champ **Connexion pour l’exportation**, choisissez une connexion dans la section LiveRamp. Si ce nom de section ne s’affiche pas, cela signifie qu’aucune connexion de ce type n’est disponible.
 
 1. Dans le champ **Choisir votre identifiant de clé**, sélectionnez **E-mail**, **Nom et adresse** ou **Téléphone** à envoyer à LiveRamp pour la résolution des problèmes d’identité.
+   > [!div class="mx-imgBorder"]
+   > ![Connecteur LiveRamp avec mappage d’attributs](media/export-liveramp-segments.png "Connecteur LiveRamp avec mappage d’attributs")
 
 1. Mappez les attributs correspondants de votre entité client unifiée pour l’identifiant de clé sélectionné.
 
-1. Sélectionnez **Ajouter un attribut** pour mapper des attributs supplémentaires à envoyer à LiveRamp.
+1. Sélectionnez **Ajouter un attribut** pour mapper d’autres attributs à envoyer vers LiveRamp.
 
    > [!TIP]
    > L’envoi d’attributs d’identifiant de clé supplémentaires à LiveRamp est susceptible de vous permettre d’obtenir un taux de correspondance plus élevé.
@@ -57,13 +69,10 @@ Ces informations d’identification peuvent être différentes de vos informatio
 
 1. Sélectionnez **Enregistrer**.
 
-> [!div class="mx-imgBorder"]
-> ![Connecteur LiveRamp avec mappage d’attributs](media/export-liveramp-segments.png "Connecteur LiveRamp avec mappage d’attributs")
+L’enregistrement d’une exportation n’exécute pas l’exportation immédiatement.
 
-## <a name="export-the-data"></a>Exporter les données
+L’exportation s’exécute avec chaque [actualisation planifiée](system.md#schedule-tab). Vous pouvez également [exporter des données à la demande](export-destinations.md#run-exports-on-demand). 
 
-L’exportation doit démarrer rapidement si toutes les conditions préalables requises pour l’exportation sont satisfaites. L’exportation sera également exécutée à chaque [actualisation planifiée](system.md#schedule-tab).
-Une fois l’exportation terminée, vous pouvez vous connecter à LiveRamp Onboarding pour activer et distribuer vos données.
 
 ## <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données
 

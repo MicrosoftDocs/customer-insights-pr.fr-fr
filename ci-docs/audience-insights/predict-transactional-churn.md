@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597186"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906853"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Prédiction de l’attrition transactionnelle (version préliminaire)
 
@@ -46,6 +46,14 @@ La prédiction de l’attrition transactionnelle aide à prédire si un client n
         - **Horodatage :** Date et heure de l’événement identifiées par la clé primaire.
         - **Événement :** Nom de l’événement que vous souhaitez utiliser. Par exemple, un champ appelé « UserAction » dans une épicerie peut être un coupon utilisé par le client.
         - **Détails :** Informations détaillées sur l’événement. Par exemple, un champ appelé « CouponValue » dans une épicerie peut être la valeur monétaire du coupon.
+- Caractéristiques des données suggérées :
+    - Données historiques suffisantes : données de transaction pour au moins le double de la période de temps sélectionnée. De préférence, deux à trois ans de données d’abonnement. 
+    - Achats multiples par client : dans l’idéal, au moins deux transactions par client.
+    - Nombre de clients : au moins 10 profils client, de préférence plus de 1 000 clients uniques. Le modèle échouera s’il y a moins de 10 clients et des données historiques insuffisantes.
+    - Intégrité des données : moins de 20 % des valeurs manquantes dans le champ de données de l’entité fournie.
+
+> [!NOTE]
+> Pour une entreprise avec une fréquence d’achat élevée des clients (toutes les semaines), il est recommandé de sélectionner une période de prédiction plus courte et une définition d’attrition. Pour une faible fréquence d’achat (tous les mois ou une fois par an), choisissez une période de prédiction plus longue et une définition d’attrition.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Créer une prédiction de l’attrition transactionnelle
 
@@ -129,7 +137,9 @@ La prédiction de l’attrition transactionnelle aide à prédire si un client n
 1. Sélectionnez la prédiction à réviser.
    - **Nom de la prédiction :** nom de la prédiction fournie lors de sa création.
    - **Type de prédiction :** type de modèle utilisé pour la prédiction
-   - **Entité de sortie :** Nom de l’entité pour stocker la sortie de la prédiction. Vous pouvez trouver une entité portant ce nom sur **Données** > **Entités**.
+   - **Entité de sortie :** Nom de l’entité pour stocker la sortie de la prédiction. Vous pouvez trouver une entité portant ce nom sur **Données** > **Entités**.    
+     Dans l’entité de sortie, *ChurnScore* est la probabilité prédite d’attrition et *IsChurn* est une étiquette binaire basée sur *ChurnScore* avec un seuil de 0,5. Le seuil par défaut peut ne pas fonctionner pour votre scénario. [Créez un nouveau segment](segments.md#create-a-new-segment) avec votre seuil préféré.
+     Tous les clients ne sont pas nécessairement des clients actifs. Certains d’entre eux n’ont peut-être pas eu d’activité pendant un certain temps et sont déjà considérés comme perdus, selon votre définition d’attrition. Prédire le risque d’attrition des clients qui sont déjà perdus n’est pas utile, car ce n’est pas une audience qui présente un intérêt.
    - **Champ prédit :** ce champ n’est renseigné que pour certains types de prédictions et n’est pas utilisé dans la prédiction de l’attrition.
    - **Statut :** statut de l’exécution de la prédiction.
         - **Mis en file d’attente :** la prédiction attend l’exécution des autres processus.
