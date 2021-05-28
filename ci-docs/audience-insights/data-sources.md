@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887891"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085527"
 ---
 # <a name="data-sources-overview"></a>Vue d’ensemble des sources de données
 
@@ -36,11 +36,9 @@ Vous pouvez ajouter une source de données de trois manières principales :
 
 L’ingestion de données de sources de données locales dans Audience Insights est prise en charge en fonction des flux de données Power Platform. Les flux de données peuvent être activés dans Customer Insights en [fournissant l’URL de l’environnement Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) lors de la configuration de l’environnement.
 
-Les sources de données créées après l’association d’un environnement Dataverse à Customer Insights utiliseront les [flux de données Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) par défaut. Les flux de données prennent en charge la connectivité locale à l’aide des passerelles de données. Supprimez et recréez les sources de données qui existaient avant l’association d’un environnement Dataverse pour utiliser les passerelles de données locales.
+Les sources de données créées après l’association d’un environnement Dataverse à Customer Insights utiliseront les [flux de données Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) par défaut. Les flux de données prennent en charge la connectivité locale à l’aide de la passerelle de données. Supprimez et recréez les sources de données qui existaient avant l’association d’un environnement Dataverse pour [utiliser les passerelles de données locales](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
 
 Les passerelles de données d’un environnement Power BI ou Power Apps existant seront visibles et vous pourrez les réutiliser dans Customer Insights. La page des sources de données affiche des liens pour accéder à l’environnement Power Platform dans lequel vous pouvez afficher et configurer les passerelles de données locales.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Capture d’écran de la page des sources de données affichant des liens qui pointent vers l’environnement Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Évaluer les données ingérées
 

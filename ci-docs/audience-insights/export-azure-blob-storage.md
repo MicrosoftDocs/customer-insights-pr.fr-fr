@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 294feff2f77c3756fbadb36c90aab430454f5967
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 3c19dc6d4956a33a5bd3cea706f8a154198d487f
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760186"
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5976131"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Exporter une liste de segments et d’autres données vers un stockage Blob Azure (version préliminaire)
 

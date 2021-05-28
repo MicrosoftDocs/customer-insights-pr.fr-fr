@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596404"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049391"
 ---
 # <a name="entities-in-audience-insights"></a>Entités dans les informations sur l’audience
 
@@ -37,12 +37,12 @@ Sélectionnez une entité pour explorer les différents champs et enregistrement
 > [!div class="mx-imgBorder"]
 > ![Sélectionner une entité](media/data-manager-entities-data.png "Sélectionner une entité")
 
-- L’onglet **Données** est sélectionné par défaut et affiche un tableau répertoriant les détails des enregistrements individuels de l’entité.
+- L’onglet **Données** affiche un tableau répertoriant les détails des enregistrements individuels de l’entité.
 
 > [!div class="mx-imgBorder"]
 > ![Table Champs](media/data-manager-entities-fields.PNG "Table Champs")
 
-- L’onglet **Champs** permet d’examiner les détails de l’entité sélectionnée, comme le nom des champs, les types de données, et les types. La colonne **Type** affiche les types associés à Common Data Model, qui sont soit identifiés automatiquement par le système, soit [mappés manuellement](map-entities.md) par les utilisateurs. Il s’agit de types sémantiques qui peuvent différer des types de données des attributs (par exemple, le champ *E-mail* ci-dessous contient un type de données *Texte*, mais ce type Common Data Model (sémantique) pourrait être *E-mail* ou *Adresse e-mail*) :
+- L’onglet **Attributs** est sélectionné par défaut et affiche un tableau pour examiner les détails de l’entité sélectionnée, tels que les noms des champs, les types de données et les types. La colonne **Type** affiche les types associés à Common Data Model, qui sont soit identifiés automatiquement par le système, soit [mappés manuellement](map-entities.md) par les utilisateurs. Il s’agit de types sémantiques qui peuvent différer des types de données des attributs (par exemple, le champ *E-mail* ci-dessous contient un type de données *Texte*, mais ce type Common Data Model (sémantique) pourrait être *E-mail* ou *Adresse e-mail*) :
 
 > [!NOTE]
 > Les deux tableaux affichent uniquement un échantillon des données de votre entité. Pour afficher le jeu de données complet, accédez à la page **Sources de données**, sélectionnez une entité d’intérêt, sélectionnez **Modifier**, puis affichez les données de cette entité dans l’éditeur Power Query, comme décrit dans [Sources de données](data-sources.md).

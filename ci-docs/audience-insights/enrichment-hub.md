@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896002"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954484"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enrichissement des profils clients (aperçu)
 
@@ -29,6 +29,7 @@ Sur l’onglet **Découvrir**, vous trouverez les enrichissements suivants :
 
 - [Marques](enrichment-microsoft.md) fournies par Microsoft
 - [Intérêts](enrichment-microsoft.md) fournis par Microsoft
+- [Adresses améliorées](enrichment-enhanced-addresses.md) fournies par Microsoft
 - [Données de la société](enrichment-leadspace.md) fournies par Leadspace
 - [Données démographiques](enrichment-experian.md) fournies par Experian
 - [Données de localisation](enrichment-here.md) fournies par HERE Technologies

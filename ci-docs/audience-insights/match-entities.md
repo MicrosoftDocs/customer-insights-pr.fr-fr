@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595561"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085619"
 ---
 # <a name="match-entities"></a>Mettre en correspondance des entités
 
@@ -103,6 +103,18 @@ Les règles de correspondance représentent des ensembles de conditions. Pour fa
 
 > [!NOTE]
 > L’ordre des règles est important. L’algorithme de correspondance tente d’effectuer une mise en correspondance sur la base de votre première règle et passe à la deuxième règle uniquement si aucune correspondance n’a été identifiée avec la première règle.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Modifier l’ordre des entités dans les règles de correspondance
+
+Vous pouvez réorganiser les entités pour les règles de correspondance afin de modifier l’ordre dans lequel elles sont traitées. Les règles qui sont en conflit en raison d’un ordre modifié seront supprimées. Vous devez recréer les règles supprimées avec une configuration mise à jour.
+
+1. Accédez à **Données** > **Unifier** > **Mettre en correspondance** et sélectionnez **Modifier**.
+
+1. Dans le volet **Modifier la règle**, sélectionnez le contrôle **Monter/descendre** ou faites glisser et déposez des entités pour modifier l’ordre.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Options pour modifier l’ordre dans lequel les entités sont traitées dans la phase de correspondance.":::
+
+1. Sélectionnez **Terminé** pour enregistrer la règle.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Définir la déduplication d’une entité de mise en correspondance
 

@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b5a644e286bd44d4ebf7d1837255326c005b48d6
+ms.sourcegitcommit: 74cd4fa9cbb784d9dff174c0eec7b4dcb408d66b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759818"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059313"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exporter des segments vers Marketo (version préliminaire)
 
@@ -44,7 +44,7 @@ Exportez des segments de profils clients unifiés pour générer des campagnes, 
 
 1. Choisissez qui peut utiliser cette connexion. Si vous n’effectuez aucune action, la valeur par défaut sera Administrateurs. Pour plus d’informations, voir [Autoriser les contributeurs à utiliser une connexion pour les exportations](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Entrez vos **[ID de client Marketo, secret client et nom d’hôte du point de terminaison REST](https://developers.marketo.com/rest-api/authentication/)**.
+1. Entrez vos **[ID de client Marketo, secret client et nom d’hôte du point de terminaison REST](https://developers.marketo.com/rest-api/authentication/)**. Le nom d’hôte du point de terminaison REST est le nom d’hôte uniquement, sans `https://`. Exemple :`xyz-abc-123.mktorest.com`. 
 
 1. Sélectionnez **J’accepte** pour confirmer la **Confidentialité et conformité des données** et sélectionnez **Connecter** pour initialiser la connexion à Marketo.
 
@@ -62,7 +62,7 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 1. Dans le champ **Connexion pour l’exportation**, choisissez une connexion dans la section Marketo. Si ce nom de section ne s’affiche pas, cela signifie qu’aucune connexion de ce type n’est disponible.
 
-1. Entrez votre **[ID de liste Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
+1. Entrez votre **[ID de liste Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. L’ID de liste est une valeur purement numérique. Par exemple, si votre ID de liste Marketo est ST12345A7, supprimez le caractère avant et après les chiffres et saisissez `12345`. 
 
 1. Dans la section **Mise en correspondance des données**, dans le champ **E-mail**, sélectionnez le champ de votre profil client unifié qui représente l’adresse e-mail d’un client. 
 
@@ -74,7 +74,7 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 L’enregistrement d’une exportation n’exécute pas l’exportation immédiatement.
 
-L’exportation s’exécute avec chaque [actualisation planifiée](system.md#schedule-tab). Vous pouvez également [exporter des données à la demande](export-destinations.md#run-exports-on-demand). Dans Marketo, vous trouverez désormais vos segments sous [Listes Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+L’exportation s’exécute avec chaque [actualisation planifiée](system.md#schedule-tab). Vous pouvez également [exporter des données à la demande](export-destinations.md#run-exports-on-demand). Dans Marketo, vous trouverez désormais vos segments sous [Listes Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 
 ## <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données
