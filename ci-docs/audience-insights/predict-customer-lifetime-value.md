@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954576"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095507"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Prédiction de la valeur de durée de vie du client (version préliminaire)
 
@@ -149,7 +149,6 @@ Les données reflétant les interactions client clés (comme le web, le service 
 
 1. Cliquez sur **Suivant**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Examiner et exécuter la configuration du modèle
 
 1. Dans l’étape **Vérifier les détails de votre modèle**, validez la configuration du prédiction. Vous pouvez revenir à n’importe quelle partie de la configuration de prédiction en sélectionnant **Modifier** sous la valeur indiquée. Vous pouvez également sélectionner une étape de configuration à partir de l’indicateur de progression.
@@ -170,11 +169,10 @@ Les données reflétant les interactions client clés (comme le web, le service 
 - **Statut :** Statut de l’exécution de la prédiction.
     - **Mis en file d’attente :** La prédiction attend l’achèvement des autres processus.
     - **Actualisation en cours :** La prédiction est en cours d’exécution pour créer des résultats qui seront envoyés vers l’entité de sortie.
-    - **Échec :** L’exécution de la prédiction a échoué. [Consultez les journaux](#troubleshoot-a-failed-prediction) pour plus de détails.
+    - **Échec :** L’exécution de la prédiction a échoué. [Consultez les journaux](manage-predictions.md#troubleshoot-a-failed-prediction) pour plus de détails.
     - **Réussite :** La prédiction a réussi. Sélectionnez **Afficher** sous les points de suspension verticaux pour consulter les résultats de prédiction.
 - **Modifié :** Date de modification de la configuration de la prédiction.
 - **Dernière actualisation :** Date d’actualisation de la prédiction dans l’entité en sortie.
-
 
 ### <a name="review-prediction-results"></a>Revoir les résultats de la prédiction
 
@@ -216,28 +214,8 @@ La page de résultats comporte trois sections principales de données.
 
 - **Facteurs les plus influents** : Différents facteurs sont pris en compte lors de la création de votre prédiction de valeur de la durée de vie du client en fonction des données d’entrée fournies au modèle IA. Chacun de ces facteurs a son importance calculée pour les prévisions agrégées qu’un modèle crée. Vous pouvez utiliser ces facteurs pour valider les résultats de votre prédiction. Ces facteurs permettent également de mieux comprendre les facteurs les plus influents qui ont contribué à prédire la valeur de la durée de vie du client pour tous vos clients.
 
-## <a name="refresh-a-prediction"></a>Actualiser une prédiction
+## <a name="manage-predictions"></a>Gérer les prédictions
 
-Les prédictions s’actualisent automatiquement sur le même [Planning des actualisations de vos données](system.md#schedule-tab) tel que configuré dans les paramètres. Vous pouvez également les actualiser manuellement.
-
-1. Accédez à **Intelligence** > **Prédictions** et sélectionnez l’onglet **Mes prédictions**.
-2. Sélectionnez les ellipses verticales à côté de la prédiction que vous souhaitez actualiser.
-3. Cliquez sur **Actualiser**.
-
-## <a name="delete-a-prediction"></a>Supprimer une prédiction
-
-La suppression d’une prédiction entraîne également la suppression de son entité de sortie.
-
-1. Accédez à **Intelligence** > **Prédictions** et sélectionnez l’onglet **Mes prédictions**.
-2. Sélectionnez les ellipses verticales à côté de la prédiction que vous souhaitez supprimer.
-3. Sélectionnez **Supprimer**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Résoudre les problèmes liés à un échec de prédiction
-
-1. Accédez à **Intelligence** > **Prédictions** et sélectionnez l’onglet **Mes prédictions**.
-2. Sélectionnez les points de suspension verticaux en regard de la prédiction pour laquelle vous souhaitez afficher les journaux d’erreurs.
-3. Sélectionnez **Journaux**.
-4. Passez toutes les erreurs en revue. Plusieurs types d’erreurs peuvent survenir et décrivent la condition à l’origine de l’erreur. Par exemple, une erreur indiquant qu’il n’y a pas assez de données pour des prédictions précises est généralement résolue en chargeant des données supplémentaires dans les informations sur l’audience.
-
+Il est possible d'optimiser, de dépanner, d'actualiser ou de supprimer des prédictions. Consultez un rapport d'utilisation des données d'entrée pour découvrir comment rendre un prédiction plus rapide et plus fiable. Pour plus d’informations, consultez [Gérer les prédictions](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

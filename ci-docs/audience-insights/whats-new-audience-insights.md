@@ -1,7 +1,7 @@
 ---
 title: Fonctionnalités nouvelles et à venir
 description: Informations sur les nouvelles fonctionnalités, les améliorations et les corrections de bogues.
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988917"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263248"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Nouveautés de la fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights
 
@@ -26,6 +26,37 @@ Nous déployons des mises à jour région par région. Ainsi, certaines régions
 
 > [!TIP]
 > Pour envoyer et voter sur les demandes de fonctionnalités et les suggestions de produits, accédez au [portail Idées d’application Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="may-2021-updates"></a>Mises à jour de mai 2021
+
+Les mises à jour de mai 2021 comprennent plusieurs fonctionnalités, mises à niveau des performances et corrections de bogues.
+
+### <a name="data-ingestion"></a>Ingestion des données
+
+- **Affichez ou modifiez les métadonnées ou la définition d'entité lorsque vous joignez des données à partir de votre Azure Data Lake Storage**. Vous pouvez désormais afficher et modifier les métadonnées ou la définition d'entité dans les informations sur l’audience lorsque vous joignez des données à partir d'un dossier Common Data Model dans votre Azure Data Lake Storage. Cette fonctionnalité fournit un retour d'information en temps réel, une validation du modèle et une vérification des erreurs. Elle vous permet de modifier à la fois model.json et manifest.json de manière transparente.
+
+### <a name="extensibility"></a>Extensibilité
+
+- **Exportations de segments améliorées, planification personnalisée et duplication**. Vous pouvez maintenant [voir toutes les exportations pour un segment spécifique](export-destinations.md#view-exports-and-export-details) dans une liste. Cette nouvelle vue permet de gérer l'utilisation d'un segment spécifique et d'adapter les exportations existantes ou de créer des exportations.    
+  Vous pouvez [définir des planifications d’actualisation personnalisées](export-destinations.md#schedule-and-run-exports) pour des exportations individuelles ou plusieurs exportations à la fois. Jusqu'à présent, toutes les exportations étaient exécutées à chaque actualisation du système.    
+  Plutôt que de créer une nouvelle exportation à partir de zéro, vous pouvez commencer à partir d'une exportation existante pour gagner du temps.
+
+- **Exporter des segments vers Microsoft Advertising** : nous avons étendu nos destinations d’exportation pour inclure Microsoft Advertising. Créez des audiences Customer Match sur Microsoft Advertising avec vos données de profil client unifiées, et utilisez ces audiences pour vos campagnes publicitaires. Pour plus d'informations, consultez [Exporter des segments vers Microsoft Advertising](export-microsoft-advertising.md).
+
+- **Exporter des segments vers LinkedIn Ads** Nous avons étendu nos destinations d'exportation pour inclure LinkedIn Ads et vous permettre de déverrouiller le ciblage des contacts ainsi que le ciblage des entreprises via LinkedIn en exportant vos données de profil client unifiées. Pour plus d'informations, consultez [Exporter des segments vers LinkedIn Ads](export-linkedin-ads.md).
+
+
+- **Exporter des segments vers Omnisend** : nous avons étendu nos destinations d’exportation pour inclure Omnisend. Utilisez les segments créés dans les informations sur l’audience pour générer des campagnes, fournir du marketing par e-mail et utiliser certains groupes de clients avec Omnisend. Pour plus d'informations, consultez [Exporter des segments vers Omnisend](export-omnisend.md).
+
+### <a name="predictions"></a>Prédictions
+
+- **Rapport d’utilisation des données d’entrée** Le rapport d'utilisation des données d'entrée fournit une vue consolidée des erreurs et des avertissements que vos prédictions prêtes à l'emploi peuvent générer. Il donne également des recommandations sur la manière d'améliorer les performances du modèle.    
+  Le rapport est disponible une fois qu'un modèle a terminé son processus d'entraînement. Il est créé pour chaque modèle séparément, qu'il soit terminé avec succès ou non.
+  Actuellement, cette fonctionnalité n'est disponible que pour le modèle d’attrition des transactions. Pour plus d’informations, voir [Rapport d’utilisation des données d’entrée](manage-predictions.md#input-data-usability-report).
+
+### <a name="relationships"></a>Relations
+
+- **Visualiseur de relations** La vue du visualiseur de relations vous permet de voir tous les relations existants entre les entités et leur cardinalité. Les relations sont maintenant organisées en groupes : relations créées par l'utilisateur, relations système et relations héritées. Vous pouvez également exporter une vue sous forme d'image. Pour en savoir plus, consultez [Afficher les relations](relationships.md#view-relationships). 
 
 ## <a name="april-2021-updates"></a>Mises à jour d’avril 2021
 

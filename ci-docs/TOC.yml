@@ -96,30 +96,40 @@
           href: audience-insights/measures.md
     - name: Prédictions
       items:
-        - name: Renseigner les données à l’aide de prévisions de valeur
-          href: audience-insights/predictions.md
-        - name: Prédire le taux de désabonnement
-          href: audience-insights/predict-subscription-churn.md
-        - name: Exemple de guide pour la prédiction de l’attrition des abonnements
-          href: audience-insights/sample-guide-predict-subscription-churn.md
-        - name: Prédire l’attrition transactionnelle
-          href: audience-insights/predict-transactional-churn.md
-        - name: Exemple de guide pour la prédiction de l’attrition transactionnelle
-          href: audience-insights/sample-guide-predict-transactional-churn.md
-        - name: Prédire la valeur de durée de vie du client
-          href: audience-insights/predict-customer-lifetime-value.md
-        - name: Prédire les recommandations de produits
-          href: audience-insights/predict-product-recommendation.md
-        - name: Exemple de guide pour la prédiction de recommandation de produit
-          href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: Prédire les données à l'aide de l'IA
+          items:
+            - name: Vue d'ensemble des modèles de prédiction
+              href: audience-insights/predictions-overview.md
+            - name: Prédire la valeur de durée de vie du client
+              href: audience-insights/predict-customer-lifetime-value.md
+            - name: Prédire les recommandations de produits
+              href: audience-insights/predict-product-recommendation.md
+            - name: Prédire le taux de désabonnement
+              href: audience-insights/predict-subscription-churn.md
+            - name: Prédire l’attrition transactionnelle
+              href: audience-insights/predict-transactional-churn.md
+            - name: Utiliser des modèles personnalisés d'Azure Machine Learning
+              href: audience-insights/custom-models.md
+            - name: Compléter les données partiellement manquantes
+              href: audience-insights/predictions.md
+        - name: Exemples de guides
+          items:
+            - name: Exemple de guide pour la prédiction CLV
+              href: audience-insights/sample-guide-predict-clv.md
+            - name: Exemple de guide pour la prédiction de l’attrition des abonnements
+              href: audience-insights/sample-guide-predict-subscription-churn.md
+            - name: Exemple de guide pour la prédiction de l’attrition transactionnelle
+              href: audience-insights/sample-guide-predict-transactional-churn.md
+            - name: Exemple de guide pour la prédiction de recommandation de produit
+              href: audience-insights/sample-guide-predict-product-recommendation.md
+            - name: Expériences avec Azure Machine Learning
+              href: audience-insights/azure-machine-learning-experiments.md
+            - name: Expériences avec Azure Machine Learning Studio
+              href: audience-insights/machine-learning-studio-experiments.md
+        - name: Gérer les prédictions
+          href: audience-insights/manage-predictions.md
         - name: Créer des segments basés sur des prédictions
           href: audience-insights/prediction-based-segment.md
-        - name: Implémenter des modèles de Machine Learning personnalisés
-          href: audience-insights/custom-models.md
-        - name: Expériences avec Azure Machine Learning
-          href: audience-insights/azure-machine-learning-experiments.md
-        - name: Expériences avec Azure Machine Learning Studio
-          href: audience-insights/machine-learning-studio-experiments.md
     - name: Options d’exportation
       items:
         - name: Exportations
@@ -154,12 +164,18 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: LinkedIn Ads
+              href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
               href: audience-insights/export-liveramp.md
             - name: Mailchimp
               href: audience-insights/export-mailchimp.md
             - name: Marketo
               href: audience-insights/export-marketo.md
+            - name: Publicité Microsoft
+              href: audience-insights/export-microsoft-advertising.md
+            - name: Omnisend
+              href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
             - name: SendGrid
@@ -200,11 +216,13 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: "Vérifier les schémas des entités dans Common\_Data\_Model"
           href: audience-insights/entity-schemas.md
+        - name: "Données Customer\_Insights dans Dataverse"
+          href: audience-insights/customer-insights-dataverse.md
         - name: Utiliser les API
           href: audience-insights/apis.md
         - name: Références d’API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Limites du service
+    - name: Limites de service
       href: audience-insights/service-limits.md
     - name: Demandes DSR dans le cadre du RGPD
       href: audience-insights/gdpr.md
@@ -240,9 +258,15 @@
           href: engagement-insights/custom-reports.md
         - name: Créer des rapports sur les profils unifiés
           href: engagement-insights/profile-reports.md
+        - name: Afficher et créer des dimensions
+          href: engagement-insights/dimensions.md
+        - name: Afficher et créer des mesures
+          href: engagement-insights/metrics.md
+        - name: Afficher et créer des segments
+          href: engagement-insights/segments.md
     - name: Analyse de parcours
       items:
-        - name: Créer et gérer des rapports en entennoir
+        - name: Créer et gérer des rapports d'entonnoir
           href: engagement-insights/funnel-reports.md
     - name: Ressources du développeur
       items:

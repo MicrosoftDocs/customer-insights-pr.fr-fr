@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595270"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129896"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Exemple de guide (version préliminaire) de prédiction de recommandation de produit
 
@@ -22,7 +22,7 @@ Nous vous présenterons un exemple de bout en bout de prédiction de recommandat
 
 ## <a name="scenario"></a>Scénario
 
-Contoso est une société qui produit du café et des machines à café de haute qualité qu’elle vend sur son site web Contoso Coffee. Leur objectif est de comprendre quels produits doivent-ils recommander à leurs clients récurrents. Savoir ce que sont les clients **susceptible d’acheter**, peut les aider à économiser leurs efforts de marketing en se concentrant sur des éléments spécifiques.
+Contoso est une entreprise qui produit du café et des machines à café de haute qualité, qu'elle vend via son site web Contoso Coffee. Leur objectif est de comprendre quels produits doivent-ils recommander à leurs clients récurrents. Savoir ce que sont les clients **susceptible d’acheter**, peut les aider à économiser leurs efforts de marketing en se concentrant sur des éléments spécifiques.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -65,7 +65,7 @@ Passez en revue les articles sur [l’ingestion de données](data-sources.md) et
 
 1. Dans le champ **Nom** du volet latéral, renommez votre source de données **Requête** en **eCommercePurchases**.
 
-1. Enregistrez la source de données.
+1. **Enregistrez** la source de données.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Ingérer les données client du programme de fidélité
@@ -83,11 +83,11 @@ Passez en revue les articles sur [l’ingestion de données](data-sources.md) et
 
 1. Dans le champ **Nom** du volet droit, renommez votre source de données **Requête** en **loyCustomers**.
 
-1. Enregistrez la source de données.
+1. **Enregistrez** la source de données.
 
 ## <a name="task-2---data-unification"></a>Tâche 2 : unification des données
 
-Une fois les données ingérées, nous commençons maintenant le processus de **Mappage, correspondance, fusion** pour créer un profil client unifié. Pour plus d’informations, consultez [Unification des données](data-unification.md).
+Après avoir ingéré les données, nous commençons maintenant le processus d'unification des données pour créer un profil client unifié. Pour plus d’informations, consultez [Unification des données](data-unification.md).
 
 ### <a name="map"></a>Mappage
 
@@ -156,7 +156,7 @@ Une fois les profils clients unifiés en place, nous pouvons maintenant exécute
 
    - **Nombre de produits** : Définissez cette valeur sur **5**. Ce paramètre définit le nombre de produits que vous souhaitez recommander à vos clients.
 
-   - **Suggérer des produits que les clients ont récemment achetés ?**  : Sélectionnez **Oui** pour indiquer que vous souhaitez inclure des produits dans la recommandation que vos clients ont déjà achetés.
+   - **Achats répétés attendus** : Sélectionnez **Oui** pour indiquer que vous souhaitez inclure dans la recommandation des produits que vos clients ont déjà achetés.
 
    - **Fenêtre de consultation :** Sélectionnez au moins **365 jours**. Ce paramètre définit la consultation de l’activité du client à utiliser comme entrée dans les recommandations.
    

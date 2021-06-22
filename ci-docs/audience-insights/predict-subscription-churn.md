@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906899"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095645"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Prédiction du taux de désabonnement (aperçu)
 
@@ -147,30 +147,9 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
        > [!div class="mx-imgBorder"]
        > ![Liste montrant les facteurs influents et leur importance dans la prévision du résultat du désabonnement](media/subscription-churn-influentialfactors.PNG "Liste montrant les facteurs influents et leur importance dans la prévision du résultat du désabonnement")
 
-## <a name="fix-a-failed-prediction"></a>Correction d’une prédiction ayant échoué
+## <a name="manage-predictions"></a>Gérer les prédictions
 
-1. Accédez à l’onglet **Mes prédictions** sur **Intelligence** > **Prédictions**.
-1. Sélectionnez la prédiction pour laquelle vous souhaitez afficher les journaux d’erreurs et sélectionnez **Journaux**.
-   > [!div class="mx-imgBorder"]
-   > ![Affichage de la barre de menu des résultats, y compris les boutons de fermeture, de modification du modèle et de journaux](media/subscription-churn-logsbutton.PNG "Affichage de la barre de menu des résultats, y compris les boutons de fermeture, de modification du modèle et de journaux")
-1. Passez toutes les erreurs en revue. Plusieurs types d’erreurs peuvent survenir et décrivent la condition à l’origine de l’erreur. Par exemple, une erreur indiquant qu’il n’y a pas assez de données pour des prédictions précises est généralement résolue en chargeant des données supplémentaires.
-
-## <a name="refresh-a-prediction"></a>Actualiser une prédiction
-
-Les prédictions seront automatiquement actualisées sur le même paramètre [planifier vos actualisations de données](system.md#schedule-tab) comme configuré dans les paramètres.
-
-1. Accédez à l’onglet **Mes prédictions** sur **Intelligence** > **Prédictions**.
-1. Sélectionnez les ellipses verticales à côté de la prédiction que vous souhaitez actualiser.
-1. Cliquez sur **Actualiser**.
-
-## <a name="delete-a-prediction"></a>Supprimer une prédiction
-
-1. Accédez à l’onglet **Mes prédictions** sur **Intelligence** > **Prédictions**.
-1. Sélectionnez les ellipses verticales à côté de la prédiction que vous souhaitez supprimer.
-1. Sélectionnez **Supprimer**.
-
-> [!NOTE]
-> La suppression d’un prévision supprimera son entité de sortie.
+Il est possible d'optimiser, de dépanner, d'actualiser ou de supprimer des prédictions. Consultez un rapport d'utilisation des données d'entrée pour découvrir comment rendre un prédiction plus rapide et plus fiable. Pour plus d’informations, consultez [Gérer les prédictions](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

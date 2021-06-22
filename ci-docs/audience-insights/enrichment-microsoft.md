@@ -1,7 +1,7 @@
 ---
 title: Enrichir les profils client avec les données de Microsoft
 description: Utilisez les données propriétaires de Microsoft pour enrichir vos données client avec les affinités pour des marques et des intérêts.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064888"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245704"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enrichir les profils client avec les affinités pour des marques et des intérêts (préversion)
 
@@ -69,12 +69,10 @@ Une expérience guidée vous aide tout au long de la configuration des enrichiss
 
 ### <a name="define-your-brands-or-interests"></a>Définir vos marques ou centres d’intérêt
 
-Sélectionnez l’une des options suivantes :
+Choisissez jusqu'à cinq marques ou centres d'intérêt en utilisant l'une ou les deux options suivantes :
 
-- **Secteur** : Le système identifie les principaux centres d’intérêts ou marques pertinents pour votre secteur et enrichit vos données client avec ceux-ci.
-- **Choisir votre propre** : Sélectionnez jusqu’à cinq éléments dans la liste des marques ou centres d’intérêts les plus pertinents pour votre organisation.
-
-Pour ajouter une marque ou un intérêt, entrez-le dans la zone de saisie pour obtenir des suggestions en fonction des termes correspondants. Si nous ne répertorions pas une marque ou un intérêt que vous recherchez, envoyez-nous vos commentaires en utilisant le lien **Suggérer**.
+- **Secteur d’activité** : Sélectionnez votre secteur dans la liste déroulante, puis choisissez parmi les principales marques ou centres d'intérêt pour ce secteur.
+- **Choisir les vôtres** : saisissez une marque ou un centre d'intérêt pertinent pour votre organisation, puis choisissez parmi les suggestions correspondantes. Si nous ne répertorions pas une marque ou un intérêt que vous recherchez, envoyez-nous vos commentaires en utilisant le lien **Suggérer**.
 
 ### <a name="review-enrichment-preferences"></a>Examiner les préférences d’enrichissement
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906853"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095599"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Prédiction de l’attrition transactionnelle (version préliminaire)
 
@@ -144,7 +144,7 @@ La prédiction de l’attrition transactionnelle aide à prédire si un client n
    - **Statut :** statut de l’exécution de la prédiction.
         - **Mis en file d’attente :** la prédiction attend l’exécution des autres processus.
         - **Actualisation en cours :** la prédiction est en cours d’exécution pour produire des résultats qui seront envoyés vers l’entité de sortie.
-        - **Échec :** l’exécution de la prédiction a échoué. [Consultez les journaux](#troubleshoot-a-failed-prediction) pour plus de détails.
+        - **Échec :** l’exécution de la prédiction a échoué. [Consultez les journaux](manage-predictions.md#troubleshoot-a-failed-prediction) pour plus de détails.
         - **Réussite :** la prédiction a réussi. Sélectionnez **Afficher** sous les ellipses verticales pour revoir la prédiction
    - **Modifié :** Date de modification de la configuration de la prédiction.
    - **Dernière actualisation :** Date d’actualisation de la prédiction dans l’entité en sortie.
@@ -168,35 +168,9 @@ La prédiction de l’attrition transactionnelle aide à prédire si un client n
        
     1. **Facteurs les plus influents :** De nombreux facteurs sont pris en compte lors de la création de votre prédiction. Chacun des facteurs a son importance calculée pour les prédictions regroupées créées par un modèle. Vous pouvez utiliser ces facteurs pour aider à valider vos résultats de prédiction. Ou vous pouvez utiliser ces informations ultérieurement pour [créer des segments](segments.md) qui pourraient contribuer à influer sur le risque de désabonnement des clients
 
-## <a name="troubleshoot-a-failed-prediction"></a>Résoudre les problèmes liés à un échec de prédiction
+## <a name="manage-predictions"></a>Gérer les prédictions
 
-1. Accédez à **Intelligence** > **Prédictions** et sélectionnez l’onglet **Mes prédictions**.
-
-1. Sélectionnez les points de suspension verticaux en regard de la prédiction pour laquelle vous souhaitez afficher les journaux d’erreurs.
-
-1. Sélectionnez **Journaux**.
-
-1. Passez toutes les erreurs en revue. Plusieurs types d’erreurs peuvent survenir et décrivent la condition à l’origine de l’erreur. Par exemple, une erreur pour laquelle il n’y a pas suffisamment de données à prévoir avec précision est généralement résolue en chargeant des données supplémentaires dans Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Actualiser une prédiction
-
-Les prédictions seront automatiquement actualisées sur le même paramètre [planifier vos actualisations de données](system.md#schedule-tab) comme configuré dans les paramètres. Vous pouvez également les actualiser manuellement.
-
-1. Accédez à **Intelligence** > **Prédictions** et sélectionnez l’onglet **Mes prédictions**.
-
-1. Sélectionnez les ellipses verticales à côté de la prédiction que vous souhaitez actualiser.
-
-1. Cliquez sur **Actualiser**.
-
-## <a name="delete-a-prediction"></a>Supprimer une prédiction
-
-La suppression d’une prédiction entraîne également la suppression de son entité de sortie.
-
-1. Accédez à **Intelligence** > **Prédictions** et sélectionnez l’onglet **Mes prédictions**.
-
-1. Sélectionnez les ellipses verticales à côté de la prédiction que vous souhaitez supprimer.
-
-1. Sélectionnez **Supprimer**.
+Il est possible d'optimiser, de dépanner, d'actualiser ou de supprimer des prédictions. Consultez un rapport d'utilisation des données d'entrée pour découvrir comment rendre un prédiction plus rapide et plus fiable. Pour plus d’informations, consultez [Gérer les prédictions](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

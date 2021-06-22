@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034009"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111384"
 ---
 # <a name="segments-overview"></a>Vue d’ensemble des segments
 
@@ -32,22 +32,13 @@ Il existe plusieurs façons de créer un segment :
 - Suggestions basées sur l’IA à partir de mesures ou d’attributs : [segments suggérés pour améliorer les mesures](suggested-segments.md)
 - Suggestions basées sur les activités : [segments suggérés en fonction de l’activité des clients](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>Obtenez des informations sur les segments existants
-
-Découvrez des informations supplémentaires autour de vos segments existants avec les [informations sur les segments](segment-insights.md). Découvrez ce qui différencie deux segments ou ce qu’ils ont en commun.
-
-## <a name="find-similar-customers"></a>Trouver des clients similaires
-
-Trouvez des clients similaires aux membres d’un segment sélectionné à l’aide de l’intelligence artificielle. Pour plus d’informations, consultez [Clients similaires ](find-similar-customer-segments.md).
-
 ## <a name="manage-existing-segments"></a>Gérer les segments existants
 
 Accédez à la page **Segments** pour afficher tous vos segments enregistrés et les gérer.
 
 Chaque segment est représenté par une ligne qui contient des informations supplémentaires sur le segment.
 
-> [!div class="mx-imgBorder"]
-> ![Options de gestion d’un segment existant](media/segments-selected-segment.png "Options de gestion d’un segment existant")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segment sélectionné avec liste déroulante d'options et options disponibles.":::
 
 L’action suivante est disponible lorsque vous sélectionnez un segment :
 
@@ -59,7 +50,7 @@ L’action suivante est disponible lorsque vous sélectionnez un segment :
   Vous pouvez également utiliser la fonctionnalité **Planifier plus tard** dans la liste déroulante **Activer/Désactiver** pour spécifier une date et une heure futures d’activation et de désactivation d’un segment particulier.
 - **Renommer** le segment.
 - **Télécharger** la liste des membres en tant que fichier .CSV.
-- L’option **Ajouter à** envoie la liste des ID clients du segment aux fins de traitement dans une autre application.
+- **Gérer les exportations** pour voir le segment lié aux exportations et les gérer. [En savoir plus sur les exportations](export-destinations.md)
 - **Supprimer** le segment.
 
 ## <a name="refresh-segments"></a>Actualiser des segments
@@ -68,6 +59,24 @@ Vous pouvez actualiser tous les segments à la fois en sélectionnant **Actualis
 
 > [!TIP]
 > Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d’autres processus en aval](system.md#refresh-policies). Vous pouvez sélectionner le statut d’un processus pour afficher des détails sur la progression de toute la tâche. Après avoir sélectionné **Voir les détails** pour l’une des tâches du travail, vous voyez des informations complémentaires : la durée de traitement, la date du dernier traitement et toutes les erreurs et avertissements associés à la tâche.
+
+## <a name="export-segments"></a>Exporter les segments
+
+Vous pouvez exporter un segment à partir de la page des segments ou de la [page des exportations](export-destinations.md). 
+
+1. Accédez à la page **Segments**.
+
+1. Sélectionnez **Afficher plus [...]** pour le segment que vous souhaitez exporter.
+
+1. Sélectionnez **Gérer les exportations** dans la liste déroulante des actions.
+
+1. La page **Exportations du segment (aperçu)** s'ouvre. Vous pouvez voir toutes les exportations configurées regroupées par exportations qui contiennent le segment actuel ou qui ne le contiennent pas.
+
+   1. Pour ajouter le segment sélectionné à une exportation, sélectionnez l'exportation dans la liste et sélectionnez **Ajouter un segment**.
+
+   1. Pour créer une nouvelle exportation avec le segment sélectionné, sélectionnez **Ajouter une exportation**. Pour plus d'informations sur la création d'exportations, consultez [Configurer une nouvelle exportation](export-destinations.md#set-up-a-new-export).
+
+1. Sélectionnez **Précédent** pour revenir à la page principale des segments.
 
 ## <a name="view-processing-history-and-segment-members"></a>Afficher l’historique de traitement et les membres du segment
 
