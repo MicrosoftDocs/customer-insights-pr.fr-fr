@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049247"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304789"
 ---
 # <a name="define-and-manage-measures"></a>Définir et gérer des mesures
 
-Les mesures vous aident à mieux comprendre les comportements des clients et les performances commerciales. Elles examinent les valeurs pertinentes des [profils unifiés](data-unification.md). Par exemple, une entreprise souhaite voir les *dépenses totales par client* pour comprendre l’historique des achats d’un client individuel ou mesurer les *ventes totales de la société* pour comprendre le revenu au niveau agrégé dans l’ensemble de l’entreprise.  
+Les mesures vous aident à mieux comprendre les comportements des clients et les performances commerciales. Elles examinent les valeurs pertinentes des [profils unifiés](data-unification.md). Par exemple, une entreprise veut voir les *des dépenses totales par client* pour comprendre l’historique des achats d’un client individuel ou mesurer les *ventes totales de l’entreprise* pour comprendre les revenus au niveau agrégé dans l’ensemble de l’entreprise.  
 
 Les mesures sont créées à l’aide du générateur de mesures, une plateforme de requête de données avec divers opérateurs et des options de mappage simples. Elle vous permet de filtrer les données, de regrouper les résultats, de détecter les [chemins d’accès aux relations d’entités](relationships.md) et prévisualisez la sortie.
 
@@ -36,7 +36,7 @@ Cette section vous guide tout au long de la création d’une mesure à partir d
    > [!NOTE]
    > Si votre nouvelle configuration de mesure ne comporte que deux champs, par exemple, CustomerID et un calcul, la sortie sera ajoutée en tant que nouvelle colonne à l’entité générée par le système appelée Customer_Measure. Et vous pourrez voir la valeur de la mesure dans le profil client unifié. D’autres mesures généreront leurs propres entités.
 
-1. Dans la zone de configuration, choisissez la fonction d’agrégation dans le menu déroulant **Sélectionnez la fonction**. Les fonctions d’agrégation comprennent : 
+1. Dans la zone de configuration, choisissez la fonction d’agrégation dans le menu déroulant **Sélectionner une fonction**. Les fonctions d’agrégation comprennent : 
    - **Sum**
    - **Moyenne**
    - **Nombre**
@@ -69,12 +69,14 @@ Cette section vous guide tout au long de la création d’une mesure à partir d
    1. Sélectionnez **Appliquer** pour ajouter les filtres à la mesure.
 
 1. Pour ajouter des dimensions, sélectionnez **Dimension** dans la zone de configuration. Les dimensions s’affichent sous forme de colonnes dans l’entité de sortie de mesure.
+ 
    1. Sélectionnez **Modifier les dimensions** pour ajouter des attributs de données par lesquels vous souhaitez regrouper les valeurs de mesure. Par exemple, ville ou sexe. Par défaut, la dimension *CustomerID* est sélectionnée pour créer des *mesures au niveau du client*. Vous pouvez supprimer la dimension par défaut si vous souhaitez créer des *mesures au niveau de l’entreprise*.
    1. Sélectionnez **Terminé** pour ajouter les dimensions à la mesure.
 
 1. Si des valeurs de vos données doivent être remplacées par un entier, par exemple, remplacer *null* par *0*, sélectionnez **Règles**. Configurez la règle et assurez-vous de ne choisir que des nombres entiers comme valeurs de remplacement.
 
 1. S’il existe plusieurs chemins d’accès entre l’entité de données que vous avez mappée et l’entité *Client*, vous devez choisir l’un des [chemins d’accès de relation d’entité](relationships.md). Les résultats de la mesure peuvent varier en fonction du chemin sélectionné. 
+   
    1. Sélectionnez **Préférences de données** et choisissez le chemin de l’entité à utiliser pour identifier votre mesure. S’il n’y a qu’un seul chemin vers l’entité *Client*, ce contrôle ne s’affichera pas.
    1. Sélectionnez **Terminé** pour appliquer votre sélection. 
 
@@ -113,7 +115,7 @@ La procédure suivante décrit les étapes pour créer une nouvelle mesure à l�
 
 1. Sélectionnez **Nouveau** et sélectionnez **Choisir un modèle**.
 
-   :::image type="content" source="media/measure-use-template.png" alt-text="Capture d’écran du menu déroulant lors de la création d’une nouvelle mesure avec le modèle mis en surbrillance.":::
+   :::image type="content" source="media/measure-use-template.png" alt-text="Capture d’écran du menu déroulant lors de la création d’une nouvelle mesure avec mise en surbrillance du modèle.":::
 
 1. Recherchez le modèle correspondant à vos besoins et sélectionnez **Choisir le modèle**.
 
@@ -123,7 +125,7 @@ La procédure suivante décrit les étapes pour créer une nouvelle mesure à l�
 
 1. Cliquez sur **Terminé**.
 
-1. Dans la section **Définir la période de temps**, définissez la période de temps des données à utiliser. Choisissez si vous souhaitez que la nouvelle mesure couvre l’ensemble du jeu de données en sélectionnant **Tout le temps**. Ou si vous souhaitez que la mesure se concentre sur une **Période de temps spécifique**.
+1. Dans la section **Définir la période de temps**, définissez la période de temps des données à utiliser. Choisissez si vous souhaitez que la nouvelle mesure couvre l’ensemble du jeu de données en sélectionnant **Tout le temps**, ou si vous souhaitez que la mesure se concentre sur une **Période spécifique**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Capture d’écran montrant la section de la période de temps lors de la configuration d’une mesure à partir d’un modèle.":::
 
@@ -142,12 +144,12 @@ La procédure suivante décrit les étapes pour créer une nouvelle mesure à l�
 
 Vous trouverez la liste des mesures sur la page **Mesures**.
 
-Vous trouverez des informations sur le type de mesure, le créateur, la date de création, le statut et l’état. Lorsque vous sélectionnez une mesure dans la liste, vous pouvez prévisualiser la sortie et télécharger un fichier .CSV.
+Vous trouverez des informations sur le type de mesure, le créateur, la date de création, le statut et l’état. Lorsque vous sélectionnez une mesure dans la liste, vous pouvez prévisualiser la sortie et télécharger un fichier CSV.
 
 Pour actualiser toutes vos mesures en même temps, sélectionnez **Actualiser tout** sans sélectionner une mesure spécifique.
 
 > [!div class="mx-imgBorder"]
-> ![Actions pour gérer des mesures uniques](media/measure-actions.png "Actions pour gérer des mesures uniques")
+> ![Actions pour gérer des mesures uniques.](media/measure-actions.png "Actions pour gérer des mesures uniques.")
 
 Choisissez une mesure parmi la liste des options suivantes :
 
@@ -159,11 +161,11 @@ Choisissez une mesure parmi la liste des options suivantes :
 - **Activer** ou **Désactiver**. Les mesures inactives ne seront pas actualisées pendant une [actualisation programmée](system.md#schedule-tab).
 
 > [!TIP]
-> Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d’autres processus en aval](system.md#refresh-policies). Vous pouvez sélectionner le statut d’un processus pour afficher des détails sur la progression de toute la tâche. Après avoir sélectionné **Voir les détails** pour l’une des tâches du travail, vous voyez des informations complémentaires : la durée de traitement, la date du dernier traitement et toutes les erreurs et avertissements associés à la tâche.
+> Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d’autres processus en aval](system.md#refresh-policies). Vous pouvez sélectionner le statut d’un processus pour afficher des détails sur la progression de toute la tâche. Une fois que vous avez sélectionné **Afficher les détails** pour l’une des tâches du projet, vous trouverez des informations supplémentaires : l’heure de traitement, la dernière date de traitement, ainsi que toutes les erreurs et tous les avertissements associés à la tâche.
 
 ## <a name="next-step"></a>Étape suivante
 
-Vous pouvez utiliser des mesures existantes pour créer [un segment de clientèle](segments.md).
+Vous pouvez utiliser des mesures existantes pour créer un [segment de clients](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

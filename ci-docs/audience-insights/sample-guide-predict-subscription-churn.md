@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595515"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306300"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Exemple de guide de prédiction de l’attrition des abonnements (version préliminaire)
 
@@ -22,7 +22,7 @@ Nous vous présenterons un exemple de bout en bout de prédiction de l’attriti
 
 ## <a name="scenario"></a>Scénario
 
-Contoso est une société qui produit du café et des machines à café de haute qualité qu’elle vend sur son site web Contoso Coffee. Elle a récemment lancé un système d’abonnement pour que ses clients achètent régulièrement du café. Son objectif est de comprendre quels clients abonnés risquent d’annuler leur abonnement dans les prochains mois. Savoir lesquels de ses clients **sont susceptibles de se tourner vers la concurrence**, peut l’aider à économiser ses efforts marketing en se concentrant sur leur fidélisation.
+Contoso est une entreprise qui produit du café et des machines à café de haute qualité, qu'elle vend via son site web Contoso Coffee. Elle a récemment lancé un système d’abonnement pour que ses clients achètent régulièrement du café. Son objectif est de comprendre quels clients abonnés risquent d’annuler leur abonnement dans les prochains mois. Savoir lesquels de ses clients **sont susceptibles de se tourner vers la concurrence**, peut l’aider à économiser ses efforts marketing en se concentrant sur leur fidélisation.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -128,7 +128,7 @@ Une fois les données ingérées, nous commençons maintenant le processus de **
 
 1. Accédez à l’onglet **Mettre en correspondance** et sélectionnez **Définir l’ordre**.
 
-1. Dans la liste déroulante **Primaire**, choisissez **eCommerceContacts : eCommerce** comme source principale et incluez tous les enregistrements.
+1. Dans la liste déroulante **Principal**, choisissez **eCommerceContacts : eCommerce** comme source principale et incluez tous les enregistrements.
 
 1. Dans la liste déroulante **Entité 2**, choisissez **loyCustomers : LoyaltyScheme** et incluez tous les enregistrements.
 

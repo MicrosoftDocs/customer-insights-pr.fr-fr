@@ -1,7 +1,7 @@
 ---
 title: Intégrez les données web issues des informations sur l’engagement avec les informations sur l’audience
 description: Apportez des informations web sur les clients, des informations sur l’engagement aux informations sur l’audience.
-ms.date: 12/17/2020
+ms.date: 06/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a4cb77bb4c6ef0d88b3f00802f66baab5520a07
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 76a53a897e90152707a7c1255ed5ed93a5f3b5a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896416"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305015"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Intégrez les données web issues des informations sur l’engagement avec les informations sur l’audience
 
-Les clients effectuent souvent leurs transactions quotidiennes en ligne à l’aide de sites web. La capacité d’informations sur l’engagement dans Dynamics 365 Customer Insights est une solution pratique pour intégrer les données web en tant que source. En plus des données transactionnelles, démographiques ou comportementales, nous pouvons voir les activités sur le web dans des profils clients unifiés. Nous pouvons utiliser ce profil pour obtenir des informations supplémentaires telles que des segments, des mesures ou des prédictions pour l’activation de audience.
+Les clients effectuent souvent leurs transactions quotidiennes en ligne à l’aide de sites web. La fonction d’informations d’engagement (version préliminaire) dans Dynamics 365 Customer Insights est une solution pratique pour intégrer les données web en tant que source. En plus des données transactionnelles, démographiques ou comportementales, nous pouvons voir les activités sur le web dans des profils clients unifiés. Nous pouvons utiliser ces profils pour obtenir des informations supplémentaires telles que des segments, mesures ou prédictions pour l’activation de l’audience.
 
 Cet article décrit les étapes à suivre pour intégrer les données d’activité web de vos clients à partir des informations sur l’engagement dans votre environnement d’informations sur l’audience existant.
 
@@ -30,30 +30,30 @@ Nous voulons maintenant savoir si un client visite nos propriétés web et compr
 
 Pour intégrer les données issues des informations sur l’engagement, quelques conditions préalables doivent être remplies : 
 
-- Intégrer le Kit de développement logiciel (SDK) des informations sur l’engagement à votre site web. Pour plus d’informations, voir [Mise en route avec le Kit de développement logiciel (SDK) web](../engagement-insights/instrument-website.md).
-- L’exportation d’événements web à partir des informations sur l’engagement nécessite l’accès à un compte de stockage ADLS Gen2 qui sera utilisé pour ingérer les données d’événements web dans les les informations sur l’audience. Pour plus d’informations, voir [Exporter les événements](../engagement-insights/export-events.md).
+- Intégrer le Kit de développement logiciel (SDK) des informations sur l’engagement à votre site web. Pour plus d’informations, voir [Vue d’ensemble des ressources du développeur](../engagement-insights/developer-resources.md).
+- L’exportation d’événements web à partir des informations d’engagement nécessite d’avoir accès à un compte Azure Data Lake Storage qui sera utilisé pour ingérer les données d’événements web dans Audience Insights. Pour plus d’informations, voir [Exporter les événements](../engagement-insights/export-events.md).
 
 ## <a name="configure-refined-events-in-engagement-insights"></a>Configurer des événements affinés dans les informations sur l’engagement
 
-Après qu’un administrateur a instrumenté un site web avec le Kit de développement logiciel (SDK) des informations sur l’engagement, les *événements de base* sont rassemblés lorsqu’un utilisateur consulte une page web ou clique quelque part. Les événements de base ont tendance à contenir de nombreux détails. En fonction de votre cas d’utilisation, vous n’avez besoin que d’un sous-ensemble de données dans un événement de base. Les informations sur l’engagement vous permettent de créer des *événements affinés* qui contiennent uniquement les propriétés d’un événement de base que vous sélectionnez.     
+Une fois qu’un administrateur a instrumenté un site web avec le SDK des informations d’engagement, les *événements de base* sont collectés lorsqu’un utilisateur affiche une page web ou clique quelque part. Les événements de base ont tendance à contenir de nombreux détails. En fonction de votre cas d’utilisation, vous n’avez besoin que d’un sous-ensemble de données dans un événement de base. Les informations sur l’engagement vous permettent de créer des *événements affinés* qui contiennent uniquement les propriétés d’un événement de base que vous sélectionnez.     
 
 Pour plus d’informations, voir [Créer et modifier des événements affinés](../engagement-insights/refined-events.md).
 
 Considérations lors de la création d’événements raffinés : 
 
-- Donnez un nom significatif à l’événement raffiné. Il est utilisé comme nom d’activité dans les les informations sur l’audience.
+- Donnez un nom significatif à l’événement raffiné. Il sera utilisé comme nom d’activité dans Audience Insights.
 - Sélectionnez au moins les propriétés suivantes pour créer une activité dans les informations sur l’audience : 
-    - Signal.Action.Name – indiquant les détails de l’activité
-    - Signal.User.Id – utilisé pour mapper avec l’ID client
-    - Signal.View.Uri – utilisé comme adresse web de base pour les segments ou les mesures
-    - Signal.Export.Id – à utiliser comme clé primaire pour les événements
-    - Signal.Timestamp – pour déterminer la date et l’heure de l’activité
+    - Signal.Action.Name : indique les détails de l’activité.
+    - Signal.User.Id : utilisé pour le mappage avec l’ID client.
+    - Signal.View.Uri : utilisé comme adresse web de base pour les segments ou les mesures.
+    - Signal.Export.Id : utilisé comme clé primaire pour les événements.
+    - Signal.Timestamp : détermine la date et l’heure de l’activité.
 
 Sélectionnez les filtres pour vous concentrer sur les événements et les pages qui comptent pour votre cas d’utilisation. Dans cet exemple, nous utiliserons le nom de l’action « Promotion par e-mail ».
 
-## <a name="export-the-refined-web-events"></a>Exporter les événements web raffinés 
+## <a name="export-the-refined-web-events"></a>Exporter les événements web affinés 
 
-Après avoir défini l’événement affiné, vous devez configurer l’exportation des données d’événement vers Azure Data Lake Storage, qui peut être défini comme source de données pour l’ingestion dans les informations sur l’audience. Les exportations se produisent constamment à mesure que les événements découlent de la propriété web.
+Une fois l’événement affiné défini, vous devez configurer l’exportation des données de l’événement vers Azure Data Lake Storage, qui peut être défini comme source de données pour l’ingestion dans Audience Insights. Les exportations se produisent constamment à mesure que les événements découlent de la propriété web.
 
 Pour plus d’informations, voir [Exporter les événements](../engagement-insights/export-events.md).
 
@@ -61,7 +61,7 @@ Pour plus d’informations, voir [Exporter les événements](../engagement-insig
 
 Maintenant que vous avez défini l’événement raffiné et configuré son exportation, nous passons à l’ingestion des données dans les informations sur l’audience. Vous devez créer une source de données basée sur un dossier Common Data Model. Entrez les détails du compte de stockage vers lequel vous exportez les événements. Dans le fichier *default.cdm.json*, sélectionnez l’événement raffiné à ingérer et créez l’entité dans les informations sur l’audience.
 
-Pour plus d’informations, voir [Connectez-vous à un dossier Common Data Model à l’aide d’un compte Azure Data Lake](connect-common-data-model.md)
+Pour plus d’informations, voir [Se connecter à un dossier Common Data Model à l’aide d’un compte Azure Data Lake](connect-common-data-model.md).
 
 
 ## <a name="relate-refined-event-data-as-an-activity-of-a-customer-profile"></a>Associer des données d’événements raffinées à une activité d’un profil client
@@ -70,29 +70,28 @@ Une fois l’ingestion d’entité terminée, vous pouvez configurer l’activit
 
 Pour plus d’informations, voir [Activités client](activities.md).
 
-:::image type="content" source="media/web-event-activity.png" alt-text="Page Activités avec volet d’activité Modifier développé et champs remplis.":::
+:::image type="content" source="media/web-event-activity.png" alt-text="Page d’activités avec le volet Modifier l’activité développé et les champs remplis.":::
 
 Configurez la nouvelle activité avec le mappage suivant : 
 
-- **Clé primaire :** Signal.Export.Id, identifiant unique disponible pour chaque enregistrement d’événement dans les informations sur l’engagement. Cette propriété est générée automatiquement.
+- **Clé primaire** : Signal.Export.Id, identifiant unique disponible pour chaque enregistrement d’événement dans les informations d’engagement. Cette propriété est générée automatiquement.
 
-- **Horodatage :** Signal.Timestamp dans la propriété event.
+- **Horodatage** : Signal.Timestamp dans la propriété de l’événement.
 
-- **Événement :** Signal.Name, nom de l’événement à suivre.
+- **Événement** : Signal.Name, nom de l’événement à suivre.
 
-- **Adresse web :** Signal.View.Uri faisant référence à l’URI de la page qui a créé l’événement.
+- **Adresse web** : Signal.View.Uri faisant référence à l’URI de la page qui a créé l’événement.
 
-- **Détails :** Signal.Action.Name pour représenter les informations à associer à l’événement. La propriété sélectionnée dans ce cas indique que l’événement est destiné à la promotion par e-mail.
+- **Détails** : Signal.Action.Name pour représenter les informations à associer à l’événement. La propriété sélectionnée dans ce cas indique que l’événement est destiné à la promotion par e-mail.
 
-- **Type d’activité :** Dans cet exemple, nous choisissons le type d’activité existant WebLog. Cette sélection est une option de filtre utile pour exécuter des modèles prédiction ou créer des segments basés sur ce type d’activité.
+- **Type d’activité** : dans cet exemple, nous choisissons le type d’activité existant WebLog. Cette sélection est une option de filtre utile pour exécuter des modèles prédiction ou créer des segments basés sur ce type d’activité.
 
-- **Configurer une relation :** Ce paramètre important lie l’activité aux profils clients existants. **Signal.User.Id** est l’identifiant configuré dans le Kit de développement logiciel (SDK) à collecter et qui se rapporte à l’ID utilisateur dans d’autres sources de données configurées dans les informations sur l’audience. Dans cet exemple, nous configurons la relation entre Signal.User.Id et RetailCustomers:CustomerRetailId, qui est la clé primaire qui a été définie dans l’étape de mappage du processus d’unification des données.
-
+- **Configurer la relation** : ce paramètre important lie l’activité aux profils clients existants. **Signal.User.Id** est l’identifiant configuré dans le Kit de développement logiciel (SDK) à collecter et qui se rapporte à l’ID utilisateur dans d’autres sources de données configurées dans les informations sur l’audience. Dans cet exemple, nous configurons la relation entre Signal.User.Id et RetailCustomers:CustomerRetailId, qui est la clé primaire identifiée lors de l’étape de mappage du processus d’unification des données.
 
 Après avoir traité les activités, vous pouvez consulter les enregistrements client et ouvrir une fiche client pour voir les activités à partir des informations sur l’engagement dans la chronologie. 
 
 > [!TIP]
-> Pour rechercher un identifiant client associé à une activité d’analyse de l’engagement, accédez à **Entités** et prévisualisez les données de l’entité UnifiedActivity. ActivityTypeDisplay = WebLog contient l’activité d’informations sur l’engagement configurée dans l’exemple ci-dessus. Copiez l’ID client de l’un de ces enregistrements et de cet ID sur la page **Clients**.
+> Pour rechercher un identifiant client associé à une activité d’analyse de l’engagement, accédez à **Entités** et prévisualisez les données de l’entité UnifiedActivity. ActivityTypeDisplay = WebLog contient l’activité d’analyse de l’engagement configurée dans l’exemple ci-dessus. Copiez l’ID client de l’un de ces enregistrements et de cet ID sur la page **Clients**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

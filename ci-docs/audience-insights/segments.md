@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
-ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
+ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "6111384"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306254"
 ---
 # <a name="segments-overview"></a>Vue d’ensemble des segments
 
@@ -38,7 +38,7 @@ Accédez à la page **Segments** pour afficher tous vos segments enregistrés et
 
 Chaque segment est représenté par une ligne qui contient des informations supplémentaires sur le segment.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Segment sélectionné avec liste déroulante d'options et options disponibles.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segment sélectionné avec la liste déroulante d’options et les options disponibles.":::
 
 L’action suivante est disponible lorsque vous sélectionnez un segment :
 
@@ -68,7 +68,7 @@ Vous pouvez exporter un segment à partir de la page des segments ou de la [page
 
 1. Sélectionnez **Afficher plus [...]** pour le segment que vous souhaitez exporter.
 
-1. Sélectionnez **Gérer les exportations** dans la liste déroulante des actions.
+1. Sélectionnez **Gérer les exportations** dans la liste déroulante d’actions.
 
 1. La page **Exportations du segment (aperçu)** s'ouvre. Vous pouvez voir toutes les exportations configurées regroupées par exportations qui contiennent le segment actuel ou qui ne le contiennent pas.
 

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700665"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305626"
 ---
 # <a name="custom-machine-learning-models"></a>Modèles personnalisés Machine Learning
 
@@ -72,7 +72,7 @@ Les prédictions offrent des fonctionnalités pour créer de meilleures expérie
       > [!div class="mx-imgBorder"]
       > ![Volet des paramètres de sortie du modèle](media/intelligence-screen3-outputparameters.png "Volet des paramètres de sortie du modèle")
 
-1. Sélectionnez l’attribut correspondant dans la liste déroulante **ID de client dans les résultats** qui identifie les clients, puis sélectionnez **Enregistrer**.
+1. Sélectionnez l’attribut correspondant dans la liste déroulante **ID de client dans les résultats** qui identifie les clients et sélectionnez **Enregistrer**.
 
    > [!div class="mx-imgBorder"]
    > ![Associer les résultats au volet Données client](media/intelligence-screen4-relatetocustomer.png "Associer les résultats au volet Données client")
@@ -100,7 +100,7 @@ Les prédictions offrent des fonctionnalités pour créer de meilleures expérie
       1. Sélectionnez le **Nom du paramètre du magasin de données de sortie** pour votre pipeline de test.
       1. Sélectionnez le **Nom du paramètre du chemin d’accès de sortie** pour votre pipeline de test.
 
-1. Sélectionnez l’attribut correspondant dans la liste déroulante **ID de client dans les résultats** qui identifie les clients, puis sélectionnez **Enregistrer**.
+1. Sélectionnez l’attribut correspondant dans la liste déroulante **ID de client dans les résultats** qui identifie les clients et sélectionnez **Enregistrer**.
    Choisissez un attribut dans la sortie d’inférence avec des valeurs similaires à la colonne ID de client de l’entité Client. Si cette colonne n’est pas présente dans votre ensemble de données, choisissez un attribut qui identifie de manière unique la ligne.
 
 ## <a name="run-a-workflow"></a>Exécuter un workflow

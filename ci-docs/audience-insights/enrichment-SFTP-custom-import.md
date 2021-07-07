@@ -9,16 +9,16 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896278"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304647"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enrichir les profils clients avec des données personnalisées (version préliminaire)
 
-L’importation personnalisée SFTP (Secure File Transfer Protocol) vous permet d’importer des données qui ne doivent pas passer par le processus d’unification des données. C’est un moyen flexible, sécurisé et facile d’importer vos données. L’importation personnalisée SFTP peut être utilisée en combinaison avec l’[exportation SFTP](export-sftp.md) qui vous permet d’exporter les données de profil client nécessaires à l’enrichissement. Les données peuvent ensuite être traitées, enrichies et l’importation personnalisée SFTP peut être utilisée pour réimporter les données enrichies dans la fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights.
+L’importation personnalisée SFTP (Secure File Transfer Protocol) vous permet d’importer des données qui ne doivent pas passer par le processus d’unification des données. C’est un moyen flexible, sécurisé et facile d’importer vos données. L’importation personnalisée SFTP peut être utilisée en combinaison avec l’[exportation SFTP](export-sftp.md) qui vous permet d’exporter les données de profil client nécessaires à l’enrichissement. Les données peuvent ensuite être traitées et enrichies, et l’importation personnalisée SFTP peut être utilisée pour renvoyer les données enrichies vers la fonctionnalité Audience Insights de Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -37,11 +37,11 @@ Pour configurer l’importation personnalisée SFTP, les conditions préalables 
 
    :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Vignette d’importation personnalisée SFTP.":::
 
-1. Sélectionnez une [connexion](connections.md) dans le menu déroulant. Contactez un administrateur si aucune connexion n’est disponible. Si vous êtes un administrateur, vous pouvez créer une connexion en sélectionnant **Ajouter une connexion** et en choisissant **Importation personnalisée SFTP** dans le menu déroulant.
+1. Sélectionnez une [connexion](connections.md) dans la liste déroulante. Contactez un administrateur si aucune connexion n’est disponible. Si vous êtes un administrateur, vous pouvez créer une connexion en sélectionnant **Ajouter une connexion** et en choisissant **Importation personnalisée SFTP** dans la liste déroulante.
 
 1. Sélectionnez **Se connecter à l’importation personnalisée** pour confirmer la connexion sélectionnée.
 
-1.  Sélectionnez **Suivant** et entrez le **Nom de fichier** et le **Chemin d’accès** du fichier de données que vous souhaitez importer.
+1.  Sélectionnez **Suivant** et entrez le **Chemin d’accès** et le **Nom de fichier** du fichier de données que vous souhaitez importer.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Capture d’écran lors de la saisie de l’emplacement des données.":::
 
@@ -55,16 +55,16 @@ Vous devez être un administrateur pour configurer les connexions. Sélectionnez
 
 1. Entrez un nom pour la connexion dans la zone **Nom d’affichage**.
 
-1. Entrez un nom d’utilisateur, un mot de passe et une URL d’hôte valides pour le serveur STFP sur lequel résident les données à importer.
+1. Entrez un nom d’utilisateur, un mot de passe et une URL d’hôte valides pour le serveur SFTP dans lequel résident les données à importer.
 
 1. Vérifiez et donnez votre consentement pour **Confidentialité et conformité des données** en cochant la case **J’accepte**.
 
 1. Sélectionnez **Vérifier** pour valider la configuration.
 
-1. Une fois la vérification terminée, la connexion peut être enregistrée en cliquant sur **Enregistrer**.
+1. Une fois la vérification terminée, la connexion peut être enregistrée en sélectionnant **Enregistrer**.
 
-> [!div class="mx-imgBorder"]
-   > ![Page de configuration de la connexion d’Experian](media/enrichment-SFTP-connection.png "Page de configuration de la connexion d’Experian")
+   > [!div class="mx-imgBorder"]
+   > ![Page de configuration de la connexion Experian](media/enrichment-SFTP-connection.png "Page de configuration de la connexion Experian")
 
 
 ## <a name="defining-field-mappings"></a>Définition des mappages de champ 
@@ -123,6 +123,6 @@ Vous pouvez accéder à une vue détaillée de chaque profil enrichi en sélecti
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Exploitez vos données client enrichies. Créez des [segments](segments.md), des [mesures](measures.md) et [exportez les données](export-destinations.md) pour offrir des expériences personnalisées à vos clients.
+Exploitez vos données client enrichies. Créez des [segments](segments.md) et des [mesures](measures.md) et [exportez les données](export-destinations.md) pour offrir des expériences personnalisées à vos clients.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

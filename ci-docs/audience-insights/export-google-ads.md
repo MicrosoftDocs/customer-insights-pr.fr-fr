@@ -9,27 +9,26 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976315"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305337"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exporter des segments vers Google Ads (version préliminaire)
 
-Exportez des segments de profils clients unifiés vers la liste d’audience Google Ads et utilisez-les pour faire de la publicité sur Google Search, Gmail, YouTube et le Réseau Display de Google. 
+Exportez des segments de profils clients unifiés vers une liste d’audience Google Ads et utilisez-les pour faire de la publicité dans Google Search, Gmail, YouTube et le Réseau Display de Google. 
 
 ## <a name="prerequisites-for-connection"></a>Conditions préalables à une connexion
 
 -   Vous disposez d’un [compte Google Ads](https://ads.google.com/) et des informations d’identification administrateur correspondantes.
--   Vous disposez d’un [jeton de développeur Google Ads approuvé](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   Vous remplissez les conditions de la [Stratégie de correspondance de clients](https://support.google.com/adspolicy/answer/6299717)
--   Vous remplissez les conditions des [tailles de liste de remarketing](https://support.google.com/google-ads/answer/7558048) 
-
+-   Vous disposez d’un [jeton de développeur Google Ads approuvé](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Vous remplissez les conditions de la [Stratégie de correspondance de clients](https://support.google.com/adspolicy/answer/6299717).
+-   Vous remplissez les conditions des [tailles de liste de remarketing](https://support.google.com/google-ads/answer/7558048).
 -   Il existe des audiences dans Google Ads et les ID correspondants. Pour plus d’informations, consultez [Audiences Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Vous avez [configuré des segments](segments.md)
--   Les profils clients unifiés dans les segments exportés contiennent des champs représentant une adresse e-mail, un prénom et un nom
+-   Vous avez [configuré des segments](segments.md).
+-   Les profils clients unifiés dans les segments exportés contiennent des champs représentant une adresse e-mail, un prénom et un nom.
 
 ## <a name="known-limitations"></a>Limitations connues
 
@@ -68,7 +67,7 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 1. Pour créer une nouvelle exportation, sélectionnez **Ajouter une destination**.
 
-1. Dans le champ **Connexion pour l’exportation**, choisissez une connexion dans la section Google Ads. Si ce nom de section ne s’affiche pas, cela signifie qu’aucune connexion de ce type n’est disponible.
+1. Dans le champ **Connexion pour l’exportation**, choisissez une connexion dans la section Google Ads. Si le nom de la section ne s’affiche pas, aucune connexion de ce type n’est disponible pour vous.
 
 1. Entrez votre **[ID d’audience Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** et sélectionnez **Connecter** pour initialiser la connexion à Google Ads.
 
@@ -78,7 +77,9 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 L’enregistrement d’une exportation n’exécute pas l’exportation immédiatement.
 
-L’exportation s’exécute avec chaque [actualisation planifiée](system.md#schedule-tab). Vous pouvez également [exporter des données à la demande](export-destinations.md#run-exports-on-demand). 
+L’exportation s’exécute avec chaque [actualisation planifiée](system.md#schedule-tab). 
+
+Vous pouvez également [exporter des données à la demande](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données
 

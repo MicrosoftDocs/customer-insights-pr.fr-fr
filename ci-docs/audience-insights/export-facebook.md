@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 37d25aa038ea32b98f2d1850d7b42b701292438d
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e20c7b7fd3989d7621cb7765f38b85c8ab4adfcb
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976039"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305107"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Exporter une liste de segments vers Facebook Ads Manager (version préliminaire)
 
@@ -22,12 +22,12 @@ Exportez des segments de profils client unifiés vers Facebook Ads Manager pour 
 
 ## <a name="prerequisites-for-connection"></a>Conditions préalables à une connexion
 
-- Vous devez disposer d’un [Compte **Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) comprenant un [Compte professionnel **Facebook**](https://business.facebook.com/).
-- Vous devez être un administrateur du [compte **Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Vous devez disposer d’un compte [**Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) comprenant un [**compte professionnel Facebook**](https://business.facebook.com/).
+- Vous devez être un administrateur sur le [**Compte Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Limitations connues
 
-- Jusqu’à 10 millions de profils clients par exportation vers Facebook Ads Manager.
+- Jusqu’à 10 millions de profils client par exportation vers Facebook Ads Manager.
 - L’exportation vers Facebook Ads Manager est limitée aux segments.
 - Créez ou mettez à jour des audiences personnalisées dans Facebook de type *liste de clients* uniquement.
 - L’exportation de segments avec un total de 10 millions de profils peut prendre jusqu’à 90 minutes.
@@ -42,11 +42,11 @@ Avant que les utilisateurs puissent créer une exportation, un administrateur do
 
 1. Donnez à votre connexion un nom reconnaissable dans le champ **Nom d’affichage**. Le nom et le type de connexion décrivent cette connexion. Nous vous recommandons de choisir un nom qui explique l’objectif et la cible de la connexion.
 
-1. Choisissez qui peut utiliser cette connexion. Si vous n’effectuez aucune action, la valeur par défaut sera **Administrateurs**. Pour plus d’informations, voir [Autoriser les contributeurs à utiliser une connexion pour les exportations](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Choisissez qui peut utiliser cette connexion. Si vous n’effectuez aucune action, la valeur par défaut sera Administrateurs. Pour plus d’informations, voir [Autoriser les contributeurs à utiliser une connexion pour les exportations](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. S’authentifier avec Facebook Ads : 
 
-   1. Sélectionner **Continue avec Facebook** pour vous connecter à votre compte Facebook Ads.
+   1. Sélectionnez **Continuer avec Facebook** pour vous connecter à votre compte Facebook Ads.
 
    1. Activez l’autorisation **ads_management** après l’authentification dans Facebook.
 
@@ -54,7 +54,7 @@ Avant que les utilisateurs puissent créer une exportation, un administrateur do
 
    1. Sélectionnez une **Audience personnalisée existante** dans la liste déroulante ou créez une **Nouvelle audience personnalisée**. Pour plus d’informations, voir [**Audiences dans Facebook Ads Manager**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
       > [!NOTE]
-      > Vous ne pouvez que créer ou mettre à jour des audiences personnalisées sur Facebook de type *liste de clients* avec cette exportation. Dans certains cas, des audiences personnalisées de différents types s’affichent dans la liste déroulante. Si vous sélectionnez un type autre que *liste de clients*, cela entraînera l’échec de l’exportation. 
+      > Vous ne pouvez que créer ou mettre à jour des audiences personnalisées sur Facebook de type *liste de clients* avec cette exportation. Dans certains cas, vous voyez des audiences personnalisées de différents types dans la liste déroulante. Si vous sélectionnez un type autre que *liste de clients*, cela entraînera l’échec de l’exportation. 
 
 1. Passez en revue la **Confidentialité et conformité des données** et sélectionnez **J’accepte**.
 
@@ -68,16 +68,17 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 1. Pour créer une nouvelle exportation, sélectionnez **Ajouter une destination**. 
 
-1. Dans **Connexion pour l’exportation**, choisissez une connexion dans la section **Facebook Ads Manager**. Si ce nom de section ne s’affiche pas, cela signifie qu’aucune connexion de ce type n’est disponible.
+1. Dans **Connexion pour l’exportation**, choisissez une connexion dans la section **Facebook Ads Manager**. Si le nom de la section ne s’affiche pas, aucune connexion de ce type n’est disponible pour vous.
 
 1. Dans le champ **Sélectionner votre champ d’identificateur de la clé**, sélectionnez **E-mail**, **Nom et adresse** ou **Téléphone** à envoyer à Facebook Ads Manager. 
 
 1. Donnez à votre connexion un nom reconnaissable dans le champ **Nom d’affichage**.
 
 1. Mappez les attributs correspondants de votre entité client unifiée pour l’identifiant de clé sélectionné.
-   > [CONSEIL] Les meilleures chances pour une correspondance se produisent si vous sélectionnez **E-mail** comme identificateur de la clé. L’ajout d’identificateurs supplémentaires peut améliorer la correspondance.
+   > [!TIP]
+   > Les meilleures chances de correspondance se produisent si vous sélectionnez **E-mail** comme identificateur de la clé. L’ajout d’identificateurs supplémentaires peut améliorer la correspondance.
 
-1. Sélectionnez **Ajouter un attribut** pour mapper d’autres attributs à envoyer vers Facebook Ads Manager. Les attributs de Facebook Ads Manager correspondent aux noms conviviaux suivants : **FN** = **Prénom**, **LN** = **Nom de famille**, **FI** = **Première initiale**, **PHONE** = **Téléphone**, **GEN** = **Sexe**, **DOB** = **Date de naissance**, **ST** = **État**, **CT** = **Ville**, **ZIP** = **Code postal**, **COUNTRY** = **Pays/Région**
+1. Sélectionnez **Ajouter un attribut** pour mapper d’autres attributs à envoyer vers Facebook Ads Manager. Les attributs de Facebook Ads Manager sont associés aux noms conviviaux suivants : **FN** = **Prénom**, **LN** = **Nom de famille**, **FI** = **Première initiale**, **PHONE** = **Téléphone**, **GEN** = **Sexe**, **DOB** = **Date de naissance**, **ST** = **État**, **CT** = **Ville**, **ZIP** = **Code postal**, **COUNTRY** = **Pays/Région**
 
 1. Sélectionnez les segments que vous souhaitez exporter.
 
@@ -85,7 +86,9 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 L’enregistrement d’une exportation n’exécute pas l’exportation immédiatement.
 
-L’exportation s’exécute avec chaque [actualisation planifiée](system.md#schedule-tab). Vous pouvez également [exporter des données à la demande](export-destinations.md#run-exports-on-demand). 
+L’exportation s’exécute avec chaque [actualisation planifiée](system.md#schedule-tab). 
+
+Vous pouvez également [exporter des données à la demande](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données
 

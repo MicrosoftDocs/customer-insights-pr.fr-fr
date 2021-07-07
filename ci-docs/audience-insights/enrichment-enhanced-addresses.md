@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965575"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305429"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enrichissement des profils client avec des adresses améliorées
 
@@ -22,11 +22,11 @@ Les adresses dans vos données peuvent être non structurées, incomplètes ou i
 
 ## <a name="how-we-enhance-addresses"></a>Valorisation des adresses
 
-Notre modèle passe par un processus en deux étapes pour améliorer une adresse. Tout d’abord, il analyse l’adresse pour identifier ses composants et les met dans un format structuré. Ensuite, nous utilisons l’intelligence artificielle pour corriger, compléter et normaliser les valeurs de l’adresse.
+Notre modèle passe par un processus en deux étapes pour améliorer une adresse. Tout d’abord, il analyse l’adresse pour identifier ses composants et les met dans un format structuré. Ensuite, nous utilisons l’IA pour corriger, compléter et normaliser les valeurs de l’adresse.
 
 ### <a name="example"></a>Exemple
 
-Les informations d’une adresse peuvent être dans un format non standard et contenir des fautes d’orthographe. Le modèle peut résoudre ces problèmes et créer des adresses cohérentes dans des profils client unifiés.
+Les informations d’adresse peuvent avoir un format non standard et contenir des fautes d’orthographe. Le modèle peut résoudre ces problèmes et créer des adresses cohérentes dans des profils client unifiés.
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -76,7 +76,7 @@ Les adresses doivent contenir une valeur de pays/région. Nous ne traitons pas l
 1. Sélectionnez la mise en forme des adresses dans votre jeu de données. Choisissez **Adresse à attribut unique** si les adresses de vos données utilisent un seul champ. Choisissez **Adresse à attributs multiples** si les adresses de vos données utilisent plusieurs champs de données.
 
    > [!NOTE]
-   > Le pays/la région est obligatoire dans les adresses à attribut unique et à attributs multiples. Les adresses qui ne contiennent pas de valeurs pays/région valides ou prises en charge ne seront pas enrichies
+   > Le pays ou la région est obligatoire à la fois dans les adresses à attribut unique et à attributs multiples. Les adresses qui ne contiennent pas de valeurs de pays ou de région valides ou prises en charge ne seront pas enrichies.
 
 1.  Mappez les champs d’adresse de votre entité client unifiée.
 
@@ -98,6 +98,6 @@ Vous pouvez accéder à une vue détaillée de chaque profil enrichi en sélecti
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Exploitez vos données client enrichies. Créez des [Segments](segments.md), des [Mesures](measures.md), voire [Exportez des données](export-destinations.md) pour offrir des expériences personnalisées à vos clients.
+Exploitez vos données client enrichies. Créez des [segments](segments.md) et des [mesures](measures.md) et [exportez les données](export-destinations.md) pour offrir des expériences personnalisées à vos clients.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

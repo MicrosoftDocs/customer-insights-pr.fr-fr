@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866404"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304923"
 ---
 # <a name="customer-activities"></a>Activités du client
 
@@ -45,7 +45,7 @@ Vos sources de données peuvent inclure des entités avec des données transacti
 
    - **Premier** : champ externe de votre entité d’activité qui sera utilisé pour établir une relation avec une autre entité.
    - **Second** : entité client source correspondante avec laquelle votre entité d’activité sera en relation. Vous ne pouvez établir de relation qu’avec les entités client sources utilisées dans le processus d’unification des données.
-   - **Troisième** : s’il existe déjà une relation entre cette entité d’activité et l’entité client source sélectionnée, le nom de la relation sera en mode lecture seule. Si cette relation n’existe pas, une nouvelle relation sera créée avec le nom que vous indiquez dans cette zone.
+   - **Troisième** : s’il existe déjà une relation entre cette entité d’activité et l’entité client source sélectionnée, le nom de la relation sera en mode lecture seule. S'il n’existe aucune relation de ce type, une nouvelle relation sera créée avec le nom que vous indiquez dans cette zone.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Définissez la relation entre les entités.":::
 
@@ -53,23 +53,23 @@ Vos sources de données peuvent inclure des entités avec des données transacti
 
 1. Dans l’étape **Unification de l’activité**, choisissez l’événement de l’activité et l’heure de début de votre activité. 
    - **Champs obligatoires**
-      1. **Activité de l’événement** : champ correspondant à l’événement de cette activité
-      2. **Horodateur** : champ qui représente l’heure de début de votre activité.
+      - **Activité de l’événement** : champ correspondant à l’événement de cette activité.
+      - **Horodateur** : champ qui représente l’heure de début de votre activité.
 
    - **Champs facultatifs**
-      1. **Détails supplémentaires** : champ avec des informations pertinentes pour cette activité.
-      2. **Icône** : icône qui représente le mieux ce type d’activité.
-      3. **Adresse web** : champ contenant une URL avec des informations sur cette activité. Par exemple, le système transactionnel d’où provient cette activité. Cette URL peut être n’importe quel champ de la source de données, ou elle peut être construite comme un nouveau champ à l’aide d’une transformation Power Query. Les données de l’URL seront stockées dans l’entité *Activité unifiée*, qui peut être consommée en aval en utilisant les [API](apis.md).
+      - **Détails supplémentaires** : champ avec des informations pertinentes pour cette activité.
+      - **Icône** : icône qui représente le mieux ce type d’activité.
+      - **Adresse web** : champ contenant une URL avec des informations sur cette activité. Par exemple, le système transactionnel d’où provient cette activité. Cette URL peut être n’importe quel champ de la source de données, ou elle peut être construite comme un nouveau champ à l’aide d’une transformation Power Query. Les données de l’URL seront stockées dans l’entité *Activité unifiée*, qui peut être consommée en aval en utilisant les [API](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Spécifiez les données de l’activité client dans une entité Activité unifiée.":::
 
 1. Sélectionnez **Suivant** pour passer à l’étape suivante. Vous pouvez sélectionner **Terminer et réviser** pour enregistrer l’activité maintenant avec le type d’activité défini sur **Autre**. 
 
-1. Dans l’étape **Type d’activité**, choisissez le type d’activité et, éventuellement, sélectionnez si vous souhaitez mapper sémantiquement certains des types d’activités pour les utiliser dans d’autres zones de Customer Insights. Actuellement, les types d’activités *Abonnement* & *SalesOrderLine* peuvent être mappés sémantiquement après avoir accepté de mapper les champs. Si un type d’activité n’est pas pertinent pour la nouvelle activité, vous pouvez choisir *Autre* ou *Créer* pour un type d’activité personnalisé.
+1. Dans l’étape **Type d’activité**, choisissez le type d’activité et, éventuellement, sélectionnez si vous souhaitez mapper sémantiquement certains des types d’activités pour les utiliser dans d’autres zones de Customer Insights. Actuellement, les types d’activité *Abonnement* et *SalesOrderLine* peuvent être mappés sémantiquement après avoir accepté de mapper les champs. Si un type d’activité n’est pas pertinent pour la nouvelle activité, vous pouvez choisir *Autre* ou *Créer* pour un type d’activité personnalisé.
 
 1. Sélectionnez **Suivant** pour passer à l’étape suivante. 
 
-1. Dans l’étape **Réviser**, vérifiez vos sélections. Vous pouvez revenir à l’une des étapes précédentes et mettre à jour les informations, si nécessaire.
+1. Dans l’étape **Réviser**, vérifiez vos sélections. Revenez à l’une des étapes précédentes et mettez à jour les informations si nécessaire.
 
    :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Révisez les champs spécifiés d’une activité.":::
    
@@ -89,7 +89,7 @@ Les actions suivantes sont disponibles lorsque vous sélectionnez une activité.
 
 - **Modifier** : ouvre la configuration de l’activité dans l’étape de révision. Vous pouvez modifier tout ou partie de la configuration actuelle à partir de cette étape. Une fois la configuration modifiée, sélectionnez **Enregistrer l’activité**, puis sélectionnez **Exécuter** pour traiter les modifications.
 
-- **Renommer** : ouvre une boîte de dialogue dans laquelle vous pouvez entrer un autre nom pour l’activité sélectionnée. Sélectionnez **Enregistrer** pour appliquer vos modifications.
+- **Renommer** : ouvre une boîte de dialogue dans laquelle vous pouvez entre un autre nom pour l’activité sélectionnée. Sélectionnez **Enregistrer** pour appliquer vos modifications.
 
 - **Supprimer** : ouvre une boîte de dialogue pour confirmer la suppression de l’activité sélectionnée. Vous pouvez également supprimer plusieurs activités à la fois en sélectionnant les activités, puis en sélectionnant l’icône de suppression. Sélectionnez **Supprimer** pour confirmer la suppression.
 

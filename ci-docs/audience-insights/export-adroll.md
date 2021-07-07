@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dbebc3ee3978ca6ee9d1ad1c15c226479876709f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 67bfa23d56b26ae592efa4d7197713664bb02623
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124362"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304814"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Exporter des segments vers AdRoll (version préliminaire)
 
@@ -28,11 +28,11 @@ Exportez des segments de profils clients unifiés vers AdRoll et utilisez-les po
 
 ## <a name="known-limitations"></a>Limitations connues
 
-- Vous pouvez exporter jusqu’à 250 000 profils par exportation vers AdRoll.
+- Vous pouvez exporter jusqu’à 250 000 profils à la fois vers AdRoll.
 - Vous ne pouvez pas exporter de segments contenant moins de 100 profils vers AdRoll. 
 - L’exportation vers AdRoll est limitée aux segments.
 - L’exportation de jusqu’à 250 000 profils vers AdRoll peut prendre jusqu’à 10 minutes. 
-- Le nombre de profils que vous pouvez exporter vers AdRoll dépend et est limité par votre contrat avec AdRoll.
+- Le nombre de profils que vous pouvez exporter vers AdRoll dépend de votre contrat avec AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Configurer la connexion à AdRoll
 
@@ -62,7 +62,7 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 1. Pour créer une nouvelle exportation, sélectionnez **Ajouter une destination**.
 
-1. Dans le champ **Connexion pour l’exportation**, choisissez une connexion dans la section AdRoll. Si ce nom de section ne s’affiche pas, cela signifie qu’aucune connexion de ce type n’est disponible.
+1. Dans le champ **Connexion pour l’exportation**, choisissez une connexion dans la section AdRoll. Si le nom de la section ne s’affiche pas, aucune connexion de ce type n’est disponible pour vous.
 
 1. Entrez votre **ID d’annonceur AdRoll**. Pour plus d’informations, voir [Profils d’annonceur AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
@@ -74,7 +74,9 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 L’enregistrement d’une exportation n’exécute pas l’exportation immédiatement.
 
-L’exportation s’exécute avec chaque [actualisation planifiée](system.md#schedule-tab). Vous pouvez également [exporter des données à la demande](export-destinations.md#run-exports-on-demand). 
+L’exportation s’exécute avec chaque [actualisation planifiée](system.md#schedule-tab). 
+
+Vous pouvez également [exporter des données à la demande](export-destinations.md#run-exports-on-demand). 
 
 
 ## <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données

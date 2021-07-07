@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129942"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306346"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Exemple de guide Prédiction de la valeur de durée de vie du client (CLV)
 
@@ -123,7 +123,7 @@ Après avoir ingéré les données, nous commençons maintenant le processus d'u
 
 1. Accédez à l’onglet **Mettre en correspondance** et sélectionnez **Définir l’ordre**.
 
-1. Dans la liste déroulante **Primaire**, choisissez **eCommerceContacts : eCommerce** comme source principale et incluez tous les enregistrements.
+1. Dans la liste déroulante **Principal**, choisissez **eCommerceContacts : eCommerce** comme source principale et incluez tous les enregistrements.
 
 1. Dans la liste déroulante **Entité 2**, choisissez **loyCustomers : LoyaltyScheme** et incluez tous les enregistrements.
 
@@ -135,7 +135,7 @@ Après avoir ingéré les données, nous commençons maintenant le processus d'u
 
    - Pour eCommerceContacts, sélectionnez **FullName** dans la liste déroulante.
    - Pour loyCustomers, sélectionnez **FullName** dans la liste déroulante.
-   - Sélectionnez la liste déroulante **Normaliser** et choisissez **Type (téléphone, nom, adresse, ...)**.
+   - Sélectionnez la liste déroulante **Normaliser** et choisissez **Type (Téléphone, nom, adresse...)**.
    - Définissez le **Niveau de précision** sur **Base** et la **Valeur** sur **Élevé**.
 
 1. Saisissez le nom **FullName, Email** pour la nouvelle règle.

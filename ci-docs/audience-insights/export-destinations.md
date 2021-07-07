@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253037"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305475"
 ---
 # <a name="exports-preview-overview"></a>Vue d’ensemble des exportations (version préliminaire)
 
 La page **Exportations** affiche toutes les exportations configurées. Les exportations partagent des données spécifiques avec diverses applications. Elles peuvent inclure des profils ou entités client, des schémas et des détails de mappage. Chaque exportation nécessite une [connexion, configurée par un administrateur, pour gérer l’authentification et l’accès](connections.md).
 
-Accédez à **Données** > **Exportations** pour afficher la page des exportations. Tous les rôles d’utilisateur ont accès pour afficher les exportations configurées. Utilisez le champ de recherche dans la barre de commandes pour rechercher des exportations par leur nom, nom de connexion ou type de connexion.
+Accédez à **Données** > **Exportations** pour afficher la page des exportations. Tous les rôles d’utilisateur peuvent afficher les exportations configurées. Utilisez le champ de recherche dans la barre de commandes pour rechercher des exportations par leur nom, nom de connexion ou type de connexion.
 
 ## <a name="set-up-a-new-export"></a>Configurer une nouvelle exportation
 
@@ -73,7 +73,7 @@ Une fois les destinations d’exportation créées, elles sont répertoriées da
 
 Chaque exportation que vous configurez comporte une planification d’actualisation. Lors d'une actualisation, le système recherche des données nouvelles ou mises à jour à inclure dans une exportation. Par défaut, les exportations sont exécutées dans le cadre de chaque [actualisation du système planifiée](system.md#schedule-tab). Vous pouvez personnaliser la planification d’actualisation ou la désactiver pour exécuter les exportations manuellement.
 
-Les planifications d'exportation dépendent de l'état de votre environnement. S'il y a des mises à jour sur des [dépendances](system.md#refresh-policies) en cours lorsqu'une exportation planifiée doit démarrer, le système terminera d'abord les dépendances, puis exécutera l'exportation. Vous pouvez consulter les informations relatives à la dernière actualisation d'une exportation dans la colonne **Actualisé**.
+Les planifications d'exportation dépendent de l'état de votre environnement. Si des mises à jour sont en cours sur les [dépendances](system.md#refresh-policies) lorsqu’une exportation planifiée doit commencer, le système finalisera d’abord les mises à jour, puis exécutera l’exportation. Vous pouvez consulter les informations relatives à la dernière actualisation d'une exportation dans la colonne **Actualisé**.
 
 ### <a name="schedule-exports"></a>Panifier des exportations
 

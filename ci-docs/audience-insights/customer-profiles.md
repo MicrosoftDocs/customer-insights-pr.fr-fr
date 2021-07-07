@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896324"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304601"
 ---
 # <a name="customer-profiles"></a>Profils clients
 
@@ -57,13 +57,13 @@ Sélectionnez l’une des vignettes client pour ouvrir la **Page des détails du
 
 Les détails du client comprennent :
 
--   **Vignette du profil client :** cette vignette indique les différentes valeurs de l’entité de profil client unifié. Ces détails peuvent comprendre l’adresse e-mail, le nom, la ville, etc. 
+-   **Vignette du profil client** : cette vignette indique les différentes valeurs de l’entité de profil client unifié. Ces détails peuvent comprendre l’adresse e-mail, le nom, la ville, etc. 
 
--   **Intérêts potentiels, marques potentielles :** indique si vous avez configuré un enrichissement interne. Il représente les intérêts et affinités potentiels pour des marques que pourrait avoir un client avec un profil similaire à ce client. Pour plus d’informations, consultez [Enrichissement des profils clients avec des affinités de marque et d’intérêt](enrichment-microsoft.md).
+-   **Intérêts potentiels, marques potentielles** : indique si vous avez configuré un enrichissement interne. Il représente les intérêts et affinités potentiels pour des marques que pourrait avoir un client avec un profil similaire à ce client. Pour plus d’informations, consultez [Enrichissement des profils clients avec des affinités de marque et d’intérêt](enrichment-microsoft.md).
 
--   **Mesures :** indique si vous avez configuré une ou plusieurs mesures d’un type spécifique : mesures d’attribut client. Elles englobent les KPI calculés de vos clients au niveau de chaque client. Pour plus d’informations, consultez [Définir et gérer les mesures](measures.md).
+-   **Mesures** : indique si vous avez configuré une ou plusieurs mesures d’un type spécifique : mesures d’attribut client. Elles englobent les KPI calculés de vos clients au niveau de chaque client. Pour plus d’informations, consultez [Définir et gérer les mesures](measures.md).
 
--   **Chronologie des activités :** indique si vous avez configuré des activités. La vue chronologique contient les activités triées par ordre chronologique de ce client, en commençant par l’activité la plus récente. Pour plus d’informations, voir [Activités client](activities.md).
+-   **Chronologie des activités** : indique si vous avez configuré des activités. La vue chronologique contient les activités triées par ordre chronologique de ce client, en commençant par l’activité la plus récente. Pour plus d’informations, voir [Activités client](activities.md).
 
 Sélectionnez **Retour aux clients** pour revenir à la page de recherche de clients.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095706"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315875"
 ---
 # <a name="manage-predictions"></a>Gérer les prédictions
 
@@ -35,9 +35,6 @@ Cet article traite de certaines tâches partagées par la plupart des scénarios
 Le rapport d'utilisation des données d'entrée fournit une vue consolidée des erreurs et des avertissements que vos prédictions prêtes à l'emploi peuvent générer. Il donne également des recommandations sur la manière d'améliorer les performances du modèle.
 
 Le rapport est disponible une fois qu'un modèle a terminé son processus d'entraînement. Il est créé pour chaque modèle séparément, qu'il soit terminé avec succès ou non.
-
-> [!NOTE]
-> Actuellement, cette fonctionnalité ne fonctionne que pour le modèle d’attrition des transactions.
 
 ### <a name="view-the-input-data-usability-report"></a>Afficher le rapport d’utilisation des données d’entrée
 

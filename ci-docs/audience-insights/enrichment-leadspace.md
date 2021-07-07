@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895910"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305199"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Enrichissement des profils d’entreprise avec Leadspace (aperçu)
 
@@ -36,7 +36,7 @@ Pour configurer Leadspace, les conditions préalables suivantes doivent être re
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Capture d’écran de la vignette de Leadspace.":::
 
-1. Sélectionnez une [connexion](connections.md) dans le menu déroulant. Contactez un administrateur si aucune connexion n’est disponible. Si vous êtes un administrateur, vous pouvez créer une connexion en sélectionnant **Ajouter une connexion** et en choisissant **Leadspace**. 
+1. Sélectionnez une [connexion](connections.md) dans la liste déroulante. Contactez un administrateur si aucune connexion n’est disponible. Si vous êtes un administrateur, vous pouvez créer une connexion en sélectionnant **Ajouter une connexion** et en choisissant **Leadspace**. 
 
 1. Sélectionnez **Se connecter à Leadspace** pour confirmer la connexion.
 
@@ -57,13 +57,13 @@ Pour configurer Leadspace, les conditions préalables suivantes doivent être re
 
 Vous devez être un administrateur pour configurer les connexions. Sélectionnez **Ajouter une connexion** lors de la configuration d’un enrichissement *ou* accédez à **Administrateur** > **Connexions** et sélectionnez **Configurer** sur la vignette de Leadspace.
 
-1. Sélectionnez **Démarrer** 
+1. Cliquez sur **Démarrer**. 
 
 1. Entrez un nom pour la connexion dans la zone **Nom d’affichage**.
 
 1. Fournissez un jeton Leadspace valide.
 
-1. Vérifiez et donnez votre consentement pour la **Confidentialité et conformité des données** en cochant la case **J’accepte**
+1. Vérifiez et donnez votre consentement pour **Confidentialité et conformité des données** en sélectionnant **J’accepte**.
 
 1. Sélectionnez **Vérifier** pour valider la configuration.
 
@@ -81,12 +81,12 @@ Pour plus d’informations, voir [API Leadspace](https://support.leadspace.com/h
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Exploitez vos données client enrichies. Créez des [Segments](segments.md), des [Mesures](measures.md), voire [Exportez des données](export-destinations.md) pour offrir des expériences personnalisées à vos clients.
+Exploitez vos données client enrichies. Créez des [segments](segments.md) et des [mesures](measures.md) et [exportez les données](export-destinations.md) pour offrir des expériences personnalisées à vos clients.
 
 ## <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données
 
 Lorsque vous activez Dynamics 365 Customer Insights pour transmettre des données vers Leadspace, vous autorisez le transfert de données en dehors de la limite de conformité de Dynamics 365 Customer Insights, notamment des données potentiellement sensibles, telles que des données personnelles. Microsoft transférera ces données selon vos instructions, mais vous êtes tenu de vous assurer que Leadspace respecte les obligations de confidentialité ou de sécurité qui vous incombent. Pour plus d’informations, consultez [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Votre administrateur Dynamics 365 Customer Insights peut supprimer cet enrichissement à tout moment pour interrompre l’utilisation de cette fonctionnalité.
+Votre administrateur Dynamics 365 Customer Insights peut supprimer cet enrichissement à tout moment pour ne plus utiliser cette fonctionnalité.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

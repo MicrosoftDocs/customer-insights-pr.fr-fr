@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129896"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306163"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Exemple de guide (version préliminaire) de prédiction de recommandation de produit
 
@@ -105,7 +105,7 @@ Après avoir ingéré les données, nous commençons maintenant le processus d'u
 
 1. Accédez à l’onglet **Mettre en correspondance** et sélectionnez **Définir l’ordre**.
 
-2. Dans la liste déroulante **Primaire**, choisissez **eCommerceContacts : eCommerce** comme source principale et incluez tous les enregistrements.
+2. Dans la liste déroulante **Principal**, choisissez **eCommerceContacts : eCommerce** comme source principale et incluez tous les enregistrements.
 
 3. Dans la liste déroulante **Entité 2**, choisissez **loyCustomers : LoyaltyScheme** et incluez tous les enregistrements.
 

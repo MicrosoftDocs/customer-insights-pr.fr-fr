@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896048"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305291"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enrichissement de profils clients avec HERE Technologies (version préliminaire)
 
@@ -26,7 +26,7 @@ Pour configurer des enrichissements HERE Technologies, les conditions préalable
 
 - Vous disposez d’un abonnement HERE Technologies actif. Pour obtenir un abonnement, vous pouvez vous [inscrire ici](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) ou [contacter HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) directement. [En savoir plus sur l’enrichissement de la localisation de HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Une [connexion](connections.md) HERE est disponible *ou* vous disposez d’autorisations [administrateur](permissions.md#administrator) et de la clé API de HERE Technologies.
+- Une [connexion](connections.md) HERE est disponible *ou* vous disposez d’autorisations[administrateur](permissions.md#administrator) et de la clé API de HERE Technologies.
 
 ## <a name="configure-the-enrichment"></a>Configurer l’enrichissement
 
@@ -37,7 +37,7 @@ Pour configurer des enrichissements HERE Technologies, les conditions préalable
    > [!div class="mx-imgBorder"]
    > ![Vignette de HERE Technologies](media/HERE-tile.png "Vignette de HERE Technologies")
 
-1. Sélectionnez une [connexion](connections.md) dans le menu déroulant. Contactez un administrateur si aucune connexion n’est disponible. Si vous êtes un administrateur, vous pouvez créer une connexion en sélectionnant **Ajouter une connexion**. Choisissez **HERE Technologies** dans le menu déroulant. 
+1. Sélectionnez une [connexion](connections.md) dans la liste déroulante. Contactez un administrateur si aucune connexion n’est disponible. Si vous êtes un administrateur, vous pouvez créer une connexion en sélectionnant **Ajouter une connexion**. Choisissez **HERE Technologies** dans la liste déroulante. 
 
 1. Sélectionnez **Se connecter à HERE Technologies** pour confirmer la sélection.
 
@@ -56,9 +56,9 @@ Pour configurer des enrichissements HERE Technologies, les conditions préalable
 
 1. Fournissez un nom pour l’enrichissement. 
 
-1.Sélectionnez **Enregistrer l’enrichissement** après avoir vérifié vos choix.
+1. Sélectionnez **Enregistrer l’enrichissement** après avoir vérifié vos choix.
 
-## <a name="configure-the-connection-for-here-technologies"></a>Configurer la connexion pour HERE technologies 
+## <a name="configure-the-connection-for-here-technologies"></a>Configurer la connexion pour HERE Technologies 
 
 Vous devez être un administrateur pour configurer les connexions. Sélectionnez **Ajouter une connexion** lors de la configuration d’un enrichissement *ou* accédez à **Administrateur** > **Connexions** et sélectionnez **Configurer** sur la vignette de HERE Technologies.
 
@@ -66,13 +66,13 @@ Vous devez être un administrateur pour configurer les connexions. Sélectionnez
 
 1. Fournissez une clé API HERE Technologies valide.
 
-1. Vérifiez et donnez votre consentement pour la **Confidentialité et conformité des données** en cochant la case **J’accepte**
+1. Vérifiez et donnez votre consentement pour **Confidentialité et conformité des données** en sélectionnant **J’accepte**.
 
 1. Sélectionnez **Vérifier** pour valider la configuration.
 
 1. Une fois la vérification terminée, sélectionnez **Enregistrer**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Page de configuration de la connexion de HERE technologies](media/enrichment-HERE-connection.png "Page de configuration de la connexion de HERE technologies")
 
 ## <a name="enrichment-results"></a>Résultats d’enrichissement
@@ -85,12 +85,12 @@ Vous pouvez accéder à une vue détaillée de chaque profil enrichi en sélecti
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Exploitez vos données client enrichies. Créez des [Segments](segments.md), des [Mesures](measures.md), voire [Exportez des données](export-destinations.md) pour offrir des expériences personnalisées à vos clients.
+Exploitez vos données client enrichies. Créez des [segments](segments.md) et des [mesures](measures.md) et [exportez les données](export-destinations.md) pour offrir des expériences personnalisées à vos clients.
 
 ## <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données
 
 Lorsque vous activez Dynamics 365 Customer Insights pour transmettre des données vers HERE Technologies, vous autorisez le transfert de données en dehors de la limite de conformité de Dynamics 365 Customer Insights, notamment des données potentiellement sensibles, telles que des données personnelles. Microsoft transférera ces données selon vos instructions, mais vous êtes tenu de vous assurer que HERE Technologies respecte les obligations de confidentialité ou de sécurité qui vous incombent. Pour plus d’informations, consultez [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Votre administrateur Dynamics 365 Customer Insights peut supprimer cet enrichissement à tout moment pour interrompre l’utilisation de cette fonctionnalité.
+Votre administrateur Dynamics 365 Customer Insights peut supprimer cet enrichissement à tout moment pour ne plus utiliser cette fonctionnalité.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
