@@ -1,0 +1,86 @@
+### YamlMime:Landing
+title: Fonction Informations sur l’engagement (version préliminaire) dans Dynamics 365 Customer Insights
+summary: Collectez des données pour vos sites Web. Comprenez les interactions et l'utilisation des clients sur vos sites, de manière interactive. Utilisez l'intégration étroite entre Informations sur l'engagement et Informations sur l’audience pour enrichir vos analyses comportementales en temps réel avec des rapports de profil client. Enrichissez les profils des clients avec des activités Web pour obtenir des données comportementales en temps réel ainsi que des données client pertinentes. Transformez votre entreprise pour tirer une valeur immédiate de vos données clients.
+metadata:
+  title: Documentation sur Informations sur l'engagement (version préliminaire)
+  description: Centre d'aide avec des liens clés pour Informations sur l'engagement.
+  ms.service: customer-insights
+  ms.subservice: engagement-insights
+  ms.topic: hub-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.reviewer: mhart
+  ms.date: 06/18/2021
+  ms.openlocfilehash: ae8e94574a8c875a787d6d653b9fac371becab2d
+  ms.sourcegitcommit: 52f587ab6cdd30bdddd02290f9adab9373c1bcea
+  ms.translationtype: HT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 06/23/2021
+  ms.locfileid: "6296729"
+landingContent:
+- title: À propos
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Vue d’ensemble de la fonctionnalité
+      url: overview.md
+    - text: Termes et concepts
+      url: glossary.md
+    - text: Conditions d’utilisation
+      url: terms-of-service.md
+- title: Intégration
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Prise en main
+      url: get-started.md
+    - text: Créer un espace de travail
+      url: create-workspace.md
+    - text: Instrumenter votre site web
+      url: instrument-website.md
+- title: Rapports
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Afficher les rapports
+      url: view-reports.md
+    - text: Créer des rapports personnalisés
+      url: custom-reports.md
+    - text: Afficher le rapport sur les profils unifiés
+      url: profile-reports.md
+    - text: Créer des rapports d’entonnoir
+      url: funnel-reports.md
+- title: Événements 
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Créer des événements affinés
+      url: refined-events.md
+    - text: Événements d’exportation
+      url: export-events.md
+    - text: Supprimer et exporter des données personnelles
+      url: delete-export-personal-data.md
+- title: Ressources du développeur
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Ressources du développeur
+      url: developer-resources.md
+    - text: Exemple WebSDK
+      url: websdk-sample.md
+    - text: Scénarios SDK Web avancés
+      url: advanced-SDK-implementation.md
+    - text: Exemple de SDK Android
+      url: get-started-android.md
+    - text: Exemple de SDK iOS
+      url: get-started-ios.md
+- title: Administration
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Gérer les environnements et les espaces de travail
+      url: manage-environments-workspaces.md
+    - text: Se connecter aux informations sur l’audience
+      url: configure-connections.md
+    - text: Gérer les cookies et le consentement de l’utilisateur
+      url: user-consent-storage.md
