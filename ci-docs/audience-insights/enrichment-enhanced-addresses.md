@@ -1,7 +1,7 @@
 ---
 title: Enrichissement de l’amélioration des adresses
 description: Enrichissez et normalisez les informations sur les adresses des profils client avec les modèles Microsoft.
-ms.date: 04/21/2021
+ms.date: 07/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 65db6ce05f4d6f7f7b08ada172fec057027dd310
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305429"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692250"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enrichissement des profils client avec des adresses améliorées
 
@@ -22,7 +22,7 @@ Les adresses dans vos données peuvent être non structurées, incomplètes ou i
 
 ## <a name="how-we-enhance-addresses"></a>Valorisation des adresses
 
-Notre modèle passe par un processus en deux étapes pour améliorer une adresse. Tout d’abord, il analyse l’adresse pour identifier ses composants et les met dans un format structuré. Ensuite, nous utilisons l’IA pour corriger, compléter et normaliser les valeurs de l’adresse.
+Notre modèle passe par un processus en deux étapes pour améliorer une adresse. Tout d’abord, il analyse l’adresse pour identifier ses composants, puis les met dans un format structuré. Ensuite, nous utilisons l’IA pour corriger, compléter et normaliser les valeurs de l’adresse.
 
 ### <a name="example"></a>Exemple
 
@@ -44,20 +44,24 @@ Les informations d’adresse peuvent avoir un format non standard et contenir de
 
 ### <a name="limitations"></a>Limitations
 
-Les adresses améliorées ne fonctionnent qu’avec les valeurs qui existent déjà dans vos données d’adresse ingérées. Le modèle : 
+Les adresses améliorées ne fonctionnent qu’avec les valeurs qui existent déjà dans vos données d’adresse ingérées. Le modèle ne : 
 
-1. ne vérifie pas si l’adresse est une adresse valide ;
-2. ne vérifie pas si les valeurs, telles que les codes postaux ou les noms de rue, sont valides ;
-3. ne change pas les valeurs qu’il ne reconnaît pas.
+1. vérifie pas si l’adresse est une adresse valide ;
+2. vérifie pas si les valeurs, telles que le code postal ou le nom de rue, sont valides ;
+3. modifie pas les valeurs qu’il ne reconnaît pas.
 
 Le modèle utilise des techniques basées sur le Machine Learning pour améliorer les adresses. Bien que nous appliquions un seuil de confiance élevé lorsque le modèle modifie une valeur d’entrée, comme pour tout modèle basé sur Machine Learning, une précision de 100 % n’est pas garantie.
 
 ## <a name="supported-countries-or-regions"></a>Pays ou régions pris en charge
 
-Nous soutenons actuellement l’enrichissement des adresses dans les pays ou régions suivants : 
+Nous prenons actuellement en charge l’enrichissement des adresses dans les pays ou régions suivants : 
 
 - Australie
 - Canada
+- France
+- Allemagne
+- Italie
+- Japon
 - Royaume-Uni
 - États-Unis
 

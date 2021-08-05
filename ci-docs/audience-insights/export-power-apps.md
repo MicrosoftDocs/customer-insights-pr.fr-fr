@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2ab5a9059991611a2959a19cc688d232ec782e1e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598152"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554110"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Connecteur Microsoft Power Apps (préversion)
 
@@ -56,12 +56,12 @@ Par exemple, vous ajoutez des profils clients à un [contrôle de galerie](/powe
 1. Ajoutez un contrôle **Galerie** à une application que vous créez.
 
 > [!div class="mx-imgBorder"]
-> ![Ajouter un élément de galerie](media/connector-powerapps9.png "Ajouter un élément de galerie")
+> ![Ajoutez un élément de galerie.](media/connector-powerapps9.png "Ajouter un élément de galerie")
 
 1. Sélectionnez **Client** comme source de données pour les éléments.
 
     > [!div class="mx-imgBorder"]
-    > ![Sélectionner une source de données](media/choose-datasource-powerapps.png "Sélectionner une source de données")
+    > ![Sélectionnez une source de données.](media/choose-datasource-powerapps.png "Sélectionner une source de données")
 
 1. Vous pouvez modifier le volet de données sur la droite pour sélectionner le champ de l’entité Client à afficher dans la galerie.
 

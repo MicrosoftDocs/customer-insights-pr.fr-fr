@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72f3bd1f32b813fef04dc14618331e3d707b5052
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306117"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556258"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Exemple de guide de prédiction de l’attrition transactionnelle (version préliminaire)
 
@@ -47,7 +47,7 @@ Passez en revue les articles sur [l’ingestion de données](data-sources.md) et
    - **CreatedOn** : date/heure/fuseau
 
    [!div class="mx-imgBorder"]
-   ![Transformer la date de naissance en date](media/ecommerce-dob-date.PNG "transformer la date de naissance en date")
+   ![Transformez la date de naissance en date.](media/ecommerce-dob-date.PNG "transformer la date de naissance en date")
 
 1. Dans le champ **Nom** du volet droit, renommez votre source de données **Requête** en **eCommerceContacts**
 

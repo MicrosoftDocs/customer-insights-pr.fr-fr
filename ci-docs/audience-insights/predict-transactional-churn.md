@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095599"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559402"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Prédiction de l’attrition transactionnelle (version préliminaire)
 
@@ -47,7 +47,7 @@ La prédiction de l’attrition transactionnelle aide à prédire si un client n
         - **Événement :** Nom de l’événement que vous souhaitez utiliser. Par exemple, un champ appelé « UserAction » dans une épicerie peut être un coupon utilisé par le client.
         - **Détails :** Informations détaillées sur l’événement. Par exemple, un champ appelé « CouponValue » dans une épicerie peut être la valeur monétaire du coupon.
 - Caractéristiques des données suggérées :
-    - Données historiques suffisantes : données de transaction pour au moins le double de la période de temps sélectionnée. De préférence, deux à trois ans de données d’abonnement. 
+    - Données historiques suffisantes : données de transaction pour au moins le double de la période de temps sélectionnée. De préférence, deux à trois ans d’historique des transactions. 
     - Achats multiples par client : dans l’idéal, au moins deux transactions par client.
     - Nombre de clients : au moins 10 profils client, de préférence plus de 1 000 clients uniques. Le modèle échouera s’il y a moins de 10 clients et des données historiques insuffisantes.
     - Intégrité des données : moins de 20 % des valeurs manquantes dans le champ de données de l’entité fournie.

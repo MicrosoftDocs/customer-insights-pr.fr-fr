@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095553"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556121"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Prédiction de recommandation de produit (version préliminaire)
 
@@ -64,7 +64,7 @@ Si vous souhaitez essayer cette fonctionnalité mais que vous ne disposez pas de
 
 1. Sélectionnez la vignette **Modèle de recommandations de produits (version préliminaire)** et sélectionnez **Utiliser ce modèle**.
    > [!div class="mx-imgBorder"]
-   > ![Vignette de modèle de recommandation de produit avec le bouton Utiliser ce modèle](media/product-recommendation-usethismodel.PNG "Vignette de modèle de recommandation de produit avec le bouton Utiliser ce modèle")
+   > ![Vignette de modèle de recommandation de produit avec le bouton Utiliser ce modèle.](media/product-recommendation-usethismodel.PNG "Vignette de modèle de recommandation de produit avec le bouton Utiliser ce modèle")
 
 1. Passez en revue les informations sur les exigences du modèle. Si vous disposez des données requises, sélectionnez **Démarrer**.
 
@@ -93,7 +93,7 @@ Si vous souhaitez essayer cette fonctionnalité mais que vous ne disposez pas de
 
 1. Mappez les champs sémantiques aux attributs de votre entité d’historique des achats et sélectionnez **Suivant**. Pour une obtenir une description des champs, consultez les [conditions préalables](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Définir la relation entre les entités](media/product-recommendation-purchasehistorymapping.PNG "Page d’historique des achats affichant les attributs sémantiques mappés aux champs de l’entité d’historique des achats sélectionnée")
+   > ![Définissez la relation entre les entités.](media/product-recommendation-purchasehistorymapping.PNG "Page d’historique des achats affichant les attributs sémantiques mappés aux champs de l’entité d’historique des achats sélectionnée")
 
 1. Si les champs ne sont pas renseignés, configurez la relation entre votre entité d’historique des achats et l’entité *Client*.
     1. Sélectionnez l’**Entité d’historique des achats**.
@@ -101,7 +101,7 @@ Si vous souhaitez essayer cette fonctionnalité mais que vous ne disposez pas de
     1. Sélectionnez l’**Entité client** qui correspond à votre entité client principale.
     1. Entrez un nom qui décrit la relation.
        > [!div class="mx-imgBorder"]
-       > ![Page Historique des achats illustrant la création d’une relation avec le client](media/model-purchase-join.png "Page Historique des achats illustrant la création d’une relation avec le client")
+       > ![Page Historique des achats illustrant la création d’une relation avec le client.](media/model-purchase-join.png "Page Historique des achats illustrant la création d’une relation avec le client")
 
 1. Sélectionnez **Enregistrer**.
 
@@ -145,7 +145,7 @@ Parfois, seuls certains produits sont utiles ou appropriés au type de prédicti
 
 1. Accédez à l’onglet **Mes prédictions** sur **Intelligence** > **Prédictions**.
    > [!div class="mx-imgBorder"]
-   > ![Affichage de la page Mes prédictions](media/product-recommendation-mypredictions.PNG "Affichage de la page Mes prédictions")
+   > ![Affichage de la page Mes prédictions.](media/product-recommendation-mypredictions.PNG "Affichage de la page Mes prédictions")
 
 1. Sélectionnez la prédiction à réviser.
    - **Nom de la prédiction :** Nom de la prédiction fourni lors de sa création.
@@ -163,7 +163,7 @@ Parfois, seuls certains produits sont utiles ou appropriés au type de prédicti
 
 1. Sélectionnez les ellipses verticales à côté de la prédiction pour laquelle vous souhaitez consulter les résultats et sélectionnez **Afficher**.
    > [!div class="mx-imgBorder"]
-   > ![Affichage des options dans le menu ellipses verticales pour une prédiction, y compris modifier, actualiser, afficher, journaux et supprimer](media/product-recommendation-verticalellipses.PNG "Affichage des options dans le menu ellipses verticales pour une prédiction, y compris modifier, actualiser, afficher, journaux et supprimer")
+   > ![Affichage des options dans le menu ellipses verticales pour une prédiction, y compris modifier, actualiser, afficher, journaux et supprimer.](media/product-recommendation-verticalellipses.PNG "Affichage des options dans le menu ellipses verticales pour une prédiction, y compris modifier, actualiser, afficher, journaux et supprimer")
 
 1. Il existe cinq sections principales de données dans la page de résultats :
     1. **Performance du modèle de formation :** A, B ou C sont des scores possibles. Ce score indique les performances de la prédiction et peut vous aider à prendre la décision d’utiliser les résultats stockés dans l’entité de sortie.
@@ -173,13 +173,13 @@ Parfois, seuls certains produits sont utiles ou appropriés au type de prédicti
             - **C** Le modèle sera considéré de qualité **C** si la mesure « Success @ K » est inférieure à la valeur de référence.
                
                > [!div class="mx-imgBorder"]
-               > ![Vue du résultat des performances du modèle](media/product-recommendation-modelperformance.PNG "Vue du résultat des performances du modèle")
+               > ![Vue du résultat des performances du modèle.](media/product-recommendation-modelperformance.PNG "Vue du résultat des performances du modèle")
             - **Valeur de référence** : Le modèle prend les produits les plus recommandés par nombre d’achats pour tous les clients et utilise des règles apprises identifiées par le modèle pour créer un ensemble de recommandations pour les clients. Les prévisions sont ensuite comparées aux meilleurs produits, calculées par le nombre de clients ayant acheté le produit. Si un client a au moins un produit dans ses produits recommandés qui a également été vu dans les produits les plus achetés, il est considéré comme faisant partie de la base de référence. Si 10 de ces clients avaient acheté un produit recommandé sur un total de 100 clients, la référence serait de 10 %.
             - **Success @ K** : À l’aide d’un ensemble de périodes de validation des transactions, des recommandations sont créées pour tous les clients et comparées à l’ensemble de validation des transactions. Par exemple, dans une période de 12 mois, le 12e mois peut être mis de côté comme ensemble de données de validation. Si le modèle prédit au moins une chose que vous achèteriez au cours du 12e mois en fonction de ce qu’il a appris des 11 mois précédents, le client augmentera la métrique "Success @ K".
     
     1. **Produits les plus suggérés (avec décompte) :** les cinq principaux produits qui ont été prédits pour vos clients.
        > [!div class="mx-imgBorder"]
-       > ![Graphique montrant les 5 produits les plus recommandés](media/product-recommendation-topproducts.PNG "Graphique montrant les 5 produits les plus recommandés")
+       > ![Graphique montrant les 5 produits les plus recommandés.](media/product-recommendation-topproducts.PNG "Graphique montrant les 5 produits les plus recommandés")
     
     1. **Facteurs de recommandation clés :** le modèle utilise l’historique des transactions des clients pour faire des recommandations de produits. Il apprend des modèles basés sur les achats passés et trouve des similitudes entre les clients et les produits. Ces similitudes sont ensuite utilisées pour générer des recommandations de produits.
     Voici les facteurs susceptibles d’influencer une recommandation de produits générée par le modèle. 
@@ -190,20 +190,20 @@ Parfois, seuls certains produits sont utiles ou appropriés au type de prédicti
         Chaque recommandation de produits est influencée par un ou plusieurs de ces facteurs. Le pourcentage de recommandations dans lesquelles chaque facteur d’influence a joué un rôle est visualisé dans un graphique. Dans l'exemple suivant, 100 % des recommandations ont été influencées par les transactions passées, 60 % par la similitude de clients et 22 % par la similitude de produits. Pointez la souris sur les barres du graphique pour voir le pourcentage exact dans lequel les facteurs d’influence ont contribué.
 
         > [!div class="mx-imgBorder"]
-        > ![Principaux facteurs de recommandation](media/product-recommendation-keyrecommendationfactors.png "Facteurs de recommandation clés appris par le modèle pour générer des recommandations de produits")
+        > ![Principaux facteurs de recommandation.](media/product-recommendation-keyrecommendationfactors.png "Facteurs de recommandation clés appris par le modèle pour générer des recommandations de produits")
        
      
    1. **Statistiques de données** : donne une description générale du nombre de transactions, de clients et de produits pris en compte par le modèle. Il est basé sur les données d’entrée utilisées pour apprendre des modèles et générer des recommandations de produits.
 
       > [!div class="mx-imgBorder"]
-      > ![Statistiques des données](media/product-recommendation-datastatistics.png "Statistiques de données sur les données d’entrée utilisées par le modèle pour apprendre des modèles")
+      > ![Statistiques des données.](media/product-recommendation-datastatistics.png "Statistiques de données sur les données d’entrée utilisées par le modèle pour apprendre des modèles")
 
       Cette section affiche les statistiques sur les points de données qui ont été utilisés par le modèle pour apprendre des modèles et générer des recommandations de produits. Le filtrage, tel qu’il est configuré dans la configuration du modèle, s’appliquera à la sortie générée par le modèle. Cependant, le modèle utilise toutes les données disponibles pour apprendre des modèles. Par conséquent, si vous utilisez le filtrage de produits dans la configuration du modèle, cette section indiquera le nombre total de produits analysés par le modèle pour apprendre des modèles, qui peut différer du nombre de produits correspondant aux critères de filtrage définis.
 
    1. **Recommandations de produits hautement fiables :** Un échantillon de recommandations fournies à vos clients qui, selon le modèle, sont susceptibles d’être achetées par le client.    
       Si un catalogue de produits est ajouté, les ID de produits sont remplacés par les noms de produits. Les noms de produit fournissent des informations plus exploitables et intuitives sur les prédictions.
        > [!div class="mx-imgBorder"]
-       > ![Liste présentant des suggestions hautement fiables pour un ensemble sélectionné de clients individuels](media/product-recommendation-highconfidence.PNG "Liste présentant des suggestions hautement fiables pour un ensemble sélectionné de clients individuels")
+       > ![Liste présentant des suggestions hautement fiables pour un ensemble sélectionné de clients individuels.](media/product-recommendation-highconfidence.PNG "Liste présentant des suggestions hautement fiables pour un ensemble sélectionné de clients individuels")
 
 ## <a name="manage-predictions"></a>Gérer les prédictions
 

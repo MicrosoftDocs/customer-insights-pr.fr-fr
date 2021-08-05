@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305631"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650131"
 ---
 # <a name="merge-entities"></a>Fusionner des entités
 
@@ -109,7 +109,7 @@ Certaines entités contiennent plus de détails que d’autres. Si une entité i
 Que vous fusionniez manuellement les attributs ou laissiez le système le faire pour vous, à ce stade vous pouvez toujours exécuter votre fusion. Sélectionnez **Exécuter** sur la page **Fusionner** pour démarrer le processus.
 
 > [!div class="mx-imgBorder"]
-> ![Fusion des données - Enregistrer et exécuter](media/configure-data-merge-save-run.png "Fusion des données - Enregistrer et exécuter")
+> ![Fusion des données - Enregistrez et exécutez.](media/configure-data-merge-save-run.png "Fusion des données - Enregistrer et exécuter")
 
 Choisissez **Exécuter uniquement une fusion** si vous souhaitez uniquement voir la sortie reflétée dans l’entité client unifiée. Les processus en aval seront actualisés comme [défini dans le calendrier d’actualisation](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Choisissez **Exécuter les processus de fusion et en aval** pour actualiser le s
 Pour apporter d’autres modifications et réexécuter l’étape, vous pouvez annuler une fusion en cours. Sélectionnez **Actualisation en cours...** et sélectionnez **Annuler la tâche** dans le volet latéral qui s’affiche.
 
 > [!TIP]
-> Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d’autres processus en aval](system.md#refresh-policies). Vous pouvez sélectionner le statut d’un processus pour afficher des détails sur la progression de toute la tâche. Après avoir sélectionné **Voir les détails** pour l’une des tâches du travail, vous voyez des informations complémentaires : la durée de traitement, la date du dernier traitement et toutes les erreurs et avertissements associés à la tâche.
+> Après avoir exécuté le processus de fusion, sélectionnez le statut du processus pour ouvrir le volet **Détails de la tâche**. Il donne un aperçu du temps de traitement, de la dernière date de traitement et de toutes les erreurs et avertissements associés à la tâche. Sélectionnez **Voir les détails** pour voir quelles entités ont participé au processus de correspondance, si la résolution du conflit est une réussite et si les mises à jour ont été publiées avec succès.  
+> Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d’autres processus en aval](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Chemin d’accès permettant d’explorer les détails du processus à partir du lien de statut de la tâche.":::
 
 ## <a name="next-step"></a>Étape suivante
 

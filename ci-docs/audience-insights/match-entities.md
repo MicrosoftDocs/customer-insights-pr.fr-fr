@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306025"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650315"
 ---
 # <a name="match-entities"></a>Mettre en correspondance des entités
 
@@ -118,11 +118,11 @@ Vous pouvez réorganiser les entités pour les règles de correspondance afin de
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Définir la déduplication d’une entité de mise en correspondance
 
-En plus des [règles de correspondance entre entités](#define-rules-for-match-pairs), vous pouvez également spécifier des règles de déduplication. La *déduplication* est un autre processus de mise en correspondance des enregistrements. Elle identifie les enregistrements en double et les fusionne en un seul enregistrement. Les enregistrements source sont liés à l’enregistrement fusionné avec d’autres ID.
+En plus des [règles de correspondance entre entités](#define-rules-for-match-pairs), vous pouvez également spécifier des règles de déduplication. La *déduplication* est un autre processus de mise en correspondance des enregistrements. Il consiste à identifier les enregistrements en double et à les fusionner en un seul enregistrement. Les enregistrements sources sont liés à l’enregistrement fusionné avec d’autres identifiants.
 
-Les enregistrements dédupliqués seront utilisés dans le processus de mise en correspondance entre entités. La déduplication se produit sur des entités individuelles et peut être configurée pour chaque entité utilisée dans des paires de correspondance.
+Les enregistrements dédupliqués seront utilisés dans le processus de mise en correspondance des entités. La déduplication se produit sur des entités distinctes et peut être configurée pour chaque entité utilisée dans les paires en correspondance.
 
-La spécification des règles de déduplication n’est pas obligatoire. Si aucune règle de ce type n’est configurée, les règles définies par le système sont appliquées. Elles combinent tous les enregistrements en un seul enregistrement avant de transmettre les données d’entité à la correspondance entre entités pour améliorer les performances.
+La spécification de règles de déduplication n’est pas obligatoire. Si aucune règle de ce type n’est configurée, les règles définies par le système sont appliquées. Elles combinent tous les enregistrements en un seul enregistrement avant de transmettre les données d’entité à la correspondance entre entités pour améliorer les performances.
 
 ### <a name="add-deduplication-rules"></a>Ajouter des règles de déduplication
 
@@ -133,12 +133,12 @@ La spécification des règles de déduplication n’est pas obligatoire. Si aucu
 1. Dans le volet **Préférences de fusion**, choisissez les entités pour lesquelles vous souhaitez exécuter la déduplication.
 
 1. Spécifiez comment combiner les enregistrements en double et choisissez l’une des trois options :
-   - **Les plus remplis** : identifie l’enregistrement avec les champs d’attributs les plus remplis comme enregistrement gagnant. Il s’agit de l’option de fusion par défaut.
-   - **Les plus récents** : identifie l’enregistrement gagnant en fonction du plus récent. Nécessite une date ou un champ numérique pour définir la récence.
-   - **Les moins récents** : identifie l’enregistrement gagnant en fonction du moins récent. Nécessite une date ou un champ numérique pour définir la récence.
+   - **Les plus remplis** : identifie l’enregistrement avec les champs d’attributs les plus remplis comme enregistrement gagnant. C’est l’option de fusion par défaut.
+   - **Les plus récents** : identifie l’enregistrement gagnant en fonction du plus récent. Nécessite une date ou un champ numérique pour définir l’ancienneté.
+   - **Les moins récents** : identifie l’enregistrement gagnant en fonction du moins récent. Nécessite une date ou un champ numérique pour définir l’ancienneté.
  
    > [!div class="mx-imgBorder"]
-   > ![Étape 1 des règles de déduplication](media/match-selfconflation.png "Étape 1 des règles de déduplication")
+   > ![Étape 1 des règles de déduplication.](media/match-selfconflation.png "Étape 1 des règles de déduplication")
  
 1. Une fois les entités sélectionnées et leur préférence de fusion définie, sélectionnez **Ajouter une règle** pour définir les règles de déduplication au niveau de l’entité.
    - **Sélectionner un champ** répertorie tous les champs disponibles de cette entité. Choisissez le champ dans lequel vous souhaitez rechercher les doublons. Choisissez des champs susceptibles d’être uniques pour chaque client. Par exemple, une adresse e-mail ou la combinaison du nom, de la ville et du numéro de téléphone.
@@ -146,7 +146,7 @@ La spécification des règles de déduplication n’est pas obligatoire. Si aucu
    - Définissez d’autres conditions en sélectionnant **Ajouter une condition**.
  
    > [!div class="mx-imgBorder"]
-   > ![Étape 2 des règles de déduplication](media/match-selfconflation-rules.png "Étape 2 des règles de déduplication")
+   > ![Étape 2 des règles de déduplication.](media/match-selfconflation-rules.png "Étape 2 des règles de déduplication")
 
   Vous pouvez créer plusieurs règles de déduplication pour une entité. 
 
@@ -179,7 +179,9 @@ Accédez à **Données** > **Unifier** > **Mise en correspondance** et sélectio
 Vous trouverez le résultat d’une exécution réussie, l’entité de profil client unifiée, sur la page **Entités**. Votre entité client unifiée est appelée **Clients** dans la section **Profils**. La première exécution de la mise en correspondance réussie crée l’entité *Client* unifiée. Toutes les correspondances suivantes développent cette entité.
 
 > [!TIP]
-> Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d’autres processus en aval](system.md#refresh-policies). Vous pouvez sélectionner le statut d’un processus pour afficher des détails sur la progression de toute la tâche. Après avoir sélectionné **Voir les détails** pour l’une des tâches du travail, vous voyez des informations complémentaires : la durée de traitement, la date du dernier traitement et toutes les erreurs et avertissements associés à la tâche.
+> Après avoir exécuté le processus de correspondance, sélectionnez le statut du processus pour ouvrir le volet **Détails de la tâche**. Il donne un aperçu du temps de traitement, de la dernière date de traitement et de toutes les erreurs et avertissements associés à la tâche. Sélectionnez **Voir les détails** pour voir quelles entités ont participé au processus de correspondance, quelles règles leur ont été appliquées et si les mises à jour ont été publiées avec succès.  
+> Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d’autres processus en aval](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Chemin d’accès permettant d’explorer les détails du processus à partir du lien de statut de la tâche.":::
 
 ## <a name="review-and-validate-your-matches"></a>Examiner et valider vos correspondances
 

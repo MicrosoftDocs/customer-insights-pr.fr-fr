@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597416"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554432"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utiliser des modèles basés sur Azure Machine Learning
 
@@ -52,7 +52,7 @@ Vous devez créer des ensembles de données pour utiliser les données d’entit
      Dans le concepteur, ouvrez **Sélectionner des colonnes dans l’ensemble de données**, sélectionnez **Définir comme paramètre de pipeline** et indiquez un nom pour le paramètre.
 
      > [!div class="mx-imgBorder"]
-     > ![Paramétrage de l’ensemble de données dans le concepteur](media/intelligence-designer-dataset-parameters.png "Paramétrage de l’ensemble de données dans le concepteur")
+     > ![Paramétrage de l’ensemble de données dans le concepteur.](media/intelligence-designer-dataset-parameters.png "Paramétrage de l’ensemble de données dans le concepteur")
    
 * Paramètres de l’ensemble de données dans le SDK (Python)
    
@@ -78,7 +78,7 @@ Vous devez créer des ensembles de données pour utiliser les données d’entit
 
 * Le concepteur fournit le [Module d’exportation de données](/azure/machine-learning/algorithm-module-reference/export-data) qui permet d’exporter la sortie d’un pipeline vers le stockage Azure. Actuellement, le module doit utiliser le type de magasin de données **Stockage Blob Azure** et paramétrer le **Magasin de données** et le **Chemin d’accès** relatif. Customer Insights remplace ces deux paramètres lors de l’exécution du pipeline par un magasin de données et un chemin d’accès accessible au produit.
    > [!div class="mx-imgBorder"]
-   > ![Configuration du module d’exportation de données](media/intelligence-designer-importdata.png "Configuration du module d’exportation de données")
+   > ![Configuration du module d’exportation de données.](media/intelligence-designer-importdata.png "Configuration du module d’exportation de données")
    
 * Lors de l’écriture de la sortie d’inférence à l’aide de code, vous pouvez charger la sortie dans le chemin d’accès d’un *magasin de données enregistré* de l’espace de travail. Si le chemin d’accès et le magasin de données sont paramétrés dans le pipeline, Customer insights pourra lire et importer la sortie d’inférence. Actuellement, une seule sortie tabulaire au format csv est prise en charge. Le chemin d’accès doit inclure le répertoire et le nom du fichier.
 

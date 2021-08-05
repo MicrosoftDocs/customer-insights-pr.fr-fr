@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
-ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
+ms.openlocfilehash: ac8b0671b20123091bef64e672fc53398fe8955a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049391"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6553972"
 ---
 # <a name="entities-in-audience-insights"></a>Entités dans les informations sur l’audience
 
@@ -30,19 +30,19 @@ La page **Entités** répertorie les entités et comprend plusieurs colonnes :
 - **Dernière mise à jour** : La date et l’heure de la dernière mise à jour de l’entité
 - **Dernière actualisation** : La date et l’heure de la dernière actualisation des données
 
-## <a name="exploring-a-specific-entitys-data"></a>Explorer les données d’une entité spécifique
+## <a name="explore-a-specific-entitys-data"></a>Explorer les données d’une entité spécifique
 
 Sélectionnez une entité pour explorer les différents champs et enregistrements inclus dans cette entité.
 
 > [!div class="mx-imgBorder"]
-> ![Sélectionner une entité](media/data-manager-entities-data.png "Sélectionner une entité")
+> ![Sélectionnez une entité.](media/data-manager-entities-data.png "Sélectionner une entité")
 
 - L’onglet **Données** affiche un tableau répertoriant les détails des enregistrements individuels de l’entité.
 
 > [!div class="mx-imgBorder"]
-> ![Table Champs](media/data-manager-entities-fields.PNG "Table Champs")
+> ![Table Champs.](media/data-manager-entities-fields.PNG "Table Champs")
 
-- L’onglet **Attributs** est sélectionné par défaut et affiche un tableau pour examiner les détails de l’entité sélectionnée, tels que les noms des champs, les types de données et les types. La colonne **Type** affiche les types associés à Common Data Model, qui sont soit identifiés automatiquement par le système, soit [mappés manuellement](map-entities.md) par les utilisateurs. Il s’agit de types sémantiques qui peuvent différer des types de données des attributs (par exemple, le champ *E-mail* ci-dessous contient un type de données *Texte*, mais ce type Common Data Model (sémantique) pourrait être *E-mail* ou *Adresse e-mail*) :
+- L’onglet **Attributs** est sélectionné par défaut et affiche un tableau pour examiner les détails de l’entité sélectionnée, tels que les noms des champs, les types de données et les types. La colonne **Type** affiche les types associés à Common Data Model, qui sont soit identifiés automatiquement par le système, soit [mappés manuellement](map-entities.md) par les utilisateurs. Ces types sont des types sémantiques qui peuvent différer des types de données des attributs. Par exemple, le champ *E-mail* ci-dessous contient un type de données *Texte*, mais ce type Common Data Model (sémantique) pourrait être *E-mail* ou *Adresse e-mail*.
 
 > [!NOTE]
 > Les deux tableaux affichent uniquement un échantillon des données de votre entité. Pour afficher le jeu de données complet, accédez à la page **Sources de données**, sélectionnez une entité d’intérêt, sélectionnez **Modifier**, puis affichez les données de cette entité dans l’éditeur Power Query, comme décrit dans [Sources de données](data-sources.md).
@@ -52,11 +52,28 @@ Pour en savoir plus sur les données ingérées dans l’entité, la colonne **R
 Sélectionnez l’icône de graphique pour voir un récapitulatif des données.
 
 > [!div class="mx-imgBorder"]
-> ![Symbole récapitulatif](media/data-manager-entities-summary.png "Table Résumé des données")
+> ![Symbole récapitulatif.](media/data-manager-entities-summary.png "Table Résumé des données")
 
-### <a name="next-step"></a>Étape suivante
+## <a name="entity-specific-information"></a>Informations propres à une entité
 
-Consultez la rubrique [Unifier](data-unification.md) pour apprendre à *mapper*, *faire correspondre* et *fusionner* les données ingérées.
+La section suivante fournit des informations sur certaines entités créées par le système.
+
+### <a name="corrupted-data-sources"></a>Sources de données endommagée
+
+Les champs d’une source de données ingérées peuvent contenir des données endommagées. Les enregistrements avec des champs endommagés sont exposés dans des entités créées par le système. Connaître les enregistrements endommagés vous aide à identifier les données à examiner et à mettre à jour sur le système source. Après la prochaine actualisation de la source de données, les enregistrements corrigés sont ingérés dans Customer Insights et transmis aux processus en aval. 
+
+Par exemple, une colonne « anniversaire » a le type de données défini comme « date ». La date de naissance d’un enregistrement client est le « 01/01/19777 ». Le système marque cet enregistrement comme endommagé. Quelqu’un peut maintenant changer l’anniversaire dans le système source avec « 1977 ». Après une actualisation automatique des sources de données, le champ a désormais un format valide et l’enregistrement est supprimé de l’entité endommagée. 
+
+Accédez à **Données** > **Entités** et recherchez les entités corrompues dans la section **Système**. Schéma d’affectation de nom des entités endommagées : « DataSourceName_EntityName_corrupt ».
+
+Customer Insights traite toujours les enregistrements endommagés. Cependant, ils peuvent causer des problèmes lors de l’utilisation des données unifiées.
+
+Les vérifications suivantes s’exécutent sur les données ingérées pour exposer les enregistrements endommagés : 
+
+- La valeur d’un champ ne correspond pas au type de données de sa colonne.
+- Les champs contiennent des caractères qui font que les colonnes ne correspondent pas au schéma attendu. Par exemple : guillemets mal formatés, guillemets sans échappement ou caractères de nouvelle ligne.
+- Sֹ’il existe des colonnes datetime/date/datetimeoffset, leur format doit être spécifié dans le modèle s’il ne respecte pas le format ISO standard.
+
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305291"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555304"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enrichissement de profils clients avec HERE Technologies (version préliminaire)
 
@@ -35,7 +35,7 @@ Pour configurer des enrichissements HERE Technologies, les conditions préalable
 1. Sélectionnez **Enrichir mes données** sur la vignette de HERE Technologies et sélectionnez **Démarrer**.
 
    > [!div class="mx-imgBorder"]
-   > ![Vignette de HERE Technologies](media/HERE-tile.png "Vignette de HERE Technologies")
+   > ![Vignette de HERE Technologies.](media/HERE-tile.png "Vignette de HERE Technologies")
 
 1. Sélectionnez une [connexion](connections.md) dans la liste déroulante. Contactez un administrateur si aucune connexion n’est disponible. Si vous êtes un administrateur, vous pouvez créer une connexion en sélectionnant **Ajouter une connexion**. Choisissez **HERE Technologies** dans la liste déroulante. 
 
@@ -50,7 +50,7 @@ Pour configurer des enrichissements HERE Technologies, les conditions préalable
 1. Définissez quels champs de vos profils unifiés doivent être utilisés pour rechercher les données de localisation correspondantes de HERE Technologies. Les champs **Rue 1** et **Code postal** sont obligatoires pour l’adresse principale et/ou secondaire sélectionnée. Pour une plus grande précision de la correspondance, des champs supplémentaires peuvent être ajoutés.
 
    > [!div class="mx-imgBorder"]
-   > ![Page de configuration de l’enrichissement de HERE Technologies](media/enrichment-HERE-configuration.png "Page de configuration de l’enrichissement de HERE Technologies")
+   > ![Page de configuration de l’enrichissement de HERE Technologies.](media/enrichment-HERE-configuration.png "Page de configuration de l’enrichissement de HERE Technologies")
 
 1. Sélectionnez **Suivant** pour terminer le mappage de champs.
 
@@ -73,7 +73,7 @@ Vous devez être un administrateur pour configurer les connexions. Sélectionnez
 1. Une fois la vérification terminée, sélectionnez **Enregistrer**.
 
    > [!div class="mx-imgBorder"]
-   > ![Page de configuration de la connexion de HERE technologies](media/enrichment-HERE-connection.png "Page de configuration de la connexion de HERE technologies")
+   > ![Page de configuration de la connexion de HERE technologies.](media/enrichment-HERE-connection.png "Page de configuration de la connexion de HERE technologies")
 
 ## <a name="enrichment-results"></a>Résultats d’enrichissement
 

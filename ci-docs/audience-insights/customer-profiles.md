@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304601"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554615"
 ---
 # <a name="customer-profiles"></a>Profils clients
 
@@ -23,11 +23,11 @@ La page **Clients** offre une vue combinée de vos clients, en fonction des donn
 Les clients peuvent être des personnes ou des organisations (préversion). Chaque profil de client ou d’organisation est représenté par une vignette. Sélectionnez une vignette pour voir des informations supplémentaires sur ce client ou cette organisation. Utilisez les commandes de pagination en bas de la page pour voir des enregistrements supplémentaires.
 
 > [!div class="mx-imgBorder"] 
-> ![Profils de client B2C](media/profiles-customers.png "Profils de client B2C")
+> ![Profils de client B2C.](media/profiles-customers.png "Profils de client B2C")
 
 Organisations (Préversion)
 > [!div class="mx-imgBorder"] 
-> ![Profils de client B2B](media/profile-customers-b2b.png "Profils de client B2B")
+> ![Profils de client B2B.](media/profile-customers-b2b.png "Profils de client B2B")
 
 > [!NOTE]
 > Si les vignettes ne s’affichent pas lorsque vous sélectionnez **Clients** dans le volet de navigation, votre administrateur doit [définir au moins un attribut de recherche](search-filter-index.md) dans **Index Rechercher et filtrer**.
@@ -47,7 +47,7 @@ Vous pouvez filtrer les clients par les champs d’entité Profil client. Comme 
 2. Cochez les cases en regard des attributs selon lesquels vous souhaitez filtrer les clients.
 
    > [!div class="mx-imgBorder"] 
-   > ![Profils clients](media/profiles-customers3.png "Profils client")
+   > ![Profils clients.](media/profiles-customers3.png "Profils client")
 
 3. Supprimez vos filtres en sélectionnant **Effacer les filtres** sur la page **Clients**.
 

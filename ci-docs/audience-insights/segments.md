@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 6e2080b4ad19f6f57f60da591345e80ce9083e8a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306254"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554064"
 ---
 # <a name="segments-overview"></a>Vue d’ensemble des segments
 
@@ -89,7 +89,7 @@ La partie supérieure de la page comprend un graphique de tendance qui indique l
 Vous pouvez mettre à jour le délai d’exécution de la visualisation.
 
 > [!div class="mx-imgBorder"]
-> ![Intervalle de temps du segment](media/segment-time-range.png "Intervalle de temps du segment")
+> ![Intervalle de temps du segment.](media/segment-time-range.png "Intervalle de temps du segment")
 
 La partie inférieure contient la liste des membres du segment.
 

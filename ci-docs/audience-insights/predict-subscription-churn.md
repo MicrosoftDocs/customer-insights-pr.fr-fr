@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095645"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556304"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Prédiction du taux de désabonnement (aperçu)
 
@@ -63,7 +63,7 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
 1. Dans les informations sur l’audience, accédez à **Intelligence** > **Prédictions**.
 1. Sélectionnez la vignette **Modèle de taux de désabonnement (aperçu)** et sélectionnez **Utiliser ce modèle**.
    > [!div class="mx-imgBorder"]
-   > ![Vignette modèle de taux de désabonnement avec le bouton Utiliser ce modèle](media/subscription-churn-usethismodel.PNG "Vignette modèle de taux de désabonnement avec le bouton Utiliser ce modèle")
+   > ![Vignette modèle de taux de désabonnement avec le bouton Utiliser ce modèle.](media/subscription-churn-usethismodel.PNG "Vignette modèle de taux de désabonnement avec le bouton Utiliser ce modèle")
 
 ### <a name="name-model"></a>Nommer le modèle
 
@@ -86,11 +86,11 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
     1. Sélectionnez l’**Entité client** qui correspond à votre entité client principale.
     1. Entrez un nom qui décrit la relation.
        > [!div class="mx-imgBorder"]
-       > ![Page d’historique d’abonnement montrant la création d’une relation client](media/subscription-churn-subscriptionhistoryrelationship.PNG "Page d’historique d’abonnement montrant la création d’une relation client")
+       > ![Page d’historique d’abonnement montrant la création d’une relation client.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Page d’historique d’abonnement montrant la création d’une relation client")
 1. Cliquez sur **Suivant**.
 1. Mappez les champs sémantiques aux attributs de votre entité d’historique d’abonnement et sélectionnez **Enregistrer**. Pour une obtenir une description des champs, consultez les [conditions préalables](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Page d’historique d’abonnement affichant les attributs sémantiques mappés aux champs de l’entité d’historique d’abonnement sélectionnée](media/subscription-churn-subscriptionhistorymapping.PNG "Page d’historique d’abonnement affichant les attributs sémantiques mappés aux champs de l’entité d’historique d’abonnement sélectionnée")
+   > ![Page d’historique d’abonnement affichant les attributs sémantiques mappés aux champs de l’entité d’historique d’abonnement sélectionnée.](media/subscription-churn-subscriptionhistorymapping.PNG "Page d’historique d’abonnement affichant les attributs sémantiques mappés aux champs de l’entité d’historique d’abonnement sélectionnée")
 1. Sélectionnez **Ajouter des données** pour **Activités du client** et choisissez l’entité qui fournit les informations sur les activités du client comme décrit dans les conditions préalables.
 1. Sélectionnez un type d’activité correspondant au type d’activité du client que vous configurez.  Sélectionnez **Créer** et donnez un nom si vous ne voyez pas une option qui correspond au type d’activité dont vous avez besoin.
 1. Vous devrez configurer la relation entre votre entité d’activité client et l’entité Client.
@@ -101,7 +101,7 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
 1. Mappez les champs sémantiques aux attributs au sein de votre entité d’activité client et sélectionnez **Enregistrer**. Pour une obtenir une description des champs, consultez les [conditions préalables](#prerequisites).
 1. (Facultatif) Si vous souhaitez inclure d’autres activités client, répétez les étapes ci-dessus.
    > [!div class="mx-imgBorder"]
-   > ![Définir la relation entre les entités](media/subscription-churn-customeractivitiesmapping.PNG "Page d’activités du client affichant les attributs sémantiques mappés aux champs de l’entité d’activité du client sélectionnée")
+   > ![Définissez la relation entre les entités.](media/subscription-churn-customeractivitiesmapping.PNG "Page d’activités du client affichant les attributs sémantiques mappés aux champs de l’entité d’activité du client sélectionnée")
 1. Cliquez sur **Suivant**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Définir le calendrier et revoir la configuration
@@ -115,7 +115,7 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
 
 1. Accédez à l’onglet **Mes prédictions** sur **Intelligence** > **Prédictions**.
    > [!div class="mx-imgBorder"]
-   > ![Affichage de la page Mes prédictions](media/subscription-churn-mypredictions.PNG "Affichage de la page Mes prédictions")
+   > ![Affichage de la page Mes prédictions.](media/subscription-churn-mypredictions.PNG "Affichage de la page Mes prédictions")
 1. Sélectionnez la prédiction à réviser.
    - **Nom de la prédiction :** Nom de la prédiction fourni lors de sa création.
    - **Type de prédiction :** Type de modèle utilisé pour la prédiction
@@ -131,7 +131,7 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
    - **Dernière actualisation :** Date d’actualisation de la prédiction dans l’entité en sortie.
 1. Sélectionnez les ellipses verticales à côté de la prédiction pour laquelle vous souhaitez consulter les résultats et sélectionnez **Afficher**.
    > [!div class="mx-imgBorder"]
-   > ![Affichage des options dans le menu ellipses verticales pour une prédiction, y compris modifier, actualiser, afficher, journaux et supprimer](media/subscription-churn-verticalellipses.PNG "Affichage des options dans le menu ellipses verticales pour une prédiction, y compris modifier, actualiser, afficher, journaux et supprimer")
+   > ![Affichage des options dans le menu ellipses verticales pour une prédiction, y compris modifier, actualiser, afficher, journaux et supprimer.](media/subscription-churn-verticalellipses.PNG "Affichage des options dans le menu ellipses verticales pour une prédiction, y compris modifier, actualiser, afficher, journaux et supprimer")
 1. La page de résultats comporte trois sections principales de données :
     1. **Performance du modèle de formation :** A, B ou C sont des scores possibles. Ce score indique les performances de la prédiction et peut vous aider à prendre la décision d’utiliser les résultats stockés dans l’entité de sortie.
         - Les scores sont déterminés en fonction des règles suivantes :
@@ -139,13 +139,13 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
             - **B** lorsque le modèle a prédit avec précision au moins 50 % du total des prévisions et lorsque le pourcentage de prévisions précises pour les clients qui n’ont pas renouvelé leur contrat est supérieur au taux de désabonnement moyen historique jusqu’à 10 % du taux de désabonnement moyen historique.
             - **C** lorsque le modèle a prédit avec précision moins de 50 % du total des prévisions, ou lorsque le pourcentage de prévisions précises pour les clients qui se sont désabonnés est inférieur au taux de désabonnement moyen historique.
                > [!div class="mx-imgBorder"]
-               > ![Vue du résultat des performances du modèle](media/subscription-churn-modelperformance.PNG "Vue du résultat des performances du modèle")
+               > ![Vue du résultat des performances du modèle.](media/subscription-churn-modelperformance.PNG "Vue du résultat des performances du modèle")
     1. **Probabilité de désabonnement (nombre de clients) :** Groupes de clients en fonction du risque de désabonnement prévu. Ces données peuvent vous aider ultérieurement si vous souhaitez créer un segment de clients à haut risque de désabonnement. Ces segments aident à comprendre où doit se situer votre limite pour l’appartenance à un segment.
        > [!div class="mx-imgBorder"]
-       > ![Graphique montrant la distribution des résultats de désabonnement, divisés en plages de 0 à 100 %](media/subscription-churn-resultdistribution.PNG "Graphique montrant la distribution des résultats de désabonnement, divisés en plages de 0 à 100 %")
+       > ![Graphique montrant la distribution des résultats de désabonnement, divisés en plages de 0 à 100 %.](media/subscription-churn-resultdistribution.PNG "Graphique montrant la distribution des résultats de désabonnement, divisés en plages de 0 à 100 %")
     1. **Facteurs les plus influents :** De nombreux facteurs sont pris en compte lors de la création de votre prédiction. Chacun de ces facteurs a son importance calculée pour les prévisions agrégées qu’un modèle crée. Vous pouvez utiliser ces facteurs pour aider à valider vos résultats de prédiction. Ou vous pouvez utiliser ces informations ultérieurement pour [créer des segments](segments.md) qui pourraient contribuer à influer sur le risque de désabonnement des clients
        > [!div class="mx-imgBorder"]
-       > ![Liste montrant les facteurs influents et leur importance dans la prévision du résultat du désabonnement](media/subscription-churn-influentialfactors.PNG "Liste montrant les facteurs influents et leur importance dans la prévision du résultat du désabonnement")
+       > ![Liste montrant les facteurs influents et leur importance dans la prévision du résultat du désabonnement.](media/subscription-churn-influentialfactors.PNG "Liste montrant les facteurs influents et leur importance dans la prévision du résultat du désabonnement")
 
 ## <a name="manage-predictions"></a>Gérer les prédictions
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 36b7f7b2fac9497245cf6759506c53753972f173
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595990"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555120"
 ---
 # <a name="map-entities-and-attributes"></a>Mapper les entités et attributs
 
@@ -35,14 +35,14 @@ Pour plus d’informations sur le flux général d’unification des données, c
 3. Sélectionnez les entités et attributs que vous souhaitez utiliser dans les phases *mettre en correspondance* et *fusionner*. Vous pouvez sélectionner les attributs requis individuellement à partir d’une entité ou inclure tous les attributs d’une entité en cochant la case **Inclure tous les champs** au niveau de l’entité. Nous vous recommandons de sélectionner au moins deux entités pour bénéficier du processus d’unification des données.
 
    > [!div class="mx-imgBorder"]
-   > ![Ajouter des entités - Exemple](media/data-manager-configure-map-add-entities-example.png "Ajouter des entités - Exemple")
+   > ![Ajouter des entités - Exemple.](media/data-manager-configure-map-add-entities-example.png "Ajouter des entités - Exemple")
 
    Dans cet exemple, nous ajoutons les entités **eCommerceContacts** et **loyCustomers**. En choisissant ces entités, vous pouvez obtenir des informations sur les clients professionnels en ligne qui sont membres du programme de fidélité.
    
    Vous pouvez rechercher des mots-clés dans tous les attributs et entités pour sélectionner les attributs requis que vous souhaitez mapper.
    
      > [!div class="mx-imgBorder"]
-   > ![Exemple de champs de recherche](media/data-manager-configure-map-search-fields-example.png "Exemple de champs de recherche")
+   > ![Exemple de champs de recherche.](media/data-manager-configure-map-search-fields-example.png "Exemple de champs de recherche")
 
 4. Sélectionnez **Appliquer** pour confirmer vos sélections.
 
@@ -55,7 +55,7 @@ Après avoir sélectionné vos entités, la page **Mapper** répertorie les enti
 - **Type de sémantique d’attribut :** Catégories dans lesquelles tombent vos attributs, telles que l’adresse de messagerie ou le nom. Pour utiliser des modèles IA pour la prédiction intelligente de la sémantique, gagner du temps et améliorer la précision, définissez **Mappage intelligent** sur **Activé**. Le mappage intelligent met en évidence la recommandation sémantique basée sur l’IA dans le champ **Type**. Si vous définissez cette option sur **Désactivé**, vous verrez nos recommandations de mappage normales. Vous pouvez sélectionner n’importe quel type sémantique dans la liste des options disponibles et remplacer la sélection suggérée.
 
 > [!div class="mx-imgBorder"]
-> ![Type d’attribut et prédiction sémantique](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Type d’attribut et prédiction sémantique")
+> ![Type d’attribut et prédiction sémantique.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Type d’attribut et prédiction sémantique")
 
 Il est aussi possible d’ajouter un type de sémantique personnalisé. Sélectionnez le champ de type pour un attribut, puis tapez le nom de votre type de sémantique. De cette manière, vous pouvez également modifier les types d’attributs qui ont été identifiés par le système.
 
@@ -64,7 +64,7 @@ Tous les attributs pour lesquels un type de sémantique est automatiquement iden
 Les attributs qui ne sont pas automatiquement mappés à un type de sémantique sont regroupés dans la section **Définir les données dans les champs non mappés**. Sélectionnez le champ de type de sémantique pour les attributs non mappés ou entrez votre nom de type d’attribut personnalisé.
 
 > [!div class="mx-imgBorder"]
-> ![Clé primaire et type d’attribut](media/data-manager-configure-map-add-attributes.png "Clé primaire et type d’attribut")
+> ![Clé primaire et type d’attribut.](media/data-manager-configure-map-add-attributes.png "Clé primaire et type d’attribut")
 
 > [!NOTE]
 > Un champ doit correspondre au type de sémantique Person.FullName pour renseigner le nom du client dans la fiche client. Sinon, les cartes client apparaîtront sans nom. 
@@ -76,7 +76,7 @@ Les attributs qui ne sont pas automatiquement mappés à un type de sémantique 
 2. Dans le volet **Modifier les champs**, ajoutez ou supprimez des attributs et des entités. Utilisez la recherche ou faites défiler la liste des attributs et des entités qui vous intéressent. Vous ne pouvez pas supprimer un attribut ou une entité s’ils ont déjà été mis en correspondance.
 
    > [!div class="mx-imgBorder"]
-   > ![Ajouter ou supprimer des attributs](media/configure-data-map-edit.png "Ajouter ou supprimer des attributs")
+   > ![Ajoutez ou supprimez des attributs.](media/configure-data-map-edit.png "Ajouter ou supprimer des attributs")
 
 3. Cliquez sur **Appliquer**.
 
@@ -94,7 +94,7 @@ Poursuivez les étapes d’unification et assurez-vous que l’attribut qui cont
 
 Pour les organisations (version préliminaire), le type d’attribut doit être mis en correspondance avec « Organization.Name »
 > [!div class="mx-imgBorder"]
-> ![Clé primaire et type d’attribut B2B](media/configure-data-map-edit-b2b.png "Clé primaire et type d’attribut B2B")
+> ![Clé primaire et type d'attribut B2B](media/configure-data-map-edit-b2b.png "Clé primaire et type d’attribut B2B")
 
 ## <a name="next-step"></a>Étape suivante
 

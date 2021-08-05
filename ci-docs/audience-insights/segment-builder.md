@@ -1,7 +1,7 @@
 ---
 title: Créer et gérer des segments
 description: Créez des segments de clients pour les regrouper en fonction de divers attributs.
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064934"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685459"
 ---
 # <a name="create-and-manage-segments"></a>Créer et gérer des segments
+
+> [!IMPORTANT]
+> Plusieurs modifications seront apportées à l’expérience de création de segments en septembre 2021 : 
+> - Le générateur de segments sera légèrement différent, avec des éléments restylés et un flux d’utilisateurs amélioré.
+> - De nouveaux opérateurs de date/heure et un sélecteur de dates amélioré sont disponibles dans le générateur de segments.
+> - Vous pourrez ajouter ou supprimer des conditions et des règles à partir de segments. 
+> - Les règles imbriquées qui commencent par une condition OR deviennent disponibles. Vous n’avez plus besoin d’une condition AND au niveau de la couche la plus externe.
+> - Un volet latéral pour sélectionner les attributs sera constamment disponible.
+> - Option permettant de sélectionner des chemins d’accès de relation d’entité.
+> Pour essayer le nouveau générateur de segments, envoyez un e-mail avec le sujet « Demande d’activation du nouveau générateur de segments » à cihelp [at] microsoft.com. Incluez le nom de votre organisation et l’ID de votre environnement de bac à sable.
 
 Définissez des filtres complexes autour de l’entité de client unifié et ses entités liées. Chaque segment, après le traitement, crée un ensemble d’enregistrement d’entité client que vous pouvez exporter et utiliser pour entreprendre des actions. Les segments sont gérés sur la page **Segments**. 
 
@@ -50,7 +60,7 @@ Lors de la création d’un segment, vous pouvez enregistrer un brouillon. Il se
 1. Choisissez un opérateur et une valeur pour l’attribut sélectionné.
 
    > [!div class="mx-imgBorder"]
-   > ![Filtre de groupe personnalisé](media/customer-group-numbers.png "Filtre du groupe de clients")
+   > ![Filtre de groupe personnalisé.](media/customer-group-numbers.png "Filtre du groupe de clients")
 
    |Nombre |Définition  |
    |---------|---------|
@@ -66,7 +76,7 @@ Lors de la création d’un segment, vous pouvez enregistrer un brouillon. Il se
       - Opérateur **OU** : L’une ou l’autre des conditions doit être satisfaite dans le cadre de le processus de segmentation. Cette option est très utile lorsque vous définissez plusieurs conditions pour la même entité.
 
       > [!div class="mx-imgBorder"]
-      > ![Opérateur OU où l'une ou l'autre des conditions doit être remplie](media/segmentation-either-condition.png "Opérateur OU où l’une ou l’autre des conditions doit être remplie")
+      > ![Opérateur OU où l'une ou l'autre des conditions doit être remplie.](media/segmentation-either-condition.png "Opérateur OU où l’une ou l’autre des conditions doit être remplie")
 
       Il est actuellement possible d’imbriquer un opérateur **OU** sous un opérateur **ET**, mais pas l’inverse.
 
@@ -74,12 +84,12 @@ Lors de la création d’un segment, vous pouvez enregistrer un brouillon. Il se
    Sélectionnez **Ajouter un groupe**.
 
       > [!div class="mx-imgBorder"]
-      > ![Groupe de clients - Ajouter un groupe](media/customer-group-add-group.png "Groupe de clients - Ajouter un groupe")
+      > ![Groupe de clients - Ajouter un groupe.](media/customer-group-add-group.png "Groupe de clients - Ajouter un groupe")
 
    1. Sélectionnez l’un des opérateurs définis : **Union**, **Intersection** ou **Exception**.
 
    > [!div class="mx-imgBorder"]
-   > ![Groupe de clients - Ajouter une union](media/customer-group-union.png "Groupe de clients - Ajouter une union")
+   > ![Groupe de clients - Ajouter une union.](media/customer-group-union.png "Groupe de clients - Ajouter une union")
 
    - **Union** unit les deux groupes.
 
@@ -90,7 +100,7 @@ Lors de la création d’un segment, vous pouvez enregistrer un brouillon. Il se
 1. Si l’entité est connectée à l’entité client unifiée par le biais de [relations](relationships.md), vous devez définir le chemin d’accès de la relation pour créer un segment valide. Ajoutez les entités à partir du chemin d’accès de la relation jusqu’à ce que vous puissiez sélectionner l’entité **Client : CustomerInsights** dans la liste déroulante. Choisissez ensuite **Tous les enregistrements** pour chaque étape.
 
    > [!div class="mx-imgBorder"]
-   > ![Chemin d’accès de la relation lors de la création d’un segment](media/segments-multiple-relationships.png "Chemin d’accès de la relation lors de la création d’un segment")
+   > ![Chemin d’accès de la relation lors de la création d’un segment.](media/segments-multiple-relationships.png "Chemin d’accès de la relation lors de la création d’un segment")
 
 1. Par défaut, les segments génèrent une entité de sortie qui contient tous les attributs des profils client qui correspondent aux filtres définis. Si un segment est basé sur d’autres entités que l’entité *Client*, vous pouvez ajouter d’autres attributs de ces entités à l’entité de sortie. Sélectionnez **Attributs du projet** pour choisir les attributs qui seront ajoutés à l’entité de sortie.  
   
@@ -127,7 +137,7 @@ Les segments rapides vous permettent de créer rapidement des segments simples a
 4. Le système vous fournira une **taille estimée du segment**. Vous pouvez choisir de générer le segment que vous avez défini ou de le revoir pour obtenir une taille de segment différente.
 
     > [!div class="mx-imgBorder"]
-    > ![Nom et estimation pour un segment rapide](media/quick-segment-name.png "Nom et estimation pour un segment rapide")
+    > ![Nom et estimation pour un segment rapide.](media/quick-segment-name.png "Nom et estimation pour un segment rapide")
 
 5. Fournissez un **Nom** pour votre segment. Indiquez éventuellement un **Nom complet**.
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596542"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554891"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Se connecter à un dossier Common Data Model à l’aide d’un compte Azure Data Lake
 
@@ -45,7 +45,7 @@ Cet article fournit des informations sur l’ingestion de données à partir d�
 
 1. Vous pouvez choisir entre une option basée sur une ressource et une option basée sur un abonnement pour l’authentification. Pour plus d’informations, consultez [Connecter les informations sur l’audience à un compte Azure Data Lake Storage Gen2 avec un principal de service Azure](connect-service-principal.md). Entrez les informations du **Conteneur** et sélectionnez **Suivant**.
    > [!div class="mx-imgBorder"]
-   > ![Boîte de dialogue pour entrer de nouveaux détails de connexion pour Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Boîte de dialogue pour entrer de nouveaux détails de connexion pour Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Vous avez besoin de l’un des rôles suivants pour le conteneur ou le compte de stockage mentionné ci-dessus pour pouvoir vous connecter et créer une source de données :
    >  - Lecteur de données d’objets BLOB de stockage
@@ -58,11 +58,11 @@ Cet article fournit des informations sur l’ingestion de données à partir d�
 
 1. Vous obtiendrez une liste des entités disponibles dans le fichier model.json ou manifest.json sélectionné. Vous pouvez vérifier et sélectionner à partir de la liste des entités disponibles et sélectionnez **Enregistrer**. Toutes les entités sélectionnées seront ingérées à partir de la nouvelle source de données.
    > [!div class="mx-imgBorder"]
-   > ![Boîte de dialogue affichant une liste d’entités à partir d’un fichier model.json](media/review-entities.png)
+   > ![Boîte de dialogue affichant une liste d’entités à partir d’un fichier model.json.](media/review-entities.png)
 
 8. Indiquez pour quelles entités de données vous souhaitez activer le profilage des données, puis sélectionnez **Enregistrer**. Le profilage des données permet l’analyse et d’autres fonctionnalités. Vous pouvez sélectionner toute l’entité, ce qui entraîne la sélection de tous les attributs de l’entité, ou sélectionner certains attributs de votre choix. Par défaut, aucune entité n’est activée pour le profilage des données.
    > [!div class="mx-imgBorder"]
-   > ![Boîte de dialogue illustrant un profilage des données](media/dataprofiling-entities.png)
+   > ![Boîte de dialogue illustrant un profilage des données.](media/dataprofiling-entities.png)
 
 9. Après avoir enregistré vos sélections, la page **Source d’informations** s’ouvre. Vous devriez maintenant voir la connexion au dossier Common Data Model en tant que source de données.
 
@@ -81,12 +81,12 @@ Vous pouvez mettre à jour la clé d’accès du compte de stockage contenant le
 
 4. Éventuellement, mettez à jour la **Clé d’accès** et sélectionnez **Suivant**.
 
-   ![Boîte de dialogue permettant de modifier et mettre à jour une clé d’accès pour une source de données existante](media/edit-access-key.png)
+   ![Boîte de dialogue permettant de modifier et mettre à jour une clé d’accès pour une source de données existante.](media/edit-access-key.png)
 
 5. Vous pouvez éventuellement mettre à jour une connexion de clé de compte vers une connexion basée sur une ressource ou un abonnement. Pour plus d’informations, consultez [Connecter les informations sur l’audience à un compte Azure Data Lake Storage Gen2 avec un principal de service Azure](connect-service-principal.md). Vous ne pouvez pas modifier les informations du **Conteneur** lors de la mise à jour de la connexion.
    > [!div class="mx-imgBorder"]
 
-   > ![Boîte de dialogue pour entrer les détails de connexion d’Azure Data Lake à un compte de stockage existant](media/enter-existing-storage-details.png)
+   > ![Boîte de dialogue pour entrer les détails de connexion d’Azure Data Lake à un compte de stockage existant.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Vous avez besoin de l’un des rôles suivants pour le conteneur ou le compte de stockage mentionné ci-dessus pour pouvoir vous connecter et créer une source de données :

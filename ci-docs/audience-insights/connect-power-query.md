@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305888"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554680"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connexion à une source de données Power Query
 
@@ -42,7 +42,7 @@ Power Query propose un large éventail de connecteurs pour ingérer des données
 1. La boîte de dialogue **Power Query - Modifier les requêtes** vous permet d’examiner et d’affiner les données. Les entités que les systèmes ont identifiées dans votre source de données sélectionnée s’affiche dans le volet de gauche.
 
    > [!div class="mx-imgBorder"]
-   > ![Boîte de dialogue Modifier les requêtes](media/data-manager-configure-edit-queries.png "Boîte de dialogue Modifier les requêtes")
+   > ![Boîte de dialogue Modifier les requêtes.](media/data-manager-configure-edit-queries.png "Boîte de dialogue Modifier les requêtes")
 
 1. Vous pouvez également transformer vos données. Sélectionnez une entité à modifier ou transformer. Utilisez les options de la fenêtre Power Query pour appliquer les transformations. Chaque transformation est répertoriée sous **Étapes appliquées**. Power Query fournit de nombreuses options de transformation prédéfinies. Pour plus d’informations, consultez [Transformations Power Query](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Les connecteurs portant une coche dans la colonne **Customer Insights (Dataflows
 2. Sélectionnez les points de suspension verticaux en regard de la source de données que vous souhaitez modifier et sélectionnez **Modifier** dans le menu déroulant.
 
    > [!div class="mx-imgBorder"]
-   > ![Option Modifier](media/edit-option-data-sources.png "Option Modifier")
+   > ![Option Modifier.](media/edit-option-data-sources.png "Option Modifier")
 
 3. Appliquez vos modifications et transformations dans la boîte de dialogue **Power Query - Modifier les requêtes** comme décrit dans la section [Créer une source de données](#create-a-new-data-source).
 

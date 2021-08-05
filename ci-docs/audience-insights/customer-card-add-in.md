@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059585"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692202"
 ---
 # <a name="customer-card-add-in-preview"></a>Complément Carte client (préversion)
 
@@ -25,7 +25,7 @@ Obtenez une vue globale de vos clients directement dans les applications Dynamic
 ## <a name="prerequisites"></a>Conditions préalables
 
 - Le complément fonctionne uniquement avec les applications pilotées par modèle Dynamics 365, telles que Sales ou Customer Service, versions 9.0 et ultérieures.
-- Pour que vos données Dynamics 365 soient mappées aux profils client d’informations sur l’audience, elles doivent être [intégrées à partir de l’application Dynamics 365 à l’aide du connecteur Common Data Service](connect-power-query.md).
+- Pour que vos données Dynamics 365 soient mappées aux profils client d’informations sur l’audience, elles doivent être [intégrées à partir de l’application Dynamics 365 à l’aide du connecteur Microsoft Dataverse](connect-power-query.md).
 - Tous les utilisateurs Dynamics 365 du complément de carte client doivent être [ajoutés en tant qu’utilisateurs](permissions.md) dans les informations sur l’audience pour voir les données.
 - [Les fonctions de recherche et de filtrage configurées](search-filter-index.md) dans les informations sur l’audience sont nécessaires pour que la recherche de données fonctionne.
 - Chaque contrôle de complément repose sur des données spécifiques dans les informations sur l’audience :
@@ -50,7 +50,7 @@ L’installation de la solution dans votre environnement peut prendre un certain
 1. Sélectionnez le lien **Nom complet** pour la solution **Complément Carte client Dynamics 365 Customer Insights (préversion)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Sélectionner le nom complet](media/select-display-name.png "Sélectionner le nom complet")
+   > ![Sélectionnez le nom complet.](media/select-display-name.png "Sélectionner le nom complet")
 
 1. Sélectionnez **Se connecter** et entrez les identifiants du compte d’administrateur que vous utilisez pour configurer Customer Insights.
 
@@ -64,7 +64,7 @@ L’installation de la solution dans votre environnement peut prendre un certain
    - Pour effectuer un mappage avec un compte, sélectionnez le champ dans l’entité Client correspondant à l’ID de votre entité de compte.
 
    > [!div class="mx-imgBorder"]
-   > ![Champ ID de contact](media/contact-id-field.png "Champ ID de contact")
+   > ![Champ ID de contact.](media/contact-id-field.png "Champ ID de contact")
 
 1. Sélectionnez **Enregistrer la configuration** pour enregistrer les paramètres.
 
@@ -83,7 +83,7 @@ L’installation de la solution dans votre environnement peut prendre un certain
 1. Sélectionnez le formulaire de contact auquel vous souhaitez ajouter les contrôles Carte client.
 
     > [!div class="mx-imgBorder"]
-    > ![Sélectionner le formulaire Contact](media/contact-active-forms.png "Sélectionner le formulaire Contact")
+    > ![Sélectionnez le formulaire Contact.](media/contact-active-forms.png "Sélectionner le formulaire Contact")
 
 1. Pour ajouter un contrôle, dans l’éditeur de formulaires, faites glisser un champ de l’**Explorateur de champs** vers l’emplacement où vous souhaitez faire apparaître le contrôle.
 
@@ -110,7 +110,7 @@ Le complément de carte client ne se met pas à niveau automatiquement. Pour met
 
 1. Sélectionnez **Appliquer la mise à niveau de la solution** dans la barre d’action.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Mettez à niveau la solution dans la zone de personnalisation des applications Dynamics 365":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Mettez à niveau la solution dans la zone de personnalisation des applications Dynamics 365.":::
 
 1. Après le démarrage du processus de mise à niveau, vous verrez un indicateur de chargement jusqu’à la fin de la mise à niveau. S’il n’y a pas de version plus récente, la mise à niveau affichera un message d’erreur.
 

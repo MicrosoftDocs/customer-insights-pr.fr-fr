@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259188"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650039"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Utiliser des données Customer Insights dans Microsoft Dataverse
 
@@ -24,11 +24,11 @@ Customer Insights offre la possibilité de rendre les entités de sortie disponi
 
 **Organisations ayant déjà des environnements Dataverse**
 
-Les organisations qui utilisent déjà Dataverse peuvent [utiliser l'un de leurs environnements Dataverse existants](manage-environments.md#create-an-environment-in-an-existing-organization) lorsqu'un Administrateur met en place des informations sur l’audience. En fournissant l'URL à l'environnement Dataverse, il s'attache au nouvel environnement d'informations sur l'audience. Pour garantir les meilleures performances possibles, les environnements Customer Insights et Dataverse doivent être hébergés dans la même région.
+Les organisations qui utilisent déjà Dataverse peuvent [utiliser l'un de leurs environnements Dataverse existants](get-started-paid.md) lorsqu'un Administrateur met en place des informations sur l’audience. En fournissant l'URL à l'environnement Dataverse, il s'attache au nouvel environnement d'informations sur l'audience. Pour garantir les meilleures performances possibles, les environnements Customer Insights et Dataverse doivent être hébergés dans la même région.
 
 Pour joindre un environnement Dataverse, développez **Paramètres avancés** lors de la création de l'environnement d'informations sur l'audience. Fournissez l'URL de l'environnement **Microsoft Dataverse** et cochez la case pour **Activer le partage de données**.
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
 
 **Nouvelle organisation**
 

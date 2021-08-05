@@ -1,7 +1,7 @@
 ---
 title: Connecteur Power BI
 description: Découvrez comment utiliser le connecteur Dynamics 365 Customer Insights dans Power BI.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596036"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661099"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connecteur pour Power BI (préversion)
 
@@ -39,7 +39,7 @@ Créez des visualisations pour vos données avec Power BI Desktop. Générez des
 
 1. La boîte de dialogue **Navigateur** affiche la liste de tous les environnements auxquels vous pouvez accéder. Développez un environnement et ouvrez l’un des dossiers (entités, mesures, segments, enrichissements). Par exemple, ouvrez le dossier **Entités**, pour voir toutes les entités que vous pouvez importer.
 
-   ![Connecteur Power BI Navigateur](media/power-bi-navigator.png "Connecteur Power BI Navigateur")
+   ![Connecteur Power BI-Navigateur.](media/power-bi-navigator.png "Connecteur Power BI Navigateur")
 
 1. Activez les cases à cocher en regard des entités à inclure et **Charger**. Vous pouvez sélectionner plusieurs entités depuis plusieurs environnements.
 
@@ -68,5 +68,11 @@ Vous pouvez identifier et supprimer les relations en double.
 3. Supprimez toutes les relations en double identifiées.
 
 Après avoir supprimé les relations dupliquées, essayez de reconfigurer le connecteur Power BI. L’environnement devrait être disponible dès maintenant.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Erreurs sur les champs de date lors du chargement des entités dans Power BI Desktop
+
+Lors du chargement d’entités contenant des champs avec un format de date tel que MM/JJ/AAAA, vous pouvez rencontrer des erreurs dues à des formats de paramètres régionaux incompatibles. Ce décalage se produit lorsque votre fichier Power BI Desktop est défini sur un autre paramètre régional que l’anglais (États-Unis), car les champs de date dans les informations sur l’audience sont enregistrés au format américain.
+
+Le fichier Power BI Desktop a un seul paramètre régional, qui est appliqué lors de la récupération des données. Pour faire en sorte que ces champs de date soient correctement interprétés, définissez les paramètres régionaux du fichier .BPI sur l’anglais (États-Unis). [Découvrir comment changer les paramètres régionaux d’un fichier Power BI Desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

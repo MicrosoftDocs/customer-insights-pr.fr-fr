@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304693"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692432"
 ---
 # <a name="data-sources-overview"></a>Vue d’ensemble des sources de données
 
@@ -30,13 +31,13 @@ Vous pouvez ajouter une source de données de trois manières principales :
 
 - [Grâce à des dizaines de connecteurs Power Query](connect-power-query.md)
 - [À partir d’un dossier Common Data Model](connect-common-data-model.md)
-- [À partir de votre propre lac Microsoft Dataverse](connect-common-data-service-lake.md)
+- [À partir de votre propre lac Microsoft Dataverse](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Ajouter des données de sources de données locales
 
-L’ingestion de données à partir de sources de données locales dans Audience Insights est prise en charge en fonction des flux de données Microsoft Power Platform. Les flux de données peuvent être activés dans Customer Insights en [fournissant l’URL de l’environnement Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) lors de la configuration de l’environnement.
+L’ingestion de données à partir de sources de données locales dans Audience Insights est prise en charge en fonction des flux de données Microsoft Power Platform. Les flux de données peuvent être activés dans Customer Insights en [fournissant l’URL de l’environnement Microsoft Dataverse](get-started-paid.md) lors de la configuration de l’environnement.
 
-Les sources de données créées après l’association d’un environnement Dataverse à Customer Insights utiliseront les [flux de données Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) par défaut. Les flux de données prennent en charge la connectivité locale à l’aide de la passerelle de données. Supprimez et recréez les sources de données qui existaient avant l’association d’un environnement Dataverse pour [utiliser les passerelles de données locales](/data-integration/gateway/service-gateway-app.md).
+Les sources de données créées après l’association d’un environnement Dataverse à Customer Insights utiliseront les [flux de données Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) par défaut. Les flux de données prennent en charge la connectivité locale à l’aide de la passerelle de données. Supprimez et recréez les sources de données qui existaient avant l’association d’un environnement Dataverse pour [utiliser les passerelles de données locales](/data-integration/gateway/service-gateway-app).
 
 Les passerelles de données d’un environnement Power BI ou Power Apps existant seront visibles et vous pourrez les réutiliser dans Customer Insights. La page des sources de données affiche des liens pour accéder à l’environnement Microsoft Power Platform dans lequel vous pouvez afficher et configurer les passerelles de données locales.
 
@@ -45,9 +46,9 @@ Les passerelles de données d’un environnement Power BI ou Power Apps existant
 Vous avez accès au nom de chaque source de données ingérée, à son statut et à la dernière date d’actualisation des données pour cette source de données. Vous pouvez trier la liste des sources de données par colonne.
 
 > [!div class="mx-imgBorder"]
-> ![Source de données ajoutée](media/configure-data-datasource-added.png "Source de données ajoutée")
+> ![Source de données ajoutée.](media/configure-data-datasource-added.png "Source de données ajoutée")
 
-|Statut  |Description  |
+|Statut   |Description  |
 |---------|---------|
 |Opération réussie   |La source de données a été ingérée avec succès si une heure est mentionnée dans la colonne **Actualisé**.
 |Non démarré(e)   |La source de données n’a pas encore de données ingérées ou est toujours en mode brouillon.         |

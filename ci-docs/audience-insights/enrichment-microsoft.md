@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305153"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555488"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enrichir les profils client avec les affinités pour des marques et des intérêts (préversion)
 
@@ -27,7 +27,7 @@ Pour configurer l’enrichissement des affinités pour les marques, accédez à 
 Pour configurer l’enrichissement des affinités pour des centres intérêts, accédez à l’onglet **Découvrir** et sélectionnez **Enrichir mes données** sur l’onglet **Intérêts**.
 
    > [!div class="mx-imgBorder"]
-   > ![Vignettes de marques et d’intérêts](media/BrandsInterest-tile-Hub.png "Vignettes de marques et d’intérêts")
+   > ![Vignettes de marques et d’intérêts.](media/BrandsInterest-tile-Hub.png "Vignettes de marques et d’intérêts")
 
 ## <a name="how-we-determine-affinities"></a>Détermination des affinités
 
@@ -123,7 +123,7 @@ Selon la taille de vos données client, un cycle d’enrichissement peut prendre
 
 Après avoir exécuté le processus d’enrichissement, allez dans **Mes enrichissements** pour examiner le nombre total de clients enrichis et la répartition des marques ou des centres d’intérêt dans les profils client enrichis.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Aperçu des résultats après l’exécution du processus d’enrichissement":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Aperçu des résultats après l’exécution du processus d’enrichissement.":::
 
 Consultez les données enrichies en sélectionnant **Afficher les données enrichies** dans le graphique. Les données enrichies pour les marques vont dans l’entité **MarqueAffinitéDeMicrosoft**. Les données pour les intérêts se trouvent dans l’entité **InterestAffinityFromMicrosoft**. Vous trouverez également ces entités répertoriées dans le groupe **Enrichissement** dans **Données** > **Entités**.
 
@@ -131,7 +131,7 @@ Consultez les données enrichies en sélectionnant **Afficher les données enric
 
 Les affinités de marque et d’intérêt peuvent également être consultées sur les cartes client individuelles. Accédez à **Clients** et sélectionnez un profil client. Dans la carte client, vous trouverez des graphiques pour les marques ou les centres d’intérêt pour lesquels les membres du profil démographique de ce client ont une affinité.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Carte client avec données enrichies":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Carte client avec données enrichies.":::
 
 ## <a name="next-steps"></a>Étapes suivantes
 

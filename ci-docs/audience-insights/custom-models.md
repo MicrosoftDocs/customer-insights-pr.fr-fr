@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305626"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554845"
 ---
 # <a name="custom-machine-learning-models"></a>Modèles personnalisés Machine Learning
 
@@ -42,7 +42,7 @@ Les prédictions offrent des fonctionnalités pour créer de meilleures expérie
 1. Donnez un nom reconnaissable à votre modèle personnalisé dans le champ **Nom**.
 
    > [!div class="mx-imgBorder"]
-   > ![Capture d’écran du volet Nouveau workflow](media/new-workflowv2.png "Capture d’écran du volet Nouveau workflow")
+   > ![Capture d’écran du volet Nouveau workflow.](media/new-workflowv2.png "Capture d’écran du volet Nouveau workflow")
 
 1. Sélectionnez l’organisation qui contient le service Web dans **Client contenant votre service Web**.
 
@@ -59,7 +59,7 @@ Les prédictions offrent des fonctionnalités pour créer de meilleures expérie
    > Le workflow du modèle personnalisé appliquera une heuristique pour mapper les champs d’entrée du service web aux attributs d’entité en fonction du nom et du type de données du champ. Vous verrez une erreur si un champ de service web ne peut pas être mappé à une entité.
 
    > [!div class="mx-imgBorder"]
-   > ![Configurer un workflow](media/intelligence-screen2-updated.png "Configurer un workflow")
+   > ![Configurez un workflow.](media/intelligence-screen2-updated.png "Configurer un workflow")
 
 1. Dans l’étape **Paramètres de sortie du modèle**, définissez les propriétés suivantes :
    - Machine Learning Studio (classique)
@@ -70,12 +70,12 @@ Les prédictions offrent des fonctionnalités pour créer de meilleures expérie
       1. Sélectionnez le **Nom du paramètre du chemin d’accès de sortie** de votre pipeline par lots dans la liste déroulante.
 
       > [!div class="mx-imgBorder"]
-      > ![Volet des paramètres de sortie du modèle](media/intelligence-screen3-outputparameters.png "Volet des paramètres de sortie du modèle")
+      > ![Volet des paramètres de sortie du modèle.](media/intelligence-screen3-outputparameters.png "Volet des paramètres de sortie du modèle")
 
 1. Sélectionnez l’attribut correspondant dans la liste déroulante **ID de client dans les résultats** qui identifie les clients et sélectionnez **Enregistrer**.
 
    > [!div class="mx-imgBorder"]
-   > ![Associer les résultats au volet Données client](media/intelligence-screen4-relatetocustomer.png "Associer les résultats au volet Données client")
+   > ![Associez les résultats au volet Données client.](media/intelligence-screen4-relatetocustomer.png "Associer les résultats au volet Données client")
 
 1. L’écran **Workflow enregistré** avec des détails sur le workflow s’affiche alors.    
    Si vous avez configuré un workflow pour un pipeline Azure Machine Learning, les informations sur l’audience seront associées à l’espace de travail contenant le pipeline. Les informations sur l’audience obtiendront un rôle de **Contributeur** dans l’espace de travail Azure.

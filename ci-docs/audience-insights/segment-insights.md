@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306071"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554982"
 ---
 # <a name="segment-insights-preview"></a>Aperçu des segments (version préliminaire)
 
@@ -44,7 +44,7 @@ Vous pouvez également analyser la façon dont le chevauchement change pour des 
 Après avoir terminé l’analyse, trouvez des détails sur cet aperçu sur **Segments** > **Aperçu (version préliminaire)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Détails des informations sur le chevauchement des segments":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Détails des informations sur le chevauchement des segments.":::
 
 Sélectionnez un aperçu pour voir les résultats de l’analyse :
 
@@ -77,9 +77,9 @@ Les différenciateurs de segments vous aident à découvrir ce qui différencie 
 Après avoir terminé l’analyse, trouvez des détails sur cet aperçu sur **Segments** > **Aperçu (version préliminaire)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Détails des informations sur le différenciateur des segments":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Détails des informations sur le différenciateur des segments.":::
 
-Sélectionnez un aperçu pour voir les résultats de l’analyse. Une analyse du différentiateur comprend deux onglets. L’onglet **Attributs** répertorie les attributs de profil considérés comme des différenciateurs. L’onglet **Mesures** répertorie les différenciateurs. Chaque onglet comprend les détails suivants :
+Sélectionnez un aperçu pour voir les résultats de l’analyse. Une analyse de différenciation comprend deux onglets : L’onglet **Attributs** répertorie les attributs de profil considérés comme des différenciateurs. L’onglet **Mesures** répertorie les différenciateurs. Chaque onglet comprend les détails suivants :
 
 - Liste classée des différenciateurs, triée par score de différence.
 - Le **Score de différence** pour chaque différenciateur. Le score de différence représente le degré de différence d’un attribut entre deux segments. Plus le score de différence est élevé, plus les attributs diffèrent entre les deux segments. Sélectionnez une partition pour ouvrir le volet **Score de différence** avec les distributions de valeurs pour cet attribut.

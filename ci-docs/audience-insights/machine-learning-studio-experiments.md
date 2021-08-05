@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598336"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555166"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Utiliser des modèles basés sur Azure Machine Learning Studio (classique)
 
@@ -41,7 +41,7 @@ Tout d’abord, nous devons créer un espace de travail et ouvrir Machine Learni
 
 1. Après avoir créé la ressource, le tableau de bord de l’espace de travail Machine Learning Studio apparaît. Sélectionnez **Lancer Machine Learning Studio**.
 
-   ![Interface utilisateur Azure Machine Learning Studio](media/azure-machine-learning-studio.png)
+   ![Interface utilisateur Azure Machine Learning Studio.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Utiliser Azure Machine Learning Studio
 
@@ -55,7 +55,7 @@ Vous pouvez maintenant créer une nouvelle expérience ou importer un modèle de
 
 1. Si vous créez une nouvelle expérience ou utilisez un modèle d’expérience de la galerie, vous devez configurer les propriétés **Importer des données**. Utilisez l’expérience guidée ou fournissez directement des détails pour accéder au stockage Blob Azure contenant vos données.  
 
-   ![Expérience Azure Machine Learning Studio](media/azure-machine-learning-studio-experiment.png)
+   ![Expérience Azure Machine Learning Studio.](media/azure-machine-learning-studio-experiment.png)
 
 1. Vous pouvez désormais créer un pipeline de traitement personnalisé pour nettoyer et prétraiter les données, extraire des fonctionnalités et former un modèle approprié.
 
@@ -63,15 +63,15 @@ Vous pouvez maintenant créer une nouvelle expérience ou importer un modèle de
 
 1. Lorsque vous êtes satisfait de la qualité d’un modèle, sélectionnez **Configurer le service Web** > **Service Web prédictif**. Cette option importe le modèle formé et le pipeline de fonctionnalités de l’expérience de formation vers un service prédictif. Le service prédictif peut utiliser un autre ensemble de données d’entrée avec le schéma utilisé dans l’expérience de formation pour effectuer des prédictions.
 
-   ![Mettre en place un service Web prédictif](media/predictive-webservice-control.png)
+   ![Mettez en place un service Web prédictif.](media/predictive-webservice-control.png)
 
 1. Une fois l’expérience de service Web prédictif réussie, vous pouvez la déployer pour la planification automatique. Pour que le service Web fonctionne avec Customer Insights, sélectionnez **Déployer le service Web** > **Déployer le service Web [Nouveau] - Version préliminaire**. [En savoir plus sur le déploiement d’un service Web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
-   ![Déployer un service Web prédictif](media/predictive-webservice-deploy.png)
+   ![Déployez un service Web prédictif.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Exemples de modèles de la galerie
 
-Nous utiliserons le scénario fictif de Contoso Hotel pour les modèles de cet article. Contoso Hotel rassemble les données suivantes :
+Nous utilisons un scénario fictif de Contoso Hôtel pour les modèles de cet article. Contoso Hotel recueille les données suivantes :
 
 - Données CRM issues de l’activité hôtelière. Le jeu de données comprend des informations sur les dates de séjour de chaque client enregistré. Il contient également des informations sur les réservations, les types de chambres, les détails des dépenses, etc. Les données couvrent quatre ans, de janvier 2014 à janvier 2018.
 - Profils des clients de l’hôtel. Ces profils contiennent des informations sur chaque client, notamment son nom, sa date de naissance, son adresse postale, son sexe et son numéro de téléphone.
@@ -87,13 +87,13 @@ La définition de perte de clientèle peut différer en fonction du scénario. D
 
 Le modèle d’expérience peut être importé de la galerie. Tout d’abord, assurez-vous d’importer les données pour **Activité de séjour à l’hôtel**, **Données client**, et **Données d’utilisation du service** à partir du stockage Blob Azure.
 
-   ![Importer des données pour le modèle de perte de clientèle](media/import-data-azure-blob-storage.png)
+   ![Importez des données pour le modèle de perte de clientèle.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Caractérisation
 
 Sur la base de la définition de perte de clientèle, nous identifions d’abord les caractéristiques brutes qui influenceront l’étiquette. Ensuite, nous convertissons ces caractéristiques brutes en caractéristiques numériques qui peuvent être utilisées avec les modèles Machine Learning. L’intégration des données se produit dans Customer Insights afin que nous puissions joindre ces tables à l’aide de l’*ID de client*.
 
-   ![Joindre les données importées](media/join-imported-data.png)
+   ![Joignez les données importées.](media/join-imported-data.png)
 
 La caractérisation de la construction du modèle pour l’analyse de perte de clientèle peut être un peu délicate. Les données sont fonction du temps, les nouvelles activités hôtelières étant enregistrées quotidiennement. Pendant la caractérisation, nous voulons générer des entités statiques à partir des données dynamiques. Dans ce cas, nous générons plusieurs fonctionnalités à partir de l’activité hôtelière avec une fenêtre glissante d’un an. Nous développons également les fonctionnalités catégorielles telles que le type de chambre ou le type de réservation dans des fonctionnalités distinctes à l’aide de l’encodage à chaud.  
 
@@ -114,7 +114,7 @@ Nous devons maintenant choisir l’algorithme optimal à utiliser. Dans ce cas, 
 
 L’image suivante montre le pipeline de formation et d’évaluation du modèle d’Azure Machine Learning Studio :
 
-![Modèle de perte de clientèle dans Azure Machine Learning Studio](media/azure-machine-learning-model.png)
+![Modèle de perte de clientèle dans Azure Machine Learning Studio.](media/azure-machine-learning-model.png)
 
 Nous appliquons également une technique appelée **Importance de la fonction de permutation**, un aspect important de l’optimisation des modèles. Les modèles intégrés ont peu ou pas d’informations sur l’impact d’une fonctionnalité spécifique sur la prédiction finale. Le calculateur d’importance des caractéristiques utilise un algorithme personnalisé pour calculer l’influence de caractéristiques individuelles sur le résultat d’un modèle spécifique. L’importance de la fonctionnalité est normalisée entre +1 et -1. Une influence négative signifie que la fonction correspondante a une influence contre-intuitive sur le résultat et doit être supprimée du modèle. Une influence positive indique que la fonctionnalité contribue fortement à la prédiction. Ces valeurs ne sont pas des coefficients de corrélation car ce sont des métriques différentes. Pour plus d’informations, consultez [Importance de la fonction de permutation](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Nous définissons l’objectif comme la maximisation du montant de l’utilisati
 
 Comme le modèle de perte de clientèle, nous joignons le ServiceCustomerID de l’hôtel avec le CustomerID afin de créer des recommandations cohérentes par CustomerID.
 
-![Mise en avant du modèle de recommandation](media/azure-machine-learning-model-featurization.png)
+![Mise en avant du modèle de recommandation.](media/azure-machine-learning-model-featurization.png)
 
 Les données proviennent de trois entités différentes et les caractéristiques en sont dérivées. La caractérisation du problème de recommandation est différente par rapport aux scénarios de perte de clientèle ou CLTV. Le modèle de recommandation a besoin de données d’entrée sous la forme de trois ensembles de fonctionnalités.
 
@@ -156,13 +156,13 @@ Les données proviennent de trois entités différentes et les caractéristiques
 
 Nous prédisons les produits ou services en utilisant l’algorithme appelé **Entraîner la recommandation Matchbox** pour entraîner le modèle de recommandation.
 
-![Algorithme de recommandation de produit](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Algorithme de recommandation de produit.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 Les trois ports d’entrée pour le modèle **Entraîner la recommandation Matchbox** prend en compte les données d’utilisation du service de formation, la description du client (facultatif) et la description du service. Il existe trois façons différentes de noter le modèle. La première concerne l’évaluation du modèle où un score de gain cumulé actualisé normalisé (NDCG) est calculé pour classer les éléments notés. Dans cette expérience, nous avons le score NDCG de 0,97. Les deux autres options évaluent le modèle sur l’ensemble du catalogue de services recommandables, ou évaluent uniquement les éléments que les utilisateurs n’ont pas utilisés auparavant.
 
 En regardant plus loin les distributions des recommandations sur l’ensemble du catalogue de services, nous remarquons que le téléphone, le WiFi et le coursier sont les meilleurs services à recommander. Ceci est cohérent avec ce que nous avons trouvé à partir des distributions des données de consommation de services :
 
-![Sortie de modèle de recommandation](media/azure-machine-learning-model-output.png)
+![Sortie de modèle de recommandation.](media/azure-machine-learning-model-output.png)
 
 L’ensemble de l’[expérience de recommandation de produit est accessible dans Azure AI Gallery.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

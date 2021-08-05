@@ -1,7 +1,7 @@
 ---
 title: Fonctionnalités nouvelles et à venir
 description: Informations sur les nouvelles fonctionnalités, les améliorations et les corrections de bogues.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263248"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692386"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Nouveautés de la fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights
 
@@ -26,6 +26,28 @@ Nous déployons des mises à jour région par région. Ainsi, certaines régions
 
 > [!TIP]
 > Pour envoyer et voter sur les demandes de fonctionnalités et les suggestions de produits, accédez au [portail Idées d’application Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2021-updates"></a>Mises à jour de juin 2021
+
+Les mises à jour de juin 2021 comprennent plusieurs fonctionnalités, améliorations des performances et corrections de bogues.
+
+### <a name="data-ingestion"></a>Ingestion des données
+
+- **Mises à jour améliorées de la progression de l’unification des données** Vous pouvez désormais afficher des mises à jour de statut dynamiques plus granulaires et améliorées sur les étapes du [processus d’unification des données](data-unification.md). Cette fonctionnalité vous permet de suivre la progression détaillée pour comprendre le flux du processus et prendre des mesures si une étape nécessite une attention particulière.
+
+### <a name="extensibility"></a>Extensibilité
+
+- **Exporter des segments et d’autres données vers Salesforce Marketing Cloud** Nous avons étendu nos destinations d’exportation pour inclure [Salesforce Marketing Cloud](export-salesforce.md). Vous pouvez désormais exporter des segments et d’autres types de données vers Salesforce Marketing Cloud via une exportation SFTP de marque. L’importation de données peut être entièrement automatisée dans Salesforce et utilisée pour créer des campagnes marketing plus efficaces.  
+ 
+- **Exporter des segments vers ActiveCampaign** Nous avons étendu nos destinations d’exportation pour inclure [Campagne active](export-active-campaign.md). Vous pouvez maintenant exporter les segments pour générer des campagnes, exécuter le marketing par e-mail et utiliser des groupes spécifiques de clients dans ActiveCampaign.
+ 
+- **Exporter des segments vers Sendinblue** Nous avons étendu nos destinations d’exportation pour inclure [Sendinblue](export-sendinblue.md). Vous pouvez maintenant exporter les segments pour générer des campagnes, exécuter le marketing par e-mail et utiliser des groupes spécifiques de clients dans Sendinblue.
+ 
+### <a name="ux-updates"></a>Mises à jour UX 
+
+- **Page des clients nouveaux et améliorés et page des détails du profil** Nous avons repensé la page Clients et les pages de détails du profil pour une meilleure expérience utilisateur et de meilleures performances. Ces modifications vous permettent d’afficher, de trier, de rechercher et de filtrer les clients. Les filtres sont désormais représentés dans l’URL pour partager les résultats de la recherche avec d’autres utilisateurs de manière transparente. Les résultats de la recherche peuvent également être enregistrés en tant que segment.    
+  La page de détails des profils client regroupe désormais les données dans diverses sous-sections telles que les données démographiques, les identifiants et d'autres attributs de profil pour une meilleure lisibilité. Les autres sections de la page des détails du profil sont désormais plus interactives. Par exemple, la section activités permet désormais de filtrer et de trier.
+
 
 ## <a name="may-2021-updates"></a>Mises à jour de mai 2021
 
@@ -170,7 +192,7 @@ Les mises à jour de février 2021 comprennent plusieurs fonctionnalités, amé
 
 - **L’environnement de copie prend en charge plus de types de sources de données**
 
-  Les administrateurs peuvent copier les configurations d’environnement dans un nouvel environnement de la même organisation. Cette fonctionnalité étend la fonctionnalité d’environnement de copie pour les cas dans lesquels les sources de données basées sur un lac de données Common Data Service ou un dossier Common Data Model sont utilisés.
+  Les administrateurs peuvent copier les configurations d’environnement dans un nouvel environnement de la même organisation. Cette fonctionnalité étend la fonctionnalité de l'environnement de copie au cas où les sources de données basées sur un lac de données géré Microsoft Dataverse ou un dossier Common Data Model sont utilisés.
 
 ## <a name="january-2021-updates"></a>Mises à jour de janvier 2021
 
