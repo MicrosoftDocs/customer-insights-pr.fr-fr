@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 695734552be56d8fe04d53b319b598d45c222653
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 38c817c169ce7986c73fb46fa14a9a8352a218d359cdcb2fa822a34303ff5ecc
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6555985"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034129"
 ---
 # <a name="create-the-first-workspaces-and-add-members"></a>Créer les premiers espaces de travail et ajouter des membres
 

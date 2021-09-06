@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554156"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377831"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Actualisation incrémentielle pour les sources de données basées sur Power Query
 
@@ -44,8 +44,7 @@ Les informations sur l’audience permettent une actualisation incrémentielle d
 
 1. Sur **Paramètres d’actualisation incrémentielle**, vous allez configurer l’actualisation incrémentielle pour toutes les entités que vous avez sélectionnées lors de la création de la source de données.
 
-   > [!div class="mx-imgBorder"]
-   > ![Configurez des entités dans une source de données pour une actualisation incrémentielle.](media/incremental-refresh-settings.png "Configurer des entités dans une source de données pour une actualisation incrémentielle")
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Configurez des entités dans une source de données pour une actualisation incrémentielle.":::
 
 1. Sélectionnez une entité et fournissez les détails suivants :
 

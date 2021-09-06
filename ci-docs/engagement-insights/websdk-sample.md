@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: d51d06812e071852451e0c6c83648e59a4dad803
-ms.sourcegitcommit: 302910e39153f4b5c850ed9b1a62cb867e4df358
+ms.openlocfilehash: 97e50a51231bcf05f3e381397f0cf41e49afc10e3c3674d7c709c8f521979e12
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "6218530"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036600"
 ---
 # <a name="run-the-web-sdk-sample-for-dynamics-365-customer-insights-engagement-insights-capability"></a>Exécutez l'exemple de SDK Web pour la fonction Informations sur l’engagement Dynamics 365 Customer Insights
 

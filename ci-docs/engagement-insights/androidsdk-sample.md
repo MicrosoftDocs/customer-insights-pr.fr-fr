@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: d3890a3719efcacfee649a250498e1d30306f1ba
-ms.sourcegitcommit: 52f587ab6cdd30bdddd02290f9adab9373c1bcea
+ms.openlocfilehash: ba51961bc7f9555d7dba5b6a21c8636011438d75cba87bc132b896841c467a33
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "6296909"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035823"
 ---
 # <a name="run-the-android-sdk-sample"></a>Exécuter l’exemple de SDK Android
 

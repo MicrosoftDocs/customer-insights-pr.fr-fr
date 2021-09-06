@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 85e051c67bde6bfc6cd39553e463bd81752d0d73
-ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
+ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2021
-ms.locfileid: "6362461"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036690"
 ---
 # <a name="roles-and-permissions"></a>Rôles et autorisations
 

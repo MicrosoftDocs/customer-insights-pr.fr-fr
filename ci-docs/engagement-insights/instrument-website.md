@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 1c66e0ef1293926d81e3fdb4a83362e944c1e5d8
-ms.sourcegitcommit: 27dbe0668e623f1895108655cdd66ac4311c82e1
+ms.openlocfilehash: b5467da775a621c436bd9ddedb272506acc1e2b31dcf7c87feb5dd11e2daae2b
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2021
-ms.locfileid: "6639772"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035091"
 ---
 # <a name="install-the-code-snippet-on-a-website"></a>Installer l’extrait de code sur un site Web
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171161"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035228"
 ---
 # <a name="relationships-between-entities"></a>Relations entre les entités
 
@@ -82,7 +82,7 @@ Cette page propose un ensemble d'options pour les relations existants et nouvell
 
 ### <a name="explore-the-relationship-visualizer"></a>Explorez le visualiseur de relations
 
-Le visualiseur de relations montre un diagramme réseau des relations existantes entre les entités connectées et de leur cardinalité.
+Le visualiseur de relations montre un diagramme réseau des relations existantes entre les entités connectées et de leur cardinalité. Il visualise également le chemin d’accès à la relation.
 
 Pour personnaliser l'affichage, vous pouvez modifier la position des cases en les faisant glisser sur le canevas.
 
@@ -92,6 +92,20 @@ Options disponibles :
 - **Exporter en tant qu'image** : enregistre la vue actuelle en tant que fichier image.
 - **Changer en disposition horizontale/verticale** : Modifiez l'alignement des entités et des relations.
 - **Modifier** : Mettez à jour les propriétés des relations personnalisées dans le volet d'édition et enregistrez les modifications.
+
+### <a name="relationship-path"></a>Chemin d’accès vers la relation
+
+Le chemin d’accès à la relation décrit les entités connectées aux relations entre une entité source et une entité cible. Il est utilisé lors de la création d’un segment ou d’une mesure qui inclut d’autres entités que l’entité de profil unifié et il existe plusieurs options pour atteindre l’entité de profil unifié.
+
+Le chemin d’accès à la relation indique au système par quelles relations accéder à l’entité de profil unifié. Différents chemins d’accès à la relation peuvent donner des résultats différents.
+
+Par exemple, l’entité *eCommerce_eCommercePurchases* a les relations suivantes avec l’entité *Client* de profil unifié :
+
+- eCommerce_eCommercePurchases > Client
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Client
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Client 
+
+Le chemin d’accès à la relation détermine les entités que vous pouvez utiliser lors de la création des règles pour les mesures ou les segments. Choisir l’option avec le chemin d’accès à la relation le plus long renvoie probablement moins de résultats car les enregistrements correspondants doivent faire partie de toutes les entités. Dans cet exemple, un client doit avoir acheté des marchandises via le commerce électronique (eCommerce_eCommercePurchases), dans un point de vente (POS_posPurchases) et participer à notre programme de fidélité (loyaltyScheme_loyCustomers). En choisissant la première option, vous obtiendrez probablement plus de résultats car les clients ne doivent exister que dans une seule entité supplémentaire.
 
 ## <a name="manage-existing-relationships"></a>Gérer les relations existantes 
 
@@ -105,6 +119,6 @@ Sélectionnez une relation et choisissez l'une des options suivantes :
 
 ## <a name="next-step"></a>Étape suivante
 
-Les relations système et personnalisées sont utilisées pour [créer des segments](segments.md) à partir de plusieurs sources de données qui ne sont plus en silos.
+Les relations système et personnalisées servent à [créer des segments](segments.md) et des [mesures](measures.md) basés sur plusieurs sources de données qui ne sont plus en silos.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Exporter des données Customer Insights vers Dynamics 365 Marketing
 description: Apprenez à configurer la connexion et à exporter vers Dynamics 365 Marketing.
-ms.date: 03/03/2021
+ms.date: 08/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
+ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692478"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "7417202"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Utiliser des segments dans Dynamics 365 Marketing (version préliminaire)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Utilisez des [segments](segments.md) pour générer des campagnes et contacter des groupes de clients spécifiques avec Dynamics 365 Marketing. Pour plus d’informations, voir [Utiliser des segments de Dynamics 365 Customer Insights avec Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
+
+Si vous utilisez les nouvelles fonctionnalités de Dynamics 365 Marketing pour orchestrer le parcours du client en temps réel dans une organisation Dataverse, il n’est pas nécessaire de créer une exportation standard vers Dynamics 365 Marketing. Les contacts et les segments des informations sur l’audience sont disponibles directement dans Dynamics 365 Marketing une fois connecté à Marketing et à Customer Insights. Avant de supprimer les exportations existantes, lisez la documentation qui explique [comment connecter les informations sur l’audience et l’orchestration du parcours du client Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile).
 
 ## <a name="prerequisite-for-a-connection"></a>Conditions préalables à une connexion
 

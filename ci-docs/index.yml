@@ -4,33 +4,33 @@ metadata:
   author: m-hartmann
   description: Trouvez des articles pertinents pour commencer avec le contenu de l'aide.
   ms.author: mhart
-  ms.date: 10/29/2020
+  ms.date: 07/30/2021
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e9c4aa3347d6f477751804790bd3dc9b20eb5dbe
-  ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+  ms.openlocfilehash: 1446a2bcb24739187a37b2024c9a6070ab008989d722ebf84ef5259ec2ee4d5c
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 03/15/2021
-  ms.locfileid: "5598456"
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7036554"
 title: Documentation Dynamics 365 Customer Insights
-summary: Trouvez des ressources utiles pour démarrer et découvrir les fonctionnalités et les capacités de Customer Insights.
+summary: Trouvez des ressources utiles pour démarrer et découvrez les fonctionnalités et les capacités de Customer Insights.
 landingContent:
 - title: Découvrir Customer Insights
   linkLists:
   - linkListType: overview
     links:
-    - text: " Présentation de Customer Insights"
+    - text: Présentation de Customer Insights
       url: overview.md
     - text: Plans de mise en production
-      url: /dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
-    - text: Accéder à votre environnement
-      url: https://home.ci.ai.dynamics.com/
+      url: /dynamics365-release-plan/
+    - text: Découvrir la CDP
+      url: https://dynamics.microsoft.com/ai/customer-insights/
 - title: Mise en route de Audience Insights
   linkLists:
   - linkListType: get-started
     links:
-    - text: S'inscrire à une version d'évaluation
+    - text: S’inscrire à une version d’évaluation
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
     - text: Nouveautés
       url: audience-insights/whats-new-audience-insights.md

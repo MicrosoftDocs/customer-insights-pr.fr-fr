@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 6d794f6f4e4f351f46c58e03ffa5945d6a18cfe5
-ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
+ms.openlocfilehash: 52cf3acfec580c459d0d624ea6bf3c3913314459ea3f7af8010006135ee40e4d
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "6650407"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035778"
 ---
 # <a name="configure-connections"></a>Configurer les connexions
 

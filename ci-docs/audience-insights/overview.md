@@ -1,7 +1,7 @@
 ---
 title: Vue d’ensemble des informations sur l’audience pour Dynamics 365 Customer Insights
 description: Vue d’ensemble des informations sur l’audience pour Dynamics 365 Customer Insights.
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539112"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034357"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Vue d’ensemble des informations sur l’audience pour Dynamics 365 Customer Insights
 
-Les informations sur l’audience vous aident à mieux comprendre vos clients. Connectez les données de diverses sources transactionnelles, comportementales et d’observation pour créer une vue client à 360 degrés. Utilisez ces informations pour générer des expériences et des processus orientés client. Unifiez et comprenez les données clientes et exploitez-les pour en tirer des informations et des actions utiles.
+[Informations sur l’audience, une fonctionnalité de Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/) qui vous aide à mieux comprendre vos clients. Connectez les données de diverses sources transactionnelles, comportementales et d’observation pour créer une vue client à 360 degrés. Utilisez ces informations pour générer des expériences et des processus orientés client. Unifiez et comprenez les données clientes et exploitez-les pour en tirer des informations et des actions utiles.
 
 ## <a name="main-benefits"></a>Avantages principaux 
 
@@ -34,9 +34,9 @@ Les informations sur l’audience vous aident à mieux comprendre vos clients. C
 
 - **Actionner vos processus d’entreprise et des expériences client personnalisées**
 
-  - Stimulez l’engagement personnalisé à travers des différents canaux : fournissez aux services de marketing, de vente, et de service des cartes prêtes à l’emploi de profil client sur mesure et d’informations sur les clients contextuelles, infusées dans les applications métiers qu’ils utilisent déjà tous les jours.
-  - Automatisez les expériences et les processus orientés client fondés sur des profils personnalisables, des mesures métier et des segments.
-  - Activez et étendez les expériences métier fondées sur [Microsoft Power Platform](https://powerplatform.microsoft.com/). Créez rapidement des applications avec des informations intégrées en utilisant une approche performante à faible code de PowerApps.  
+  - Favorisez un engagement personnalisé sur tous les canaux : responsabilisez les professionnels du marketing, des ventes et des services. Utilisez des informations prêtes à l’emploi et des cartes de profil client personnalisées qui s’intègrent aux applications commerciales qu’ils utilisent déjà.
+  - Automatisez les expériences et les processus basés sur des profils personnalisables, des mesures métier et des segments.
+  - Activez et étendez les expériences métier fondées sur [Microsoft Power Platform](https://powerplatform.microsoft.com/). Créez rapidement des applications avec des informations intégrées en utilisant une approche performante à faible code de Power Apps.  
 
 ## <a name="key-audiences"></a>Principales audiences
 
@@ -50,13 +50,18 @@ Les informations sur l’audience vous aident à mieux comprendre vos clients. C
 
 - **Utilisateurs professionnels :**
 
-  - Informations à 360 degrés sur les profils client et visualisation de bout en bout du parcours du client.
-  - Vision à 360 degrés des données client dans les processus Dynamics 365 grâce aux packages préconfigurés.
+  - Informations à 360 degrés sur les profils client et les parcours du client.
+  - Vision à 360 degrés sur les données client dans les processus Dynamics 365 grâce aux packages préconfigurés.
 
 - **Analystes d’entreprise :**
 
   - Établissez des profils personnalisables, définissez des mesures , créez des segments et bénéficiez d’analyses prédictives pour obtenir une vision à 360 degrés de vos clients, spécifique à votre organisation.  
-  - Utilisez des connecteurs prêts à l’emploi pour plusieurs applications ou API Microsoft et tierces pour traiter davantage les informations.
+  - Utilisez des connecteurs prêts à l’emploi pour plusieurs applications Microsoft et tierces ou API pour traiter les informations.
 
+## <a name="pricing-and-licensing"></a>Tarification et licence
+
+Customer Insights est concédé sous licence par client et inclut plusieurs fonctionnalités. Les fonctionnalités autorisées incluent un ensemble de profils, des actualisations quotidiennes du système, des requêtes Power Platform et deux environnements. Vous pouvez acheter une fonctionnalité et une licence supplémentaires pour augmenter le quota par défaut. 
+- Droits et fonctionnalités détaillés : [Guide des licences Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Aperçu de la tarification : [Tarification de Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

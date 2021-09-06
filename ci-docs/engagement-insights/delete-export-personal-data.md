@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 4ee4f2dabccd9d76551b007e96bd52e8d368dabf
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 8edefe25261eaf8939dade3fdddab3d87df4ed5079fa566426319cd7b32e1638
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6555895"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034084"
 ---
 # <a name="delete-and-export-event-data-containing-personal-information"></a>Supprimer et exporter des données liées aux événements contenant des informations personnelles
 

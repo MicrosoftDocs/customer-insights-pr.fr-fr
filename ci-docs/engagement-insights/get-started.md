@@ -10,12 +10,12 @@ ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4552c0b743510ab7c33e8ff1159474f4e83d474d
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 5ee1567cea834670a16aaa3253912b7957ce26b3
+ms.sourcegitcommit: 86739a3f238162fc96837270b5d184e648fab15c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539295"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "7405355"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>Démarrer avec la fonction Informations sur l’engagement Dynamics 365 Customer Insights (version préliminaire publique)
 
@@ -55,7 +55,7 @@ L'espace de travail vous permet de visualiser l'activité des utilisateurs en te
     
 ## <a name="step-4-export-data-to-other-channels"></a>Étape 4 : Exporter les données vers d'autres canaux
 
-Vous pouvez créer des *événements affinés* (une vue virtuelle) de vos données d'analyse Web. Vous pouvez ensuite filtrer et exporter les données vers Azure Data Lake Storage. Vous pouvez ingérer les données exportées sous forme de source de données dans [Informations sur l’audience](/audience-insights/integrate-engagement-insights.md).
+Vous pouvez créer des *événements affinés* (une vue virtuelle) de vos données d'analyse Web. Vous pouvez ensuite filtrer et exporter les données vers Azure Data Lake Storage. Vous pouvez ingérer les données exportées en tant que source de données. Pour plus d’informations, voir [Créer un lien entre les informations sur l’audience et les informations sur l’engagement](integrate-audience-insights-engagement-insights.md).
 
 1. [Créez des événements affinés](refined-events.md) pour l'exportation.
 

@@ -166,6 +166,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Klaviyo
+              href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
               href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
@@ -250,7 +252,7 @@
           href: engagement-insights/developer-resources.md
         - name: Concepts et terminologie
           href: engagement-insights/glossary.md
-    - name: "Événements\_"
+    - name: Événements
       items:
         - name: Créer et modifier des événements
           href: engagement-insights/refined-events.md
@@ -310,5 +312,13 @@
       href: engagement-insights/regional-availability.md
     - name: Limites de service
       href: engagement-insights/quotas.md
-- name: Contacter le support
-  href: 'https://admin.powerplatform.microsoft.com/support'
+- name: Intégrer les informations sur l’audience et sur l’engagement
+  items:
+    - name: Lier les informations sur l’audience et sur l’engagement
+      href: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - name: Utiliser les segments des informations sur l’audience dans les rapports sur les informations sur l’engagement
+      href: engagement-insights/integrate-audience-insights-segments.md
+    - name: Utiliser les dimensions démographiques pour diviser les données comportementales
+      href: engagement-insights/curate-dimensions.md
+- name: Obtenir de l’assistance
+  href: 'https://dynamics.microsoft.com/en-us/support/'

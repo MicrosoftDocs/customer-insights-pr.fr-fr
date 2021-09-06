@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: e1cfa85e288fc7a328e81c4ca4039c7e54631326
-ms.sourcegitcommit: 69f425b3d3d2f103478938f8b9970bf8f7bed9a1
+ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "6617147"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034039"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gérer les environnements et les espaces de travail
 

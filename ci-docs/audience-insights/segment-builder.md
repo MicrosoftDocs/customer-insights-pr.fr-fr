@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685459"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377785"
 ---
 # <a name="create-and-manage-segments"></a>Créer et gérer des segments
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685459"
 > - Un volet latéral pour sélectionner les attributs sera constamment disponible.
 > - Option permettant de sélectionner des chemins d’accès de relation d’entité.
 > Pour essayer le nouveau générateur de segments, envoyez un e-mail avec le sujet « Demande d’activation du nouveau générateur de segments » à cihelp [at] microsoft.com. Incluez le nom de votre organisation et l’ID de votre environnement de bac à sable.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Éléments du générateur de segments." lightbox="media/segment-builder-overview.png":::
+>
+> 1 - Organisez votre segment avec des règles et des sous-règles. Chaque règle ou sous-règle contient des conditions. Associer les conditions aux opérateurs logiques
+>
+> 2 - Choisissez le [chemin d’accès à la relation](relationships.md) entre les entités qui s’applique à une règle. Le chemin d’accès à la relation définit les attributs pouvant être utilisés dans une condition.
+>
+> 3 - Gérez les règles et les sous-règles. Modifiez la position d’une règle ou supprimez-la.
+>
+> 4 - Ajoutez des conditions et créez le bon niveau d’imbrication à l’aide des sous-règles.
+>
+> 5 - Appliquez des opérations d’ensemble aux règles connectées.
+>
+> 6 - Utilisez le volet des attributs pour ajouter les attributs d’entité disponibles ou créer des conditions basées sur les attributs. Le volet affiche la liste des entités et des attributs, en fonction du chemin d’accès à la relation sélectionné, qui sont disponibles pour la règle sélectionnée.
+>
+> 7 - Ajoutez des conditions basées sur les attributs aux règles et sous-règles existantes ou ajoutez-les à une nouvelle règle.
+>
+> 8 - Annulez et rétablissez les modifications lors de la génération du segment.
 
 Définissez des filtres complexes autour de l’entité de client unifié et ses entités liées. Chaque segment, après le traitement, crée un ensemble d’enregistrement d’entité client que vous pouvez exporter et utiliser pour entreprendre des actions. Les segments sont gérés sur la page **Segments**. 
 
@@ -147,6 +164,6 @@ Les segments rapides vous permettent de créer rapidement des segments simples a
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Exportez un segment](export-destinations.md) et explorer la [carte client](customer-card-add-in.md) et les [connecteurs](export-power-bi.md) pour obtenir des informations sur le niveau du client.
+[Exportez un segment](export-destinations.md) et explorez l’[intégration de la carte client](customer-card-add-in.md) pour utiliser les segments dans d’autres applications.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

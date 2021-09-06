@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: a594e5c54b6931eb1b9694e3cc34a01a81533cbd
-ms.sourcegitcommit: 52f587ab6cdd30bdddd02290f9adab9373c1bcea
+ms.openlocfilehash: 77e63929bbcc7ecff34a3839af525b76ec3c7f21173ddc5f8f2d69f11c25c441
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "6296906"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036915"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Mise en route du SDK Android
 

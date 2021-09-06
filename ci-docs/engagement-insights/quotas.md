@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 1e748ec6bf048c71ce4cf324988a6a590d143871
-ms.sourcegitcommit: 302910e39153f4b5c850ed9b1a62cb867e4df358
+ms.openlocfilehash: a4a1a7f9cc20afb9bebd4afd05cd53036dd96d9cb492a6a9e742156c69508084
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "6219205"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035688"
 ---
 # <a name="workspace-and-event-quotas-public-preview"></a>Quotas relatifs aux espaces de travail et aux événements (version préliminaire publique)
 

@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: a39255a63d56cdca66335b81c43800cbb318284d
-ms.sourcegitcommit: 302910e39153f4b5c850ed9b1a62cb867e4df358
+ms.openlocfilehash: 7b3195a92c969ab36e5b43f4c2e4221ff477a0a8958838e1256528f58fe13dce
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "6218260"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036735"
 ---
 # <a name="manage-cookies-and-user-consent"></a>Gérer les cookies et le consentement de l’utilisateur
 

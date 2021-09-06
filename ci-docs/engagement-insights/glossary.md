@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: bff954cb1eab63ceb61e829a4e7b340f3fb0d7e7
-ms.sourcegitcommit: 302910e39153f4b5c850ed9b1a62cb867e4df358
+ms.openlocfilehash: fd6513f66777f8be312c8b594d52836ac325f2825e9d019d2ba0f49c587cf8ca
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "6218890"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035733"
 ---
 # <a name="engagement-insights-capability-glossary"></a>Glossaire de la fonction Informations sur l’engagement
 

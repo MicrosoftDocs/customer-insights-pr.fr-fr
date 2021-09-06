@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 5074309c44f777b778e0175c81f3365aad6c3c08
-ms.sourcegitcommit: 302910e39153f4b5c850ed9b1a62cb867e4df358
+ms.openlocfilehash: 7455d276035bfaf1f8a93d0e3b0b0884353a4010715c05d1d696309f7eb4b233
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "6218305"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036325"
 ---
 # <a name="advanced-web-sdk-instrumentation"></a>Instrumentation Web avancée avec un SDK
 

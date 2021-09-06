@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 38f0c13b3a61f1edb0f2ac462d42c1db67b313cf
-ms.sourcegitcommit: 52f587ab6cdd30bdddd02290f9adab9373c1bcea
+ms.openlocfilehash: 053e626d06d3e17b39b448987410058e45e8ae0385f3ecdef40314cb46ae4bf4
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "6296907"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036825"
 ---
 # <a name="run-the-ios-sdk-sample"></a>Exécuter l’exemple de SDK iOS
 

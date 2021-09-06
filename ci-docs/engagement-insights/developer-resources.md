@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: ee496e72c8f2a14c07d62cd1bfda323d3bcc8955
-ms.sourcegitcommit: 52f587ab6cdd30bdddd02290f9adab9373c1bcea
+ms.openlocfilehash: 5880e9507cc192424989c7fc9c2733ac5d770a7be8a2b42a446ffd8681fa7612
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "6296368"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036280"
 ---
 # <a name="developer-resources-overview"></a>Vue d’ensemble des ressources du développeur
 
