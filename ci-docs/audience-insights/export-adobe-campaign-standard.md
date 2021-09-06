@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: d301b4f0cb875303fb3d373b77177acd1c1f5219cd6f23c2a1d29ce67a222eab
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305383"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032160"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Utiliser les segments Customer Insights dans Adobe Campaign Standard (version préliminaire)
 
-En tant qu’utilisateur d’Audience Insights dans Dynamics 365 Customer Insights, vous avez peut-être créé des segments pour rendre vos campagnes marketing plus efficaces en ciblant des audiences pertinentes. Pour utiliser un segment des informations sur l’audience dans Adobe Experience Platform et dans des applications comme Adobe Campaign Standard, vous devez suivre quelques étapes décrites dans cet article.
+En tant qu’utilisateur d’Audience Insights dans Dynamics 365 Customer Insights, vous avez peut-être créé des segments pour rendre vos campagnes marketing plus efficaces en ciblant des audiences pertinentes. Pour utiliser un segment des informations sur l’audience dans Adobe Experience Platform et les applications telles qu’Adobe Campaign Standard, vous devez suivre les étapes décrites dans cet article.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Schéma du processus des étapes décrites dans cet article.":::
 
@@ -30,11 +30,11 @@ En tant qu’utilisateur d’Audience Insights dans Dynamics 365 Customer Insigh
 
 ## <a name="campaign-overview"></a>Vue d’ensemble de la campagne
 
-Pour mieux comprendre comment utiliser des segments des informations sur l’audience dans Adobe Experience Platform, examinons un exemple de campagne fictif.
+Pour mieux comprendre comment vous pouvez utiliser les segments des informations sur l’audience dans Adobe Experience Platform, examinons un exemple de campagne inventé.
 
-Supposons que votre entreprise offre un service mensuel basé sur un abonnement à vos clients aux États-Unis. Vous souhaitez identifier les clients dont les abonnements doivent être renouvelés dans les huit prochains jours, mais qui n’ont pas encore renouvelé leur abonnement. Pour fidéliser ces clients, vous souhaitez leur envoyer une offre promotionnelle par e-mail, à l’aide d’Adobe Campaign Standard.
+Supposons que votre entreprise offre un service mensuel basé sur un abonnement à vos clients aux États-Unis. Vous souhaitez identifier les clients dont les abonnements doivent être renouvelés dans les huit prochains jours, mais qui n’ont pas encore renouvelé leur abonnement. Pour fidéliser ces clients, vous souhaitez leur faire parvenir par e-mail une offre promotionnelle en utilisant Adobe Campaign Standard.
 
-Dans cet exemple, nous souhaitons exécuter la campagne d’e-mails promotionnels une seule fois. Cet article ne couvre pas le cas d’utilisation de l’exécution de la campagne plusieurs fois. Cependant, les informations sur l’audience et Adobe Campaign Standard peuvent également être configurées pour fonctionner pour un scénario de campagne récurrent.
+Dans cet exemple, nous souhaitons exécuter la campagne d’e-mails promotionnels une seule fois. Cet article ne couvre pas le cas d’utilisation de l’exécution de la campagne plusieurs fois. Cependant, les informations sur l’audience et Adobe Campaign Standard peuvent également être configurés pour fonctionner pour un scénario de campagne récurrent.
 
 ## <a name="identify-your-target-audience"></a>Identifier votre audience cible
 
@@ -54,7 +54,7 @@ Une fois notre audience cible identifiée, nous pouvons configurer l’exportati
 
 1. Dans Audience insights, accédez à **Administrateur** > **Connexions**.
 
-1. Sélectionnez **Ajouter une connexion** et choisissez **Adobe Campaign** pour configurer la connexion ou sélectionnez **Configurer** dans la vignette **Adobe Campaign**.
+1. Sélectionnez **Ajouter une connexion** et choisissez **Adobe Campaign** pour configurer la connexion, ou sélectionnez **Configurer** dans la vignette **Adobe Campaign**.
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Vignette de configuration pour Adobe Campaign Standard.":::
 
@@ -88,14 +88,14 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 1. Cliquez sur **Suivant**.
 
-1. Maintenant, nous mappons les champs **Source** du segment des informations sur l’audience au champ **Cible** du schéma de profil Adobe Campaign Standard.
+1. Mappez maintenant les champs **Source** du segment des informations sur l’audience aux noms de champ **Cible** dans le schéma des profils Adobe Campaign Standard.
 
-   :::image type="content" source="media/ACS-field-mapping.png" alt-text="Mappage de champs pour le connecteur Adobe Campaign Standard.":::
+   :::image type="content" source="media/ACS-field-mapping.png" alt-text="Mappage des champs pour le connecteur standard Adobe Campaign Standard.":::
 
-   Si vous souhaitez ajouter d’autres attributs, sélectionnez **Ajouter un attribut**. Le nom de la cible peut être différent du nom du champ de la source, afin que vous puissiez toujours mapper la sortie du segment des informations sur l’audience à Adobe Campaign Standard si les champs ne portent pas le même nom dans les deux systèmes.
+   Si vous souhaitez ajouter d’autres attributs, sélectionnez **Ajouter un attribut**. Le nom cible peut être différent du nom de champ source, vous pouvez donc continuer à mapper la sortie du segment des informations sur l’audience vers Adobe Campaign Standard si les champs n’ont pas le même nom dans les deux systèmes.
 
    > [!NOTE]
-   > L’adresse e-mail est utilisée comme champ d’identité, mais vous pouvez utiliser tout autre identificateur de votre profil client des informations sur l’audience pour mapper des données à Adobe Campaign Standard.
+   > L’adresse e-mail est utilisée comme champ d’identité, mais vous pouvez utiliser n’importe quel autre identifiant du profil client des informations d’audience pour mapper les données vers Adobe Campaign Standard.
 
 1. Sélectionnez **Enregistrer**.
 
@@ -104,7 +104,7 @@ Une fois la destination d’exportation enregistrée, vous la trouverez dans **D
 Vous pouvez maintenant [exporter le segment à la demande](export-destinations.md#run-exports-on-demand). L'exportation sera également exécutée à chaque [actualisation planifiée](system.md).
 
 > [!NOTE]
-> Assurez-vous que le nombre d’enregistrements dans le segment exporté se situe dans la limite autorisée de votre licence Adobe Campaign Standard.
+> Vérifiez que le nombre d’enregistrements dans le segment exporté se trouve dans la limite autorisée par votre licence Adobe Campaign Standard.
 
 Les données exportées sont stockées dans le conteneur de stockage Blob Azure que vous avez configuré ci-dessus. Le chemin d’accès aux dossiers suivant est créé automatiquement dans votre conteneur :
 
@@ -114,30 +114,30 @@ Exemple : Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-
 
 ## <a name="configure-adobe-campaign-standard"></a>Configurer Adobe Campaign Standard
 
-Lorsqu’un segment des informations sur l’audience est exporté, il contient les colonnes que vous avez sélectionnées lors de la définition de la destination d’exportation à l’étape précédente. Ces données peuvent être utilisées pour [créer des profils dans Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
+Lorsqu’un segment des informations sur l’audience est exporté, il contient les colonnes que vous avez sélectionnées lors de la définition de la destination d’exportation à l’étape précédente. Ces données peuvent servir à [créer des profils dans Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
 
-Pour utiliser le segment dans Adobe Campaign Standard, nous devons étendre le schéma de profil dans Adobe Campaign Standard pour inclure deux champs supplémentaires. Découvrez comment [étendre la ressource de profil](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) avec de nouveaux champs dans Adobe Campaign Standard.
+Pour utiliser le segment dans Adobe Campaign Standard, nous devons étendre le schéma de profils dans Adobe Campaign Standard pour inclure deux champs supplémentaires. Apprenez à [étendre la ressource du profil](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) avec de nouveaux champs dans Adobe Campaign Standard.
 
 Dans notre exemple, ces champs sont *Nom du segment et Date du segment (facultatif)*.
 
-Nous utiliserons ces champs pour identifier les profils dans Adobe Campaign Standard que nous souhaitons cibler pour cette campagne.
+Ces champs servent à identifier les profils dans Adobe Campaign Standard à cibler pour cette campagne.
 
-S’il n’y a pas d’autres enregistrements dans Adobe Campaign Standard, autres que ceux que vous allez importer, vous pouvez ignorer cette étape.
+S’il n’y a pas d’autres enregistrements dans Adobe Campaign Standard que ceux que vous allez importer, vous pouvez ignorer cette étape.
 
 ## <a name="import-data-into-adobe-campaign-standard"></a>Importer des données dans Adobe Campaign Standard
 
-Maintenant que tout est en place, nous devons importer les données d’audience préparées à partir des informations sur l’audience dans Adobe Campaign Standard pour créer des profils. Découvrez [comment importer des profils dans Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) en utilisant un workflow.
+Maintenant que tout est en place, nous devons importer les données d’audience préparées à partir des informations sur l’audience dans Adobe Campaign Standard pour créer des profils. Apprenez à [importer des profils dans Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) en utilisant un worflow.
 
-Le flux de travail d’importation dans l’image ci-dessous a été configuré pour s’exécuter toutes les huit heures et rechercher les segments Audience Insights exportés (fichier .csv dans le stockage Blob Azure). Le workflow extrait le contenu du fichier .csv dans un ordre de colonne spécifié. Ce workflow a été conçu pour effectuer une gestion des erreurs de base et garantir que chaque enregistrement possède une adresse e-mail avant d’hydrater les données dans Adobe Campaign Standard. Le flux de travail extrait également le nom du segment du nom de fichier avant de l’insérer dans les données de profil Adobe Campaign Standard.
+Le flux de travail d’importation dans l’image ci-dessous a été configuré pour s’exécuter toutes les huit heures et rechercher les segments Audience Insights exportés (fichier .csv dans le stockage Blob Azure). Le workflow extrait le contenu du fichier .csv dans un ordre de colonne spécifié. Ce workflow a été conçu pour assurer la gestion de base des erreurs et veiller à ce que chaque enregistrement soit associé à une adresse e-mail avant d’hydrater les données dans Adobe Campaign Standard. Le workflow extrait aussi le nom du segment du nom de fichier avant de l’insérer dans les données de profil Adobe Campaign Standard.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Capture d’écran d’un workflow d’importation dans l’interface utilisateur d’Adobe Campaign Standard.":::
 
 ## <a name="retrieve-the-audience-in-adobe-campaign-standard"></a>Récupérer l’audience dans Adobe Campaign Standard
 
-Une fois les données importées dans Adobe Campaign Standard, vous [pouvez créer un workflow](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) et [interroger](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) les clients en fonction des données *Nom du segment* et *Date du segment* pour sélectionner les profils identifiés pour notre exemple de campagne.
+Une fois les données importées dans Adobe Campaign Standard, vous [pouvez créer un workflo](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) et [interroger](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) les clients sur la base *Nom du segment* et *Date du segment* pour sélectionner les profils identifiés pour notre exemple de campagne.
 
-## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Créer et envoyer l’e-mail à l’aide d’Adobe Campaign Standard
+## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Créer et envoyer l’e-mail en utilisant Adobe Campaign Standard
 
 Créez le contenu de l’e-mail, puis [testez et envoyez](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) votre e-mail.
 
-:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Exemple d’e-mail avec l’offre de renouvellement d’Adobe Campaign Standard.":::
+:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Exemple d’e-mail avec offre de renouvellement provenant d’Adobe Campaign Standard.":::

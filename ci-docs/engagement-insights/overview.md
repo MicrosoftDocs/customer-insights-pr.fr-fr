@@ -4,24 +4,24 @@ description: Une présentation des fonctionnalités et des avantages de la fonct
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 12/21/2020
+ms.date: 07/30/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bf274f922c026fbdffb6f31367b091875f6a542c
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: b7bb1e5aa1adc5893dd0118bc7a3653913bfdc874a589f366c8c37152bbfef4d
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539204"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7033353"
 ---
 # <a name="about-dynamics-365-customer-insights-engagement-insights-capability"></a>À propos de la fonction Informations sur l’engagement Dynamics 365 Customer Insights 
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-La fonction Informations sur l’engagement vous permet de comprendre de manière interactive, comment vos clients utilisent vos services et produits (à la fois individuellement et globalement) sur les sites Web, les applications mobiles et les produits connectés.
+[Informations sur l’engagement, une fonctionnalité de Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/) permet de comprendre de manière interactive comment vos clients utilisent vos services et produits (de manière individuelle et globale) sur les sites web, les applications mobiles et les produits connectés.
 
 Vous pouvez combiner l'analyse comportementale avec les types de données transactionnelles, démographiques, d'enquête et autres de Microsoft Dynamics 365 Customer Insights. Cette combinaison crée des informations riches qui aident à mener les meilleures actions suivantes et des expériences personnalisées.
 

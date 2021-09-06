@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 53b5090bc4fbc29cbcb91145db2113d94a0081f8
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: e0635711419c369fd89ac3d18bf84ab78567c146c06f8a456462608c170bca39
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4554657"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032297"
 ---
 
 [Cette rubrique fait partie de la documentation en version préliminaire et peut faire l'objet de modifications.]

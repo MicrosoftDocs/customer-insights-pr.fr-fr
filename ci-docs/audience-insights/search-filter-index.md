@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: e53d87c4f633cba09fecbc1c219f0ac2ec6bb5598a7902cbcf7398d26d6d7c6b
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554018"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7029396"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profils client : Index Rechercher et filtrer
 
@@ -60,7 +60,7 @@ Le menu **Filtrer** sur la page **Clients** peut inclure un nombre variable de n
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Aller à la page **Clients** pour rechercher des profils client ou utiliser les champs indexés pour voir un sous-ensemble de tous les profils client.
+Révisez la [page des profils unifiés](customer-profiles.md) pour rechercher des profils ou utiliser les champs indexés pour afficher un sous-ensemble de tous les profils unifiés.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

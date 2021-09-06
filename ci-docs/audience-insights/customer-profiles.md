@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 87323d15c44ef82ae8bc3cc971be6c36356121571cb9a9630be699ac2d157bf6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554615"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032801"
 ---
 # <a name="customer-profiles"></a>Profils clients
 
@@ -47,7 +47,7 @@ Vous pouvez filtrer les clients par les champs d’entité Profil client. Comme 
 2. Cochez les cases en regard des attributs selon lesquels vous souhaitez filtrer les clients.
 
    > [!div class="mx-imgBorder"] 
-   > ![Profils clients.](media/profiles-customers3.png "Profils client")
+   > ![Profils clients.](media/profiles-customers3.png "Profils clients")
 
 3. Supprimez vos filtres en sélectionnant **Effacer les filtres** sur la page **Clients**.
 
@@ -69,7 +69,7 @@ Sélectionnez **Retour aux clients** pour revenir à la page de recherche de cli
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Ajoutez d’autres sources de données](data-sources.md) ou [créez des segments de client](segments.md).
+[Ajouter plus de sources de données](data-sources.md), [enrichir les profils unifiés](enrichment-hub.md) ou [créer des segments](segments.md) pour utiliser les profils unifiés dans d’autres applications.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
