@@ -4,17 +4,17 @@ description: Apprenez à personnaliser et à exécuter le SDK iOS
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: de8291fc429ae6433301a47bfdf9a3271b1b77294fd58448c7aa6bd0783edc97
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f05929435eeee9cf3f891ab18842c5861e39d5ba
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036870"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494227"
 ---
 # <a name="get-started-with-the-ios-sdk"></a>Mise en route du SDK iOS
 
@@ -45,11 +45,36 @@ Commencez le processus en sélectionnant un espace de travail à utiliser, en s�
 
 - Si vous n’avez pas d’espace de travail existant, sélectionnez **Nouvel espace de travail** et suivez les étapes pour créer un [nouvel espace de travail](create-workspace.md).
 
+- Une fois que vous avez créé un espace de travail, accédez à **Administrateur** > **Espace de travail**, puis sélectionnez **Guide d’installation**.
+
 ## <a name="configure-the-sdk"></a>Configurer le SDK
 
-Une fois que vous avez téléchargé le SDK, vous pouvez l’utiliser dans Xcode pour activer et définir des événements.
+Une fois que vous avez téléchargé le SDK, vous pouvez l’utiliser dans Xcode pour activer et définir des événements. Deux méthodes sont disponibles :
 
-1. Une fois que vous avez créé un espace de travail, accédez à **Administrateur** > **Espace de travail**, puis sélectionnez **Guide d’installation**.
+### <a name="option-1-using-cocoapods-recommended"></a>Option 1 : utiliser CocoaPods (recommandé)
+CocoaPods est un gestionnaire de dépendances pour les projets Swift et Objective-C Cocoa. Son utilisation facilite l’intégration du SDK des informations sur l’engagement pour iOS. CocoaPods vous permet également d’effectuer une mise à niveau vers la dernière version du SDK des informations sur l’engagement. Voici comment utiliser CocoaPods pour intégrer le SDK des informations sur l’engagement dans votre projet Xcode. 
+
+1. Installez CocoaPods. 
+
+1. Créez un nouveau fichier appelé Podfile dans le répertoire racine de votre projet et ajoutez-y les instructions suivantes. Remplacez YOUR_TARGET_PROJECT_NAME par le nom de votre projet Xcode. 
+```objectivec
+platform :ios, '9.0'  
+
+ target '${YOUR_TARGET_PROJECT_NAME}' do 
+
+     use_frameworks!   
+
+     pod 'EIObjC.framework.debug' 
+
+     pod 'EIObjC.framework.release' 
+
+ end 
+```
+La configuration de pod ci-dessus contient à la fois les versions de débogage et de publication du SDK. Choisissez celle qui convient le mieux à votre projet.
+
+1. Installez le pod en exécutant la commande suivante : `pod install --repo-update `
+
+### <a name="option-2-using-download-link"></a>Option 2 : utiliser le lien de téléchargement
 
 1. Téléchargez le [SDK iOS des informations d’engagement](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-ios-sdk.zip) et placez le fichier `EIObjC.xcframework` dans le dossier `Frameworks`.
 

@@ -1,7 +1,7 @@
 ---
 title: Enrichir les profils clients unifiés
 description: Utilisez des fonctionnalités pour enrichir vos données client.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032525"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7469967"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enrichissement des profils clients (aperçu)
 
@@ -29,6 +29,7 @@ Vous devez disposer des autorisations Collaborateur ou Administrateur pour crée
 
 Sur l’onglet **Découvrir**, vous trouverez les enrichissements suivants :
 
+- [Azure Maps](enrichment-azure-maps.md) fourni par Microsoft
 - [Marques](enrichment-microsoft.md) fournies par Microsoft
 - [Intérêts](enrichment-microsoft.md) fournis par Microsoft
 - [Adresses améliorées](enrichment-enhanced-addresses.md) fournies par Microsoft
@@ -62,5 +63,17 @@ Les enrichissements tiers sont configurés à l’aide de [connexions](connectio
 ## <a name="multiple-enrichments-of-the-same-type"></a>Enrichissements multiples du même type
 
 L’entité à enrichir est spécifiée lors de la configuration de l’enrichissement, ce qui vous permet d’enrichir uniquement un sous-ensemble de vos profils. Par exemple, enrichissez les données uniquement pour un segment spécifique. Vous pouvez configurer plusieurs enrichissements du même type et réutiliser la même connexion. Certains enrichissements auront des limites au nombre d’enrichissements du même type pouvant être créés. Les limites et l’utilisation actuelle sont visibles sur la page **Enrichissement**.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Voir la progression du processus d’enrichissement
+
+Vous trouverez des détails sur le traitement d’un enrichissement, y compris son statut et les problèmes potentiels pendant son actualisation ou à la fin d’une actualisation. Comprenez les processus impliqués pour actualiser un enrichissement et leur durée d’exécution. Le statut d’enrichissement est pris en charge pour Experian, Leadspace, HERE Technologies, SFTP Import et Azure Maps.
+
+Pour voir le statut d’un enrichissement
+
+1. Accédez à **Données** > **Enrichissement**. 
+1. Dans l’onglet **Mes enrichissements**, sélectionnez le statut d’un enrichissement pour ouvrir un volet latéral. 
+1. Dans le volet **Détails de la progression**, développez la section **Enrichissements**. 
+1. Sous l’enrichissement dont vous souhaitez voir la progression, sélectionnez **Voir les détails**. 
+1. Dans le volet **Détails de la tâche**, sélectionnez **Afficher les détails** pour voir les processus impliqués dans la mise à jour de l’enrichissement et leur statut. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

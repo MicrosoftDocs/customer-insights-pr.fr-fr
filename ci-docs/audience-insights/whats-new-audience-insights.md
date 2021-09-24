@@ -1,7 +1,7 @@
 ---
 title: Fonctionnalités nouvelles et à venir
 description: Informations sur les nouvelles fonctionnalités, les améliorations et les corrections de bogues.
-ms.date: 07/19/2021
+ms.date: 08/31/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 3412213bcf3a4174baf28c6b4d38f5febded18707c355d236d5082698c4c0db7
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
+ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035960"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "7465202"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Nouveautés de la fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights
 
@@ -26,6 +26,15 @@ Nous déployons des mises à jour région par région. Ainsi, certaines régions
 
 > [!TIP]
 > Pour envoyer et voter sur les demandes de fonctionnalités et les suggestions de produits, accédez au [portail Idées d’application Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2021-updates"></a>Mises à jour d’août 2021
+
+Les mises à jour de juillet et août 2021 comprennent une nouvelle fonctionnalité, des mises à niveau des performances et des correctifs de bogues.
+
+### <a name="extensibility"></a>Extensibilité
+
+- **Exporter des segments vers Klaviyo** Nous avons étendu nos [destinations d’exportation pour inclure Klaviyo](export-klaviyo.md). Vous pouvez maintenant exporter des segments pour créer des campagnes, effectuer des activités marketing par e-mail et utiliser des groupes spécifiques de clients avec Klaviyo. 
+
 
 ## <a name="june-2021-updates"></a>Mises à jour de juin 2021
 

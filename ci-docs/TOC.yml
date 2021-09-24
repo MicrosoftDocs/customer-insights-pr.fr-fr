@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: Fonctionnalités nouvelles et mises à jour
       href: audience-insights/whats-new-audience-insights.md
-    - name: Créer un nouvel environnement
-      href: audience-insights/get-started-paid.md
+    - name: Prise en main
+      items:
+        - name: Guide de démarrage rapide
+          href: audience-insights/get-started.md
+        - name: Créer un nouvel environnement
+          href: audience-insights/get-started-paid.md
+        - name: Explorer les informations sur l’audience
+          href: audience-insights/home.md
     - name: Modules d’apprentissage
       items:
         - name: Ingérer des données
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Adresses améliorées
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Enrichissement avec Azure Maps
+          href: audience-insights/enrichment-azure-maps.md
         - name: Enrichissement avec HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Enrichissement avec Leadspace
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: Références d’API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Limites de service
-      href: audience-insights/service-limits.md
-    - name: Demandes DSR dans le cadre du RGPD
-      href: audience-insights/gdpr.md
 - name: Insights sur l’engagement (version préliminaire)
   items:
     - name: Centre d’aide
       href: engagement-insights/index.yml
     - name: Vue d’ensemble de la fonctionnalité
       href: engagement-insights/overview.md
-    - name: Essai gratuit
-      href: 'https://pi.dynamics.com/'
     - name: Prise en main
       items:
-        - name: Prise en main
+        - name: Guide de démarrage rapide
           href: engagement-insights/get-started.md
         - name: Créer un espace de travail
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: Gérer les environnements et les espaces de travail
           href: engagement-insights/manage-environments-workspaces.md
-        - name: Configurer les connexions
-          href: engagement-insights/configure-connections.md
         - name: Gérer les cookies et le consentement de l’utilisateur
           href: engagement-insights/user-consent-storage.md
-    - name: RGPD
-      items:
-        - name: Supprimer et exporter des données personnelles
-          href: engagement-insights/delete-export-personal-data.md
     - name: Disponibilité régionale
       href: engagement-insights/regional-availability.md
-    - name: Limites de service
-      href: engagement-insights/quotas.md
 - name: Intégrer les informations sur l’audience et sur l’engagement
   items:
     - name: Lier les informations sur l’audience et sur l’engagement
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: Utiliser les dimensions démographiques pour diviser les données comportementales
       href: engagement-insights/curate-dimensions.md
+- name: Limites de service
+  href: service-limits.md
+- name: Droits et demandes DSR
+  href: dsr-rights-requests.md
 - name: Obtenir de l’assistance
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'

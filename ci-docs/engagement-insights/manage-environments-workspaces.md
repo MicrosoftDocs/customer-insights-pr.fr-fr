@@ -4,17 +4,17 @@ description: Comment créer, renommer et supprimer des espaces de travail et des
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034039"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486032"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gérer les environnements et les espaces de travail
 
@@ -85,13 +85,11 @@ La suppression d'un espace de travail va supprimer définitivement la totalité 
 
 1. Sélectionnez **Ajouter des membres** pour donner accès et [attribuer des rôles](user-roles.md). Actuellement, seul l'**Administrateur de l'espace de travail** est disponible.
 
-1. Si vous configurez une [connexion à Informations sur l’audience](configure-connections.md), vous pouvez sélectionner **Autoriser l'accès aux données de profil** pour permettre au membre de voir les rapports basés sur des [profils utilisateur](profile-reports.md).
-
 1. Sélectionnez **Ajouter des membres** pour les ajouter à votre espace de travail.
 
 ## <a name="manage-an-environment"></a>Gérer un environnement
 
-En tant qu'administrateur d'environnement, vous pouvez accéder à un environnement à partir du volet de navigation de gauche. Vous pouvez configurer des paramètres d'environnement, d'autres administrateurs d'environnement, des espaces de travail et des [connexions à Informations sur l’audience](configure-connections.md). Sélectionnez des onglets pour vous déplacer entre différentes zones du centre d'administration.
+En tant qu'administrateur d'environnement, vous pouvez accéder à un environnement à partir du volet de navigation de gauche. Vous pouvez configurer les paramètres de l’environnement, d’autres administrateurs de l’environnement et les espaces de travail. Sélectionnez des onglets pour vous déplacer entre différentes zones du centre d'administration.
 
 :::image type="content" source="media/New-environment.png" alt-text="Centre d'administration de l'environnement.":::
 
@@ -123,8 +121,6 @@ En tant qu'administrateur d'environnement, vous pouvez accéder à un environnem
 
 1. Sélectionnez **Ajouter des membres** pour mettre à jour les membres et [attribuer des rôles](user-roles.md). Actuellement, seul l'**Administrateur de l’environnement** est disponible.
 
-1. Si vous configurez une [connexion à Informations sur l’audience](configure-connections.md), vous pouvez sélectionner **Autoriser l'accès aux données de profil** pour permettre au membre de voir les rapports basés sur des [profils utilisateur](profile-reports.md).
-
 1. Sélectionnez **Ajouter des membres** pour les ajouter à votre environnement.
 
 ### <a name="delete-an-environment"></a>Supprimer un environnement
@@ -143,7 +139,7 @@ Les administrateurs d'environnement peuvent supprimer des environnements. Avant 
 
 L'établissement de connexions à Informations sur l’audience vous permet d'afficher des rapports dans Informations sur l’engagement basés sur des profils clients unifiés. 
 
-Pour plus d’informations, consultez [Configurer des connexions](configure-connections.md).
+Pour plus d’informations, voir [Créer un lien entre les informations sur l’audience et les informations sur l’engagement](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Gérer les données personnelles
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 726edb19a9fd97d80ae357103dc7d48ed38b005131ad44137b47d629a1c60b12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45c81a037258e42d8975e0372c104865a9d4cbfe
+ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033858"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466621"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enrichir les profils client avec les affinités pour des marques et des intérêts (préversion)
 
@@ -126,6 +126,8 @@ Après avoir exécuté le processus d’enrichissement, allez dans **Mes enrichi
 :::image type="content" source="media/my-enrichments.png" alt-text="Aperçu des résultats après l’exécution du processus d’enrichissement.":::
 
 Consultez les données enrichies en sélectionnant **Afficher les données enrichies** dans le graphique. Les données enrichies pour les marques vont dans l’entité **MarqueAffinitéDeMicrosoft**. Les données pour les intérêts se trouvent dans l’entité **InterestAffinityFromMicrosoft**. Vous trouverez également ces entités répertoriées dans le groupe **Enrichissement** dans **Données** > **Entités**.
+
+Vous verrez un graphique avec le nombre de profils clients enrichis au fil du temps et un aperçu de l’entité enrichie. Sélectionnez **Afficher plus** dans la vignette d’aperçu pour ouvrir l’entité enrichie.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Voir les données d’enrichissement sur la carte client
 

@@ -1,20 +1,20 @@
 ---
 title: Activités du client
-description: Définissez les activités client et affichez-les dans la chronologie client.
-ms.date: 04/07/2021
+description: Définissez les activités clientes et visualisez-les dans une chronologie des profils clients.
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033628"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494408"
 ---
 # <a name="customer-activities"></a>Activités du client
 
@@ -60,12 +60,15 @@ Vos sources de données peuvent inclure des entités avec des données transacti
       - **Détails supplémentaires** : champ avec des informations pertinentes pour cette activité.
       - **Icône** : icône qui représente le mieux ce type d’activité.
       - **Adresse web** : champ contenant une URL avec des informations sur cette activité. Par exemple, le système transactionnel d’où provient cette activité. Cette URL peut être n’importe quel champ de la source de données, ou elle peut être construite comme un nouveau champ à l’aide d’une transformation Power Query. Les données de l’URL seront stockées dans l’entité *Activité unifiée*, qui peut être consommée en aval en utilisant les [API](apis.md).
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Spécifiez les données de l’activité client dans une entité Activité unifiée.":::
+
+   - **Afficher dans la chronologie**
+      - Choisissez si vous voulez afficher cette activité dans la vue chronologique de vos profils clients. Sélectionnez **Oui** pour afficher l’activité dans la chronologie ou **Non** pour la masquer.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Spécifiez les données de l’activité client dans une entité Activité unifiée.":::
 
 1. Sélectionnez **Suivant** pour passer à l’étape suivante. Vous pouvez sélectionner **Terminer et réviser** pour enregistrer l’activité maintenant avec le type d’activité défini sur **Autre**. 
 
-1. Dans l’étape **Type d’activité**, choisissez le type d’activité et, éventuellement, sélectionnez si vous souhaitez mapper sémantiquement certains des types d’activités pour les utiliser dans d’autres zones de Customer Insights. Actuellement, les types d’activité *Abonnement* et *SalesOrderLine* peuvent être mappés sémantiquement après avoir accepté de mapper les champs. Si un type d’activité n’est pas pertinent pour la nouvelle activité, vous pouvez choisir *Autre* ou *Créer* pour un type d’activité personnalisé.
+1. Dans l’étape **Type d’activité**, choisissez le type d’activité et, éventuellement, sélectionnez si vous souhaitez mapper sémantiquement certains des types d’activités pour les utiliser dans d’autres zones de Customer Insights. Actuellement, les types d’activité *Commentaires*, *Fidélité*, *SalesOrder*, *SalesOrderLine* et *Abonnement* peuvent être mappés sémantiquement après avoir accepté de mapper les champs. Si un type d’activité n’est pas pertinent pour la nouvelle activité, vous pouvez choisir *Autre* ou *Créer* pour un type d’activité personnalisé.
 
 1. Sélectionnez **Suivant** pour passer à l’étape suivante. 
 

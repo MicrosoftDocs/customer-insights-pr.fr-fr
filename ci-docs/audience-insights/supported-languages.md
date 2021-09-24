@@ -1,24 +1,23 @@
 ---
-title: Langues prises en charge pour les informations sur l’audience
+title: Langues prises en charge pour Dynamics 365 Customer Insights
 description: Comprenez et configurez la prise en charge des langues.
-ms.date: 02/26/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e9161ebbfdf3ae6c48c12cdf7515b77ca49ae8055ae9a69f9ec314bc1247aeaf
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f80c3019df9b5d82273842ca6f6f18bef0239687
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035136"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483339"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>Langues prises en charge pour la fonctionnalité d’informations sur l’audience
+# <a name="supported-languages-for-dynamics-365-customer-insights"></a>Langues prises en charge pour Dynamics 365 Customer Insights
 
-Les informations sur l’audience pour Dynamics 365 Customer Insights sont traduites dans de nombreuses langues. La liste suivante contient les langues disponibles et des informations sur ce qui est traduit. Vous pouvez également en savoir plus sur la modification des paramètres de langue. 
+Dynamics 365 Customer Insights est traduit dans de nombreuses langues. La liste suivante contient les langues disponibles et des informations sur ce qui est traduit. Vous pouvez également en savoir plus sur la modification des paramètres de langue. 
 
 ## <a name="languages"></a>Langues
 
@@ -69,7 +68,7 @@ Les informations sur l’audience pour Dynamics 365 Customer Insights sont tradu
 
 ## <a name="whats-translated"></a>Contenu traduit
 
-L’application utilise votre préférence de langue pour afficher des éléments tels que le menu, le libellé de l’étiquette et les messages système dans votre langue préférée.
+Customer Insights utilise vos préférences de langue pour afficher des éléments tels que le menu, le texte des étiquettes et les messages système dans votre langue.
 
 Étant donné que la plupart des fonctionnalités sont basées sur vos données, certains éléments restent dans leur langue d’origine. Par exemple :
 

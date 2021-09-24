@@ -1,8 +1,8 @@
 ### YamlMime:Landing
-title: Fonction Informations sur l’engagement (version préliminaire) dans Dynamics 365 Customer Insights
+title: Fonctionnalité d’informations sur l’engagement dans Dynamics 365 Customer Insights (version préliminaire)
 summary: Collectez des données pour vos sites Web. Comprenez les interactions et l'utilisation des clients sur vos sites, de manière interactive. Utilisez l'intégration étroite entre Informations sur l'engagement et Informations sur l’audience pour enrichir vos analyses comportementales en temps réel avec des rapports de profil client. Enrichissez les profils des clients avec des activités Web pour obtenir des données comportementales en temps réel ainsi que des données client pertinentes. Transformez votre entreprise pour tirer une valeur immédiate de vos données clients.
 metadata:
-  title: Documentation sur Informations sur l'engagement (version préliminaire)
+  title: Documentation des informations sur l’engagement (version préliminaire)
   description: Centre d'aide avec des liens clés pour Informations sur l'engagement.
   ms.service: customer-insights
   ms.subservice: engagement-insights
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036235"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494181"
 landingContent:
 - title: À propos
   linkLists:
   - linkListType: overview
     links:
-    - text: Vue d’ensemble de la fonctionnalité
+    - text: Avantages de la fonctionnalité
       url: overview.md
-    - text: Termes et concepts
+    - text: Glossaire des termes
       url: glossary.md
-    - text: Découvrir les informations sur l’engagement
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Fonctionnalités nouvelles et mises à jour
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Intégration
   linkLists:
   - linkListType: how-to-guide
@@ -38,33 +38,35 @@ landingContent:
       url: create-workspace.md
     - text: Instrumenter votre site web
       url: instrument-website.md
-- title: Rapports
+- title: Afficher et filtrer les rapports
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Afficher les rapports
       url: view-reports.md
-    - text: Créer des rapports personnalisés
-      url: custom-reports.md
     - text: Afficher le rapport sur les profils unifiés
       url: profile-reports.md
-    - text: Créer des rapports d’entonnoir
-      url: funnel-reports.md
-- title: Événements
+    - text: Utiliser des segments d’audience pour filtrer les rapports
+      url: integrate-audience-insights-segments.md
+- title: Analyser
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Créer des rapports d’entonnoir
+      url: funnel-reports.md
+    - text: Analyser les données comportementales
+      url: curate-dimensions.md
+    - text: Créer des rapports personnalisés
+      url: custom-reports.md
     - text: Créer des événements affinés
       url: refined-events.md
     - text: Événements d’exportation
       url: export-events.md
-    - text: Supprimer et exporter des données personnelles
-      url: delete-export-personal-data.md
-- title: Ressources du développeur
+- title: Ressources pour les développeurs
   linkLists:
   - linkListType: reference
     links:
-    - text: Ressources du développeur
+    - text: Ressources pour les développeurs
       url: developer-resources.md
     - text: Exemple WebSDK
       url: websdk-sample.md
@@ -81,6 +83,10 @@ landingContent:
     - text: Gérer les environnements et les espaces de travail
       url: manage-environments-workspaces.md
     - text: Se connecter aux informations sur l’audience
-      url: configure-connections.md
+      url: integrate-audience-insights-engagement-insights.md
     - text: Gérer les cookies et le consentement de l’utilisateur
       url: user-consent-storage.md
+    - text: Supprimer et exporter des données personnelles
+      url: delete-export-personal-data.md
+    - text: Limites de service
+      url: ../service-limits.md

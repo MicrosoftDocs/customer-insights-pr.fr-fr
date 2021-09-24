@@ -4,17 +4,17 @@ description: Comment utiliser des rapports d'entonnoir pour comprendre comment l
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032252"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498639"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Créer et gérer des rapports d'entonnoir
 
@@ -158,4 +158,21 @@ Vous pouvez changer le nom d'un rapport d'entonnoir, le supprimer ou modifier le
 1. Sélectionnez le nom du rapport à ouvrir.
 
 1. Sélectionnez l'étape que vous souhaitez supprimer, puis sélectionnez **Supprimer**.
+
+## <a name="funnel-insights"></a>Informations de synthèse 
+
+Les informations sur l’engagement offrent maintenant des informations de synthèse pour les clients. Utilisez les informations de synthèse pour mieux comprendre le comportement des clients dans les étapes de votre rapport de synthèse. Lorsque vous créez et enregistrez un nouveau rapport de synthèse, les informations de synthèse sont automatiquement générées pour votre rapport. 
+
+Vous pouvez voir les informations de synthèse des catégories suivantes, aussi bien au niveau principal qu’au niveau des étapes : 
+
+ - Taux de conversion 
+ - Temps de transition 
+ - Temps d’exécution 
+
+Utilisez ces informations pour explorer en détail le comportement des clients et mieux comprendre les points de sortie et les conversions pour votre rapport de synthèse. 
+
+Les informations de synthèse sont recalculées toutes les 24 heures ou lorsque vous **enregistrez** votre rapport de synthèse. 
+
+> [!NOTE]
+> Pour voir les informations de synthèse, vous devez enregistrer votre rapport chaque fois que vous apportez des modifications. 
 

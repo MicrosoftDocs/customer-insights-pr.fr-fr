@@ -1,20 +1,20 @@
 ---
 title: Prédiction de recommandation de produit
 description: Prédisez les produits qu’un client est susceptible d’acheter ou avec lesquels interagir.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034953"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494536"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Prédiction de recommandation de produit (version préliminaire)
 
@@ -85,27 +85,28 @@ Si vous souhaitez essayer cette fonctionnalité mais que vous ne disposez pas de
 
 1. Si vous avez choisi de *ne pas* recommander des produits récemment achetés, définissez la **Fenêtre de consultation**. Ce paramètre spécifie le délai d’exécution que le modèle considère avant de recommander à nouveau le produit à l’utilisateur. Par exemple, indiquez qu’un client achète un ordinateur portable tous les deux ans. Cette fenêtre examinera l’historique des achats sur les deux dernières années, et si elle trouve un article, celui-ci sera filtré des recommandations.
 
-1. Cliquez sur **Suivant**.
+1. Sélectionnez **Suivant**.
 
 ### <a name="add-required-data"></a>Ajouter les données requises
 
-1. Sélectionnez **Ajouter des données** pour **Historique des transactions utilisateur** et choisissez l’entité qui fournit les informations sur l’historique des transactions/achats comme décrit dans les [conditions préalables](#prerequisites).
+1. Sélectionnez **Ajouter des données** et choisissez le type d’activité dans le volet latéral qui contient les informations requises sur l’historique des transactions ou des achats.
 
-1. Mappez les champs sémantiques aux attributs de votre entité d’historique des achats et sélectionnez **Suivant**. Pour une obtenir une description des champs, consultez les [conditions préalables](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Définissez la relation entre les entités.](media/product-recommendation-purchasehistorymapping.PNG "Page d’historique des achats affichant les attributs sémantiques mappés aux champs de l’entité d’historique des achats sélectionnée")
+1. Sous **Choisir les activités**, choisissez les activités spécifiques de l’activité sélectionnée sur lesquelles vous souhaitez que le calcul se concentre.
 
-1. Si les champs ne sont pas renseignés, configurez la relation entre votre entité d’historique des achats et l’entité *Client*.
-    1. Sélectionnez l’**Entité d’historique des achats**.
-    1. Sélectionnez le **Champ** qui identifie le client dans l’entité d’historique des achats. Il doit être lié à l’ID client principal de votre entité *client*.
-    1. Sélectionnez l’**Entité client** qui correspond à votre entité client principale.
-    1. Entrez un nom qui décrit la relation.
-       > [!div class="mx-imgBorder"]
-       > ![Page Historique des achats illustrant la création d’une relation avec le client.](media/model-purchase-join.png "Page Historique des achats illustrant la création d’une relation avec le client")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Volet latéral affichant le choix d’activités spécifiques de type sémantique.":::
+
+1. Si vous n’avez pas encore associé l’activité à un type sémantique, sélectionnez **Modifier**. L’expérience guidée pour associer les activités sémantiques s’ouvre. Associez vos données aux champs correspondants dans le type d’activité sélectionné.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Page définissant le type d’activité.":::
+
+1. Après avoir associé l’activité au type sémantique correspondant, sélectionnez **Suivant** pour continuer 
+ 
+1. Associez les attributs sémantiques aux champs requis pour exécuter le modèle.
 
 1. Sélectionnez **Enregistrer**.
 
-1. Cliquez sur **Suivant**.
+1. Sélectionnez **Suivant**.
+
 
 ### <a name="configure-product-filters"></a>Configurer les filtres de produit
 

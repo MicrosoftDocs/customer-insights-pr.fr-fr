@@ -4,17 +4,17 @@ description: Apprenez à personnaliser et à exécuter le SDK Android
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 77e63929bbcc7ecff34a3839af525b76ec3c7f21173ddc5f8f2d69f11c25c441
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a060ac60db71a7b0fb8c0d7a3b0e266004fbee6a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036915"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494272"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Mise en route du SDK Android
 
@@ -35,17 +35,38 @@ Les options de configuration suivantes peuvent être transmises au SDK :
 
 - Une clé d’ingestion (voir ci-dessous les instructions pour savoir comment l’obtenir)
 
-## <a name="step-1-integrate-the-sdk-into-your-application"></a>Étape 1. Intégrer le SDK dans votre application
+## <a name="integrate-the-sdk-into-your-application"></a>Intégrer le SDK dans votre application
 Commencez le processus en sélectionnant un espace de travail, en sélectionnant la plateforme mobile Android et en téléchargeant le SDK Android.
 
 - Utilisez le sélecteur d’espaces de travail dans le volet de navigation de gauche pour sélectionner votre espace de travail.
 
 - Si vous n’avez pas d’espace de travail existant, sélectionnez **Nouvel espace de travail** et suivez les étapes pour créer un [nouvel espace de travail](create-workspace.md).
 
-## <a name="step-2-configure-the-sdk"></a>Étape 2. Configurer le SDK
+- Une fois que vous avez créé un espace de travail, accédez à **Administrateur** > **Espace de travail**, puis sélectionnez **Guide d’installation**. 
 
-1. Une fois que vous avez créé un espace de travail, accédez à **Administrateur** > **Espace de travail**, puis sélectionnez **Guide d’installation**. 
+## <a name="configure-the-sdk"></a>Configurer le SDK
 
+Une fois que vous avez téléchargé le SDK, vous pouvez l’utiliser dans Android Studio pour activer et définir des événements. Deux méthodes sont disponibles :
+### <a name="option-1-using-jitpack-recommended"></a>Option 1 : utiliser JitPack (recommandé)
+1. Ajoutez le référentiel JitPack à votre racine `build.gradle` :
+    ```gradle
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    ```
+
+1. Ajoutez la dépendance :
+    ```gradle
+    dependencies {
+        implementation 'com.github.microsoft:engagementinsights-sdk-android:1.0.0'
+        api 'com.google.code.gson:gson:2.8.1'
+    }
+    ```
+
+### <a name="option-2-using-download-link"></a>Option 2 : utiliser le lien de téléchargement
 1. Téléchargez le [SDK Android des informations d’engagement](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) et placez le fichier `eiandroidsdk-debug.aar` dans le dossier `libs`.
 
 1. Ouvrez le fichier `build.gradle` au niveau de votre projet et ajoutez les extraits de code suivants :
@@ -62,7 +83,17 @@ Commencez le processus en sélectionnant un espace de travail, en sélectionnant
     }
     ```
 
-1. Paramétrez la configuration du SDK des informations d’engagement via votre fichier `AndroidManifest.xml` situé dans le dossier `manifests`. 
+1. Ajoutez une autorisation pour le réseau et Internet dans votre fichier `AndroidManifest.xml` situé sous le dossier `manifests`. 
+    ```xml
+    <manifest>
+        ...
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    ```
+    
+1. Paramétrez la configuration du SDK des informations sur l’engagement via votre fichier `AndroidManifest.xml`. 
+
+## <a name="enable-auto-instrumentation"></a>Activer l’auto-instrumentation
 1. Copiez l’extrait de code XML à partir du **Guide d’installation**. `Your-Ingestion-Key` devrait être automatiquement renseigné.
 
    > [!NOTE]
@@ -85,7 +116,7 @@ Commencez le processus en sélectionnant un espace de travail, en sélectionnant
    </application>
    ```
 
-1. Activez ou désactivez la capture automatique des événements `View` en définissant le champ `autoCapture` ci-dessus sur `true` ou `false`.
+1. Activez ou désactivez la capture automatique des événements `View` en définissant le champ `autoCapture` ci-dessus sur `true` ou `false`. Actuellement, les événements `Action` doivent être ajoutés manuellement.
 
 1. (Facultatif) D’autres configurations comprennent la définition de l’URL du collecteur du point de terminaison. Elles peuvent être ajoutées dans les métadonnées de la clé d’ingestion dans `AndroidManifest.xml` :
     ```xml
@@ -94,9 +125,9 @@ Commencez le processus en sélectionnant un espace de travail, en sélectionnant
             android:value="https://some-endpoint-url.com" />
     ```
 
-## <a name="step-3-initialize-the-sdk-from-mainactivity"></a>Étape 3. Initialiser le SDK à partir de MainActivity 
+## <a name="implement-custom-events"></a>Implémenter des événements personnalisés
 
-Une fois que vous avez initialisé le SDK, vous pouvez utiliser les événements et leurs propriétés dans l’environnement MainActivity.
+Une fois que vous avez initialisé le SDK, vous pouvez utiliser les événements et leurs propriétés dans l’environnement `MainActivity`.
 
     
 Java :
@@ -147,7 +178,7 @@ event.setProperty("ad_shown", true)
 analytics.trackEvent(event)
 ```
 
-### <a name="set-user-details-for-your-event-optional"></a>Définir les détails de l’utilisateur pour votre événement (facultatif)
+## <a name="set-user-details-for-your-event-optional"></a>Définir les détails de l’utilisateur pour votre événement (facultatif)
 
 Le SDK vous permet de définir les informations utilisateur qui peuvent être envoyées avec chaque événement. Vous pouvez spécifier les informations de l’utilisateur en appelant l’API `setUser(user: User)` au niveau de `Analytics`.
 
