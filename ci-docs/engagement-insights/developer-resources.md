@@ -4,27 +4,27 @@ description: Trouvez des informations sur les SDK et leur utilisation.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5880e9507cc192424989c7fc9c2733ac5d770a7be8a2b42a446ffd8681fa7612
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2e2df207802f8de501661d247bd80d6cc792636f
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036280"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558743"
 ---
 # <a name="developer-resources-overview"></a>Vue d’ensemble des ressources du développeur
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Cet article répertorie tous les extraits de code et exemples disponibles pour une référence rapide. Obtenez le code d'un expéditeur d'événement pour votre plateforme et suivez les didacticiels. 
+Cet article répertorie tous les extraits de code et exemples du kit de développement logiciel (SDK) disponibles que les développeurs peuvent utiliser pour partager des données avec Dynamics 365 Customer Insights. Obtenez le code des événements spécifiques à votre plateforme en suivant les didacticiels.
 
 ## <a name="capture-events-from-websites"></a>Capturer des événements à partir de sites Web
 
-- [Comment ajouter l'extrait de code sur un site Web](instrument-website.md)
+- [Instrumentation d’un site web](instrument-website.md)
 - [Exemple de SDK web](websdk-sample.md)
 - [Instrumentation Web avancée avec un SDK](advanced-SDK-implementation.md)
 

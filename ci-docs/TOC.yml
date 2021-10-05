@@ -242,7 +242,7 @@
   items:
     - name: Centre d’aide
       href: engagement-insights/index.yml
-    - name: Vue d’ensemble de la fonctionnalité
+    - name: À propos des informations sur l’engagement
       href: engagement-insights/overview.md
     - name: Prise en main
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Disponibilité régionale
       href: engagement-insights/regional-availability.md
-- name: Intégrer les informations sur l’audience et sur l’engagement
+- name: Partager des données entre les fonctionnalités
   items:
     - name: Lier les informations sur l’audience et sur l’engagement
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: Droits et demandes DSR
   href: dsr-rights-requests.md
-- name: Obtenir de l’assistance
-  href: 'https://dynamics.microsoft.com/support/'

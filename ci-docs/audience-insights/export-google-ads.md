@@ -1,7 +1,7 @@
 ---
 title: Exporter des données Customer Insights vers Google Ads
 description: Apprenez à configurer la connexion et à exporter vers Google Ads.
-ms.date: 03/03/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,16 +9,19 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5977b3de9fbb0d97c0912e2ada6a313b0ab92498adf9cdbed48191c0e5143567
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031654"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558952"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exporter des segments vers Google Ads (version préliminaire)
 
 Exportez des segments de profils clients unifiés vers une liste d’audience Google Ads et utilisez-les pour faire de la publicité dans Google Search, Gmail, YouTube et le Réseau Display de Google. 
+
+> [!IMPORTANT]
+> Actuellement, vous ne pouvez créer une nouvelle connexion et exporter des données vers Google Ads que si vous disposez déjà d’un jeton de développeur Google Ads approuvé. En raison des modifications de stratégie, nous mettrons bientôt à jour l’exportation Google Ads et fournirons une option d’exportation qui ne nécessitera pas de jeton de développeur pour assurer la continuité de votre expérience et simplifier l’exportation vers Google Ads. Nous vous recommandons de ne pas configurer d’autres connexions à Google Ads pour faciliter la transition vers la nouvelle option d’exportation.
 
 ## <a name="prerequisites-for-connection"></a>Conditions préalables à une connexion
 

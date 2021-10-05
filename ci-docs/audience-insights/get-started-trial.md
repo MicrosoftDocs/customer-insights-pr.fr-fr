@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: f038dedd369ac9e623146b66528efa87c47a8c23769037d8709fa9b804a0b723
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3a235e924395a606b9332de3d205289288a597a9
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035412"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558820"
 ---
 # <a name="set-up-a-trial-environment"></a>Configurer un environnement de version d’essai 
 
@@ -95,7 +95,7 @@ Vous pouvez désormais utiliser les données ingérées pour adapter Customer I
 
 - Par défaut, les versions d’essai sont actives pendant 30 jours. Cependant, vous pouvez les prolonger après le 23ème jour lorsque vous vous connectez à votre version d’essai.
 - Vous ne pouvez pas utiliser votre propre compte Azure Data Lake Storage pour stocker des données de sortie pendant un essai. Cependant, vous pouvez ingérer des données à partir d’un compte de Data Lake Storage.
-- Vous pouvez stocker jusqu'à 3 Go de données dans l’environnement Dataverse mis en service automatiquement lorsque vous démarrez un essai Customer Insights.
+- Vous pouvez stocker jusqu’à 3 Go de données dans l’environnement Dataverse qui est mis en service automatiquement lorsque vous démarrez un essai de Customer Insights.
 
 ## <a name="copy-data-from-a-trial-to-a-paid-subscription"></a>Copier les données d’une version d’essai vers un abonnement payant
 

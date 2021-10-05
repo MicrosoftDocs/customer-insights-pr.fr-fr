@@ -4,16 +4,16 @@ description: En savoir plus sur les régions et les zones géographiques dans le
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 09/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: d4ae7a085ba68c482372868e75376b6f769325d7
+ms.sourcegitcommit: ce2c011f06999dba2e886b8804d3439fbf67074d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483294"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "7564591"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Disponibilité régionale de Dynamics 365 Customer Insights
 
@@ -23,7 +23,7 @@ Les informations sur l’engagement, une fonctionnalité de Dynamics 365 Custome
 
 Lorsque vous configurez les informations sur l’engagement pour la première fois, vous pouvez choisir la région tout en parcourant l’[expérience guidée de première exécution](quickstart.md). Par la suite, chaque nouvel environnement vous permet de choisir la région dans laquelle les données seront stockées.
 
-Actuellement, il existe deux zones géographiques : États-Unis et Europe. Les utilisateurs peuvent choisir entre la région ouest des États-Unis et la région de l'Europe du Nord.
+Actuellement, nous prenons en charge les zones géographiques des États-Unis et de l’Europe. Les utilisateurs peuvent choisir entre ces régions : l’Ouest des États-Unis, l’Est des États-Unis, l’Europe du Nord et l’Europe de l’Ouest.
 
 Une organisation peut maintenir des environnements dans différentes régions. Par exemple, l'environnement A stocke des données dans la région ouest des États-Unis et l'environnement B en Europe du Nord.
 

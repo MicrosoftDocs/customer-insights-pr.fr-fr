@@ -1,20 +1,20 @@
 ---
 title: Relations entre des entités et des chemins d’accès d’entités
 description: Créez et gérez les relations entre des entités à partir de plusieurs sources de données.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035228"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557349"
 ---
 # <a name="relationships-between-entities"></a>Relations entre les entités
 
@@ -93,11 +93,11 @@ Options disponibles :
 - **Changer en disposition horizontale/verticale** : Modifiez l'alignement des entités et des relations.
 - **Modifier** : Mettez à jour les propriétés des relations personnalisées dans le volet d'édition et enregistrez les modifications.
 
-### <a name="relationship-path"></a>Chemin d’accès vers la relation
+## <a name="relationship-paths"></a>Chemins d’accès de relation
 
-Le chemin d’accès à la relation décrit les entités connectées aux relations entre une entité source et une entité cible. Il est utilisé lors de la création d’un segment ou d’une mesure qui inclut d’autres entités que l’entité de profil unifié et il existe plusieurs options pour atteindre l’entité de profil unifié.
+Un chemin d’accès de relation décrit les entités connectées avec des relations entre une entité source et une entité cible. Il est utilisé lors de la création d’un segment ou d’une mesure qui inclut d’autres entités que l’entité de profil unifié et il existe plusieurs options pour atteindre l’entité de profil unifié. 
 
-Le chemin d’accès à la relation indique au système par quelles relations accéder à l’entité de profil unifié. Différents chemins d’accès à la relation peuvent donner des résultats différents.
+Un chemin d’accès de relation informe le système par quelles relations accéder à l’entité de profil unifié. Différents chemins d’accès à la relation peuvent donner des résultats différents.
 
 Par exemple, l’entité *eCommerce_eCommercePurchases* a les relations suivantes avec l’entité *Client* de profil unifié :
 
@@ -105,7 +105,43 @@ Par exemple, l’entité *eCommerce_eCommercePurchases* a les relations suivante
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Client
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Client 
 
-Le chemin d’accès à la relation détermine les entités que vous pouvez utiliser lors de la création des règles pour les mesures ou les segments. Choisir l’option avec le chemin d’accès à la relation le plus long renvoie probablement moins de résultats car les enregistrements correspondants doivent faire partie de toutes les entités. Dans cet exemple, un client doit avoir acheté des marchandises via le commerce électronique (eCommerce_eCommercePurchases), dans un point de vente (POS_posPurchases) et participer à notre programme de fidélité (loyaltyScheme_loyCustomers). En choisissant la première option, vous obtiendrez probablement plus de résultats car les clients ne doivent exister que dans une seule entité supplémentaire.
+Un chemin d’accès de relation détermine les entités que vous pouvez utiliser lors de la création de règles pour les mesures ou les segments. Choisir l’option avec le chemin d’accès à la relation le plus long renvoie probablement moins de résultats car les enregistrements correspondants doivent faire partie de toutes les entités. Dans cet exemple, un client doit avoir acheté des marchandises via le commerce électronique (eCommerce_eCommercePurchases), dans un point de vente (POS_posPurchases) et participer à notre programme de fidélité (loyaltyScheme_loyCustomers). En choisissant la première option, vous obtiendrez probablement plus de résultats car les clients ne doivent exister que dans une seule entité supplémentaire.
+
+### <a name="direct-relationship"></a>Relation directe
+
+Une relation est classée comme une **relation directe** lorsqu’une entité source est liée à une entité cible avec une seule relation.
+
+Par exemple, si une entité d’activité appelée *eCommerce_eCommercePurchases* est liée à une entité cible *eCommerce_eCommerceContacts* via *ContactId* uniquement, il s’agit d’une relation directe.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="L’entité source se connecte directement à l’entité cible.":::
+
+#### <a name="multi-path-relationship"></a>Relation à plusieurs chemins d’accès
+
+Une **relation à plusieurs chemins d’accès** est un type spécial de relation directe qui connecte une entité source à plusieurs entités cibles.
+
+Par exemple, si une entité d’activité appelée *eCommerce_eCommercePurchases* est liée à deux entités cibles, à la fois *eCommerce_eCommerceContacts* et *loyaltyScheme_loyCustomers*, il s’agit d’une relation à plusieurs chemins d’accès.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="L’entité source se connecte directement à plusieurs entités cibles par le biais d’une relation à plusieurs sauts.":::
+
+### <a name="indirect-relationship"></a>Relation indirecte
+
+Une relation est classée comme une **relation indirecte** lorsqu’une entité source est liée à une ou plusieurs entités supplémentaires avant d’être liée à une entité cible.
+
+#### <a name="multi-hop-relationship"></a>Relation à plusieurs sauts
+
+Une *relation à plusieurs sauts* est une *relation indirecte* qui vous permet de connecter une entité source à une entité cible par le biais d’une ou de plusieurs autres entités intermédiaires.
+
+Par exemple, si une entité d’activité appelée *eCommerce_eCommercePurchasesWest* se connecte à une entité intermédiaire appelée *eCommerce_eCommercePurchasesEast*, puis se connecte à une entité cible appelée *eCommerce_eCommerceContacts*, il s’agit d’une relation à plusieurs sauts.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="L’entité source se connecte directement à une entité cible avec une entité intermédiaire.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Relation à plusieurs sauts et plusieurs chemins d’accès
+
+Les relations à plusieurs sauts et plusieurs chemins d’accès peuvent être utilisées ensemble pour créer des **relations à plusieurs sauts et plusieurs chemins d’accès**. Ce type spécial combine les fonctions des relations à **plusieurs sauts** et **plusieurs chemins d’accès**. Il vous permet de vous connecter à plusieurs entités cibles tout en utilisant des entités intermédiaires.
+
+Par exemple, si une entité d’activité appelée *eCommerce_eCommercePurchasesWest* se connecte à une entité intermédiaire appelée *eCommerce_eCommercePurchasesEast*, puis se connecte à deux entités cibles, à la fois *eCommerce_eCommerceContacts* et *loyaltyScheme_loyCustomers*, il s’agit d’une relation à plusieurs sauts et plusieurs chemins d’accès.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="L’entité source se connecte directement à une entité cible et se connecte à une autre entité cible par le biais d’une entité intermédiaire.":::
 
 ## <a name="manage-existing-relationships"></a>Gérer les relations existantes 
 
