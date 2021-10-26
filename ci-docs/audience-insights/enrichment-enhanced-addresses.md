@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: fb3fee72b3420c636d549b600c468c574ee33a662bfafd096247dfddf40150bd
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f56be1f4ecdac124ed76a0fb0eb1e313099248bf
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032663"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643393"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enrichissement des profils client avec des adresses améliorées
 
@@ -23,6 +23,8 @@ Les adresses dans vos données peuvent être non structurées, incomplètes ou i
 ## <a name="how-we-enhance-addresses"></a>Valorisation des adresses
 
 Notre modèle passe par un processus en deux étapes pour améliorer une adresse. Tout d’abord, il analyse l’adresse pour identifier ses composants, puis les met dans un format structuré. Ensuite, nous utilisons l’IA pour corriger, compléter et normaliser les valeurs de l’adresse.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
 
 ### <a name="example"></a>Exemple
 
@@ -102,6 +104,6 @@ Vous pouvez accéder à une vue détaillée de chaque profil enrichi en sélecti
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Exploitez vos données client enrichies. Créez des [segments](segments.md) et des [mesures](measures.md) et [exportez les données](export-destinations.md) pour offrir des expériences personnalisées à vos clients.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

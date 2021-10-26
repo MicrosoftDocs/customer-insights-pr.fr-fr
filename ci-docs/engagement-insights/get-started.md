@@ -4,18 +4,18 @@ description: Un aperçu des ressources d'aide pour démarrer rapidement.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 08/31/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 644b125f5d140627d357630ded88dd6838d6edb7
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 3505c15c4319c8cc8823bcd89d3b8adc944a87dd
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494591"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623674"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>Démarrer avec la fonction Informations sur l’engagement Dynamics 365 Customer Insights (version préliminaire publique)
 
@@ -43,29 +43,43 @@ La première fois que vous consultez les informations sur l’engagement, vous p
 
 1. Explorez le produit à l'aide d'un ensemble d'exemples de données.
 
-##  <a name="step-3-set-up-a-workspace-and-add-code-to-your-website"></a>Étape 3 : Configurer un espace de travail et ajouter du code à votre site Web
+##  <a name="step-3-set-up-a-workspace-and-create-reports"></a>Étape 3 : Configurer un espace de travail et créer des rapports
 
 Un espace de travail est l’emplacement où vous pouvez voir l’activité de l’utilisateur en temps réel, et stocker et gérer les rapports. Ajoutez du code à votre site Web pour commencer à collecter des *événements*, les données d'activité provenant des utilisateurs.
 
 1. [Créer un espace de travail](create-workspace.md) et ajouter des membres.
 
-1. [Ajoutez du code à votre site Web](instrument-website.md) ou votre [application mobile](developer-resources.md#capture-events-from-mobile-apps) pour voir l’activité utilisateur qui arrive dans votre espace de travail.
+1. Ajoutez du code à votre [site web](instrument-website.md) ou votre [application mobile](developer-resources.md#capture-events-from-mobile-apps) pour voir l’activité utilisateur qui arrive dans votre espace de travail.
 
 1. Affichez un [rapport en temps réel](view-reports.md) qui affiche les utilisateurs actifs par navigateur, appareil, système d’exploitation, emplacement et langue. Vous pouvez également créer des [rapports personnalisés](custom-reports.md) pour créer vos propres visualisations.
+
+1. Créez des [dimensions](dimensions.md) pour trier les visiteurs par utilisateurs nouveaux et anciens, des [métriques](metrics.md) pour aider à mieux comprendre le comportement des utilisateurs et des [segments](segments.md) pour identifier des sous-ensembles de visiteurs en fonction de caractéristiques ou d’interactions avec le site web.
     
 ## <a name="step-4-export-data-to-other-channels"></a>Étape 4 : Exporter les données vers d'autres canaux
 
-Vous pouvez créer des *événements affinés* (une vue virtuelle) de vos données d'analyse Web. Vous pouvez ensuite filtrer et exporter les données vers Azure Data Lake Storage. Vous pouvez ingérer les données exportées en tant que source de données. Pour plus d’informations, voir [Créer un lien entre les informations sur l’audience et les informations sur l’engagement](integrate-audience-insights-engagement-insights.md).
+Vous pouvez créer des *événements affinés* (une vue virtuelle) de vos données d'analyse Web. Vous pouvez ensuite filtrer et exporter les données vers Azure Data Lake Storage. Vous pouvez ingérer les données exportées en tant que source de données.
 
 1. [Créez des événements affinés](refined-events.md) pour l'exportation.
 
-1. [Exportez les données](export-events.md) dans Data Lake Storage.
+1. [Exportez les données](export-events.md) vers Azure Data Lake Storage.
 
 1. [Créez un lien entre les informations sur l’audience et les informations sur l’engagement](integrate-audience-insights-engagement-insights.md) pour partager des données entre les deux fonctionnalités.
 
+1. [Reconnaissez les événements web des utilisateurs préalablement authentifiés](unknown-to-known.md) avec la fonctionnalité **Inconnu à connu**.
+
 1. Découvrez comment [supprimer et exporter des données liées aux événements contenant des informations personnelles](delete-export-personal-data.md).
+
+## <a name="step-5-create-and-manage-funnel-reports"></a>Étape 5 : Créer et gérer des rapports de synthèse
+
+Un rapport d’entonnoir collecte des informations sur les étapes qui se produisent pendant un parcours client via votre site Web ou votre application mobile. En plus de créer des rapports de profil prêts à l’emploi et des rapports personnalisés, vous pouvez créer un rapport de synthèse pour identifier les chemins empruntés par vos clients avant de faire un achat. 
+
+1. [Créez un rapport de synthèse](funnel-reports.md) pour éclairer les décisions et identifier les domaines d’optimisation et d’amélioration des processus.
+
+1. Créez des rapports de synthèse multicanaux une fois que vous avez instrumenté votre application mobile avec les informations sur l’engagement [Kit de développement logiciel (SDK) Android](get-started-android.md) ou [Kit de développement logiciel (SDK) iOS](get-started-ios.md).
+
+1. Utilisez les [informations de synthèse](funnel-reports.md#funnel-insights) pour mieux comprendre le comportement des clients dans les étapes de votre rapport de synthèse.
  
-## <a name="step-5-stay-connected"></a>Étape 5 : Rester connecté
+## <a name="step-6-stay-connected"></a>Étape 6 : Rester connecté
 
 Nous apprécions votre participation active et prenons en compte tous les commentaires pertinents dans le développement de versions futures. Partagez vos commentaires et signalez les problèmes par l'un de ces canaux :
 - [Communauté](https://go.microsoft.com/fwlink/?linkid=2141648)

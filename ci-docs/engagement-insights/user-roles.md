@@ -4,23 +4,29 @@ description: Vue d'ensemble des rôles et autorisations disponibles pour les mem
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 68e28caf1c14c23acd506da5f7b441f1e3b72e8b
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036690"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645534"
 ---
 # <a name="roles-and-permissions"></a>Rôles et autorisations
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Un espace de travail représente la manière dont vous stockez et gérez des événements et des rapports. Un membre est un utilisateur qui peut accéder à un espace de travail. Vous pouvez affecter des membres à votre espace de travail et définir leurs rôles et autorisations. Les rôles d'administrateur gèrent les espaces de travail et les environnements et configurent les informations d'engagement pour les autres utilisateurs. Les rôles de contributeur sont destinés aux analystes qui n'ont pas besoin de configurer les informations d'engagement mais souhaitent créer leurs propres rapports, entonnoirs ou segments.
+Un espace de travail est l’endroit où vous stockez et gérez les événements et les rapports. Pour plus d’informations, consultez [Créer un espace de travail et ajouter des membres](create-workspace.md). 
+
+Un espace de travail peut inclure les rôles et autorisations suivants :
+
+- Les rôles *Membre* sont des utilisateurs qui peuvent accéder à un espace de travail. Vous pouvez affecter des membres à votre espace de travail et définir leurs rôles et autorisations. 
+- Les rôles *Administrateur* gèrent les espaces de travail et les environnements, et configurent les informations d’engagement pour les autres utilisateurs. 
+- Les rôles *Contributeur* sont destinés aux analystes qui n’ont pas besoin de configurer des informations sur l’engagement, mais qui souhaitent créer leurs propres rapports, synthèses ou segments.
 
 ## <a name="permissions"></a>Autorisations
   

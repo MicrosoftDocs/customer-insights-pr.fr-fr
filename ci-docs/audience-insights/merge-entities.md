@@ -1,7 +1,7 @@
 ---
 title: Fusionner des entités pour l’unification des données
 description: Fusionnez des données pour créer des profils clients unifiés.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494316"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648251"
 ---
 # <a name="merge-entities"></a>Fusionner des entités
 
@@ -89,7 +91,7 @@ Sur la page **Fusionner**, sélectionnez **Champs exclus** pour voir la liste de
     :::image type="content" source="media/recency-merge-option.png" alt-text="Option Récence dans la boîte de dialogue de champs de fusion.":::
     - **Le moins récent** : identifie la valeur gagnante en fonction de l’ancienneté la plus grande. Nécessite une date ou un champ numérique pour chaque entité participante dans la portée des champs de fusion pour définir la récence.
 
-1.  Vous pouvez ajouter des champs supplémentaires pour participer au processus de fusion.
+1.  Vous pouvez ajouter d’autres champs pour participer au processus de fusion.
 
 1.  Vous pouvez renommer le champ fusionné.
 
@@ -131,7 +133,7 @@ Certaines entités contiennent plus de détails que d’autres. Si une entité i
 
 Après avoir configuré les champs de fusion, vous pouvez définir comment générer les valeurs CustomerId, les identificateurs uniques du profil client. L’étape de fusion du processus d’unification des données génère l’identificateur unique du profil client. L’identificateur est le CustomerId de l’entité *Client* qui résulte du processus d’unification des données. 
 
-Le CustomerId de l’entité Client est basé sur un hachage de la première valeur des clés primaires gagnantes non nulles. Ces clés proviennent des entités utilisées dans la phase de correspondance et de fusion et sont influencées par l’ordre de correspondance. Ainsi, le CustomerID généré peut changer lorsqu’une valeur de clé primaire change dans l’entité principale de l’ordre de correspondance. Par conséquent, il se peut que la valeur de la clé primaire ne représente pas toujours le même client.
+Le CustomerId de l’entité Client est basé sur un hachage de la première valeur des clés primaires gagnantes non nulles. Ces clés proviennent des entités utilisées dans la phase de correspondance et de fusion et sont influencées par l’ordre de correspondance. Ainsi, le CustomerID généré peut changer lorsqu’une valeur de clé primaire change dans l’entité principale de l’ordre de correspondance. Ainsi, la valeur de la clé primaire peut ne pas toujours représenter le même client.
 
 La configuration d’un ID client stable vous permet d’éviter ce comportement.
 
@@ -139,7 +141,7 @@ La configuration d’un ID client stable vous permet d’éviter ce comportement
 
 1. Accédez à **Unifier** > **Fusionner**.
 
-1. Sur la page **Fusionner**, sélectionnez l’onglet **Clés**. 
+1. Sélectionnez l’onglet **Clés**. 
 
 1. Pointez sur la ligne **CustomerId** et sélectionnez l’option **Configurer**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Contrôle pour personnaliser la génération de l’ID.":::
@@ -147,6 +149,30 @@ La configuration d’un ID client stable vous permet d’éviter ce comportement
 1. Sélectionnez jusqu’à cinq champs qui comprennent un ID client unique et sont plus stables. Les enregistrements qui ne correspondent pas à votre configuration utilisent un ID configuré par le système à la place.  
 
 1. Sélectionnez **Terminé** et exécutez le processus de fusion pour appliquer vos modifications.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Regrouper les profils en ménages ou en clusters
+
+Dans le cadre du processus de configuration de génération de profil client, vous pouvez définir des règles pour regrouper les profils associés en un cluster. Il existe actuellement deux types de clusters disponibles : les clusters domestiques et personnalisés. Le système choisit automatiquement un ménage avec des règles prédéfinies si l’entité *Client* contient les champs sémantiques *Personne.Nom* et *Adresse.Emplacement*. Vous pouvez également créer un cluster avec vos propres règles et conditions, similaires à des [règles de correspondance](match-entities.md#define-rules-for-match-pairs).
+
+**Définir un ménage ou un cluster**
+
+1. Accédez à **Unifier** > **Fusionner**.
+
+1. Sous l’onglet **Fusionner**, sélectionnez **Avancé** > **Créer un cluster**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Commande pour créer un cluster.":::
+
+1. Choisissez entre un **Ménage** ou un cluster **Personnalisé**. Si les champs sémantiques *Personne.Nom* et *Adresse.Emplacement* existent dans l’entité *Client*, le ménage est automatiquement sélectionné.
+
+1. Spécifiez un nom pour le cluster et sélectionnez **Terminé**.
+
+1. Sélectionnez l’onglet **Clusters** pour trouver le cluster que vous avez créé.
+
+1. Spécifiez les règles et conditions pour définir votre cluster.
+
+1. Sélectionnez **Exécuter** pour exécuter le processus de fusion et créer le cluster.
+
+Après avoir exécuté le processus de fusion, les identificateurs de cluster sont ajoutés en tant que nouveaux champs à l’entité *Client*.
 
 ## <a name="run-your-merge"></a>Exécuter la fusion
 

@@ -4,17 +4,17 @@ description: Comment créer, modifier et supprimer des dimensions.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: b575c5e84197d76f53a722bac60c5af928c917f9671720ede1de38c4a7478be4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 136da1e1265c7087d861712d34d011b09cb60ad5
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033994"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623629"
 ---
 # <a name="view-and-create-dimensions"></a>Afficher et créer des dimensions
 
@@ -22,7 +22,7 @@ ms.locfileid: "7033994"
 
 Une dimension est un attribut d'un événement qui peut décrire, filtrer et regrouper des données. Si vous organisez une promotion marketing sur votre site web, vous pouvez utiliser des dimensions pour trier les visiteurs par utilisateurs nouveaux et utilisateurs existants.  
 
-Les informations sur l'engagement incluent des dimensions prêtes à l'emploi pour les propriétés de l'événement. Voici des exemples :
+Les informations sur l’engagement incluent des dimensions prêtes à l’emploi pour les propriétés de l’événement. Voici des exemples :
 
 - Nom du navigateur
 - Nom de la page
@@ -44,17 +44,21 @@ Les dimensions sont basées sur les propriétés d'événement existantes. Lorsq
 En plus des dimensions générées par le système, les administrateurs de l'environnement et de l'espace de travail peuvent créer des dimensions personnalisées. Les dimensions personnalisées sont basées sur les propriétés par défaut des événements de base ou peuvent utiliser les [propriétés personnalisées d'un événement](advanced-SDK-implementation.md).
 
 1. Accédez à **Données** > **Dimensions**.
-1. Sélectionnez **Ajouter une dimension**.
+1. Sélectionnez **Nouvelle dimension**.
 
    :::image type="content" source="media/add-dimension.png" alt-text="Ajouter une dimension à un événement.":::
 
 1. Dans le volet **Créer une dimension**, sélectionnez une propriété sur laquelle baser la dimension. La liste des propriétés affichera toutes les propriétés de l'espace de travail non affectées à une dimension.
-1. Entrez un nom descriptif dans la zone **Nom d'affichage**. Vous pouvez également ajouter une description.
-1. Sélectionnez **Créer** pour enregistrer la dimension. Cela peut prendre jusqu'à une minute avant que vous puissiez utiliser la dimension dans un [rapport personnalisé](custom-reports.md) ou dans un [segment](segments.md). 
+   
+   :::image type="content" source="media/create-new-dimension.png" alt-text="Créez une dimension.":::
+      
+3. Entrez un nom descriptif dans la zone **Nom d'affichage**. Vous pouvez également ajouter une **Description**.
+4. Sélectionnez **Créer** pour enregistrer la dimension. Cela peut prendre jusqu'à une minute avant que vous puissiez utiliser la dimension dans un [rapport personnalisé](custom-reports.md) ou dans un [segment](segments.md). 
 
 ## <a name="edit-a-dimension"></a>Modifier une dimension
 
-Vous pouvez modifier le nom et la description d'une dimension.
+Vous pouvez modifier le nom et la description d'une dimension. Vous ne pouvez modifier que les dimensions créées par l’utilisateur, mais vous ne pouvez pas modifier les dimensions système.
+
 
 1. Accédez à **Données** > **Dimensions**.
 1. Sélectionnez la dimension à supprimer.

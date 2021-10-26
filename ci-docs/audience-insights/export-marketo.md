@@ -1,7 +1,7 @@
 ---
 title: Exporter des données Customer Insights vers Marketo
 description: Apprenez à configurer la connexion et à exporter vers Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033490"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619162"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exporter des segments vers Marketo (version préliminaire)
 
@@ -29,10 +29,10 @@ Exportez des segments de profils clients unifiés pour générer des campagnes, 
 
 ## <a name="known-limitations"></a>Limitations connues
 
-- Jusqu’à 1 million de profils par exportation vers Marketo.
+- Jusqu’à 1 million de profils clients par exportation vers Marketo.
 - L’exportation vers Marketo est limitée aux segments.
-- L’exportation de segments avec un total de 1 million de profils peut prendre jusqu’à 3 heures. 
-- Le nombre de profils que vous pouvez exporter vers Marketo dépend et est limité par votre contrat avec Marketo.
+- L’exportation de segments avec un total de 1 million de profils clients peut prendre jusqu’à 3 heures. 
+- Le nombre de profils clients que vous pouvez exporter vers Marketo dépend de votre contrat et est limité à Marketo.
 
 ## <a name="set-up-connection-to-marketo"></a>Configurer la connexion à Marketo
 
@@ -64,7 +64,7 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 1. Entrez votre **[ID de liste Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. L’ID de liste est une valeur purement numérique. Par exemple, si votre ID de liste Marketo est ST12345A7, supprimez le caractère avant et après les chiffres et saisissez `12345`. 
 
-1. Dans la section **Mise en correspondance des données**, dans le champ **E-mail**, sélectionnez le champ de votre profil client unifié qui représente l’adresse e-mail d’un client. 
+1. Dans la section **Correspondance des données**, dans le champ **E-mail**, sélectionnez le champ qui représente l’adresse e-mail d’un client. 
 
 1. Vous pouvez éventuellement exporter le **Prénom**, le **Nom**, la **Ville**, le **Département** et le/la **Pays/région** pour créer des e-mails plus personnalisés. Sélectionnez **Ajouter un attribut** pour mapper ces champs.
 

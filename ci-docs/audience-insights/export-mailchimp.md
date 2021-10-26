@@ -1,7 +1,7 @@
 ---
 title: Exporter des données Customer Insights vers Mailchimp
 description: Apprenez à configurer la connexion et à exporter vers Mailchimp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033536"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618610"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Exporter des segments vers Mailchimp (version préliminaire)
 
@@ -29,10 +29,10 @@ Exportez des segments de profils clients unifiés vers Mailchimp pour créer des
 
 ## <a name="known-limitations"></a>Limitations connues
 
-- Jusqu’à 1 million de profils par exportation vers Mailchimp.
+- Jusqu’à 1 million de profils clients par exportation vers Mailchimp.
 - L’exportation vers Mailchimp est limitée aux segments.
-- L’exportation de segments avec 1 million de profils peut prendre jusqu’à trois heures. 
-- Le nombre de profils que vous pouvez exporter vers Mailchimp dépend et est limité par votre contrat avec Mailchimp.
+- L’exportation de segments avec 1 million de profils clients peut prendre jusqu’à trois heures. 
+- Le nombre de profils clients que vous pouvez exporter vers Mailchimp dépend de votre contrat et est limité à Mailchimp.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Configurer la connexion à Mailchimp
 
@@ -66,7 +66,7 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 1. Entrez votre **[ID d’audience Mailchimp](https://mailchimp.com/help/find-audience-id/)**
 
-3. Dans la section **Mise en correspondance des données**, dans le champ **E-mail**, sélectionnez le champ de votre profil client unifié qui représente l’adresse e-mail d’un client. 
+1. Dans la section **Correspondance des données**, dans le champ **E-mail**, sélectionnez le champ qui représente l’adresse e-mail d’un client. 
 
 1. Vous pouvez éventuellement exporter le **Prénom** et le **Nom** pour créer des e-mails plus personnalisés. Sélectionnez **Ajouter un attribut** pour mapper ces champs.
 

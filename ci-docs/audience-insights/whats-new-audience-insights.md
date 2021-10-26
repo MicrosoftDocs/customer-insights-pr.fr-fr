@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465202"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606065"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Nouveautés de la fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights
 
@@ -26,6 +26,20 @@ Nous déployons des mises à jour région par région. Ainsi, certaines régions
 
 > [!TIP]
 > Pour envoyer et voter sur les demandes de fonctionnalités et les suggestions de produits, accédez au [portail Idées d’application Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>Mises à jour de septembre 2021
+
+Les mises à jour de septembre 2021 incluent de nouvelles fonctionnalités, des améliorations de performances et des corrections de bugs.
+
+### <a name="activities"></a>Activités
+
+- **Améliorations de la chronologie des activités** Nous avons étendu les filtres pour la chronologie des activités aux profils des clients. De plus, vous pouvez utiliser le nouveau volet de filtre pour filtrer par type d’activité et par date. Les dates peuvent être filtrées en utilisant différentes conditions. Pour plus d’informations, consultez [Afficher les chronologies des activités sur les profils des clients](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Relations
+
+- **Prise en charge des relations multi-sauts** Utilisez Relations à plusieurs sauts lors de la configuration des activités et de la définition de relations entre les entités. Les relations à plusieurs sauts utilisent une entité intermédiaire pour connecter deux entités. Lors de la configuration d’une activité, vous pouvez utiliser une relation à plusieurs sauts pour connecter votre entité d’activité à une entité intermédiaire, puis à une entité de client. Vous pouvez combiner les relations à plusieurs sauts avec les relations à plusieurs chemins. Pour plus d’informations, consultez [Relation à plusieurs sauts](relationships.md#multi-hop-relationship).
+
+- **Prise en charge des relations à plusieurs chemins** Utilisez Relations à plusieurs chemins lors de la configuration des activités et de la définition de relations entre les entités. Les relations à plusieurs chemins relient une entité source à plusieurs entités. Lors de la configuration d’une activité, vous pouvez utiliser une relation à plusieurs chemins pour connecter votre entité d’activité à plusieurs entités de client. Vous pouvez combiner les relations à plusieurs chemins avec les relations à plusieurs sauts. Pour plus d’informations, consultez [Relation à plusieurs chemins](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Mises à jour d’août 2021
 
@@ -55,7 +69,7 @@ Les mises à jour de juin 2021 comprennent plusieurs fonctionnalités, amélior
 ### <a name="ux-updates"></a>Mises à jour UX 
 
 - **Page des clients nouveaux et améliorés et page des détails du profil** Nous avons repensé la page Clients et les pages de détails du profil pour une meilleure expérience utilisateur et de meilleures performances. Ces modifications vous permettent d’afficher, de trier, de rechercher et de filtrer les clients. Les filtres sont désormais représentés dans l’URL pour partager les résultats de la recherche avec d’autres utilisateurs de manière transparente. Les résultats de la recherche peuvent également être enregistrés en tant que segment.    
-  La page de détails des profils client regroupe désormais les données dans diverses sous-sections telles que les données démographiques, les identifiants et d'autres attributs de profil pour une meilleure lisibilité. Les autres sections de la page des détails du profil sont désormais plus interactives. Par exemple, la section activités permet désormais de filtrer et de trier.
+  La page de détails des profils client regroupe désormais les données dans diverses sous-sections telles que les données démographiques, les identifiants et d'autres attributs de profil pour une meilleure lisibilité. Les autres sections de la page des détails du profil sont désormais plus interactives. Par exemple, la section des activités permet désormais de filtrer et de trier.
 
 
 ## <a name="may-2021-updates"></a>Mises à jour de mai 2021

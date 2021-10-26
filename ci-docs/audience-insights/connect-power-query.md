@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 3be417845a41c8f25c71bfc0823f42571157759b224e46d5e114037ee3df8329
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033261"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643491"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connexion à une source de données Power Query
 
 Power Query propose un large éventail de connecteurs pour ingérer des données. La plupart de ces connecteurs sont pris en charge par Dynamics 365 Customer Insights. L’ajout de sources de données basées sur des connecteurs Power Query suit généralement la procédure décrite dans la section suivante. Cependant, selon le connecteur que vous utilisez, des informations différentes sont requises. Pour plus d’informations, consultez la documentation sur les connecteurs individuels dans la [Référence des connecteurs Power Query](/power-query/connectors/).
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
 ## <a name="create-a-new-data-source"></a>Créer une source de données
 

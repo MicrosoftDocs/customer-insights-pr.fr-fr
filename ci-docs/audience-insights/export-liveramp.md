@@ -1,7 +1,7 @@
 ---
 title: Connecteur LiveRamp
 description: Apprenez à configurer la connexion et à exporter vers LiveRamp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7940db3efacad62ba16099849b3e3ca00d2a5cc1ed31e15a34209c0797e6ae13
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9a0a88fb58897e4d279c181f4cdb4f6c852da60
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035642"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618932"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Exporter des segments vers LiveRamp&reg; (version préliminaire)
 
@@ -58,7 +58,7 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
    > [!div class="mx-imgBorder"]
    > ![Connecteur LiveRamp avec mappage d’attributs.](media/export-liveramp-segments.png "Connecteur LiveRamp avec mappage d’attributs")
 
-1. Mappez les attributs correspondants de votre entité client unifiée pour l’identifiant de clé sélectionné.
+1. Mappez les attributs correspondants de votre entité *Client* pour l’identifiant de clé sélectionné.
 
 1. Sélectionnez **Ajouter un attribut** pour mapper d’autres attributs à envoyer vers LiveRamp.
 

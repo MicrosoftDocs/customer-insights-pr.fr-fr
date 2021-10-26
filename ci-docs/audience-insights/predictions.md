@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6ce72486faa97e6f630a991044ca5e6d4714d0b8b8395a60fad12f3e3a49fa29
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032431"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645031"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Compléter vos données partielles avec des prédictions
 
@@ -35,7 +35,7 @@ Avant que votre organisation ne puisse utiliser la fonction de prévisions, les 
 
 2. Votre environnement d’informations sur l’audience est joint à votre instance Dataverse.
 
-Si vous [créez un environnement](get-started-paid.md), configurez-le dans la boîte de dialogue **Créer un environnement** et sélectionnez **Avancée**. Si vous avez déjà créé un environnement, accédez à ses paramètres et sélectionnez **Avancés**. Dans les deux cas, dans la section **Utiliser des prédictions**, entrez l’URL de l’instance Dataverse à laquelle vous souhaitez associer votre environnement.
+Pour plus d’informations, consultez [Créer un environnement](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Créer une prédiction dans l’entité Client
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557349"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622999"
 ---
 # <a name="relationships-between-entities"></a>Relations entre les entités
 
@@ -68,6 +68,20 @@ La relation consiste en une *entité source* contenant la clé étrangère et un
 
 4. Sélectionnez **Enregistrer** pour créer la relation personnalisée.
 
+## <a name="set-up-account-hierarchies"></a>Configurer des hiérarchies de compte
+
+Les environnements configurés pour utiliser des comptes professionnels comme audience cible principale peuvent configurer des hiérarchies de compte pour les comptes professionnels associés. Par exemple, une entreprise qui a des divisions distinctes. 
+
+Les organisations créent des hiérarchies de compte pour mieux gérer les comptes et leurs relations les uns avec les autres. La fonctionnalité d’informations d’audience prend en charge les hiérarchies de compte parent-enfant qui existent déjà dans les données client ingérées. Par exemple, les comptes de Dynamics 365 Sales. Ces hiérarchies peuvent être configurées sur la page **Relations** dans les insights d’audience, sous l’onglet Hiérarchie de compte.
+
+1. Accédez à **Données** > **Relations**.
+1. Sélectionnez l’onglet **Hiérarchie de compte**.
+1. Sélectionnez **Nouvelle hiérarchie de compte**. 
+1. Dans le volet **Hiérarchie de compte**, fournissez un nom pour la hiérarchie. Le système crée un nom pour l’entité de sortie. Vous pouvez modifier le nom de l’entité de nom de sortie.
+1. Sélectionnez l’entité qui contient votre hiérarchie de compte. C’est généralement dans la même entité qui contient les comptes.
+1. Sélectionnez l’**ID de compte** et l’**ID du parent du compte** de l’entité sélectionnée 
+1. Sélectionnez **Enregistrer** pour appliquer les paramètres et finaliser la hiérarchie de compte.
+
 ## <a name="view-relationships"></a>Afficher les relations
 
 La page Relations répertorie toutes les relations qui ont été créées. Chaque ligne représente une relation, qui inclut également des détails sur l'entité source, l'entité cible et la cardinalité. 
@@ -105,7 +119,7 @@ Par exemple, l’entité *eCommerce_eCommercePurchases* a les relations suivante
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Client
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Client 
 
-Un chemin d’accès de relation détermine les entités que vous pouvez utiliser lors de la création de règles pour les mesures ou les segments. Choisir l’option avec le chemin d’accès à la relation le plus long renvoie probablement moins de résultats car les enregistrements correspondants doivent faire partie de toutes les entités. Dans cet exemple, un client doit avoir acheté des marchandises via le commerce électronique (eCommerce_eCommercePurchases), dans un point de vente (POS_posPurchases) et participer à notre programme de fidélité (loyaltyScheme_loyCustomers). En choisissant la première option, vous obtiendrez probablement plus de résultats car les clients ne doivent exister que dans une seule entité supplémentaire.
+Un chemin d’accès de relation détermine les entités que vous pouvez utiliser lors de la création de règles pour les mesures ou les segments. Choisir l’option avec le chemin d’accès à la relation le plus long renvoie probablement moins de résultats car les enregistrements correspondants doivent faire partie de toutes les entités. Dans cet exemple, un client doit avoir acheté des marchandises via l’e-commerce (eCommerce_eCommercePurchases), dans un point de vente (POS_posPurchases) et participer à notre programme de fidélité (loyaltyScheme_loyCustomers). En choisissant la première option, vous obtiendrez probablement plus de résultats car les clients ne doivent exister que dans une seule entité supplémentaire.
 
 ### <a name="direct-relationship"></a>Relation directe
 

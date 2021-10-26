@@ -1,7 +1,7 @@
 ---
 title: Exporter les données Customer Insights vers ActiveCampaign
 description: Apprenez à configurer la connexion et à exporter vers ActiveCampaign.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 14d420205a5c60d471ef21a04ab6d02295a65ca8fd5205ba782a300703b06102
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4fbdd5a51a3df35d31ad072eef64d20ee967d7ee
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032206"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618150"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Exporter des segments vers ActiveCampaign (version préliminaire)
 
@@ -28,9 +28,9 @@ Exportez des segments de profils client unifiés vers ActiveCampaign et utilisez
 
 ## <a name="known-limitations"></a>Limitations connues
 
-- Vous pouvez exporter jusqu’à 1 million de profils par exportation vers ActiveCampaign et cette opération peut prendre jusqu’à 90 minutes.
+- Vous pouvez exporter jusqu’à 1 million de profils clients par exportation vers ActiveCampaign et cela peut prendre jusqu’à 90 minutes.
 - L’exportation vers ActiveCampaign est limitée aux segments.
-- Le nombre de profils que vous pouvez exporter vers ActiveCampaign dépend de votre contrat avec ActiveCampaign.
+- Le nombre de profils clients que vous pouvez exporter vers ActiveCampaign dépend de votre contrat avec ActiveCampaign.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Configurer la connexion à ActiveCampaign
 
@@ -64,7 +64,7 @@ Vous pouvez configurer une exportation si vous avez accès à une connexion de c
 
 1. Entrez votre [**ID de liste ActiveCampaign**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).    
 
-3. Dans la section **Mise en correspondance des données**, dans le champ **E-mail**, sélectionnez le champ de votre profil client unifié qui représente l’adresse e-mail d’un client. Il est nécessaire d’exporter les segments vers ActiveCampaign. Vous pouvez éventuellement exporter le prénom, le nom et le téléphone pour créer des e-mails plus personnalisés. Sélectionnez Ajouter un attribut pour mapper ces champs.
+1. Dans la section **Correspondance des données**, dans le champ **E-mail**, sélectionnez le champ qui représente l’adresse e-mail d’un client. Il est nécessaire d’exporter les segments vers ActiveCampaign. Vous pouvez éventuellement exporter le prénom, le nom et le téléphone pour créer des e-mails plus personnalisés. Sélectionnez Ajouter un attribut pour mapper ces champs.
 
 1. Sélectionnez **Enregistrer**.
 

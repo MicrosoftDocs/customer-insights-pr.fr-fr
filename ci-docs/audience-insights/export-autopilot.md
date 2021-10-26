@@ -1,7 +1,7 @@
 ---
 title: Exporter des données Customer Insights vers Autopilot
 description: Apprenez à configurer la connexion et à exporter vers Autopilot.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9ada8a6f4e4546990a1360567b400033050119c4c4c9a3df1af8fcaab75e157
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4cceb64484e8e257a90b8cbaedff4419659bb399
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032022"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618426"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>Exporter des segments vers Autopilot (version préliminaire)
 
@@ -30,8 +30,8 @@ Exportez des segments de profils clients unifiés vers Autopilot et utilisez-les
 
 - Vous pouvez exporter jusqu’à 100 000 profils clients au total vers Autopilot.
 - L’exportation vers Autopilot est limitée aux segments.
-- L’exportation de jusqu’à 100 000 profils vers Autopilot peut prendre jusqu’à quelques heures. 
-- Le nombre de profils que vous pouvez exporter vers Autopilot dépend et est limité par votre contrat avec Autopilot.
+- L’exportation d’un maximum de 100 000 profils clients vers Autopilot peut prendre jusqu’à quelques heures. 
+- Le nombre de profils clients que vous pouvez exporter vers Autopilot dépend de votre contrat avec Autopilot et est limité à Autopilot.
 
 ## <a name="set-up-connection-to-autopilot"></a>Configurer la connexion à Autopilot
 
@@ -43,7 +43,7 @@ Exportez des segments de profils clients unifiés vers Autopilot et utilisez-les
 
 1. Choisissez qui peut utiliser cette connexion. Si vous n’effectuez aucune action, la valeur par défaut sera Administrateurs. Pour plus d’informations, voir [Autoriser les contributeurs à utiliser une connexion pour les exportations](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-3. Entrez votre [Clé API Autopilot](https://autopilot.docs.apiary.io/#).
+1. Entrez votre [Clé API Autopilot](https://autopilot.docs.apiary.io/#).
 
 1. Sélectionnez **J’accepte** de confirmer la **Confidentialité et conformité des données**.
 
@@ -63,7 +63,7 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 1. Dans le champ **Connexion pour l’exportation**, choisissez une connexion dans la section Autopilot. Si ce nom de section ne s’affiche pas, cela signifie qu’aucune connexion de ce type n’est disponible.
 
-3. Dans la section **Mise en correspondance des données**, dans le champ **E-mail**, sélectionnez le champ de votre profil client unifié qui représente l’adresse e-mail d’un client. Répétez les mêmes étapes pour les autres champs facultatifs tels que **Prénom** et **Nom**.
+1. Dans la section **Correspondance des données**, dans le champ **E-mail**, sélectionnez le champ qui représente l’adresse e-mail d’un client. Répétez les mêmes étapes pour les autres champs facultatifs tels que **Prénom** et **Nom**.
 
 1. Sélectionnez les segments que vous souhaitez exporter. Nous **recommandons vivement de ne pas exporter plus de 100 000 profils clients au total** vers Autopilot. 
 

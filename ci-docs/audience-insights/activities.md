@@ -1,7 +1,7 @@
 ---
 title: Activités du client
 description: Définissez les activités clientes et visualisez-les dans une chronologie des profils clients.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494408"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617966"
 ---
 # <a name="customer-activities"></a>Activités du client
 
@@ -24,8 +24,7 @@ Combinez les activités client de [différentes sources de données](data-source
 
 Vos sources de données peuvent inclure des entités avec des données transactionnelles et d’activité provenant de plusieurs sources de données. Identifiez ces entités et sélectionnez les activités que vous souhaitez afficher sur la chronologie du client. Sélectionnez l’entité qui comprend votre activité ou vos activités cibles.
 
-> [!NOTE]
-> Une entité doit avoir au moins un attribut de type **Date** à inclure dans une chronologie client et vous ne pouvez pas ajouter d’entités sans champs **Date**. Le contrôle **Ajouter une activité** est désactivé si aucune entité de ce type n’est trouvée.
+Une entité doit avoir au moins un attribut de type **Date** à inclure dans une chronologie client et vous ne pouvez pas ajouter d’entités sans champs **Date**. Le contrôle **Ajouter une activité** est désactivé si aucune entité de ce type n’est trouvée.
 
 1. Dans les informations sur l’audience, accédez à **Données** > **Activités**.
 
@@ -41,13 +40,16 @@ Vos sources de données peuvent inclure des entités avec des données transacti
 
 1. Sélectionnez **Suivant** pour passer à l’étape suivante.
 
-1. Dans l’étape **Relation**, configurez les détails pour connecter vos données d’activité au client correspondant. Cette étape visualise la connexion entre les entités.  
+1. Dans la section **Relation**, configurez les détails pour connecter vos données d’activité à l’enregistrement client correspondant. Cette étape visualise la connexion entre les entités.  
 
    - **Premier** : champ externe de votre entité d’activité qui sera utilisé pour établir une relation avec une autre entité.
    - **Second** : entité client source correspondante avec laquelle votre entité d’activité sera en relation. Vous ne pouvez établir de relation qu’avec les entités client sources utilisées dans le processus d’unification des données.
    - **Troisième** : s’il existe déjà une relation entre cette entité d’activité et l’entité client source sélectionnée, le nom de la relation sera en mode lecture seule. S'il n’existe aucune relation de ce type, une nouvelle relation sera créée avec le nom que vous indiquez dans cette zone.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Définissez la relation entre les entités.":::
+
+   > [!TIP]
+   > Dans les environnements B2B, vous pouvez choisir entre des entités de compte et d’autres entités. Si vous sélectionnez une entité de compte, le chemin de la relation est automatiquement défini. Pour les autres entités, vous devez définir le chemin de la relation sur une ou plusieurs entités intermédiaires jusqu’à atteindre une entité de compte.
 
 1. Sélectionnez **Suivant** pour passer à l’étape suivante. 
 
@@ -95,5 +97,34 @@ Les actions suivantes sont disponibles lorsque vous sélectionnez une activité.
 - **Renommer** : ouvre une boîte de dialogue dans laquelle vous pouvez entre un autre nom pour l’activité sélectionnée. Sélectionnez **Enregistrer** pour appliquer vos modifications.
 
 - **Supprimer** : ouvre une boîte de dialogue pour confirmer la suppression de l’activité sélectionnée. Vous pouvez également supprimer plusieurs activités à la fois en sélectionnant les activités, puis en sélectionnant l’icône de suppression. Sélectionnez **Supprimer** pour confirmer la suppression.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Afficher les chronologies des activités sur les profils des clients
+
+Après avoir configuré les activités client, sélectionnez **Afficher dans la chronologie des activités** dans la configuration des activités pour retrouver toutes les activités de votre client sur son profil client.
+
+Pour ouvrir la chronologie d’un client, accédez à **Clients** et choisissez le profil client que vous souhaitez consulter.
+
+Si un client a participé à une activité que vous avez configurée, vous la trouverez dans la section **Chronologie des activités**.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Affichez les activités configurées dans les profils client.":::
+
+Il existe plusieurs façons de filtrer les activités dans la chronologie des activités :
+
+- Vous pouvez sélectionner une ou plusieurs icônes d’activité pour affiner vos résultats afin d’inclure uniquement les types sélectionnés.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtrez les activités par type à l’aide des icônes.":::
+
+- Vous pouvez sélectionner **Filtre** pour ouvrir un volet de filtre pour configurer vos filtres de chronologie.
+
+   1. Vous pouvez filtrer par *ActivityType* et *Date*
+   1. Sélectionner **Appliquer** pour utiliser les filtres dans la chronologie des activités.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Utilisez le volet de filtre pour configurer les conditions de filtrage.":::
+
+Pour supprimer des filtres, sélectionnez le **x** à côté de chaque filtre appliqué à la chronologie ou sélectionnez **Effacer les filtres**.
+
+
+> [!NOTE]
+> Les filtres d’activité sont supprimés lorsque vous quittez un profil client. Vous devez les appliquer à chaque fois que vous ouvrez un profil client.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

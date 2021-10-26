@@ -1,7 +1,7 @@
 ---
 title: Exporter des données de Customer Insights
 description: Gérez les exportations pour partager des données.
-ms.date: 06/14/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,25 +10,48 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be4d142e0f9f422cac459f603aa5dd8bb490321cfe1b2de58f4a128ae56f4ba3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034679"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623098"
 ---
 # <a name="exports-preview-overview"></a>Vue d’ensemble des exportations (version préliminaire)
 
-La page **Exportations** affiche toutes les exportations configurées. Les exportations partagent des données spécifiques avec diverses applications. Elles peuvent inclure des profils ou entités client, des schémas et des détails de mappage. Chaque exportation nécessite une [connexion, configurée par un administrateur, pour gérer l’authentification et l’accès](connections.md).
+La page **Exportations** affiche toutes les exportations configurées. Les exportations partagent des données spécifiques avec diverses applications. Ils peuvent inclure des profils client, des entités, des schémas et des détails de mappage. Chaque exportation nécessite une [connexion, configurée par un administrateur, pour gérer l’authentification et l’accès](connections.md).
 
 Accédez à **Données** > **Exportations** pour afficher la page des exportations. Tous les rôles d’utilisateur peuvent afficher les exportations configurées. Utilisez le champ de recherche dans la barre de commandes pour rechercher des exportations par leur nom, nom de connexion ou type de connexion.
 
-## <a name="set-up-a-new-export"></a>Configurer une nouvelle exportation
+## <a name="export-types"></a>Types d’exportation
 
+Il existe deux types principaux d’exportations :  
+
+- **Les exportations de données de sortie** vous permettent d’exporter tout type d’entité disponible dans les informations sur l’audience. Les entités que vous sélectionnez pour l’exportation sont exportées avec tous les champs de données, métadonnées, schémas et détails de mappage. 
+- **Les exportations de segments** vous permettent d’exporter des entités de segment à partir des informations sur l’audience. Les segments représentent une liste de profils clients. Lors de la configuration de l’exportation, vous sélectionnez les champs de données inclus, en fonction du système cible vers lequel vous exportez les données. 
+
+### <a name="export-segments"></a>Exporter les segments
+
+**Exportation de segments dans des environnements pour les comptes professionnels (B2B) ou les clients particuliers (B2C)**  
+La plupart des options d’exportation prennent en charge les deux types d’environnements. L’exportation de segments vers divers systèmes cibles a des exigences spécifiques. De manière générale, un membre du segment, le profil client, contient des informations de contact. Si c’est généralement le cas pour les segments construits sur les clients individuels (B2C), ce n’est pas nécessairement le cas pour les segments basés sur les comptes professionnels (B2B). 
+
+**Segmenter les environnements d’exportation pour les comptes d’entreprise (B2B)**  
+- Les segments dans le cadre des environnements pour les comptes professionnels sont construits sur l’entité *Compte*. Pour exporter des segments de compte tels quels, le système cible doit prendre en charge les segments de compte purs. C’est le cas pour [LinkedIn](export-linkedin-ads.md) lorsque vous choisissez l’option **entreprise** lors de la définition de l’export.
+- Tous les autres systèmes cibles nécessitent des champs de l’entité de contact. Pour garantir que les segments de compte peuvent récupérer les données des contacts associés, votre définition de segment doit projeter les attributs de l’entité de contact. En savoir plus sur la façon de [configurer les segments et les attributs du projet](segment-builder.md).
+
+**Exportations de segments dans des environnements pour clients particuliers (B2C)**  
+- Les segments dans le cadre des environnements pour les clients individuels sont construits sur l’entité *profil de client unifié*. Chaque segment qui répond aux exigences des systèmes cibles (par exemple, une adresse e-mail) peut être exporté.
+
+**Limites sur les exportations de segments**  
+- Les systèmes cibles tiers peuvent limiter le nombre de profils clients que vous pouvez exporter. 
+- Pour les clients individuels, vous verrez le nombre réel de membres du segment lorsque vous sélectionnez un segment à exporter. Vous recevrez un avertissement si un segment est trop grand. 
+- Pour les comptes professionnels, vous verrez le nombre de comptes dans un segment ; cependant, le nombre de contacts pouvant être projetés ne s’affiche pas. Dans certains cas, cela pourrait conduire à ce que le segment exporté contienne en réalité plus de profils clients que le système cible n’en accepte. Le dépassement des limites des résultats des systèmes cibles ignorera l’exportation. 
+
+## <a name="set-up-a-new-export"></a>Configurer une nouvelle exportation  
 Pour configurer ou modifier une exportation, vous devez avoir des connexions disponibles. Les connexions dépendent de votre [rôle d’utilisateur](permissions.md) :
-- Les administrateurs ont accès à toutes les connexions. Ils peuvent également créer de nouvelles connexions lors de la configuration d’une exportation.
-- Les contributeurs peuvent avoir accès à des connexions spécifiques. Ils dépendent des administrateurs pour configurer et partager des connexions. La liste des exportations indique aux contributeurs s'ils peuvent modifier ou uniquement afficher une exportation dans la colonne **Vos autorisations**. Pour plus d’informations, voir [Autoriser les contributeurs à utiliser une connexion pour les exportations](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Les utilisateurs peuvent uniquement afficher les exportations existantes, mais pas les créer.
+- Les **administrateurs** ont accès à toutes les connexions. Ils peuvent également créer de nouvelles connexions lors de la configuration d’une exportation.
+- Les **contributeurs** peuvent avoir accès à des connexions spécifiques. Ils dépendent des administrateurs pour configurer et partager des connexions. La liste des exportations indique aux contributeurs s'ils peuvent modifier ou uniquement afficher une exportation dans la colonne **Vos autorisations**. Pour plus d’informations, rendez-vous sur [Autoriser les contributeurs à utiliser une connexion pour les exportations](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Les **spectateurs** ne peut afficher que les exportations existantes, pas les créer.
 
 ### <a name="define-a-new-export"></a>Définir une nouvelle exportation
 

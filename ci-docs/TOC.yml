@@ -2,8 +2,14 @@
   href: index.yml
 - name: Vue d’ensemble du produit
   href: overview.md
-- name: Créer une version d’évaluation
-  href: audience-insights/get-started-trial.md
+- name: Essai gratuit
+  items:
+    - name: S'abonner à une version d'évaluation gratuite
+      href: trial-signup.md
+    - name: FAQ sur la version d'évaluation
+      href: trial-FAQ.md
+- name: Commencer avec une licence payante
+  href: paid-license.md
 - name: Accéder à votre environnement
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Informations sur l’audience
@@ -18,10 +24,12 @@
       items:
         - name: Guide de démarrage rapide
           href: audience-insights/get-started.md
-        - name: Créer un nouvel environnement
-          href: audience-insights/get-started-paid.md
+        - name: Créer un environnement
+          href: audience-insights/create-environment.md
         - name: Explorer les informations sur l’audience
           href: audience-insights/home.md
+    - name: Utiliser des comptes professionnels
+      href: audience-insights/work-with-business-accounts.md
     - name: Modules d’apprentissage
       items:
         - name: Ingérer des données
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: Répertorier les activités du client
           href: audience-insights/activities.md
+        - name: Définir des mappages sémantiques
+          href: audience-insights/semantic-mappings.md
     - name: Enrichissement des données
       items:
         - name: Enrichir des profils client
@@ -114,7 +124,7 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Prédire le taux de désabonnement
               href: audience-insights/predict-subscription-churn.md
-            - name: Prédire l’attrition transactionnelle
+            - name: Prédire l’attrition des transactions
               href: audience-insights/predict-transactional-churn.md
             - name: Utiliser des modèles personnalisés d'Azure Machine Learning
               href: audience-insights/custom-models.md
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Exemple de guide pour la prédiction de l’attrition des abonnements
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Exemple de guide pour la prédiction de l’attrition transactionnelle
+            - name: Exemple de guide pour la prédiction de l’attrition des transactions
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Exemple de guide pour la prédiction de recommandation de produit
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -218,14 +228,18 @@
           href: audience-insights/system.md
         - name: Attribuer des autorisations aux utilisateurs
           href: audience-insights/permissions.md
-        - name: Présentation des connexions
+        - name: Vue d’ensemble des connexions
           href: audience-insights/connections.md
         - name: Gérer plusieurs environnements
           href: audience-insights/manage-environments.md
-        - name: Se connecter à un compte de stockage ADLS à l’aide d’un principal de service
-          href: audience-insights/connect-service-principal.md
         - name: Langues prises en charge
           href: audience-insights/supported-languages.md
+        - name: Sécurité
+          items:
+            - name: Apportez votre propre coffre de clés
+              href: audience-insights/use-azure-key-vault.md
+            - name: Se connecter à un compte de stockage ADLS à l’aide d’un principal de service
+              href: audience-insights/connect-service-principal.md
     - name: Extensibilité
       items:
         - name: Intégrez les données web à partir des informations sur l’engagement
@@ -248,6 +262,8 @@
       items:
         - name: Guide de démarrage rapide
           href: engagement-insights/get-started.md
+        - name: Créer un environnement
+          href: engagement-insights/create-new-environment.md
         - name: Créer un espace de travail
           href: engagement-insights/create-workspace.md
         - name: Capturer des événements à partir de sites Web et d’applications mobiles

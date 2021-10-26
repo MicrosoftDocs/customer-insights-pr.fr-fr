@@ -1,7 +1,7 @@
 ---
 title: Enrichir les profils clients unifiés
 description: Utilisez des fonctionnalités pour enrichir vos données client.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469967"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617552"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enrichissement des profils clients (aperçu)
 
@@ -27,16 +27,26 @@ Dans les informations sur l’audience, accédez à **Données** > **Enrichissem
 
 Vous devez disposer des autorisations Collaborateur ou Administrateur pour créer ou modifier des enrichissements. Pour plus d’informations, voir [Autorisations](permissions.md).
 
-Sur l’onglet **Découvrir**, vous trouverez les enrichissements suivants :
+Sous l’onglet **Découvrir**, vous trouverez toutes les options d’enrichissement prises en charge.
 
-- [Azure Maps](enrichment-azure-maps.md) fourni par Microsoft
+# <a name="individual-customers-b2c"></a>[Clients individuels (B2C)](#tab/b2c)
+
 - [Marques](enrichment-microsoft.md) fournies par Microsoft
 - [Intérêts](enrichment-microsoft.md) fournis par Microsoft
-- [Adresses améliorées](enrichment-enhanced-addresses.md) fournies par Microsoft
-- [Données de la société](enrichment-leadspace.md) fournies par Leadspace
+- [Adresses améliorées](enrichment-enhanced-addresses.md) fournies par Microsoft 
 - [Données démographiques](enrichment-experian.md) fournies par Experian
-- [Données de localisation](enrichment-here.md) fournies par HERE Technologies
-- [Données personnalisées](enrichment-SFTP-custom-import.md) via SFTP (Secure File Transfer Protocol)
+- [Données personnalisées](enrichment-SFTP-custom-import.md) via SFTP (Secure File Transfer Protocol) 
+- [Azure Maps](enrichment-azure-maps.md) fourni par Microsoft
+
+# <a name="business-accounts-b2b"></a>[Comptes d’entreprise (B2B)](#tab/b2b)
+
+- [Données de la société](enrichment-leadspace.md) fournies par Leadspace
+- [Adresses améliorées](enrichment-enhanced-addresses.md) fournies par Microsoft 
+- [Données de localisation](enrichment-here.md) fournies par HERE Technologies 
+- [Données personnalisées](enrichment-SFTP-custom-import.md) via SFTP (Secure File Transfer Protocol) 
+- [Azure Maps](enrichment-azure-maps.md) fourni par Microsoft
+
+---
 
 Sur l’onglet **Mes enrichissements**, vous pouvez voir les enrichissements que vous avez configurés et modifier leurs propriétés.
 
@@ -58,7 +68,7 @@ Exécutez ou désactivez plusieurs enrichissements simultanément en les sélect
 
 ## <a name="enrichments-and-connections"></a>Enrichissements et connexions
 
-Les enrichissements tiers sont configurés à l’aide de [connexions](connections.md), qu’un administrateur configure avec les informations d’identification et donne son consentement pour les transferts de données. La connexion peut être utilisée par les administrateurs et les contributeurs pour configurer les enrichissements.  
+Les enrichissements tiers sont configurés à l’aide de [connexions](connections.md), qu’un administrateur configure avec les informations d’identification et donne son consentement pour les transferts de données. Les connexions peuvent être utilisées par les administrateurs et les contributeurs pour configurer les enrichissements.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Enrichissements multiples du même type
 

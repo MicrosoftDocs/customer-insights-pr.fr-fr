@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 34dc753aa9d2420ef8780d436e14c3c27377e4779eda0f83ca6b5424f2328f22
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4403c6f535f5dc60919be3717073d52640bbe61a
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031424"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619208"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Exporter une liste de segments vers Facebook Ads Manager (version préliminaire)
 
@@ -30,7 +30,7 @@ Exportez des segments de profils client unifiés vers Facebook Ads Manager pour 
 - Jusqu’à 10 millions de profils client par exportation vers Facebook Ads Manager.
 - L’exportation vers Facebook Ads Manager est limitée aux segments.
 - Créez ou mettez à jour des audiences personnalisées dans Facebook de type *liste de clients* uniquement.
-- L’exportation de segments avec un total de 10 millions de profils peut prendre jusqu’à 90 minutes.
+- L’exportation de segments avec un total de 10 million de profils clients peut prendre jusqu’à 90 minutes.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Configurer la connexion à Facebook Ads Manager
 

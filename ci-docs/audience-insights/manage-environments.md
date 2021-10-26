@@ -1,7 +1,7 @@
 ---
 title: Créer et gérer des environnements
 description: Découvrez comment souscrire au service et comment gérer des environnements.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034174"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645123"
 ---
 # <a name="manage-environments"></a>Gérer des environnements
 
@@ -26,7 +26,7 @@ Sélectionnez le contrôle **Environnement** dans le coin supérieur droit de la
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Capture d’écran du contrôle pour changer d’environnement.":::
 
-Les administrateurs peuvent [créer](get-started-paid.md) et gérer des environnements.
+Les administrateurs peuvent [créer](create-environment.md) et gérer des environnements.
 
 ## <a name="edit-an-existing-environment"></a>Modifier un environnement existant
 
@@ -36,23 +36,9 @@ Vous pouvez modifier certains détails des environnements existants.
 
 2.  Sélectionnez l’icône **Modifier**.
 
-3. Dans la zone **Modifier l’environnement**, vous pouvez mettre à jour le **Nom d’affichage** de l’environnement, mais vous ne pouvez pas changer la **Région** ou le **Type**.
+3. Dans la zone **Modifier l’environnement**, vous pouvez mettre à jour les paramètres de l’environnement.
 
-4. Si un environnement est configuré pour stocker des données dans Azure Data Lake Storage, vous pouvez mettre à jour la **Clé de compte**. Cependant, vous ne pouvez pas modifier le **Nom du compte** ou le nom **Conteneur**.
-
-5. Vous pouvez éventuellement mettre à jour une connexion basée sur une clé de compte vers une connexion basée sur une ressource ou un abonnement. Une fois mise à niveau, vous ne pouvez pas rétablir la clé de compte après la mise à jour. Pour plus d’informations, consultez [Connecter les informations sur l’audience à un compte Azure Data Lake Storage Gen2 avec un principal de service Azure](connect-service-principal.md). Vous ne pouvez pas modifier les informations du **Conteneur** lors de la mise à jour de la connexion.
-
-6. Vous pouvez éventuellement fournir une URL de l’environnement Microsoft Dataverse dans **Configurer le partage de données avec Microsoft Dataverse et activer des fonctionnalités supplémentaires**. Ces fonctionnalités comprennent le partage de données avec les applications et les solutions basées sur Microsoft Dataverse, l’ingestion de données à partir de sources de données locales ou l’utilisation de [prédictions](predictions.md). Sélectionnez **Activer le partage de données** pour partager les données de sortie Customer Insights avec un Data Lake géré par Microsoft Dataverse.
-
-   > [!NOTE]
-   > - Le partage de données avec un Data Lake géré par Microsoft Dataverse n’est actuellement pas pris en charge lorsque vous enregistrez toutes les données dans votre propre Azure Data Lake Storage.
-   > - [Prédiction de la valeur manquante dans une entité](predictions.md) et les rapports PowerBI intégrés dans les informations sur l’audience (si activés sur votre environnement) ne sont actuellement pas pris en charge lorsque vous activez le partage de données avec le lac de données géré Microsoft Dataverse.
-
-   Après l’activation du partage de données avec Microsoft Dataverse, une actualisation complète de vos sources de données et d’autres processus démarre. Si des processus sont actuellement en cours d’exécution, vous ne voyez pas l’option pour activer le partage de données avec Microsoft Dataverse. Attendez la fin de ces processus ou les annuler pour activer le partage de données. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Options de configuration pour activer le partage de données avec Microsoft Dataverse.":::
-   
-   Lorsque vous exécutez des processus, tels que l’ingestion de données ou la création de segments, les dossiers correspondants seront créés dans le compte de stockage que vous avez spécifié ci-dessus. Les fichiers de données et les fichiers model.json seront créés et ajoutés aux sous-dossiers respectifs, selon le processus que vous exécutez.
+Pour plus d’informations sur les paramètres d’environnement, consultez [Créer un environnement](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copier la configuration de l’environnement
 

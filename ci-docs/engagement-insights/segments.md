@@ -4,17 +4,17 @@ description: Comment créer, modifier et supprimer des segments et où les utili
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f6bba645a78173fb00dc75e6080f2aeda0b5a143
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036145"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623584"
 ---
 # <a name="view-and-create-segments"></a>Afficher et créer des segments
 
@@ -44,22 +44,27 @@ Cette section décrit comment créer un *segment vide* à partir de zéro.
 
 1. Sélectionnez **Nouveau segment**.
 
-1. Dans la **Bibliothèque de ressources**, choisissez l'attribut qui servira pour le filtre. Actuellement, vous pouvez créer uniquement des segments basés sur des dimensions.
+1. Dans la **Bibliothèque de ressources**, sélectionnez le (+) en regard de l’attribut sur lequel vous souhaitez filtrer. Actuellement, vous pouvez créer uniquement des segments basés sur des dimensions.
 
-1. Choisissez un opérateur et une valeur pour l’attribut sélectionné. Les opérations suivantes sont prise en charge.
+   :::image type="content" source="media/create-new-segment.png" alt-text="Créez un segment.":::
+
+1. Dans la section **Règle**, choisissez un opérateur et une valeur pour l’attribut sélectionné. Les opérations suivantes sont prise en charge.
+
+   :::image type="content" source="media/choose-operator-segment.png" alt-text="Choisissez un opérateur pour votre nouveau segment.":::
+
    - **est** : nécessite une correspondance exacte pour inclure les valeurs. Utilise **égal à** pour une valeur unique ou **n'importe quel** pour inclure plusieurs valeurs.
    - **n'est pas** : nécessite une correspondance exacte pour exclure les valeurs. Utilise **égal à** pour une valeur unique ou **n'importe quel** pour inclure plusieurs valeurs.
    - **commence par** : chaîne par laquelle commencent les valeurs correspondantes.
    - **se termine par** : chaîne par laquelle se terminent les valeurs correspondantes.
    - **contient** : chaîne contenue dans les valeurs correspondantes.
 
-1. Pour ajouter d'autres conditions à un groupe, vous pouvez utiliser deux opérateurs logiques. Les attributs projetés sont pris en compte lors de l’utilisation d’opérateurs définis.
+1. Pour ajouter plus de conditions à un groupe, vous pouvez utiliser des opérateurs logiques. Les attributs projetés sont pris en compte lors de l’utilisation d’opérateurs définis.
    - Opérateur **ET** : Les deux conditions doivent être remplies dans le cadre du processus de segmentation. Cette option est particulièrement utile lorsque vous définissez des conditions sur différentes entités.
    - Opérateur **OU** : L’une ou l’autre des conditions doit être satisfaite dans le cadre de le processus de segmentation. Cette option est très utile lorsque vous définissez plusieurs conditions pour la même entité.
 
 1. Sélectionnez **Enregistrer** et nommez le segment. 
 
-Le segment sera répertorié sur la page Segments et vous pourrez l'appliquer à tous les rapports et synthèses de conversion de l'espace de travail.
+Le segment sera répertorié sur la page **Segments** et vous pourrez l’appliquer à tous les rapports et synthèses de l’espace de travail.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Utiliser un segment dans un rapport ou une synthèse
 
@@ -67,7 +72,7 @@ Vous pouvez appliquer des segments à un rapport ou à une synthèse pour les fi
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Rapport de vues de page avec une liste déroulante développée pour choisir les segments à appliquer.":::
 
-Pour appliquer un segment, ouvrez le rapport ou la synthèse. Sélectionnez **Ajouter une condition** et choisissez **Filtrer par segment**. Choisissez le segment dans la liste que vous souhaitez appliquer. Le segment est appliqué au rapport. Si un graphique ne prend pas en charge le segment, une erreur s'affiche.
+Pour appliquer un segment, ouvrez le rapport ou la synthèse. Sélectionnez **+ Ajouter une condition** et choisissez **Filtrer par segment**. Choisissez le segment dans la liste que vous souhaitez appliquer. Le segment est appliqué au rapport. Si un graphique ne prend pas en charge le segment, une erreur s'affiche. Pour plus d’informations, consultez [Créer et gérer des rapports de synthèse](funnel-reports.md).
  
 Vous pouvez appliquer *jusqu'à trois segments* à un rapport ou à une synthèse.
 
@@ -91,5 +96,7 @@ Vous pouvez appliquer *jusqu'à trois segments* à un rapport ou à une synthès
 1. Dans la liste des segments, sélectionnez **Plus [...]**. 
 1. Dans la liste déroulante, choisissez **Supprimer**.
 1. Sélectionnez **Supprimer** pour confirmer.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Présentation des scénarios de prédiction pris en charge
 description: Scénarios et options de prédiction couverts par l'application Dynamics 365 Customer Insights.
-ms.date: 05/18/2021
+ms.date: 09/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: zacookmsft
 ms.author: zacook
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 57c61895d636273fc90a0ac5a942fd0c9abf583c687ae20621949554e581cdf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: be452e4f1515f637f6edbc3ae3aaf6a3d3471489
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036006"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618840"
 ---
 # <a name="predictions-overview"></a>Présentation des prédictions
 
@@ -24,10 +24,20 @@ Dynamics 365 Customer Insights est fourni avec de nombreuses options qui exploit
 ## <a name="out-of-box-models"></a>Modèles prêts à l'emploi
 
 Le moyen le plus simple de commencer à prédire les données est de recourir à des modèles prédéfinis, souvent appelés modèles prêts à l'emploi. Ils ne nécessitent que certaines données et certaines structures pour générer rapidement des informations. Actuellement, les modèles suivants sont disponibles : 
-- [Valeur de durée de vie du client](predict-customer-lifetime-value.md) : prédit les revenus potentiels d'un client tout au long de l'interaction avec une entreprise. 
+
+# <a name="individual-customers-b2c"></a>[Clients individuels (B2C)](#tab/b2c)
+
+- [Valeur de durée de vie du client](predict-customer-lifetime-value.md) : prédit les revenus potentiels d'un client tout au long de l'interaction avec une entreprise.
 - [Recommandation de produits](predict-product-recommendation.md) : suggère des ensembles de recommandations de produits prédictives basées sur le comportement d'achat et les clients ayant des modèles d'achat similaires.
 - [Attrition des abonnements](predict-subscription-churn.md) : prédit si un client risque de ne plus utiliser les produits ou services d'abonnement de votre société.
 - [Attrition de transactions](predict-transactional-churn.md) : prédit si un client n'achètera plus vos produits ou services dans un certain délai d'exécution.
+
+# <a name="business-accounts-b2b"></a>[Comptes d’entreprise (B2B)](#tab/b2b)
+
+- [Attrition de transactions](predict-transactional-churn.md) : prédit si un client n'achètera plus vos produits ou services dans un certain délai d'exécution.
+
+---
+
 
 ## <a name="azure-machine-learning-integration"></a>Intégration d’Azure Machine Learning
 

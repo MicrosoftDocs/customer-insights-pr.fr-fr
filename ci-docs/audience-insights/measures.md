@@ -1,7 +1,7 @@
 ---
 title: Créer et gérer des mesures
 description: Définir des mesures pour analyser et refléter la performance de votre entreprise.
-ms.date: 04/12/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3593a02ce89233cf1e66c6beee669dd6dd261ba3b0e1d2d0cc966731349d7d0b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7037005"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622967"
 ---
 # <a name="define-and-manage-measures"></a>Définir et gérer des mesures
 
@@ -26,15 +26,15 @@ Utilisez le générateur de mesures pour planifier les activités commerciales e
 
 ## <a name="build-your-own-measure-from-scratch"></a>Créer votre propre mesure à partir de zéro
 
-Cette section vous guide tout au long de la création d’une mesure à partir de zéro. Vous pouvez créer une mesure avec des attributs de données à partir d’entités de données ayant une relation configurée pour se connecter à l’entité Client. 
+Cette section vous guide tout au long de la création d’une mesure à partir de zéro. Vous pouvez créer une mesure avec des attributs de données à partir d’entités de données qui ont une relation configurée pour se connecter à l’entité de profil client unifié.
 
-1. Dans Audience Insights, accédez à **Mesures**.
+# <a name="individual-customers-b2c"></a>[Clients individuels (B2C)](#tab/b2c)
+
+1. Dans les informations sur l’audience, accédez à **Mesures**.
 
 1. Sélectionnez **Nouveau** et choisissez **Créer le vôtre**.
 
 1. Sélectionnez **Modifier le nom** et fournissez un **Nom** pour la mesure. 
-   > [!NOTE]
-   > Si votre nouvelle configuration de mesure ne comporte que deux champs, par exemple, CustomerID et un calcul, la sortie sera ajoutée en tant que nouvelle colonne à l’entité générée par le système appelée Customer_Measure. Et vous pourrez voir la valeur de la mesure dans le profil client unifié. D’autres mesures généreront leurs propres entités.
 
 1. Dans la zone de configuration, choisissez la fonction d’agrégation dans le menu déroulant **Sélectionner une fonction**. Les fonctions d’agrégation comprennent : 
    - **Sum**
@@ -73,11 +73,11 @@ Cette section vous guide tout au long de la création d’une mesure à partir d
    1. Sélectionnez **Modifier les dimensions** pour ajouter des attributs de données par lesquels vous souhaitez regrouper les valeurs de mesure. Par exemple, ville ou sexe. Par défaut, la dimension *CustomerID* est sélectionnée pour créer des *mesures au niveau du client*. Vous pouvez supprimer la dimension par défaut si vous souhaitez créer des *mesures au niveau de l’entreprise*.
    1. Sélectionnez **Terminé** pour ajouter les dimensions à la mesure.
 
-1. Si des valeurs de vos données doivent être remplacées par un entier, par exemple, remplacer *null* par *0*, sélectionnez **Règles**. Configurez la règle et assurez-vous de ne choisir que des nombres entiers comme valeurs de remplacement.
+1. S’il y a des valeurs dans vos données que vous devez remplacer par un entier, sélectionnez **Règles**. Configurez la règle et assurez-vous de ne choisir que des nombres entiers comme valeurs de remplacement. Par exemple, remplacez *nul* avec *0*.
 
 1. S’il existe plusieurs chemins d’accès entre l’entité de données que vous avez mappée et l’entité *Client*, vous devez choisir l’un des [chemins d’accès de relation d’entité](relationships.md). Les résultats de la mesure peuvent varier en fonction du chemin sélectionné. 
    
-   1. Sélectionnez **Préférences de données** et choisissez le chemin de l’entité à utiliser pour identifier votre mesure. S’il n’y a qu’un seul chemin vers l’entité *Client*, ce contrôle ne s’affichera pas.
+   1. Sélectionner **Chemin d’accès vers la relation** et choisissez le chemin d’entité qui doit être utilisé pour identifier votre mesure. S’il n’y a qu’un seul chemin vers l’entité *Client*, ce contrôle ne s’affichera pas.
    1. Sélectionnez **Terminé** pour appliquer votre sélection. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Sélectionnez le chemin d’accès pour la mesure.":::
@@ -92,7 +92,79 @@ Cette section vous guide tout au long de la création d’une mesure à partir d
 
 1. Aller à **Mesures** pour voir la mesure nouvellement créée dans la liste.
 
+# <a name="business-accounts-b2b"></a>[Comptes d’entreprise (B2B)](#tab/b2b)
+
+1. Dans les informations sur l’audience, accédez à **Mesures**.
+
+1. Sélectionnez **Nouveau** et choisissez **Créer le vôtre**.
+
+1. Sélectionnez **Modifier le nom** et fournissez un **Nom** pour la mesure. 
+
+1. Dans la zone de configuration, choisissez la fonction d’agrégation dans le menu déroulant **Sélectionner une fonction**. Les fonctions d’agrégation comprennent : 
+   - **Sum**
+   - **Moyenne**
+   - **Nombre**
+   - **Nombre Unique**
+   - **Max**
+   - **Min**
+   - **First** : prend la première valeur de l’enregistrement de données
+   - **Dernière** : prend la dernière valeur ajoutée à l’enregistrement de données
+
+   :::image type="content" source="media/measure-operators.png" alt-text="Opérateurs pour les calculs de mesures.":::
+
+1. Sélectionnez **Ajouter un attribut** pour sélectionner les données dont vous avez besoin pour créer cette mesure.
+   
+   1. Sélectionnez l’onglet **Attributs**. 
+   1. Entité Data : Choisissez l’entité qui comprend l’attribut selon lequel vous souhaitez mesurer. 
+   1. Attribut de données : choisissez l’attribut que vous souhaitez utiliser dans la fonction d’agrégation pour calculer la mesure. Vous ne pouvez sélectionner qu’un attribut à la fois.
+   1. Vous pouvez également sélectionner un attribut de données à partir d’une mesure existante en sélectionnant l’onglet **Mesures**. Sinon, vous pouvez rechercher un nom d’entité ou de mesure. 
+   1. Sélectionnez **Ajouter** pour ajouter l’attribut sélectionné à la mesure.
+
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Sélectionnez un attribut à utiliser dans les calculs.":::
+
+1. Pour créer des mesures plus complexes, vous pouvez ajouter plus d’attributs ou utiliser des opérateurs mathématiques sur votre fonction de mesure.
+
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Créez une mesure complexe avec des opérateurs mathématiques.":::
+
+1. Pour ajouter des filtres, sélectionnez le **Filtre** dans la zone de configuration. 
+  
+   1. Dans la section **Ajouter un attribut** du volet **Filtres**, sélectionnez l’attribut que vous souhaitez utiliser pour créer des filtres.
+   1. Définissez les opérateurs de filtre pour définir le filtre pour chaque attribut sélectionné.
+   1. Sélectionnez **Appliquer** pour ajouter les filtres à la mesure.
+
+1. Pour ajouter des dimensions, sélectionnez **Dimension** dans la zone de configuration. Les dimensions s’affichent sous forme de colonnes dans l’entité de sortie de mesure.
+ 
+   1. Sélectionnez **Modifier les dimensions** pour ajouter des attributs de données par lesquels vous souhaitez regrouper les valeurs de mesure. Par exemple, ville ou sexe. Par défaut, la dimension *CustomerID* est sélectionnée pour créer des *mesures au niveau du client*. Vous pouvez supprimer la dimension par défaut si vous souhaitez créer des *mesures au niveau de l’entreprise*.
+   1. Sélectionnez **Terminé** pour ajouter les dimensions à la mesure.
+
+1. S’il y a des valeurs dans vos données que vous devez remplacer par un entier, sélectionnez **Règles**. Configurez la règle et assurez-vous de ne choisir que des nombres entiers comme valeurs de remplacement. Par exemple, remplacez *nul* avec *0*.
+
+1. Vous pouvez utiliser le bouton bascule **Reporter des sous-comptes** si vous [utilisez des comptes avec des hiérarchies](relationships.md#set-up-account-hierarchies).
+   - S’il est défini sur **Désactivé**, la mesure est calculée pour chaque compte. Chaque compte obtient son propre résultat.
+   - S’il est défini sur **Activé**, sélectionnez **Modifier** pour choisir la hiérarchie de compte en fonction des hiérarchies ingérées. La mesure ne produira qu’un seul résultat car elle est agrégée avec des sous-comptes.
+
+1. S’il existe plusieurs chemins d’accès entre l’entité de données que vous avez mappée et l’entité *Client*, vous devez choisir l’un des [chemins d’accès de relation d’entité](relationships.md). Les résultats de la mesure peuvent varier en fonction du chemin sélectionné. 
+   
+   1. Sélectionner **Chemin d’accès vers la relation** et choisissez le chemin d’entité qui doit être utilisé pour identifier votre mesure. S’il n’y a qu’un seul chemin vers l’entité *Client*, ce contrôle ne s’affichera pas.
+   1. Sélectionnez **Terminé** pour appliquer votre sélection. 
+
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Sélectionnez le chemin d’accès pour la mesure.":::
+
+1. Sélectionnez **...** sur le calcul pour **Dupliquer**, **Renommer** ou **Supprimer** un calcul à partir d’une mesure.
+
+1. Dans la zone **Aperçu**, vous verrez le schéma de données de l’entité de sortie de mesure, y compris les filtres et les dimensions. L’aperçu réagit de manière dynamique aux modifications de la configuration.
+
+1. Sélectionnez **Exécuter** pour calculer les résultats de la mesure configurée. Sélectionnez **Enregistrer et fermer** si vous souhaitez conserver la configuration actuelle et exécuter la mesure ultérieurement.
+
+1. Aller à **Mesures** pour voir la mesure nouvellement créée dans la liste.
+
+---
+
 ## <a name="use-a-template-to-build-a-measure"></a>Utiliser un modèle pour créer une mesure
+
+Vous pouvez utiliser des modèles prédéfinis de mesures couramment utilisées pour les créer. Les descriptions détaillées des modèles et une expérience guidée vous aident à créer des mesures de manière efficace. Les modèles reposent sur les données mappées de l’entité *Activité unifiée*. Assurez-vous donc d’avoir configuré les [activités client](activities.md) avant de créer une mesure à partir d’un modèle.
+
+# <a name="individual-customers-b2c"></a>[Clients individuels (B2C)](#tab/b2c)
 
 Vous pouvez utiliser des modèles prédéfinis de mesures couramment utilisées pour les créer. Les descriptions détaillées des modèles et une expérience guidée vous aident à créer des mesures de manière efficace. Les modèles reposent sur les données mappées de l’entité *Activité unifiée*. Assurez-vous donc d’avoir configuré les [activités client](activities.md) avant de créer une mesure à partir d’un modèle.
 
@@ -140,6 +212,12 @@ La procédure suivante décrit les étapes pour créer une nouvelle mesure à l�
 
 1. Vous pouvez maintenant sélectionner **Exécuter** pour calculer les résultats de la mesure. Pour l’affiner ultérieurement, sélectionnez **Enregistrer le brouillon**.
 
+# <a name="business-accounts-b2b"></a>[Comptes d’entreprise (B2B)](#tab/b2b)
+
+Cette fonctionnalité n’est disponible que pour les mesures créées dans des environnements avec des clients individuels comme audience cible principale.
+
+---
+
 ## <a name="manage-your-measures"></a>Gérer vos mesures
 
 Vous trouverez la liste des mesures sur la page **Mesures**.
@@ -166,6 +244,5 @@ Choisissez une mesure parmi la liste des options suivantes :
 ## <a name="next-step"></a>Étape suivante
 
 Vous pouvez utiliser des mesures existantes pour créer un [segment de clients](segments.md).
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

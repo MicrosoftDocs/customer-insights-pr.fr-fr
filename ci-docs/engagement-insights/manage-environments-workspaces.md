@@ -4,60 +4,38 @@ description: Comment créer, renommer et supprimer des espaces de travail et des
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 09/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486032"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645443"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gérer les environnements et les espaces de travail
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-## <a name="overview"></a>Présentation
+## <a name="overview"></a>Résumé
 
-Un espace de travail est un espace pour stocker et gérer des événements et des rapports. C'est là que vous pouvez voir l'activité des utilisateurs en temps réel. Lorsque vous créez un espace de travail, vous devez sélectionner le type de données à y transférer. Actuellement, les données web et les applications mobiles sont prises en charge.
+Cette rubrique explique comment gérer les espaces de travail et les environnements une fois qu’ils ont été créés. 
 
-Un environnement est un espace dans lequel vous gérez vos espaces de travail et vos connexions. La façon dont vous utilisez les environnements dépend de votre organisation et de votre cas d'utilisation. Par exemple, vous pouvez créer :
+- Un *espace de travail* est un espace pour stocker et gérer des événements et des rapports. C'est là que vous pouvez voir l'activité des utilisateurs en temps réel. Lorsque vous créez un espace de travail, vous devez sélectionner le type de données à y transférer. Actuellement, les données web et les applications mobiles sont prises en charge. Pour plus d’informations, consultez [Créer un espace de travail et ajouter des membres](create-workspace.md).
 
--   Un seul environnement.
--   Des environnements distincts pour les tests et la production.
--   Des environnements distincts pour des équipes ou des services spécifiques de votre organisation qui contiennent des événements pertinents pour chaque audience.
--   Des environnements distincts pour différentes succursales mondiales de votre société.
--   Connexions à la fonction Informations sur l’audience de Customer Insights.
+- Un *environnement* est un espace dans lequel vous gérez vos espaces de travail et vos connexions. Pour plus d’informations, consultez [Créer un environnement](create-new-environment.md).
 
-## <a name="choose-an-environment-and-create-a-workspace"></a>Choisir un environnement et créer un espace de travail 
-
-Chaque espace de travail doit être dans un environnement. Vous pouvez sélectionner un environnement préexistant ou en créer un nouveau lorsque vous créez un espace de travail. Vous pouvez ensuite choisir d'ajouter des membres de l'espace de travail et commencer à collecter des données.
-
-**Pour créer votre premier espace de travail**
-
-1. Dans Informations sur l’engagement, sélectionnez **Nouveau** depuis le sélecteur d'espace de travail. 
-
-   :::image type="content" source="media/New-workspace.png" alt-text="Sélecteur d'espace de travail de la page Customer Insights.":::
-
-1. Choisissez un environnement dans la liste ou sélectionnez **Créer un environnement**.
-
-1. Tapez un nom dans le champ **Nom de l’espace de travail**. 
-
-1. Sélectionnez le type d’environnement que vous souhaitez créer, selon que vous souhaitez mesurer ce qui se passe sur un site web ou dans une application mobile. 
-
-1. Vous pouvez ajouter des membres et attribuer leur niveau d'autorisation à partir de la liste **Rôle**. Puis, sélectionnez **Terminer** pour créer l'espace de travail ou **Suivant** pour installer le code. 
-
-1. Installez l'extrait de code pour commencer à recevoir des données, puis sélectionnez **Terminé**. 
-
-## <a name="manage-a-workspace"></a>Gérer un espace de travail
+## <a name="manage-an-existing-workspace"></a>Gérer un espace de travail existant
 
 Vous pouvez gérer plusieurs espaces de travail simultanément dans un environnement. Votre [rôle](user-roles.md) détermine comment vous pouvez y travailler. 
 
  - Vous devez être un administrateur d’environnement ou un administrateur d’espace de travail pour gérer l’espace de travail.
  - En tant qu’administrateur d’espace de travail, vous pouvez renommer les espaces de travail existants ou les supprimer. 
+
+:::image type="content" source="media/workspace-edit.png" alt-text="Centre d’administration des espaces de travail.":::
 
 ### <a name="edit-a-workspace-name"></a>Modifier le nom d'un espace de travail
 
@@ -75,7 +53,7 @@ La suppression d'un espace de travail va supprimer définitivement la totalité 
 
 1. Sélectionnez **Supprimer l'espace de travail**. 
 
-1. Dans la boîte de dialogue **Supprimer l’espace de travail**, entrez **CONFIRMER LA SUPPRESSION**. 
+1. Dans le dialogue **Supprimer l’espace de travail**, entrez **CONFIRMER LA SUPPRESSION** en majuscules. 
 
 1. Sélectionnez **Supprimer** pour supprimer définitivement l’espace de travail.
 
@@ -87,27 +65,11 @@ La suppression d'un espace de travail va supprimer définitivement la totalité 
 
 1. Sélectionnez **Ajouter des membres** pour les ajouter à votre espace de travail.
 
-## <a name="manage-an-environment"></a>Gérer un environnement
+## <a name="manage-an-existing-environment"></a>Gérer un environnement existant
 
-En tant qu'administrateur d'environnement, vous pouvez accéder à un environnement à partir du volet de navigation de gauche. Vous pouvez configurer les paramètres de l’environnement, d’autres administrateurs de l’environnement et les espaces de travail. Sélectionnez des onglets pour vous déplacer entre différentes zones du centre d'administration.
+En tant qu’administrateur d’environnement, vous pouvez accéder à un environnement à partir du volet de navigation de gauche. Vous pouvez configurer les paramètres de l’environnement, d’autres administrateurs de l’environnement et les espaces de travail. Sélectionnez des onglets pour vous déplacer entre différentes zones du centre d'administration.
 
-:::image type="content" source="media/New-environment.png" alt-text="Centre d'administration de l'environnement.":::
-
-### <a name="create-an-environment"></a>Créer un environnement
-
-1. Dans le sélecteur d'espace de travail, sélectionnez **+Nouveau**.
-
-1. Dans l'expérience guidée, ouvrez le menu déroulant **Environnement** et sélectionnez **Créer un nouvel environnement**. 
-
-1. Spécifiez un **Nom d'environnement**.
-
-   :::image type="content" source="media/create-environment.png" alt-text="Étape de l'expérience guidée pour spécifier les détails de l'environnement.":::
-
-1. Choisissez la **Région** et sélectionnez **Suivant**. 
-
-1. Indiquez un nom d'espace de travail et choisissez le type d'espace de travail que vous souhaitez créer. 
-
-1.  Vous pouvez éventuellement ajouter des membres et copier l'extrait de code pour terminer le processus de création.
+:::image type="content" source="media/environment-edit.png" alt-text="Centre d'administration de l'environnement.":::
 
 ### <a name="rename-an-environment"></a>Renommer un environnement
 
@@ -131,7 +93,7 @@ Les administrateurs d'environnement peuvent supprimer des environnements. Avant 
 
 1. Sélectionnez **Supprimer l'environnement**. 
 
-1. Dans la boîte de dialogue **Supprimer l’espace de travail**, entrez **CONFIRMER LA SUPPRESSION**. 
+1. Dans le dialogue **Supprimer l’espace de travail**, entrez **CONFIRMER LA SUPPRESSION** en majuscules. 
 
 1. Sélectionnez **Supprimer** pour supprimer définitivement l'environnement.
 

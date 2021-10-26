@@ -10,12 +10,12 @@ ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: aaaf1848df175469d8af07754ac153b777781ffb
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466574"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645261"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Mise en route de la fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights
 
@@ -23,7 +23,7 @@ Les informations sur l’audience peuvent vous aider à mieux comprendre vos cli
 
 ## <a name="step-1-create-an-environment"></a>Étape 1 : Créer un environnement
 
-Pour commencer, vous devez d’abord créer un environnement dans lequel travailler. Si votre organisation a déjà acheté une licence, consultez [Mise en route de votre abonnement payant](get-started-paid.md). Pour démarrer un essai des informations sur l’audience, consultez [Configurer un environnement d’essai](get-started-trial.md). 
+Pour commencer, vous devez d’abord créer un environnement dans lequel travailler. Si votre organisation a déjà acheté une licence, consultez [Créer un environnement](create-environment.md). Pour démarrer un essai des informations sur l’audience, consultez [Configurer un environnement d’essai](../trial-signup.md). 
 
 ## <a name="step-2-explore-audience-insights"></a>Étape 2 : Explorer les informations sur l’audience
 

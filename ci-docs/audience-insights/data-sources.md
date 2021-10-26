@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 75d597158233f75f0eb5f94389f9dba199d81719f2bbe4e5cc58d2a3afc7dcf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032847"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645352"
 ---
 # <a name="data-sources-overview"></a>Vue d’ensemble des sources de données
 
@@ -35,7 +35,7 @@ Vous pouvez ajouter une source de données de trois manières principales :
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Ajouter des données de sources de données locales
 
-L’ingestion de données à partir de sources de données locales dans Audience Insights est prise en charge en fonction des flux de données Microsoft Power Platform. Les flux de données peuvent être activés dans Customer Insights en [fournissant l’URL de l’environnement Microsoft Dataverse](get-started-paid.md) lors de la configuration de l’environnement.
+L’ingestion de données à partir de sources de données locales dans Audience Insights est prise en charge en fonction des flux de données Microsoft Power Platform. Les flux de données peuvent être activés dans Customer Insights en [fournissant l’URL de l’environnement Microsoft Dataverse](create-environment.md) lors de la configuration de l’environnement.
 
 Les sources de données créées après l’association d’un environnement Dataverse à Customer Insights utiliseront les [flux de données Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) par défaut. Les flux de données prennent en charge la connectivité locale à l’aide de la passerelle de données. Supprimez et recréez les sources de données qui existaient avant l’association d’un environnement Dataverse pour [utiliser les passerelles de données locales](/data-integration/gateway/service-gateway-app).
 
