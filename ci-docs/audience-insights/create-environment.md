@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645684"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673388"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Créer un environnement dans les informations sur l’audience
 
@@ -46,7 +46,7 @@ Une expérience guidée vous aide à travers les étapes pour rassembler toutes 
 
 Indiquez les détails suivants :
    - **Nom** : nom de cet environnement. Ce champ est déjà rempli si vous copiez à partir d’un environnement existant, mais vous pouvez le modifier.
-   - **Choisissez votre entreprise** : Choisissez l’audience principale pour le nouvel environnement. Vous pouvez travailler avec des clients particuliers (B2C) ou [des comptes d’entreprise](work-with-business-accounts.md) (B2B).
+   - **Choisissez votre entreprise** : Choisissez l'audience principale pour le nouvel environnement. Vous pouvez travailler avec des consommateurs individuels (B2C) ou [comptes d'entreprise](work-with-business-accounts.md) (B2B).
    - **Type** : Indiquez si vous souhaitez créer un environnement de Production ou Sandbox. Les environnements sandbox n’autorisent pas l’actualisation planifiée des données et sont destinés à la pré-implémentation et aux tests. Les environnements de bac à sable utilisent la même audience principale que l’environnement de production actuellement sélectionné.
    - **Région** : Région dans laquelle le service est déployé et hébergé.
 
@@ -54,7 +54,7 @@ Indiquez les détails suivants :
 
 À l’étape **Stockage des données**, choisissez où stocker les données des informations sur l’audience.
 
-Vous aurez deux options : **Stockage Customer Insights** (un Azure Data Lake géré par l’équipe Customer Insights) et **Azure Data Lake Storage** (votre propre Azure Data Lake Storage). Par défaut, l’option de stockage Customer Insights est sélectionnée.
+Vous aurez deux options : **Stockage Customer Insights** (un lac de données Azure géré par l’équipe Customer Insights) et **Azure Data Lake Storage** (votre propre Azure Data Lake Storage). Par défaut, l’option de stockage Customer Insights est sélectionnée.
 
 :::image type="content" source="media/data-storage-environment.png" alt-text="Choisir le Azure Data Lake Storage pour stocker vos données d’informations sur l’audience.":::
 
@@ -66,7 +66,7 @@ En enregistrant les données dans Azure Data Lake Storage, vous acceptez que les
 > - Les comptes Azure Data Lake Storage de la même région Azure que vous avez sélectionnée lors de la création de l’environnement.
 > - Comptes Azure Data Lake Storage dont l’*espace de noms hiérarchique* est activé.
 
-Pour l’option Azure Data Lake Storage, vous pouvez choisir entre une option basée sur une ressources et une option basée sur un abonnement pour l’authentification. Pour plus d’informations, consultez [Connecter les informations sur l’audience à un compte Azure Data Lake Storage Gen2 avec un principal de service Azure](connect-service-principal.md). Le nom du **Conteneur** sera `customerinsights` et il ne peut pas être modifié.
+Pour l’option Azure Data Lake Storage, vous pouvez choisir entre une option basée sur une ressources et une option basée sur un abonnement pour l’authentification. Pour plus d'informations, consultez [Connectez-vous à un compte Azure Data Lake Storage en utilisant un principal de service Azure](connect-service-principal.md). Le nom du **Conteneur** sera `customerinsights` et il ne peut pas être modifié.
 
 Lorsque les processus système tels que l’ingestion de données sont terminés, le système crée les dossiers correspondants dans le compte de stockage que vous avez spécifié. Les fichiers de données et les fichiers *model.json* sont créés et ajoutés aux dossiers en fonction du nom du processus.
 
@@ -76,14 +76,14 @@ Si vous créez plusieurs environnements de Customer Insights et choisissez d’e
    
 L’étape **Microsoft Dataverse** vous permet de connecter Customer Insights à votre environnement Dataverse.
 
-Pour utiliser [des modèles de prédiction prêts à l’emploi](predictions-overview.md#out-of-box-models), configurez le partage de données avec Dataverse. Vous pouvez également activer l’ingestion de données à partir des sources de données local, en fournissant l’URL d’environnement Microsoft Dataverse administrée par votre organisation. Sélectionnez **Activer le partage de données** pour partager les données de sortie Customer Insights avec un lac de données géré Dataverse.
+Pour utiliser [des modèles de prédiction prêts à l’emploi](predictions-overview.md#out-of-box-models), configurez le partage de données avec Dataverse. Vous pouvez également activer l’ingestion de données à partir des sources de données local, en fournissant l’URL d’environnement Microsoft Dataverse administrée par votre organisation. Sélectionnez **Activer le partage de données** pour partager les données de sortie Customer Insights avec un lac de données géré par Dataverse.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Options de configuration pour activer le partage de données avec Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights ne prend pas en charge les scénarios de partage de données suivants :
-> - Si vous enregistrez toutes les données dans votre Azure Data Lake Storage, vous ne pourrez pas activer le partage de données avec un lac de données géré par Microsoft Dataverse.
-> - Si vous activez le partage de données avec un Data Lake géré par Microsoft Dataverse, vous ne pourrez pas [créer des valeurs prédites ou manquantes dans une entité](predictions.md).
+> - Si vous enregistrez toutes les données dans votre Azure Data Lake Storage, vous ne pourrez pas activer le partage de données avec un lac de données géré par Dataverse.
+> - Si vous activez le partage de données avec Dataverse, vous ne pourrez pas [créer des valeurs prédites ou manquantes dans une entité](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Étape 4 : Finaliser les paramètres
 
@@ -93,7 +93,7 @@ Vous pouvez également modifier la plupart des paramètres ultérieurement. Pour
 
 ## <a name="work-with-your-new-environment"></a>Travailler avec votre nouvel environnement
 
-Consultez les articles suivants pour vous aider à démarrer avec la configuration de Customer Insights. 
+Consultez les articles suivants pour commencer la configuration de Customer Insights : 
 
 - [Ajoutez plus d’utilisateurs et attribuez des autorisations](permissions.md).
 - [Ingérez vos sources de données](data-sources.md) et faites-les passer par le [processus d’unification des données](data-unification.md) pour obtenir des [profils clients unifiés](customer-profiles.md).

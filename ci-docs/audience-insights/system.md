@@ -1,7 +1,7 @@
 ---
 title: Configuration du système dans les informations sur l’audience
 description: En savoir plus sur les paramètres système de la fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035898"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651837"
 ---
 # <a name="system-configuration"></a>Configuration du système
 
@@ -24,9 +24,9 @@ La page **Système** comprend les onglets suivants :
 - [Utilisation de l’API](#api-usage-tab)
 - [À propos](#about-tab)
 - [GÉNÉRAL](#general-tab)
+- [Sécurité](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Page Système.](media/system-tabs.png "Page Système")
+:::image type="content" source="media/system-tabs.png" alt-text="Onglets de paramètres sur la page système.":::
 
 ## <a name="status-tab"></a>Onglet Statut
 
@@ -84,9 +84,15 @@ L’onglet **À propos de** contient le **nom complet** de votre organisation, l
 
 ## <a name="general-tab"></a>Onglet Général
 
-L’onglet **Général** comporte deux options : **Langue** et **Format de pays/région**.
+Vous pouvez changer la langue et le format de pays/région sous l'onglet **Général**.
 
-L’application [prend en charge un certain nombre de langues](supported-languages.md). Pour modifier votre langue par défaut, choisissez une **Langue** dans la liste déroulante.
+Customer Insights [prend en charge plusieurs langues](/dynamics365/get-started/availability). L’application utilise votre préférence de langue pour afficher des éléments tels que le menu, le libellé de l’étiquette et les messages système dans votre langue préférée.
+
+Les données et informations importées que vous avez saisies manuellement ne sont pas traduites.
+
+### <a name="update-the-settings"></a>Mettre à jour les paramètres
+
+Pour modifier votre langue par défaut, choisissez une **Langue** dans la liste déroulante.
 
 Pour modifier votre mise en forme par défaut pour les dates, l’heure et les nombres, utilisez la liste déroulante **Format de pays/région**. Un aperçu de la mise en forme s’affiche sous ce champ. Le système suggérera automatiquement une sélection lorsque vous choisissez une nouvelle langue.
 
@@ -105,6 +111,13 @@ L’**Utilisation de l’API** contient trois sections :
 
    Les opérations qui utilisent [l’ingestion de données en temps réel](real-time-data-ingestion.md) contiennent un bouton avec un symbole binoculaire pour afficher l’utilisation de l’API en temps réel. Sélectionnez le bouton pour ouvrir un volet latéral contenant les détails de l’utilisation de l’API en temps réel dans l’environnement actuel.   
    Utilisez la zone **Par groupe** dans le volet **Utilisation de l’API en temps réel** pour choisir la meilleure façon de présenter vos interactions en temps réel. Vous pouvez regrouper les données par méthode API, nom qualifié d’entité (entité ingérée), créé par (source de l’événement), résultat (succès ou échec) ou codes d’erreur. Les données sont disponibles sous forme de graphique historique et sous forme de tableau.
+
+## <a name="security-tab"></a>Onglet Sécurité
+
+L'onglet **Sécurité** vous permet de lier et de gérer votre propre [coffre de clés Azure](/azure/key-vault/general/basic-concepts) à l'environnement.
+Le coffre de clés dédié peut être utilisé pour organiser et utiliser des secrets dans la limite de conformité d’une organisation. Les informations d’audience peuvent utiliser les secrets dans Azure Key Vault pour [établir des connexions](connections.md) avec les systèmes tiers.
+
+Pour plus d’informations, voir [Apportez votre propre coffre de clés Azure](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

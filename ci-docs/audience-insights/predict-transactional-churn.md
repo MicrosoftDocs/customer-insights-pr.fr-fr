@@ -1,7 +1,7 @@
 ---
 title: Prédiction de l’attrition des transactions
 description: Prédisez si un client risque de ne plus acheter vos produits ou services.
-ms.date: 10/11/2021
+ms.date: 10/20/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643374"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673042"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Prédiction d’attrition des transactions (version préliminaire)
 
@@ -28,6 +28,32 @@ Pour les environnements basés sur des comptes d’entreprise, nous pouvons pré
 > Essayez le didacticiel pour une prédiction de l’attrition des transactions à l’aide d’exemples de données : [Exemple de guide de prédiction de l’attrition des transactions (version préliminaire)](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Conditions préalables
+
+# <a name="individual-consumers-b-to-c"></a>[Consommateurs individuels (B-to-C)](#tab/b2c)
+
+- Au minimum [Autorisations collaborateur](permissions.md) dans Customer Insights.
+- Connaissance des affaires pour comprendre ce que le désabonnement signifie pour votre entreprise. Nous prenons en charge les définitions de l’attrition basées sur le temps, ce qui signifie qu’un client est considéré comme perdu après une période sans achats.
+- Données sur vos transactions/achats et leur historique :
+    - Identificateurs de transaction pour distinguer les achats/transactions.
+    - Identificateurs client pour faire correspondre les transactions à vos clients.
+    - Dates des événements de transaction, qui définissent les dates de la transaction.
+    - Le schéma de données sémantique pour les achats/transactions nécessite les informations suivantes :
+        - **ID de transaction** : identifiant unique d’un achat ou d’une transaction.
+        - **Date de la transaction** : date de l’achat ou de la transaction.
+        - **Valeur de la transaction** : montant de la valeur monétaire/numérique de la transaction/de l’article.
+        - (Facultatif) **ID de produit unique** : ID du produit ou service acheté si vos données se trouvent au niveau d’un élément de ligne.
+        - (Facultatif) **Indique si cette transaction était un retour** : champ vrai/faux qui identifie si la transaction était un retour ou non. Si la **Valeur de la transaction** est négative, nous utiliserons également ces informations pour déduire un retour.
+- (Facultatif) Données sur les activités client :
+    - Identificateurs d’activité pour distinguer les activités du même type.
+    - Identifiants client pour faire correspondre les activités à vos clients.
+    - Informations sur l’activité contenant le nom et la date de l’activité.
+    - Le schéma de données sémantique pour les activités client comprend :
+        - **Clé primaire :** Identifiant unique pour une activité. Par exemple, une visite du site web ou un enregistrement d’utilisation montrant que le client a essayé un échantillon de votre produit.
+        - **Horodatage :** Date et heure de l’événement identifiées par la clé primaire.
+        - **Événement :** Nom de l’événement que vous souhaitez utiliser. Par exemple, un champ appelé « UserAction » dans une épicerie peut être un coupon utilisé par le client.
+        - **Détails :** Informations détaillées sur l’événement. Par exemple, un champ appelé « CouponValue » dans une épicerie peut être la valeur monétaire du coupon.
+
+# <a name="business-accounts-b-to-b"></a>[Comptes d’entreprise (B-to-B)](#tab/b2b)
 
 - Au minimum [Autorisations collaborateur](permissions.md) dans Customer Insights.
 - Connaissance des affaires pour comprendre ce que le désabonnement signifie pour votre entreprise. Nous prenons en charge les définitions de l’attrition basées sur le temps, ce qui signifie qu’un client est considéré comme perdu après une période sans achats.
@@ -51,7 +77,7 @@ Pour les environnements basés sur des comptes d’entreprise, nous pouvons pré
         - **Événement :** Nom de l’événement que vous souhaitez utiliser. Par exemple, un champ appelé « UserAction » dans une épicerie peut être un coupon utilisé par le client.
         - **Détails :** Informations détaillées sur l’événement. Par exemple, un champ appelé « CouponValue » dans une épicerie peut être la valeur monétaire du coupon.
 - (Facultatif) Données sur vos clients :
-    - Ces données doivent s’aligner sur des attributs plus statiques pour garantir que le modèle fonctionne au mieux.
+    - Ces données doivent s'aligner sur des attributs plus statiques pour garantir que le modèle fonctionne au mieux.
     - Le schéma de données sémantiques pour les données client comprend :
         - **CustomerID :** identificateur unique d’un client.
         - **Date de création :** date à laquelle le client a été initialement ajouté.
@@ -59,6 +85,9 @@ Pour les environnements basés sur des comptes d’entreprise, nous pouvons pré
         - **Pays :** pays d’un client.
         - **Secteur d’activité :** type d’industrie d’un client. Par exemple, un champ intitulé « Secteur d’activité » dans un torréfacteur peut indiquer si le client était un détaillant.
         - **Classification :** catégorisation d’un client pour votre entreprise. Par exemple, un champ appelé « ValueSegment » dans un torréfacteur peut être le niveau du client en fonction de la taille du client.
+
+---
+
 - Caractéristiques des données suggérées :
     - Données historiques suffisantes : données de transaction pour au moins le double de la période de temps sélectionnée. De préférence, deux à trois ans d’historique des transactions. 
     - Achats multiples par client : dans l’idéal, au moins deux transactions par client.
@@ -114,6 +143,32 @@ Pour les environnements basés sur des comptes d’entreprise, nous pouvons pré
 
 1. Sélectionnez **Suivant**.
 
+# <a name="individual-consumers-b-to-c"></a>[Consommateurs individuels (B-to-C)](#tab/b2c)
+
+### <a name="add-additional-data-optional"></a>Ajouter des données supplémentaires (facultatif)
+
+Configurez la relation entre votre entité d’activité client et l’entité *Client*.
+
+1. Sélectionnez le champ qui identifie le client dans la table des activités client. Il peut être directement lié à l’ID client principal de votre entité *Client*.
+
+1. Sélectionnez l’entité qui est votre entité *Client* principale.
+
+1. Entrez un nom qui décrit la relation.
+
+#### <a name="customer-activities"></a>Activités du client
+
+1. Vous pouvez éventuellement sélectionner **Ajouter des données** pour **Activités client**.
+
+1. Sélectionnez le type d’activité sémantique qui contient les données que vous souhaitez utiliser, puis sélectionnez une ou plusieurs activités dans la section **Activités**.
+
+1. Sélectionnez un type d’activité correspondant au type d’activité du client que vous configurez. Sélectionnez **Créer** et choisissez un type d’activité disponible ou créez un nouveau type.
+
+1. Sélectionnez **Suivant**, puis **Enregistrer**.
+
+1. Si vous avez d’autres activités client que vous souhaitez inclure, répétez les étapes ci-dessus.
+
+# <a name="business-accounts-b-to-b"></a>[Comptes d’entreprise (B-to-B)](#tab/b2b)
+
 ### <a name="select-prediction-level"></a>Sélectionner le niveau de prédiction
 
 La plupart des prédictions sont créées au niveau du client. Dans certaines situations, cela peut ne pas être suffisamment granulaire pour répondre aux besoins de votre entreprise. Vous pouvez utiliser cette fonctionnalité pour prédire l’attrition pour une succursale d’un client par exemple, plutôt que pour le client dans son ensemble.
@@ -159,7 +214,7 @@ Configurez la relation entre votre entité d’activité client et l’entité *
 
 1. Sélectionnez **Suivant**.
 
-### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Fournir une liste facultative de comptes de référence (comptes d’entreprise uniquement)
+### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Fournir une liste facultative de comptes de référence
 
 Ajoutez une liste de vos clients et comptes professionnels que vous souhaitez utiliser comme références. Vous recevrez les [détails de ces comptes de référence](#review-a-prediction-status-and-results) y compris leur score d’attrition et les fonctionnalités les plus influentes qui ont eu un impact sur la prédiction de leur attrition.
 
@@ -168,6 +223,8 @@ Ajoutez une liste de vos clients et comptes professionnels que vous souhaitez ut
 1. Choisissez les clients qui servent de référence.
 
 1. Cliquez sur **Suivant** pour continuer.
+
+---
 
 ### <a name="set-schedule-and-review-configuration"></a>Définir le calendrier et revoir la configuration
 
@@ -201,6 +258,25 @@ Ajoutez une liste de vos clients et comptes professionnels que vous souhaitez ut
 1. Sélectionnez les ellipses verticales à côté de la prédiction pour laquelle vous souhaitez consulter les résultats et sélectionnez **Afficher**.
 
    :::image type="content" source="media/model-subs-view.PNG" alt-text="Affichez le contrôle pour voir les résultats d’une prédiction.":::
+
+# <a name="individual-consumers-b-to-c"></a>[Consommateurs individuels (B-to-C)](#tab/b2c)
+
+1. La page de résultats comporte trois sections principales de données :
+   - **Performance du modèle de formation :** A, B ou C sont des scores possibles. Ce score indique les performances de la prédiction et peut vous aider à prendre la décision d’utiliser les résultats stockés dans l’entité de sortie. Les scores sont déterminés en fonction des règles suivantes : 
+        - **A** lorsque le modèle a prédit avec précision au moins 50 % des prédictions totales et que le pourcentage de prédictions précises pour les clients perdus est supérieur d’au moins 10 % au taux de référence.
+            
+        - **B** lorsque le modèle a prédit avec précision au moins 50 % des prédictions totales et que le pourcentage de prédictions précises pour les clients perdus est jusqu’à 10 % supérieur au taux de référence.
+            
+        - **C** lorsque le modèle a prédit avec précision moins de 50 % des prédictions totales ou que le pourcentage de prédictions précises pour les clients perdus est inférieur au taux de référence.
+               
+        - **Référence** prend l’entrée de l’intervalle de temps de prédiction pour le modèle (par exemple, un an) et le modèle crée différentes fractions de temps en le divisant par 2 jusqu’à ce qu’il atteigne un mois ou moins. Il utilise ces fractions pour créer une règle métier pour les clients qui n’ont pas effectué d’achats sur cette période. Ces clients sont considérés comme perdus. La règle métier basée sur le temps ayant la plus grande capacité à prédire qui présente un risque d’attrition est choisie comme modèle de référence.
+            
+    - **Probabilité d’attrition (nombre de clients)**  : Groupes de clients en fonction du risque d’attrition prévu. Ces données peuvent vous aider ultérieurement si vous souhaitez créer un segment de clients à haut risque de désabonnement. Ces segments aident à comprendre où doit se situer votre limite pour l’appartenance à un segment.
+       
+    - **Facteurs les plus influents** : De nombreux facteurs sont pris en compte lors de la création de votre prédiction. Chacun des facteurs a son importance calculée pour les prédictions regroupées créées par un modèle. Vous pouvez utiliser ces facteurs pour valider vos résultats de prédiction, ou vous pouvez utiliser ces informations plus tard pour [créer des segments](segments.md) qui pourraient contribuer à influencer le risque d’attrition pour les clients.
+
+
+# <a name="business-accounts-b-to-b"></a>[Comptes d’entreprise (B-to-B)](#tab/b2b)
 
 1. La page de résultats comporte trois sections principales de données :
    - **Performance du modèle de formation :** A, B ou C sont des scores possibles. Ce score indique les performances de la prédiction et peut vous aider à prendre la décision d’utiliser les résultats stockés dans l’entité de sortie. Les scores sont déterminés en fonction des règles suivantes : 
@@ -237,6 +313,11 @@ Ajoutez une liste de vos clients et comptes professionnels que vous souhaitez ut
        Lorsque vous prédisez l’attrition au niveau du compte, tous les comptes sont pris en compte dans la dérivation des valeurs de fonctionnalités moyennes pour les segments d’attrition. Pour les prédictions d’attrition au niveau secondaire pour chaque compte, la dérivation des segments d’attrition dépend du niveau secondaire de l’élément sélectionné dans le volet latéral. Par exemple, si un élément a un niveau secondaire de catégorie de produits = fournitures de bureau, seuls les éléments ayant des fournitures de bureau comme catégorie de produits sont pris en compte lors de la dérivation des valeurs de fonctionnalités moyennes pour les segments d’attrition. Cette logique est appliquée pour garantir une comparaison équitable des valeurs des fonctionnalités de l’éléments avec les valeurs moyennes sur les segments d’attrition faible, moyen et élevé.
 
        Dans certains cas, la valeur moyenne des segments d’attrition faible, moyen ou élevé est vide ou n’est pas disponible car aucun élément n’appartient aux segments d’attrition correspondants sur la base de la définition ci-dessus.
+       
+       > [!NOTE]
+       > L'interprétation des valeurs des colonnes faible, moyen, élevé habituelles est différente pour les caractéristiques catégoriques telles que le pays ou le secteur. Étant donné que la notion de valeur de caractéristique « moyenne » ne s'applique pas aux caractéristiques catégoriques, les valeurs de ces colonnes sont la proportion de clients dans les segments à taux de désabonnement faible, moyen ou élevé qui ont la même valeur pour la caractéristique catégorique par rapport à l'article sélectionné dans le panneau latéral.
+
+---
 
 ## <a name="manage-predictions"></a>Gérer les prédictions
 

@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622967"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673455"
 ---
 # <a name="define-and-manage-measures"></a>Définir et gérer des mesures
 
@@ -28,7 +28,7 @@ Utilisez le générateur de mesures pour planifier les activités commerciales e
 
 Cette section vous guide tout au long de la création d’une mesure à partir de zéro. Vous pouvez créer une mesure avec des attributs de données à partir d’entités de données qui ont une relation configurée pour se connecter à l’entité de profil client unifié.
 
-# <a name="individual-customers-b2c"></a>[Clients individuels (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consommateurs individuels (B-to-C)](#tab/b2c)
 
 1. Dans les informations sur l’audience, accédez à **Mesures**.
 
@@ -92,7 +92,7 @@ Cette section vous guide tout au long de la création d’une mesure à partir d
 
 1. Aller à **Mesures** pour voir la mesure nouvellement créée dans la liste.
 
-# <a name="business-accounts-b2b"></a>[Comptes d’entreprise (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Comptes d’entreprise (B-to-B)](#tab/b2b)
 
 1. Dans les informations sur l’audience, accédez à **Mesures**.
 
@@ -164,7 +164,7 @@ Cette section vous guide tout au long de la création d’une mesure à partir d
 
 Vous pouvez utiliser des modèles prédéfinis de mesures couramment utilisées pour les créer. Les descriptions détaillées des modèles et une expérience guidée vous aident à créer des mesures de manière efficace. Les modèles reposent sur les données mappées de l’entité *Activité unifiée*. Assurez-vous donc d’avoir configuré les [activités client](activities.md) avant de créer une mesure à partir d’un modèle.
 
-# <a name="individual-customers-b2c"></a>[Clients individuels (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consommateurs individuels (B-to-C)](#tab/b2c)
 
 Vous pouvez utiliser des modèles prédéfinis de mesures couramment utilisées pour les créer. Les descriptions détaillées des modèles et une expérience guidée vous aident à créer des mesures de manière efficace. Les modèles reposent sur les données mappées de l’entité *Activité unifiée*. Assurez-vous donc d’avoir configuré les [activités client](activities.md) avant de créer une mesure à partir d’un modèle.
 
@@ -212,7 +212,7 @@ La procédure suivante décrit les étapes pour créer une nouvelle mesure à l�
 
 1. Vous pouvez maintenant sélectionner **Exécuter** pour calculer les résultats de la mesure. Pour l’affiner ultérieurement, sélectionnez **Enregistrer le brouillon**.
 
-# <a name="business-accounts-b2b"></a>[Comptes d’entreprise (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Comptes d’entreprise (B-to-B)](#tab/b2b)
 
 Cette fonctionnalité n’est disponible que pour les mesures créées dans des environnements avec des clients individuels comme audience cible principale.
 

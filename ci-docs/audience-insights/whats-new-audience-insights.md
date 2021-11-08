@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606065"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673825"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Nouveautés de la fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights
 
@@ -166,7 +166,7 @@ Les mises à jour de mars 2021 comprennent plusieurs fonctionnalités, mises à
 - **Exporter des segments vers Constant Contact** : nous avons étendu nos destinations d’exportation pour inclure Constant Contact. Vous pouvez maintenant exporter des segments de Customer Insights vers les listes Constant Contact et les utiliser comme référence pour vos campagnes marketing.   
    Pour plus d’informations, voir [Exporter vers Constant Contact](export-constant-contact.md).
 
-- **Exporter des segments vers RollWorks** : nous avons étendu nos destinations d’exportation pour inclure RollWorks. Vous pouvez maintenant exporter des segments de Customer Insights vers les audiences RollWorks et les utiliser comme référence pour vos publicités B2B.    
+- **Exporter des segments vers RollWorks** : nous avons étendu nos destinations d’exportation pour inclure RollWorks. Vous pouvez désormais exporter des segments de Customer Insights vers les audiences RollWorks et les utiliser comme référence pour votre publicité B2B.    
    Pour plus d’informations, voir [Exporter vers RollWorks](export-rollworks.md).
 
 - **Exporter des segments vers Snapchat** : nous avons étendu nos destinations d’exportation pour inclure Snapchat. Vous pouvez maintenant exporter des segments de Customer Insights vers les audiences Snapchat et les utiliser comme référence pour vos publicités.     

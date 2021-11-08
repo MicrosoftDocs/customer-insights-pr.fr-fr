@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617552"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7672996"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enrichissement des profils clients (aperçu)
 
@@ -29,7 +29,7 @@ Vous devez disposer des autorisations Collaborateur ou Administrateur pour crée
 
 Sous l’onglet **Découvrir**, vous trouverez toutes les options d’enrichissement prises en charge.
 
-# <a name="individual-customers-b2c"></a>[Clients individuels (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consommateurs individuels (B-to-C)](#tab/b2c)
 
 - [Marques](enrichment-microsoft.md) fournies par Microsoft
 - [Intérêts](enrichment-microsoft.md) fournis par Microsoft
@@ -38,7 +38,7 @@ Sous l’onglet **Découvrir**, vous trouverez toutes les options d’enrichisse
 - [Données personnalisées](enrichment-SFTP-custom-import.md) via SFTP (Secure File Transfer Protocol) 
 - [Azure Maps](enrichment-azure-maps.md) fourni par Microsoft
 
-# <a name="business-accounts-b2b"></a>[Comptes d’entreprise (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Comptes d’entreprise (B-to-B)](#tab/b2b)
 
 - [Données de la société](enrichment-leadspace.md) fournies par Leadspace
 - [Adresses améliorées](enrichment-enhanced-addresses.md) fournies par Microsoft 

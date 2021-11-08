@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623098"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673320"
 ---
 # <a name="exports-preview-overview"></a>Vue d’ensemble des exportations (version préliminaire)
 
@@ -33,9 +33,9 @@ Il existe deux types principaux d’exportations :
 ### <a name="export-segments"></a>Exporter les segments
 
 **Exportation de segments dans des environnements pour les comptes professionnels (B2B) ou les clients particuliers (B2C)**  
-La plupart des options d’exportation prennent en charge les deux types d’environnements. L’exportation de segments vers divers systèmes cibles a des exigences spécifiques. De manière générale, un membre du segment, le profil client, contient des informations de contact. Si c’est généralement le cas pour les segments construits sur les clients individuels (B2C), ce n’est pas nécessairement le cas pour les segments basés sur les comptes professionnels (B2B). 
+La plupart des options d’exportation prennent en charge les deux types d’environnements. L’exportation de segments vers divers systèmes cibles a des exigences spécifiques. De manière générale, un membre du segment, le profil client, contient des informations de contact. Si c'est généralement le cas pour les segments construits sur les clients individuels (B2C), ce n'est pas nécessairement le cas pour les segments basés sur les comptes professionnels (B2B). 
 
-**Segmenter les environnements d’exportation pour les comptes d’entreprise (B2B)**  
+**Segmenter les environnements d'exportation pour les comptes d'entreprise (B2B)**  
 - Les segments dans le cadre des environnements pour les comptes professionnels sont construits sur l’entité *Compte*. Pour exporter des segments de compte tels quels, le système cible doit prendre en charge les segments de compte purs. C’est le cas pour [LinkedIn](export-linkedin-ads.md) lorsque vous choisissez l’option **entreprise** lors de la définition de l’export.
 - Tous les autres systèmes cibles nécessitent des champs de l’entité de contact. Pour garantir que les segments de compte peuvent récupérer les données des contacts associés, votre définition de segment doit projeter les attributs de l’entité de contact. En savoir plus sur la façon de [configurer les segments et les attributs du projet](segment-builder.md).
 

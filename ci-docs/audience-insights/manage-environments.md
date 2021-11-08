@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645123"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673730"
 ---
 # <a name="manage-environments"></a>Gérer des environnements
 
@@ -67,7 +67,8 @@ Les données suivantes ne sont *pas* copiées :
 
 - Profils client.
 - Informations d’identification d’une source de données. Vous devrez fournir les informations d’identification pour chaque source de données et actualiser les sources de données manuellement.
-- Sources de données du dossier Common Data Model et Data Lake géré par Dataverse. Vous devez créer ces sources de données manuellement avec le même nom que dans l’environnement source.
+
+- Sources de données du dossier Common Data Model et Dataverse - lac de données géré. Vous devez créer ces sources de données manuellement avec le même nom que dans l’environnement source.
 
 Lorsque vous copiez un environnement, vous voyez un message de confirmation de création du nouvel environnement. Sélectionnez **Accéder aux sources de données** pour voir la liste des sources de données.
 

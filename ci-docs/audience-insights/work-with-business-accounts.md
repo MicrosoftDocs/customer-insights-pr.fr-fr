@@ -1,7 +1,7 @@
 ---
 title: Commencez avec les comptes professionnels comme audience cible principale
 description: Découvrez les comptes professionnels comme audience cible principale Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7644985"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673684"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Travaillez avec des comptes d’entreprise dans les insights d’audience
 
-La capacité d’insights d’audience dans Dynamics 365 Customer Insights vous permet de configurer votre environnement pour différentes audiences cibles principales : les clients particuliers (B2C) et les comptes professionnels (B2B). Dans les scénarios B2C, les données sont centrées sur les individus. Pour le B2B, les principales audiences cibles sont les comptes - organisations ou entreprises - et les contacts. Cet article vous aide à vous familiariser avec un environnement pour les comptes d’entreprise. Il répertorie les différences pour les zones de fonctionnalités dans les informations d’audience, en fonction de votre environnement. Pour plus d’informations sur les différences, consultez la documentation des zones de fonctionnalités. 
+La capacité d'insights d'audience dans Dynamics 365 Customer Insights vous permet de configurer votre environnement pour différentes audiences cibles principales : les clients particuliers (B2C) et les comptes professionnels (B2B). Dans les scénarios B2C, les données sont centrées sur les individus. Pour le B2B, les principales audiences cibles sont les comptes - organisations ou entreprises - et les contacts. Cet article vous aide à vous familiariser avec un environnement pour les comptes d’entreprise. Il répertorie les différences pour les zones de fonctionnalités dans les informations d’audience, en fonction de votre environnement. Pour plus d’informations sur les différences, consultez la documentation des zones de fonctionnalités. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Créer un environnement pour les comptes professionnels
 
@@ -32,7 +32,7 @@ Après avoir unifié les données, [spécifiez les hiérarchies de comptes](rela
 
 Si votre organisation gère des environnements pour des clients individuels et des comptes professionnels, vous pouvez utiliser le sélecteur dans le volet de gauche pour choisir l’audience cible principale.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Sélecteur pour changer l’audience cible principale entre les clients individuels et les comptes professionnels.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Sélecteur pour changer l’audience cible principale entre les clients individuels et les comptes professionnels.":::
 
 ## <a name="supported-feature-areas"></a>Fonctionnalités prises en charge
 

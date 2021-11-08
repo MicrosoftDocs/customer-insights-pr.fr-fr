@@ -1,7 +1,7 @@
 ---
 title: Créer des segments avec le générateur de segments
 description: Créez des segments de clients pour les regrouper en fonction de divers attributs.
-ms.date: 09/07/2021
+ms.date: 10/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623004"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673547"
 ---
 # <a name="create-segments"></a>Créer des segments
 
@@ -23,6 +23,7 @@ Définissez des filtres complexes autour de l’entité de client unifié et ses
 > [!TIP]
 > - Les segments rapides ne sont pris en charge que dans les environnements pour les **clients particuliers**.    
 > - Les segments basés sur des **clients particuliers** incluent automatiquement les informations de contact disponibles pour les membres du segment. Dans des environnements pour les **comptes d’entreprise**, les segments sont basés sur des comptes (sociétés ou filiales). Pour inclure des informations de contact dans un segment, utilisez la fonctionnalité **Attributs du projet** du générateur de segments.
+>    - Assurez-vous que les sources de données de contact sont [mappées sémantiquement à l'entité ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
 
 ## <a name="segment-builder"></a>Générateur de segments
 
@@ -52,7 +53,7 @@ L’exemple ci-dessus illustre la fonctionnalité de segmentation. Nous avons d�
 
 Il existe plusieurs façons de créer un segment. Cette section décrit comment créer votre propre segment à partir de zéro. Vous pouvez également créer un *segment rapide* basé sur des entités existantes ou utiliser des modèles Machine Learning pour obtenir des *segments suggérés*. Pour plus d’informations, consultez la [Vue d’ensemble des segments](segments.md).
 
-Lors de la création d’un segment, vous pouvez enregistrer un brouillon. Au stade du brouillon, un segment est enregistré en tant que segment inactif. Une fois la configuration du segment terminée, exécutez-la pour activer le segment. Alternativement, vous pouvez ***Activer** _ un segment à partir de la page_ *Tous les segments**.
+Lors de la création d’un segment, vous pouvez enregistrer un brouillon. Au stade du brouillon, un segment est enregistré en tant que segment inactif. Une fois la configuration du segment terminée, exécutez-la pour activer le segment. Vous pouvez également **Activer** un segment à partir de la page **Tous les segments**.
 
 1. Accédez à la page **Segments**.
 
@@ -86,7 +87,7 @@ Lors de la création d’un segment, vous pouvez enregistrer un brouillon. Au st
 
    Lors de l’utilisation de l’opérateur OU, toutes les conditions doivent être basées sur les entités incluses dans le chemin d’accès à la relation.
 
-   - Vous pouvez créer plusieurs règles pour créer différents ensembles d’enregistrements clients. Vous pouvez combiner des groupes pour inclure les clients requis pour votre scénario professionnel. Pour créer une nouvelle règle, sélectionnez **Ajouter une règle**. Plus spécifiquement, si vous ne pouvez pas inclure une entité dans une règle en raison du chemin d’accès à la relation spécifié, vous devez créer une nouvelle règle pour choisir les attributs qui la forment.
+   - Vous pouvez créer plusieurs règles pour créer différents ensembles d’enregistrements clients. Vous pouvez combiner des groupes pour inclure les clients requis pour votre scénario professionnel. Pour créer une nouvelle règle, sélectionnez **Ajouter une règle**. Plus particulièrement, si vous ne pouvez pas inclure une entité dans une règle en raison du chemin de relation spécifié, vous devez créer une nouvelle règle pour choisir les attributs de celle-ci.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Ajoutez une nouvelle règle à un segment et choisissez l’opérateur défini.":::
 
@@ -96,7 +97,15 @@ Lors de la création d’un segment, vous pouvez enregistrer un brouillon. Au st
       - **Intersection** fait se chevaucher les deux groupes. Seules les données qui *sont communes* aux deux groupes sont conservées dans le groupe unifié.
       - **Exception** combine les deux groupes. Seules les données du groupe A qui *ne sont pas communes* aux données du groupe B sont conservées.
 
-1. Par défaut, les segments génèrent l’entité de sortie contenant tous les attributs des profils clients qui correspondent aux filtres définis. Si un segment est basé sur d’autres entités que l’entité *Client*, vous pouvez ajouter d’autres attributs de ces entités à l’entité de sortie. Sélectionnez **Attributs du projet** pour choisir les attributs qui seront ajoutés à l’entité de sortie.  
+1. Par défaut, les segments génèrent l’entité de sortie contenant tous les attributs des profils clients qui correspondent aux filtres définis. Si un segment est basé sur d’autres entités que l’entité *Client*, vous pouvez ajouter d’autres attributs de ces entités à l’entité de sortie. Sélectionnez **Attributs du projet** pour choisir les attributs qui seront ajoutés à l’entité de sortie. 
+
+   > [!IMPORTANT]
+   > Pour les segments basés sur des comptes professionnels, les détails d'un ou plusieurs contacts de chaque compte à partir de l'entité *ContactProfile* doivent être inclus dans le segment pour permettre à ce segment d'être activé ou exporté vers des destinations nécessitant des informations de contact. Pour plus d'informations sur l'entité *ContactProfil*, voir [Mappages sémantiques](semantic-mappings.md).
+   > Un exemple de sortie pour un segment basé sur des comptes d'entreprise avec des attributs projetés de contacts pourrait ressembler à ceci : 
+   >
+   > |ID  |Nom du compte  |Revenus  |Nom du contact  | Rôle du contact|
+   > |---------|---------|---------|---------|---|
+   > |10021     | Contoso | 100K | [Abbie Moss, Ruth Soto]  | [CEO, Gestion des approvisionnements]
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Exemple d'attributs projetés sélectionnés dans le volet latéral à ajouter à l’entité de sortie.":::
   
@@ -107,13 +116,14 @@ Lors de la création d’un segment, vous pouvez enregistrer un brouillon. Au st
    > - Si l’attribut que vous souhaitez projeter est à plus d’un saut de l’entité *Client*, telle que définie par la relation, cet attribut doit être utilisé dans chaque règle de la requête de segment que vous créez. 
    > - Si l’attribut que vous souhaitez projeter n’est qu’à un saut de l’entité *Client*, cet attribut ne doit pas être présent dans chaque règle de la requête de segment que vous créez. 
    > - Les **attributs projetés** sont pris en compte lors de l’utilisation d’opérateurs définis.
-   > - Pour les segments basés sur des comptes professionnels, les détails d’un ou plusieurs contacts de chaque compte doivent être inclus dans le segment pour permettre à ce segment d’être activé ou exporté vers des destinations nécessitant des informations de contact.
 
 1. Avant d’enregistrer et d’exécuter le segment, sélectionnez **Modifier les détails** en regard du nom du segment. Fournissez un nom pour votre segment et mettez à jour le **Nom de l’entité de sortie** suggéré pour le segment. Vous pouvez également ajouter une description au segment.
 
 1. Sélectionnez **Exécuter** pour enregistrer le segment, activez-le et commencez à traiter votre segment en fonction de toutes les règles et conditions. Sinon, il sera enregistré en tant que segment inactif.
-
+   
 1. Sélectionnez **Revenir aux segments** pour revenir à la page **Segments**.
+
+1. Par défaut, le segment est créé en tant que segment dynamique. Cela signifie que le segment est actualisé lors des actualisations du système. Pour [arrêter l'actualisation automatique](segments.md#manage-existing-segments), sélectionnez le segment et choisissez l'option **Rendre statique**. Seuls les segments statiques peuvent être [actualisés manuellement](segments.md#refresh-segments) à tout moment.
 
 > [!TIP]
 > - Le générateur de segments ne suggérera pas de valeurs valides à partir d’entités lors de la définition des opérateurs pour les conditions. Vous pouvez accéder à **Données** > **Entités** et télécharger les données de l’entité pour voir les valeurs disponibles.

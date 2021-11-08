@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-map
-ms.openlocfilehash: 7ee3feea8423f35f32ff471b3ed8eb3447584089
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 8b84ed1a860e383e4eb3f7499be6d397ba3f1db1
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648159"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673260"
 ---
 # <a name="map-entities-and-attributes"></a>Mapper les entités et attributs
 
@@ -26,7 +26,7 @@ Le **Mappage** est la première étape du processus d’unification des données
 - *Sélection d’attribut* : Pour chaque entité, identifiez les colonnes à combiner et les réconcilier lors des étapes d’unification suivantes, à savoir la *mise en correspondance* et la *fusion*. Ces colonnes sont appelées *Attributs*.
 - *Sélection de la clé primaire et du type de sémantique* : Pour chaque entité, identifiez un attribut que vous souhaitez définir comme clé primaire pour cette entité, et pour chaque attribut, identifiez un type de sémantique qui décrit le mieux cet attribut.
 
-Pour plus d’informations sur le flux général d’unification des données, consultez [Unifier ](data-unification.md).
+Pour plus d’informations sur le flux général d’unification des données, consultez [Unifier](data-unification.md).
 
 ## <a name="select-the-first-entities"></a>Sélectionner les premières entités
 
@@ -96,7 +96,7 @@ Poursuivez les étapes d’unification et assurez-vous que l’attribut qui cont
 
 Pour les organisations (version préliminaire), le type d’attribut doit être mis en correspondance avec « Organization.Name »
 > [!div class="mx-imgBorder"]
-> ![Clé primaire et type d'attribut B2B](media/configure-data-map-edit-b2b.png "Clé primaire et type d’attribut B2B")
+> ![Clé primaire et type d'attribut B2B.](media/configure-data-map-edit-b2b.png "Clé primaire et type d'attribut B2B")
 
 ## <a name="next-step"></a>Étape suivante
 
