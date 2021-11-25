@@ -1,7 +1,7 @@
 ---
 title: Enrichir les profils client avec les données de Microsoft
-description: Utilisez les données propriétaires de Microsoft pour enrichir vos données client avec les affinités pour des marques et des intérêts.
-ms.date: 11/01/2021
+description: Utilisez les données propriétaires de Microsoft pour enrichir vos données clients avec des affinités et le partage de voix.
+ms.date: 11/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,33 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: c25dbb7a877da2d3fccc1a4e5b219b9792bc6402
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
+ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732539"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "7793701"
 ---
-# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enrichir les profils client avec les affinités pour des marques et des intérêts (préversion)
+# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Enrichir les profils clients avec des affinités et le partage de voix (version préliminaire)
 
-Utilisez les données propriétaires de Microsoft pour enrichir vos données client avec les affinités pour des marques et des intérêts. Ces affinités sont basées sur les données de personnes présentant des données démographiques similaires à celles de vos clients. Ces informations vous aident à mieux comprendre et segmenter vos clients en fonction de leurs affinités avec des marques et des intérêts spécifiques.
+Utilisez les données propriétaires de Microsoft pour enrichir vos données clients avec des affinités de marques, des affinités d’intérêt et le partage de voix (PdV). Ces affinités et le PdV sont basés sur les données des personnes présentant des caractéristiques démographiques similaires à celles de vos clients. Ces informations vous aident à mieux comprendre et segmenter vos clients en fonction de leurs affinités ou du PdV pour des marques et des intérêts spécifiques.
 
 Dans les informations sur l’audience, accédez à **Données** > **Enrichissement** pour [configurer et afficher les enrichissements](enrichment-hub.md).
 
-Pour configurer l’enrichissement des affinités pour les marques, accédez à l’onglet **Découvrir** et sélectionnez **Enrichir mes données** sur l’onglet **Marques**.
+Pour configurer les affinités de marque et l’enrichissement de PdV, rendez-vous sur l’onglet **Découvrir** et sélectionnez **Enrichir mes données** sur la vignette **Marques**.
 
-Pour configurer l’enrichissement des affinités pour des centres intérêts, accédez à l’onglet **Découvrir** et sélectionnez **Enrichir mes données** sur l’onglet **Intérêts**.
+Pour configurer les affinités d’intérêt et l’enrichissement de PdV, rendez-vous sur l’onglet **Découvrir** et sélectionnez **Enrichir mes données** sur la vignette **Intérêts**.
 
    > [!div class="mx-imgBorder"]
    > ![Vignettes de marques et d’intérêts.](media/BrandsInterest-tile-Hub.png "Vignettes de marques et d’intérêts")
 
-## <a name="how-we-determine-affinities"></a>Détermination des affinités
+## <a name="how-we-determine-affinities-and-sov"></a>Comment nous déterminons les affinités et le PdV
 
-Nous utilisons les données de recherche en ligne de Microsoft pour trouver des affinités pour des marques et des intérêts dans divers segments démographiques (définis par âge, sexe ou lieu). Le volume de recherche en ligne pour une marque ou un intérêt détermine le degré d’affinité d’un segment démographique, par rapport à d’autres segments, pour cette marque ou cet intérêt.
+Nous utilisons les données de recherche en ligne de Microsoft pour trouver des affinités et le PdV pour les marques et les intérêts dans divers segments démographiques (définis par âge, sexe ou emplacement). Le volume de recherche en ligne pour une marque ou un intérêt constitue la base pour déterminer l’affinité ou le PdV. Cependant, chacun offre une perspective différente pour comprendre vos clients.
+
+- L’affinité est une comparaison entre des segments démographiques. Vous pouvez utiliser ces informations pour identifier les segments démographiques qui ont la plus grande affinité pour une marque ou un intérêt donné, par rapport à d’autres segments.
+
+- Le partage de voix est un comparatif de vos marques ou intérêts sélectionnés. Vous pouvez utiliser ces informations pour identifier quelle marque ou quel intérêt a le partage de voix le plus élevé pour un segment démographique donné, par rapport aux autres marques ou intérêts que vous avez sélectionnés.
 
 ## <a name="affinity-level-and-score"></a>Niveau d’affinité et score
 
@@ -48,6 +52,10 @@ Dans chaque profil client enrichi, nous fournissons deux valeurs associées : l
 |Faible     | 1-34        |
 
 En fonction de la granularité que vous souhaitez pour mesurer l’affinité, vous pouvez utiliser le niveau d’affinité ou le score. Le score d’affinité vous donne un contrôle plus précis.
+
+## <a name="share-of-voice-sov"></a>Partage de voix (PdV)
+
+Nous calculons le PdV sur une échelle de 100 points. Le PdV total pour toutes les marques ou tous les intérêts pour chaque profil client enrichi s’élève à 100. Contrairement aux affinités, le PdV est relatif aux marques et aux intérêts que vous sélectionnez. Par exemple, les valeurs PdV pour « Microsoft » peuvent être différentes si les marques sélectionnées sont (« Microsoft », « GitHub ») par rapport à (« Microsoft », « LinkedIn »).
 
 ## <a name="supported-countriesregions"></a>Pays/régions pris en charge
 
@@ -69,10 +77,10 @@ Une expérience guidée vous aide tout au long de la configuration des enrichiss
 
 ### <a name="define-your-brands-or-interests"></a>Définir vos marques ou centres d’intérêt
 
-Choisissez jusqu'à cinq marques ou centres d'intérêt en utilisant l'une ou les deux options suivantes :
+Choisissez jusqu’à cinq marques ou centres d’intérêt en utilisant l’une ou les deux options suivantes :
 
 - **Secteur d’activité** : sélectionnez votre secteur d’activité dans la liste déroulante, puis choisissez parmi les principaux intérêts et marques pour ce secteur d’activité.
-- **Choisir les vôtres** : saisissez une marque ou un centre d'intérêt pertinent pour votre organisation, puis choisissez parmi les suggestions correspondantes. Si nous ne répertorions pas une marque ou un intérêt que vous recherchez, envoyez-nous vos commentaires en utilisant le lien **Suggérer**.
+- **Choisir les vôtres** : saisissez une marque ou un centre d’intérêt pertinent pour votre organisation, puis choisissez parmi les suggestions correspondantes. Si nous ne répertorions pas une marque ou un intérêt que vous recherchez, envoyez-nous vos commentaires en utilisant le lien **Suggérer**.
 
 ### <a name="review-enrichment-preferences"></a>Examiner les préférences d’enrichissement
 
@@ -82,7 +90,7 @@ Passez en revue vos préférences d’enrichissement par défaut et mettez-les �
 
 ### <a name="select-entity-to-enrich"></a>Sélectionner une entité à enrichir
 
-Sélectionnez **Entité enrichie** et choisissez le jeu de données que vous souhaitez enrichir avec les données d’entreprise de Microsoft. Vous pouvez sélectionner l’entité Client pour enrichir tous vos profils clients ou sélectionner une entité segment pour enrichir uniquement les profils clients contenus dans ce segment.
+Sélectionnez **Entité enrichie** et choisissez le jeu de données que vous souhaitez enrichir avec les données de Microsoft. Vous pouvez sélectionner l’entité Client pour enrichir tous vos profils clients ou sélectionner une entité segment pour enrichir uniquement les profils clients contenus dans ce segment.
 
 ### <a name="map-your-fields"></a>Mapper vos champs
 
@@ -124,13 +132,11 @@ Après avoir exécuté le processus d’enrichissement, allez dans **Mes enrichi
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Aperçu des résultats après l’exécution du processus d’enrichissement.":::
 
-Consultez les données enrichies en sélectionnant **Afficher les données enrichies** dans le graphique. Les données enrichies pour les marques vont dans l’entité **MarqueAffinitéDeMicrosoft**. Les données pour les intérêts se trouvent dans l’entité **InterestAffinityFromMicrosoft**. Vous trouverez également ces entités répertoriées dans le groupe **Enrichissement** dans **Données** > **Entités**.
-
-Vous verrez un graphique avec le nombre de profils clients enrichis au fil du temps et un aperçu de l’entité enrichie. Sélectionnez **Afficher plus** dans la vignette d’aperçu pour ouvrir l’entité enrichie.
+Vous y trouverez un graphique avec le nombre de profils clients enrichis au fil du temps et des aperçus des entités enrichies. Passez en revue les données enrichies en sélectionnant **Voir plus** dans les graphiques **Niveau d’affinité** ou **Partage de voix**. Les données enrichies pour les marques vont aux entités **BrandAffinityFromMicrosoft** et **BrandShareOfVoiceFromMicrosoft**. Les données relatives aux intérêts se trouvent dans les entités **InterestAffinityFromMicrosoft** et **InterestShareOfVoiceFromMicrosoft**. Vous trouverez également ces entités répertoriées dans le groupe **Enrichissement** dans **Données** > **Entités**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Voir les données d’enrichissement sur la carte client
 
-Les affinités de marque et d’intérêt peuvent également être consultées sur les cartes client individuelles. Accédez à **Clients** et sélectionnez un profil client. Dans la carte client, vous trouverez des graphiques pour les marques ou les centres d’intérêt pour lesquels les membres du profil démographique de ce client ont une affinité.
+Le PdV de marque et d’intérêt peut également être consulté sur des cartes client individuelles. Accédez à **Clients** et sélectionnez un profil client. La carte client contient des graphiques pour le PdV de marque ou d’intérêt en fonction des personnes présentes dans le profil démographique de ce client.
 
 :::image type="content" source="media/enrichment-customer-card.png" alt-text="Carte client avec données enrichies.":::
 

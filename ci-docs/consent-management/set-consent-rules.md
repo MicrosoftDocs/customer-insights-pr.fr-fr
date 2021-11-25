@@ -1,6 +1,6 @@
 ---
-title: Configurer l'utilisation des données client et les préférences de consentement
-description: Créez des règles de consentement et configurez les règles de consentement par défaut.
+title: Configurer et appliquer des règles de données de consentement
+description: Avec la capacité de gestion du consentement de Dynamics 365 Customer Insights, vous pouvez définir la manière dont les données sont utilisées en fonction des préférences de consentement d’un client.
 ms.date: 11/03/2021
 ms.service: customer-insights
 ms.subservice: consent-management
@@ -9,18 +9,18 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9f24072e2c315695fd810944c5e660453e577761
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: c96e84295ed1231d7baa4e0f257cbce821944fc9
+ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753099"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7790810"
 ---
 # <a name="set-consent-data-rules-and-apply-consent-preferences"></a>Définir des règles de données de consentement et appliquer des préférences de consentement
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Définissez la manière dont les données client sont utilisées en fonction des préférences de consentement d’un client. Vous pouvez choisir d'inclure ou d'exclure les données client des activités commerciales qui impliquent l'utilisation de données client. Par exemple, vous pouvez exclure des clients de vos annonces de produits s'ils n'ont pas donné leur consentement pour les e-mails marketing.
+Définissez la manière dont les données client sont utilisées en fonction des préférences de consentement d’un client. Vous pouvez choisir d’inclure ou d’exclure les données client des activités commerciales qui impliquent l’utilisation de données client. Par exemple, vous pouvez exclure des clients de vos annonces de produits s’ils n’ont pas donné leur consentement pour recevoir les courriers électroniques de marketing.
 
 ## <a name="start-the-consent-rules-setup-process"></a>Démarrer le processus de configuration des règles de consentement
 
@@ -32,13 +32,13 @@ Une fois les données de consentement dans le système, accédez à la page **Co
 
 ## <a name="set-up-rules"></a>Configurer des règles
 
-Les règles de données de consentement seront disponibles dans les informations d'audience où vous pourrez les appliquer en tant que règles à des segments ou des exportations individuels. Vous pouvez affecter ces règles aux objectifs et aux abonnements en tant que règles par défaut qui s'appliquent automatiquement à tous les segments. L'application vous guide à travers les étapes à suivre pour mapper les données de consentement. 
+Les règles de données de consentement seront disponibles dans les informations d'audience où vous pourrez les appliquer en tant que règles à des segments ou des exportations individuels. Vous pouvez affecter ces règles par défaut aux objectifs et aux abonnements qui s’appliquent automatiquement à tous les segments. L’application vous guide à travers les étapes à suivre pour le mappage des données de consentement. 
 
 1. Dans le Centre de consentement, accédez à **Sources d'information** et sélectionnez **Définir des règles** pour commencer le processur de **Mappage des données de consentement**.
 
 ### <a name="set-rules"></a>Définir des règles
 
-La première étape définit comment les clients doivent être inclus ou exclus en fonction de leurs préférences de contenu. Chaque source de données importée avec des données de consentement doit faire partie d'un mappage de règle. Par exemple, vous avez importé deux sources de données de consentement pour les offres de produits et les actualités de l'entreprise. Votre mappage de règles peut avoir deux mappages de règles. L'un comprend les contacts qui ont accepté de recevoir les offres de produits. L'autre exclut les contacts qui se sont désabonnés des actualités de l'entreprise.
+La première étape définit comment les clients doivent être inclus ou exclus en fonction de leurs préférences de consentement. Chaque source de données importée avec des données de consentement doit faire partie d'un mappage de règle. Par exemple, vous avez importé deux sources de données de consentement pour les offres de produits et les actualités de l’entreprise, donc vous pouvez avoir deux mappages de règles. L’un pourrait inclure les contacts qui ont accepté les offres de produits et l’autre pourrait exclure les contacts qui ont refusé les actualités de l’entreprise.
 
 1. À l'étape **Définir les règles**, créez la première règle.
    :::image type="content" source="media/set-up-rules-step.png" alt-text="Étape de configuration des règles avec les options disponibles."::: 
@@ -52,9 +52,9 @@ La première étape définit comment les clients doivent être inclus ou exclus 
 
 ### <a name="apply-rules-as-default-optional"></a>Appliquer les règles par défaut (facultatif)
 
-Dans cette étape, vous choisissez les objectifs et les abonnements auxquels les mappages de règles seront appliqués à tous les segments dans les informations d'audience. Les règles pour les données de consentement importées sont automatiquement synchronisées avec les informations d'audience. Les administrateurs doivent [activer les règles de consentement](../audience-insights/activate-consent.md) et peut permettre aux utilisateurs de remplacer la sélection par défaut.
+Dans cette étape, vous pouvez choisir les objectifs et les abonnements auxquels les mappages de règles seront appliqués à tous les segments dans les informations d’audience. Les règles pour les données de consentement importées sont automatiquement synchronisées avec les informations d'audience. Les administrateurs doivent [activer les règles de consentement](../audience-insights/activate-consent.md) et peut permettre aux utilisateurs de remplacer la sélection par défaut.
 
-1. À l'étape **Appliquer les règles par défaut (facultatif)**, choisissez les objectifs et les abonnements auxquels appliquer la règle. Ces règles sont ensuite appliquées aux segments dans les informations d'audience.
+1. À l’étape **Appliquer les règles par défaut (facultatif)**, choisissez les objectifs et/ou les abonnements auxquels appliquer la règle par défaut. Ces règles sont ensuite appliquées à tous les segments dans les informations d’audience.
 
    :::image type="content" source="media/apply-rules-default.png" alt-text="Sélectionnez les données auxquelles les règles s'appliquent par défaut.":::
 
@@ -64,7 +64,7 @@ Dans cette étape, vous choisissez les objectifs et les abonnements auxquels les
 
 1. Vérifiez la configuration et sélectionnez **Définir des règles** pour terminer le processus. 
 
-1. Si vous avez sélectionné certaines règles à appliquer comme règles par défaut, sélectionnez **Activer les règles de consentement dans Customer Insights** pour accéder aux informations d'audience et [activer les règles par défaut](../audience-insights/activate-consent.md). Sinon, sélectionnez **Terminé** pour compléter l'expérience guidée et appliquer la cartographie dans les processus métier.
+1. Si vous avez sélectionné certaines règles à appliquer par défaut, sélectionnez **Activer les règles de consentement dans Customer Insights** pour accéder aux informations d’audience et [activer les règles de consentement par défaut](../audience-insights/activate-consent.md). Sinon, sélectionnez **Terminé** pour compléter l'expérience guidée et appliquer la cartographie dans les processus métier.
 
 ## <a name="activate-rules-in-audience-insights"></a>Activer les règles dans les informations d'audience
 

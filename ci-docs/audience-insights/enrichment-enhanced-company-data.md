@@ -1,7 +1,7 @@
 ---
 title: Amélioration des données de l’entreprise
 description: Enrichissez et normalisez les données de l’entreprise avec les modèles de Microsoft.
-ms.date: 11/05/2021
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770167"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813915"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Enrichissement des profils d’entreprise avec des données d’entreprise enrichies
 
@@ -51,7 +51,8 @@ Il y a quelques limitations avec les données améliorées. Les éléments de la
 
 1.  Confirmez l’identité de la société. Nous ne vérifions pas si l’entrée est une organisation existante ou si une entreprise utilise la sortie comme nom standard.
 2.  Couvrir complètement les entreprises du monde entier. Les données d’entreprise compilées de Microsoft ont une couverture mondiale, mais offrent la plupart des couvertures en Australie, au Canada, au Royaume-Uni et aux États-Unis.
-3.  Garantissez l’exactitude ou l’actualisation des données. Étant donné que les informations commerciales changent souvent, nous ne pouvons garantir que les données améliorées de l’entreprise fournies sont toujours exactes ou à jour.
+3.  Standardisez les adresses des entreprises à l’échelle mondiale. Nous prenons actuellement en charge la normalisation des adresses dans ces pays ou régions : Australie, Canada, France, Allemagne, Italie, Japon, Royaume-Uni et États-Unis.
+4.  Garantissez l’exactitude ou l’actualisation des données. Étant donné que les informations commerciales changent souvent, nous ne pouvons garantir que les données améliorées de l’entreprise fournies sont toujours exactes ou à jour.
 
 ## <a name="configure-the-enrichment"></a>Configurer l’enrichissement
 

@@ -1,6 +1,6 @@
 ---
 title: Spécifier les paramètres système pour la gestion du consentement
-description: Définissez la langue et les paramètres locaux dans la fonctionnalité de gestion du consentement de Customer Insights.
+description: Définissez la langue et les paramètres locaux pour la fonctionnalité de gestion du consentement de Dynamics 365 Customer Insights.
 ms.date: 10/30/2021
 ms.service: customer-insights
 ms.subservice: consent-management
@@ -9,18 +9,18 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: abc6f654539fc1015f454caccdbaad5261433865
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 259ec70a7dc0d7c465f2f3833b91aa5ee7e0de73
+ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753093"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7790756"
 ---
 # <a name="system-settings-in-consent-center-preview"></a>Paramètres système dans le Centre de consentement (préversion)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-La [fonctionnalité de gestion du consentement](overview.md) dans Dynamics 365 Customer Insights, vous permet de configurer certains paramètres système pour vos environnements. 
+La [fonctionnalité de gestion du consentement](overview.md) dans Dynamics 365 Customer Insights vous permet de configurer certains paramètres système pour vos environnements. 
 
 :::image type="content" source="media/system-settings.png" alt-text="Extrait de la vue des paramètres système.":::
 
