@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643387"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7792024"
 ---
 # <a name="customer-card-add-in-preview"></a>Complément Carte client (préversion)
 
@@ -34,7 +34,7 @@ Obtenez une vue globale de vos clients directement dans les applications Dynamic
   - **Contrôle de mesure** : A besoin [de mesures configurées](measures.md) de type attributs client.
   - **Contrôle de l’intelligence** : nécessite des données générées à l’aide de [prédictions](predictions.md) ou de [modèles personnalisés](custom-models.md).
   - **Contrôle des détails du client** : Tous les champs du profil sont disponibles dans le profil client unifié.
-  - **Contrôle d’enrichissement** : nécessite des [enrichissements](enrichment-hub.md) actifs appliqués aux profils clients.
+  - **Contrôle d’enrichissement** : nécessite des [enrichissements](enrichment-hub.md) actifs appliqués aux profils clients. Le complément de carte prend en charge ces enrichissements : [Marques](enrichment-microsoft.md) fourni par Microsoft, [Intérêts](enrichment-microsoft.md) fourni par Microsoft.
   - **Contrôle des contacts** : Nécessite la définition d’une entité sémantique de type contacts.
   - **Contrôle de chronologie** : nécessite des [activités configurées](activities.md).
 

@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645443"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673787"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gérer les environnements et les espaces de travail
 
@@ -24,7 +24,7 @@ ms.locfileid: "7645443"
 
 Cette rubrique explique comment gérer les espaces de travail et les environnements une fois qu’ils ont été créés. 
 
-- Un *espace de travail* est un espace pour stocker et gérer des événements et des rapports. C'est là que vous pouvez voir l'activité des utilisateurs en temps réel. Lorsque vous créez un espace de travail, vous devez sélectionner le type de données à y transférer. Actuellement, les données web et les applications mobiles sont prises en charge. Pour plus d’informations, consultez [Créer un espace de travail et ajouter des membres](create-workspace.md).
+- Un *espace de travail* est un espace pour stocker et gérer des événements et des rapports. C'est là que vous pouvez voir l'activité des utilisateurs en temps réel. Lorsque vous créez un espace de travail, vous devez sélectionner le type de données à y transférer. Actuellement, les données web et les applications mobiles sont prises en charge. Pour plus d'informations, consultez [Créer un nouvel espace de travail et ajouter des membres](create-workspace.md).
 
 - Un *environnement* est un espace dans lequel vous gérez vos espaces de travail et vos connexions. Pour plus d’informations, consultez [Créer un environnement](create-new-environment.md).
 
@@ -47,7 +47,7 @@ Vous pouvez gérer plusieurs espaces de travail simultanément dans un environne
 
 ### <a name="delete-a-workspace"></a>Supprimer un espace de travail
 
-La suppression d'un espace de travail va supprimer définitivement la totalité de ses contenus, données, paramètres et autorisations. Cette opération ne peut pas être annulée.
+La suppression de l’espace de travail supprime définitivement la totalité de ses contenus, données, paramètres et autorisations. Cette opération ne peut pas être annulée.
 
 1. Allez dans **Administrateur** > **Espace de travail** et sélectionnez **Paramètres**.
 
@@ -71,19 +71,11 @@ En tant qu’administrateur d’environnement, vous pouvez accéder à un enviro
 
 :::image type="content" source="media/environment-edit.png" alt-text="Centre d'administration de l'environnement.":::
 
-### <a name="rename-an-environment"></a>Renommer un environnement
+### <a name="edit-an-environment-name"></a>Modifier un nom d'environnement
 
 1. Allez dans **Administrateur** > **Environnement** et sélectionnez **Paramètres**.
 
 1. Mettez à jour le **Nom de l'environnement** et cliquez sur **Enregistrer** pour appliquer vos modifications.
-
-### <a name="manage-environment-members"></a>Gérer les membres de l’environnement
-
-1. Allez dans **Administrateur** > **Environnement** et sélectionnez **Membres**.
-
-1. Sélectionnez **Ajouter des membres** pour mettre à jour les membres et [attribuer des rôles](user-roles.md). Actuellement, seul l'**Administrateur de l’environnement** est disponible.
-
-1. Sélectionnez **Ajouter des membres** pour les ajouter à votre environnement.
 
 ### <a name="delete-an-environment"></a>Supprimer un environnement
 
@@ -97,6 +89,14 @@ Les administrateurs d'environnement peuvent supprimer des environnements. Avant 
 
 1. Sélectionnez **Supprimer** pour supprimer définitivement l'environnement.
 
+### <a name="manage-environment-members"></a>Gérer les membres de l’environnement
+
+1. Allez dans **Administrateur** > **Environnement** et sélectionnez **Membres**.
+
+1. Sélectionnez **Ajouter des membres** pour mettre à jour les membres et [attribuer des rôles](user-roles.md). Actuellement, seul l'**Administrateur de l’environnement** est disponible.
+
+1. Sélectionnez **Ajouter des membres** pour les ajouter à votre environnement.
+
 ## <a name="manage-connections"></a>Gérer des connexions
 
 L'établissement de connexions à Informations sur l’audience vous permet d'afficher des rapports dans Informations sur l’engagement basés sur des profils clients unifiés. 
@@ -107,7 +107,6 @@ Pour plus d’informations, voir [Créer un lien entre les informations sur l’
 
 Pour protéger les données personnelles de vos clients, vous pouvez supprimer ou exporter les données identifiables de l'utilisateur final.
 
-Pour plus d’informations, consultez [Supprimer et exporter des données liées aux événements contenant des informations personnelles](delete-export-personal-data.md).
-
+Pour plus d’informations, consultez [Supprimer et exporter des données liées aux événements contenant des informations personnelles](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

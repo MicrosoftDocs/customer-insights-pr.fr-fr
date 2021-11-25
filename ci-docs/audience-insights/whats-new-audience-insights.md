@@ -1,7 +1,7 @@
 ---
 title: Fonctionnalités nouvelles et à venir
 description: Informations sur les nouvelles fonctionnalités, les améliorations et les corrections de bogues.
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673825"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753114"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Nouveautés de la fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights
 
@@ -26,6 +26,41 @@ Nous déployons des mises à jour région par région. Ainsi, certaines régions
 
 > [!TIP]
 > Pour envoyer et voter sur les demandes de fonctionnalités et les suggestions de produits, accédez au [portail Idées d’application Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="october-2021-updates"></a>Mises à jour d’octobre 2021
+
+Les mises à jour de octobre 2021 incluent de nouvelles fonctionnalités, des améliorations de performances et des corrections de bugs.
+
+### <a name="b-to-b"></a>B2B
+
+À partir d'octobre 2021, vous pourrez travailler avec des comptes professionnels et leurs contacts associés dans Customer Insights. Auparavant, l'application était principalement conçue pour les consommateurs individuels. Plusieurs zones de fonctionnalité ont été mises à jour pour prendre en charge les scénarios B2B en plus d'un nouveau type d'environnement. Pour un aperçu des fonctionnalités B2B prises en charge, consultez [Travailler avec des comptes d'entreprise dans les informations d'audience](work-with-business-accounts.md).
+
+Les sections suivantes mettent en évidence certains des domaines clés qui ont été adaptés pour prendre en charge les comptes d'entreprise et les consommateurs individuels.
+
+#### <a name="export-segments-based-on-business-accounts"></a>Segments d'exportation basés sur les comptes commerciaux
+
+Toutes les exportations de segments dans les informations d'audience sont disponibles dans le contexte des comptes professionnels. La plupart des exportations de segments nécessitent une configuration supplémentaire et des [informations de contact projetées](segment-builder.md#create-a-new-segment) dans les segments sous-jacents pour être valides pour les comptes professionnels. Pour plus d’informations, consultez [Exporter des segments](export-destinations.md#export-segments).
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Utiliser l'exportation des publicités LinkedIn avec les comptes professionnels
+
+L'exportation des publicités LinkedIn est désormais disponible pour le ciblage des contacts et des entreprises dans le cadre des comptes professionnels. Lorsque vous sélectionnez le ciblage d'entreprise comme objectif principal de l'exportation LinkedIn, vous pouvez exporter des segments construits sur des comptes professionnels sans avoir besoin de projeter les informations de contact. Pour plus d'informations, consultez la documentation sur [Exportation des publicités LinkedIn](export-linkedin-ads.md) et la différence entre [ciblage des contacts](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) et [ciblage de l'entreprise](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Créer des mesures basées sur les comptes d'entreprise et leur hiérarchie
+
+Le générateur de mesures vous permet de créer des mesures autour des comptes d'entreprise et d'utiliser éventuellement les informations de hiérarchie. Les informations de hiérarchie sont utilisées pour regrouper un calcul de mesure sur un compte et tous ses sous-comptes associés. Par exemple, vous pouvez créer des mesures telles que le chiffre d'affaires total pour chaque groupe de comptes commerciaux identifiés par leur hiérarchie. Pour plus d’informations, consultez [Définir et gérer les mesures](measures.md).
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Créer des segments sur la base des comptes d'entreprise et leur hiérarchie
+
+Le générateur de segments vous permet de créer des segments de comptes d'entreprise qui incluent éventuellement des informations de contact pour chaque compte d'un segment. Si vous avez configuré une hiérarchie de compte, vous pouvez utiliser les informations de hiérarchie de compte dans la création de segment. Pour plus d’informations, consultez [Créer un segment](segment-builder.md#create-a-new-segment).
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Conservez vos comptes d'entreprise avec des informations approfondies sur leur tendance à l'attrition
+
+Le modèle de prédiction d'attrition des clients prend désormais également en charge les comptes d'entreprise. Vous pouvez évaluer le risque de désabonnement non seulement pour un compte, mais pour la combinaison d'un compte et d'une catégorie de produits ou de services qu'ils vous achètent. Cet ajout vous aide à comprendre si un compte est plus susceptible de cesser d'acheter chez vous en général ou uniquement pour une certaine catégorie de biens ou de services. Pour vous aider un peu plus à utiliser ce modèle d'IA, il répertorie également les raisons pour lesquelles un compte est susceptible de se désabonner. Pour plus d'informations voir [Taux d'attrition de prédiction des transactions (version préliminaire)](predict-transactional-churn.md).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Voir les contacts d'un compte d'entreprise dans la vue Client
+
+Si des comptes d'entreprise sont mappés à des comptes associés, l'application Customer Insights affiche ces contacts associés dans le cadre de la vue des détails du client. Pour plus d'informations, voir [Profils client](customer-profiles.md).
+
 
 ## <a name="september-2021-updates"></a>Mises à jour de septembre 2021
 

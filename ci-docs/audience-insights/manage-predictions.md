@@ -1,7 +1,7 @@
 ---
 title: Tâches partagées pour les scénarios prédiction
 description: Apprenez à gérer, dépanner et affiner les prédictions.
-ms.date: 05/17/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: eaccf23a81ca4de19763b761cc5a27c14515fe522ee36dc78f294208b681966e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4e7e21a610564b30463b27ab703c291275725895
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036462"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731985"
 ---
 # <a name="manage-predictions"></a>Gérer les prédictions
 
@@ -50,12 +50,12 @@ Les colonnes suivantes du rapport contiennent des informations utiles pour amél
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Exemple de rapport d'utilisation des données d'entrée montrant un tableau avec des erreurs, des avertissements et des recommandations.":::
 
-- Nom : nom descriptif de l'erreur, de l'avertissement ou de la recommandation.
-- Étape : phase, entraînement ou score du modèle auquel l'information fait référence.
-- État : gravité de l'information (erreur, avertissement, recommandation).
-- Nom de la colonne : colonne dans une entité qui doit être modifiée pour améliorer les performances du modèle.
-- Nom de l'entité : nom de l'entité qui doit être modifiée pour améliorer les performances du modèle.
-- Détails : détails sur l'erreur, l'avertissement ou la recommandation.
+- **Nom :** nom descriptif de l'erreur, de l'avertissement ou de la recommandation.
+- **Étape :** phase, entraînement ou score du modèle auquel l'information fait référence.
+- **État :** gravité de l'information (erreur, avertissement, recommandation).
+- **Nom de la colonne :** colonne dans une entité qui doit être modifiée pour améliorer les performances du modèle.
+- **Nom de l'entité :** nom de l'entité qui doit être modifiée pour améliorer les performances du modèle.
+- **Détails :** détails sur l'erreur, l'avertissement ou la recommandation.
 
 ## <a name="refresh-a-prediction"></a>Actualiser une prédiction
 
@@ -66,6 +66,8 @@ Les prédictions seront automatiquement actualisées sur le même paramètre [pl
 1. Sélectionnez les ellipses verticales à côté de la prédiction que vous souhaitez actualiser.
 
 1. Cliquez sur **Actualiser**.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="delete-a-prediction"></a>Supprimer une prédiction
 

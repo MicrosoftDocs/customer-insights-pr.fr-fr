@@ -1,7 +1,7 @@
 ---
 title: Rechercher et filtrer des profils clients
 description: Trouvez rapidement des informations sur les profils de clients unifiés et filtrez les attributs spécifiés.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,19 +9,20 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 9eaeb0c93481283324f21122c9528ff5896b9866
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469968"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732031"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profils client : Index Rechercher et filtrer
 
 Le résultat de l’unification de vos données client est une entité de profil client qui fournit une vue unifiée de l’intégralité de votre clientèle. Pour rapidement [trouver des informations sur un client ou un groupe de clients spécifique](customer-profiles.md), vous pouvez configurer les capacités **Rechercher** et **Filtrer** sur la page **Clients**. Lisez la suite pour savoir comment les administrateurs peuvent modifier les attributs sur la page **Index Rechercher et filtrer**, disponibles pour la recherche et le filtrage.
 
-> [!div class="mx-imgBorder"]
-> ![Filtre de recherche.](media/search-filter.png "Filtre de recherche")
+   :::image type="content" source="media/search-filter.png" alt-text="Filtre de recherche":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Ajouter des champs et spécifier des attributs
 

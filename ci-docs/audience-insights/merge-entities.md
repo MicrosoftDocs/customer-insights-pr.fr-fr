@@ -1,7 +1,7 @@
 ---
 title: Fusionner des entités pour l’unification des données
 description: Fusionnez des données pour créer des profils clients unifiés.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648251"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732769"
 ---
 # <a name="merge-entities"></a>Fusionner des entités
 
@@ -187,10 +187,9 @@ Choisissez **Exécuter les processus de fusion et en aval** pour actualiser le s
 
 Pour apporter d’autres modifications et réexécuter l’étape, vous pouvez annuler une fusion en cours. Sélectionnez **Actualisation en cours...** et sélectionnez **Annuler la tâche** dans le volet latéral qui s’affiche.
 
-> [!TIP]
-> Après avoir exécuté le processus de fusion, sélectionnez le statut du processus pour ouvrir le volet **Détails de la tâche**. Il donne un aperçu du temps de traitement, de la dernière date de traitement et de toutes les erreurs et avertissements associés à la tâche. Sélectionnez **Voir les détails** pour voir quelles entités ont participé au processus de correspondance, si la résolution du conflit est une réussite et si les mises à jour ont été publiées avec succès.  
-> Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d’autres processus en aval](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Chemin d’accès permettant d’explorer les détails du processus à partir du lien de statut de la tâche.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Chemin d’accès permettant d’explorer les détails du processus à partir du lien de statut de la tâche.":::
 
 ## <a name="next-step"></a>Étape suivante
 

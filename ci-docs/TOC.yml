@@ -84,6 +84,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Adresses améliorées
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Amélioration des données de l’entreprise
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Enrichissement avec Azure Maps
           href: audience-insights/enrichment-azure-maps.md
         - name: Enrichissement avec HERE Technologies
@@ -250,6 +252,40 @@
           href: audience-insights/apis.md
         - name: Références d’API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Gestion du consentement (version préliminaire)
+  items:
+    - name: Centre d’aide
+      href: consent-management/index.yml
+    - name: Vue d’ensemble de la fonctionnalité
+      href: consent-management/overview.md
+    - name: Commencer
+      items:
+        - name: Commencer
+          href: consent-management/get-started.md
+        - name: Concepts et terminologie
+          href: consent-management/glossary.md
+    - name: Importer des données de consentement
+      items:
+        - name: Importer des données de consentement
+          href: consent-management/import-consent-data.md
+        - name: Définir des préférences de données de consentement et appliquer des préférences de consentement
+          href: consent-management/set-consent-rules.md
+    - name: Gérer les données de consentement
+      items:
+        - name: Activer les règles de consentement dans les informations d'audience
+          href: audience-insights/activate-consent.md
+        - name: Gérer les règles de consentement par défaut dans des segments d'informations d’audience
+          href: audience-insights/change-default-consent-rules.md
+    - name: Gérer les paramètres et les utilisateurs
+      items:
+        - name: Configurer les paramètres du système
+          href: consent-management/system-settings.md
+        - name: Gérer les utilisateurs et les autorisations
+          href: consent-management/manage-users.md
+    - name: Utiliser les données de consentement
+      items:
+        - name: Créer des prédictions avec des données de consentement
+          href: consent-management/predictions-consent-data.md
 - name: Insights sur l’engagement (version préliminaire)
   items:
     - name: Centre d’aide

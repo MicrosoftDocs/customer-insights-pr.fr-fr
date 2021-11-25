@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 8ff04a6b2ffbd513a77f7f8a33358f3d8f559c7e
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648114"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673639"
 ---
 # <a name="create-a-new-environment"></a>Créer un environnement 
 
@@ -40,13 +40,13 @@ Un environnement est un espace dans lequel vous gérez vos espaces de travail et
 
 1. Choisissez la **Région** et sélectionnez **Suivant**. 
 
-1. Entrez un **nom d’espace de travail**, qui vous permet de collecter des données pour un site web ou des applications spécifiques. Pour plus d’informations, consultez [Créer un espace de travail](create-workspace.md).
+1. Entrez un **nom d’espace de travail**, qui vous permet de collecter des données pour des sites web ou des applications spécifiques. Pour plus d’informations, consultez [Créer un espace de travail](create-workspace.md).
 
 1. Choisissez le **type d’espace de travail** (web ou mobile) que vous souhaitez créer. 
 
 1. Sélectionnez **Afficher les paramètres avancés** pour activer ou désactiver ces paramètres facultatifs :
 
-   - Faites basculer **Inconnu à connu** sur « activé » pour associer des événements web aux utilisateurs qui se sont préalablement authentifiés. Pour plus d’informations, consultez [Reconnaître les événements web des visiteurs préalablement authentifiés](unknown-to-known.md)
+   - Faites basculer **Inconnu à connu** sur « activé » pour associer des événements web aux utilisateurs qui se sont préalablement authentifiés. Pour plus d’informations, consultez [Reconnaître les événements web des visiteurs préalablement authentifiés](unknown-to-known.md).
    - Faites basculer **Filtrer le trafic du bot** sur "activé pour supprimer le trafic web des robots pour cet espace de travail. 
 
 1. Une fois que vous avez terminé, sélectionnez **Terminer**. 

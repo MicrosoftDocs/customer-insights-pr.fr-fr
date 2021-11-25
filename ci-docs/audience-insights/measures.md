@@ -1,7 +1,7 @@
 ---
 title: Créer et gérer des mesures
 description: Définir des mesures pour analyser et refléter la performance de votre entreprise.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673455"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732723"
 ---
 # <a name="define-and-manage-measures"></a>Définir et gérer des mesures
 
@@ -238,8 +238,7 @@ Choisissez une mesure parmi la liste des options suivantes :
 - **Supprimer** la mesure.
 - **Activer** ou **Désactiver**. Les mesures inactives ne seront pas actualisées pendant une [actualisation programmée](system.md#schedule-tab).
 
-> [!TIP]
-> Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d’autres processus en aval](system.md#refresh-policies). Vous pouvez sélectionner le statut d’un processus pour afficher des détails sur la progression de toute la tâche. Une fois que vous avez sélectionné **Afficher les détails** pour l’une des tâches du projet, vous trouverez des informations supplémentaires : l’heure de traitement, la dernière date de traitement, ainsi que toutes les erreurs et tous les avertissements associés à la tâche.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="next-step"></a>Étape suivante
 

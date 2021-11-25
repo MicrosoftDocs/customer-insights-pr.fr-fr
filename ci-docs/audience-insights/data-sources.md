@@ -1,7 +1,7 @@
 ---
 title: Utiliser des sources de données pour ingérer des données
 description: Découvrez comment importer des données depuis des sources diverses.
-ms.date: 04/12/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645352"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732139"
 ---
 # <a name="data-sources-overview"></a>Vue d’ensemble des sources de données
 
@@ -48,14 +48,7 @@ Vous avez accès au nom de chaque source de données ingérée, à son statut et
 > [!div class="mx-imgBorder"]
 > ![Source de données ajoutée.](media/configure-data-datasource-added.png "Source de données ajoutée")
 
-|Statut   |Description  |
-|---------|---------|
-|Opération réussie   |La source de données a été ingérée avec succès si une heure est mentionnée dans la colonne **Actualisé**.
-|Non démarré(e)   |La source de données n’a pas encore de données ingérées ou est toujours en mode brouillon.         |
-|Actualisation    |L’ingestion de données est en cours. Vous pouvez annuler cette opération en sélectionnant **Arrêter l’actualisation** dans la colonne **Actions**. L’arrêt de l’actualisation d’une source de données la ramène à son dernier état d’actualisation.       |
-|Échoué     |L’ingestion de données s’est heurtée à des erreurs.         |
-
-Sélectionnez la valeur dans la colonne **Statut** de n’importe quelle source de données pour examiner plus de détails. Dans le volet **Détails de la progression**, développez **Sources de données**. Sélectionnez **Afficher les détails** pour obtenir plus d’informations sur le statut d’actualisation, notamment les détails de l’erreur et les mises à jour du processus en aval.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 Le chargement des données peut prendre du temps. Après une actualisation réussie, les données ingérées peuvent être consultées à partir de la page **Entités**. Pour plus d’informations, voir [Entités](entities.md).
 

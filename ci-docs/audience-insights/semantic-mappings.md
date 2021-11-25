@@ -1,7 +1,7 @@
 ---
 title: Mappages sémantiques (version préliminaire)
 description: Présentation et utilisation des mappages sémantiques.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622932"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731940"
 ---
 # <a name="semantic-mappings"></a>Mappages sémantiques
 
@@ -75,8 +75,7 @@ Les mappages sémantiques vous permettent de mapper vos données de non-activit�
 
 1. Pour exécuter un mappage sémantique ultérieurement, sélectionnez le mappage sémantique et sélectionnez **Actualiser**.
 
-> [!TIP]
-> Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d’autres processus en aval](system.md#refresh-policies). Vous pouvez sélectionner le statut d’un processus pour afficher des détails sur la progression de toute la tâche. Après avoir sélectionné **Voir les détails** pour l’une des tâches du travail, vous voyez des informations complémentaires : la durée de traitement, la date du dernier traitement et toutes les erreurs et avertissements associés à la tâche.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Gérer les mappages sémantiques existants
 
@@ -91,5 +90,6 @@ Dans **Données** > **Mappages sémantiques (version préliminaire)**, vous pouv
 - **Renommer** : ouvre une boîte de dialogue dans laquelle vous pouvez entrer un nom différent pour le mappage sémantique sélectionné. Sélectionnez **Enregistrer** pour appliquer vos modifications.
 
 - **Supprimer** : Ouvre une boîte de dialogue pour confirmer la suppression du mappage sémantique sélectionné. Vous pouvez également supprimer plusieurs mappages sémantiques à la fois en sélectionnant les mappages sémantiques et l’icône de suppression. Sélectionnez **Supprimer** pour confirmer la suppression.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

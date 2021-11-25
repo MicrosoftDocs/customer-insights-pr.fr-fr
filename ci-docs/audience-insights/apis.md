@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033582"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732261"
 ---
 # <a name="work-with-customer-insights-apis"></a>Utiliser les API de Customer Insights
 
@@ -135,7 +135,7 @@ Découvrez comment utiliser les bibliothèques client C# de NuGet.org. Pour plus
 
 1. Utilisez la [Bibliothèque d’authentification Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) pour obtenir un `AccessToken` en utilisant votre [Inscription d’application Azure](#create-a-new-app-registration-in-the-azure-portal) existante.
 
-1. Une fois l’authentification et l’acquisition d’un jeton réalisées avec succès, construisez un nouveau jeton ou utilisez un jeton `HttpClient` existant avec le paramètre **DefaultRequestHeaders "Authorisation"** supplémentaire défini sur le **<access token> du porteur** et le paramètre **Ocp-Apim-Subscription-Key** défini sur la [**clé d’abonnement** de votre environnement Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. Après avoir réussi à authentifier et à acquérir un jeton, construisez un nouveau `HttpClient` ou utilisez-en un existant avec, en plus, l’**Autorisation DefaultRequestHeaders** définie sur **jeton d’accès Porteur** et **Ocp-Apim-Subscription-Key** définie sur la [**clé d’abonnement** depuis votre environnement Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Rédéfinissez l’en-tête **Autorisation**, le cas échéant. Par exemple, lorsque le jeton a expiré.
 

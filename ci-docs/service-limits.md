@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483663"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7791978"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Limites de service dans les fonctionnalités Customer Insights
 
@@ -24,9 +24,9 @@ Cet article décrit les limites intégrées au service Customer Insights, qui so
 
 ### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Limites du service dans la fonctionnalité les informations sur l’audience de Dynamics 365 Customer Insights
 
-| Aires  | Limites  | Notes |
+| Aires  | Limites  | Remarques |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segments et mesures | 100 segments ou mesures. | Le nombre total de [segments](audience-insights/segments.md) et de [mesures](audience-insights/measures.md) actifs combinés ne peut pas dépasser 100.  |
+| Segments, mesures et prédictions | 300  | Le nombre total de [segments](audience-insights/segments.md), de [mesures](audience-insights/measures.md) et de [prédictions](audience-insights/predictions.md) combinés ne peut pas dépasser 300.  |
 | Relations | 20 niveaux de profondeur sur les relations dans les chemins d'entité. | Lors de la création de [segments](audience-insights/segments.md) ou de [mesures](audience-insights/measures.md) en utilisant l’interface du générateur, les chemins d’entité peuvent avoir jusqu’à 20 sauts de relation entre l’entité de départ et l’entité cible.  |
 
 

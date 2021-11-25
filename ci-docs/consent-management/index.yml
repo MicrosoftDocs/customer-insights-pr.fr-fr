@@ -1,0 +1,51 @@
+### YamlMime:Landing
+metadata:
+  title: Centre d’aide
+  author: m-hartmann
+  description: Trouvez des articles pertinents pour commencer avec le contenu de l'aide.
+  ms.author: mhart
+  ms.date: 11/3/2021
+  ms.service: customer-insights
+  ms.subservice: consent-management
+  ms.topic: landing-page
+  ms.openlocfilehash: 9611ac58279427bf6777fed66b7c157eaace17a1
+  ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+  ms.translationtype: HT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/04/2021
+  ms.locfileid: "7753091"
+title: La gestion du consentement, une fonctionnalité des documents Dynamics 365 Customer Insights
+summary: Trouvez des ressources utiles pour vous lancer et en savoir plus sur les fonctionnalités.
+landingContent:
+- title: Découvrez la gestion des consentements
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Vue d'ensemble de la gestion des consentements
+      url: overview.md
+    - text: Plans de mise en production
+      url: /dynamics365-release-plan/
+- title: Commencer
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Guide de démarrage rapide
+      url: get-started.md
+    - text: Termes et concepts
+      url: glossary.md
+- title: Importer des données de consentement
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Importer les données
+      url: import-consent-data.md
+    - text: Mapper les données de consentement
+      url: set-consent-rules.md
+- title: Activer les données de consentement
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Appliquer des règles de consentement
+      url: ../audience-insights/activate-consent.md
+    - text: Remplacer des règles de consentement
+      url: ../audience-insights/change-default-consent-rules.md

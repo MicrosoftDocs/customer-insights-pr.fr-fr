@@ -1,7 +1,7 @@
 ---
 title: Compléter des données partielles avec des prédictions
 description: Utilisez des prédictions pour remplir des données client incomplètes.
-ms.date: 05/05/2020
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,16 +9,17 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645031"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732401"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Compléter vos données partielles avec des prédictions
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Complétez vos données partielles avec des prédictions (plus disponible)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Cette fonctionnalité ne sera **plus disponible** à partir de **5 novembre 2021**. Les implémentations actuelles continueront de fonctionner jusqu'à ce que la fonctionnalité soit supprimée, mais vous ne pourrez pas créer de nouvelles intégrations à l'aide des instructions ci-dessous.
 
 Les prédictions vous permettent de créer facilement des valeurs prédites qui peuvent améliorer votre compréhension d’un client. Sur la page **Intelligence** > **Prédictions**, vous pouvez sélectionner **Mes prédictions** pour voir les prédictions que vous avez configurées dans d’autres parties des informations sur l’audience, et les personnaliser davantage.
 
@@ -60,6 +61,8 @@ Pour plus d’informations, consultez [Créer un environnement](create-environme
    > ![Exemple montrant des valeurs de champ mappées à des catégories.](media/intelligence-categorymapping.png "Exemple montrant des valeurs de champ mappées à des catégories")
 
 8. Sélectionnez **Terminé** et la prédiction sera traitée. Le traitement prendra un certain temps, selon la taille et la complexité des données. Les résultats seront disponibles dans une nouvelle entité basée sur la prédiction **Nom de l’entité de sortie** que vous avez créée.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Créer une prédiction tout en créant un segment
 

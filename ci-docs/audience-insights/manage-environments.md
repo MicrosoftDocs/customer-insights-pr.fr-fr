@@ -1,7 +1,7 @@
 ---
 title: Créer et gérer des environnements
 description: Découvrez comment souscrire au service et comment gérer des environnements.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673730"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799633"
 ---
 # <a name="manage-environments"></a>Gérer des environnements
 
@@ -39,6 +39,19 @@ Vous pouvez modifier certains détails des environnements existants.
 3. Dans la zone **Modifier l’environnement**, vous pouvez mettre à jour les paramètres de l’environnement.
 
 Pour plus d’informations sur les paramètres d’environnement, consultez [Créer un environnement](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Se connecter à Microsoft Dataverse
+   
+L’étape **Microsoft Dataverse** vous permet de connecter Customer Insights à votre environnement Dataverse.
+
+Pour utiliser [des modèles de prédiction prêts à l’emploi](predictions-overview.md#out-of-box-models), configurez le partage de données avec Dataverse. Vous pouvez également activer l’ingestion de données à partir des sources de données local, en fournissant l’URL d’environnement Microsoft Dataverse administrée par votre organisation. Sélectionnez **Activer le partage de données** pour partager les données de sortie Customer Insights avec un lac de données géré par Dataverse.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Options de configuration pour activer le partage de données avec Microsoft Dataverse.":::
+
+> [!NOTE]
+> Customer Insights ne prend pas en charge les scénarios de partage de données suivants :
+> - Si vous enregistrez toutes les données dans votre Azure Data Lake Storage, vous ne pourrez pas activer le partage de données avec un lac de données géré par Dataverse.
+> - Si vous activez le partage de données avec Dataverse, vous ne pourrez pas [créer des valeurs prédites ou manquantes dans une entité](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copier la configuration de l’environnement
 
