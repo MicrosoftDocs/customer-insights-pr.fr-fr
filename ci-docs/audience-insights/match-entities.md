@@ -1,7 +1,7 @@
 ---
 title: Mettre en correspondance des entités pour l’unification des données
-description: Faites correspondre des entités pour combiner des jeux de données et créer des profils client unifiés.
-ms.date: 11/01/2021
+description: Mettez en correspondance des données pour créer des profils clients unifiés.
+ms.date: 11/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
+ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732631"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "7863808"
 ---
 # <a name="match-entities"></a>Mettre en correspondance des entités
 
@@ -224,17 +224,24 @@ Vous pouvez reconfigurer et affiner la plupart des paramètres de correspondance
 
 ## <a name="specify-custom-match-conditions"></a>Spécifier des conditions de correspondance personnalisées
 
-Vous pouvez spécifier des conditions pour que certains enregistrements doivent toujours correspondre ou ne jamais correspondre. Ces règles peuvent être téléchargées pour remplacer le processus de correspondance standard. Par exemple, s’il y a John Doe I et John Doe II dans nos enregistrements, le système peut les associer comme une même personne. Les règles de correspondance personnalisées vous permettent de spécifier que leurs profils font référence à différentes personnes. 
+Vous pouvez spécifier des conditions qui remplacent la logique de correspondance par défaut. Il existe quatre options disponibles : 
+
+|Option  |Description |Exemple  |
+|---------|---------|---------|
+|Toujours correspondre     | Définit des valeurs qui correspondent toujours.         |  Toujours correspondre *Mike* et *MikeR*.       |
+|Jamais correspondre     | Définit des valeurs qui ne correspondent jamais.        | Jamais correspondre *John* et *Jonathan*.        |
+|Contournement personnalisé     | Définit les valeurs que le système doit toujours ignorer dans la phase de correspondance. |  Ignorer les valeurs *11111* et *Inconnu* pendant la correspondance.        |
+|Mise en correspondance d’alias    | Définir des valeurs que le système doit considérer comme identiques.         | Considérer *Joe* comme égal à *Joseph*.        |
 
 1. Accédez à **Données** > **Unifier** > **Mise en correspondance** et sélectionnez **Correspondance personnalisée** dans la section **Détails des enregistrements correspondants**.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Capture d’écran de la section des règles de correspondance avec le contrôle Correspondance personnalisée mis en surbrillance.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Capture d’écran de la section des règles de correspondance avec le contrôle Correspondance personnalisée mis en surbrillance.":::
 
-1. Si vous n’avez pas défini de règles de correspondance personnalisée, un nouveau volet **Correspondance personnalisée** affiche plus de détails.
+1. Dans le volet **Personnalisé**, accédez à l’onglet **Enregistrements**.
 
-1. Sélectionnez **Remplir le modèle** pour obtenir un fichier modèle qui peut spécifier les enregistrements à partir desquels les entités doivent toujours correspondre ou ne jamais correspondre. Vous devez renseigner séparément les "enregistrements qui doivent toujours correspondre" et les "enregistrements qui ne doivent jamais correspondre" dans deux fichiers différents.
+1. Choisissez l’option de correspondance personnalisée dans la liste déroulante **Type personnalisé** et sélectionnez **Télécharger le modèle**. Vous avez besoin d’un modèle distinct pour chaque option de correspondance.
 
-1. Le modèle contient des champs pour spécifier l’entité et les valeurs de clé primaire d’entité à utiliser dans la correspondance personnalisée. Par exemple, si vous souhaitez que la clé primaire *12345* de l’entité *Ventes* corresponde toujours à la clé primaire *34567* de l’entité *Contact*, remplissez le modèle :
+1. Un modèle de fichier se télécharge. Ouvrez-le et renseignez les détails. Le modèle contient des champs pour spécifier l’entité et les valeurs de clé primaire d’entité à utiliser dans la correspondance personnalisée. Par exemple, si vous souhaitez que la clé primaire *12345* de l’entité *Ventes* corresponde toujours à la clé primaire *34567* de l’entité *Contact*, remplissez le modèle :
     - Entité 1 : Ventes
     - Clé d’entité 1 : 12345
     - Entité 2 : Contact
@@ -244,26 +251,32 @@ Vous pouvez spécifier des conditions pour que certains enregistrements doivent 
    
    Si vous souhaitez spécifier une correspondance personnalisée pour la déduplication sur une entité, fournissez la même entité que Entity1 et Entity2 et définissez les différentes valeurs de clé primaire.
 
-1. Après avoir ajouté tous les remplacements que vous souhaitez appliquer, enregistrez le fichier modèle.
+1. Après avoir ajouté tous les remplacements, enregistrez le modèle de fichier.
 
-1. Accédez à **Données** > **Sources de données** et ingérez les fichiers de modèle en tant que nouvelles entités. Une fois ingérés, vous pouvez les utiliser pour spécifier la configuration de correspondance.
+1. Accédez à **Données** > **Sources de données** et ingérez les fichiers de modèle en tant que nouvelles entités.
 
-1. Une fois le téléchargement des fichiers et des entités disponibles, sélectionnez à nouveau l’option **Correspondance personnalisée**. Vous verrez des options pour spécifier les entités que vous souhaitez inclure. Sélectionnez les entités requises dans le menu déroulant.
+1. Une fois le téléchargement des fichiers et des entités disponibles, sélectionnez à nouveau l’option **Correspondance personnalisée**. Vous verrez des options pour spécifier les entités que vous souhaitez inclure. Sélectionnez les entités requises dans le menu déroulant et sélectionnez **Terminé**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Capture d’écran de la boîte de dialogue pour choisir les remplacements pour un scénario de correspondance personnalisée.":::
 
-1. Sélectionnez les entités que vous souhaitez utiliser pour **Toujours correspondre** et **Ne jamais correspondre**, sélectionnez **Terminé**.
+1. L’application de la correspondance personnalisée dépend de l’option de correspondance que vous souhaitez utiliser. 
+
+   - Pour **Toujours correspondre** ou **Jamais correspondre**, passez à l’étape suivante.
+   - Pour **Contournement personnalisé** ou **Mappage d’alias**, sélectionnez **Modifier** sur une règle de correspondance existante ou créez une règle. Dans la liste déroulante Standardisations, choisissez l’option **Contournement personnalisé** ou **Mappage d’alias** et sélectionnez **Terminé**.
 
 1. Sélectionnez **Enregistrer** sur la page **Correspondance** pour appliquer la configuration de correspondance personnalisée.
 
 1. Sélectionnez **Exécuter** sur la page **Mettre en correspondance** pour démarrer le processus. Les autres règles de correspondance spécifiées sont remplacées par la configuration de correspondance personnalisée.
 
-> [!TIP]
-> Accédez à **Données** > **Entités** et passez en revue l’entité **ConflationMatchPair** pour confirmer que les remplacements sont appliqués.
+### <a name="known-issues"></a>Problèmes connus
+
+- L’appariement autonome n’affiche pas les données standardisées dans les entités de déduplication. Cependant, il applique la standardisation en interne lors de la déduplication. Il concerne toutes les standardisations à dessein. 
+- Si le paramètre de type sémantique est supprimé dans la phase **Mappage** lorsqu’une règle de correspondance utilise Mappage d’alias ou Contournement personnalisé, la standardisation ne sera pas appliquée. Cela ne se produit que si vous effacez le type sémantique après avoir configuré la standardisation dans la règle de correspondance, car le type sémantique sera inconnu.
+
 
 ## <a name="next-step"></a>Étape suivante
 
-Une fois que vous avez terminé le processus de correspondance pour au moins une paire de correspondance, vous êtes prêt à résoudre les contradictions possibles dans vos données en vous rendant à la rubrique [**Fusionner**](merge-entities.md).
+Après avoir terminé le processus de correspondance pour au moins une paire de correspondances, passez à l’étape [**Fusionner**](merge-entities.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
