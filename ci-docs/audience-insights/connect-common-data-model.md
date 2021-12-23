@@ -1,7 +1,7 @@
 ---
 title: Connecter les données Common Data Model à un compte Azure Data Lake
 description: Utilisez les données Common Data Model avec Azure Data Lake Storage.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033123"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900194"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Se connecter à un dossier Common Data Model à l’aide d’un compte Azure Data Lake
 
@@ -30,7 +30,7 @@ Cet article fournit des informations sur l’ingestion de données à partir d�
 
 - Le compte Azure Data Lake à partir duquel vous souhaitez vous connecter et ingérer des données doit se trouver dans la même région Azure que l’environnement Dynamics 365 Customer Insights. Les connexions à un dossier Common Data Model à partir d’un lac de données situé dans une autre région Azure ne sont pas prises en charge. Pour connaître la région Azure de l’environnement, accédez à **Administrateur** > **Système** > **À propos de** dans les informations sur l’audience.
 
-- Les données stockées dans les services en ligne peuvent être stockées dans un emplacement différent de celui où les données sont traitées ou stockées dans Dynamics 365 Customer Insights. En important ou en vous connectant aux données stockées dans les services en ligne, vous acceptez que les données puissent être transférées et stockées avec Dynamics 365 Customer Insights. [En savoir plus sur le Centre de gestion de la confidentialité Microsoft.](https://www.microsoft.com/trust-center)
+- Les données stockées dans des services en ligne peuvent être stockées dans un emplacement différent de celui où les données sont traitées ou stockées dans Dynamics 365 Customer Insights. En important ou en vous connectant aux données stockées dans des services en ligne, vous acceptez que les données puissent être transférées dans Dynamics 365 Customer Insights et qu’elles y soient stockées. [En savoir plus sur le Centre de gestion de la confidentialité Microsoft](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Se connecter à un dossier Common Data Model
 
@@ -38,12 +38,11 @@ Cet article fournit des informations sur l’ingestion de données à partir d�
 
 1. Sélectionnez **Ajouter une source de données**.
 
-1. Sélectionnez **Se connecter à un dossier Common Data Model**, entrez un **Nom** pour la source de données et sélectionnez **Suivant**. Instructions relatives au nom : 
-   - Commencez par une lettre.
-   - Utilisez uniquement des lettres et des chiffres. Les espaces et caractères spéciaux ne sont pas autorisés.
-   - Utilisez entre 3 et 64 caractères.
+1. Sélectionnez **Azure Data Lake Storage**, entrez un **Nom** pour la source de données, puis sélectionnez **Suivant**.
 
-1. Vous pouvez choisir entre une option basée sur une ressource et une option basée sur un abonnement pour l’authentification. Pour plus d’informations, consultez [Connecter les informations sur l’audience à un compte Azure Data Lake Storage Gen2 avec un principal de service Azure](connect-service-principal.md). Entrez les informations du **Conteneur** et sélectionnez **Suivant**.
+   - Si vous y êtes invité, sélectionnez l’un des exemples d’ensembles de données qui se rapportent à votre secteur d’activité, puis sélectionnez **Suivant**. 
+
+1. Vous pouvez choisir entre une option basée sur une ressource et une option basée sur un abonnement pour l’authentification. Pour plus d’informations, consultez [Connecter les informations sur l’audience à un compte Azure Data Lake Storage Gen2 avec un principal de service Azure](connect-service-principal.md). Entrez l’**Adresse du serveur**, sélectionnez **Se connecter**, puis sélectionnez **Suivant**.
    > [!div class="mx-imgBorder"]
    > ![Boîte de dialogue pour entrer de nouveaux détails de connexion pour Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,7 +55,7 @@ Cet article fournit des informations sur l’ingestion de données à partir d�
    > [!NOTE]
    > Tout fichier model.json ou manifest.json associé à une autre source de données dans l’environnement n’apparaîtra pas dans la liste.
 
-1. Vous obtiendrez une liste des entités disponibles dans le fichier model.json ou manifest.json sélectionné. Vous pouvez vérifier et sélectionner à partir de la liste des entités disponibles et sélectionnez **Enregistrer**. Toutes les entités sélectionnées seront ingérées à partir de la nouvelle source de données.
+1. Vous verrez une liste des entités disponibles dans le fichier model.json ou manifest.json sélectionné. Passez en revue la liste des entités disponibles et faites votre sélection, puis sélectionnez **Enregistrer**. Toutes les entités sélectionnées seront ingérées à partir de la nouvelle source de données.
    > [!div class="mx-imgBorder"]
    > ![Boîte de dialogue affichant une liste d’entités à partir d’un fichier model.json.](media/review-entities.png)
 

@@ -1,7 +1,7 @@
 ---
 title: Se connecter aux tables dans Microsoft Dataverse
 description: Importer des données depuis un lac de données géré Microsoft Dataverse.
-ms.date: 07/23/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,22 +9,25 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: ffeccffd0e353cb5490b537552d585c184ad672f9c806e673bd04743214ad068
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fecf3e33b5bc1eec17006fc196004be902c03b40
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033077"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900148"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Se connecter aux données dans un lac de données géré Microsoft Dataverse
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Cet article fournit des informations sur la façon dont les utilisateurs Dataverse peuvent se connecter rapidement à leurs entités analytiques dans un lac géré Dataverse. Vous devez être administrateur de l’organisation Dataverse pour continuer et voir la liste des entités disponibles dans le lac géré.
+Cet article fournit des informations sur la façon dont les utilisateurs Dataverse peuvent se connecter rapidement aux entités analytiques dans un lac géré par Microsoft Dataverse. 
+
+> [!NOTE]
+> Vous devez être un administrateur dans l’organisation Dataverse pour continuer et afficher la liste des entités disponibles dans le lac géré.
 
 ## <a name="important-considerations"></a>Remarques importantes
 
-Les données stockées dans des services en ligne, tels que Azure Data Lake Storage, peut être stocké dans un emplacement différent de celui où les données sont traitées ou stockées dans Dynamics 365 Customer Insights. En important ou en vous connectant aux données stockées dans les services en ligne, vous acceptez que les données puissent être transférées et stockées avec Dynamics 365 Customer Insights. [En savoir plus sur le Centre de gestion de la confidentialité Microsoft.](https://www.microsoft.com/trust-center)
+Les données stockées dans des services en ligne, tels que Azure Data Lake Storage, peut être stocké dans un emplacement différent de celui où les données sont traitées ou stockées dans Dynamics 365 Customer Insights. En important ou en vous connectant aux données stockées dans des services en ligne, vous acceptez que les données puissent être transférées dans Dynamics 365 Customer Insights et qu’elles y soient stockées. [En savoir plus sur le Centre de gestion de la confidentialité Microsoft](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Se connecter à un lac géré Dataverse
 
@@ -32,12 +35,9 @@ Les données stockées dans des services en ligne, tels que Azure Data Lake Stor
 
 2. Sélectionnez **Ajouter une source de données**.
 
-3. Sélectionnez **Se connecter au lac géré Microsoft Dataverse** et sélectionnez **Suivant**.
+3. Sélectionnez **Microsoft Dataverse** et sélectionnez **Suivant**.
 
-4. Saisissez un **Nom** pour la source de données, puis sélectionnez **Suivant**. Instructions relatives au nom : 
-   - Commencez par une lettre.
-   - Utilisez uniquement des lettres et des chiffres. Les espaces et caractères spéciaux ne sont pas autorisés.
-   - Utilisez entre 3 et 64 caractères.
+4. Saisissez un **Nom** pour la source de données, puis sélectionnez **Suivant**. 
 
 5. Fournissez l’**adresse du serveur** pour l’organisation Dataverse et sélectionnez **Connexion**.
 

@@ -1,7 +1,7 @@
 ---
 title: Se connecter à un compte Azure Data Lake Storage en utilisant un principal de service
 description: Utilisez un principal de service Azure pour vous connecter à votre lac de données personnel.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645169"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900255"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Se connecter à un compte Azure Data Lake Storage en utilisant un principal de service Azure
 
-Les outils automatisés qui utilisent les services Azure doivent toujours avoir des autorisations restreintes. Au lieu que les applications se connectent en tant qu’utilisateur entièrement privilégié, Azure propose des principaux de service. Lisez la suite pour savoir comment connecter Dynamics 365 Customer Insights à un compte Azure Data Lake Storage en utilisant un principal de service Azure à la place de clés de compte de stockage. 
+Cet article décrit comment connecter Dynamics 365 Customer Insights à un compte Azure Data Lake Storage en utilisant un principal de service Azure au lieu de clés de compte de stockage. 
 
-Utilisez le principal du service pour [ajouter ou modifier un dossier Common Data Model en tant que source de données](connect-common-data-model.md) de manière sécurisée ou pour [créer ou mettre à jour un environnement](create-environment.md).
+Les outils automatisés qui utilisent les services Azure doivent toujours avoir des autorisations restreintes. Au lieu que les applications se connectent en tant qu’utilisateur entièrement privilégié, Azure propose des principaux de service. Vous pouvez utiliser les principaux de service pour [ajouter ou modifier un dossier Common Data Model en tant que source de données](connect-common-data-model.md) ou [créer ou mettre à jour un environnement](create-environment.md) en toute sécurité.
 
 > [!IMPORTANT]
 > - Le compte Data Lake Storage qui utilisera le principal de service doit avoir [activé l’espace de noms hiérarchique](/azure/storage/blobs/data-lake-storage-namespace).
-> - Des autorisations administrateur pour votre abonnement Azure sont nécessaires pour créer le principal de service.
+> - Des autorisations administrateur pour votre abonnement Azure sont nécessaires pour créer un principal de service.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Créer un principal de service Azure pour Customer Insights
 
-Avant de créer un principal de service pour les informations sur l’audience ou pour les informations sur l’engagement, vérifiez s’il existe déjà dans l’organisation.
+Avant de créer un nouveau principal de service pour Customer Insights, vérifiez s’il existe déjà dans votre organisation.
 
 ### <a name="look-for-an-existing-service-principal"></a>Rechercher un principal de service existant
 

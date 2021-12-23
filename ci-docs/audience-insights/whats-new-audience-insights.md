@@ -1,7 +1,7 @@
 ---
 title: Fonctionnalités nouvelles et à venir
 description: Informations sur les nouvelles fonctionnalités, les améliorations et les corrections de bogues.
-ms.date: 11/04/2021
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753114"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884259"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Nouveautés de la fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights
 
@@ -26,6 +26,18 @@ Nous déployons des mises à jour région par région. Ainsi, certaines régions
 
 > [!TIP]
 > Pour envoyer et voter sur les demandes de fonctionnalités et les suggestions de produits, accédez au [portail Idées d’application Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="november-2021-updates"></a>Mises à jour de novembre 2021
+
+Les mises à jour de novembre 2021 incluent de nouvelles fonctionnalités, des améliorations de performances et des corrections de bugs.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>Appartenance au segment maintenant disponible dans Dataverse
+
+Les informations d’appartenance au segment pour les profils clients sont maintenant disponibles dans Dataverse ainsi que les profils et les informations des clients. Les applications d’action et les applications pilotées par modèle Dynamics 365 peuvent utiliser les détails de l’appartenance au segment de recherche de données pour un client donné.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>Les activités prennent en charge les détails au niveau du contact pour les comptes professionnels
+
+Vous pouvez maintenant configurer, afficher et filtrer les activités des contacts sur les chronologies d’activités de votre compte professionnel pour mieux comprendre quels contacts du compte ont participé à des activités spécifiques.
 
 ## <a name="october-2021-updates"></a>Mises à jour d’octobre 2021
 

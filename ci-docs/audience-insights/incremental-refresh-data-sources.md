@@ -1,7 +1,7 @@
 ---
 title: Actualisation incrémentielle des sources de données basées sur Power Query
 description: Actualisez les données nouvelles et mises à jour pour les sources de données volumineuses basées sur Power Query.
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377831"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900252"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Actualisation incrémentielle pour les sources de données basées sur Power Query
+
+Cet article explique comment configurer l’actualisation incrémentielle pour les sources de données basées sur Power Query.
 
 L’actualisation incrémentielle des sources de données offre les avantages suivants :
 
@@ -30,9 +32,9 @@ Les informations sur l’audience permettent une actualisation incrémentielle d
 
 1. [Créer une source de données basée sur Power Query](connect-power-query.md).
 
-1. Offrez un nom pour la source de données.
+1. Fournissez un **Nom** pour la source de données.
 
-1. Sélectionnez une source de données qui prend en charge l’actualisation incrémentielle, telle qu’une base de données Azure SQL.
+1. Sélectionnez une source de données qui prend en charge l’actualisation incrémentielle, telle qu’une [base de données Azure SQL](/power-query/connectors/azuresqldatabase).
 
 1. Sélectionnez les entités ou les tables à ingérer.
 

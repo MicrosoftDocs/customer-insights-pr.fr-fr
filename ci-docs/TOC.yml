@@ -94,6 +94,8 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Enrichir avec Experian
           href: audience-insights/enrichment-experian.md
+        - name: Enrichir avec les données Office 365
+          href: audience-insights/enrichment-office.md
         - name: Enrichissement avec l’importation personnalisée SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segments
@@ -144,8 +146,6 @@
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Expériences avec Azure Machine Learning
               href: audience-insights/azure-machine-learning-experiments.md
-            - name: Expériences avec Azure Machine Learning Studio
-              href: audience-insights/machine-learning-studio-experiments.md
         - name: Gérer les prédictions
           href: audience-insights/manage-predictions.md
         - name: Créer des segments basés sur des prédictions
@@ -240,6 +240,8 @@
               href: audience-insights/use-azure-key-vault.md
             - name: Se connecter à un compte de stockage ADLS à l’aide d’un principal de service
               href: audience-insights/connect-service-principal.md
+            - name: Exporter les journaux de diagnostic
+              href: audience-insights/diagnostics.md
     - name: Extensibilité
       items:
         - name: Intégrez les données web à partir des informations sur l’engagement

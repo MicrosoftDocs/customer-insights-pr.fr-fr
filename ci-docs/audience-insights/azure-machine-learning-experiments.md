@@ -1,7 +1,7 @@
 ---
 title: Expériences Azure Machine Learning
 description: Utilisez des modèles basés sur Azure Machine Learning dans Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033169"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881735"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utiliser des modèles basés sur Azure Machine Learning
 
-Les données unifiées dans Dynamics 365 Customer Insights sont une source pour créer des modèles Machine Learning qui peuvent générer des informations métier supplémentaires. Customer Insights s’intègre à Machine Learning Studio (classique) et à Azure Machine Learning pour utiliser vos propres modèles personnalisés. Consultez [Expériences Machine Learning Studio (classique)](machine-learning-studio-experiments.md) pour voir des exemples d’expériences reposant sur Machine Learning Studio (classique). 
+Les données unifiées dans Dynamics 365 Customer Insights sont une source pour créer des modèles Machine Learning qui peuvent générer des informations métier supplémentaires. Customer Insights s'intègre à Azure Machine Learning pour utiliser vos propres modèles personnalisés.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -35,7 +35,7 @@ Les données unifiées dans Dynamics 365 Customer Insights sont une source pour 
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Utiliser le concepteur Azure Machine Learning
 
-Le concepteur Azure Machine Learning fournit un canevas visuel dans lequel vous pouvez glisser-déplacer des ensembles de données et des modules, similaires à Machine Learning Studio (classique). Un pipeline par lots créé à partir du concepteur peut être intégré dans Customer Insights s’il est configuré en conséquence. 
+Le concepteur Azure Machine Learning fournit un canevas visuel dans lequel vous pouvez glisser-déplacer des ensembles de données et des modules. Un pipeline par lots créé à partir du concepteur peut être intégré dans Customer Insights s’il est configuré en conséquence. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Utilisation du SDK Azure Machine Learning
 

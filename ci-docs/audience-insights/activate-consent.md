@@ -1,7 +1,7 @@
 ---
 title: Activer les règles de consentement pour les segments
 description: Suivez cette procédure pour lier les données de consentement et activer les contrôles de consentement dans les insights d’audience. Un administrateur peut également désactiver les contrôles de consentement.
-ms.date: 11/03/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 552cb0739c4d17266dd028638df067f3384b738a
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790773"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884071"
 ---
 # <a name="activate-consent-rules"></a>Activer les règles de consentement
 
@@ -49,3 +49,6 @@ Pour arrêter d’utiliser les données de consentement dans les insights d’au
 1. Sélectionnez l’onglet **Consentement (version préliminaire)**.
 
 1. Dans la section **Activer les contrôles de consentement**, réglez la bascule sur **Désactivé**.
+
+> [!TIP]
+> Pour ne plus utiliser la capacité de gestion du consentement, consultez [Paramètres système dans le Centre de consentement (version préliminaire)](../consent-management/system-settings.md).

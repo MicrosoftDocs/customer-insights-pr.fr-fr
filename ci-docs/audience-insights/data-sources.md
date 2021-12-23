@@ -1,7 +1,7 @@
 ---
 title: Utiliser des sources de données pour ingérer des données
 description: Découvrez comment importer des données depuis des sources diverses.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6846c73cb156aaa049e2656c8e327bcba1f73abc
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732139"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900339"
 ---
 # <a name="data-sources-overview"></a>Vue d’ensemble des sources de données
 
@@ -25,19 +25,22 @@ La fonctionnalité d’informations sur l’audience de Dynamics 365 Customer In
 
 ## <a name="add-a-data-source"></a>Ajouter une source de données
 
-Reportez-vous aux articles détaillés sur la façon d’ajouter une source de données, selon l’option que vous choisissez.
+Consultez les articles détaillés pour savoir comment ajouter une source de données, en fonction de l’option que vous choisissez.
 
-Vous pouvez ajouter une source de données de trois manières principales :
+Vous pouvez ajouter les sources de données suivantes :
 
-- [Grâce à des dizaines de connecteurs Power Query](connect-power-query.md)
-- [À partir d’un dossier Common Data Model](connect-common-data-model.md)
-- [À partir de votre propre lac Microsoft Dataverse](connect-dataverse-managed-lake.md)
+- [Connecteurs Power Query](connect-power-query.md)
+- [Common Data Model](connect-common-data-model.md)
+- [Lac Microsoft Dataverse](connect-dataverse-managed-lake.md)
+
+> [!NOTE]
+> Si vous utilisez la version d’essai, la section des méthodes d’importation comprend une option **Bibliothèque de données Customer Insights**. Choisissez cette option pour sélectionner un exemple de jeu de données disponible pour divers secteurs d’activité. Pour plus d’informations, consultez [Version d’essai de Dynamics 365 Customer Insights](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Ajouter des données de sources de données locales
 
-L’ingestion de données à partir de sources de données locales dans Audience Insights est prise en charge en fonction des flux de données Microsoft Power Platform. Les flux de données peuvent être activés dans Customer Insights en [fournissant l’URL de l’environnement Microsoft Dataverse](create-environment.md) lors de la configuration de l’environnement.
+L’ingestion de données à partir de sources de données locales dans Audience Insights est prise en charge en fonction des flux de données Microsoft Power Platform. Vous pouvez activer les flux de données dans Customer Insights en [fournissant l’URL de l’environnement Microsoft Dataverse](create-environment.md) lors de la configuration de l’environnement.
 
-Les sources de données créées après l’association d’un environnement Dataverse à Customer Insights utiliseront les [flux de données Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) par défaut. Les flux de données prennent en charge la connectivité locale à l’aide de la passerelle de données. Supprimez et recréez les sources de données qui existaient avant l’association d’un environnement Dataverse pour [utiliser les passerelles de données locales](/data-integration/gateway/service-gateway-app).
+Les sources de données créées après avoir associé un environnement Dataverse à Customer Insights utilisent les [flux de données Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) par défaut. Les flux de données prennent en charge la connectivité locale à l’aide de la passerelle de données. Vous pouvez supprimer et recréer des sources de données qui existaient avant l’association d’un environnement Dataverse [en utilisant les passerelles de données locales](/data-integration/gateway/service-gateway-app).
 
 Les passerelles de données d’un environnement Power BI ou Power Apps existant seront visibles et vous pourrez les réutiliser dans Customer Insights. La page des sources de données affiche des liens pour accéder à l’environnement Microsoft Power Platform dans lequel vous pouvez afficher et configurer les passerelles de données locales.
 

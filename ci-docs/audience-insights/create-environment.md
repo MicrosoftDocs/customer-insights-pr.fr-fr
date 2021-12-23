@@ -1,7 +1,7 @@
 ---
 title: Créer des environnements dans Customer Insights
 description: Étapes pour créer des environnements avec un abonnement sous licence pour Dynamics 365 Customer Insights.
-ms.date: 10/14/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673388"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892335"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Créer un environnement dans les informations sur l’audience
 
@@ -77,6 +77,9 @@ Si vous créez plusieurs environnements de Customer Insights et choisissez d’e
 L’étape **Microsoft Dataverse** vous permet de connecter Customer Insights à votre environnement Dataverse.
 
 Pour utiliser [des modèles de prédiction prêts à l’emploi](predictions-overview.md#out-of-box-models), configurez le partage de données avec Dataverse. Vous pouvez également activer l’ingestion de données à partir des sources de données local, en fournissant l’URL d’environnement Microsoft Dataverse administrée par votre organisation. Sélectionnez **Activer le partage de données** pour partager les données de sortie Customer Insights avec un lac de données géré par Dataverse.
+
+> [!IMPORTANT]
+> Customer Insights et Dataverse doivent se trouver dans la même région pour activer le partage de données.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Options de configuration pour activer le partage de données avec Microsoft Dataverse.":::
 
