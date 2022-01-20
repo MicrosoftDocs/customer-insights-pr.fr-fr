@@ -1,7 +1,7 @@
 ---
-title: Prédiction de l’attrition des transactions (vidéo)
+title: Prédiction de l’attrition des transactions (contient une vidéo)
 description: Prédisez si un client risque de ne plus acheter vos produits ou services.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904069"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967744"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Prédiction d’attrition des transactions (version préliminaire)
 
@@ -103,10 +103,10 @@ Pour les environnements basés sur des comptes d’entreprise, nous pouvons pré
 
 1. Sélectionnez la vignette **Modèle d’attrition clients (version préliminaire)** et sélectionnez **Utiliser ce modèle**.
 
-1. Dans le volet **Modèle d’attrition clients**, choisissez **Transaction** et sélectionnez **Démarrer**.
+1. Dans le volet **Modèle d’attrition clients (version préliminaire)**, choisissez **Transaction** et sélectionnez **Démarrer**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Capture d’écran avec l’option de transaction sélectionnée dans le volet Modèle d’attrition clients.":::
-
+ 
 ### <a name="name-model"></a>Nommer le modèle
 
 1. Donnez un nom au modèle pour le distinguer des autres modèles.
@@ -117,11 +117,11 @@ Pour les environnements basés sur des comptes d’entreprise, nous pouvons pré
 
 ### <a name="define-customer-churn"></a>Définir l’attrition client
 
-1. Définissez une fenêtre de jours pour prédire l’attrition dans le champ **Identifiez les clients que vous risquez de perdre dans la prochaine**. Par exemple, prédisez le risque d’attrition de vos clients au cours des 90 prochains jours pour vous aligner sur vos efforts de fidélisation avec le marketing. Prédire le risque d’attrition sur une période plus ou moins longue peut rendre plus difficile de prendre en compte les facteurs de votre profil de risque d’attrition, mais cela dépend des besoins spécifiques à votre entreprise.
+1. Définissez la **Fenêtre de prédiction**. Par exemple, prédisez le risque d’attrition de vos clients au cours des 90 prochains jours pour vous aligner sur vos efforts de fidélisation avec le marketing. Prédire le risque d’attrition sur une période plus ou moins longue peut rendre plus difficile de prendre en compte les facteurs de votre profil de risque d’attrition, mais cela dépend des besoins spécifiques à votre entreprise.
    >[!TIP]
-   > Vous pouvez sélectionner **Enregistrer et fermer** à tout moment pour enregistrer la prédiction en tant que brouillon. Vous trouverez le projet de prédiction dans l’onglet **Mes prédictions** pour continuer.
+   > Vous pouvez sélectionner **Enregistrer le brouillon** à tout moment pour enregistrer la prédiction en tant que brouillon. Vous trouverez le projet de prédiction dans l’onglet **Mes prédictions** pour continuer.
 
-1. Entrez le nombre de jours pour définir l’attrition dans le champ **Un client est perdu s’il n’a pas effectué d’achats dans**. Par exemple, si un client n’a pas effectué d’achats au cours des 30 derniers jours, il peut être considéré comme perdu pour votre entreprise. 
+1. Saisissez le nombre de jours pour définir l’attrition dans le champ **Définition de l’attrition**. Par exemple, si un client n’a pas effectué d’achats au cours des 30 derniers jours, il peut être considéré comme perdu pour votre entreprise. 
 
 1. Cliquez sur **Suivant** pour continuer.
 
@@ -129,19 +129,16 @@ Pour les environnements basés sur des comptes d’entreprise, nous pouvons pré
 
 1. Sélectionnez **Ajouter des données** et choisissez le type d’activité dans le volet latéral qui contient les informations requises sur l’historique des transactions ou des achats.
 
-1. Sous **Choisir les activités**, choisissez les activités spécifiques de l’activité sélectionnée sur lesquelles vous souhaitez que le calcul se concentre.
+1. En dessous de **Sélectionner des activités**, choisissez les activités spécifiques du type d’activité sélectionné sur lesquelles vous souhaitez que le calcul se concentre.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Volet latéral affichant le choix d’activités spécifiques de type sémantique.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Volet latéral affichant le choix d’activités spécifiques de type sémantique.":::
 
-1. Si vous n’avez pas encore associé l’activité à un type sémantique, sélectionnez **Modifier**. L’expérience guidée pour associer les activités sémantiques s’ouvre. Associez vos données aux champs correspondants dans le type d’activité sélectionné.
+   Si vous n’avez pas encore associé l’activité à un type sémantique, sélectionnez **Modifier**. L’expérience guidée pour associer les activités sémantiques s’ouvre. Associez vos données aux champs correspondants dans le type d’activité sélectionné.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Page définissant le type d’activité.":::
+1. Associez les attributs sémantiques aux champs requis pour exécuter le modèle. Si les champs ci-dessous ne sont pas renseignés, configurez la relation entre votre entité d’historique des achats et l’entité *Client*. Cliquez sur **Enregistrer**.
 
-1. Après avoir associé l’activité au type sémantique correspondant, sélectionnez **Suivant** pour continuer
+1. À l’étape **Ajouter les données requises**, sélectionnez **Suivant** pour continuer si vous ne souhaitez pas ajouter d’autres activités.
 
-1. Associez les attributs sémantiques aux champs requis pour exécuter le modèle. Si les champs ci-dessous ne sont pas renseignés, configurez la relation entre votre entité d’historique des achats et l’entité *Client*.
-
-1. Sélectionnez **Suivant**.
 
 # <a name="individual-consumers-b-to-c"></a>[Consommateurs individuels (B-to-C)](#tab/b2c)
 

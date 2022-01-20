@@ -1,7 +1,7 @@
 ---
-title: Complément de carte client pour les applications Dynamics 365 (vidéo)
+title: Complément de carte client pour les applications Dynamics 365 (contient une vidéo)
 description: Affichez les données des informations sur l’audience dans les applications Dynamics 365 avec ce complément.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904010"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945424"
 ---
 # <a name="customer-card-add-in-preview"></a>Complément Carte client (préversion)
 
@@ -27,12 +27,12 @@ Obtenez une vue globale de vos clients directement dans les applications Dynamic
 ## <a name="prerequisites"></a>Conditions préalables
 
 - Le complément fonctionne uniquement avec les applications pilotées par modèle Dynamics 365, telles que Sales ou Customer Service, versions 9.0 et ultérieures.
-- Pour que vos données Dynamics 365 soient mappées aux profils client d’informations sur l’audience, elles doivent être [intégrées à partir de l’application Dynamics 365 à l’aide du connecteur Microsoft Dataverse](connect-power-query.md).
+- Pour que vos données Dynamics 365 soient mappées aux profils client d’informations sur l’audience, nous vous recommandons qu’elles soient [intégrées à partir de l’application Dynamics 365 à l’aide du connecteur Microsoft Dataverse](connect-power-query.md). Si vous utilisez une méthode différente pour ingérer des contacts (ou des comptes) Dynamics 365, vous devez vous assurer que le champ `contactid` (ou `accountid`) est défini comme la [clé primaire pour cette source de données à l’étape de mappage du processus d’unification des données](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Tous les utilisateurs Dynamics 365 du complément de carte client doivent être [ajoutés en tant qu’utilisateurs](permissions.md) dans les informations sur l’audience pour voir les données.
 - [Les fonctions de recherche et de filtrage configurées](search-filter-index.md) dans les informations sur l’audience sont nécessaires pour que la recherche de données fonctionne.
 - Chaque contrôle de complément repose sur des données spécifiques dans les informations sur l’audience. Certaines données et certains contrôles ne sont disponibles que dans des environnements de types spécifiques. La configuration du complément vous informera si un contrôle n’est pas disponible en raison du type d’environnement sélectionné. En savoir plus sur les [cas d’utilisation de l’environnement](work-with-business-accounts.md).
   - **Contrôle de mesure** : A besoin [de mesures configurées](measures.md) de type attributs client.
-  - **Contrôle de l’intelligence** : nécessite des données générées à l’aide de [prédictions](predictions.md) ou de [modèles personnalisés](custom-models.md).
+  - **Contrôle de l’intelligence**: nécessite des données générées à l’aide de [prédictions ou de modèles personnalisés](predictions-overview.md).
   - **Contrôle des détails du client** : Tous les champs du profil sont disponibles dans le profil client unifié.
   - **Contrôle d’enrichissement** : nécessite des [enrichissements](enrichment-hub.md) actifs appliqués aux profils clients. Le complément de carte prend en charge ces enrichissements : [Marques](enrichment-microsoft.md) fournies par Microsoft, [Intérêts](enrichment-microsoft.md) fournis par Microsoft et [Données d’engagement Office](enrichment-office.md) fournies par Microsoft.
   - **Contrôle des contacts** : Nécessite la définition d’une entité sémantique de type contacts.

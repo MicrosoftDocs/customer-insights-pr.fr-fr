@@ -1,20 +1,20 @@
 ---
-title: Présentation de la capacité de gestion du consentement (vidéo)
+title: Présentation de la capacité de gestion du consentement (contient une vidéo)
 description: La capacité de gestion du consentement de Dynamics 365 Customer Insights donne aux organisations les outils nécessaires pour rester en conformité avec les exigences réglementaires.
 ms.date: 11/03/2021
 ms.service: customer-insights
 ms.subservice: consent-management
-ms.topic: how-to
+ms.topic: overview
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 10ad16c93d17261073a181dbd674a08a4c33304c
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: f0092770e4422673a79bcc5589e569421f41cc01
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903869"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977574"
 ---
 # <a name="consent-management-preview-overview"></a>Vue d'ensemble de la gestion des consentements (version préliminaire)
 

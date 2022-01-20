@@ -1,7 +1,7 @@
 ---
 title: Prédiction de recommandation de produit
 description: Prédisez les produits qu’un client est susceptible d’acheter ou avec lesquels interagir.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494536"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967791"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Prédiction de recommandation de produit (version préliminaire)
 
@@ -79,11 +79,11 @@ Si vous souhaitez essayer cette fonctionnalité mais que vous ne disposez pas de
 1. Définissez le **Nombre de produits** que vous souhaitez recommander à un client. Cette valeur dépend de la manière dont votre méthode de livraison remplit les données. Si vous pouvez recommander trois produits, définissez cette valeur en conséquence.
    
    >[!TIP]
-   > Vous pouvez sélectionner **Enregistrer et fermer** à tout moment pour enregistrer la prédiction en tant que brouillon. Vous trouverez le brouillon de prédiction dans l’onglet **Mes prédictions**.
+   > Vous pouvez sélectionner **Enregistrer le brouillon** à tout moment pour enregistrer la prédiction en tant que brouillon. Vous trouverez le brouillon de prédiction dans l’onglet **Mes prédictions**.
 
-1. Choisissez si vous souhaitez **Suggérer des produits que les clients ont récemment achetés**.
+1. Choisissez si vous souhaitez inclure les produits que les clients ont récemment achetés dans le champ **Achats répétés attendus**.
 
-1. Si vous avez choisi de *ne pas* recommander des produits récemment achetés, définissez la **Fenêtre de consultation**. Ce paramètre spécifie le délai d’exécution que le modèle considère avant de recommander à nouveau le produit à l’utilisateur. Par exemple, indiquez qu’un client achète un ordinateur portable tous les deux ans. Cette fenêtre examinera l’historique des achats sur les deux dernières années, et si elle trouve un article, celui-ci sera filtré des recommandations.
+1. Définissez la **Fenêtre de consultation**. Ce paramètre spécifie le délai d’exécution que le modèle considère avant de recommander à nouveau le produit à l’utilisateur. Par exemple, indiquez qu’un client achète un ordinateur portable tous les deux ans. Cette fenêtre examinera l’historique des achats sur les deux dernières années, et si elle trouve un article, celui-ci sera filtré des recommandations.
 
 1. Sélectionnez **Suivant**.
 

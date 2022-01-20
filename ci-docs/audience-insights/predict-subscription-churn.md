@@ -1,5 +1,5 @@
 ---
-title: Prédiction du taux de désabonnement (vidéo)
+title: Prédiction de l’attrition des abonnements (contient une vidéo)
 description: Déterminez si un client risque de ne plus utiliser les produits ou services d’abonnement de votre société.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903946"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967698"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Prédiction du taux de désabonnement (aperçu)
 
@@ -77,7 +77,7 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
 1. Entrez le nombre de **Jours depuis la fin de l’abonnement** qu’un client est parti selon votre entreprise. Cette période est généralement significative pour les activités commerciales, telles que les offres ou autres efforts de marketing visant à éviter de perdre le client.
 1. Entrez le nombre de **Jours à rechercher dans le futur pour prédire le taux d’attrition** pour définir une fenêtre pour laquelle prédire le taux d’attrition. Par exemple, pour prédire le risque d’attrition de vos clients au cours des 90 prochains jours afin de vous aligner sur vos efforts de rétention marketing. Prédire le risque d’attrition sur des périodes plus ou moins longues peut rendre plus difficile de prendre en compte les facteurs de votre profil de risque d’attrition, en fonction des exigences spécifiques de votre entreprise. Sélectionner **Suivant** pour continuer
    >[!TIP]
-   > Vous pouvez sélectionner **Enregistrer et fermer** à tout moment pour enregistrer la prédiction en tant que brouillon. Vous trouverez le projet de prédiction dans l’onglet **Mes prédictions** pour continuer.
+   > Vous pouvez sélectionner **Enregistrer le brouillon** à tout moment pour enregistrer la prédiction en tant que brouillon. Vous trouverez le projet de prédiction dans l’onglet **Mes prédictions** pour continuer.
 
 ### <a name="add-required-data"></a>Ajouter les données requises
 

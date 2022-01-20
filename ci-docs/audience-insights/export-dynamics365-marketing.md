@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
-ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
+ms.openlocfilehash: 2c673c432f308efa289625a159de608d07f8d2b3
+ms.sourcegitcommit: f988114ac7a288ccadf2db35b02dbef5cacea4d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "7417202"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "7975121"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Utiliser des segments dans Dynamics 365 Marketing (version préliminaire)
 
@@ -45,7 +45,7 @@ Si vous utilisez les nouvelles fonctionnalités de Dynamics 365 Marketing pour 
 
 1. Dans la section **Compte administrateur du serveur**, sélectionnez **Se connecter** et choisissez un compte Dynamics 365 Marketing.
 
-1. Mappez un champ d’ID de client à l’ID de contact Dynamics 365.
+1. Mappez le champ ID de contact de l’entité Client sur l’ID de contact de Dynamics 365.
 
 1. Sélectionnez **Enregistrer** pour terminer la connexion. 
 
