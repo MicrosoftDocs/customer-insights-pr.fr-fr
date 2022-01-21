@@ -1,7 +1,7 @@
 ---
 title: Amélioration des données de l’entreprise
 description: Enrichissez et normalisez les données de l’entreprise avec les modèles de Microsoft.
-ms.date: 11/15/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
-ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "7813915"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927579"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Enrichissement des profils d’entreprise avec des données d’entreprise enrichies
 
@@ -83,6 +83,16 @@ Pour démarrer le processus d’enrichissement, sélectionnez **Exécuter** dans
 Une fois le processus d’enrichissement terminé, vous pouvez consulter les données des profils clients nouvellement enrichis sous **Mes enrichissements**. De plus, vous trouverez l’heure de la dernière mise à jour et le nombre de profils enrichis.
 
 Vous pouvez accéder à une vue détaillée de chaque profil enrichi en sélectionnant **Afficher des données enrichies**.
+
+### <a name="overview-card"></a>Carte de présentation
+
+La carte de présentation affiche des détails sur la couverture de l’enrichissement. 
+
+* **Clients traités et modifiés** : le nombre de profils clients qui ont été enrichis avec succès.
+
+* **Clients traités et non modifiés** : le nombre de profils clients qui ont été reconnus mais non modifiés. Cela se produit généralement lorsque les données d’entrée sont valides et ne peuvent pas être améliorées par l’enrichissement.
+
+* **Clients non traités et non modifiés** : le nombre de profils clients qui n’ont pas été reconnus. Généralement pour les données d’entrée non valides ou non prises en charge par l’enrichissement.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
