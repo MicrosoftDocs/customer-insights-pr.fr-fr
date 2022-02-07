@@ -1,7 +1,7 @@
 ---
 title: Connecter les données Common Data Model à un compte Azure Data Lake
 description: Utilisez les données Common Data Model avec Azure Data Lake Storage.
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900194"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Se connecter à un dossier Common Data Model à l’aide d’un compte Azure Data Lake
 
 Cet article fournit des informations sur l’ingestion de données à partir d’un dossier Common Data Model en utilisant votre compte Azure Data Lake Storage Gen2.
@@ -25,6 +20,8 @@ Cet article fournit des informations sur l’ingestion de données à partir d�
 - Les données de votre lac de données Azure Data Lake doivent respecter la norme Common Data Model. Les autres formats ne sont pas pris en charge pour le moment.
 
 - L’ingestion de données prend en charge les comptes de stockage Azure Data Lake *Gen2* exclusivement. Vous ne pouvez pas utiliser les comptes de stockage Azure Data Lake Gen1 pour ingérer des données.
+
+- Le compte de stockage Azure Data Lake doit avoir la fonctionnalité [espace de noms hiérarchique activée](/azure/storage/blobs/data-lake-storage-namespace).
 
 - Pour vous authentifier dans un principal de service Azure, assurez-vous que celui-ci est configuré dans votre client. Pour plus d’informations, consultez [Connecter les informations sur l’audience à un compte Azure Data Lake Storage Gen2 avec un principal de service Azure](connect-service-principal.md).
 

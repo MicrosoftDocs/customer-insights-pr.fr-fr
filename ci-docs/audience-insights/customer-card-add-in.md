@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
-ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "7945424"
 ---
+
 # <a name="customer-card-add-in-preview"></a>Complément Carte client (préversion)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Obtenez une vue globale de vos clients directement dans les applications Dynamics 365. Avec le complément Customer Card installé dans une application Dynamics 365 prise en charge, vous pouvez choisir d’afficher les champs de profil client, les informations et la chronologie des activités. Le complément récupérera les données de Customer Insights sans affecter les données de l’application Dynamics 365 connectée.
 
@@ -48,7 +43,7 @@ Vous devrez peut-être vous connecter avec vos informations d’identification d
 
 1. En tant qu’administrateur, accédez à la section **Paramètres** de Dynamics 365 et sélectionnez **Solutions**.
 
-1. Sélectionnez le lien **Nom complet** pour la solution **Complément Carte client Dynamics 365 Customer Insights (préversion)**.
+1. Sélectionnez le lien **Nom complet** pour la solution **Complément Carte client Dynamics 365 Customer Insights (version préliminaire)**.
 
    > [!div class="mx-imgBorder"]
    > ![Sélectionnez le nom complet.](media/select-display-name.png "Sélectionnez le nom complet.")

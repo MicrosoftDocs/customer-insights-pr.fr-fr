@@ -1,7 +1,7 @@
 ---
 title: Fusionner des entités pour l’unification des données
 description: Fusionnez des données pour créer des profils clients unifiés.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732769"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Fusionner des entités
 
 La fusion est la dernière phase du processus d’unification des données. Son objectif consiste à rapprocher les données conflictuelles. Des exemples de données en conflit sont le nom d’un client qui réside dans deux de vos jeux de données, avec une petite différence (« Martin Lucas » au lieu de « Martin »), ou un format de numéro de téléphone légèrement différent (06-78-03-09-1X et 067803091X). Fusionner ces points de données en conflit s’effectue d’une manière attribut par attribut.
@@ -99,11 +94,13 @@ Sur la page **Fusionner**, sélectionnez **Champs exclus** pour voir la liste de
 
 1. Cliquez sur **Enregistrer**, puis sur **Exécuter** pour traiter les modifications. 
 
-## <a name="manually-combine-fields"></a>Combiner manuellement des champs
+## <a name="combine-fields-manually"></a>Combiner les champs manuellement
 
-Spécifiez un attribut fusionné manuellement. 
+Spécifiez un attribut fusionné manuellement.
 
-1. Sur la page **Fusionner**, sélectionnez **Combiner les champs**.
+1. Sur la page **Fusionner**, sélectionnez **Combiner**.
+
+1. Choisissez l’option **Champs**.
 
 1. Spécifiez la stratégie gagnante de fusion dans le menu déroulant **Combiner les champs par**.
 
@@ -114,6 +111,26 @@ Spécifiez un attribut fusionné manuellement.
 1. Sélectionnez **Terminé** pour appliquer les modifications.
 
 1. Cliquez sur **Enregistrer**, puis sur **Exécuter** pour traiter les modifications. 
+
+## <a name="combine-a-group-of-fields"></a>Combiner un groupe de champs
+
+Traitez un groupe de champs comme une seule unité. Par exemple, lorsque nos enregistrements contiennent les champs Adresse1, Adresse2, Ville, État et Code postal. Il est préférable d’éviter de fusionner l’Adresse2 d’un enregistrement différent en nous disant que cela nous permettra de disposer de données plus complètes
+
+1. Sur la page **Fusionner**, sélectionnez **Combiner**.
+
+1. Choisissez l’option **Groupe de champs**.
+
+1. Spécifiez la stratégie de gagnant de la fusion dans le menu déroulant **Classer les groupes par**.
+
+1. Sélectionnez **Ajouter** et indiquez si vous souhaitez ajouter des champs ou des groupes supplémentaires aux champs.
+
+1. Entrez un **Nom** et un **Nom de sortie** pour chaque champ combiné.
+
+1. Entrez un **Nom** pour le groupe de champs. 
+
+1. Sélectionnez **Terminé** pour appliquer les modifications.
+
+1. Cliquez sur **Enregistrer**, puis sur **Exécuter** pour traiter les modifications.
 
 ## <a name="change-the-order-of-fields"></a>Modifier l’ordre des champs
 

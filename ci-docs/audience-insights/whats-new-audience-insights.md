@@ -1,7 +1,7 @@
 ---
 title: Fonctionnalités nouvelles et à venir
-description: Informations sur les nouvelles fonctionnalités, les améliorations et les corrections de bogues.
-ms.date: 12/02/2021
+description: 'Informations sur les nouvelles fonctionnalités, les améliorations et les corrections de bogues.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884259"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Nouveautés de la fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Nous sommes ravis d’annoncer nos mises à jour les plus récentes ! Cet article résume les fonctionnalités de version préliminaire publique, les améliorations de la disponibilité générale et les mises à jour de fonctionnalités. Pour connaître les plans de fonctionnalités à long terme, consultez les [Plans de versions Dynamics 365 et Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +21,50 @@ Nous déployons des mises à jour région par région. Ainsi, certaines régions
 
 > [!TIP]
 > Pour envoyer et voter sur les demandes de fonctionnalités et les suggestions de produits, accédez au [portail Idées d’application Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="december-2021-updates"></a>Mises à jour de décembre 2021
+
+Les mises à jour de décembre 2021 incluent de nouvelles fonctionnalités, des améliorations de performances et des corrections de bugs.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Transférer les journaux Customer Insights vers Azure Monitor
+
+Customer Insights fournit une intégration directe avec Azure Monitor. Cette fonctionnalité inclut les événements d’audit et les événements opérationnels. Les journaux de ressources Azure Monitor vous permettent de surveiller et d’envoyer des journaux vers le Stockage Azure, Azure Log Analytics, ou de les diffuser sur Azure Event Hubs.
+
+Pour plus d’informations, consultez[Transfert de journal dans Dynamics 365 Customer Insights avec Azure Monitor (version préliminaire)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Enrichir les profils clients avec des données d’engagement
+
+Utilisez les données de Microsoft Office 365 pour enrichir vos profils de compte client avec des informations sur les engagements dans les applications Office 365. Les données d’engagement se composent de l’activité d’e-mail et de réunion, qui est regroupée au niveau du compte. Par exemple, le nombre d’e-mails d’un compte professionnel ou le nombre de réunions avec le compte. Aucune donnée sur les utilisateurs individuels n’est partagée. Cet enrichissement est disponible dans les régions suivantes : Royaume-Uni, Europe, Amérique du Nord.
+
+Pour plus d’informations, consultez [Enrichir les profils clients avec des données d’engagement (version préliminaire)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>Fonctionnalités avancées d’unification des données
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Activer les stratégies de résolution des conflits au niveau de l’attribut individuel
+
+Lors de la déduplication des enregistrements client au sein d’une entité, vous ne souhaiterez pas nécessairement avoir à choisir un enregistrement complet comme gagnant. Nous vous permettons désormais de fusionner les meilleurs champs de divers enregistrements en fonction de certaines règles pour chaque attribut. Par exemple, vous pouvez choisir de conserver l’e-mail le plus récent ET l’adresse la plus complète de différents enregistrements. 
+
+Vous pouvez désormais définir des règles de fusion distinctes pour des attributs individuels lors de la déduplication et de la fusion d’enregistrements au sein d’une même entité. Auparavant, nous ne vous laissions sélectionner qu’une seule règle de fusion (conservation des enregistrements en fonction de l’exhaustivité des données de récence) et cette règle était appliquée au niveau de l’enregistrement à tous les attributs. Ce n’était pas idéal lorsque certaines des données à conserver se trouvaient dans l’enregistrement A, tandis que d’autres données correctes étaient dans l’enregistrement B.
+
+Pour plus d’informations, consultez [Définir la déduplication sur une entité de mise en correspondance](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Règles personnalisées pour la correspondance
+
+Dans certains cas, vous devez spécifier une exception aux règles générales afin de ne PAS faire correspondre les enregistrements. Cela peut se produire lorsque plusieurs personnes partagent suffisamment d’informations pour que le système les identifie comme une seule personne. Par exemple, des jumeaux qui portent le même nom, vivent dans la même ville et partagent la même date de naissance.
+
+Les exceptions garantissent que l’unification inexacte des données peut être traitée dans les règles d’unification. Vous pouvez ajouter plusieurs exceptions à une règle.
+
+Pour plus d’informations, consultez [Ajouter des exceptions à une règle](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Fournir des stratégies de résolution de conflits supplémentaires et activer le regroupement d’attributs
+
+Cette fonctionnalité vous permet de traiter un groupe de champs comme une seule unité. Par exemple, lorsque nos enregistrements contiennent les champs Adresse1, Adresse2, Ville, État et Code postal. Il est préférable d’éviter de fusionner l’Adresse2 d’un enregistrement différent en nous disant que cela nous permettra de disposer de données plus complètes.
+
+Vous pouvez désormais combiner un groupe de champs associés et appliquer une seule stratégie de fusion au groupe. 
+
+Pour plus d’informations, consultez [Combiner un groupe de champs](merge-entities.md#combine-a-group-of-fields).
+
 
 ## <a name="november-2021-updates"></a>Mises à jour de novembre 2021
 

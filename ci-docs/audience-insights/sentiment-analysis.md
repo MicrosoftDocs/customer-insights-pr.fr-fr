@@ -1,5 +1,5 @@
 ---
-title: Analyse sémantique des commentaires clients
+title: Analyse des sentiments des commentaires clients
 description: Découvrez comment utiliser un modèle d’analyse des sentiments sur les commentaires des clients dans Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.service: customer-insights
@@ -9,13 +9,8 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951079"
 ---
+
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analyser le sentiment dans les commentaires des clients (Version préliminaire)
 
 De nos jours, les clients attendent des produits, des services et des expériences de haute qualité. Surtout les clients qui font part de leurs commentaires. Il est très difficile pour les organisations d’analyser un volume croissant de données sans réduire la précision et augmenter les coûts de main-d’œuvre. Dynamics 365 Customer Insights propose un modèle d’analyse des sentiments pour les commentaires des clients ; il permet aux organisations d’analyser leurs données avec plus de précision et à moindre coût.
@@ -38,7 +33,7 @@ Pour vous assurer de pouvoir faire confiance aux résultats des modèles, nous f
 
 Nous utilisons deux **Modèles de traitement du langage naturel (NLP)**  : le premier attribue à chaque commentaire un score de sentiment. Le deuxième modèle associe chaque retour d’information à tous les aspects commerciaux applicables. Les modèles sont entraînés sur des données publiques provenant de sources issues des réseaux sociaux, des commerces de détail, de la restauration, des produits de consommation et des industries automobiles.    
   
-- Les aspects commerciaux prédéfinis que le modèle doit associer aux données de rétroaction incluent :
+Les aspects commerciaux prédéfinis que le modèle doit associer aux données de rétroaction incluent :
 -   Gestion de compte
 -   Règlement et paiement
 -   Service clientèle

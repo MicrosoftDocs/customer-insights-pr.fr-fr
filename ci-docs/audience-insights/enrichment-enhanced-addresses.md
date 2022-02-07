@@ -1,7 +1,7 @@
 ---
 title: Enrichissement de l’amélioration des adresses (contient une vidéo)
 description: Enrichissez et normalisez les informations sur les adresses des profils client avec les modèles Microsoft.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,13 +9,8 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934920"
 ---
+
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enrichissement des profils client avec des adresses améliorées
 
 Les adresses dans vos données peuvent être non structurées, incomplètes ou incorrectes. Utilisez les modèles de Microsoft pour normaliser et enrichir vos adresses dans le [format Common Data Model](/common-data-model/schema/core/applicationcommon/address) pour une meilleure précision et une meilleure compréhension.
@@ -100,17 +95,17 @@ Pour démarrer le processus d’enrichissement, sélectionnez **Exécuter** dans
 
 Une fois le processus d’enrichissement terminé, vous pouvez consulter les données des profils clients nouvellement enrichis sous **Mes enrichissements**. De plus, vous trouverez l’heure de la dernière mise à jour et le nombre de profils enrichis.
 
-Vous pouvez accéder à une vue détaillée de chaque profil enrichi en sélectionnant **Afficher des données enrichies**.
+Vous pouvez voir un exemple des données enrichies dans la vignette **Aperçu des clients enrichis**. Sélectionnez **Afficher plus** et sélectionnez l’onglet **Données** pour accéder à une vue détaillée de chaque profil enrichi.
 
 ### <a name="overview-card"></a>Carte de présentation
 
 La carte de présentation affiche des détails sur la couverture de l’enrichissement. 
 
-* **Clients traités et modifiés** : le nombre de profils clients qui ont été enrichis avec succès.
+* **Adresses traitées et modifiées** : le nombre de profils clients avec des adresses qui ont été enrichis avec succès.
 
-* **Clients traités et non modifiés** : le nombre de profils clients qui ont été reconnus mais non modifiés. Cela se produit généralement lorsque les données d’entrée sont valides et ne peuvent pas être améliorées par l’enrichissement.
+* **Adresses traitées et non modifiées** : le nombre de profils clients avec des adresses qui ont été reconnus mais non modifiés. Cela se produit généralement lorsque les données d’entrée sont valides et ne peuvent pas être améliorées par l’enrichissement.
 
-* **Clients non traités et non modifiés** : le nombre de profils clients qui n’ont pas été reconnus. Généralement pour les données d’entrée non valides ou non prises en charge par l’enrichissement.
+* **Adresses non traitées et non modifiées** : le nombre de profils clients avec des adresses qui n’ont pas été reconnus. Généralement pour les données d’entrée non valides ou non prises en charge par l’enrichissement.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

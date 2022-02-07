@@ -1,7 +1,7 @@
 ---
 title: Mettre en correspondance des entités pour l’unification des données
 description: Mettez en correspondance des données pour créer des profils clients unifiés.
-ms.date: 11/24/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-match
-ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
-ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "7863808"
+  - ci-match
 ---
+
 # <a name="match-entities"></a>Mettre en correspondance des entités
 
 La phase de correspondance spécifie comment combiner vos ensembles de données dans un jeu de données de profil client unifié. Après avoir terminé la [phase de correspondance](map-entities.md) dans le processus d’unification des données, vous êtes prêt à mettre vos entités en correspondance. La phase de mise en correspondance nécessite au moins deux entités mappées.
@@ -35,7 +30,7 @@ Chaque correspondance unifie deux entités ou plus en une seule entité consolid
 
 :::image type="content" source="media/match-page.png" alt-text="Capture d’écran de la page Mise en correspondance dans la zone Unifier du processus d’unification des données.":::
   
-L’entité principale *eCommerce:eCommerceContacts* correspond à l’entité suivante *LoyaltyScheme:loyCustomers*. Le jeu de données qui résulte de la première étape de correspondance est mis en correspondance avec l’entité suivante si vous avez plusieurs entités.
+L’entité principale *eCommerce:eCommerceContacts* correspond à l’entité suivante *LoyaltyScheme:loyCustomers*. Le jeu de données issue de la première étape de correspondance est mis en correspondance avec l’entité suivante si vous avez plus de deux entités.
 
 > [!IMPORTANT]
 > L’entité que vous choisissez comme entité principale servira de base pour votre jeu de données de profils unifié. Toutes les futures entités qui seront sélectionnées au cours de la phase de mise en correspondance seront ajoutées à cette entité. Cela ne signifie pas que l’entité unifiée comprendra *toutes* les données incluses dans cette entité.
@@ -130,17 +125,21 @@ La spécification de règles de déduplication n’est pas obligatoire. Si aucun
 
 1. Accédez à **Données** > **Unifier** > **Mise en correspondance**.
 
-1. Dans la section **Doublons fusionnés**, sélectionnez **Définir les entités**. Si des règles de déduplication sont déjà créées, sélectionnez **Modifier**.
+1. Dans la section **Détails des enregistrements dédupliqués**, sélectionnez **Définir les entités**. Si des règles de déduplication sont déjà créées, sélectionnez **Modifier**.
 
 1. Dans le volet **Préférences de fusion**, choisissez les entités pour lesquelles vous souhaitez exécuter la déduplication.
 
-1. Spécifiez comment combiner les enregistrements en double et choisissez l’une des trois options :
-   - **Les plus remplis** : identifie l’enregistrement avec les champs d’attributs les plus remplis comme enregistrement gagnant. C’est l’option de fusion par défaut.
-   - **Les plus récents** : identifie l’enregistrement gagnant en fonction du plus récent. Nécessite une date ou un champ numérique pour définir l’ancienneté.
-   - **Les moins récents** : identifie l’enregistrement gagnant en fonction du moins récent. Nécessite une date ou un champ numérique pour définir l’ancienneté.
+   1. Spécifiez comment combiner les enregistrements en double et choisissez l’une des trois options :
+      - **Les plus remplis** : identifie l’enregistrement avec les champs d’attributs les plus remplis comme enregistrement gagnant. C’est l’option de fusion par défaut.
+      - **Les plus récents** : identifie l’enregistrement gagnant en fonction du plus récent. Nécessite une date ou un champ numérique pour définir l’ancienneté.
+      - **Les moins récents** : identifie l’enregistrement gagnant en fonction du moins récent. Nécessite une date ou un champ numérique pour définir l’ancienneté.
+
+   1. Vous pouvez aussi sélectionner **Avancé** pour définir des règles de déduplication sur les attributs individuels d’une entité. Par exemple, vous pouvez choisir de conserver l’e-mail le plus récent ET l’adresse la plus complète de différents enregistrements. Développez l’entité pour voir tous ses attributs et définissez l’option à utiliser pour les attributs individuels. Si vous choisissez une option basée sur la récence, vous devez également spécifier un champ de date/heure qui définit la récence. 
  
-   > [!div class="mx-imgBorder"]
-   > ![Étape 1 des règles de déduplication.](media/match-selfconflation.png "Étape 1 des règles de déduplication")
+      > [!div class="mx-imgBorder"]
+      > ![Étape 1 des règles de déduplication.](media/match-selfconflation.png "Étape 1 des règles de déduplication")
+
+   1. Sélectionnez **Fait** pour appliquer vos préférences de fusion pour la déduplication.
  
 1. Une fois les entités sélectionnées et leur préférence de fusion définie, sélectionnez **Ajouter une règle** pour définir les règles de déduplication au niveau de l’entité.
    - **Sélectionner un champ** répertorie tous les champs disponibles de cette entité. Choisissez le champ dans lequel vous souhaitez rechercher les doublons. Choisissez des champs susceptibles d’être uniques pour chaque client. Par exemple, une adresse e-mail ou la combinaison du nom, de la ville et du numéro de téléphone.
@@ -158,7 +157,7 @@ La spécification de règles de déduplication n’est pas obligatoire. Si aucun
 
 1. Toutes les règles de correspondance personnalisées définies remplacent les règles de déduplication. Si une règle de déduplication identifie des enregistrements correspondants et si une règle de mise en correspondance personnalisée est définie pour ne jamais correspondre à ces enregistrements, ces deux enregistrements ne seront pas mis en correspondance.
 
-1. Après [l’exécution du processus de mise en correspondance](#run-the-match-process), vous verrez les statistiques de déduplication dans les vignettes de mesures clés.
+1. Après [avoir exécuté le processus de correspondance](#run-the-match-process), vous verrez les statistiques de déduplication dans les vignettes de métriques clés.
 
 ### <a name="deduplication-output-as-an-entity"></a>Sortie de déduplication en tant qu’entité
 
@@ -222,7 +221,23 @@ Vous pouvez reconfigurer et affiner la plupart des paramètres de correspondance
 
 - **Supprimez une règle** en sélectionnant le symbole **de suppression**.
 
-## <a name="specify-custom-match-conditions"></a>Spécifier des conditions de correspondance personnalisées
+## <a name="advanced-options"></a>Options avancées
+
+### <a name="add-exceptions-to-a-rule"></a>Ajouter des exceptions à une règle
+
+Dans la plupart des cas, la mise en correspondance des entités conduit à des profils d’utilisateurs uniques avec des données consolidées. Pour traiter dynamiquement les rares cas de faux positifs et de faux négatifs, vous pouvez définir des exceptions pour une règle de correspondance. Les exceptions sont appliquées après le traitement des règles de correspondance et évitent la correspondance de tous les enregistrements qui répondent aux critères d’exception.
+
+Par exemple, si votre règle de correspondance combine le nom, la ville et la date de naissance, le système identifiera les jumeaux portant le même nom qui vivent dans la même ville que le même profil. Vous pouvez spécifier une exception qui ne correspond pas aux profils si les prénoms des entités que vous combinez ne sont pas les mêmes.
+
+1. Accédez à **Données** > **Unifier** > **Mise en correspondance** et sélectionnez **Modifier** sur la règle à laquelle vous souhaitez ajouter des conditions.
+
+1. Dans le volet **Modifier la règle**, sélectionnez **Ajouter une exception**.
+
+1. Spécifiez les critères d’exception. 
+
+1. Sélectionnez **Terminé** pour enregistrer la règle.
+
+### <a name="specify-custom-match-conditions"></a>Spécifier des conditions de correspondance personnalisées
 
 Vous pouvez spécifier des conditions qui remplacent la logique de correspondance par défaut. Il existe quatre options disponibles : 
 
@@ -241,7 +256,7 @@ Vous pouvez spécifier des conditions qui remplacent la logique de correspondanc
 
 1. Choisissez l’option de correspondance personnalisée dans la liste déroulante **Type personnalisé** et sélectionnez **Télécharger le modèle**. Vous avez besoin d’un modèle distinct pour chaque option de correspondance.
 
-1. Un modèle de fichier se télécharge. Ouvrez-le et renseignez les détails. Le modèle contient des champs pour spécifier l’entité et les valeurs de clé primaire d’entité à utiliser dans la correspondance personnalisée. Par exemple, si vous souhaitez que la clé primaire *12345* de l’entité *Ventes* corresponde toujours à la clé primaire *34567* de l’entité *Contact*, remplissez le modèle :
+1. Ouvrez le fichier de modèle téléchargé et remplissez les détails. Le modèle contient des champs pour spécifier l’entité et les valeurs de clé primaire d’entité à utiliser dans la correspondance personnalisée. Par exemple, si vous souhaitez que la clé primaire *12345* de l’entité *Ventes* corresponde toujours à la clé primaire *34567* de l’entité *Contact*, remplissez le modèle :
     - Entité 1 : Ventes
     - Clé d’entité 1 : 12345
     - Entité 2 : Contact
@@ -268,7 +283,7 @@ Vous pouvez spécifier des conditions qui remplacent la logique de correspondanc
 
 1. Sélectionnez **Exécuter** sur la page **Mettre en correspondance** pour démarrer le processus. Les autres règles de correspondance spécifiées sont remplacées par la configuration de correspondance personnalisée.
 
-### <a name="known-issues"></a>Problèmes connus
+#### <a name="known-issues"></a>Problèmes connus
 
 - L’appariement autonome n’affiche pas les données standardisées dans les entités de déduplication. Cependant, il applique la standardisation en interne lors de la déduplication. Il concerne toutes les standardisations à dessein. 
 - Si le paramètre de type sémantique est supprimé dans la phase **Mappage** lorsqu’une règle de correspondance utilise Mappage d’alias ou Contournement personnalisé, la standardisation ne sera pas appliquée. Cela ne se produit que si vous effacez le type sémantique après avoir configuré la standardisation dans la règle de correspondance, car le type sémantique sera inconnu.
