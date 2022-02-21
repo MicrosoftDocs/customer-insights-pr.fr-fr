@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900255"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088144"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Se connecter à un compte Azure Data Lake Storage en utilisant un principal de service Azure
 
@@ -23,7 +23,7 @@ Cet article décrit comment connecter Dynamics 365 Customer Insights à un compt
 Les outils automatisés qui utilisent les services Azure doivent toujours avoir des autorisations restreintes. Au lieu que les applications se connectent en tant qu’utilisateur entièrement privilégié, Azure propose des principaux de service. Vous pouvez utiliser les principaux de service pour [ajouter ou modifier un dossier Common Data Model en tant que source de données](connect-common-data-model.md) ou [créer ou mettre à jour un environnement](create-environment.md) en toute sécurité.
 
 > [!IMPORTANT]
-> - Le compte Data Lake Storage qui utilisera le principal de service doit avoir [activé l’espace de noms hiérarchique](/azure/storage/blobs/data-lake-storage-namespace).
+> - Le compte Data Lake Storage qui utilisera le principal de service doit être Gen2 et avoir [l'espace de noms hiérarchique activé](/azure/storage/blobs/data-lake-storage-namespace). Les comptes de stockage Azure Data Lake Gen1 ne sont pas pris en charge.
 > - Des autorisations administrateur pour votre abonnement Azure sont nécessaires pour créer un principal de service.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Créer un principal de service Azure pour Customer Insights

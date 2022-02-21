@@ -1,7 +1,7 @@
 ---
 title: Mettre en correspondance des entités pour l’unification des données
 description: Mettez en correspondance des données pour créer des profils clients unifiés.
-ms.date: 01/28/2022
+ms.date: 02/07/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-match
+- ci-match
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098832"
 ---
-
 # <a name="match-entities"></a>Mettre en correspondance des entités
 
 La phase de correspondance spécifie comment combiner vos ensembles de données dans un jeu de données de profil client unifié. Après avoir terminé la [phase de correspondance](map-entities.md) dans le processus d’unification des données, vous êtes prêt à mettre vos entités en correspondance. La phase de mise en correspondance nécessite au moins deux entités mappées.
@@ -24,13 +29,7 @@ La page de mise en correspondance se compose de trois sections :
 
 ## <a name="specify-the-match-order"></a>Indiquer l’ordre de mise en correspondance
 
-Allez à **Données** > **Unifier** > **Mettre en correspondance** et sélectionnez **Définir l’ordre** pour démarrer la phase de mise en correspondance.
-
-Chaque correspondance unifie deux entités ou plus en une seule entité consolidée. Dans le même temps, elle conserve les enregistrements de client uniques. Par exemple, nous avons sélectionné deux entités : **eCommerce:eCommerceContacts** comme entité principale et **LoyaltyScheme:loyCustomers** comme deuxième entité. L’ordre des entités spécifie dans quel ordre le système essaiera de faire correspondre les enregistrements.
-
-:::image type="content" source="media/match-page.png" alt-text="Capture d’écran de la page Mise en correspondance dans la zone Unifier du processus d’unification des données.":::
-  
-L’entité principale *eCommerce:eCommerceContacts* correspond à l’entité suivante *LoyaltyScheme:loyCustomers*. Le jeu de données issue de la première étape de correspondance est mis en correspondance avec l’entité suivante si vous avez plus de deux entités.
+Chaque correspondance unifie deux entités ou plus en une seule entité consolidée. Dans le même temps, elle conserve les enregistrements de client uniques. L'ordre de correspondance indique l'ordre dans lequel le système essaie de faire correspondre les enregistrements.
 
 > [!IMPORTANT]
 > L’entité que vous choisissez comme entité principale servira de base pour votre jeu de données de profils unifié. Toutes les futures entités qui seront sélectionnées au cours de la phase de mise en correspondance seront ajoutées à cette entité. Cela ne signifie pas que l’entité unifiée comprendra *toutes* les données incluses dans cette entité.
@@ -38,9 +37,18 @@ L’entité principale *eCommerce:eCommerceContacts* correspond à l’entité s
 > Deux considérations peuvent vous aider à choisir la hiérarchie de vos entités :
 >
 > - Choisissez l’entité avec les données de profil les plus complètes et les plus fiables sur vos clients en tant qu’entité principale.
-> - Choisissez l’entité qui a plusieurs attributs en commun avec d’autres entités (par exemple, nom, numéro de téléphone ou adresse e-mail) comme entité principale.
+> - Choisissez l’entité qui a plusieurs attributs en commun avec d’autres entités (par exemple, nom, numéro de téléphone ou adresse de messagerie) comme entité principale.
 
-Après avoir spécifié l’ordre de correspondance, vous verrez les paires de correspondance définies dans la section **Détails des enregistrements correspondants** dans **Données** > **Unifier** > **Mettre en correspondance**. Les mesures clés seront vides jusqu’à la fin du processus de correspondance.
+1. Allez à **Données** > **Unifier** > **Mettre en correspondance** et sélectionnez **Définir l’ordre** pour démarrer la phase de mise en correspondance.
+1. Sélectionnez **Ordre de l'entité**. Par exemple, sélectionnez **eCommerce:eCommerceContacts** en tant qu'entité principale et **LoyaltyScheme:loyCustomers** comme deuxième entité. 
+1. Pour chaque enregistrement de l’entité comme client unique et mis en correspondance avec chaque entité suivante, cliquez sur **Inclure tout**.
+1. Cliquez sur **Terminé**. 
+
+Après avoir spécifié l'ordre de correspondance, les paires de correspondance définies s'affichent dans la section **Détails des enregistrements correspondants** sur **Données** > **Unifier** > **Mettre en correspondance**. Les métriques clés sont vides jusqu'à ce que le processus de correspondance soit terminé.
+
+:::image type="content" source="media/match-page.png" alt-text="Capture d’écran de la page Mise en correspondance dans la zone Unifier du processus d’unification des données.":::
+  
+L’entité principale *eCommerce:eCommerceContacts* correspond à l’entité suivante *LoyaltyScheme:loyCustomers*. Le jeu de données issue de la première étape de correspondance est mis en correspondance avec l’entité suivante si vous avez plus de deux entités.
 
 ## <a name="define-rules-for-match-pairs"></a>Définir les règles pour les paires de correspondance
 
@@ -50,7 +58,7 @@ L’avertissement **Nécessite des règles** situé en regard d’un nom d’ent
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Capture d’écran de la section Détails des enregistrements correspondants avec contrôle pour ajouter des règles en surbrillance.":::
 
-1. Sélectionnez **Ajouter des règles** sous une entité dans la section **Détails des enregistrements correspondants** pour définir les règles de correspondance.
+1. Sélectionnez **Ajouter une règle** sous une entité dans la section **Détails des enregistrements correspondants** pour définir les règles de correspondance.
 
 1. Dans le volet **Créer une règle**, configurez les conditions de la règle.
 
@@ -61,15 +69,15 @@ L’avertissement **Nécessite des règles** situé en regard d’un nom d’ent
    - **Entité/Champ (deuxième ligne)**  : Choisissez un attribut lié à l’attribut de l’entité spécifié dans la première ligne.
 
    - **Normaliser** : Sélectionnez l’une des options de normalisation suivantes pour les attributs sélectionnés. 
-     - Espace blanc : supprime tous les espaces. *Hello   World* devient *HelloWorld*.
+     - Chiffres : convertit d’autres systèmes numériques, tels que les chiffres romains, en chiffres arabes. *VIII* devient *8*.
      - Symboles : supprime tous les symboles et caractères spéciaux. *Head&Shoulder* devient *HeadShoulder*.
      - Texte en minuscules : convertit tous les caractères en minuscules. *TOUT EN MAJUSCULE et Casse du titre* devient *tout en majuscule et casse du titre*.
+     - Type (Téléphone, Nom, Adresse, Organisation) : Normalise les noms, les titres, les numéros de téléphone, les adresses, etc. 
      - Unicode en ASCII : convertit la notation Unicode en caractères ASCII. */u00B2* devient *2*.
-     - Chiffres : convertit d’autres systèmes numériques, tels que les chiffres romains, en chiffres arabes. *VIII* devient *8*.
-     - Types sémantiques : standardise les noms, les titres, les numéros de téléphone, les adresses, etc. 
+     - Espace blanc : supprime tous les espaces. *Hello   World* devient *HelloWorld*.
 
    - **Précision** : Définissez le niveau de précision à appliquer pour cette condition. 
-     - **De base** : Choisissez l’une des options disponibles : *Faible*, *Moyen*, *Élevé* et *Exact*. Sélectionnez **Exact** pour ne faire correspondre que les enregistrements qui correspondent à 100 %. Sélectionnez un des autres niveaux pour mettre en correspondance les enregistrements qui ne sont pas identiques à 100 pour cent.
+     - **De base** : Choisissez l’une des options disponibles : *Faible*, *Moyen*, *Élevé* et *Exact*. Sélectionnez **Exact** pour faire correspondre uniquement les enregistrements qui correspondent à 100 %. Sélectionnez un des autres niveaux pour mettre en correspondance les enregistrements qui ne sont pas identiques à 100 pour cent.
      - **Personnalisé** : Définissez un pourcentage auquel les enregistrements doivent correspondre. Le système ne fera correspondre que les enregistrements dépassant ce seuil.
 
 1. Fournissez un **Nom** pour la règle.
@@ -92,7 +100,7 @@ Pour faire correspondre des entités uniquement si les attributs remplissent plu
 
 ### <a name="add-rules-to-a-match-pair"></a>Ajouter des règles à une paire de correspondance
 
-Les règles de correspondance représentent des ensembles de conditions. Pour faire correspondre des entités en fonction de conditions basées sur plusieurs attributs, ajoutez d’autres règles
+Les règles de correspondance représentent des ensembles de conditions. Pour faire correspondre des entités en fonction de conditions basées sur plusieurs attributs, ajoutez d’autres règles.
 
 1.  Accédez à **Données** > **Unifier** > **Mise en correspondance** et sélectionnez **Ajouter une règle** sur l’entité à laquelle vous souhaitez ajouter des règles.
 
@@ -117,7 +125,7 @@ Vous pouvez réorganiser les entités pour les règles de correspondance afin de
 
 En plus des [règles de correspondance entre entités](#define-rules-for-match-pairs), vous pouvez également spécifier des règles de déduplication. La *déduplication* est un autre processus de mise en correspondance des enregistrements. Il consiste à identifier les enregistrements en double et à les fusionner en un seul enregistrement. Les enregistrements sources sont liés à l’enregistrement fusionné avec d’autres identifiants.
 
-Les enregistrements dédupliqués seront utilisés dans le processus de mise en correspondance des entités. La déduplication se produit sur des entités distinctes et peut être configurée pour chaque entité utilisée dans les paires en correspondance.
+Les enregistrements dédupliqués sont utilisés dans le processus de mise en correspondance des entités. La déduplication se produit sur des entités distinctes et peut être configurée pour chaque entité utilisée dans les paires en correspondance.
 
 La spécification de règles de déduplication n’est pas obligatoire. Si aucune règle de ce type n’est configurée, les règles définies par le système sont appliquées. Elles combinent tous les enregistrements en un seul enregistrement avant de transmettre les données d’entité à la correspondance entre entités pour améliorer les performances.
 
@@ -134,7 +142,7 @@ La spécification de règles de déduplication n’est pas obligatoire. Si aucun
       - **Les plus récents** : identifie l’enregistrement gagnant en fonction du plus récent. Nécessite une date ou un champ numérique pour définir l’ancienneté.
       - **Les moins récents** : identifie l’enregistrement gagnant en fonction du moins récent. Nécessite une date ou un champ numérique pour définir l’ancienneté.
 
-   1. Vous pouvez aussi sélectionner **Avancé** pour définir des règles de déduplication sur les attributs individuels d’une entité. Par exemple, vous pouvez choisir de conserver l’e-mail le plus récent ET l’adresse la plus complète de différents enregistrements. Développez l’entité pour voir tous ses attributs et définissez l’option à utiliser pour les attributs individuels. Si vous choisissez une option basée sur la récence, vous devez également spécifier un champ de date/heure qui définit la récence. 
+   1. Pour définir des règles de déduplication sur les attributs individuels d’une entité, vous pouvez aussi sélectionner **Avancé**. Par exemple, vous pouvez choisir de conserver l’e-mail le plus récent ET l’adresse la plus complète de différents enregistrements. Développez l’entité pour voir tous ses attributs et définissez l’option à utiliser pour les attributs individuels. Si vous choisissez une option basée sur la récence, vous devez également spécifier un champ de date/heure qui définit la récence. 
  
       > [!div class="mx-imgBorder"]
       > ![Étape 1 des règles de déduplication.](media/match-selfconflation.png "Étape 1 des règles de déduplication")

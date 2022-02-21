@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 6aadd6b5018f63362f86c0e3e3ce085e94c47391
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645579"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8116011"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Créer un lien entre les informations sur l’audience et les informations sur l’engagement
 
@@ -25,7 +25,7 @@ Utilisez les profils unifiés et les segments des informations sur l’audience 
 
 ## <a name="prerequisites"></a>Conditions préalables
 
-- Les profils d’informations sur l’audience doivent être stockés sur un compte Azure Data Lake Storage personnel ou dans un lac de données [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;géré. 
+- Les profils d’informations sur l’audience doivent être stockés sur un compte Azure Data Lake Storage personnel ou dans un lac de données [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)&ndash;géré. 
 - Votre environnement d’informations sur l’audience doit être associé à un environnement Dataverse. Et si cet environnement utilise également Dataverse pour le stockage des données, assurez-vous de cocher l’option **Activer le partage de données** dans les informations sur l’audience. Pour plus d’informations, consultez [Créer et configurer un environnement dans des insights d’audience](../audience-insights/create-environment.md).
 - Vous avez besoin des autorisations d’administrateur pour les environnements d’informations sur l’engagement et des informations sur l’audience.
 - Les environnements liés doivent être situés dans la même région géographique.

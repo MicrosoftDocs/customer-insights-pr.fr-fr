@@ -1,6 +1,6 @@
 ---
 title: Ingérer des données via un connecteur Power Query (contient une vidéo)
-description: Connecteurs pour sources de données basées sur Power Query.
+description: Connecteurs pour les sources de données basées sur Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: 727cb9a4d754b6dbd74d6ecab1b183d41f713d8f
+ms.sourcegitcommit: aadee829eff111c95eb30c0a97a68dcc87994acf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934975"
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8092069"
 ---
-# <a name="connect-to-a-power-query-data-source"></a>Connexion à une source de données Power Query
+# <a name="connect-to-a-power-query-data-source"></a>Se connecter à une source de données Power Query
 
-Power Query propose un large éventail de connecteurs pour ingérer des données. La plupart de ces connecteurs sont pris en charge par Dynamics 365 Customer Insights. 
+Power Query offre un large éventail de connecteurs pour ingérer des données. La plupart de ces connecteurs sont pris en charge par Dynamics 365 Customer Insights. 
 
 L’ajout de sources de données basées sur les connecteurs Power Query suit généralement les étapes décrites dans cette section. Cependant, selon le connecteur que vous utilisez, des informations différentes sont requises. Pour en savoir plus, consultez la documentation sur les connecteurs individuels dans la [Référence des connecteurs Power Query](/power-query/connectors/).
 
@@ -30,7 +30,7 @@ L’ajout de sources de données basées sur les connecteurs Power Query suit g�
 
 1. Sélectionnez **Ajouter une source de données**.
 
-1. Sélectionnez **Microsoft Power Query**, puis sélectionnez **Suivant**.
+1. Sélectionnez **Microsoft Power Query**.
 
 1. Indiquez un **Nom** pour la source de données, et sélectionnez **Suivant** pour créer la source de données.
 
@@ -40,21 +40,21 @@ L’ajout de sources de données basées sur les connecteurs Power Query suit g�
 
 1. Sélectionnez **Transformer les données**. Dans la cette étape, vous allez ajouter des entités à votre source de données. Les entités sont des jeux de données. Si vous avez une base de données qui comprend plusieurs jeux de données, chaque jeu de données est sa propre entité.
 
-1. La boîte de dialogue **Power Query - Modifier les requêtes** vous permet d’examiner et d’affiner les données. Les entités que les systèmes ont identifiées dans votre source de données sélectionnée s’affiche dans le volet de gauche.
+1. La boîte de dialogue **Power Query – Modifier les requêtes** vous permet de revoir et d'affiner les données. Les entités que les systèmes ont identifiées dans votre source de données sélectionnée s’affiche dans le volet de gauche.
 
    > [!div class="mx-imgBorder"]
    > ![Boîte de dialogue Modifier les requêtes.](media/data-manager-configure-edit-queries.png "Boîte de dialogue Modifier les requêtes")
 
-1. Vous pouvez également transformer vos données. Sélectionnez une entité à modifier ou transformer. Utilisez les options de la fenêtre Power Query pour appliquer les transformations. Chaque transformation est répertoriée sous **Étapes appliquées**. Power Query fournit de nombreuses options de transformation prédéfinies. Pour plus d’informations, consultez [Transformations Power Query](/power-query/power-query-what-is-power-query#transformations).
-
-1. Vous pouvez ajouter des entités supplémentaires à votre source de données en sélectionnant **Obtenir des données** dans la boîte de dialogue **Modifier les requêtes**.
+1. Vous pouvez également transformer vos données. Sélectionnez une entité à modifier ou transformer. Utilisez les options de la fenêtre Power Query pour appliquer les transformations. Chaque transformation est répertoriée sous **Étapes appliquées**. Power Query fournit de nombreuses options de transformation prédéfinies. Pour plus d’informations, voir l’aide de [Transformations Power Query](/power-query/power-query-what-is-power-query#transformations).
 
    Nous vous recommandons d’utiliser les transformations suivantes :
 
-   - Si vous ingérez des données à partir d’un fichier CSV, la première ligne contient souvent des en-têtes. Accédez à **Transformer la table**, puis sélectionnez **Utiliser les en-têtes comme première ligne**.
-   - Assurez-vous que le type de données est défini de manière appropriée.
+   - Si vous ingérez des données à partir d’un fichier CSV, la première ligne contient souvent des en-têtes. Accédez à **Transformer**, puis sélectionnez **Utiliser la première ligne pour les en-têtes**.
+   - Assurez-vous que le type de données est défini de manière appropriée. Par exemple, pour les champs de date, sélectionnez un type de date.
 
-1. Sélectionnez **Enregistrer** au bas de la fenêtre Power Query pour enregistrer les transformations. Après l’enregistrement, vous trouverez votre source de données sur **Données** > **Sources de données**.
+1. Pour ajouter des entités supplémentaires à votre source de données dans la boîte de dialogue **Modifier les requêtes**, accédez à **Accueil** et sélectionnez **Obtenir des données**.
+
+1. Sélectionnez **Enregistrer** dans la partie inférieure de la fenêtre Power Query pour enregistrer vos transformations. Après l’enregistrement, vous trouverez votre source de données sur **Données** > **Sources de données**.
 
 1. Dans la page **Sources de données**, vous remarquerez que la nouvelle source de données a le statut **Actualisation en cours**.
 
@@ -62,7 +62,7 @@ L’ajout de sources de données basées sur les connecteurs Power Query suit g�
 
 Consultez la [Référence des connecteurs Power Query](/power-query/connectors/) pour obtenir une liste de connecteurs que vous pouvez utiliser pour importer des données dans Customer Insights. 
 
-Les connecteurs portant une coche dans la colonne **Customer Insights (Dataflows)** sont disponibles pour créer de nouvelles sources de données basées sur Power Query. Consultez la documentation d’un connecteur spécifique pour en savoir plus sur ses prérequis, ses limitations et autres détails.
+Les connecteurs avec une coche dans la colonne **Customer Insights (dataflows)** sont disponibles pour créer des sources de données basées sur Power Query. Consultez la documentation d’un connecteur spécifique pour en savoir plus sur ses prérequis, ses limitations et autres détails.
 
 ## <a name="edit-power-query-data-sources"></a>Modifier les sources de données Power Query
 
@@ -80,7 +80,7 @@ Les connecteurs portant une coche dans la colonne **Customer Insights (Dataflows
 
    [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
    
-3. Appliquez vos modifications et transformations dans la boîte de dialogue **Power Query - Modifier les requêtes** comme décrit dans la section [Créer une source de données](#create-a-new-data-source).
+3. Appliquez vos changements et transformations dans la boîte de dialogue **Power Query – Modifier les requêtes** comme décrit dans la section [Créer une source de données](#create-a-new-data-source).
 
 4. Sélectionnez **Enregistrer** dans Power Query après avoir terminé vos modifications pour enregistrer vos modifications.
 

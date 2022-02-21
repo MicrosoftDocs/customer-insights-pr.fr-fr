@@ -9,13 +9,23 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: d8a35424f4271b350b8d84e72a01deb6d69652a0
+ms.sourcegitcommit: 08a5dfcc4f9d293c8e7ac4fef604bc52985b1b78
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8090920"
 ---
-
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Utiliser des segments dans Dynamics 365 Sales (version préliminaire)
 
 
 
 Utilisez vos données client pour créer des listes marketing, effectuer le suivi de workflows et publier des promotions avec Dynamics 365 Sales.
+
+## <a name="known-limitations"></a>Limitations connues
+
+- Les exportations vers Dynamics 365 Sales sont limitées à 100 000 membres par segment.
+- Les exportations de segments vers Dynamics 365 Sales peuvent prendre jusqu'à 3 heures. 
 
 ## <a name="prerequisite-for-connection"></a>Conditions préalables à une connexion
 

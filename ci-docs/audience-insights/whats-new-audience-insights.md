@@ -1,7 +1,7 @@
 ---
 title: Fonctionnalités nouvelles et à venir
-description: 'Informations sur les nouvelles fonctionnalités, les améliorations et les corrections de bogues.'
-ms.date: 01/27/2022
+description: Informations sur les nouvelles fonctionnalités, les améliorations et les corrections de bogues.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088282"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Nouveautés de la fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ Nous déployons des mises à jour région par région. Ainsi, certaines régions
 
 > [!TIP]
 > Pour envoyer et voter sur les demandes de fonctionnalités et les suggestions de produits, accédez au [portail Idées d’application Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Mises à jour de janvier 2022
+
+Les mises à jour de janvier 2022 incluent de nouvelles fonctionnalités, des améliorations de performances et des corrections de bugs.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analyse des sentiments des commentaires de vos clients
+
+Customer Insights fournit une nouvelle fonctionnalité basée sur l'IA pour synthétiser le sentiment des clients et identifier des aspects commerciaux spécifiques comme opportunités d'améliorations ciblées. En analysant les commentaires écrits de vos clients, vous pouvez obtenir des informations précises à moindre coût. L'analyse des sentiments alimentée par des modèles de traitement du langage naturel (NLP) qui génèrent deux informations dérivées pour chaque ID client. Un score de sentiment (de -5 à 5) et une liste des aspects commerciaux applicables. 
+
+Pour plus d'informations, voir [Analyser le sentiment dans les commentaires des clients (version préliminaire)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Mises à jour de décembre 2021
@@ -37,7 +53,7 @@ Pour plus d’informations, consultez[Transfert de journal dans Dynamics 365 Cus
 
 Utilisez les données de Microsoft Office 365 pour enrichir vos profils de compte client avec des informations sur les engagements dans les applications Office 365. Les données d’engagement se composent de l’activité d’e-mail et de réunion, qui est regroupée au niveau du compte. Par exemple, le nombre d’e-mails d’un compte professionnel ou le nombre de réunions avec le compte. Aucune donnée sur les utilisateurs individuels n’est partagée. Cet enrichissement est disponible dans les régions suivantes : Royaume-Uni, Europe, Amérique du Nord.
 
-Pour plus d’informations, consultez [Enrichir les profils clients avec des données d’engagement (version préliminaire)](enrichment-office.md)
+Pour plus d’informations, consultez [Enrichir les profils clients avec des données d’engagement (version préliminaire)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Fonctionnalités avancées d’unification des données
 
