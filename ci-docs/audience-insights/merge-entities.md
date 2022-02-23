@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-merge
+- ci-merge
+ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046560"
 ---
-
 # <a name="merge-entities"></a>Fusionner des entités
 
 La fusion est la dernière phase du processus d’unification des données. Son objectif consiste à rapprocher les données conflictuelles. Des exemples de données en conflit sont le nom d’un client qui réside dans deux de vos jeux de données, avec une petite différence (« Martin Lucas » au lieu de « Martin »), ou un format de numéro de téléphone légèrement différent (06-78-03-09-1X et 067803091X). Fusionner ces points de données en conflit s’effectue d’une manière attribut par attribut.
