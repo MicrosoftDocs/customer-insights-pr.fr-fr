@@ -1,7 +1,7 @@
 ---
 title: Données Customer Insights dans Microsoft Dataverse
 description: Utiliser les entités Customer Insights en tant que tables dans Microsoft Dataverse.
-ms.date: 11/25/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6f74559b34a95ed976a4e353c2dbabe59e1a8839
-ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "7866931"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645215"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Utiliser des données Customer Insights dans Microsoft Dataverse
 
@@ -45,7 +45,6 @@ Certaines entités de sortie des informations sur l'audience sont disponibles en
 - [CustomerMeasure](#customermeasure)
 - [Enrichissement](#enrichment)
 - [Prédiction](#prediction)
-- [Appartenance aux segments](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -80,7 +79,7 @@ Cette table contient les activités des utilisateurs qui sont disponibles dans C
 | ActivityTimeStamp | DATETIME    | Horodatage de l'activité                                                                      |
 | Titre             | String      | Titre ou non de l’activité                                                               |
 | Description       | String      | Description de l’activité                                                                     |
-| URL               | String      | Lien vers une URL externe spécifique à l'activité                                         |
+| URL                | String      | Lien vers une URL externe spécifique à l'activité                                         |
 | SemanticData      | Chaîne JSON | Comprend une liste de paires clé-valeur pour les champs de mappage sémantique spécifiques au type d'activité |
 | RangeIndex        | String      | Horodatage Unix utilisé pour trier la chronologie des activités et les requêtes de plage effective |
 | mydynci_unifiedactivityid   | GUID | ID interne de l'activité client (ActivityId) |
@@ -122,16 +121,3 @@ Cette table contient le résultat des prédictions de modèle.
 | Valeurs               | Chaîne JSON | Liste des attributs produits par le modèle |
 | msdynci_predictionid | GUID        | GUID déterministe généré à partir de msdynci_identifier | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
-
-### <a name="segment-membership"></a>Appartenance aux segments
-
-Ce tableau contient des informations sur l'appartenance aux segments des profils clients.
-
-| Column        | Type | Description                        |
-|--------------------|--------------|-----------------------------|
-| Customerid        | String       | ID profil client        |
-| SegmentProvider      | String       | Application qui publie les segments. Par défaut : Informations sur l’audience         |
-| SegmentMembershipType | String       | Type de client que cette appartenance aux segments enregistre. Prend en charge plusieurs types tels que Client, Contact ou Compte. Par défaut : Client  |
-| Segments       | Chaîne JSON  | Liste des segments uniques dont le profil client est membre      |
-| msdynci_identifier  | String   | Identificateur unique de l’enregistrement sur l’appartenance aux segments. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | GUID déterministe généré à partir de `msdynci_identifier`          |

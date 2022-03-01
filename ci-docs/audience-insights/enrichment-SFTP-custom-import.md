@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618679"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304647"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enrichir les profils clients avec des données personnalisées (version préliminaire)
 
@@ -45,8 +45,6 @@ Pour configurer l’importation personnalisée SFTP, les conditions préalables 
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Capture d’écran lors de la saisie de l’emplacement des données.":::
 
-1. Sélectionnez **Suivant** et choisissez le jeu de données client. Il peut s’agir de tous les profils clients ou d’un segment.
-
 1. Sélectionnez **Suivant** et fournissez un nom pour l’enrichissement et un nom pour l’entité de sortie. 
 
 1. Sélectionnez **Enregistrer l’enrichissement** après avoir vérifié vos choix.
@@ -66,7 +64,7 @@ Vous devez être un administrateur pour configurer les connexions. Sélectionnez
 1. Une fois la vérification terminée, la connexion peut être enregistrée en sélectionnant **Enregistrer**.
 
    > [!div class="mx-imgBorder"]
-   > ![Page de configuration de la connexion Experian.](media/enrichment-SFTP-connection.png "Page de configuration de la connexion Experian")
+   > ![Page de configuration de la connexion Experian](media/enrichment-SFTP-connection.png "Page de configuration de la connexion Experian")
 
 
 ## <a name="defining-field-mappings"></a>Définition des mappages de champ 
@@ -125,6 +123,6 @@ Vous pouvez accéder à une vue détaillée de chaque profil enrichi en sélecti
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Exploitez vos données client enrichies. Créez des [segments](segments.md) et des [mesures](measures.md) et [exportez les données](export-destinations.md) pour offrir des expériences personnalisées à vos clients.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

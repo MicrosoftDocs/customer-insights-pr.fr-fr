@@ -1,247 +1,113 @@
 ---
-title: Créer et gérer des mesures
-description: Définir des mesures pour analyser et refléter la performance de votre entreprise.
-ms.date: 11/01/2021
+title: Créer et modifier des mesures
+description: Définissez des mesures relatives aux clients pour analyser et refléter la performance de certains domaines d'activité.
+ms.date: 10/15/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: wameng
-ms.reviewer: mhart
+ms.author: mhart
+ms.reviewer: wameng
 manager: shellyha
-ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 0e214a6eb66abd27f7292db3ce2c2a6e16a8ff33
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732723"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405679"
 ---
 # <a name="define-and-manage-measures"></a>Définir et gérer des mesures
 
-Les mesures vous aident à mieux comprendre les comportements des clients et les performances commerciales. Elles examinent les valeurs pertinentes des [profils unifiés](data-unification.md). Par exemple, une entreprise veut voir les *des dépenses totales par client* pour comprendre l’historique des achats d’un client individuel ou mesurer les *ventes totales de l’entreprise* pour comprendre les revenus au niveau agrégé dans l’ensemble de l’entreprise.  
+Les **mesures** représentent des indicateurs de performance clés (KPI) qui reflètent la performance et la santé de secteurs d'activité spécifiques. Audience Insights offre une expérience intuitive pour créer différents types de mesures, en utilisant un générateur de requêtes qui ne vous demande pas d'écrire du code ou de valider manuellement vos mesures. Vous pouvez suivre vos mesures commerciales sur la page **Accueil**, voir les mesures pour des clients spécifiques sur la **Carte client** et utiliser des mesures pour définir les segments de clientèle de la page **Segments**.
 
-Les mesures sont créées à l’aide du générateur de mesures, une plateforme de requête de données avec divers opérateurs et des options de mappage simples. Elle vous permet de filtrer les données, de regrouper les résultats, de détecter les [chemins d’accès aux relations d’entités](relationships.md) et prévisualisez la sortie.
+## <a name="create-a-measure"></a>Créer une mesure
 
-Utilisez le générateur de mesures pour planifier les activités commerciales en interrogeant les données client et en extrayant des informations. Par exemple, créer une mesure de *total des dépenses par client* et de *total des retours par client* aide à identifier un groupe de clients avec des dépenses élevées mais un rendement élevé. Vous pouvez [créer un segment](segments.md) pour conduire les meilleures actions suivantes. 
-
-## <a name="build-your-own-measure-from-scratch"></a>Créer votre propre mesure à partir de zéro
-
-Cette section vous guide tout au long de la création d’une mesure à partir de zéro. Vous pouvez créer une mesure avec des attributs de données à partir d’entités de données qui ont une relation configurée pour se connecter à l’entité de profil client unifié.
-
-# <a name="individual-consumers-b-to-c"></a>[Consommateurs individuels (B-to-C)](#tab/b2c)
-
-1. Dans les informations sur l’audience, accédez à **Mesures**.
-
-1. Sélectionnez **Nouveau** et choisissez **Créer le vôtre**.
-
-1. Sélectionnez **Modifier le nom** et fournissez un **Nom** pour la mesure. 
-
-1. Dans la zone de configuration, choisissez la fonction d’agrégation dans le menu déroulant **Sélectionner une fonction**. Les fonctions d’agrégation comprennent : 
-   - **Sum**
-   - **Moyenne**
-   - **Nombre**
-   - **Nombre Unique**
-   - **Max**
-   - **Min**
-   - **First** : prend la première valeur de l’enregistrement de données
-   - **Dernière** : prend la dernière valeur ajoutée à l’enregistrement de données
-
-   :::image type="content" source="media/measure-operators.png" alt-text="Opérateurs pour les calculs de mesures.":::
-
-1. Sélectionnez **Ajouter un attribut** pour sélectionner les données dont vous avez besoin pour créer cette mesure.
-   
-   1. Sélectionnez l’onglet **Attributs**. 
-   1. Entité Data : Choisissez l’entité qui comprend l’attribut selon lequel vous souhaitez mesurer. 
-   1. Attribut de données : choisissez l’attribut que vous souhaitez utiliser dans la fonction d’agrégation pour calculer la mesure. Vous ne pouvez sélectionner qu’un attribut à la fois.
-   1. Vous pouvez également sélectionner un attribut de données à partir d’une mesure existante en sélectionnant l’onglet **Mesures**. Sinon, vous pouvez rechercher un nom d’entité ou de mesure. 
-   1. Sélectionnez **Ajouter** pour ajouter l’attribut sélectionné à la mesure.
-
-   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Sélectionnez un attribut à utiliser dans les calculs.":::
-
-1. Pour créer des mesures plus complexes, vous pouvez ajouter plus d’attributs ou utiliser des opérateurs mathématiques sur votre fonction de mesure.
-
-   :::image type="content" source="media/measure-math-operators.png" alt-text="Créez une mesure complexe avec des opérateurs mathématiques.":::
-
-1. Pour ajouter des filtres, sélectionnez le **Filtre** dans la zone de configuration. 
-  
-   1. Dans la section **Ajouter un attribut** du volet **Filtres**, sélectionnez l’attribut que vous souhaitez utiliser pour créer des filtres.
-   1. Définissez les opérateurs de filtre pour définir le filtre pour chaque attribut sélectionné.
-   1. Sélectionnez **Appliquer** pour ajouter les filtres à la mesure.
-
-1. Pour ajouter des dimensions, sélectionnez **Dimension** dans la zone de configuration. Les dimensions s’affichent sous forme de colonnes dans l’entité de sortie de mesure.
- 
-   1. Sélectionnez **Modifier les dimensions** pour ajouter des attributs de données par lesquels vous souhaitez regrouper les valeurs de mesure. Par exemple, ville ou sexe. Par défaut, la dimension *CustomerID* est sélectionnée pour créer des *mesures au niveau du client*. Vous pouvez supprimer la dimension par défaut si vous souhaitez créer des *mesures au niveau de l’entreprise*.
-   1. Sélectionnez **Terminé** pour ajouter les dimensions à la mesure.
-
-1. S’il y a des valeurs dans vos données que vous devez remplacer par un entier, sélectionnez **Règles**. Configurez la règle et assurez-vous de ne choisir que des nombres entiers comme valeurs de remplacement. Par exemple, remplacez *nul* avec *0*.
-
-1. S’il existe plusieurs chemins d’accès entre l’entité de données que vous avez mappée et l’entité *Client*, vous devez choisir l’un des [chemins d’accès de relation d’entité](relationships.md). Les résultats de la mesure peuvent varier en fonction du chemin sélectionné. 
-   
-   1. Sélectionner **Chemin d’accès vers la relation** et choisissez le chemin d’entité qui doit être utilisé pour identifier votre mesure. S’il n’y a qu’un seul chemin vers l’entité *Client*, ce contrôle ne s’affichera pas.
-   1. Sélectionnez **Terminé** pour appliquer votre sélection. 
-
-   :::image type="content" source="media/measures-data-preferences.png" alt-text="Sélectionnez le chemin d’accès pour la mesure.":::
-
-1. Pour ajouter d’autres calculs pour la mesure, sélectionnez **Nouveau calcul**. Vous ne pouvez utiliser des entités sur le même chemin d’entité que pour les nouveaux calculs. Des calculs supplémentaires s’affichent sous forme de nouvelles colonnes dans l’entité de sortie de mesure.
-
-1. Sélectionnez **...** sur le calcul pour **Dupliquer**, **Renommer** ou **Supprimer** un calcul à partir d’une mesure.
-
-1. Dans la zone **Aperçu**, vous verrez le schéma de données de l’entité de sortie de mesure, y compris les filtres et les dimensions. L’aperçu réagit de manière dynamique aux modifications de la configuration.
-
-1. Sélectionnez **Exécuter** pour calculer les résultats de la mesure configurée. Sélectionnez **Enregistrer et fermer** si vous souhaitez conserver la configuration actuelle et exécuter la mesure ultérieurement.
-
-1. Aller à **Mesures** pour voir la mesure nouvellement créée dans la liste.
-
-# <a name="business-accounts-b-to-b"></a>[Comptes d’entreprise (B-to-B)](#tab/b2b)
-
-1. Dans les informations sur l’audience, accédez à **Mesures**.
-
-1. Sélectionnez **Nouveau** et choisissez **Créer le vôtre**.
-
-1. Sélectionnez **Modifier le nom** et fournissez un **Nom** pour la mesure. 
-
-1. Dans la zone de configuration, choisissez la fonction d’agrégation dans le menu déroulant **Sélectionner une fonction**. Les fonctions d’agrégation comprennent : 
-   - **Sum**
-   - **Moyenne**
-   - **Nombre**
-   - **Nombre Unique**
-   - **Max**
-   - **Min**
-   - **First** : prend la première valeur de l’enregistrement de données
-   - **Dernière** : prend la dernière valeur ajoutée à l’enregistrement de données
-
-   :::image type="content" source="media/measure-operators.png" alt-text="Opérateurs pour les calculs de mesures.":::
-
-1. Sélectionnez **Ajouter un attribut** pour sélectionner les données dont vous avez besoin pour créer cette mesure.
-   
-   1. Sélectionnez l’onglet **Attributs**. 
-   1. Entité Data : Choisissez l’entité qui comprend l’attribut selon lequel vous souhaitez mesurer. 
-   1. Attribut de données : choisissez l’attribut que vous souhaitez utiliser dans la fonction d’agrégation pour calculer la mesure. Vous ne pouvez sélectionner qu’un attribut à la fois.
-   1. Vous pouvez également sélectionner un attribut de données à partir d’une mesure existante en sélectionnant l’onglet **Mesures**. Sinon, vous pouvez rechercher un nom d’entité ou de mesure. 
-   1. Sélectionnez **Ajouter** pour ajouter l’attribut sélectionné à la mesure.
-
-   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Sélectionnez un attribut à utiliser dans les calculs.":::
-
-1. Pour créer des mesures plus complexes, vous pouvez ajouter plus d’attributs ou utiliser des opérateurs mathématiques sur votre fonction de mesure.
-
-   :::image type="content" source="media/measure-math-operators.png" alt-text="Créez une mesure complexe avec des opérateurs mathématiques.":::
-
-1. Pour ajouter des filtres, sélectionnez le **Filtre** dans la zone de configuration. 
-  
-   1. Dans la section **Ajouter un attribut** du volet **Filtres**, sélectionnez l’attribut que vous souhaitez utiliser pour créer des filtres.
-   1. Définissez les opérateurs de filtre pour définir le filtre pour chaque attribut sélectionné.
-   1. Sélectionnez **Appliquer** pour ajouter les filtres à la mesure.
-
-1. Pour ajouter des dimensions, sélectionnez **Dimension** dans la zone de configuration. Les dimensions s’affichent sous forme de colonnes dans l’entité de sortie de mesure.
- 
-   1. Sélectionnez **Modifier les dimensions** pour ajouter des attributs de données par lesquels vous souhaitez regrouper les valeurs de mesure. Par exemple, ville ou sexe. Par défaut, la dimension *CustomerID* est sélectionnée pour créer des *mesures au niveau du client*. Vous pouvez supprimer la dimension par défaut si vous souhaitez créer des *mesures au niveau de l’entreprise*.
-   1. Sélectionnez **Terminé** pour ajouter les dimensions à la mesure.
-
-1. S’il y a des valeurs dans vos données que vous devez remplacer par un entier, sélectionnez **Règles**. Configurez la règle et assurez-vous de ne choisir que des nombres entiers comme valeurs de remplacement. Par exemple, remplacez *nul* avec *0*.
-
-1. Vous pouvez utiliser le bouton bascule **Reporter des sous-comptes** si vous [utilisez des comptes avec des hiérarchies](relationships.md#set-up-account-hierarchies).
-   - S’il est défini sur **Désactivé**, la mesure est calculée pour chaque compte. Chaque compte obtient son propre résultat.
-   - S’il est défini sur **Activé**, sélectionnez **Modifier** pour choisir la hiérarchie de compte en fonction des hiérarchies ingérées. La mesure ne produira qu’un seul résultat car elle est agrégée avec des sous-comptes.
-
-1. S’il existe plusieurs chemins d’accès entre l’entité de données que vous avez mappée et l’entité *Client*, vous devez choisir l’un des [chemins d’accès de relation d’entité](relationships.md). Les résultats de la mesure peuvent varier en fonction du chemin sélectionné. 
-   
-   1. Sélectionner **Chemin d’accès vers la relation** et choisissez le chemin d’entité qui doit être utilisé pour identifier votre mesure. S’il n’y a qu’un seul chemin vers l’entité *Client*, ce contrôle ne s’affichera pas.
-   1. Sélectionnez **Terminé** pour appliquer votre sélection. 
-
-   :::image type="content" source="media/measures-data-preferences.png" alt-text="Sélectionnez le chemin d’accès pour la mesure.":::
-
-1. Sélectionnez **...** sur le calcul pour **Dupliquer**, **Renommer** ou **Supprimer** un calcul à partir d’une mesure.
-
-1. Dans la zone **Aperçu**, vous verrez le schéma de données de l’entité de sortie de mesure, y compris les filtres et les dimensions. L’aperçu réagit de manière dynamique aux modifications de la configuration.
-
-1. Sélectionnez **Exécuter** pour calculer les résultats de la mesure configurée. Sélectionnez **Enregistrer et fermer** si vous souhaitez conserver la configuration actuelle et exécuter la mesure ultérieurement.
-
-1. Aller à **Mesures** pour voir la mesure nouvellement créée dans la liste.
-
----
-
-## <a name="use-a-template-to-build-a-measure"></a>Utiliser un modèle pour créer une mesure
-
-Vous pouvez utiliser des modèles prédéfinis de mesures couramment utilisées pour les créer. Les descriptions détaillées des modèles et une expérience guidée vous aident à créer des mesures de manière efficace. Les modèles reposent sur les données mappées de l’entité *Activité unifiée*. Assurez-vous donc d’avoir configuré les [activités client](activities.md) avant de créer une mesure à partir d’un modèle.
-
-# <a name="individual-consumers-b-to-c"></a>[Consommateurs individuels (B-to-C)](#tab/b2c)
-
-Vous pouvez utiliser des modèles prédéfinis de mesures couramment utilisées pour les créer. Les descriptions détaillées des modèles et une expérience guidée vous aident à créer des mesures de manière efficace. Les modèles reposent sur les données mappées de l’entité *Activité unifiée*. Assurez-vous donc d’avoir configuré les [activités client](activities.md) avant de créer une mesure à partir d’un modèle.
-
-Modèles de mesure disponibles : 
-- Valeur moyenne de la transaction (ATV)
-- Valeur totale des transactions
-- Chiffre d’affaires quotidien moyen
-- Chiffre d’affaires annuel moyen
-- Nombre de transactions
-- Points de fidélité gagnés
-- Points de fidélité utilisés
-- Solde des points de fidélité
-- Durée de vie active du client
-- Durée d’adhésion au programme de fidélité
-- Durée écoulée depuis le dernier achat
-
-La procédure suivante décrit les étapes pour créer une nouvelle mesure à l’aide d’un modèle.
+Cette section vous guide à travers la création d'une mesure à partir de zéro. Vous pouvez générer des mesures en exploitant des données de plusieurs sources qui sont désormais connectées via l'entité Client. Certaines [limites du service](service-limits.md) s'appliquent.
 
 1. Dans Audience Insights, accédez à **Mesures**.
 
-1. Sélectionnez **Nouveau** et sélectionnez **Choisir un modèle**.
+2. Sélectionnez **Nouvelle mesure**.
 
-   :::image type="content" source="media/measure-use-template.png" alt-text="Capture d’écran du menu déroulant lors de la création d’une nouvelle mesure avec mise en surbrillance du modèle.":::
+3. Choisissez la mesure **Type** :
 
-1. Recherchez le modèle correspondant à vos besoins et sélectionnez **Choisir le modèle**.
+   - **Attribut client** : Un champ unique par client qui reflète un score, une valeur, ou un état du client. Les attributs de client sont créés en tant qu'attributs dans une nouvelle entité générée par le système **Customer_Measure.**
 
-1. Vérifiez les données requises et sélectionnez **Démarrer** si toutes les données sont en place.
+   - **Mesure client** : Informations sur le comportement des clients avec répartition par dimensions sélectionnées. Une nouvelle entité est générée par mesure, avec plusieurs enregistrements potentiels par client.
 
-1. Dans le volet **Modifier le nom**, définissez le nom de votre mesure et l’entité de sortie. 
+   - **Mesure d'activité** : Effectue le suivi des performances et de la santé de votre entreprise. Les mesures d’activité peuvent avoir deux sorties différentes : une sortie numérique qui apparaît sur la page d'**accueil** ou une nouvelle entité que vous trouvez sur la page **Entités**.
 
-1. Cliquez sur **Terminé**.
+4. Indiquez un **Nom** et un **nom complet** (en option), puis sélectionnez **Suivant**.
 
-1. Dans la section **Définir la période de temps**, définissez la période de temps des données à utiliser. Choisissez si vous souhaitez que la nouvelle mesure couvre l’ensemble du jeu de données en sélectionnant **Tout le temps**, ou si vous souhaitez que la mesure se concentre sur une **Période spécifique**.
+5. Pour la section **Entités**, sélectionnez la première entité dans la liste déroulante. À ce stade, vous devez décider si les entités supplémentaires sont nécessaires dans le cadre de la définition de votre mesure.
 
-   :::image type="content" source="media/measure-set-time-period.png" alt-text="Capture d’écran montrant la section de la période de temps lors de la configuration d’une mesure à partir d’un modèle.":::
+   > [!div class="mx-imgBorder"]
+   > ![Définition de la mesure](media/measure-definition.png "Définition de la mesure")
 
-1. Dans la section suivante, sélectionnez **Ajouter des données** pour choisir les activités et mapper les données correspondantes de votre entité *Activité unifiée*.
+   Pour ajouter plus d'entités, sélectionnez **Ajouter une entité** et sélectionnez les entités que vous souhaitez utiliser pour la mesure.
 
-    1. Étape 1 sur 2 : dans **Type d’activité**, choisissez le type d’entité que vous souhaitez utiliser. Pour **Activités**, sélectionnez les entités que vous souhaitez mapper.
-    1. Étape 2 sur 2 : choisissez l’attribut de l’entité *Activité unifiée* pour le composant requis par la formule. Par exemple, pour la valeur de transaction moyenne, il s’agit de l’attribut représentant la valeur de la transaction. Pour **Horodateur de l’activité**, choisissez l’attribut de l’entité Activité unifiée qui représente la date et l’heure de l’activité.
-   
-1. Une fois le mappage des données terminé, vous pouvez voir le statut défini sur **Terminer** et le nom des activités et des attributs mappés.
+   > [!NOTE]
+   > Vous ne pouvez sélectionner que les entités qui ont une relation avec votre entité de départ. Pour plus d'informations sur la définition des relations, voir [Relations](relationships.md).
 
-   :::image type="content" source="media/measure-template-configured.png" alt-text="Capture d’écran d’une configuration de modèle de mesure terminée.":::
+6. Vous pouvez, si vous le souhaitez, configurer des variables. Dans la section **Variables**, sélectionnez **Nouvelle variable**.
 
-1. Vous pouvez maintenant sélectionner **Exécuter** pour calculer les résultats de la mesure. Pour l’affiner ultérieurement, sélectionnez **Enregistrer le brouillon**.
+   Les variables sont des calculs effectués sur chacun des enregistrements de vos champs sélectionnés. Par exemple, en additionnant le PDV et les ventes en ligne pour chacun de vos enregistrements client.
 
-# <a name="business-accounts-b-to-b"></a>[Comptes d’entreprise (B-to-B)](#tab/b2b)
+7. Donnez un **nom** à la variable.
 
-Cette fonctionnalité n’est disponible que pour les mesures créées dans des environnements avec des clients individuels comme audience cible principale.
+8. Dans la zone **Expression**, choisissez un champ pour commencer votre calcul.
 
----
+9. Saisissez une expression dans la zone **Expression** tout en choisissant plus de champs à inclure dans votre calcul.
+
+   > [!NOTE]
+   > Actuellement, seules les expressions arithmétiques sont prises en charge. En outre, le calcul des variables n'est pas pris en charge pour les entités provenant de différents [chemins d'entité](relationships.md).
+
+10. Sélectionnez **Terminé**.
+
+11. Dans la section **Définition de la mesure**, vous devez définir la manière dont les entités que vous avez choisies et les variables calculées sont agrégées dans une nouvelle entité de mesure ou un nouvel attribut Mesure.
+
+12. Sélectionnez **Nouvelle dimension**. Vous pouvez considérer une dimension comme une fonction *Regrouper par*. Les données de votre nouvel attribut ou entité Mesure seront regroupées selon toutes vos dimensions définies.
+
+    > [!div class="mx-imgBorder"]
+    > ![Choisir un cycle de regroupement](media/measures-businessreport-measure-definition2.png "Choisir un cycle de regroupement")
+
+    Sélectionnez ou entrez les informations suivantes dans le cadre de la définition de votre dimension :
+
+    - **Entité** : Si vous définissez une entité Mesure, elle doit inclure au moins un attribut. Si vous définissez un attribut Mesure, il contiendra uniquement un attribut par défaut. Cette sélection a pour but de choisir l'entité contenant cet attribut.
+    - **Champ** : sélectionnez l'attribut approprié à inclure dans votre entité ou votre attribut Mesure.
+    - **Compartiment** : choisissez si vous voulez regrouper les données sur une base quotidienne, mensuelle ou annuelle. Il s'agit d'une sélection uniquement nécessaire si vous avez sélectionné un attribut de type Date.
+    - **En tant que** : Définit le nom de votre nouveau champ.
+    - **Nom complet** : Définit le nom complet de votre champ.
+
+    > [!NOTE]
+    > Votre mesure d'activité est enregistrée en tant qu'entité à un seul chiffre et s'affiche dans la page d'**accueil**, à moins que vous ajoutiez d'autres dimensions à votre mesure. Après avoir ajouté d'autres dimensions, la mesure *ne s'affichera pas* sur la page d'**accueil**.
+
+13. Vous pouvez ajouter des fonctions d'agrégation si vous le souhaitez. Toute agrégation que vous créez a pour résultat une nouvelle valeur dans votre entité ou votre attribut Mesures. Les fonctions d'agrégation prises en charge sont : **Min**, **Max**, **Moyenne**, **Médian**, **Somme**, **Nombre Unique**, **Premier** (prend le premier enregistrement d'une valeur de dimension) et **Dernier** (prend le dernier enregistrement ajouté à une valeur de dimension).
+
+14. Sélectionnez **Enregistrer** pour appliquer vos modifications à la mesure.
 
 ## <a name="manage-your-measures"></a>Gérer vos mesures
 
-Vous trouverez la liste des mesures sur la page **Mesures**.
+Après avoir créé au moins une mesure, vous verrez une liste de mesures sur la page **Mesures**.
 
-Vous trouverez des informations sur le type de mesure, le créateur, la date de création, le statut et l’état. Lorsque vous sélectionnez une mesure dans la liste, vous pouvez prévisualiser la sortie et télécharger un fichier CSV.
+Vous trouverez des informations sur le type de mesure, le créateur, la date et l'heure de création, la dernière date et heure de modification, le statut (si la mesure est active, inactive ou échouée) et la dernière date et heure d'actualisation. Lorsque vous sélectionnez une mesure dans la liste, vous pouvez afficher un aperçu de sa sortie.
 
 Pour actualiser toutes vos mesures en même temps, sélectionnez **Actualiser tout** sans sélectionner une mesure spécifique.
 
 > [!div class="mx-imgBorder"]
-> ![Actions pour gérer des mesures uniques.](media/measure-actions.png "Actions pour gérer des mesures uniques.")
+> ![Actions pour gérer des mesures uniques](media/measure-actions.png "Actions pour gérer des mesures uniques")
 
-Choisissez une mesure parmi la liste des options suivantes :
+Vous pouvez également sélectionner une mesure dans la liste et effectuer l'une des actions suivantes :
 
 - Sélectionner le nom de la mesure pour afficher ses détails.
 - **Modifier** la configuration de la mesure.
-- **Actualisez** la mesure basée sur les dernières données.
 - **Renommer** la mesure.
 - **Supprimer** la mesure.
-- **Activer** ou **Désactiver**. Les mesures inactives ne seront pas actualisées pendant une [actualisation programmée](system.md#schedule-tab).
+- Sélectionner les points de suspension (...) puis **Actualiser** pour démarrer le processus d'actualisation de la mesure.
+- Sélectionner les points de suspension (...) puis **Télécharger** pour obtenir un fichier .CSV de la mesure.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d'autres processus en aval](system.md#refresh-policies). Vous pouvez sélectionner le statut d'un processus pour afficher des détails sur la progression de toute la tâche. Après avoir sélectionné **Voir les détails** pour l'une des tâches du travail, vous voyez des informations complémentaires : la durée de traitement, la date du dernier traitement et toutes les erreurs et avertissements associés à la tâche.
 
 ## <a name="next-step"></a>Étape suivante
 
-Vous pouvez utiliser des mesures existantes pour créer un [segment de clients](segments.md).
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Vous pouvez utiliser les mesures existantes pour créer votre premier segment de clientèle sur la page **Segments**. Pour plus d'informations, voir [Segments](segments.md).

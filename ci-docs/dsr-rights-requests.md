@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732677"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483662"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Demandes de droits de la personne concernée dans le cadre du RGPD
 
@@ -79,14 +79,7 @@ Un administrateur du client peut exécuter la procédure suivante pour exporter 
 2. Acquitter la confirmation de l’exportation des données pour l’utilisateur demandé.
 3. Recevoir les données exportées via l’adresse de messagerie de l’administrateur du client.
 
-## <a name="consent-management-preview"></a>Gestion du consentement (version préliminaire)
-
-La capacité de gestion du consentement ne collecte pas directement les données des utilisateurs. Elle n’importe et ne traite que les données de consentement fournies par les utilisateurs dans d’autres applications.
-
-Pour supprimer les données de consentement concernant des utilisateurs spécifiques, supprimez-les dans les sources de données ingérées dans la fonctionnalité de gestion du consentement. Après avoir actualisé le source de données, les données supprimées sont également supprimées dans le Centre de consentement. Les applications qui utilisent l’entité de consentement suppriment également les données qui ont été supprimées de la source après une [actualisation](audience-insights/system.md#refresh-processes). Nous vous recommandons d’actualiser rapidement les sources de données après avoir répondu à une demande de personne concernée pour supprimer les données de l’utilisateur de tous les autres processus et applications.
-
-
-## <a name="engagement-insights-preview"></a>Insights sur l’engagement (version préliminaire)
+## <a name="engagement-insights"></a>Informations sur l’engagement
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Suppression et exportation de données liées aux événements contenant des informations identifiables par l'utilisateur final
 

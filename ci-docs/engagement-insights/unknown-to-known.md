@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: d1bbc3315b55e2ee233dc672456e0c27e4ad0fbd5937af09cc790c96ee274000
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: db6531a96177a2c3ba9b6236bdff88e79e794727
+ms.sourcegitcommit: 473ef26f9ac36609245396a69d52b13d46322ee5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036780"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "6616460"
 ---
 # <a name="recognize-web-events-from-previously-authenticated-visitors"></a>Reconnaître les événements web des visiteurs déjà authentifiés
 

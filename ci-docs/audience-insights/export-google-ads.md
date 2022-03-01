@@ -1,7 +1,7 @@
 ---
 title: Exporter des données Customer Insights vers Google Ads
 description: Apprenez à configurer la connexion et à exporter vers Google Ads.
-ms.date: 09/27/2021
+ms.date: 03/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,19 +9,16 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c16967bf8ea1fd02b3f991d7b7d3715a71fa8681
+ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617915"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6604274"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exporter des segments vers Google Ads (version préliminaire)
 
 Exportez des segments de profils clients unifiés vers une liste d’audience Google Ads et utilisez-les pour faire de la publicité dans Google Search, Gmail, YouTube et le Réseau Display de Google. 
-
-> [!IMPORTANT]
-> Actuellement, vous ne pouvez créer une nouvelle connexion et exporter des données vers Google Ads que si vous disposez déjà d’un jeton de développeur Google Ads approuvé. En raison des modifications de stratégie, nous mettrons bientôt à jour l’exportation Google Ads et fournirons une option d’exportation qui ne nécessitera pas de jeton de développeur pour assurer la continuité de votre expérience et simplifier l’exportation vers Google Ads. Nous vous recommandons de ne pas configurer d’autres connexions à Google Ads pour faciliter la transition vers la nouvelle option d’exportation.
 
 ## <a name="prerequisites-for-connection"></a>Conditions préalables à une connexion
 
@@ -35,9 +32,9 @@ Exportez des segments de profils clients unifiés vers une liste d’audience Go
 
 ## <a name="known-limitations"></a>Limitations connues
 
-- Jusqu’à 1 million de profils clients par exportation vers Google Ads.
+- Jusqu’à 1 million de profils par exportation vers Google Ads.
 - L’exportation vers Google Ads est limitée aux segments.
-- L’exportation de segments avec un total de 1 million de profils clients peut prendre jusqu’à 5 minutes en raison des limitations du côté du fournisseur. 
+- L’exportation de segments avec un total de 1 million de profils peut prendre jusqu’à 5 minutes en raison des limitations du côté du fournisseur. 
 - La mise en correspondance dans Google Ads peut prendre jusqu’à 48 heures.
 
 ## <a name="set-up-connection-to-google-ads"></a>Configurer la connexion à Google Ads
@@ -74,7 +71,7 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 1. Entrez votre **[ID d’audience Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** et sélectionnez **Connecter** pour initialiser la connexion à Google Ads.
 
-1. Dans la section **Correspondance des données**, dans le champ **E-mail**, sélectionnez le champ qui représente l’adresse e-mail d’un client.
+1. Dans la section **Mise en correspondance des données**, dans le champ **E-mail**, sélectionnez le champ de votre profil client unifié qui représente l’adresse e-mail d’un client.
 
 1. Sélectionnez les segments que vous souhaitez exporter. Vous pouvez exporter jusqu’à 1 million de profils clients au total vers Google Ads.
 

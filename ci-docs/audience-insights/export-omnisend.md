@@ -1,7 +1,7 @@
 ---
 title: Exporter des données Customer Insights vers Omnisend
 description: Apprenez à configurer la connexion et à exporter vers Omnisend.
-ms.date: 10/08/2021
+ms.date: 05/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5496efa075fa3474c579366d143ea55e86ec3995
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 8bd692819fa8451ded5e74191ee717f81f87425d
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619025"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124484"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Exporter des segments vers Omnisend (version préliminaire)
 
@@ -28,9 +28,9 @@ Exportez des segments de profils client unifiés vers Omnisend et utilisez-les p
 
 ## <a name="known-limitations"></a>Limitations connues
 
-- Vous pouvez exporter jusqu’à 1 million de profils clients par exportation vers Omnisend et cela peut prendre jusqu’à 4 heures.
+- Vous pouvez exporter jusqu'à 1 million de profils par exportation vers Omnisend et cela peut prendre jusqu'à 4 heures.
 - L’exportation vers Omnisend est limitée aux segments.
-- Le nombre de profils clients que vous pouvez exporter vers Omnisend dépend de votre contrat avec Omnisend.
+- Le nombre de profils que vous pouvez exporter vers Omnisend dépend de votre contrat avec Omnisend.
 
 ## <a name="set-up-connection-to-omnisend"></a>Configurer la connexion à Omnisend
 
@@ -62,7 +62,7 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 1. Dans le champ **Connexion pour l’exportation**, choisissez une connexion dans la section Omnisend. Si ce nom de section ne s’affiche pas, cela signifie qu’aucune connexion de ce type n’est disponible.
 
-1. Dans la section **Correspondance des données**, dans le champ **E-mail**, sélectionnez le champ qui représente l’adresse e-mail d’un client. Il est obligatoire d’exporter des segments vers Omnisend. Vous pouvez éventuellement exporter le Prénom, le Nom, l'Adresse, le/la Pays/région, le Département, la Ville et le Code postal pour créer des e-mails plus personnalisés. Sélectionnez **Ajouter un attribut** pour mapper ces champs.
+1. Dans la section **Mise en correspondance des données**, dans le champ **E-mail**, sélectionnez le champ de votre profil client unifié qui représente l’adresse e-mail d’un client. Il est obligatoire d’exporter des segments vers Omnisend. Vous pouvez éventuellement exporter le Prénom, le Nom, l'Adresse, le/la Pays/région, le Département, la Ville et le Code postal pour créer des e-mails plus personnalisés. Sélectionnez **Ajouter un attribut** pour mapper ces champs.
 
 1. Sélectionnez **Enregistrer**.
 

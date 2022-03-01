@@ -1,7 +1,7 @@
 ---
 title: Exporter des données Customer Insights vers Snapchat
 description: Apprenez à configurer la connexion et à exporter vers Snapchat.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 6565ab81599abcc0f94465e1153f08e0bc119839
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618657"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124040"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Exporter des segments vers Snapchat (version préliminaire)
 
@@ -29,7 +29,7 @@ Exportez des segments de profils client unifiés vers Snapchat et utilisez-les p
 ## <a name="known-limitations"></a>Limitations connues
 
 - L’exportation vers Snapchat est limitée aux segments.
-- L’exportation d’un maximum d’un million de profils clients vers Snapchat peut prendre jusqu’à 15 minutes. 
+- L’exportation de jusqu’à 1 million de profils vers Snapchat peut prendre jusqu’à 15 minutes. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Configurer la connexion à Snapchat
 
@@ -63,7 +63,7 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 1. Entrez l’[**ID d’audience Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. Dans la section **Correspondance des données**, dans le champ **E-mail**, sélectionnez le champ qui représente l’adresse e-mail d’un client. Il est obligatoire d’exporter des segments vers Snapchat.
+1. Dans la section **Mise en correspondance des données**, dans le champ **E-mail**, sélectionnez le champ de votre profil client unifié qui représente l’adresse e-mail d’un client. Il est obligatoire d’exporter des segments vers Snapchat.
 
 1. Sélectionnez les segments que vous souhaitez exporter. 
 

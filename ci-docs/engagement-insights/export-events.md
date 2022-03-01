@@ -4,23 +4,23 @@ description: Comment exporter des événements affinés et des événements de b
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 04/30/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7881f8f63134170a7f76e3c75dcfc5fa8930754b
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: faa0c3afb08d1c0282b2164ed914637ce9aad88117af37ba44fdb81e7610e574
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606296"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032382"
 ---
 # <a name="export-events"></a>Exporter des événements
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Un événement représente le comportement d'un utilisateur. Il enregistre lorsqu'un utilisateur consulte une page (événement d'affichage) ou interagit avec le contenu (événement d'action). Lorsque vous pouvez décider quelles propriétés des données vous souhaitez afficher dans un rapport, cette vue virtuelle des données est appelée *événement affiné*. Pour plus d’informations, consultez [Créer et modifier des événements](refined-events.md).
+Un événement représente le comportement d'un utilisateur. Il enregistre lorsqu'un utilisateur consulte une page (événement d'affichage) ou interagit avec le contenu (événement d'action). Lorsque vous pouvez décider quelles propriétés des données vous souhaitez afficher dans un rapport, cette vue virtuelle des données est appelée *événement affiné*. 
 
 - Vous pouvez exporter des événements et des événements affinés vers un stockage externe. 
 - Les exportations sont un flux de données vers l'avant. Vous ne pouvez pas recharger le flux. 
@@ -45,28 +45,26 @@ Avant de configurer une exportation, vous devez disposer d'un accès et d'un abo
 
 ## <a name="export-events"></a>Événements d’exportation
 
-Il y a deux manières de faire apparaître la boîte de dialogue **Exporter des événements** : 
+Il existe deux façons d'exporter les événements : 
 - Accédez à **Données** > **Exportations** et sélectionnez **Nouvelle exportation**.
 - Accédez à **Données** > **Événements**, sélectionnez **Plus [...]** en regard de l’événement que vous souhaitez exporter et sélectionnez **Exporter** dans le menu déroulant. 
 
-:::image type="content" source="media/new-export.png" alt-text="Créez une nouvelle exportation.":::
-
 Vous êtes guidé à travers les étapes de création d'une exportation :
 
-1. Fournissez un **Nom d’exportation**, puis sélectionnez **Suivant**.
+1. Donnez un **Nom d'exportation**.
 
 1. Dans la liste déroulante **Sélection d’événements**, choisissez les événements de base et les événements affinés à inclure dans l’exportation. 
 
-1. Dans la section **Structure du fichier**, sélectionnez la cadence (horaire ou quotidienne) pour créer de nouveaux fichiers dans le stockage de destination, puis sélectionnez **Suivant**. Les événements sont exportés en continu à leur arrivée.
+1. En dessous de **Structure des fichiers**, sélectionnez la cadence à laquelle créer de nouveaux fichiers dans le stockage de destination. Les événements sont exportés en continu à leur arrivée.
 
-1. Dans la boîte de dialogue **Choisir un format**, sélectionnez le format de votre exportation. Choisissez entre les formats **Common Data Model**, **CSV** et **JSON**. Pour utiliser l’exportation avec d’autres applications Dynamics 365, nous recommandons le format **Common Data Model**.
+1. Sélectionnez le format de votre exportation. Vous pouvez choisir entre le format **Common Data Model**, **CSV** et **JSON**. Pour utiliser l'exportation avec d'autres applications Dynamics 365, nous vous recommandons d'utiliser le format Common Data Model.
 
-1. Dans la boîte de dialogue **Choisir une destination**, spécifiez l’emplacement Azure Data Lake Storage Gen 2.
+1. Dans l'étape **Choisir une destination**, spécifiez l'emplacement Azure Data Lake Storage Gen 2.
     1. Le nom de compte **ADLS Gen 2** représente le nom du compte de stockage dans lequel enregistrer l'exportation. 
     1. Le **Chemin du dossier** définit où l'exportation doit être stockée dans le système de fichiers et la structure de répertoires du compte de stockage.
     1. La **Clé partagée** est disponible sur le portail Azure pour le compte de stockage.
 
-1. Passez en revue vos sélections et confirmez-les pour terminer.
+1. Examinez et confirmez vos sélections.
 
 ## <a name="view-and-manage-exports"></a>Afficher et gérer des exportations
 

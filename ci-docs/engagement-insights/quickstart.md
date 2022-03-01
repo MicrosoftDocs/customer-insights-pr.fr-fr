@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 95caaa1f67a7740328b67face00acaea65452eb0
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 53dcb27630eb6ae33cec615688e085697dc0994a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494454"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555670"
 ---
 # <a name="first-run-experience"></a>Première expérience d’utilisation
 
@@ -26,7 +26,7 @@ Informations sur l’engagement, une fonction de Dynamics 365 Customer Insights,
 
 Vous devez avoir un compte d'utilisateur Microsoft Azure Active Directory actif. 
 
-1. Ouvrez le site Web [Informations sur l'engagement](https://home.ci.ai.dynamics.com/app/engagement-insights). 
+1. Ouvrez le site Web [Informations sur l'engagement](https://pi.dynamics.com/). 
 
 1. Connectez-vous avec votre compte professionnel ou scolaire.
 

@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
+ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466345"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "7461100"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Utiliser les dimensions démographiques pour diviser les données comportementales
 
@@ -29,7 +29,7 @@ En utilisant les dimensions démographiques du profil unifié, les utilisateurs 
 - Un environnement d’informations sur l’engagement dans lequel vous disposez des données sur le profil client liées à l’environnement d’informations sur l’audience dans lequel les profils client sont créés. Plus d’informations : [Créer un lien entre les informations sur l’audience et les informations sur l’engagement](integrate-audience-insights-engagement-insights.md).
 
 > [!NOTE]
-> Après avoir créé un lien entre les environnements d’informations sur l’audience et d’informations sur l’engagement, vous ne recherchez peut-être que certaines données sur les propriétés pour les profils client car elles peuvent être utiles en tant que dimensions dans les informations sur l’engagement. Pour plus d’informations, accédez à [Activer les attributs et les segments des profils unifiés des informations sur l’audience](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
+> Après avoir créé un lien entre les environnements d’informations sur l’audience et d’informations sur l’engagement, vous ne recherchez peut-être que certaines données sur les propriétés pour les profils client car elles peuvent être utiles en tant que dimensions dans les informations sur l’engagement. Pour plus d’informations, accédez à [Activer les attributs et les segments des profils unifiés des informations sur l’audience](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
 
 ## <a name="create-a-new-custom-report"></a>Créer un rapport personnalisé
 

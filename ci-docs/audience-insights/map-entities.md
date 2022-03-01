@@ -1,50 +1,48 @@
 ---
-title: Mapper des entités et des attributs pour l’unification des données
-description: Sélectionnez des entités, des attributs, des clés primaires et des types sémantiques pour mapper les données au profil client unifié.
-ms.date: 10/18/2020
+title: Mapper des entités pour l'unification des données
+description: Mappez des données pour créer des profils clients unifiés.
+ms.date: 09/25/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: adkuppa
 manager: shellyha
-searchScope:
-- ci-map
-ms.openlocfilehash: 8b84ed1a860e383e4eb3f7499be6d397ba3f1db1
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: e98c7717f7707d43a9fd1fc6f6b0e9c49e4e7ee0
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673260"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405673"
 ---
 # <a name="map-entities-and-attributes"></a>Mapper les entités et attributs
 
-Le **Mappage** est la première étape du processus d’unification des données des informations sur l’audience. Le mappage comprend trois phases :
+Le **Mappage** est la première étape du processus d'unification des données de Audience Insights. Le mappage comprend trois phases :
 
 - *Sélection d’entité* : Identifier les entités pouvant être combinées et qui peuvent conduire à un jeu de données contenant des informations plus complètes sur vos clients.
 - *Sélection d’attribut* : Pour chaque entité, identifiez les colonnes à combiner et les réconcilier lors des étapes d’unification suivantes, à savoir la *mise en correspondance* et la *fusion*. Ces colonnes sont appelées *Attributs*.
 - *Sélection de la clé primaire et du type de sémantique* : Pour chaque entité, identifiez un attribut que vous souhaitez définir comme clé primaire pour cette entité, et pour chaque attribut, identifiez un type de sémantique qui décrit le mieux cet attribut.
 
-Pour plus d’informations sur le flux général d’unification des données, consultez [Unifier](data-unification.md).
+Pour plus d’informations sur le flux général d’unification des données, consultez [Unifier ](data-unification.md).
 
 ## <a name="select-the-first-entities"></a>Sélectionner les premières entités
 
-1. Dans les informations sur l’audience, accédez à **Données** > **Unifier** > **Mapper**.
+1. Dans Audience Insights, accédez à **Données** > **Unifier** > **Mapper**.
 
 2. Lancer la phase de mappage en sélectionnant **Sélectionner des entités**.
 
 3. Sélectionnez les entités et attributs que vous souhaitez utiliser dans les phases *mettre en correspondance* et *fusionner*. Vous pouvez sélectionner les attributs requis individuellement à partir d’une entité ou inclure tous les attributs d’une entité en cochant la case **Inclure tous les champs** au niveau de l’entité. Nous vous recommandons de sélectionner au moins deux entités pour bénéficier du processus d’unification des données.
 
    > [!div class="mx-imgBorder"]
-   > ![Ajouter des entités - Exemple.](media/data-manager-configure-map-add-entities-example.png "Ajouter des entités - Exemple")
+   > ![Ajouter des entités - Exemple](media/data-manager-configure-map-add-entities-example.png "Ajouter des entités - Exemple")
 
    Dans cet exemple, nous ajoutons les entités **eCommerceContacts** et **loyCustomers**. En choisissant ces entités, vous pouvez obtenir des informations sur les clients professionnels en ligne qui sont membres du programme de fidélité.
    
    Vous pouvez rechercher des mots-clés dans tous les attributs et entités pour sélectionner les attributs requis que vous souhaitez mapper.
    
      > [!div class="mx-imgBorder"]
-   > ![Exemple de champs de recherche.](media/data-manager-configure-map-search-fields-example.png "Exemple de champs de recherche")
+   > ![Exemple de champs de recherche](media/data-manager-configure-map-search-fields-example.png "Exemple de champs de recherche")
 
 4. Sélectionnez **Appliquer** pour confirmer vos sélections.
 
@@ -54,10 +52,10 @@ Après avoir sélectionné vos entités, la page **Mapper** répertorie les enti
 
 - **Clé primaire** : Sélectionnez un attribut comme clé primaire pour chacune de vos entités. Pour qu’un attribut soit une clé primaire valide, il ne doit inclure aucune valeur en double, aucune valeur manquante, ni aucune valeur nulle. Les attributs de type de données Chaîne, Entier et GUID sont pris en charge en tant que clés primaires et seront affichés dans un champ dans lequel vous pourrez effectuer votre sélection.
 
-- **Type de sémantique d’attribut :** Catégories dans lesquelles tombent vos attributs, telles que l’adresse de messagerie ou le nom. Pour utiliser des modèles IA pour la prédiction intelligente de la sémantique, gagner du temps et améliorer la précision, définissez **Mappage intelligent** sur **Activé**. Le mappage intelligent met en évidence la recommandation sémantique basée sur l’IA dans le champ **Type**. Si vous définissez cette option sur **Désactivé**, vous verrez nos recommandations de mappage normales. Vous pouvez sélectionner n’importe quel type sémantique dans la liste des options disponibles et remplacer la sélection suggérée.
+- **Type de sémantique d’attribut :** Catégories dans lesquelles tombent vos attributs, telles que l’adresse de messagerie ou le nom. Pour utiliser des modèles IA pour la prédiction intelligente de la sémantique, gagner du temps et améliorer la précision, définissez **Mappage intelligent** sur **Activé**. Le mappage intelligent met en évidence la recommandation sémantique basée sur l'IA dans le champ **Type**. Si vous définissez cette option sur **Désactivé**, vous verrez nos recommandations de mappage normales. Vous pouvez sélectionner n'importe quel type sémantique dans la liste des options disponibles et remplacer la sélection suggérée.
 
 > [!div class="mx-imgBorder"]
-> ![Type d’attribut et prédiction sémantique.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Type d’attribut et prédiction sémantique")
+> ![Type d'attribut et prédiction sémantique](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Type d'attribut et prédiction sémantique")
 
 Il est aussi possible d’ajouter un type de sémantique personnalisé. Sélectionnez le champ de type pour un attribut, puis tapez le nom de votre type de sémantique. De cette manière, vous pouvez également modifier les types d’attributs qui ont été identifiés par le système.
 
@@ -66,7 +64,7 @@ Tous les attributs pour lesquels un type de sémantique est automatiquement iden
 Les attributs qui ne sont pas automatiquement mappés à un type de sémantique sont regroupés dans la section **Définir les données dans les champs non mappés**. Sélectionnez le champ de type de sémantique pour les attributs non mappés ou entrez votre nom de type d’attribut personnalisé.
 
 > [!div class="mx-imgBorder"]
-> ![Clé primaire et type d’attribut.](media/data-manager-configure-map-add-attributes.png "Clé primaire et type d’attribut")
+> ![Clé primaire et type d'attribut](media/data-manager-configure-map-add-attributes.png "Clé primaire et type d’attribut")
 
 > [!NOTE]
 > Un champ doit correspondre au type de sémantique Person.FullName pour renseigner le nom du client dans la fiche client. Sinon, les cartes client apparaîtront sans nom. 
@@ -78,7 +76,7 @@ Les attributs qui ne sont pas automatiquement mappés à un type de sémantique 
 2. Dans le volet **Modifier les champs**, ajoutez ou supprimez des attributs et des entités. Utilisez la recherche ou faites défiler la liste des attributs et des entités qui vous intéressent. Vous ne pouvez pas supprimer un attribut ou une entité s’ils ont déjà été mis en correspondance.
 
    > [!div class="mx-imgBorder"]
-   > ![Ajoutez ou supprimez des attributs.](media/configure-data-map-edit.png "Ajouter ou supprimer des attributs")
+   > ![Ajouter ou supprimer des attributs](media/configure-data-map-edit.png "Ajouter ou supprimer des attributs")
 
 3. Cliquez sur **Appliquer**.
 
@@ -96,7 +94,7 @@ Poursuivez les étapes d’unification et assurez-vous que l’attribut qui cont
 
 Pour les organisations (version préliminaire), le type d’attribut doit être mis en correspondance avec « Organization.Name »
 > [!div class="mx-imgBorder"]
-> ![Clé primaire et type d'attribut B2B.](media/configure-data-map-edit-b2b.png "Clé primaire et type d'attribut B2B")
+> ![Clé primaire et type d’attribut B2B](media/configure-data-map-edit-b2b.png "Clé primaire et type d’attribut B2B")
 
 ## <a name="next-step"></a>Étape suivante
 
@@ -104,6 +102,3 @@ Dans le cadre du processus d’unification des données, accédez à la page **M
 
 > [!TIP]
 > Consultez la vidéo suivante : [Mise en route : Création d’un profil client unifié](https://youtu.be/oBfGEhucAxs).
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

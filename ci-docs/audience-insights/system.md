@@ -1,7 +1,7 @@
 ---
 title: Configuration du système dans les informations sur l’audience
 description: En savoir plus sur les paramètres système de la fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights.
-ms.date: 11/01/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,14 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732358"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651837"
 ---
 # <a name="system-configuration"></a>Configuration du système
-
-Pour accéder aux configurations système dans les informations d'audience, dans la barre de navigation de gauche, sélectionnez **Administrateur** > **Système** pour afficher une liste des tâches et des processus système.
 
 La page **Système** comprend les onglets suivants :
 - [Statut ](#status-tab)
@@ -32,55 +30,39 @@ La page **Système** comprend les onglets suivants :
 
 ## <a name="status-tab"></a>Onglet Statut
 
-L'onglet **Statut** vous permet de suivre la progression de l'ingestion des données, des exportations de données ainsi que de plusieurs autres processus importants du produit. Passez en revue les informations de cet onglet pour vous assurer que vos tâches et processus actifs sont complets.
+L’onglet **Statut** vous permet de suivre la progression de l’ingestion des données, des exportations de données et d’autres processus importants du produit. Passez en revue les informations de cet onglet pour vous assurer que les processus actifs sont complets.
 
-Cet onglet comprend des tableaux avec des informations sur le statut et le traitement de divers processus. Chaque table suit le **Nom** de la tâche et son entité correspondante, le **Statut** de sa dernière exécution, et la **Dernière mise à jour**. Vous pouvez afficher les détails des dernières exécutions en sélectionnant le nom de la tâche ou du processus. 
+Cet onglet comprend des tableaux avec des informations sur le statut et le traitement de divers processus. Chaque table suit le **Nom** de la tâche et son entité correspondante, le **Statut** de sa dernière exécution, et la **Dernière mise à jour**.
 
-Sélectionnez le statut près de la tâche ou du processus dans la colonne **Statut** pour ouvrir le volet **Détails de la progression**.
+Vous pouvez afficher les détails des dernières exécutions de la tâche en sélectionnant son nom.
 
-   :::image type="content" source="media/system-progress-details.png" alt-text="Volet des détails de la progression du système":::
+### <a name="status-types"></a>Types de statuts
 
-### <a name="status-definitions"></a>Définitions de statut
+Il existe six types de statuts pour les tâches. Les types de statuts suivants s’affichent également dans les pages *Mettre en correspondance*, *Fusionner*, *Sources de données*, *Segments*, *Mesures*, *Enrichissement*, *Activités* et *Prédictions* :
 
-Le système utilise les statuts suivants pour les tâches et les processus :
+- **Traitement en cours :** La tâche est en cours. Le statut peut être modifié en Opération réussie ou Échec.
+- **Opération réussie :** La tâche s’est terminée avec succès.
+- **Ignoré :** La tâche a été ignorée. Un ou plusieurs des processus en aval dont dépend cette tâche échouent ou sont ignorés.
+- **Échec :** Le traitement de la tâche a échoué.
+- **Annulé :** Le traitement a été annulé par l’utilisateur avant la fin.
+- **Mis en file d’attente :** Le traitement est mis en file d’attente et démarrera une fois toutes les tâches en amont terminées. Pour plus d’informations, voir [Stratégies d’actualisation](#refresh-policies).
 
-|Statut   |Définition  |
-|---------|---------|
-|Annulée |Le traitement a été annulé par l'utilisateur avant sa fin.   |
-|Échoué   |L’ingestion de données s’est heurtée à des erreurs.         |
-|Échec  |Échec du traitement.  |
-|Non démarré(e)(s)   |La source de données n’a pas encore de données ingérées ou est toujours en mode brouillon.         |
-|Traitement  |La tâche ou le processus est en cours.  |
-|Actualisation    |L’ingestion de données est en cours. Vous pouvez annuler cette opération en sélectionnant **Arrêter l’actualisation** dans la colonne **Actions**. L’arrêt de l’actualisation d’une source de données la ramène à son dernier état d’actualisation.       |
-|Ignorée  |La tâche ou le processus a été ignoré. Un ou plusieurs des processus en aval dont dépend cette tâche échouent ou sont ignorés.|
-|Opération réussie  |Tâche ou processus terminé. Pour les sources de données, indique que les données ont été ingérées avec succès si une heure est mentionnée dans la colonne **Actualisé**.|
-|Mis(e) en file d’attente | Le traitement est mis en file d'attente et démarrera une fois que toutes les tâches et tous les processus en amont seront terminés. Pour plus d'informations, voir [Actualisation des processus](#refresh-processes).|
+### <a name="refresh-policies"></a>Stratégies d’actualisation
 
-### <a name="refresh-processes"></a>Actualisation des processus
+Cette liste affiche les stratégies d’actualisation pour chacun des processus principaux :
 
-L'actualisation des tâches et des processus est exécutée conformément à l'[horaire configuré](#schedule-tab). 
+- **Sources de données :** S’exécute selon le [programme configuré](#schedule-tab). Ne dépend d’aucun autre processus. La mise en correspondance dépend de la bonne exécution de ce processus.
+- **Mettre en correspondance :** S’exécute selon le [programme configuré](#schedule-tab). Dépend du traitement des sources de données utilisées dans la définition de correspondance. La fusion dépend de la bonne exécution de ce processus.
+- **Fusionner :** S’exécute selon le [programme configuré](#schedule-tab). Dépend de l’exécution du processus de mise en correspondance. Les segments, les mesures, l’enrichissement, la recherche, les activités, les prédictions et la préparation des données dépendent de la bonne exécution de ce processus.
+- **Segments** : S’exécute manuellement (actualisation unique) et selon le [programme configuré](#schedule-tab). Dépend de la fusion. Les informations dépendent de son traitement.
+- **Mesures** : S’exécute manuellement (actualisation unique) et selon le [programme configuré](#schedule-tab). Dépend de la fusion.
+- **Activités** : S’exécute manuellement (actualisation unique) et selon le [programme configuré](#schedule-tab). Dépend de la fusion.
+- **Enrichissement** : S’exécute manuellement (actualisation unique) et selon le [programme configuré](#schedule-tab). Dépend de la fusion.
+- **Recherche** : S’exécute manuellement (actualisation unique) et selon le [programme configuré](#schedule-tab). Dépend de la fusion.
+- **Préparation des données :** S’exécute selon le [programme configuré](#schedule-tab). Dépend de la fusion.
+- **Informations** : S’exécute manuellement (actualisation unique) et selon le [programme configuré](#schedule-tab). Dépend des segments.
 
-|Processus  |Description  |
-|---------|---------|
-|Activité  |S'exécute manuellement (actualisation unique). Dépend du processus de fusion. Les informations dépendent de son traitement.|
-|Liaison d’analyse |S'exécute manuellement (actualisation unique). Dépend des segments.  |
-|Préparation de l’analyse |S'exécute manuellement (actualisation unique). Dépend des segments.  |
-|Préparation des données   |Dépend de la fusion.   |
-|Sources de données   |Ne dépend d’aucun autre processus. La mise en correspondance dépend de la bonne exécution de ce processus.  |
-|Enrichissements   |S'exécute manuellement (actualisation unique). Dépend du processus de fusion. |
-|Destinations des exportations |S'exécute manuellement (actualisation unique). Dépend des segments.  |
-|Aperçus |S'exécute manuellement (actualisation unique). Dépend des segments.  |
-|Intelligence   |Dépend de la fusion.   |
-|Correspondance |Dépend du traitement des sources de données utilisées dans la définition de correspondance.      |
-|Mesures  |S'exécute manuellement (actualisation unique). Dépend du processus de fusion.  |
-|Fusionner   |Dépend de l’exécution du processus de mise en correspondance. Les segments, les mesures, l’enrichissement, la recherche, les activités, les prédictions et la préparation des données dépendent de la bonne exécution de ce processus.   |
-|Profils   |S'exécute manuellement (actualisation unique). Dépend du processus de fusion. |
-|Rechercher   |S'exécute manuellement (actualisation unique). Dépend du processus de fusion. |
-|Segments  |S'exécute manuellement (actualisation unique). Dépend du processus de fusion. Les informations dépendent de son traitement.|
-|Système   |Dépend de l’exécution du processus de mise en correspondance. Les segments, les mesures, l’enrichissement, la recherche, les activités, les prédictions et la préparation des données dépendent de la bonne exécution de ce processus.   |
-|Utilisateur  |S'exécute manuellement (actualisation unique). Dépend des entités.  |
-
-Sélectionnez l'état d'un processus pour voir les détails de la progression de l'ensemble de la tâche dans laquelle il se trouvait. Les processus d'actualisation ci-dessus peuvent aider à comprendre ce que vous pouvez faire pour résoudre un problème de tâche **Ignorée** ou **En file d'attente**.
+Sélectionnez le statut d’une tâche pour afficher les détails de la progression de toute la tâche correspondante. Les stratégies d’actualisation ci-dessus peuvent vous aider à comprendre ce que vous pouvez faire pour gérer une tâche **Ignorée** ou **En file d’attente**.
 
 ## <a name="schedule-tab"></a>Onglet Planification
 
@@ -104,7 +86,7 @@ L’onglet **À propos de** contient le **nom complet** de votre organisation, l
 
 Vous pouvez changer la langue et le format de pays/région sous l'onglet **Général**.
 
-[Langues prises en charge pour](/dynamics365/get-started/availability) Customer Insights. L’application utilise votre préférence de langue pour afficher des éléments tels que le menu, le libellé de l’étiquette et les messages système dans votre langue préférée.
+Customer Insights [prend en charge plusieurs langues](/dynamics365/get-started/availability). L’application utilise votre préférence de langue pour afficher des éléments tels que le menu, le libellé de l’étiquette et les messages système dans votre langue préférée.
 
 Les données et informations importées que vous avez saisies manuellement ne sont pas traduites.
 
@@ -127,7 +109,7 @@ L’**Utilisation de l’API** contient trois sections :
 
 -  **Opérations** – un tableau avec des lignes pour chaque opération API disponible et des détails sur l’utilisation des opérations. Vous pouvez sélectionner un nom d’opération pour accéder à [la référence API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Les opérations qui utilisent [l'ingestion de données en temps réel](real-time-data-ingestion.md) contiennent un bouton avec un symbole binoculaire pour visualiser l'utilisation de l'API en temps réel. Sélectionnez le bouton pour ouvrir un volet latéral contenant les détails de l’utilisation de l’API en temps réel dans l’environnement actuel.   
+   Les opérations qui utilisent [l’ingestion de données en temps réel](real-time-data-ingestion.md) contiennent un bouton avec un symbole binoculaire pour afficher l’utilisation de l’API en temps réel. Sélectionnez le bouton pour ouvrir un volet latéral contenant les détails de l’utilisation de l’API en temps réel dans l’environnement actuel.   
    Utilisez la zone **Par groupe** dans le volet **Utilisation de l’API en temps réel** pour choisir la meilleure façon de présenter vos interactions en temps réel. Vous pouvez regrouper les données par méthode API, nom qualifié d’entité (entité ingérée), créé par (source de l’événement), résultat (succès ou échec) ou codes d’erreur. Les données sont disponibles sous forme de graphique historique et sous forme de tableau.
 
 ## <a name="security-tab"></a>Onglet Sécurité

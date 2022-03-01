@@ -1,7 +1,7 @@
 ---
 title: Importer des données vers la capacité de gestion du consentement
 description: Découvrez comment importer des données dans la capacité de gestion du consentement de Customer Insights et sur les champs requis pour les deux types de données.
-ms.date: 12/03/2021
+ms.date: 11/03/2021
 ms.service: customer-insights
 ms.subservice: consent-management
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b1e6a56e4cb9bfbaf50da161e6fcad1fbfa8ce28
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
+ms.openlocfilehash: 7ccd5444ebd7241e45afddca443cb8e57080df18
+ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884122"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7790808"
 ---
 # <a name="import-consent-data"></a>Importer des données de consentement
 
@@ -83,20 +83,6 @@ Champs de données obligatoires :
 - Quand le consentement a été saisi
 - Source du consentement saisi
 
-Modèle de données avec types de données : 
-
-|     Nom                          |     Type        |     Requise    |     Commentaires        |
-|----------------------------------|-----------------|-----------------|---------------------|
-|     DataSubjectIdentifierType    |     string      |     Oui         |     Ce champ définit le type d’identificateur de la personne concernée. Par exemple, numéro de téléphone, adresse e-mail ou ID utilisateur. La gestion du consentement prend actuellement en charge trois types d’identificateur de la personne concernée : « Téléphone », « ID utilisateur » et « E-mail » (qui respectent tous la casse).     |
-|     DataSubjectIdentifier        |     string      |     Oui         |     Valeur de l’identificateur de la personne concernée. Par example, marie@contoso.com, +1-444-444-4444 ou CONTACT_ID_123.            |
-|     Abonnement                 |     string      |     Oui         |     Nom de l’abonnement pour lequel le consentement a été recueilli.             |
-|     SubscriptionStartDate        |     DateTime    |     No          |    Champ facultatif pour spécifier la date et l’heure de début de l’abonnement. Par exemple, vous pouvez avoir un abonnement créé pour une offre qui s’exécute sur une période de temps limitée. Vous pouvez utiliser ce champ pour indiquer la date et l’heure de début de cet abonnement.           |
-|     SubscriptionEndDate          |     DateTime    |     No          |     Champ facultatif pour spécifier la date et l’heure de fin d’un abonnement.  |
-|     ConsentStatus                |     string      |     Oui         |     Valeur du statut du consentement. Il peut s’agir de n’importe quelle valeur que votre système d’enregistrement de consentement a stockée pour le consentement spécifique.         |
-|     ConsentDate                  |     DateTime    |     Oui         |     Date et heure de capture du consentement.    |
-
-
-
 ### <a name="purpose-consent-data"></a>Données de consentement d'objet
 
 Champs de données obligatoires : 
@@ -107,14 +93,3 @@ Champs de données obligatoires :
 - Statut du consentement
 - Quand le consentement a été saisi
 - Source du consentement saisi
-
-
-Modèle de données avec types de données : 
- 
-|     Nom                          |     Type        |     Requise    |     Commentaires               |
-|----------------------------------|-----------------|-----------------|----------------------|
-|     DataSubjectIdentifierType    |     string      |     Oui         |     Ce champ définit le type d’identificateur de la personne concernée. Par exemple, numéro de téléphone, adresse e-mail ou ID utilisateur. La gestion du consentement prend actuellement en charge trois types d’identificateur de la personne concernée : « Téléphone », « ID utilisateur » et « E-mail » (qui respectent tous la casse).     |
-|     DataSubjectIdentifier        |     string      |     Oui         |     Valeur de l’identificateur de la personne concernée. Par example, marie@contoso.com, +1-444-444-4444 ou CONTACT_ID_123.            |
-|     DataUsePurpose               |     string      |     Oui         |     Nom de l’objectif pour lequel le consentement a été recueilli.         |
-|     ConsentStatus                |     string      |     Oui         |     Valeur du statut du consentement. Il peut s’agir de n’importe quelle valeur que votre système d’enregistrement de consentement a stockée pour le consentement spécifique.         |
-|     ConsentDate                  |     DateTime    |     Oui         |     Date et heure de capture du consentement.    |

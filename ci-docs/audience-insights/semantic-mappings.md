@@ -1,7 +1,7 @@
 ---
 title: Mappages sémantiques (version préliminaire)
 description: Présentation et utilisation des mappages sémantiques.
-ms.date: 12/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881827"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622932"
 ---
-# <a name="semantic-mappings-preview"></a>Mappages sémantiques (version préliminaire)
+# <a name="semantic-mappings"></a>Mappages sémantiques
 
 Les mappages sémantiques vous permettent de mapper vos données de non-activité à des schémas prédéfinis. Ces schémas aident les informations d’audience à mieux comprendre vos attributs de données. Le mappage sémantique et les données fournies permettent de nouvelles informations et fonctionnalités dans les informations d’audience. Pour mapper vos données d’activité aux schémas, consultez la documentation des [activités](activities.md).
 
@@ -75,7 +75,8 @@ Les mappages sémantiques vous permettent de mapper vos données de non-activit�
 
 1. Pour exécuter un mappage sémantique ultérieurement, sélectionnez le mappage sémantique et sélectionnez **Actualiser**.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d’autres processus en aval](system.md#refresh-policies). Vous pouvez sélectionner le statut d’un processus pour afficher des détails sur la progression de toute la tâche. Après avoir sélectionné **Voir les détails** pour l’une des tâches du travail, vous voyez des informations complémentaires : la durée de traitement, la date du dernier traitement et toutes les erreurs et avertissements associés à la tâche.
 
 ## <a name="manage-existing-semantic-mappings"></a>Gérer les mappages sémantiques existants
 
@@ -90,41 +91,5 @@ Dans **Données** > **Mappages sémantiques (version préliminaire)**, vous pouv
 - **Renommer** : ouvre une boîte de dialogue dans laquelle vous pouvez entrer un nom différent pour le mappage sémantique sélectionné. Sélectionnez **Enregistrer** pour appliquer vos modifications.
 
 - **Supprimer** : Ouvre une boîte de dialogue pour confirmer la suppression du mappage sémantique sélectionné. Vous pouvez également supprimer plusieurs mappages sémantiques à la fois en sélectionnant les mappages sémantiques et l’icône de suppression. Sélectionnez **Supprimer** pour confirmer la suppression.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Utiliser un mappage d’entité sémantique ContactProfile pour créer des activités au niveau du contact
-
-Après avoir créé un mappage d’entité sémantique *ContactProfile*, vous pouvez capturer les activités des contacts. Il vous permet de voir dans la chronologie des activités d’un compte quel contact était responsable de chaque activité. La plupart des étapes suivent la configuration du mappage d’activité classique.
-
-   > [!NOTE]
-   > Pour que les activités au niveau du contact puissent fonctionner, vous devez avoir les deux attributs **AccountID** et **ContactID** pour chaque enregistrement dans vos données d’activité.
-
-1. [Définissez un mappage d’entité sémantique *ContactProfile*.](#define-a-contactprofile-semantic-entity-mapping) et exécutez le mappage sémantique.
-
-1. Dans les informations sur l’audience, accédez à **Données** > **Activités**.
-
-1. Sélectionnez **Ajouter une activité** pour créer une nouvelle activité.
-
-1. Nommez l’activité, sélectionnez l’entité d’activité source et sélectionnez la clé primaire de l’entité d’activité.
-
-1. Dans l’étape **Relations**, créez une relation indirecte entre vos données d’activité sources et vos comptes, en utilisant vos données de contact comme entité intermédiaire. Pour plus d’informations, consultez [Chemins de relations directes et indirectes](relationships.md#relationship-paths).
-   - Exemple de relation pour une activité appelée *Achats* :
-      - **Données d’activité sources des achats** > **Données du contact** sur l’attribut **ContactID**
-      - **Données du contact** > **Données du compte** sur l’attribut **AccountID**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Configuration d’un exemple de relation.":::
-
-1. Après avoir configuré la ou les relations, sélectionnez **Suivant** et finalisez la configuration de votre mappage d’activité. Pour obtenir des étapes détaillées sur la création d’une activité, consultez [Définir une activité](activities.md).
-
-1. Exécutez vos mappages d’activité.
-
-1. Vos activités au niveau du contact seront maintenant visibles sur votre chronologie client.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Résultat final après configuration des activités du contact":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Filtrage de la chronologie des activités au niveau du contact
-
-Après avoir configuré un mappage d’activité au niveau du contact et l’avoir exécuté, la chronologie des activités de vos clients sera mise à jour. Elle inclut leurs ID ou noms, selon votre configuration *ContactProfile*, pour les activités concernées. Vous pouvez filtrer les activités par contacts dans la chronologie pour voir les contacts spécifiques qui vous intéressent. De plus, vous pouvez voir toutes les activités qui ne sont pas affectées à un contact spécifique en sélectionnant **Activités non mappées à un contact**.
-
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Options de filtrage disponibles pour les activités au niveau du contact.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 8ca30193ae4f4ef3ed9c60f2d694cd11fad46c76
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967652"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881781"
 ---
 # <a name="custom-machine-learning-models"></a>Modèles personnalisés Machine Learning
 
@@ -40,8 +40,6 @@ Les prédictions offrent des fonctionnalités pour créer de meilleures expérie
 
    > [!NOTE]
    > Les données sont transférées entre vos instances Customer Insights et les pipelines ou les services web Azure sélectionnés dans le workflow. Lorsque vous transférez des données vers un service Azure, assurez-vous que le service est configuré pour traiter les données comme il se doit et à partir de l’emplacement requis afin de respecter les exigences légales ou réglementaires pour votre entreprise.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 ## <a name="add-a-new-workflow"></a>Ajouter un nouveau workflow
 

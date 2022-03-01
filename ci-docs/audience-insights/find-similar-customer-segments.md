@@ -1,5 +1,5 @@
 ---
-title: Rechercher des clients similaires avec l’IA (contient une vidéo)
+title: Trouver des clients similaires avec l’IA
 description: Recherchez des segments de client similaires grâce à l’intelligence artificielle.
 ms.date: 06/25/2020
 ms.service: customer-insights
@@ -9,18 +9,16 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: de337ae989558c81fff25a6ff7cca01890ed306b
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934837"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034534"
 ---
 # <a name="similar-customers-preview"></a>Clients similaires (version préliminaire)
 
 Cette fonctionnalité vous permet de trouver des clients similaires dans votre clientèle en utilisant l’intelligence artificielle. Vous devez avoir créé au moins un segment pour utiliser cette fonction. L’élargissement des critères d’un segment existant permet de trouver des clients similaires à ce segment.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *Rechercher des clients similaires* utilise des moyens automatisés pour évaluer les données et faire des prévisions sur la base de ces données, et a donc la capacité d’être utilisé comme méthode de profilage, tel que ce terme est défini par le Règlement général sur la protection des données (« RGPD »). L’utilisation par le client de cette fonctionnalité pour traiter des données peut être soumise au RGPD ou à d’autres lois ou réglementations. Vous êtes tenu de vous assurer que votre utilisation de Dynamics 365 Customer Insights, notamment les prédictions, est conforme à toutes les lois et réglementations applicables, notamment les lois relatives à la confidentialité, aux données personnelles, aux données biométriques, à la protection des données et à la confidentialité des communications.

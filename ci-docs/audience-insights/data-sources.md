@@ -1,58 +1,64 @@
 ---
 title: Utiliser des sources de données pour ingérer des données
 description: Découvrez comment importer des données depuis des sources diverses.
-ms.date: 12/06/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ca979527c9cb8418e12af4a74513033047e4901c
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046585"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887891"
 ---
 # <a name="data-sources-overview"></a>Vue d’ensemble des sources de données
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 La fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights se connecte aux données d’un large éventail de sources. La connexion à une source de données est souvent appelée processus d’*ingestion de données*. Après avoir ingéré les données, vous pouvez les [unifier](data-unification.md) et agir dessus.
 
 ## <a name="add-a-data-source"></a>Ajouter une source de données
 
-Consultez les articles détaillés pour savoir comment ajouter une source de données, en fonction de l’option que vous choisissez.
+Reportez-vous aux articles détaillés sur la façon d’ajouter une source de données, selon l’option que vous choisissez.
 
-Vous pouvez ajouter les sources de données suivantes :
+Vous pouvez ajouter une source de données de trois manières principales :
 
-- [Connecteurs Power Query](connect-power-query.md)
-- [Common Data Model](connect-common-data-model.md)
-- [Lac Microsoft Dataverse](connect-dataverse-managed-lake.md)
-
-> [!NOTE]
-> Si vous utilisez la version d’essai, la section des méthodes d’importation comprend une option **Bibliothèque de données Customer Insights**. Choisissez cette option pour sélectionner un exemple de jeu de données disponible pour divers secteurs d’activité. Pour plus d’informations, consultez [Version d’essai de Dynamics 365 Customer Insights](../trial-signup.md).
+- [Grâce à des dizaines de connecteurs Power Query](connect-power-query.md)
+- [À partir d’un dossier Common Data Model](connect-common-data-model.md)
+- [À partir de votre propre lac Common Data Service](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Ajouter des données de sources de données locales
 
-L’ingestion de données à partir de sources de données locales dans Audience Insights est prise en charge en fonction des flux de données Microsoft Power Platform. Vous pouvez activer les flux de données dans Customer Insights en [fournissant l’URL de l’environnement Microsoft Dataverse](create-environment.md) lors de la configuration de l’environnement.
+L’ingestion de données de sources de données locales dans Audience Insights est prise en charge en fonction des flux de données Power Platform. Les flux de données peuvent être activés dans Customer Insights en [fournissant l’URL de l’environnement Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) lors de la configuration de l’environnement.
 
-Les sources de données créées après avoir associé un environnement Dataverse à Customer Insights utilisent les [flux de données Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) par défaut. Les flux de données prennent en charge la connectivité locale à l’aide de la passerelle de données. Vous pouvez supprimer et recréer des sources de données qui existaient avant l’association d’un environnement Dataverse [en utilisant les passerelles de données locales](/data-integration/gateway/service-gateway-app).
+Les sources de données créées après l’association d’un environnement Dataverse à Customer Insights utiliseront les [flux de données Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) par défaut. Les flux de données prennent en charge la connectivité locale à l’aide des passerelles de données. Supprimez et recréez les sources de données qui existaient avant l’association d’un environnement Dataverse pour utiliser les passerelles de données locales.
 
-Les passerelles de données d’un environnement Power BI ou Power Apps existant seront visibles et vous pourrez les réutiliser dans Customer Insights. La page des sources de données affiche des liens pour accéder à l’environnement Microsoft Power Platform dans lequel vous pouvez afficher et configurer les passerelles de données locales.
+Les passerelles de données d’un environnement Power BI ou Power Apps existant seront visibles et vous pourrez les réutiliser dans Customer Insights. La page des sources de données affiche des liens pour accéder à l’environnement Power Platform dans lequel vous pouvez afficher et configurer les passerelles de données locales.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Capture d’écran de la page des sources de données affichant des liens qui pointent vers l’environnement Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Évaluer les données ingérées
 
 Vous avez accès au nom de chaque source de données ingérée, à son statut et à la dernière date d’actualisation des données pour cette source de données. Vous pouvez trier la liste des sources de données par colonne.
 
 > [!div class="mx-imgBorder"]
-> ![Source de données ajoutée.](media/configure-data-datasource-added.png "Source de données ajoutée")
+> ![Source de données ajoutée](media/configure-data-datasource-added.png "Source de données ajoutée")
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+|Statut  |Description  |
+|---------|---------|
+|Opération réussie   |La source de données a été ingérée avec succès si une heure est mentionnée dans la colonne **Actualisé**.
+|Non démarré(e)   |La source de données n’a pas encore de données ingérées ou est toujours en mode brouillon.         |
+|Actualisation    |L’ingestion de données est en cours. Vous pouvez annuler cette opération en sélectionnant **Arrêter l’actualisation** dans la colonne **Actions**. L’arrêt de l’actualisation d’une source de données la ramène à son dernier état d’actualisation.       |
+|Échoué     |L’ingestion de données s’est heurtée à des erreurs.         |
 
-Le chargement des données peut prendre du temps. Après une actualisation réussie, les données ingérées peuvent être consultées à partir de la page **Entités**. Pour plus d’informations, voir [Entités](entities.md).
+Sélectionnez la valeur dans la colonne **Statut** de n’importe quelle source de données pour examiner plus de détails. Dans le volet **Détails de la progression**, développez **Sources de données**. Sélectionnez **Afficher les détails** pour obtenir plus d’informations sur le statut d’actualisation, notamment les détails de l’erreur et les mises à jour du processus en aval.
+
+Le chargement des données peut prendre un certain temps. Après une actualisation réussie, les données ingérées peuvent être consultées à partir de la page **Entités**. Pour plus d’informations, voir [Entités](entities.md).
 
 ## <a name="refresh-a-data-source"></a>Actualiser une source de données
 
@@ -62,9 +68,9 @@ Accédez à **Administration** > **Système** > [**Planification**](system.md#sc
 
 Pour actualiser une source de données à la demande, procédez comme suit :
 
-1. Dans les informations sur l’audience, accédez à **Données** > **Sources de données**.
+1. Dans les informations sur l’audience, accédez à **Données** > **Sources de données**
 
-2. Sélectionnez les points de suspension verticaux en regard de la source de données que vous souhaitez actualiser et sélectionnez **Actualiser** dans la liste déroulante.
+2. Sélectionnez les points de suspension verticaux en regard de la source de données que vous souhaitez actualiser, puis sélectionnez **Actualiser** dans la liste déroulante.
 
 3. La source de données est maintenant déclenchée pour une actualisation manuelle. Si vous actualisez une source de données, à la fois le schéma de l’entité et les données seront mis à jour pour toutes les entités spécifiées dans la source de données.
 
@@ -74,7 +80,7 @@ Pour actualiser une source de données à la demande, procédez comme suit :
 
 1. Dans les informations sur l’audience, accédez à **Données** > **Sources de données**.
 
-2. Sélectionnez les points de suspension verticaux en regard de la source de données que vous souhaitez supprimer et sélectionnez **Supprimer** dans le menu déroulant.
+2. Sélectionnez les points de suspension en regard de la source de données que vous souhaitez supprimer et sélectionnez **Supprimer** dans le menu déroulant.
 
 3. Confirmez votre suppression.
 

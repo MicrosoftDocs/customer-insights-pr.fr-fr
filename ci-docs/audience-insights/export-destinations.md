@@ -1,141 +1,97 @@
 ---
-title: Exporter des données de Customer Insights
-description: Gérez les exportations pour partager des données.
-ms.date: 11/01/2021
-ms.reviewer: mhart
+title: Destinations d'export
+description: Exportez des données et gérez les destinations d'exportation.
+ms.date: 07/21/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05485fc7def3d699d5179bcaa005ceb57024f840
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977964"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4643860"
 ---
-# <a name="exports-preview-overview"></a>Vue d’ensemble des exportations (version préliminaire)
+# <a name="export-destinations-preview"></a>Destinations d'export (aperçu)
 
-La page **Exportations** affiche toutes les exportations configurées. Les exportations partagent des données spécifiques avec diverses applications. Ils peuvent inclure des profils client, des entités, des schémas et des détails de mappage. Chaque exportation nécessite une [connexion, configurée par un administrateur, pour gérer l’authentification et l’accès](connections.md).
+La page **Destinations d'exportation** vous indique tous les emplacements que vous avez configurés afin d'y exporter des données. Vous pouvez également ajouter de nouvelles destinations pour l'exportation. De plus, elle affiche les options d'exportation actuellement disponibles. Obtenez un aperçu rapide, une description et découvrez ce que vous pouvez faire avec chaque option d'extensibilité. Exportez des profils, des mesures et des segments unifiés vers des applications prises en charge pertinentes pour votre entreprise.
 
-Accédez à **Données** > **Exportations** pour afficher la page des exportations. Tous les rôles d’utilisateur peuvent afficher les exportations configurées. Utilisez le champ de recherche dans la barre de commandes pour rechercher des exportations par leur nom, nom de connexion ou type de connexion.
+Aller à **Administrateur** > **Exporter des destinations** pour rechercher les options d'extensibilité suivantes :
 
-## <a name="export-types"></a>Types d’exportation
+- [Complément de carte client Dynamics 365](customer-card-add-in.md)
+- [Connecteur Facebook Ads Manager](export-facebook.md)
+- [Power Automateconnecteur](export-power-automate.md)
+- [Power Appsconnecteur](export-power-apps.md)
+- [Power BIconnecteur](export-power-bi.md)
+- [DotDigital](export-dotdigital.md)
+- [Dynamics 365 Sales](export-dynamics365-sales.md)
+- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
+- [Stockage Blob Azure](export-azure-blob-storage.md)
+- [Connecteur LiveRamp&reg;](export-liveramp.md)
+- [Bot pour Microsoft Teams](export-teams-bot.md)
+- [Mailchimp](export-mailchimp.md)
+- [API Customer Insights](apis.md)
 
-Il existe deux types principaux d’exportations :  
+## <a name="add-a-new-export-destination"></a>Ajouter une nouvelle destination d'exportation
 
-- **Les exportations de données de sortie** vous permettent d’exporter tout type d’entité disponible dans les informations sur l’audience. Les entités que vous sélectionnez pour l’exportation sont exportées avec tous les champs de données, métadonnées, schémas et détails de mappage. 
-- **Les exportations de segments** vous permettent d’exporter des entités de segment à partir des informations sur l’audience. Les segments représentent une liste de profils clients. Lors de la configuration de l’exportation, vous sélectionnez les champs de données inclus, en fonction du système cible vers lequel vous exportez les données. 
+Pour ajouter des destinations d'exportation, vous devez avoir des [autorisations administrateur](permissions.md). Si vous exportez vers des services Microsoft, nous supposons que les deux services appartiennent à la même organisation.
 
-### <a name="export-segments"></a>Exporter les segments
+1. Accédez à **Administration** > **Destinations d'exportation**.
 
-**Exportation de segments dans des environnements pour les comptes professionnels (B2B) ou les clients particuliers (B2C)**  
-La plupart des options d’exportation prennent en charge les deux types d’environnements. L’exportation de segments vers divers systèmes cibles a des exigences spécifiques. De manière générale, un membre du segment, le profil client, contient des informations de contact. Si c'est généralement le cas pour les segments construits sur les clients individuels (B2C), ce n'est pas nécessairement le cas pour les segments basés sur les comptes professionnels (B2B). 
+1. Passez à l'onglet **Mes destinations d'exportation**.
 
-**Segmenter les environnements d'exportation pour les comptes d'entreprise (B2B)**  
-- Les segments dans le cadre des environnements pour les comptes professionnels sont construits sur l’entité *Compte*. Pour exporter des segments de compte tels quels, le système cible doit prendre en charge les segments de compte purs. C’est le cas pour [LinkedIn](export-linkedin-ads.md) lorsque vous choisissez l’option **entreprise** lors de la définition de l’export.
-- Tous les autres systèmes cibles nécessitent des champs de l’entité de contact. Pour garantir que les segments de compte peuvent récupérer les données des contacts associés, votre définition de segment doit projeter les attributs de l’entité de contact. En savoir plus sur la façon de [configurer les segments et les attributs du projet](segment-builder.md).
+1. Sélectionnez **Ajouter une destination** pour créer une destination d'exportation.
 
-**Exportations de segments dans des environnements pour clients particuliers (B2C)**  
-- Les segments dans le cadre des environnements pour les clients individuels sont construits sur l’entité *profil de client unifié*. Chaque segment qui répond aux exigences des systèmes cibles (par exemple, une adresse e-mail) peut être exporté.
+1. Dans le volet **Ajouter une destination**, sélectionnez le **Type** de destination d'exportation dans le menu déroulant.
 
-**Limites sur les exportations de segments**  
-- Les systèmes cibles tiers peuvent limiter le nombre de profils clients que vous pouvez exporter. 
-- Pour les clients individuels, vous verrez le nombre réel de membres du segment lorsque vous sélectionnez un segment à exporter. Vous recevrez un avertissement si un segment est trop grand. 
-- Pour les comptes professionnels, vous verrez le nombre de comptes dans un segment ; cependant, le nombre de contacts pouvant être projetés ne s’affiche pas. Dans certains cas, cela pourrait conduire à ce que le segment exporté contienne en réalité plus de profils clients que le système cible n’en accepte. Le dépassement des limites des résultats des systèmes cibles ignorera l’exportation. 
+1. Fournissez les détails requis et sélectionnez **Suivant** pour créer la destination d'exportation.
 
-## <a name="set-up-a-new-export"></a>Configurer une nouvelle exportation  
-Pour configurer ou modifier une exportation, vous devez avoir des connexions disponibles. Les connexions dépendent de votre [rôle d’utilisateur](permissions.md) :
-- Les **administrateurs** ont accès à toutes les connexions. Ils peuvent également créer de nouvelles connexions lors de la configuration d’une exportation.
-- Les **contributeurs** peuvent avoir accès à des connexions spécifiques. Ils dépendent des administrateurs pour configurer et partager des connexions. La liste des exportations indique aux contributeurs s'ils peuvent modifier ou uniquement afficher une exportation dans la colonne **Vos autorisations**. Pour plus d’informations, rendez-vous sur [Autoriser les contributeurs à utiliser une connexion pour les exportations](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Les **spectateurs** ne peut afficher que les exportations existantes, pas les créer.
+Vous pouvez également sélectionner **Configurer** sur une vignette sur l'onglet **Découvrir**.
 
-### <a name="define-a-new-export"></a>Définir une nouvelle exportation
+## <a name="view-export-destinations"></a>Afficher les destinations d'exportation
 
-1. Accédez à **Données** > **Exportations**.
+Après avoir créé des destinations d'exportation, vous les trouverez dans un tableau sur l'onglet **Mes destinations d'exportation**. Ce tableau comporte trois colonnes :
 
-1. Sélectionnez **Ajouter une exportation** pour créer une nouvelle exportation.
+- **Nom complet** : le nom que vous avez entré lors de la création de la destination.
+- **Type** : Le type de destination d'exportation défini lors de la création de la destination.
+- **Créée** : la date à laquelle vous avez créé la destination.
 
-1. Dans le volet **Configurer l’exportation**, sélectionnez la connexion à utiliser. Les [Connexions](connections.md) sont gérées par les administrateurs. 
+## <a name="edit-an-export-destination"></a>Modifier une destination d'exportation
 
-1. Fournissez les détails nécessaires et sélectionnez **Enregistrer** pour créer l’exportation.
+1. Sélectionnez les points de suspension pour la destination d'exportation que vous souhaitez modifier.
 
-### <a name="define-a-new-export-based-on-an-existing-export"></a>Définir une nouvelle exportation basée sur une exportation existante
+   > [!div class="mx-imgBorder"]
+   > ![Ellipses verticales](media/export-destinations-page-ellipsis.png "Ellipses verticales")
 
-1. Accédez à **Données** > **Exportations**.
+1. Sélectionnez **Modifier** dans le menu déroulant.
 
-1. Dans la liste des exportations, sélectionnez l’exportation que vous souhaitez dupliquer.
+1. Modifiez les valeurs qui nécessitent une mise à jour et sélectionnez **Enregistrer**.
 
-1. Sélectionnez **Créer un doublon** dans la barre de commandes pour ouvrir le volet **Configurer l'exportation** avec les détails de l'exportation sélectionnée.
+## <a name="export-data-on-demand"></a>Exporter les données à la demande
 
-1. Vérifiez et adaptez l'exportation et sélectionnez **Enregistrer** pour créer une exportation.
+Après avoir configuré un connecteur pour une destination d'exportation, les exportations s'exécutent avec chaque [actualisation programmée](system.md#schedule-tab).
 
-### <a name="edit-an-export"></a>Modifier une exportation
+Pour exporter des données sans attendre une actualisation planifiée, accédez à l'onglet **Mes destinations d'exportation** sur **Administration** > **Exporter des destinations**.
 
-1. Accédez à **Données** > **Exportations**.
+> [!div class="mx-imgBorder"]
+> ![Ellipses verticales](media/export-destinations-page-ellipsis.png "Ellipses verticales")
 
-1. Dans la liste des exportations, sélectionnez l’exportation que vous souhaitez modifier.
+- Sélectionnez **Exporter** au-dessus de la liste pour exécuter l'exportation vers toutes les destinations d'exportation simultanément.
+- Sélectionnez les points de suspension (…) après un élément de liste, puis choisissez **Exporter** pour exécuter l'exportation pour une seule destination d'exportation.
 
-1. Sélectionnez **Modifier** dans la barre de commandes.
+## <a name="remove-an-export-destination"></a>Supprimer une destination d'exportation
 
-1. Modifiez les valeurs que vous souhaitez mettre à jour et sélectionnez **Enregistrer**.
+Pour supprimer une destination d'exportation, commencez par la page principale **Destinations d'exportation**.
 
-## <a name="view-exports-and-export-details"></a>Afficher les exportations et les détails de l’exportation
+1. Sélectionnez les points de suspension pour la destination d'exportation que vous souhaitez supprimer.
 
-Une fois les destinations d’exportation créées, elles sont répertoriées dans **Données** > **Exportations**. Tous les utilisateurs peuvent voir les données partagées et leur statut le plus récent.
+   > [!div class="mx-imgBorder"]
+   > ![Ellipses verticales](media/export-destinations-page-ellipsis.png "Ellipses verticales")
 
-1. Accédez à **Données** > **Exportations**.
+2. Sélectionnez **Supprimer** dans la liste déroulante.
 
-1. Les utilisateurs sans autorisations de modification sélectionnent **Afficher** au lieu de **Modifier** pour voir les détails de l’exportation.
-
-1. Le volet latéral montre la configuration d'une exportation. Sans autorisations de modification, vous ne pouvez pas modifier les valeurs. Sélectionnez **Fermer** pour revenir à la page des exportations.
-
-## <a name="schedule-and-run-exports"></a>Planifier et exécuter les exportations
-
-Chaque exportation que vous configurez comporte une planification d’actualisation. Lors d'une actualisation, le système recherche des données nouvelles ou mises à jour à inclure dans une exportation. Par défaut, les exportations sont exécutées dans le cadre de chaque [actualisation du système planifiée](system.md#schedule-tab). Vous pouvez personnaliser la planification d’actualisation ou la désactiver pour exécuter les exportations manuellement.
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
-
-Les planifications d'exportation dépendent de l'état de votre environnement. Si des mises à jour sont en cours sur les [dépendances](system.md#refresh-processes) lorsqu’une exportation planifiée doit commencer, le système finalisera d’abord les mises à jour, puis exécutera l’exportation. Vous pouvez consulter les informations relatives à la dernière actualisation d'une exportation dans la colonne **Actualisé**.
-
-### <a name="schedule-exports"></a>Panifier des exportations
-
-Vous pouvez définir des planifications d’actualisation personnalisées pour des exportations individuelles ou plusieurs exportations à la fois. La planification actuellement définie est répertoriée dans la colonne **Planifier** de la liste d'exportations. L'autorisation nécessaire pour modifier la planification est la même que pour [modifier et définir des exportations](export-destinations.md#set-up-a-new-export). 
-
-1. Accédez à **Données** > **Exportations**.
-
-1. Sélectionnez l'exportation à planifier.
-
-1. Sélectionnez **Planifier** dans la barre de commandes.
-
-1. Dans le volet **Planifier l'exportation**, définissez l'option **Planifier l'exécution** sur **Activé** pour exécuter l'exportation automatiquement. Définissez l'option sur **Désactivé** pour une actualisation manuelle.
-
-1. Pour que les exportations soient actualisées automatiquement, choisissez une valeur **Périodicité** et spécifiez les détails de celle-ci. Le temps défini s'applique à toutes les instances d'une périodicité. C'est le moment où l'actualisation d'une exportation doit commencer.
-
-1. Appliquez et activez vos modifications en sélectionnant **Enregistrer**.
-
-Lorsque vous modifiez la planification de plusieurs exportations, vous devez effectuer une sélection sous **Conserver ou remplacer les planifications** :
-- **Conserver les planifications individuelles** : conserver la planification précédemment définie pour les exportations sélectionnées et uniquement les désactiver ou les activer.
-- **Définir une nouvelle planification pour toutes les exportations sélectionnées** : remplacer les planifications existantes des exportations sélectionnées.
-
-### <a name="run-exports-on-demand"></a>Exécuter des exportations à la demande
-
-Pour exporter des données sans attendre une actualisation planifiée, accédez à **Données** > **Exportations**.
-
-- Pour exécuter toutes les exportations, sélectionnez **Tout exécuter** dans la barre de commandes. Cette action n'exécutera que les exportations ayant une planification active.
-- Pour exécuter une seule exportation, sélectionnez-la dans la liste et sélectionnez **Exécuter** dans la barre de commandes. C'est de cette manière que vous exécutez les exportations sans planification active. 
-
-## <a name="remove-an-export"></a>Supprimer une exportation
-
-1. Accédez à **Données** > **Exportations**.
-
-1. Sélectionnez l'exportation à supprimer.
-
-1. Sélectionnez **Supprimer** dans la barre de commandes.
-
-1. Confirmez la suppression en sélectionnant **Supprimer** sur l’écran de confirmation.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+3. Confirmez la suppression en sélectionnant **Supprimer** sur l'écran de confirmation.
