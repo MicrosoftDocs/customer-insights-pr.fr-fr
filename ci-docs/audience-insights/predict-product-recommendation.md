@@ -1,22 +1,21 @@
 ---
 title: Prédiction de recommandation de produit
 description: Prédisez les produits qu’un client est susceptible d’acheter ou avec lesquels interagir.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494536"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355748"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Prédiction de recommandation de produit (version préliminaire)
+# <a name="product-recommendation-prediction"></a>Prédiction de recommandation de produit
 
 Le modèle de recommandation de produit crée des ensembles de recommandations de produit prédictives. Les recommandations sont basées sur le comportement d’achat précédent et les clients ayant des modèles d’achat similaires. Vous pouvez créer des prédictions de recommandation de produit sur la page **Intelligence** > **Prédictions**. Sélectionnez **Mes prédictions** pour voir les autres prédictions que vous avez créées.
 
@@ -54,7 +53,7 @@ Si vous souhaitez essayer cette fonctionnalité mais que vous ne disposez pas de
 
 > [!NOTE]
 > - Le modèle nécessite l’historique des transactions de vos clients. La définition d’une transaction est assez flexible. Toute donnée qui décrit une interaction entre l’utilisateur et le produit peut fonctionner comme entrée. Par exemple, acheter un produit, suivre un cours ou assister à un événement.
-> - Une seule entité de l’historique des transactions peut être configurée actuellement. S’il existe plusieurs entités d’achat, associez-les dans Power Query avant l’ingestion de données.
+> - Une seule entité de l’historique des transactions peut être configurée actuellement. S’il existe plusieurs entités d’achats, réunissez-les dans Power Query avant l’ingestion des données.
 > - Si la commande et les détails de la commande sont des entités différentes, associez-les avant de les utiliser dans le modèle. Le modèle ne fonctionne pas avec uniquement un ID de commande ou un ID de reçu dans une entité.
 
 
@@ -62,7 +61,7 @@ Si vous souhaitez essayer cette fonctionnalité mais que vous ne disposez pas de
 
 1. Dans Customer Insights, accédez à **Intelligence** > **Prédictions**.
 
-1. Sélectionnez la vignette **Modèle de recommandations de produits (version préliminaire)** et sélectionnez **Utiliser ce modèle**.
+1. Sélectionnez la vignette **Modèle de recommandation de produit** et sélectionnez **Utiliser ce modèle**.
    > [!div class="mx-imgBorder"]
    > ![Vignette de modèle de recommandation de produit avec le bouton Utiliser ce modèle.](media/product-recommendation-usethismodel.PNG "Vignette de modèle de recommandation de produit avec le bouton Utiliser ce modèle")
 
@@ -79,11 +78,11 @@ Si vous souhaitez essayer cette fonctionnalité mais que vous ne disposez pas de
 1. Définissez le **Nombre de produits** que vous souhaitez recommander à un client. Cette valeur dépend de la manière dont votre méthode de livraison remplit les données. Si vous pouvez recommander trois produits, définissez cette valeur en conséquence.
    
    >[!TIP]
-   > Vous pouvez sélectionner **Enregistrer et fermer** à tout moment pour enregistrer la prédiction en tant que brouillon. Vous trouverez le brouillon de prédiction dans l’onglet **Mes prédictions**.
+   > Vous pouvez sélectionner **Enregistrer le brouillon** à tout moment pour enregistrer la prédiction en tant que brouillon. Vous trouverez le brouillon de prédiction dans l’onglet **Mes prédictions**.
 
-1. Choisissez si vous souhaitez **Suggérer des produits que les clients ont récemment achetés**.
+1. Choisissez si vous souhaitez inclure les produits que les clients ont récemment achetés dans le champ **Achats répétés attendus**.
 
-1. Si vous avez choisi de *ne pas* recommander des produits récemment achetés, définissez la **Fenêtre de consultation**. Ce paramètre spécifie le délai d’exécution que le modèle considère avant de recommander à nouveau le produit à l’utilisateur. Par exemple, indiquez qu’un client achète un ordinateur portable tous les deux ans. Cette fenêtre examinera l’historique des achats sur les deux dernières années, et si elle trouve un article, celui-ci sera filtré des recommandations.
+1. Définissez la **Fenêtre de consultation**. Ce paramètre spécifie le délai d’exécution que le modèle considère avant de recommander à nouveau le produit à l’utilisateur. Par exemple, indiquez qu’un client achète un ordinateur portable tous les deux ans. Cette fenêtre examinera l’historique des achats sur les deux dernières années, et si elle trouve un article, celui-ci sera filtré des recommandations.
 
 1. Sélectionnez **Suivant**.
 
@@ -188,7 +187,7 @@ Parfois, seuls certains produits sont utiles ou appropriés au type de prédicti
         - **Similitude de clients** : historiquement, un produit recommandé a été acheté par d’autres clients qui présentent des modèles d’achat similaires. Par exemple, les _Écouteurs Surface 2_ ont été recommandés à John, car Jennifer et Brad ont récemment acheté des _Écouteurs Surface 2_. Le modèle pense que John est similaire à Jennifer et Brad, car ils ont historiquement eu des modèles d’achat similaires.
         - **Similitude de produits** : un produit recommandé est similaire à d’autres produits que le client avait précédemment achetés. Le modèle considère que deux produits sont similaires s’ils ont été achetés ensemble ou par des clients similaires. Par exemple, quelqu’un reçoit une recommandation pour un _Lecteur de stockage USB_, car il a précédemment acheté un _Adaptateur USB-C vers USB_ et le modèle estime que le _Lecteur de stockage USB_ est similaire à l’_Adaptateur USB-C vers USB_ sur la base des modèles d’achat historiques.
 
-        Chaque recommandation de produits est influencée par un ou plusieurs de ces facteurs. Le pourcentage de recommandations dans lesquelles chaque facteur d’influence a joué un rôle est visualisé dans un graphique. Dans l'exemple suivant, 100 % des recommandations ont été influencées par les transactions passées, 60 % par la similitude de clients et 22 % par la similitude de produits. Pointez la souris sur les barres du graphique pour voir le pourcentage exact dans lequel les facteurs d’influence ont contribué.
+        Chaque recommandation de produits est influencée par un ou plusieurs de ces facteurs. Le pourcentage de recommandations dans lesquelles chaque facteur d’influence a joué un rôle est visualisé dans un graphique. Dans l’exemple suivant, 100 % des recommandations ont été influencées par les transactions passées, 60 % par la similitude de clients et 22 % par la similitude de produits. Pointez la souris sur les barres du graphique pour voir le pourcentage exact dans lequel les facteurs d’influence ont contribué.
 
         > [!div class="mx-imgBorder"]
         > ![Principaux facteurs de recommandation.](media/product-recommendation-keyrecommendationfactors.png "Facteurs de recommandation clés appris par le modèle pour générer des recommandations de produits")
@@ -208,7 +207,7 @@ Parfois, seuls certains produits sont utiles ou appropriés au type de prédicti
 
 ## <a name="manage-predictions"></a>Gérer les prédictions
 
-Il est possible d'optimiser, de dépanner, d'actualiser ou de supprimer des prédictions. Consultez un rapport d'utilisation des données d'entrée pour découvrir comment rendre un prédiction plus rapide et plus fiable. Pour plus d’informations, consultez [Gérer les prédictions](manage-predictions.md).
+Il est possible d’optimiser, de dépanner, d’actualiser ou de supprimer des prédictions. Consultez un rapport d’utilisation des données d’entrée pour découvrir comment rendre un prédiction plus rapide et plus fiable. Pour plus d’informations, consultez [Gérer les prédictions](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

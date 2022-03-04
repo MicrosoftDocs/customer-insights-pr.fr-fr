@@ -5,16 +5,15 @@ author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
 ms.date: 11/12/2020
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: bff954cb1eab63ceb61e829a4e7b340f3fb0d7e7
-ms.sourcegitcommit: 302910e39153f4b5c850ed9b1a62cb867e4df358
+ms.openlocfilehash: 56048037a397bf153d54f9e1c8b1664219557ddf
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "6218890"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225283"
 ---
 # <a name="engagement-insights-capability-glossary"></a>Glossaire de la fonction Informations sur l’engagement
 

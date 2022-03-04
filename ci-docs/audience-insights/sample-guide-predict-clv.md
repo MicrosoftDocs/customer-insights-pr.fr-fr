@@ -3,26 +3,25 @@ title: Exemple de guide Prédiction de la valeur de durée de vie du client
 description: Utilisez cet exemple de guide pour essayer le modèle de prédiction de la valeur de durée de vie du client.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306346"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354828"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Exemple de guide Prédiction de la valeur de durée de vie du client (CLV)
 
-Ce guide vous présente un exemple de bout en bout de la prédiction de la valeur de durée de vie du client (CLV) dans Customer Insights à l'aide d'exemples de données.
+Ce guide vous présente un exemple de bout en bout de la prédiction de la valeur de durée de vie du client (CLV) dans Customer Insights à l’aide d’exemples de données.
 
 ## <a name="scenario"></a>Scénario
 
-Contoso est une entreprise qui produit du café et des machines à café de haute qualité. L'entreprise vend les produits par l'intermédiaire du site web Contoso Coffee. L'entreprise veut comprendre la valeur (revenus) que ses clients peuvent générer au cours des 12 prochains mois. Le fait de connaître la valeur attendue de leurs clients au cours des 12 prochains mois les aidera à orienter leurs efforts marketing vers les clients à forte valeur ajoutée.
+Contoso est une entreprise qui produit du café et des machines à café de haute qualité. Ils vendent les produits via leur site web Contoso Coffee. L’entreprise veut comprendre la valeur (revenus) que ses clients peuvent générer au cours des 12 prochains mois. Le fait de connaître la valeur attendue de leurs clients au cours des 12 prochains mois les aidera à orienter leurs efforts marketing vers les clients à forte valeur ajoutée.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -31,7 +30,7 @@ Contoso est une entreprise qui produit du café et des machines à café de haut
 
 ## <a name="task-1---ingest-data"></a>Tâche 1 : ingérer les données
 
-Consultez les articles [à propos de l'ingestion de données](data-sources.md) et l'[importation de sources de données à l'aide de connecteurs Power Query](connect-power-query.md). Les informations suivantes supposent que vous vous êtes familiarisé avec l’ingestion de données en général.
+Consultez les articles [à propos de l’ingestion de données](data-sources.md) et [importation de sources de données à l’aide connecteurs Power Query](connect-power-query.md). Les informations suivantes supposent que vous vous êtes familiarisé avec l’ingestion de données en général.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingérer les données client d’une plateforme d’eCommerce
 
@@ -103,7 +102,7 @@ Consultez les articles [à propos de l'ingestion de données](data-sources.md) e
 
 ## <a name="task-2---data-unification"></a>Tâche 2 : unification des données
 
-Après avoir ingéré les données, nous commençons maintenant le processus d'unification des données pour créer un profil client unifié. Pour plus d’informations, consultez [Unification des données](data-unification.md).
+Après avoir ingéré les données, nous commençons maintenant le processus d’unification des données pour créer un profil client unifié. Pour plus d’informations, consultez [Unification des données](data-unification.md).
 
 ### <a name="map"></a>Mappage
 
@@ -164,24 +163,24 @@ Après avoir ingéré les données, nous commençons maintenant le processus d'u
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Tâche 3 – Configurer la prédiction de la valeur de durée de vie du client
 
-Une fois les profils client unifiés en place, nous pouvons désormais exécuter la prédiction de la valeur de durée de vie du client. Pour obtenir les étapes détaillées, voir [Prédiction de la valeur de durée de vie du client (aperçu)](predict-customer-lifetime-value.md).
+Une fois les profils client unifiés en place, nous pouvons désormais exécuter la prédiction de la valeur de durée de vie du client. Pour les étapes détaillées, voir [Prédiction de la valeur de durée de vie du client](predict-customer-lifetime-value.md).
 
 1. Accédez à **Intelligence**  > **Prédictions** et sélectionnez le **Modèle de valeur de la durée de vie du client**.
 
 1. Parcourez les informations dans le volet latéral et sélectionnez **Commencer**.
 
-1. Nommez le modèle **Prédiction de valeur de durée de vie du client OOB eCommerce** et l'entité de sortie **OOBeCommerceCLVPediction**.
+1. Nommez le modèle **Prédiction de valeur de durée de vie du client OOB eCommerce** et l’entité de sortie **OOBeCommerceCLVPediction**.
 
 1. Définissez les préférences de modèle pour le modèle CLV :
-   - **Période de prédiction** : **12 mois ou 1 an**. Ce paramètre définit jusqu'à quand prédire la valeur de durée de vie du client.
-   - **Clients actifs** : spécifiez ce que les clients actifs signifient pour votre entreprise. Définissez le délai historique au cours duquel un client doit avoir effectué au moins une transaction pour être considéré comme actif. Le modèle ne prédira la Valeur de la durée de vie du client que pour les clients actifs. Choisissez entre laisser le modèle calculer la période en fonction de l'historique des données de transaction ou fournir un délai spécifique. Dans cet exemple de guide, nous **laissons le modèle calculer l'intervalle d'achat**, qui est l'option par défaut.
+   - **Période de prédiction** : **12 mois ou 1 an**. Ce paramètre définit jusqu’à quand prédire la valeur de durée de vie du client.
+   - **Clients actifs** : spécifiez ce que les clients actifs signifient pour votre entreprise. Définissez le délai historique au cours duquel un client doit avoir effectué au moins une transaction pour être considéré comme actif. Le modèle ne prédira la Valeur de la durée de vie du client que pour les clients actifs. Choisissez entre laisser le modèle calculer la période en fonction de l’historique des données de transaction ou fournir un délai spécifique. Dans cet exemple de guide, nous **laissons le modèle calculer l’intervalle d’achat**, qui est l’option par défaut.
    - **Clients à valeur ajoutée** : définissez les clients à valeur ajoutée en tant que centile des clients qui génèrent le plus de revenus. Le modèle utilise cette entrée pour fournir des résultats qui correspondent à la définition que donne votre entreprise des clients à valeur ajoutée. Vous pouvez choisir de laisser le modèle définir les clients à valeur ajoutée. Il utilise une règle heuristique qui dérive le centile. Vous pouvez également définir les clients à valeur ajoutée en tant que centile des clients qui génèreront le plus de revenus. Dans cet exemple de guide, nous définissons manuellement les clients à valeur ajoutée comme **Premiers 30 % des clients payants actifs** et sélectionnez **Suivant**.
 
-    :::image type="content" source="media/clv-model-preferences.png" alt-text="Étape des préférences dans l'expérience guidée pour le modèle CLV.":::
+    :::image type="content" source="media/clv-model-preferences.png" alt-text="Étape des préférences dans l’expérience guidée pour le modèle CLV.":::
 
-1. Dans l'étape **Données requises**, sélectionnez **Ajouter des données** pour fournir l'historique des données des transactions.
+1. Dans l’étape **Données requises**, sélectionnez **Ajouter des données** pour fournir l’historique des données des transactions.
 
-1. Ajoutez l'entité **eCommercePurchases : eCommerce** et mapper les attributs requis par le modèle :
+1. Ajoutez l’entité **eCommercePurchases : eCommerce** et mapper les attributs requis par le modèle :
    - ID de la transaction : eCommerce.eCommercePurchases.PurchaseId
    - Date de la transaction : eCommerce.eCommercePurchases.PurchasedOn
    - Montant de la transaction : eCommerce.eCommercePurchases.TotalPrice
@@ -189,19 +188,19 @@ Une fois les profils client unifiés en place, nous pouvons désormais exécuter
 
 1. Cliquez sur **Suivant**.
 
-1. Configurez la relation entre l'entité **eCommercePurchases : eCommerce** et **eCommerceContacts : eCommerce**.
+1. Configurez la relation entre l’entité **eCommercePurchases : eCommerce** et **eCommerceContacts : eCommerce**.
 
-1. L'étape **Données supplémentaires (facultatif)** vous permet d'ajouter d'autres données d’activité client. Ces données peuvent aider à obtenir plus d'informations sur les interactions des clients avec votre entreprise, ce qui peut contribuer à la CLV. L'ajout d'interactions client clés telles que les journaux Web, les journaux service clientèle ou l'historique du programme de récompenses peut améliorer la précision des prédictions. Sélectionnez **Ajouter des données** pour inclure d'autres données sur l'activité des clients.
+1. L’étape **Données supplémentaires (facultatif)** vous permet d’ajouter d’autres données d’activité client. Ces données peuvent aider à obtenir plus d’informations sur les interactions des clients avec votre entreprise, ce qui peut contribuer à la CLV. L’ajout d’interactions client clés telles que les journaux Web, les journaux service clientèle ou l’historique du programme de récompenses peut améliorer la précision des prédictions. Sélectionnez **Ajouter des données** pour inclure d’autres données sur l’activité des clients.
 
-1. Ajoutez l'entité d'activité client et mappez ses noms de champs aux champs correspondants requis par le modèle :
-   - Entité d'activité client : Reviews:Website
+1. Ajoutez l’entité d’activité client et mappez ses noms de champs aux champs correspondants requis par le modèle :
+   - Entité d’activité client : Reviews:Website
    - Clé primaire : Website.Reviews.ReviewId
    - Horodatage : Website.Reviews.ReviewDate
-   - Événement (nom de l'activité) : Website.Reviews.ActivityTypeDisplay
+   - Événement (nom de l’activité) : Website.Reviews.ActivityTypeDisplay
    - Détails (montant ou valeur) : Website.Reviews.ReviewRating
 
-1. Sélectionnez **Suivant** et configurez l'activité et la relation entre les données de transaction et les données client :  
-   - Type d'activité : Choisir un type d'activité existant
+1. Sélectionnez **Suivant** et configurez l’activité et la relation entre les données de transaction et les données client :  
+   - Type d’activité : Choisir un type d’activité existant
    - Étiquette de l’activité : Évaluation
    - Étiquette correspondante : Website.Reviews.UserId
    - Entité client : eCommerceContacts:eCommerce
@@ -209,7 +208,7 @@ Une fois les profils client unifiés en place, nous pouvons désormais exécuter
 
 1. Sélectionnez **Suivant** pour définir la planification du modèle.
 
-   Le modèle doit s'entraîner régulièrement pour apprendre de nouveaux modèles lorsque de nouvelles données sont ingérées. Pour cet exemple, choisissez **Mensuel**.
+   Le modèle doit s’entraîner régulièrement pour apprendre de nouveaux modèles lorsque de nouvelles données sont ingérées. Pour cet exemple, choisissez **Mensuel**.
 
 1. Une fois tous les détails passés en revue, sélectionnez **Enregistrer et exécuter**.
 
@@ -219,7 +218,7 @@ Laissez le modèle terminer la formation et la notation des données. Ensuite, v
 
 ## <a name="task-5---create-a-segment-of-high-value-customers"></a>Tâche 5 – Créer un segment de clients à valeur ajoutée
 
-L'exécution du modèle crée une nouvelle entité, qui est répertoriée dans **Données** > **Entités**. Vous pouvez créer un nouveau segment de clientèle basé sur l'entité créée par le modèle.
+L’exécution du modèle crée une nouvelle entité, qui est répertoriée dans **Données** > **Entités**. Vous pouvez créer un nouveau segment de clientèle basé sur l’entité créée par le modèle.
 
 1. Accédez à **Segments**. 
 
@@ -227,13 +226,13 @@ L'exécution du modèle crée une nouvelle entité, qui est répertoriée dans *
 
    ![Création d’un segment avec la sortie du modèle.](media/segment-intelligence.png)
 
-1. Sélectionnez l'entité **OOBeCommerceCLVPediction** et définissez le segment :
+1. Sélectionnez l’entité **OOBeCommerceCLVPediction** et définissez le segment :
   - Champ : CLVScore
   - Opérateur : supérieur à
   - Valeur : 1500
 
 1. Sélectionnez **Vérifier** et **Enregistrer** le segment.
 
-Vous disposez désormais d'un segment qui identifie les clients qui devraient générer plus de 1 500 $ de revenus au cours des 12 prochains mois. Ce segment est mis à jour dynamiquement si d'autres données sont ingérées.
+Vous disposez désormais d’un segment qui identifie les clients qui devraient générer plus de 1 500 $ de revenus au cours des 12 prochains mois. Ce segment est mis à jour dynamiquement si d’autres données sont ingérées.
 
 Pour plus d’informations, consultez [Créer et gérer les segments](segments.md).

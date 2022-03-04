@@ -5,16 +5,15 @@ ms.reviewer: mhart
 ms.author: mkisel
 author: mkisel11
 ms.date: 7/15/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: db6531a96177a2c3ba9b6236bdff88e79e794727
-ms.sourcegitcommit: 473ef26f9ac36609245396a69d52b13d46322ee5
+ms.openlocfilehash: 75ce776fd5be1c426508ae6f5c239c86bdd3ec39
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "6616460"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230677"
 ---
 # <a name="recognize-web-events-from-previously-authenticated-visitors"></a>Reconnaître les événements web des visiteurs déjà authentifiés
 

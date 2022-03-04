@@ -2,18 +2,17 @@
 title: Utiliser des données de consentement dans des prédictions prêtes à l’emploi
 description: Apprenez à créer des modèles de prédiction qui utilisent des données de contenu pour augmenter la précision des prédictions concernant l’attrition clients ou la valeur à vie des clients.
 ms.date: 10/30/2021
-ms.service: customer-insights
 ms.topic: how-to
 author: dimutako
 ms.author: dimutako
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 879ee79bac259f7582915106e01448052158e006
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: b8fedb298c4324539c8c6a744a90f102e9f6f698
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790758"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232455"
 ---
 # <a name="use-consent-data-in-prediction-models"></a>Utilisez des données de consentement dans des modèles de prédiction
 

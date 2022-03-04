@@ -4,22 +4,21 @@ author: m-hartmann
 description: Familiarisez-vous avec l’expérience de première exécution de Dynamics 365 Customer Insights et explorez ses fonctionnalités.
 ms.author: mhart
 ms.date: 10/05/2021
-ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645683"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350128"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Commencez après avoir acheté Customer Insights
 
 Cet article explique comment faire vos premiers pas dans Dynamics 365 Customer Insights une fois que votre organisation a acheté un abonnement. Si vous souhaitez acheter Customer Insights, nos options de contact sont répertoriées sur le [site Web Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Après avoir acheté une licence d’abonnement pour Customer Insights, l’administrateur global du client Microsoft 365 reçoit un e-mail l’invitant à créer l’environnement. 
+Après l’achat d’une licence d’abonnement pour Customer Insights, l’administrateur général du locataire Microsoft 365 reçoit un e-mail l’invitant à créer l’environnement. 
 
 Customer Insights est concédé sous licence par client et inclut plusieurs fonctionnalités. Vous pouvez acheter plus de capacité et de licences pour augmenter le quota par défaut. 
 - [Vue d’ensemble de la tarification](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -40,10 +39,7 @@ L’expérience de première exécution vous aide à choisir votre objectif init
 
 ## <a name="create-your-own-environment"></a>Créez votre propre environnement
 
-Après votre première connexion, vous verrez un environnement avec des exemples de données. Vous pouvez utiliser ces données pour explorer les fonctionnalités et vous familiariser avec l’application. Pour utiliser vos propres données, vous devez créer un environnement dans la fonctionnalité dans laquelle vous souhaitez travailler.
-
-- [Créez un environnement dans les informations d’audience.](audience-insights/get-started-paid.md)
-- [Créez un environnement dans les informations d’engagement.](engagement-insights/create-new-environment.md) 
+Après votre première connexion, vous verrez un environnement avec des exemples de données. Vous pouvez utiliser ces données pour explorer les fonctionnalités et vous familiariser avec l’application. Pour utiliser vos propres données, vous devez [créer un environnement](audience-insights/get-started-paid.md).
 
 
 

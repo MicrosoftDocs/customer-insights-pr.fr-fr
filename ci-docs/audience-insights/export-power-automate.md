@@ -1,20 +1,19 @@
 ---
 title: Connecteur Power Automate | Microsoft Docs
 description: Créer des flux dans Microsoft Power Automate de Dynamics 365 Customer Insights.
-ms.date: 08/03/2020
-ms.service: customer-insights
+ms.date: 06/24/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+ms.topic: how-to
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: dc9bbe22b7f10cf92f06cae18fbece9808b87dce
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405636"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226711"
 ---
 # <a name="power-automate-connector-preview"></a>Connecteur Power Automate (préversion)
 
@@ -22,28 +21,35 @@ Déclenchez des événements spécifiques automatiques lorsque vos données sont
 
 ## <a name="power-automate-triggers"></a>Déclencheurs Power Automate
 
-Vous pouvez utiliser une variété de déclencheurs qui vous permettent de créer des flux pour automatiser des tâches répétitives, telles que des notifications ou des actions plus avancées. 
+Utilisez des déclencheurs pour créer des flux de cloud et automatiser des tâches répétitives, telles que des notifications ou des actions plus avancées. 
 
 - Déclencher quand une actualisation source de données échoue. 
 - Déclencher quand une actualisation source de données réussit.
-- Déclencher lorsqu'un seuil est franchi sur un segment. Le déclencheur se limite à franchir le seuil.
-- Déclencher lorsqu'un seuil est franchi sur une mesure d'activité. Le déclencheur se limite à franchir le seuil.
-- Déclencher quand une actualisation complète des (sources de données, segments, mesures...) est terminée.
-- Déclencher lorsqu'une actualisation du processus d'unification (mappage, correspondance, fusion) est terminée.
+- Déclencher lorsqu’un seuil est franchi sur un segment. Le déclencheur se limite à franchir le seuil.
+- Déclencher lorsqu’un seuil est franchi sur une mesure d’activité. Seules les mesures d’entreprise sans dimension sont prises en charge. Le déclencheur se limite à franchir le seuil.
+- Déclencher quand une actualisation complète (sources de données, segments, mesures...) est terminée.
+- Déclencher lorsqu’une actualisation du processus d’unification (mappage, correspondance, fusion) est terminée.
 
-[Configurer vos déclencheurs dans Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
+[Configurer vos déclencheurs dans Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
 ## <a name="power-automate-actions"></a>Actions Power Automate
-Le connecteur Power Automate fournit d'autres actions que les déclencheurs disponibles. Pour plus d’informations, voir le [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
 
-## <a name="create-a-power-automate-flow-in-audience-insights"></a>Créer un flux Power Automate dans Audience Insights
+Le connecteur Power Automate fournit d’autres actions que les déclencheurs disponibles. Pour plus d’informations, voir le [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
 
-1. Dans Audience Insights, accédez à **Administration** > **Système**.
+## <a name="create-a-power-automate-flow"></a>Créer un flux Power Automate
 
-1. Dans la page **Système**, sélectionnez **Statut**.
+1. Dans les informations sur l’audience, accédez à **Administration** > **Destinations d’exportation**.
 
-1. Dans la section **Source de données**, sélectionnez **Flux** et sélectionnez **Créer un flux** dans la liste déroulante.
-   > [!div class="mx-imgBorder"]
-   > ![Le connecteur Power Automate affichant Créer une action de flux](media/power-automate-connector-create-flow.png "Le connecteur Power Automate affichant Créer une action de flux")
+1. Sur la vignette **Power Automate**, sélectionnez **Configurer**.
 
-1. Dans Power Automate, sélectionnez l'un des déclencheurs disponibles pour créer votre flux préféré. Si vous créez votre premier flux, vous devrez vous authentifier avec le connecteur Power Automate en premier.
+1. Connecteur Customer Insights (version préliminaire) dans les applications Power Automate. **Connectez-vous** à Power Automate.
+
+1. Choisissez l’un des déclencheurs disponibles et ajoutez d’autres étapes à votre nouveau flux. Pour plus d’informations, voir [Créer un flux de cloud dans Power Automate](/power-automate/get-started-logic-flow).
+
+Exemples d’utilisation des flux : 
+- Publiez un message à un canal Microsoft Teams si une actualisation de source de données échoue. 
+- Envoyez un e-mail aux propriétaires des données lorsqu’un seuil sur un segment est franchi.
+
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

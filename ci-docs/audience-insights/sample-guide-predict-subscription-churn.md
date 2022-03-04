@@ -3,26 +3,28 @@ title: Exemple de guide de prédiction de l’attrition des abonnements
 description: Utilisez cet exemple de guide pour essayer le modèle de prédiction de l’attrition des abonnements prédéfini.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306300"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355610"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Exemple de guide de prédiction de l’attrition des abonnements (version préliminaire)
+# <a name="subscription-churn-prediction-sample-guide"></a>Exemple de guide de prédiction de l’attrition des abonnements
 
 Nous vous présenterons un exemple de bout en bout de prédiction de l’attrition des abonnements en utilisant les exemples de données fournis ci-dessous. 
 
 ## <a name="scenario"></a>Scénario
 
-Contoso est une entreprise qui produit du café et des machines à café de haute qualité, qu'elle vend via son site web Contoso Coffee. Elle a récemment lancé un système d’abonnement pour que ses clients achètent régulièrement du café. Son objectif est de comprendre quels clients abonnés risquent d’annuler leur abonnement dans les prochains mois. Savoir lesquels de ses clients **sont susceptibles de se tourner vers la concurrence**, peut l’aider à économiser ses efforts marketing en se concentrant sur leur fidélisation.
+Contoso est une société qui produit du café et des machines à café de haute qualité qu’elle vend sur son site web Contoso Coffee. Elle a récemment lancé un système d’abonnement pour que ses clients achètent régulièrement du café. Son objectif est de comprendre quels clients abonnés risquent d’annuler leur abonnement dans les prochains mois. Savoir lesquels de ses clients **sont susceptibles de se tourner vers la concurrence**, peut l’aider à économiser ses efforts marketing en se concentrant sur leur fidélisation.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -31,7 +33,7 @@ Contoso est une entreprise qui produit du café et des machines à café de haut
 
 ## <a name="task-1---ingest-data"></a>Tâche 1 : ingérer les données
 
-Passez en revue les articles sur [l’ingestion de données](data-sources.md) et [l’importation de sources de données à l’aide des connecteurs Power Query](connect-power-query.md) en particulier. Les informations suivantes supposent que vous vous êtes familiarisé avec l’ingestion de données en général. 
+Consultez les articles [à propos de l’ingestion de données](data-sources.md) et [importation de sources de données à l’aide connecteurs Power Query](connect-power-query.md) spécifiquement. Les informations suivantes supposent que vous vous êtes familiarisé avec l’ingestion de données en général. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingérer les données client d’une plateforme d’eCommerce
 
@@ -168,7 +170,7 @@ Une fois les données ingérées, nous commençons maintenant le processus de **
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Tâche 3 : configurer la prédiction de l’attrition des abonnements
 
-Une fois les profils clients unifiés en place, nous pouvons maintenant exécuter la prédiction de l’attrition des abonnements. Pour connaître les étapes détaillées, consultez l’article [Prédiction de l’attrition des abonnements (version préliminaire)](predict-subscription-churn.md). 
+Une fois les profils clients unifiés en place, nous pouvons maintenant exécuter la prédiction de l’attrition des abonnements. Pour connaître les étapes détaillées, consultez l’article [Prédiction du taux de désabonnement](predict-subscription-churn.md). 
 
 1. Accédez à **Intelligence** > **Découvrir** et choisissez le **Modèle d’attrition clients**.
 

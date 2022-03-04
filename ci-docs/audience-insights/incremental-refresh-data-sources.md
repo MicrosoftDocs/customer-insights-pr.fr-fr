@@ -1,22 +1,24 @@
 ---
-title: Actualisation incrémentielle des sources de données basées sur Power Query
-description: Actualisez les données nouvelles et mises à jour pour les sources de données volumineuses basées sur Power Query.
+title: Actualisation incrémentielle de sources de données Power Query
+description: Actualisez les données nouvelles et mises à jour des grandes sources de données basées sur Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900252"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353678"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Actualisation incrémentielle pour les sources de données basées sur Power Query
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Actualisation incrémentielle de sources de données basées sur Power Query
 
 Cet article explique comment configurer l’actualisation incrémentielle pour les sources de données basées sur Power Query.
 
@@ -28,7 +30,7 @@ L’actualisation incrémentielle des sources de données offre les avantages su
 
 ## <a name="configure-incremental-refresh"></a>Configurer l’actualisation incrémentielle
 
-Les informations sur l’audience permettent une actualisation incrémentielle des sources de données importées via Power Query qui prennent en charge l’ingestion incrémentielle. Par exemple, des bases de données SQL Azure avec des champs de date et d’heure, qui indiquent quand les enregistrements de données ont été mis à jour pour la dernière fois.
+Le complément Informations sur l’audience permet une actualisation incrémentielle des sources de données importées via Power Query qui prennent en charge l’ingestion incrémentielle. Par exemple, des bases de données SQL Azure avec des champs de date et d’heure, qui indiquent quand les enregistrements de données ont été mis à jour pour la dernière fois.
 
 1. [Créer une source de données basée sur Power Query](connect-power-query.md).
 

@@ -3,20 +3,24 @@ title: Prédiction de la valeur de la durée de vie du client
 description: Prévoyez le potentiel de revenus des clients actifs à l’avenir.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035366"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355786"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Prédiction de la valeur de durée de vie du client (version préliminaire)
+# <a name="customer-lifetime-value-clv-prediction"></a>Prédiction de la valeur de la durée de vie du client
 
 Prévoyez la valeur potentielle (revenus) que les clients actifs individuels apporteront à votre entreprise sur une période future définie. Cette fonctionnalité peut vous aider à atteindre divers objectifs : 
 - Identifier les clients à forte valeur ajoutée et traitez ces informations
@@ -65,7 +69,7 @@ Les données suivantes sont obligatoires et, lorsqu’elles sont marquées comme
     - Exhaustivité des données : moins de 20 % de valeurs manquantes dans les champs obligatoires des données d’entrée   
 
 > [!NOTE]
-> - Le modèle nécessite l’historique des transactions de vos clients. Une seule entité de l’historique des transactions peut être configurée actuellement. S’il existe plusieurs entités d’achat/de transaction, vous pouvez les associer dans Power Query avant l’ingestion de données.
+> - Le modèle nécessite l’historique des transactions de vos clients. Une seule entité de l’historique des transactions peut être configurée actuellement. S’il existe plusieurs entités d’achats/transactions, vous pouvez les réunir dans Power Query avant l’ingestion des données.
 > - Pour obtenir des données d’activité client supplémentaires (facultatif), cependant, vous pouvez ajouter autant d’entités d’activité client que vous le souhaitez pour que le modèle les prenne en compte.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Créer une prédiction de la valeur de durée de vie du client
@@ -74,7 +78,7 @@ Les données suivantes sont obligatoires et, lorsqu’elles sont marquées comme
 
 1. Sélectionnez la vignette **Valeur de la durée de vie du client** et sélectionnez **Utiliser le modèle**. 
 
-1. Dans le volet **Valeur de la durée de vie du client (aperçu)**, sélectionnez **Démarrer**.
+1. Dans le volet **Valeur de durée de vie du client (version préliminaire)**, sélectionnez **Démarrer**.
 
 1. **Nommez ce modèle** et le **Nom de l’entité de sortie** pour les distinguer des autres modèles ou entités.
 
@@ -216,6 +220,6 @@ La page de résultats comporte trois sections principales de données.
 
 ## <a name="manage-predictions"></a>Gérer les prédictions
 
-Il est possible d'optimiser, de dépanner, d'actualiser ou de supprimer des prédictions. Consultez un rapport d'utilisation des données d'entrée pour découvrir comment rendre un prédiction plus rapide et plus fiable. Pour plus d’informations, consultez [Gérer les prédictions](manage-predictions.md).
+Il est possible d’optimiser, de dépanner, d’actualiser ou de supprimer des prédictions. Consultez un rapport d’utilisation des données d’entrée pour découvrir comment rendre un prédiction plus rapide et plus fiable. Pour plus d’informations, consultez [Gérer les prédictions](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

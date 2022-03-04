@@ -1,26 +1,25 @@
 ---
-title: Gérer les cookies et le consentement de l'utilisateur pour stocker les données
+title: Gérer les cookies et le consentement de l’utilisateur pour stocker les données utilisateur dans Dynamics 365 Customer Insights
 description: Découvrez comment les cookies et le consentement de l'utilisateur sont utilisés pour identifier les visiteurs du site Web.
 author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
-ms.date: 10/30/2020
-ms.service: customer-insights
+ms.date: 09/27/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 7b3195a92c969ab36e5b43f4c2e4221ff477a0a8958838e1256528f58fe13dce
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 018263220d4628690e9f0beb8453e58b0356d099
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036735"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228982"
 ---
 # <a name="manage-cookies-and-user-consent"></a>Gérer les cookies et le consentement de l’utilisateur
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-La fonction Informations sur l’engagement Dynamics 365 Customer Insights utilise des cookies et un stockage local (`localStorage`) pour identifier les visiteurs de site Web.
+La fonctionnalité des informations sur l’engagement de Dynamics 365 Customer Insights utilise des cookies et des clés (`localStorage`) pour identifier les visiteurs du site Web.
 
 Les cookies sont de petits fichiers qui stockent des informations sur les interactions d'un utilisateur avec le site Web. Ils sont stockés dans des navigateurs Web. Lorsque les utilisateurs visitent un site Web pour lequel ils ont stocké des cookies, le navigateur envoie ces informations au serveur, qui renvoie des informations uniques à l'utilisateur. Cette technologie permet, par exemple, à un panier d'achat en ligne de conserver des articles sélectionnés même si un utilisateur quitte le site Web.
 
@@ -28,11 +27,29 @@ Les cookies sont de petits fichiers qui stockent des informations sur les intera
 
 Le [Règlement général sur la protection des données (RGPD)](/dynamics365/get-started/gdpr/) est un règlement de l'Union européenne (UE) qui impose aux organisations de gérer la confidentialité et la sécurité de leurs utilisateurs. Les cookies stockent ou collectent souvent des « données personnelles », comme un identifiant en ligne, qui est couvert par le RGPD. Vous êtes concerné par le RGPD si votre entreprise emploie et/ou vend à des personnes concernées de l'UE. [En savoir plus sur la manière dont Microsoft peut vous aider à vous conformer au RGPD](https://www.microsoft.com/trust-center/privacy/gdpr-faqs).
 
-Pour permettre au SDK de la fonction Informations sur l’engagement de stocker des cookies ou d'autres informations sensibles, vous devez spécifier que vos utilisateurs ont donné leur consentement. Cela se produit lors de l'initialisation du SDK.
+Pour permettre au SDK de la fonction Informations sur l’engagement de stocker des cookies ou d'autres informations sensibles, vous devez spécifier que vos utilisateurs ont donné leur consentement. Cela se produit lors de l’initialisation du SDK en définissant un champ `userConsent` dans la configuration.
 
 Si vous indiquez qu'il n'y a pas de consentement de l'utilisateur, le SDK ne stockera aucune donnée et n'enverra pas d'événements pouvant être utilisés pour suivre le comportement de l'utilisateur. Toutes les données précédemment stockées seront supprimées du navigateur.
 
 Si aucune valeur de consentement de l'utilisateur n'est spécifiée, le SDK supposera que l'utilisateur a donné son consentement. Cela signifie que si vous (en tant que client) ne spécifiez pas de valeur pour le consentement de l'utilisateur dans le SDK, les données seront collectées. Cependant, si vous spécifiez que la valeur du consentement de l'utilisateur doit être définie sur « true », les données ne seront pas collectées si un utilisateur refuse ou ne donne pas son consentement explicite.
+
+Vous trouverez ci-dessous un extrait de code pour initialiser le SDK Web avec le consentement utilisateur :
+```js
+<script>
+  (function(a,t,i){var e="MSEI";var s="Analytics";var o=e+"queue";a[o]=a[o]||[];var r=a[e]||function(n){var t={};t[s]={};function e(e){while(e.length){var r=e.pop();t[s][r]=function(e){return function(){a[o].push([e,n,arguments])}}(r)}}var r="track";var i="set";e([r+"Event",r+"View",r+"Action",i+"Property",i+"User","initialize","teardown"]);return t}(i.name);var n=i.name;if(!a[e]){a[n]=r[s];a[o].push(["new",n]);setTimeout(function(){var e="script";var r=t.createElement(e);r.async=1;r.src=i.src;var n=t.getElementsByTagName(e)[0];n.parentNode.insertBefore(r,n)},1)}else{a[n]=new r[s]}if(i.user){a[n].setUser(i.user)}if(i.props){for(var c in i.props){a[n].setProperty(c,i.props[c])}}a[n].initialize(i.cfg)})(window,document,{
+    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
+    name:"EiJS",
+    cfg:{
+      ingestionKey:"YOUR-INGESTIONKEY",
+      autoCapture:{
+        view:true,
+        click:true
+      },
+      userConsent: true
+    }
+  });
+</script>
+```
 
 ## <a name="visitor-data-storage-in-engagement-insights-capability"></a>Stockage des données des visiteurs dans la fonction Informations sur l’engagement
 
@@ -43,14 +60,14 @@ Si aucune valeur de consentement de l'utilisateur n'est spécifiée, le SDK supp
 
 ### <a name="local-storage"></a>Stockage local
 
-La fonction Informations sur l’engagement utilise également le stockage local (`localStorage`) pour suivre les données non sensibles. Ces données sont entièrement stockées dans le navigateur lui-même, sans trafic envoyé vers ou depuis vos serveurs.
+La fonctionnalité des informations sur l’engagement utilise également des clés (`localStorage`) pour suivre les données non sensibles. Ces données sont entièrement stockées dans le navigateur lui-même, sans trafic envoyé vers ou depuis vos serveurs.
 
-- *EISession.Id* 
+- *EISession.Id*
     - Stocke des informations sur la session utilisateur en cours, comme l'ID de session, quand elle a démarré et quand elle expire.
 - *EISession.Previous*
     - Stocke l'URL de la page précédemment visitée dans la session en cours.
-    
-Les clés du stockage local n'expirent pas automatiquement. Elles seront réinitialisées lors de la prochaine session par le SDK.
+
+Les clés du stockage local n’expirent pas automatiquement et seront réinitialisées lors de la prochaine session du SDK.
 
 ## <a name="deleting-cookies"></a>Suppression des cookies
 

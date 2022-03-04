@@ -1,24 +1,28 @@
 ---
 title: Compléter des données partielles avec des prédictions
 description: Utilisez des prédictions pour remplir des données client incomplètes.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645031"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354000"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Compléter vos données partielles avec des prédictions
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Complétez vos données partielles avec des prédictions (plus disponible)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Cette fonctionnalité ne sera **plus disponible** à partir de **5 novembre 2021**. Les implémentations actuelles continueront de fonctionner jusqu’à ce que la fonctionnalité soit supprimée, mais vous ne pourrez pas créer de nouvelles intégrations à l’aide des instructions ci-dessous.
 
 Les prédictions vous permettent de créer facilement des valeurs prédites qui peuvent améliorer votre compréhension d’un client. Sur la page **Intelligence** > **Prédictions**, vous pouvez sélectionner **Mes prédictions** pour voir les prédictions que vous avez configurées dans d’autres parties des informations sur l’audience, et les personnaliser davantage.
 
@@ -60,6 +64,8 @@ Pour plus d’informations, consultez [Créer un environnement](create-environme
    > ![Exemple montrant des valeurs de champ mappées à des catégories.](media/intelligence-categorymapping.png "Exemple montrant des valeurs de champ mappées à des catégories")
 
 8. Sélectionnez **Terminé** et la prédiction sera traitée. Le traitement prendra un certain temps, selon la taille et la complexité des données. Les résultats seront disponibles dans une nouvelle entité basée sur la prédiction **Nom de l’entité de sortie** que vous avez créée.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Créer une prédiction tout en créant un segment
 
@@ -110,7 +116,7 @@ Dans le cadre de ce flux, vous choisissez un attribut spécifique sur lequel bas
 
 ## <a name="edit-a-prediction"></a>Modifier une prédiction
 
-Après avoir créé une prédiction, vous pouvez personnaliser le modèle dans AI Builder pour augmenter l’efficacité de votre modèle.  
+Après avoir créé une prédiction, vous pouvez personnaliser le modèle dans AI Builder pour augmenter son efficacité.  
 
 1. Dans les informations sur l’audience, accédez à **Intelligence** > **Prédictions** > **Mes prédictions**.
 
@@ -125,7 +131,7 @@ Après avoir créé une prédiction, vous pouvez personnaliser le modèle dans A
 La prochaine exécution de votre prédiction utilisera le modèle mis à jour que vous avez créé.
 
 > [!NOTE]
-> Les nouveaux modèles créés dans AI Builder ne seront pas affichés dans les informations sur l’audience, sauf si le modèle a été créé à partir des expériences répertoriées ci-dessus.
+> Les nouveaux modèles créés dans AI Builder ne s’afficheront pas dans les Informations sur l’audience, sauf si le modèle a été créé à partir des expériences répertoriées ci-dessus.
 
 ## <a name="remove-a-prediction"></a>Supprimer une prédiction
 

@@ -3,18 +3,18 @@ title: Mise en route du SDK iOS
 description: Apprenez à personnaliser et à exécuter le SDK iOS
 author: britl
 ms.reviewer: mhart
+ms.custom: intro-internal
 ms.author: britl
 ms.date: 09/15/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: f05929435eeee9cf3f891ab18842c5861e39d5ba
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 68e4d0555d2fc377fae62ff5db64c032fcebcb04
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494227"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226212"
 ---
 # <a name="get-started-with-the-ios-sdk"></a>Mise en route du SDK iOS
 

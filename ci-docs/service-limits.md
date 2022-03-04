@@ -2,19 +2,18 @@
 title: Limites de service dans Dynamics 365 Customer Insights
 description: Comprenez les limites et les restrictions.
 ms.date: 09/03/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.openlocfilehash: 9bf8f03b785fb3035e3fc979a3304d4e98fd8d28
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7791978"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350404"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Limites de service dans les fonctionnalités Customer Insights
 
@@ -22,27 +21,25 @@ Cet article décrit les limites intégrées au service Customer Insights, qui so
 
 ## <a name="audience-insights"></a>Informations sur l’audience
 
-### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Limites du service dans la fonctionnalité les informations sur l’audience de Dynamics 365 Customer Insights
-
-| Aires  | Limites  | Remarques |
+| Area  | Limites  | Remarques |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
 | Segments, mesures et prédictions | 300  | Le nombre total de [segments](audience-insights/segments.md), de [mesures](audience-insights/measures.md) et de [prédictions](audience-insights/predictions.md) combinés ne peut pas dépasser 300.  |
 | Relations | 20 niveaux de profondeur sur les relations dans les chemins d'entité. | Lors de la création de [segments](audience-insights/segments.md) ou de [mesures](audience-insights/measures.md) en utilisant l’interface du générateur, les chemins d’entité peuvent avoir jusqu’à 20 sauts de relation entre l’entité de départ et l’entité cible.  |
 
+<!--
+## Engagement insights
 
-## <a name="engagement-insights"></a>Informations sur l’engagement
+### Workspace and event quotas
 
-### <a name="workspace-and-event-quotas"></a>Quotas d’espaces de travail et d’événements
+Engagement insights is a highly scalable application that can support millions of events per second. During public preview, events have a volume threshold. There's also a limit to the number of workspaces in an organization.
 
-Informations sur l'engagement est une application hautement évolutive qui peut prendre en charge des millions d'événements par seconde. Lors de la version préliminaire publique, les événements ont un seuil de volume. Le nombre d'espaces de travail dans une organisation est également limité.
+### Engagement insights limits
 
-### <a name="engagement-insights-limits"></a>Limitations relatives à la fonction Informations sur l'engagement
+- Maximum event volume per workspace  = 100 events per second
 
-- Volume d'événements maximum par espace de travail = 100 événements par seconde
+- Maximum number of workspaces per organization = 100
 
-- Nombre maximum d'espaces de travail par organisation = 100
-
-Lorsque les événements dépassent le seuil, cela peut entraîner une perte de données dans les rapports basés sur ces événements. Vous pouvez [contacter le support](https://go.microsoft.com/fwlink/?linkid=2145734) pour demander une augmentation de volume avant de dépasser les limites. Nous verrons avec vous comment déterminer votre besoin d'augmentation de volume et prendre en charge votre demande.
-
+When events exceed the threshold, it can lead to loss of data in reports based on those events. You can [contact support](https://go.microsoft.com/fwlink/?linkid=2145734) to request a volume increase before you exceed limits. We'll work with you to determine your need for a volume increase and support your request.
+-->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

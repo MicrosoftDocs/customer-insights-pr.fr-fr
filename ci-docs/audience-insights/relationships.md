@@ -1,20 +1,32 @@
 ---
 title: Relations entre des entités et des chemins d’accès d’entités
 description: Créez et gérez les relations entre des entités à partir de plusieurs sources de données.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+searchScope:
+- ci-semantic-mapping
+- ci-entities
+- ci-relationships
+- ci-activities
+- ci-activities-wizard
+- ci-measures
+- ci-segments
+- ci-segment-builder
+- ci-measure-builder
+- ci-measure-template
+- ci-permissions
+- customerInsights
+ms.openlocfilehash: db8822aa9e89afb9dc16428af6ca202de789ba1c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171161"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355702"
 ---
 # <a name="relationships-between-entities"></a>Relations entre les entités
 
@@ -68,6 +80,20 @@ La relation consiste en une *entité source* contenant la clé étrangère et un
 
 4. Sélectionnez **Enregistrer** pour créer la relation personnalisée.
 
+## <a name="set-up-account-hierarchies"></a>Configurer des hiérarchies de compte
+
+Les environnements configurés pour utiliser des comptes professionnels comme audience cible principale peuvent configurer des hiérarchies de compte pour les comptes professionnels associés. Par exemple, une entreprise qui a des divisions distinctes. 
+
+Les organisations créent des hiérarchies de compte pour mieux gérer les comptes et leurs relations les uns avec les autres. La fonctionnalité d’informations d’audience prend en charge les hiérarchies de compte parent-enfant qui existent déjà dans les données client ingérées. Par exemple, les comptes de Dynamics 365 Sales. Ces hiérarchies peuvent être configurées sur la page **Relations** dans les insights d’audience, sous l’onglet Hiérarchie de compte.
+
+1. Accédez à **Données** > **Relations**.
+1. Sélectionnez l’onglet **Hiérarchie de compte**.
+1. Sélectionnez **Nouvelle hiérarchie de compte**. 
+1. Dans le volet **Hiérarchie de compte**, fournissez un nom pour la hiérarchie. Le système crée un nom pour l’entité de sortie. Vous pouvez modifier le nom de l’entité de nom de sortie.
+1. Sélectionnez l’entité qui contient votre hiérarchie de compte. C’est généralement dans la même entité qui contient les comptes.
+1. Sélectionnez l’**ID de compte** et l’**ID du parent du compte** de l’entité sélectionnée 
+1. Sélectionnez **Enregistrer** pour appliquer les paramètres et finaliser la hiérarchie de compte.
+
 ## <a name="view-relationships"></a>Afficher les relations
 
 La page Relations répertorie toutes les relations qui ont été créées. Chaque ligne représente une relation, qui inclut également des détails sur l'entité source, l'entité cible et la cardinalité. 
@@ -82,7 +108,7 @@ Cette page propose un ensemble d'options pour les relations existants et nouvell
 
 ### <a name="explore-the-relationship-visualizer"></a>Explorez le visualiseur de relations
 
-Le visualiseur de relations montre un diagramme réseau des relations existantes entre les entités connectées et de leur cardinalité.
+Le visualiseur de relations montre un diagramme réseau des relations existantes entre les entités connectées et de leur cardinalité. Il visualise également le chemin d’accès à la relation.
 
 Pour personnaliser l'affichage, vous pouvez modifier la position des cases en les faisant glisser sur le canevas.
 
@@ -92,6 +118,56 @@ Options disponibles :
 - **Exporter en tant qu'image** : enregistre la vue actuelle en tant que fichier image.
 - **Changer en disposition horizontale/verticale** : Modifiez l'alignement des entités et des relations.
 - **Modifier** : Mettez à jour les propriétés des relations personnalisées dans le volet d'édition et enregistrez les modifications.
+
+## <a name="relationship-paths"></a>Chemins d’accès de relation
+
+Un chemin d’accès de relation décrit les entités connectées avec des relations entre une entité source et une entité cible. Il est utilisé lors de la création d’un segment ou d’une mesure qui inclut d’autres entités que l’entité de profil unifié et il existe plusieurs options pour atteindre l’entité de profil unifié. 
+
+Un chemin d’accès de relation informe le système par quelles relations accéder à l’entité de profil unifié. Différents chemins d’accès à la relation peuvent donner des résultats différents.
+
+Par exemple, l’entité *eCommerce_eCommercePurchases* a les relations suivantes avec l’entité *Client* de profil unifié :
+
+- eCommerce_eCommercePurchases > Client
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Client
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Client 
+
+Un chemin d’accès de relation détermine les entités que vous pouvez utiliser lors de la création de règles pour les mesures ou les segments. Choisir l’option avec le chemin d’accès à la relation le plus long renvoie probablement moins de résultats car les enregistrements correspondants doivent faire partie de toutes les entités. Dans cet exemple, un client doit avoir acheté des marchandises via l’e-commerce (eCommerce_eCommercePurchases), dans un point de vente (POS_posPurchases) et participer à notre programme de fidélité (loyaltyScheme_loyCustomers). En choisissant la première option, vous obtiendrez probablement plus de résultats car les clients ne doivent exister que dans une seule entité supplémentaire.
+
+### <a name="direct-relationship"></a>Relation directe
+
+Une relation est classée comme une **relation directe** lorsqu’une entité source est liée à une entité cible avec une seule relation.
+
+Par exemple, si une entité d’activité appelée *eCommerce_eCommercePurchases* est liée à une entité cible *eCommerce_eCommerceContacts* via *ContactId* uniquement, il s’agit d’une relation directe.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="L’entité source se connecte directement à l’entité cible.":::
+
+#### <a name="multi-path-relationship"></a>Relation à plusieurs chemins d’accès
+
+Une **relation à plusieurs chemins d’accès** est un type spécial de relation directe qui connecte une entité source à plusieurs entités cibles.
+
+Par exemple, si une entité d’activité appelée *eCommerce_eCommercePurchases* est liée à deux entités cibles, à la fois *eCommerce_eCommerceContacts* et *loyaltyScheme_loyCustomers*, il s’agit d’une relation à plusieurs chemins d’accès.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="L’entité source se connecte directement à plusieurs entités cibles par le biais d’une relation à plusieurs sauts.":::
+
+### <a name="indirect-relationship"></a>Relation indirecte
+
+Une relation est classée comme une **relation indirecte** lorsqu’une entité source est liée à une ou plusieurs entités supplémentaires avant d’être liée à une entité cible.
+
+#### <a name="multi-hop-relationship"></a>Relation à plusieurs sauts
+
+Une *relation à plusieurs sauts* est une *relation indirecte* qui vous permet de connecter une entité source à une entité cible par le biais d’une ou de plusieurs autres entités intermédiaires.
+
+Par exemple, si une entité d’activité appelée *eCommerce_eCommercePurchasesWest* se connecte à une entité intermédiaire appelée *eCommerce_eCommercePurchasesEast*, puis se connecte à une entité cible appelée *eCommerce_eCommerceContacts*, il s’agit d’une relation à plusieurs sauts.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="L’entité source se connecte directement à une entité cible avec une entité intermédiaire.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Relation à plusieurs sauts et plusieurs chemins d’accès
+
+Les relations à plusieurs sauts et plusieurs chemins d’accès peuvent être utilisées ensemble pour créer des **relations à plusieurs sauts et plusieurs chemins d’accès**. Ce type spécial combine les fonctions des relations à **plusieurs sauts** et **plusieurs chemins d’accès**. Il vous permet de vous connecter à plusieurs entités cibles tout en utilisant des entités intermédiaires.
+
+Par exemple, si une entité d’activité appelée *eCommerce_eCommercePurchasesWest* se connecte à une entité intermédiaire appelée *eCommerce_eCommercePurchasesEast*, puis se connecte à deux entités cibles, à la fois *eCommerce_eCommerceContacts* et *loyaltyScheme_loyCustomers*, il s’agit d’une relation à plusieurs sauts et plusieurs chemins d’accès.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="L’entité source se connecte directement à une entité cible et se connecte à une autre entité cible par le biais d’une entité intermédiaire.":::
 
 ## <a name="manage-existing-relationships"></a>Gérer les relations existantes 
 
@@ -105,6 +181,6 @@ Sélectionnez une relation et choisissez l'une des options suivantes :
 
 ## <a name="next-step"></a>Étape suivante
 
-Les relations système et personnalisées sont utilisées pour [créer des segments](segments.md) à partir de plusieurs sources de données qui ne sont plus en silos.
+Les relations système et personnalisées servent à [créer des segments](segments.md) et des [mesures](measures.md) basés sur plusieurs sources de données qui ne sont plus en silos.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

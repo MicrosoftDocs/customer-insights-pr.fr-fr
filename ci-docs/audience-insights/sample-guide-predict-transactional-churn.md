@@ -3,26 +3,25 @@ title: Exemple de guide de prédiction de l’attrition transactionnelle
 description: Utilisez cet exemple de guide pour essayer le modèle de prédiction de l’attrition transactionnelle prédéfini.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029442"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354598"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>Exemple de guide de prédiction de l’attrition transactionnelle (version préliminaire)
+# <a name="transactional-churn-prediction-sample-guide"></a>Exemple de guide de prédiction de l’attrition transactionnelle
 
-Ce guide vous présentera un exemple de bout en bout de prédiction de l’attrition transactionnelle dans Customer Insights en utilisant les données fournies ci-dessous. Toutes les données utilisées dans ce guide ne sont pas des données client réelles et font partie du jeu de données Contoso disponible dans l’environnement de *Démonstration* de votre abonnement Customer Insights.
+Ce guide vous présentera un exemple de bout en bout de prédiction de l’attrition transactionnelle dans Customer Insights en utilisant les données fournies ci-dessous. Toutes les données utilisées dans ce guide ne sont pas des données client réelles et font partie de l’ensemble de données de Contoso disponibles dans l’environnement de *Démonstration* de votre abonnement Customer Insights.
 
 ## <a name="scenario"></a>Scénario
 
-Contoso est une entreprise qui produit du café et des machines à café de haute qualité, qu'elle vend via son site web Contoso Coffee. Son objectif est de savoir quels clients qui achètent régulièrement ses produits, cesseront d’être des clients actifs au cours des 60 prochains jours. Savoir lesquels de ses clients **sont susceptibles de se tourner vers la concurrence**, peut l’aider à économiser ses efforts marketing en se concentrant sur leur fidélisation.
+Contoso est une société qui produit du café et des machines à café de haute qualité qu’elle vend sur son site web Contoso Coffee. Son objectif est de savoir quels clients qui achètent régulièrement ses produits, cesseront d’être des clients actifs au cours des 60 prochains jours. Savoir lesquels de ses clients **sont susceptibles de se tourner vers la concurrence**, peut l’aider à économiser ses efforts marketing en se concentrant sur leur fidélisation.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -31,7 +30,7 @@ Contoso est une entreprise qui produit du café et des machines à café de haut
 
 ## <a name="task-1---ingest-data"></a>Tâche 1 : ingérer les données
 
-Passez en revue les articles sur [l’ingestion de données](data-sources.md) et [l’importation de sources de données à l’aide des connecteurs Power Query](connect-power-query.md) en particulier. Les informations suivantes supposent que vous vous êtes familiarisé avec l’ingestion de données en général. 
+Consultez les articles [à propos de l’ingestion de données](data-sources.md) et [importation de sources de données à l’aide connecteurs Power Query](connect-power-query.md) spécifiquement. Les informations suivantes supposent que vous vous êtes familiarisé avec l’ingestion de données en général. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingérer les données client d’une plateforme d’eCommerce
 
@@ -149,7 +148,7 @@ Une fois les données ingérées, nous commençons maintenant le processus de **
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Tâche 3 : configurer la prédiction de l’attrition des transactions
 
-Une fois les profils clients unifiés en place, nous pouvons maintenant exécuter la prédiction de l’attrition des abonnements. Pour connaître les étapes détaillées, consultez l’article [Prédiction de l’attrition des abonnements (version préliminaire)](predict-subscription-churn.md). 
+Une fois les profils clients unifiés en place, nous pouvons maintenant exécuter la prédiction de l’attrition des abonnements. Pour connaître les étapes détaillées, consultez l’article [Prédiction du taux de désabonnement](predict-subscription-churn.md). 
 
 1. Accédez à **Intelligence** > **Découvrir** et choisissez le **Modèle d’attrition clients**.
 

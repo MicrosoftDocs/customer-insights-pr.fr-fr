@@ -3,18 +3,17 @@ title: Demandes de droits de la personne concernée dans le cadre du RGPD | Micr
 description: Répondez aux demandes de la personne concernée pour la fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights.
 ms.date: 08/11/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: e095eb4f8e194f314d7d6baf6fa6a7a319319d2a
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483662"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350266"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Demandes de droits de la personne concernée dans le cadre du RGPD
 
@@ -79,71 +78,78 @@ Un administrateur du client peut exécuter la procédure suivante pour exporter 
 2. Acquitter la confirmation de l’exportation des données pour l’utilisateur demandé.
 3. Recevoir les données exportées via l’adresse de messagerie de l’administrateur du client.
 
-## <a name="engagement-insights"></a>Informations sur l’engagement
+## <a name="consent-management-preview"></a>Gestion du consentement (version préliminaire)
 
-### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Suppression et exportation de données liées aux événements contenant des informations identifiables par l'utilisateur final
+La capacité de gestion du consentement ne collecte pas directement les données des utilisateurs. Elle n’importe et ne traite que les données de consentement fournies par les utilisateurs dans d’autres applications.
 
-Les sections suivantes décrivent comment supprimer et exporter des données liées aux événements susceptibles de contenir des données personnelles.
+Pour supprimer les données de consentement concernant des utilisateurs spécifiques, supprimez-les dans les sources de données ingérées dans la fonctionnalité de gestion du consentement. Après avoir actualisé le source de données, les données supprimées sont également supprimées dans le Centre de consentement. Les applications qui utilisent l’entité de consentement suppriment également les données qui ont été supprimées de la source après une [actualisation](audience-insights/system.md#refresh-processes). Nous vous recommandons d’actualiser rapidement les sources de données après avoir répondu à une demande de personne concernée pour supprimer les données de l’utilisateur de tous les autres processus et applications.
 
-Pour supprimer ou exporter des données :
 
-1. Marquez les propriétés d'événement qui contiennent des données avec des informations personnelles.
-2. Supprimez ou exportez les données associées à des valeurs spécifiques (par exemple : un ID utilisateur spécifié).
+<!-- ## Engagement insights (preview)
 
-#### <a name="tag-and-update-event-properties"></a>Marquer et mettre à jour les propriétés des événements
+### Deleting and exporting event data containing end user identifiable information
 
-Les données personnelles sont marquées au niveau de la propriété d'événement. Commencez par marquer les propriétés à supprimer ou exporter.
+The following sections describe how to delete and export event data that might contain personal data.
 
-Pour marquer une propriété d'événement comme contenant des informations personnelles, procédez comme suit :
+To delete or export data:
 
-1. Ouvrez l'espace de travail contenant l'événement.
+1. Tag event properties that contain data with personal information.
+2. Delete or export data associated with specific values (for example: a specified user ID).
 
-1. Allez dans **Données** > **Événements** pour voir la liste des événements dans l'espace de travail sélectionné.
+#### Tag and update event properties
+
+Personal data is tagged on an event property level. First, tag the properties being considered for deletion or export.
+
+To tag an event property as containing personal information, follow these steps:
+
+1. Open the workspace containing the event.
+
+1. Go to **Data** > **Events** to see the list of events in the selected workspace.
   
-1. Sélectionnez l'environnement à marquer.
+1. Select the event you want to tag.
 
-1. Sélectionnez **Modifier les propriétés** pour ouvrir le volet répertoriant toutes les propriétés de l'événement sélectionné.
+1. Select **Edit properties** to open the pane listing all properties of the selected event.
      
-1. Sélectionnez **...** puis choisissez **Modifier** pour accéder à la boîte de dialogue **Mettre à jour la propriété**.
+1. Select **...** and then choose **Edit** to reach the **Update property** dialog.
 
-   ![Modifier l’événement.](engagement-insights/media/edit-event.png "Modifier l’événement")
+   ![Edit event.](engagement-insights/media/edit-event.png "Edit event")
 
-1. Dans la fenêtre **Mettre à jour la propriété**, choisissez **...** dans le coin supérieur droit, puis choisissez la zone **Contient EUII**. Choisissez **Mettre à jour** pour enregistrer vos modifications.
+1. In the **Update Property** window, choose **...** in the upper right corner, and then choose the **Contains EUII** box. Choose **Update** to save your changes.
 
-   ![Enregistrez vos modifications.](engagement-insights/media/update-property.png "Enregistrer vos modifications")
+   ![Save your changes.](engagement-insights/media/update-property.png "Save your changes")
 
    > [!NOTE]
-   > Chaque fois que le schéma d'événement change ou que vous créez un événement, il est recommandé d'évaluer les propriétés d'événement associées et de les marquer ou de les décocher comme contenant des données personnelles, si nécessaire.
+   > Every time the event schema changes or you create a new event, it's recommended that you evaluate the associated event properties and tag or untag them as containing personal data, if necessary.
 
-#### <a name="delete-or-export-tagged-event-data"></a>Supprimer ou exporter des données d'événement marquées
+#### Delete or export tagged event data
 
-Si toutes les propriétés d'événement ont été correctement marquées comme décrit à l'étape précédente, un administrateur d'environnement peut émettre une demande de suppression sur les données d'événement marquées.
+If all event properties have been tagged appropriately as described in the previous step, an environment admin can issue a deletion request against the tagged event data.
 
-Pour gérer les demandes de suppression ou d'exportation EUII
+To manage EUII deletion or export requests
 
-1. Allez dans **Administrateur** > **Environnement** > **Paramètres**.
+1. Go to **Admin** > **Environment** > **Settings**.
 
-1. Dans la section **Gérer les informations identifiables de l'utilisateur final (EUII)**, sélectionnez **Gérer EUII**.
+1. In the **Manage end user identifiable information (EUII)** section, select **Manage EUII**.
 
-##### <a name="deletion"></a>Suppression
+##### Deletion
 
-Pour la suppression, vous pouvez saisir une liste d'ID utilisateur séparés par des virgules dans la section **Supprimer les informations d'identification de l'utilisateur final (EUII)**. Ces ID seront ensuite comparés à toutes les propriétés d'événement marquées de tous les projets de l'environnement actuel via une correspondance de chaîne exacte. 
+For deletion, you can enter a list of comma-separated user IDs in the **Delete end user identifiable information (EUII)** section. These IDs will then be compared with all tagged event properties of all projects in the current environment via exact string matching. 
 
-Si une valeur de propriété correspond à l'un des ID fournis, l'événement associé sera définitivement supprimé. En raison de l'irréversibilité de cette action, vous devez confirmer la suppression après avoir sélectionné **Supprimer**.
+If a property value matches one of the provided IDs, the associated event will be permanently deleted. Due to the irreversibility of this action, you must confirm the deletion after selecting **Delete**.
 
-##### <a name="export"></a>Export
+##### Export
 
-Le processus d'exportation est identique au processus de suppression lorsqu'il s'agit de définir les valeurs de propriété d'événement dans la section **Exporter les informations d'identification de l'utilisateur final (EUII)**. De plus, vous devrez fournir une **URL de stockage d'objets blob Azure** pour spécifier la destination d'exportation. L'URL de l'objet blob Azure doit inclure une [Signature d'accès partagé (SAS)](/azure/storage/common/storage-sas-overview).
+The export process is identical to the deletion process when it comes to defining event property values in the **Export end user identifiable information (EUII)** section. Additionally, you'll need to provide an **Azure blob storage URL** to specify the export destination. The Azure Blob URL must include a [Shared Access Signature (SAS)](/azure/storage/common/storage-sas-overview).
 
-Après avoir sélectionné **Exporter**, tous les événements de l'équipe actuelle contenant des propriétés marquées correspondantes seront exportés au format CSV vers la destination d'exportation.
+After selecting **Export**, all events of the current team that contain matching tagged properties will be exported in CSV format to the export destination.
 
-### <a name="good-practices"></a>Meilleures pratiques
+### Good practices
 
-* Essayez d'éviter d'envoyer des événements contenant des données personnelles.
-* Si vous devez envoyer des événements contenant des données EUII, limitez le nombre d'événements et de propriétés d'événement contenant des données EUII. Idéalement, limitez-vous à un de ces événements.
-* Assurez-vous que le moins de personnes possible aient accès aux données personnelles envoyées.
-* Pour les événements contenant des données personnelles, assurez-vous de définir une propriété pour émettre un identifiant unique qui peut facilement être lié à un utilisateur spécifique (par exemple, un ID utilisateur). Cela facilite la séparation des données et l'exportation ou la suppression des bonnes données.
-* Marquez une seule propriété par événement comme contenant des données personnelles. Idéalement, celle qui ne contient qu'un identifiant unique.
-* Ne marquez pas les propriétés contenant des valeurs détaillées (par exemple, un corps de requête entier). La fonction Informations sur l’engagement utilise la correspondance exacte des chaînes lors du choix des événements à supprimer ou à exporter.
+* Try to avoid sending any events that contain personal data.
+* If you need to send events containing EUII data, limit the number of events and event properties that contain EUII data. Ideally, limit yourself to one such event.
+* Make sure that as few people as possible have access to the sent personal data.
+* For events containing personal data, make sure that you set one property to emit a unique identifier that can easily be linked to a specific user (for example, a user ID). This makes it easier to segregate data and to export or delete the right data.
+* Only tag one property per event as containing personal data. Ideally one that only contains a unique identifier.
+* Do not tag properties containing verbose values (for example, an entire request body). Engagement insights capability uses exact string matching when deciding which events to delete or export. -->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

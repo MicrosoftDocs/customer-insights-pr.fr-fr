@@ -1,32 +1,37 @@
 ---
 title: Segments dans les informations sur l’audience
 description: Présentation des segments, de leur création et de leur gestion.
-ms.date: 09/30/2021
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+searchScope:
+- ci-customers-page
+- ci-enrichment-details
+- ci-segments
+- ci-segment-details
+- customerInsights
+ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617372"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355980"
 ---
 # <a name="segments-overview"></a>Vue d’ensemble des segments
 
 Les segments vous permettent de regrouper vos clients en fonction des attributs démographiques, transactionnels ou comportementaux. Vous pouvez utiliser les segments pour cibler les campagnes promotionnelles, les activités commerciales et les actions de support client pour atteindre vos objectifs commerciaux.
 
-Les profils client qui correspondent aux filtres d’une définition de segment sont appelés *membres* d’un segment. Certaines [limites du service](service-limits.md) s’appliquent.
+Les profils client qui correspondent aux filtres d’une définition de segment sont appelés *membres* d’un segment. Certaines [limites du service](/dynamics365/customer-insights/service-limits) s’appliquent.
 
 ## <a name="create-a-new-segment"></a>Créer un segment
 
 Il existe plusieurs façons de créer un segment : 
 
-# <a name="individual-customers-b2c"></a>[Clients individuels (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consommateurs individuels (B-to-C)](#tab/b2c)
 
 - Segment complexe avec générateur de segment : [Construire le nôtre](segment-builder.md#create-a-new-segment) 
 - Segments simples avec un seul opérateur : [segment rapide](segment-builder.md#quick-segments) 
@@ -34,7 +39,7 @@ Il existe plusieurs façons de créer un segment :
 - Suggestions basées sur l’IA à partir de mesures ou d’attributs : [segments suggérés pour améliorer les mesures](suggested-segments.md) 
 - Suggestions basées sur les activités : [segments suggérés en fonction de l’activité des clients](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[Comptes d’entreprise (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Comptes d’entreprise (B-to-B)](#tab/b2b)
 
 - Segment complexe avec générateur de segment : [Construire le nôtre](segment-builder.md#create-a-new-segment)
 
@@ -65,8 +70,7 @@ L’action suivante est disponible lorsque vous sélectionnez un segment :
 
 Vous pouvez actualiser tous les segments à la fois en sélectionnant **Actualiser tout** sur la page **Segments** ou vous pouvez actualiser un ou plusieurs segments lorsque vous les sélectionnez et choisissez **Actualiser** dans les options. Vous pouvez également configurer une actualisation périodique en cliquant sur **Administrateur** > **Système** > **Planifier**.
 
-> [!TIP]
-> Il existe [six types de statuts](system.md#status-types) pour les tâches/processus. En outre, la plupart des processus [dépendent d’autres processus en aval](system.md#refresh-policies). Vous pouvez sélectionner le statut d’un processus pour afficher des détails sur la progression de toute la tâche. Après avoir sélectionné **Voir les détails** pour l’une des tâches du travail, vous voyez des informations complémentaires : la durée de traitement, la date du dernier traitement et toutes les erreurs et avertissements associés à la tâche.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Exporter les segments
 
@@ -106,4 +110,5 @@ La partie inférieure contient la liste des membres du segment.
 >
 >La liste est un aperçu des membres du segment correspondant et affiche les 100 premiers enregistrements de votre segment afin que vous puissiez rapidement l’évaluer et revoir ses définitions si nécessaire. Pour voir tous les enregistrements correspondants, vous devez [exporter le segment](export-destinations.md).
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)] 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

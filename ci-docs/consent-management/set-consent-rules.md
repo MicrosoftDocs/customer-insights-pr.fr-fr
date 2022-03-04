@@ -2,19 +2,18 @@
 title: Configurer et appliquer des règles de données de consentement
 description: Avec la capacité de gestion du consentement de Dynamics 365 Customer Insights, vous pouvez définir la manière dont les données sont utilisées en fonction des préférences de consentement d’un client.
 ms.date: 11/03/2021
-ms.service: customer-insights
 ms.subservice: consent-management
 ms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c96e84295ed1231d7baa4e0f257cbce821944fc9
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: ba14bfbf1b459f5cb407d1f27b12d29cd14fc932
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790810"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232421"
 ---
 # <a name="set-consent-data-rules-and-apply-consent-preferences"></a>Définir des règles de données de consentement et appliquer des préférences de consentement
 

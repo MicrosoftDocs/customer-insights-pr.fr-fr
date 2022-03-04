@@ -1,22 +1,21 @@
 ---
 title: Exporter des données Customer Insights vers Constant Contact
 description: Apprenez à configurer la connexion et à exporter vers Constant Contact.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3a9372cc4ffa4fb112a96b1286aee9dc35059a50
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 8841945814397ffa70c56638a8bed25499c1a06f
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760521"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226400"
 ---
-# <a name="export-segment-lists-to-constant-contact-preview"></a>Exporter des listes de segments vers Constant Contact (version préliminaire)
+# <a name="export-segments-to-constant-contact-preview"></a>Exporter des segments vers Constant Contact (version préliminaire)
 
 Exportez des segments de profils client unifiés vers Constant Contact et utilisez-les pour les activités marketing. 
 
@@ -28,10 +27,10 @@ Exportez des segments de profils client unifiés vers Constant Contact et utilis
 
 ## <a name="known-limitations"></a>Limitations connues
 
-- Vous pouvez exporter jusqu’à 1 million de profils par exportation vers Constant Contact.
+- Vous pouvez exporter jusqu’à 1 million de profils clients par exportation vers Constant Contact.
 - L’exportation vers Constant Contact est limitée aux segments.
-- L’exportation de jusqu’à 1 million de profils vers Constant Contact peut prendre jusqu’à 1 heure. 
-- Le nombre de profils que vous pouvez exporter vers Constant Contact dépend et est limité par votre contrat avec Constant Contact.
+- L’exportation d’un maximum d’un million de profils clients vers Constant Contact peut prendre jusqu’à une heure. 
+- Le nombre de profils clients que vous pouvez exporter vers Constant Contact dépend de votre contrat avec Autopilot et est limité à Constant Contact.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Configurer la connexion à Constant Contact
 
@@ -47,7 +46,7 @@ Exportez des segments de profils client unifiés vers Constant Contact et utilis
 
 1. Sélectionnez **Connecter** pour initialiser la connexion à Constant Contact.
 
-1. Sélectionnez **S’authentifier avec AdRoll** et fournissez vos informations d’identification administrateur pour Constant Contact. 
+1. Sélectionnez **Authentification avec Constant Contact** et fournissez vos informations d’identification d’administrateur pour Constant Contact. 
 
 1. Sélectionnez **Vous ajouter en tant qu’utilisateur à exporter** et fournissez vos informations d’identification Customer Insights.
 
@@ -65,7 +64,7 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 1. Entrez votre [**ID de liste Constant Contact**](https://app.constantcontact.com/pages/contacts/ui#lists). Ouvrez une liste dans Constant Contact pour trouver l’ID de liste dans l’URL.
 
-1. Dans la section **Mise en correspondance des données**, dans le champ **E-mail**, sélectionnez le champ de votre profil client unifié qui représente l’adresse e-mail d’un client. Il est obligatoire d’exporter des segments vers Constant Contact.
+1. Dans la section **Correspondance des données**, dans le champ **E-mail**, sélectionnez le champ qui représente l’adresse e-mail d’un client. Il est obligatoire d’exporter des segments vers Constant Contact.
 
 1. Vous pouvez éventuellement exporter les champs Prénom et Nom comme champs supplémentaires pour créer des e-mails plus personnalisés. Sélectionnez **Ajouter un attribut** pour mapper ces champs.
 

@@ -4,17 +4,16 @@ description: Utilisez les rapports disponibles pour voir l'activité en temps r�
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 06/18/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 03b0b4bab0d5d9c2ae641c85aac8174ec1668d45
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036645"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229737"
 ---
 # <a name="view-reports"></a>Afficher les rapports
 
@@ -92,12 +91,18 @@ Les rapports mobiles sont regroupés en catégories d’utilisation en temps ré
 
 - **Emplacements** affiche des informations sur les utilisateurs de l’application par pays, région et ville.
 
-## <a name="filter-by-time-or-value"></a>Filtrer par heure ou valeur
+## <a name="filter-by-time-or-date-range"></a>Filtrer par heure ou plage de dates
 
-Vous pouvez sélectionner la période ou la valeur dans un rapport web ou mobile pour vous concentrer sur une valeur ou une période. 
+Vous pouvez sélectionner le délai d’exécution ou une plage de dates dans un rapport web ou mobile pour vous concentrer sur une valeur ou une période. 
 
-- Pour sélectionner une période, sélectionnez **Plus [...]** dans la liste déroulante du rapport. La sélection de la plage horaire est désactivée pour un rapport d'utilisation en temps réel ; l'intervalle de temps pour un rapport d'utilisation en temps réel est « maintenant ».
+- Pour sélectionner un délai d’exécution, dans le coin supérieur droit de la vue du rapport, sélectionnez une valeur dans la liste déroulante du rapport. Vous pouvez également choisir une **Plage de dates fixe**. 
 
-- Dans la plupart des rapports, vous pouvez sélectionner une valeur dans un graphique ou une liste pour filtrer en fonction de la valeur sélectionnée.
+  :::image type="content" source="media/filter-by-time.png" alt-text="Filtrez par période ou plage de dates.":::   
+
+- Pour la plupart des rapports, sélectionnez une valeur dans un graphique ou une liste pour filtrer le rapport.
+
+> [!NOTE]
+> La sélection de la plage horaire est désactivée pour un rapport d'utilisation en temps réel ; l'intervalle de temps pour un rapport d'utilisation en temps réel est « maintenant ».
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

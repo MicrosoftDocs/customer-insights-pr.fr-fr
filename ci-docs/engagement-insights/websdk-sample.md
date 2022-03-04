@@ -4,17 +4,16 @@ description: Apprenez à personnaliser et à exécuter un exemple de SDK Web.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 10/30/2020
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 97e50a51231bcf05f3e381397f0cf41e49afc10e3c3674d7c709c8f521979e12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a50a10db784ec7c1943c94e74000713309787e5c
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036600"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225328"
 ---
 # <a name="run-the-web-sdk-sample-for-dynamics-365-customer-insights-engagement-insights-capability"></a>Exécutez l'exemple de SDK Web pour la fonction Informations sur l’engagement Dynamics 365 Customer Insights
 
@@ -26,7 +25,7 @@ La bibliothèque de SDK Web de la fonction Informations sur l’engagement est u
 
 - Installez [Visual Studio Code](https://code.visualstudio.com/).
 - [Installez l'extension Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) dans Visual Studio Code et familiarisez-vous avec l'exécution de Live Server.
-- Vous devez disposer de la [clé d'ingestion](instrument-website.md).
+- Vous devez avoir un [espace de travail des informations sur l’engagement](create-workspace.md).
 
 ## <a name="run-sample"></a>Exécuter un échantillon
 
@@ -36,7 +35,11 @@ La bibliothèque de SDK Web de la fonction Informations sur l’engagement est u
 
 1. Ouvrez le dossier décompressé dans Visual Studio Code.
 
-1. Dans le fichier `ei_websdk_sample.html`, remplacez la chaîne « INGESTION_KEY » par votre clé d'ingestion du portail de la fonction Informations sur l’engagement et la chaîne « NOM » par le nom global dans lequel vous souhaitez que le SDK soit instancié. Assurez-vous de remplacer toutes les occurrences.
+1. Accédez au portail d’informations sur l’engagement pour votre espace de travail. Sélectionnez **Administrateur** > **Espace de travail**, puis **Guide d’installation**. Suivez la première option et sélectionnez **Copier le code** pour copier l’extrait de code JavaScript.
+
+1. Dans le fichier `ei_websdk_sample.html`, collez l’extrait de code que vous venez de copier sous cette ligne :
+
+   - <-- COLLEZ L’EXTRAIT DE CODE JAVASCRIPT DU PORTAIL DES INFORMATIONS SUR L’ENGAGEMENT ICI SOUS CETTE LIGNE -->
 
 1. Ouvrez le fichier `ei_websdk_sample.html` utilisant Live Server dans Visual Studio Code en sélectionnant **Mise en service** à partir de la barre d'état.
 

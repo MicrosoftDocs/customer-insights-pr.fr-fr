@@ -3,18 +3,20 @@ title: Connexions à d’autres services de Customer Insights.
 description: Partagez des données avec d’autres services.
 ms.date: 04/09/2021
 ms.reviewer: nikeller
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+searchScope:
+- ci-connections
+- customerInsights
+ms.openlocfilehash: ccad090d3bf6eab96eff37f7a96289ca2882d369
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304969"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354380"
 ---
 # <a name="connections-preview-overview"></a>Présentation des connexions (version préliminaire)
 
@@ -47,6 +49,7 @@ Pour ajouter des connexions, vous devez disposer d’[autorisations administrate
 1. Dans le volet **Configurer la connexion**, fournissez les détails nécessaires. 
    1. Le **Nom d’affichage** et le type de connexion décrivent une connexion. Nous vous recommandons de choisir un nom qui explique l’objectif et la cible de cette connexion.
    1. Les champs exacts dépendent du service auquel vous vous connectez. Vous pouvez obtenir des informations sur les détails d’un type de connexion spécifique dans l’article sur le service cible.
+   1. Si vous [utilisez votre propre Key Vault](use-azure-key-vault.md) pour stocker des secrets, activez **Key Vault** et choisissez le secret dans la liste.
 
 1. Pour créer la connexion, sélectionnez **Enregistrer**.
 
@@ -93,3 +96,6 @@ Les enrichissements et les exportations détachés deviennent inactifs. Vous les
 
 1. Pour confirmer la suppression, sélectionnez **Supprimer**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Configurez des connexions avec des secrets gérés par votre propre Key Vault
+
+Certaines connexions ont besoin de secrets comme des clés API ou des mots de passe. Certaines connexions prennent en charge les secrets stockés dans votre propre Key Vault. En savoir plus sur les connexions prises en charge et sur la configuration sur [votre propre Key Vault pour les informations sur l’audience](use-azure-key-vault.md).

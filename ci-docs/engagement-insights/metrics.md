@@ -4,17 +4,16 @@ description: Création, modification et suppression de mesures.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 97189168e0f5586aad8be8089a1f9e27893c2115c7e805ddaab1efc00e11b860
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7e8c96f38af74f25080a40fd92e73f05c71320a8
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034266"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229813"
 ---
 # <a name="view-and-create-metrics"></a>Afficher et créer des mesures
 
@@ -45,14 +44,17 @@ Ces mesures système sont basées sur les propriétés d'événement existantes 
 Les administrateurs d'environnement et d'espace de travail peuvent créer des mesures. Les propriétés d'événement doivent être envoyées à l'espace de travail avant qu'une mesure soit créée. Vous pouvez créer des mesures basées sur les propriétés d'événement envoyées par les événements de base ou utiliser le SDK web pour [envoyer des propriétés d'événement personnalisées](advanced-SDK-implementation.md).
 
 1. Accédez à **Données** > **Mesures**.
-1. Sélectionnez **Nouvelle mesure**.
+1. Sélectionnez **Nouvelle mesure** pour ouvrir le dialogue **Bibliothèque de ressources** et **Nouvelle mesure sans titre**.
 
    :::image type="content" source="media/new-metric.png" alt-text="Ajouter une mesure à un événement.":::
 
-1. Pour le format, sélectionnez le type de données **Entier** ou **Double**. Entier est un nombre entier. Pour Double, vous pouvez choisir entre une et trois décimales.
-1. Dans le volet **Bibliothèque de ressources**, recherchez la propriété d'événement sur laquelle baser la mesure.
-1. Sélectionnez le **signe plus (+)** à côté de la propriété pour l'utiliser dans la formule. Vous ne pouvez créer qu'une formule basée sur une seule propriété. 
-1. Choisissez l'une des fonctions d’agrégation suivantes : 
+1. Dans le dialogue **Nouvelle mesure sans titre**, sélectionnez la liste déroulante **Format** et choisissez le type de données **Entier** ou **Double**. Entier est un nombre entier. Pour Double, vous pouvez choisir une et trois décimales.
+
+   :::image type="content" source="media/create-new-metric.png" alt-text="Créez une mesure.":::
+   
+5. Dans le volet **Bibliothèque de ressources**, recherchez la propriété d’événement sur laquelle baser la mesure.
+6. Sélectionnez le **signe plus (+)** à côté de la propriété pour l'utiliser dans la formule. Vous ne pouvez créer qu'une formule basée sur une seule propriété. 
+7. Choisissez l'une des fonctions d’agrégation suivantes : 
 
    - Somme : le total arithmétique de toutes les valeurs 
    - Moyenne : la moyenne de toutes les valeurs
@@ -68,12 +70,16 @@ Une minute peut être nécessaire avant que vous puissiez utiliser la mesure pou
 
 ## <a name="edit-a-metric"></a>Modifier une métrique
 
+Vous ne pouvez modifier que les mesures personnalisées.
+
 1. Accédez à **Données** > **Mesures**.
 1. Sélectionnez la mesure dans la liste.
 1. Modifier la définition de la mesure
 1. Sélectionnez **Enregistrer**.
 
 ## <a name="change-the-name-of-a-metric"></a>Modifier le nom d’une mesure
+
+Vous ne pouvez modifier que le nom des mesures personnalisées.
 
 1. Accédez à **Données** > **Mesures**.
 1. Sélectionnez **Plus [...]** pour une mesure et choisissez **Modifier le nom**.
@@ -82,11 +88,15 @@ Une minute peut être nécessaire avant que vous puissiez utiliser la mesure pou
 
 ## <a name="delete-a-metric"></a>Supprimer une mesure
 
+Vous ne pouvez supprimer que les mesures personnalisées.
+
 1. Accédez à **Données** > **Mesures**.
 1. Sélectionnez **Plus [...]** pour une mesure et choisissez **Supprimer**.
 
    :::image type="content" source="media/delete-metric.png" alt-text="Supprimer une mesure d'un événement.":::
 
 1. Sélectionnez **Supprimer** pour confirmer la suppression.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

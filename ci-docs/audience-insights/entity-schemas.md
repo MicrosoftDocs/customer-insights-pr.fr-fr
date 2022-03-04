@@ -1,24 +1,23 @@
 ---
 title: Schéma des entités Customer Insights dans Common Data Model
 description: Utilisez des entités dans Common Data Model.
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: f0af2a6d8a90ff01ea9d4eeb29f34113261fd0d4
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692302"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231010"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Schémas des entités dans Common Data Model
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 [Common Data Model](/common-data-model/) est une spécification déclarative, qui définit les entités standard qui représentent les concepts et les activités couramment utilisés dans les applications métier et de productivité. Ce modèle est également étendu aux données d’observation et d’analyse. Common Data Model fournit des entités métier bien définies, modulaires et extensibles, telles que les entités Compte, Division, Incident, Contact, Prospect, Opportunité et Produit, ainsi que des interactions avec les fournisseurs, les collaborateurs et les clients, telles que les activités et les contrats de niveau de service. Tout le monde peut s’appuyer sur des définitions Common Data Model et les étendre pour capturer des idées supplémentaires propres à l’entreprise.
 
@@ -42,7 +41,7 @@ Pour plus d’informations, consultez la documentation sur les [Schémas d’ent
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Afficher les entités à l’aide du navigateur d’entités de Common Data Model
 
-Vous pouvez afficher les entités dans le [Navigateur d’entités de Common Data Model](https://microsoft.github.io/CDM/). Sélectionnez le bouton **Charger depuis GitHub !** et accédez à **foundationCommon** > **crmCommon** > **solutions** > **customerInsights** où vous trouverez la liste des entités Customer Insights et leurs définitions.
+Vous pouvez afficher les entités dans le [Navigateur d’entités de Common Data Model](https://microsoft.github.io/CDM/). Sélectionnez une entité dans la section Application Insights pour obtenir la liste des entités Customer Insights et leurs définitions.
 > [!div class="mx-imgBorder"]
 > ![Navigateur d’entité CDM affichant l’entité CustomerActivity.](media/CDM-entity-navigator.png "Navigateur d’entité CDM affichant l’entité CustomerActivity")
 

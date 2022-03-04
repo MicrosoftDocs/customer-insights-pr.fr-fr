@@ -1,101 +1,73 @@
 ---
 title: Créer et gérer des environnements
 description: Découvrez comment souscrire au service et comment gérer des environnements.
-ms.date: 06/15/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+searchScope:
+- ci-system-about
+- customerInsights
+ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259096"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354276"
 ---
 # <a name="manage-environments"></a>Gérer des environnements
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Cet article explique comment créer une nouvelle organisation et comment mettre en service un environnement.
 
-## <a name="sign-up-and-create-an-organization"></a>S’inscrire et créer une organisation
+## <a name="switch-environments"></a>Changer d’environnements
 
-1. Accédez au site Web [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/).
+Sélectionnez le contrôle **Environnement** dans le coin supérieur droit de la page pour changer d’environnement.
 
-2. Sélectionnez **Mise en route**.
+:::image type="content" source="media/home-page-environment-switcher.png" alt-text="Capture d’écran du contrôle pour changer d’environnement.":::
 
-3. Choisissez votre scénario d’inscription préféré et sélectionnez le lien correspondant.
+Les administrateurs peuvent [créer](create-environment.md) et gérer des environnements.
 
-4. Acceptez les conditions générales et sélectionnez **Continuer** pour commencer à créer l’organisation.
+## <a name="edit-an-existing-environment"></a>Modifier un environnement existant
 
-5. Une fois l’environnement créé, vous serez redirigé vers [Customer Insights](https://home.ci.ai.dynamics.com).
+Vous pouvez modifier certains détails des environnements existants.
 
-6. Utilisez l’environnement de démonstration pour explorer l’application ou créez un nouvel environnement en suivant les étapes de la section suivante.
+1.  Cliquez sur le sélecteur **Environnement** dans l’en-tête de l’application.
 
-7. Après avoir spécifié les paramètres d’environnement, sélectionnez **Créer**.
+2.  Sélectionnez l’icône **Modifier**.
 
-8. Vous serez connecté une fois l’environnement créé avec succès.
+3. Dans la zone **Modifier l’environnement**, vous pouvez mettre à jour les paramètres de l’environnement.
 
-## <a name="create-an-environment-in-an-existing-organization"></a>Créer un environnement dans une organisation existante
+Pour plus d’informations sur les paramètres d’environnement, consultez [Créer un environnement](create-environment.md).
 
-Il existe deux façons de créer un environnement. Vous pouvez soit spécifier une toute nouvelle configuration, soit copier certains paramètres de configuration à partir d’un environnement existant.
+## <a name="connect-to-microsoft-dataverse"></a>Se connecter à Microsoft Dataverse
+   
+L’étape **Microsoft Dataverse** vous permet de connecter Customer Insights à votre environnement Dataverse.
+
+Pour utiliser [des modèles de prédiction prêts à l’emploi](predictions-overview.md#out-of-box-models), configurez le partage de données avec Dataverse. Vous pouvez également activer l’ingestion de données à partir des sources de données local, en fournissant l’URL d’environnement Microsoft Dataverse administrée par votre organisation.
+
+> [!IMPORTANT]
+> Customer Insights et Dataverse doivent se trouver dans la même région pour activer le partage de données.
+
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="Options de configuration pour activer le partage de données avec Microsoft Dataverse.":::
 
 > [!NOTE]
-> Les organisations peuvent créer *deux* environnements pour chaque licence Customer Insights. Si votre organisation achète plus d’une licence, [contactez notre équipe de support](https://go.microsoft.com/fwlink/?linkid=2079641) pour augmenter le nombre d’environnements disponibles. Pour plus d’informations sur la capacité et la capacité supplémentaire, téléchargez le [Guide des licences Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+> Customer Insights ne prend pas en charge les scénarios de partage de données suivants :
+> - Si vous enregistrez toutes les données dans votre Azure Data Lake Storage, vous ne pourrez pas activer le partage de données avec un lac de données géré par Dataverse.
+> - Si vous activez le partage de données avec Dataverse, vous ne pourrez pas [créer des valeurs prédites ou manquantes dans une entité](predictions.md).
 
-Pour créer un environnement :
+## <a name="copy-the-environment-configuration"></a>Copier la configuration de l’environnement
 
-1. Cliquez sur le sélecteur **Environnement** dans l’en-tête de l’application.
+Lorsque vous créez un environnement, vous pouvez choisir de copier la configuration à partir d’un environnement existant. 
 
-1. Cliquez sur **Nouveau**.
+:::image type="content" source="media/environment-settings-dialog.png" alt-text="Capture d’écran des options de paramètres dans les paramètres d’environnement.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Paramètres de l’environnement](media/environment-settings-dialog.png)
-
-1. Dans la boîte de dialogue **Créer un environnement**, sélectionnez **Nouvel environnement**.
-
-   Si vous souhaitez [copier les données de l’environnement actuel](#considerations-for-copy-configuration-preview), sélectionnez **Copier à partir d’un environnement existant**. Vous voyez la liste de tous les environnements disponibles dans votre organisation à partir desquels vous pouvez copier des données.
-
-1. Indiquez les détails suivants :
-   - **Nom** : nom de cet environnement. Ce champ est déjà rempli si vous copiez à partir d’un environnement existant, mais vous pouvez le modifier.
-   - **Région** : Région dans laquelle le service est déployé et hébergé.
-   - **Type** : Indiquez si vous souhaitez créer un environnement de Production ou Sandbox.
-
-1. Vous pouvez éventuellement sélectionner **Paramètres avancés** :
-
-   - **Enregistrer toutes les données dans** : Spécifie où vous souhaitez stocker les données de sortie générées à partir de Customer Insights. Vous aurez deux options : **Stockage Customer Insights** (un Azure Data Lake géré par l’équipe Customer Insights) et **Azure Data Lake Storage Gen2** (votre propre Azure Data Lake Storage). Par défaut, l’option de stockage Customer Insights est sélectionnée.
-
-   > [!NOTE]
-   > En enregistrant des données dans Azure Data Lake Storage, vous acceptez que les données soient transférées et stockées dans l’emplacement géographique approprié pour ce compte de stockage Azure, ce qui peut différer de l’emplacement de stockage des données dans Dynamics 365 Customer Insights. [En savoir plus sur le Microsoft Trust Center.](https://www.microsoft.com/trust-center)
-   >
-   > Actuellement, les entités ingérées sont toujours stockées dans le lac de données géré par Customer Insights.
-   > Nous ne prenons en charge que les comptes de stockage Azure Data Lake Gen2 situés dans la même région Azure que celle vous avez sélectionnée lors de la création de l’environnement.
-   > Nous prenons uniquement en charge les comptes de stockage compatibles HNS (Hierarchical Name Space) d’Azure Data Lake Gen2.
-
-   - Pour l’option Azure Data Lake Storage Gen2, vous pouvez choisir entre une option basée sur une ressource et une option basée sur un abonnement pour l’authentification. Pour plus d’informations, consultez [Connecter les informations sur l’audience à un compte Azure Data Lake Storage Gen2 avec un principal de service Azure](connect-service-principal.md). Le nom du **Conteneur** ne peut pas être modifié et sera `customerinsights`.
-   
-   - Si vous souhaitez utiliser des [prédictions](predictions.md), configurer le partage de données avec Microsoft Dataverse ou activer l’ingestion de données à partir de sources de données locales, fournissez l’URL de l’environnement Microsoft Dataverse dans **Configurer le partage de données avec Microsoft Dataverse et activer des fonctionnalités supplémentaires**. Sélectionnez **Activer le partage de données** pour partager les données de sortie Customer Insights avec un lac de données géré Microsoft Dataverse.
-
-     > [!NOTE]
-     > - Le partage de données avec le lac de données géré Microsoft Dataverse n’est actuellement pas pris en charge lorsque vous enregistrez toutes les données dans votre propre Azure Data Lake Storage.
-     > - La [prédiction de valeurs manquantes dans une entité](predictions.md) n’est actuellement pas prise en charge lorsque vous activez le partage de données avec le lac de données géré Microsoft Dataverse.
-
-     > [!div class="mx-imgBorder"]
-     > ![Options de configuration pour activer le partage de données avec Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
-
-   Lorsque vous exécutez des processus, tels que l’ingestion de données ou la création de segments, les dossiers correspondants seront créés dans le compte de stockage que vous avez spécifié ci-dessus. Les fichiers de données et les fichiers model.json seront créés et ajoutés aux dossiers en fonction du nom du processus.
-
-   Si vous créez plusieurs environnements de Customer Insights et choisissez d’enregistrer les entités de sortie de ces environnements dans votre compte de stockage, des dossiers distincts seront créés pour chaque environnement avec ci_<environmentid> dans le conteneur.
-
-### <a name="considerations-for-copy-configuration-preview"></a>Considérations sur la configuration de la copie (version préliminaire)
+Vous voyez la liste de tous les environnements disponibles dans votre organisation à partir desquels vous pouvez copier des données.
 
 Les paramètres de configuration suivants sont copiés :
 
-- Configurations des fonctionnalités
 - Sources de données ingérées/importées
 - Configuration de l’unification des données (mappage, correspondance, fusion)
 - Segments
@@ -109,48 +81,22 @@ Les paramètres de configuration suivants sont copiés :
 - Gestion des modèles
 - Attributions de rôles
 
-Les paramètres suivants ne sont *pas* copiés :
+Les données suivantes ne sont *pas* copiées :
 
 - Profils client.
 - Informations d’identification d’une source de données. Vous devrez fournir les informations d’identification pour chaque source de données et actualiser les sources de données manuellement.
-- Sources de données du dossier Common Data Model et du lac géré Common Data Service. Vous devez créer ces sources de données manuellement avec le même nom que dans l’environnement source.
+
+- Sources de données du dossier Common Data Model et Dataverse - lac de données géré. Vous devez créer ces sources de données manuellement avec le même nom que dans l’environnement source.
 
 Lorsque vous copiez un environnement, vous voyez un message de confirmation de création du nouvel environnement. Sélectionnez **Accéder aux sources de données** pour voir la liste des sources de données.
 
 Toutes les sources de données affichent un statut **Identifiants requis**. Modifiez les sources de données et entrez les informations d’identification pour les actualiser.
 
-> [!div class="mx-imgBorder"]
-> ![Sources de données copiées](media/data-sources-copied.png)
+:::image type="content" source="media/data-sources-copied.png" alt-text="Liste des sources de données qui ont été copiées et qui nécessitent une authentification.":::
 
 Après avoir actualisé les sources de données, accédez à **Données** > **Unifier**. Vous trouverez ici les paramètres de l’environnement source. Modifiez-les selon vos besoins ou sélectionnez **Exécuter** pour démarrer le processus d’unification des données et créer l’entité client unifiée.
 
 Une fois l’unification des données terminée, accédez à **Mesures** et **Segments** pour les actualiser.
-
-## <a name="edit-an-existing-environment"></a>Modifier un environnement existant
-
-Vous pouvez modifier certains détails des environnements existants.
-
-1.  Cliquez sur le sélecteur **Environnement** dans l’en-tête de l’application.
-
-2.  Sélectionnez l’icône **Modifier**.
-
-3. Dans la zone **Modifier l’environnement**, vous pouvez mettre à jour le **Nom d’affichage** de l’environnement, mais vous ne pouvez pas changer la **Région** ou le **Type**.
-
-4. Si un environnement est configuré pour stocker des données dans Azure Data Lake Storage Gen2, vous pouvez mettre à jour la **Clé de compte**. Cependant, vous ne pouvez pas modifier le **Nom du compte** ou le nom **Conteneur**.
-
-5. Vous pouvez éventuellement mettre à jour une connexion basée sur une clé de compte vers une connexion basée sur une ressource ou un abonnement. Une fois mise à niveau, vous ne pouvez pas rétablir la clé de compte après la mise à jour. Pour plus d’informations, consultez [Connecter les informations sur l’audience à un compte Azure Data Lake Storage Gen2 avec un principal de service Azure](connect-service-principal.md). Vous ne pouvez pas modifier les informations du **Conteneur** lors de la mise à jour de la connexion.
-
-6. Vous pouvez éventuellement fournir une URL de l’environnement Microsoft Dataverse dans **Configurer le partage de données avec Microsoft Dataverse et activer des fonctionnalités supplémentaires**. Ces fonctionnalités comprennent le partage de données avec les applications et les solutions basées sur Microsoft Dataverse, l’ingestion de données à partir de sources de données locales ou l’utilisation de [prédictions](predictions.md). Sélectionnez **Activer le partage de données** pour partager les données de sortie Customer Insights avec un Data Lake géré par Microsoft Dataverse.
-
-   > [!NOTE]
-   > - Le partage de données avec un Data Lake géré par Microsoft Dataverse n’est actuellement pas pris en charge lorsque vous enregistrez toutes les données dans votre propre Azure Data Lake Storage.
-   > - La [prédiction des valeurs manquantes dans une entité](predictions.md) n’est actuellement pas prise en charge lorsque vous activez le partage de données avec un Data Lake géré par Microsoft Dataverse.
-
-   Après l’activation du partage de données avec Microsoft Dataverse, une actualisation complète de vos sources de données et d’autres processus démarre. Si des processus sont actuellement en cours d’exécution, vous ne voyez pas l’option pour activer le partage de données avec Microsoft Dataverse. Attendez la fin de ces processus ou les annuler pour activer le partage de données. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Options de configuration pour activer le partage de données avec Microsoft Dataverse.":::
-   
-   Lorsque vous exécutez des processus, tels que l’ingestion de données ou la création de segments, les dossiers correspondants seront créés dans le compte de stockage que vous avez spécifié ci-dessus. Les fichiers de données et les fichiers model.json seront créés et ajoutés aux sous-dossiers respectifs, selon le processus que vous exécutez.
 
 ## <a name="reset-an-existing-environment"></a>Réinitialiser un environnement existant
 
@@ -158,19 +104,19 @@ En tant qu’administrateur, vous pouvez réinitialiser un environnement à un �
 
 1.  Cliquez sur le sélecteur **Environnement** dans l’en-tête de l’application. 
 
-2.  Sélectionnez l’environnement à réinitialiser, puis les points de suspension **...**. 
+2.  Sélectionnez l’environnement à réinitialiser, puis les points de suspension (**...**). 
 
 3. Choisissez l’option **Réinitialiser**. 
 
 4.  Pour confirmer la suppression, entrez le nom de l’environnement et sélectionnez **Réinitialiser**.
 
-## <a name="delete-an-existing-environment-available-only-for-admins"></a>Supprimer un environnement existant (disponible uniquement pour les administrateurs)
+## <a name="delete-an-existing-environment"></a>Supprimer un environnement existant
 
 En tant qu’administrateur, vous pouvez supprimer un environnement que vous administrez.
 
 1.  Cliquez sur le sélecteur **Environnement** dans l’en-tête de l’application.
 
-2.  Sélectionnez l’environnement à réinitialiser, puis les points de suspension **...**. 
+2.  Sélectionnez l’environnement à réinitialiser, puis les points de suspension (**...**). 
 
 3. Choisissez l’option **Supprimer**. 
 

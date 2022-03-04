@@ -4,17 +4,16 @@ description: Comment utiliser des rapports d'entonnoir pour comprendre comment l
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
-ms.service: customer-insights
+ms.date: 09/21/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.openlocfilehash: 7bb961c5ba8d42f704eefe0dcb22e561367f3efb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498639"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226257"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Créer et gérer des rapports d'entonnoir
 
@@ -163,13 +162,23 @@ Vous pouvez changer le nom d'un rapport d'entonnoir, le supprimer ou modifier le
 
 Les informations sur l’engagement offrent maintenant des informations de synthèse pour les clients. Utilisez les informations de synthèse pour mieux comprendre le comportement des clients dans les étapes de votre rapport de synthèse. Lorsque vous créez et enregistrez un nouveau rapport de synthèse, les informations de synthèse sont automatiquement générées pour votre rapport. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Informations de synthèse.":::
+
+> [!NOTE]
+> Les informations de synthèse ne peuvent être générées que pour les étapes de synthèse qui **n’incluent pas** de dimensions personnalisées. Pour générer des informations de synthèse pour toutes les étapes de votre synthèse, utilisez les dimensions prédéfinies des informations sur l’engagement pour créer vos étapes de synthèse. 
+
 Vous pouvez voir les informations de synthèse des catégories suivantes, aussi bien au niveau principal qu’au niveau des étapes : 
 
- - Taux de conversion 
+ - Taux de conversion
+ -    Le taux de conversion entre la validation et l’achat est de 22 %.
  - Temps de transition 
+ -    Le temps de transition moyen entre le panier et la validation est de 23 minutes. 
  - Temps d’exécution 
+ -    Le temps moyen nécessaire aux clients pour terminer la synthèse est de 47 minutes. 
 
 Utilisez ces informations pour explorer en détail le comportement des clients et mieux comprendre les points de sortie et les conversions pour votre rapport de synthèse. 
+
+Pour comparer les informations des différentes étapes, sélectionnez **Voir la répartition des étapes** ou **Comparer à d’autres étapes** dans les cartes d’informations. Celles-ci afficheront un graphique à barres qui compare les mesures pour chaque étape de la synthèse. 
 
 Les informations de synthèse sont recalculées toutes les 24 heures ou lorsque vous **enregistrez** votre rapport de synthèse. 
 

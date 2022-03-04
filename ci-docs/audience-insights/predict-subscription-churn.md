@@ -3,20 +3,19 @@ title: Prédiction de l’attrition des abonnements (contient une vidéo)
 description: Déterminez si un client risque de ne plus utiliser les produits ou services d’abonnement de votre société.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967698"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354690"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Prédiction du taux de désabonnement (aperçu)
+# <a name="subscription-churn-prediction"></a>Prédiction de la résiliation d’abonnement
 
 La prédiction du taux de désabonnement permet de déterminer si un client risque de ne plus utiliser les produits ou services d’abonnement de votre société. Vous pouvez créer une nouvelle prédiction du taux de désabonnement sur la page **Intelligence** > **Prédictions**. Sélectionnez **Mes prédictions** pour voir les autres prédictions que vous avez créées.
 
@@ -63,7 +62,7 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
 ## <a name="create-a-subscription-churn-prediction"></a>Créer une prédiction du taux de désabonnement
 
 1. Dans les informations sur l’audience, accédez à **Intelligence** > **Prédictions**.
-1. Sélectionnez la vignette **Modèle de taux de désabonnement (aperçu)** et sélectionnez **Utiliser ce modèle**.
+1. Sélectionnez la vignette **Modèle d’attrition des abonnements** et sélectionnez **Utiliser ce modèle**.
    > [!div class="mx-imgBorder"]
    > ![Vignette modèle de taux de désabonnement avec le bouton Utiliser ce modèle.](media/subscription-churn-usethismodel.PNG "Vignette modèle de taux de désabonnement avec le bouton Utiliser ce modèle")
 
@@ -151,7 +150,7 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
 
 ## <a name="manage-predictions"></a>Gérer les prédictions
 
-Il est possible d'optimiser, de dépanner, d'actualiser ou de supprimer des prédictions. Consultez un rapport d'utilisation des données d'entrée pour découvrir comment rendre un prédiction plus rapide et plus fiable. Pour plus d’informations, consultez [Gérer les prédictions](manage-predictions.md).
+Il est possible d’optimiser, de dépanner, d’actualiser ou de supprimer des prédictions. Consultez un rapport d’utilisation des données d’entrée pour découvrir comment rendre un prédiction plus rapide et plus fiable. Pour plus d’informations, consultez [Gérer les prédictions](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
