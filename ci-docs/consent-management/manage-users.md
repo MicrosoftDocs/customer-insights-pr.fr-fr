@@ -2,18 +2,19 @@
 title: Gérer les utilisateurs dans la fonctionnalité de gestion des consentements
 description: Tous les utilisateurs d’une organisation qui possède la gestion des consentements peuvent accéder au service. Les administrateurs ajoutent des utilisateurs et leur attribuent les autorisations requises dans les insights d’audience.
 ms.date: 10/30/2021
+ms.service: customer-insights
 ms.subservice: consent-management
 ms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 534a3dd006f2a06e831fb7215d7a7e9386b7624f
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: faf9f7fe844829b7e88eadf72beaaa212aecb213
+ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232917"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7790812"
 ---
 # <a name="how-to-add-users-to-consent-management"></a>Comment ajouter des utilisateurs à la gestion des consentements
 

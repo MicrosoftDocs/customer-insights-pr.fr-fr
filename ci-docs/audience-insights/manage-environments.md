@@ -1,26 +1,24 @@
 ---
 title: Créer et gérer des environnements
 description: Découvrez comment souscrire au service et comment gérer des environnements.
-ms.date: 12/06/2021
+ms.date: 11/12/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-searchScope:
-- ci-system-about
-- customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354276"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799633"
 ---
 # <a name="manage-environments"></a>Gérer des environnements
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 ## <a name="switch-environments"></a>Changer d’environnements
 
@@ -46,12 +44,9 @@ Pour plus d’informations sur les paramètres d’environnement, consultez [Cr�
    
 L’étape **Microsoft Dataverse** vous permet de connecter Customer Insights à votre environnement Dataverse.
 
-Pour utiliser [des modèles de prédiction prêts à l’emploi](predictions-overview.md#out-of-box-models), configurez le partage de données avec Dataverse. Vous pouvez également activer l’ingestion de données à partir des sources de données local, en fournissant l’URL d’environnement Microsoft Dataverse administrée par votre organisation.
+Pour utiliser [des modèles de prédiction prêts à l’emploi](predictions-overview.md#out-of-box-models), configurez le partage de données avec Dataverse. Vous pouvez également activer l’ingestion de données à partir des sources de données local, en fournissant l’URL d’environnement Microsoft Dataverse administrée par votre organisation. Sélectionnez **Activer le partage de données** pour partager les données de sortie Customer Insights avec un lac de données géré par Dataverse.
 
-> [!IMPORTANT]
-> Customer Insights et Dataverse doivent se trouver dans la même région pour activer le partage de données.
-
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="Options de configuration pour activer le partage de données avec Microsoft Dataverse.":::
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Options de configuration pour activer le partage de données avec Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights ne prend pas en charge les scénarios de partage de données suivants :

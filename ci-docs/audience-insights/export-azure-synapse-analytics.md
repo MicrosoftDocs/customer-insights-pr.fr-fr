@@ -1,21 +1,22 @@
 ---
-title: Exporter les données Customer Insights vers Azure Synapse Analytics
+title: Exporter des données Customer Insights vers Azure Synapse Analytics
 description: Découvrez comment configurer la connexion à Azure Synapse Analytics.
-ms.date: 01/05/2022
+ms.date: 04/12/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: f206043298bdbf8a84b0ef37b47a43290653beba7d3d0e8b807ec74513614aa8
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231309"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7031930"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Exporter des données vers Azure Synapse Analytics (Version préliminaire)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Exporter des données vers Azure Synapse Analytics (version préliminaire)
 
 Azure Synapse est un service d’analyse qui accélère le temps nécessaire pour obtenir des informations sur les entrepôts de données et les systèmes Big Data. Vous pouvez ingérer et utiliser vos données Customer Insights dans [Azure Synapse](/azure/synapse-analytics/overview-what-is).
 
@@ -48,11 +49,9 @@ Dans Azure :
 
 ### <a name="configure-a-connection"></a>Configurer une connexion
 
-Pour créer une connexion, le principal du service et le compte d’utilisateur dans Customer Insights doivent avoir les autorisations de **Lecteur** sur le *groupe de ressources* où se trouve l’espace de travail Synapse Analytics. De plus, le principal du service et l’utilisateur de l’espace de travail Synapse Analytics doivent avoir les autorisations **Administrateur Synapse**. 
-
 1. Accédez à **Administrateur** > **Connexions**.
 
-1. Sélectionnez **Ajouter une connexion** et choisissez **Azure Synapse Analytics** ou sélectionnez **Configurer** sur la vignette **Azure Synapse Analytics** pour configurer la connexion.
+1. Sélectionnez **Ajouter une connexion** et choisissez **Azure Synapse Analytics** ou sélectionnez **Configurer** dans la vignette **Azure Synapse Analytics** pour configurer la connexion.
 
 1. Donnez à votre connexion un nom reconnaissable dans le champ Nom d’affichage. Le nom et le type de connexion décrivent cette connexion. Nous vous recommandons de choisir un nom qui explique l’objectif et la cible de la connexion.
 
@@ -64,7 +63,7 @@ Pour créer une connexion, le principal du service et le compte d’utilisateur 
 
 ### <a name="configure-an-export"></a>Configurer une exportation
 
-Vous pouvez configurer cette exportation si vous avez accès à une connexion de ce type. Pour configurer l’exportation avec une connexion partagée, vous avez besoin au moins des autorisations **Contributeur** dans Customer Insights. Pour plus d’informations, voir [Autorisations nécessaires pour configurer une exportation](export-destinations.md#set-up-a-new-export).
+Vous pouvez configurer cette exportation si vous avez accès à une connexion de ce type. Pour plus d’informations, voir [Autorisations nécessaires pour configurer une exportation](export-destinations.md#set-up-a-new-export).
 
 1. Accédez à **Données** > **Exportations**.
 
@@ -83,8 +82,6 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 L’enregistrement d’une exportation n’exécute pas l’exportation immédiatement.
 
 L’exportation s’exécute avec chaque [actualisation planifiée](system.md#schedule-tab). Vous pouvez également [exporter des données à la demande](export-destinations.md#run-exports-on-demand).
-
-Pour interroger les données exportées vers Synapse Analytics, il faut que le **Lecteur de données d’objets blob de stockage** puisse accéder au stockage destination sur l’espace de travail des exports. 
 
 ### <a name="update-an-export"></a>Mettre à jour une exportation
 

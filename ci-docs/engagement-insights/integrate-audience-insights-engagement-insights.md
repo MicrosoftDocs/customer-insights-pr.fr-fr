@@ -2,17 +2,18 @@
 title: Créer un lien entre les informations sur l’audience et les informations sur l’engagement
 description: Créez un lien actif entre les informations sur l’audience et les informations sur l’engagement pour activer le partage bidirectionnel des données.
 ms.date: 09/08/2021
+ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 56adc206d83bc6e34a55f11383393b5ac66da531
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229869"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487104"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Créer un lien entre les informations sur l’audience et les informations sur l’engagement
 
@@ -24,8 +25,8 @@ Utilisez les profils unifiés et les segments des informations sur l’audience 
 
 ## <a name="prerequisites"></a>Conditions préalables
 
-- Les profils d’informations sur l’audience doivent être stockés sur un compte Azure Data Lake Storage personnel ou dans un lac de données [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)&ndash;géré. 
-- Votre environnement d’informations sur l’audience doit être associé à un environnement Dataverse. Et si cet environnement utilise également Dataverse pour le stockage des données, assurez-vous de cocher l’option **Activer le partage de données** dans les informations sur l’audience. Pour plus d’informations, consultez [Créer et configurer un environnement dans des insights d’audience](../audience-insights/create-environment.md).
+- Les profils d’informations sur l’audience doivent être stockés sur un compte Azure Data Lake Storage personnel ou dans un lac de données [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;géré. 
+- Votre environnement d’informations sur l’audience doit être associé à un environnement Dataverse. Et si cet environnement utilise également Dataverse pour le stockage des données, assurez-vous de cocher l’option **Activer le partage de données** dans les informations sur l’audience. Pour plus d’informations, voir [Créer et configurer un environnement payant dans les informations sur l’audience](../audience-insights/get-started-paid.md).
 - Vous avez besoin des autorisations d’administrateur pour les environnements d’informations sur l’engagement et des informations sur l’audience.
 - Les environnements liés doivent être situés dans la même région géographique.
 
@@ -53,9 +54,6 @@ Créez un lien d’environnement en mettant à jour les paramètres **Administra
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Activer les attributs et les segments des profils unifiés des informations sur l’audience
 
 Après avoir lié les environnements, vous pouvez sélectionner les fonctionnalités facultatives des environnements liés. Ces fonctionnalités activent les attributs et les segments des profils unifiés à partir des informations sur l’audience pour l’analyse interactive des données client.
-
-> [!IMPORTANT]
-> Pour que les segments des informations sur l’audience apparaissent dans les informations sur l’engagement, vous devez d’abord [exécuter les processus de fusion et en aval](../audience-insights/merge-entities.md). Les processus en aval sont importants car ils génèrent un tableau unique qui prépare les segments des informations sur l’audience à partager avec les informations sur l’engagement. (Si une actualisation du système est planifiée, elle inclut automatiquement les processus en aval.)
 
 **Pour analyser les données web dans les informations sur l’engagement**
 

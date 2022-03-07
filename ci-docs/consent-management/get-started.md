@@ -1,7 +1,8 @@
 ---
-title: Guide de démarrage rapide de la gestion du consentement
-description: Suivez ces quatre étapes pour configurer rapidement la gestion du consentement, importer des données de consentement et configurer des règles de données de consentement dans Dynamics 365 Customer Insights.
+title: Démarrer avec la fonctionnalité de gestion du consentement
+description: Guide de démarrage rapide pour configurer et utiliser les données de consentement dans Customer Insights.
 ms.date: 10/30/2021
+ms.service: customer-insights
 ms.subservice: consent-management
 ms.topic: how-to
 author: smithy7
@@ -9,15 +10,12 @@ ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-searchScope:
-- ci-system-consent
-- customerInsights
-ms.openlocfilehash: 6c423a9cb3d133d4a0cd753461719b4322ec32cf
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 0abf1474ab9a37a961bfe8b71c5c6749b5da091f
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353522"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732993"
 ---
 # <a name="get-started-with-consent-management"></a>Démarrer avec la gestion du consentement
 
@@ -29,9 +27,9 @@ La capacité de gestion du consentement de Dynamics 365 Customer Insights permet
 
 Vous devez être [Administrateur dans les insights d’audience](../audience-insights/permissions.md) pour travailler avec la capacité de gestion du consentement.
 
-Sélectionnez **Bienvenue dans le Centre de consentement** de la page **Accueil** des insights d’audience. La préparation du Centre de consentement peut prendre un certain temps s’il s’agit de votre première visite. Consultez les conditions d’utilisation avant de continuer. Vous allez commencer sur la page d’accueil du Centre de consentement. Cette page donne un aperçu des fonctionnalités clés et fournit des liens vers la documentation associée.
+Sélectionnez **Bienvenue dans le Centre de consentement** de la page **Accueil** des insights d’audience. La préparation du Centre de consentement peut prendre un certain temps s’il s’agit de votre première visite. Consultez les conditions d’utilisation avant de continuer. Vous allez commencer sur la page d’accueil du Centre de consentement. Cette page donne un aperçu des fonctionnalités clés et des liens vers la documentation associée.
 
-:::image type="content" source="media/consent-center-cta.png" alt-text="Lancez le Centre de consentement à partir de la page d'accueil des insights d’audience.":::
+:::image type="content" source="media/consent-center-cta.png" alt-text="Lancez le Centre de consentement à partir de la page d’accueil des insights d’audience.":::
 
 ## <a name="step-2-import-consent-data"></a>Étape 2 : Importer des données de consentement
 

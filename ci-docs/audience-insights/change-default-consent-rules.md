@@ -2,17 +2,18 @@
 title: Gérer les règles de consentement par défaut sur les segments
 description: Avec la capacité de gestion du consentement, vous pouvez désactiver ou modifier les règles de consentement par défaut si les remplacements sont activés.
 ms.date: 12/01/2021
+ms.service: customer-insights
 mms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4eae4da67fd4c6e70800f495ba30366d4fc9a0dd
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 28c9ea49b1f3aebd3abd7d4de58fe61e6474158b
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228936"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884167"
 ---
 # <a name="disable-or-change-default-consent-rules"></a>Désactiver ou modifier les règles de consentement par défaut
 

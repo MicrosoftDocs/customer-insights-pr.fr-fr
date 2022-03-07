@@ -2,23 +2,21 @@
 title: Exemple de guide de prédiction de l’attrition des abonnements
 description: Utilisez cet exemple de guide pour essayer le modèle de prédiction de l’attrition des abonnements prédéfini.
 ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.reviewer: digranad
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: wameng
+ms.author: mhart
 manager: shellyha
-searchScope:
-- ci-create-prediction
-- customerInsights
-ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355610"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269833"
 ---
-# <a name="subscription-churn-prediction-sample-guide"></a>Exemple de guide de prédiction de l’attrition des abonnements
+# <a name="subscription-churn-prediction-preview-sample-guide"></a>Exemple de guide de prédiction de l’attrition des abonnements (version préliminaire)
 
 Nous vous présenterons un exemple de bout en bout de prédiction de l’attrition des abonnements en utilisant les exemples de données fournis ci-dessous. 
 
@@ -33,7 +31,7 @@ Contoso est une société qui produit du café et des machines à café de haute
 
 ## <a name="task-1---ingest-data"></a>Tâche 1 : ingérer les données
 
-Consultez les articles [à propos de l’ingestion de données](data-sources.md) et [importation de sources de données à l’aide connecteurs Power Query](connect-power-query.md) spécifiquement. Les informations suivantes supposent que vous vous êtes familiarisé avec l’ingestion de données en général. 
+Passez en revue les articles sur [l’ingestion de données](data-sources.md) et [l’importation de sources de données à l’aide des connecteurs Power Query](connect-power-query.md) en particulier. Les informations suivantes supposent que vous vous êtes familiarisé avec l’ingestion de données en général. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingérer les données client d’une plateforme d’eCommerce
 
@@ -130,7 +128,7 @@ Une fois les données ingérées, nous commençons maintenant le processus de **
 
 1. Accédez à l’onglet **Mettre en correspondance** et sélectionnez **Définir l’ordre**.
 
-1. Dans la liste déroulante **Principal**, choisissez **eCommerceContacts : eCommerce** comme source principale et incluez tous les enregistrements.
+1. Dans la liste déroulante **Primaire**, choisissez **eCommerceContacts : eCommerce** comme source principale et incluez tous les enregistrements.
 
 1. Dans la liste déroulante **Entité 2**, choisissez **loyCustomers : LoyaltyScheme** et incluez tous les enregistrements.
 
@@ -170,7 +168,7 @@ Une fois les données ingérées, nous commençons maintenant le processus de **
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Tâche 3 : configurer la prédiction de l’attrition des abonnements
 
-Une fois les profils clients unifiés en place, nous pouvons maintenant exécuter la prédiction de l’attrition des abonnements. Pour connaître les étapes détaillées, consultez l’article [Prédiction du taux de désabonnement](predict-subscription-churn.md). 
+Une fois les profils clients unifiés en place, nous pouvons maintenant exécuter la prédiction de l’attrition des abonnements. Pour connaître les étapes détaillées, consultez l’article [Prédiction de l’attrition des abonnements (version préliminaire)](predict-subscription-churn.md). 
 
 1. Accédez à **Intelligence** > **Découvrir** et choisissez le **Modèle d’attrition clients**.
 

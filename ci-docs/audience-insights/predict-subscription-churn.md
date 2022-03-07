@@ -1,28 +1,27 @@
 ---
-title: Prédiction de l’attrition des abonnements (contient une vidéo)
+title: Prédiction de la résiliation d'abonnement
 description: Déterminez si un client risque de ne plus utiliser les produits ou services d’abonnement de votre société.
 ms.date: 08/19/2020
-ms.reviewer: mhart
+ms.reviewer: zacook
+ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: zacookmsft
-ms.author: zacook
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 03178fc1bfe611b1b0ced08bbbef876035875825
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354690"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4643725"
 ---
-# <a name="subscription-churn-prediction"></a>Prédiction de la résiliation d’abonnement
+# <a name="subscription-churn-prediction-preview"></a>Prédiction du taux de désabonnement (aperçu)
 
 La prédiction du taux de désabonnement permet de déterminer si un client risque de ne plus utiliser les produits ou services d’abonnement de votre société. Vous pouvez créer une nouvelle prédiction du taux de désabonnement sur la page **Intelligence** > **Prédictions**. Sélectionnez **Mes prédictions** pour voir les autres prédictions que vous avez créées.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
-
 > [!TIP]
-> Essayez le didacticiel de prédiction de l’attrition des abonnements en utilisant des exemples de données : [Exemple de guide de prédiction de l’attrition des abonnements](sample-guide-predict-subscription-churn.md).
+> Essayez le didacticiel de prédiction de l'attrition des abonnements en utilisant des exemples de données : [Exemple de guide de prédiction de l'attrition des abonnements](sample-guide-predict-subscription-churn.md).
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -50,21 +49,15 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
         - **Horodatage :** Date et heure de l’événement identifiées par la clé primaire.
         - **Événement :** Nom de l’événement que vous souhaitez utiliser. Par exemple, un champ appelé « UserAction » dans un service de vidéo en streaming peut avoir la valeur « Affiché ».
         - **Détails :** Informations détaillées sur l’événement. Par exemple, un champ appelé « ShowTitle » dans un service de vidéo en streaming peut avoir la valeur d’une vidéo regardée par un client.
-- Caractéristiques des données suggérées :
-    - Données historiques suffisantes : données d’abonnement pour au moins le double de la période de temps sélectionnée. De préférence, deux à trois ans de données d’abonnement.
-    - Statut de l’abonnement : les données comprennent les abonnements actifs et inactifs pour chaque client ; il y a donc plusieurs entrées par ID de client.
-    - Nombre de clients : au moins 10 profils client, de préférence plus de 1 000 clients uniques. Le modèle échouera s’il y a moins de 10 clients et des données historiques insuffisantes.
-    - Intégrité des données : moins de 20 % des valeurs manquantes dans le champ de données de l’entité fournie.
-   
    > [!NOTE]
    > Vous aurez besoin d’au moins deux enregistrements d’activité pour 50 % des clients pour lesquels vous souhaitez calculer le taux d’attrition.
 
 ## <a name="create-a-subscription-churn-prediction"></a>Créer une prédiction du taux de désabonnement
 
-1. Dans les informations sur l’audience, accédez à **Intelligence** > **Prédictions**.
-1. Sélectionnez la vignette **Modèle d’attrition des abonnements** et sélectionnez **Utiliser ce modèle**.
+1. Dans Audience Insights, accédez à **Intelligence** > **Prédictions**.
+1. Sélectionnez la vignette **Modèle de taux de désabonnement (aperçu)** et sélectionnez **Utiliser ce modèle**.
    > [!div class="mx-imgBorder"]
-   > ![Vignette modèle de taux de désabonnement avec le bouton Utiliser ce modèle.](media/subscription-churn-usethismodel.PNG "Vignette modèle de taux de désabonnement avec le bouton Utiliser ce modèle")
+   > ![Vignette modèle de taux de désabonnement avec le bouton Utiliser ce modèle](media/subscription-churn-usethismodel.PNG "Vignette modèle de taux de désabonnement avec le bouton Utiliser ce modèle")
 
 ### <a name="name-model"></a>Nommer le modèle
 
@@ -74,9 +67,9 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
 ### <a name="define-customer-churn"></a>Définir l’attrition client
 
 1. Entrez le nombre de **Jours depuis la fin de l’abonnement** qu’un client est parti selon votre entreprise. Cette période est généralement significative pour les activités commerciales, telles que les offres ou autres efforts de marketing visant à éviter de perdre le client.
-1. Entrez le nombre de **Jours à rechercher dans le futur pour prédire le taux d’attrition** pour définir une fenêtre pour laquelle prédire le taux d’attrition. Par exemple, pour prédire le risque d’attrition de vos clients au cours des 90 prochains jours afin de vous aligner sur vos efforts de rétention marketing. Prédire le risque d’attrition sur des périodes plus ou moins longues peut rendre plus difficile de prendre en compte les facteurs de votre profil de risque d’attrition, en fonction des exigences spécifiques de votre entreprise. Sélectionner **Suivant** pour continuer
+1. Entrez le nombre de **Jours à rechercher dans le futur pour prédire le taux d’attrition** pour définir une fenêtre pour laquelle prédire le taux d’attrition. Par exemple, pour prédire le risque d’attrition de vos clients au cours des 90 prochains jours afin de vous aligner sur vos efforts de rétention marketing. Prédire le risque d’attrition sur des périodes plus ou moins longues peut rendre plus difficile la prise en compte des facteurs de votre profil de risque d’attrition, mais cela dépend fortement de vos besoins commerciaux spécifiques. Sélectionner **Suivant** pour continuer
    >[!TIP]
-   > Vous pouvez sélectionner **Enregistrer le brouillon** à tout moment pour enregistrer la prédiction en tant que brouillon. Vous trouverez le projet de prédiction dans l’onglet **Mes prédictions** pour continuer.
+   > Vous pouvez sélectionner **Enregistrer et fermer** à tout moment pour enregistrer la prédiction en tant que brouillon. Vous trouverez le projet de prédiction dans l’onglet **Mes prédictions** pour continuer.
 
 ### <a name="add-required-data"></a>Ajouter les données requises
 
@@ -87,11 +80,11 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
     1. Sélectionnez l’**Entité client** qui correspond à votre entité client principale.
     1. Entrez un nom qui décrit la relation.
        > [!div class="mx-imgBorder"]
-       > ![Page d’historique d’abonnement montrant la création d’une relation client.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Page d’historique d’abonnement montrant la création d’une relation client")
+       > ![Page d’historique d’abonnement montrant la création d’une relation client](media/subscription-churn-subscriptionhistoryrelationship.PNG "Page d’historique d’abonnement montrant la création d’une relation client")
 1. Cliquez sur **Suivant**.
 1. Mappez les champs sémantiques aux attributs de votre entité d’historique d’abonnement et sélectionnez **Enregistrer**. Pour une obtenir une description des champs, consultez les [conditions préalables](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Page d’historique d’abonnement affichant les attributs sémantiques mappés aux champs de l’entité d’historique d’abonnement sélectionnée.](media/subscription-churn-subscriptionhistorymapping.PNG "Page d’historique d’abonnement affichant les attributs sémantiques mappés aux champs de l’entité d’historique d’abonnement sélectionnée")
+   > ![Page d’historique d’abonnement affichant les attributs sémantiques mappés aux champs de l’entité d’historique d’abonnement sélectionnée](media/subscription-churn-subscriptionhistorymapping.PNG "Page d’historique d’abonnement affichant les attributs sémantiques mappés aux champs de l’entité d’historique d’abonnement sélectionnée")
 1. Sélectionnez **Ajouter des données** pour **Activités du client** et choisissez l’entité qui fournit les informations sur les activités du client comme décrit dans les conditions préalables.
 1. Sélectionnez un type d’activité correspondant au type d’activité du client que vous configurez.  Sélectionnez **Créer** et donnez un nom si vous ne voyez pas une option qui correspond au type d’activité dont vous avez besoin.
 1. Vous devrez configurer la relation entre votre entité d’activité client et l’entité Client.
@@ -102,12 +95,12 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
 1. Mappez les champs sémantiques aux attributs au sein de votre entité d’activité client et sélectionnez **Enregistrer**. Pour une obtenir une description des champs, consultez les [conditions préalables](#prerequisites).
 1. (Facultatif) Si vous souhaitez inclure d’autres activités client, répétez les étapes ci-dessus.
    > [!div class="mx-imgBorder"]
-   > ![Définissez la relation entre les entités.](media/subscription-churn-customeractivitiesmapping.PNG "Page d’activités du client affichant les attributs sémantiques mappés aux champs de l’entité d’activité du client sélectionnée")
+   > ![Définir la relation entre les entités](media/subscription-churn-customeractivitiesmapping.PNG "Page d’activités du client affichant les attributs sémantiques mappés aux champs de l’entité d’activité du client sélectionnée")
 1. Cliquez sur **Suivant**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Définir le calendrier et revoir la configuration
 
-1. Définissez une fréquence pour renouveler l’entraînement de votre modèle. Ce paramètre est important pour mettre à jour la précision des prédictions lorsque de nouvelles données sont ingérées dans les informations sur l’audience. La plupart des entreprises peuvent se réentraîner une fois par mois et obtenir une bonne précision pour leur prédiction.
+1. Définissez une fréquence pour renouveler l’entraînement de votre modèle. Ce paramètre est important pour mettre à jour la précision des prédictions lorsque de nouvelles données sont ingérées dans Audience Insights. La plupart des entreprises peuvent se réentraîner une fois par mois et obtenir une bonne précision pour leur prédiction.
 1. Cliquez sur **Suivant**.
 1. Vérifiez la configuration. Vous pouvez revenir à n’importe quelle partie de la configuration de prédiction en sélectionnant **Modifier** sous la valeur indiquée. Ou vous pouvez sélectionner une étape de configuration dans l’indicateur de progression.
 1. Si toutes les valeurs sont configurées correctement, sélectionnez **Enregistrer et exécuter** pour commencer le processus de prédiction. Sur l’onglet **Mes prédictions**, vous pouvez voir l’état de vos prévisions. Le processus peut prendre plusieurs heures pour se terminer selon la quantité de données utilisées dans la prédiction.
@@ -116,12 +109,11 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
 
 1. Accédez à l’onglet **Mes prédictions** sur **Intelligence** > **Prédictions**.
    > [!div class="mx-imgBorder"]
-   > ![Affichage de la page Mes prédictions.](media/subscription-churn-mypredictions.PNG "Affichage de la page Mes prédictions")
+   > ![Affichage de la page Mes prédictions](media/subscription-churn-mypredictions.PNG "Affichage de la page Mes prédictions")
 1. Sélectionnez la prédiction à réviser.
    - **Nom de la prédiction :** Nom de la prédiction fourni lors de sa création.
    - **Type de prédiction :** Type de modèle utilisé pour la prédiction
-   - **Entité de sortie :** Nom de l’entité pour stocker la sortie de la prédiction. Vous pouvez trouver une entité portant ce nom sur **Données** > **Entités**.    
-     Dans l’entité de sortie, *ChurnScore* est la probabilité prédite d’attrition et *IsChurn* est une étiquette binaire basée sur *ChurnScore* avec un seuil de 0,5. Le seuil par défaut peut ne pas fonctionner pour votre scénario. [Créez un nouveau segment](segments.md#create-a-new-segment) avec votre seuil préféré.
+   - **Entité de sortie :** Nom de l’entité pour stocker la sortie de la prédiction. Vous pouvez trouver une entité portant ce nom sur **Données** > **Entités**.
    - **Champ prévu :** Ce champ est renseigné uniquement pour certains types de prédictions et n’est pas utilisé dans la prédiction du taux de désabonnement.
    - **Statut :** Statut actuel de l’exécution de la prédiction.
         - **Mis en file d’attente :** La prédiction attend actuellement l’exécution d’autres processus.
@@ -132,7 +124,7 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
    - **Dernière actualisation :** Date d’actualisation de la prédiction dans l’entité en sortie.
 1. Sélectionnez les ellipses verticales à côté de la prédiction pour laquelle vous souhaitez consulter les résultats et sélectionnez **Afficher**.
    > [!div class="mx-imgBorder"]
-   > ![Affichage des options dans le menu ellipses verticales pour une prédiction, y compris modifier, actualiser, afficher, journaux et supprimer.](media/subscription-churn-verticalellipses.PNG "Affichage des options dans le menu ellipses verticales pour une prédiction, y compris modifier, actualiser, afficher, journaux et supprimer")
+   > ![Affichage des options dans le menu ellipses verticales pour une prédiction, y compris modifier, actualiser, afficher, journaux et supprimer](media/subscription-churn-verticalellipses.PNG "Affichage des options dans le menu ellipses verticales pour une prédiction, y compris modifier, actualiser, afficher, journaux et supprimer")
 1. La page de résultats comporte trois sections principales de données :
     1. **Performance du modèle de formation :** A, B ou C sont des scores possibles. Ce score indique les performances de la prédiction et peut vous aider à prendre la décision d’utiliser les résultats stockés dans l’entité de sortie.
         - Les scores sont déterminés en fonction des règles suivantes :
@@ -140,17 +132,35 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
             - **B** lorsque le modèle a prédit avec précision au moins 50 % du total des prévisions et lorsque le pourcentage de prévisions précises pour les clients qui n’ont pas renouvelé leur contrat est supérieur au taux de désabonnement moyen historique jusqu’à 10 % du taux de désabonnement moyen historique.
             - **C** lorsque le modèle a prédit avec précision moins de 50 % du total des prévisions, ou lorsque le pourcentage de prévisions précises pour les clients qui se sont désabonnés est inférieur au taux de désabonnement moyen historique.
                > [!div class="mx-imgBorder"]
-               > ![Vue du résultat des performances du modèle.](media/subscription-churn-modelperformance.PNG "Vue du résultat des performances du modèle")
+               > ![Vue du résultat des performances du modèle](media/subscription-churn-modelperformance.PNG "Vue du résultat des performances du modèle")
     1. **Probabilité de désabonnement (nombre de clients) :** Groupes de clients en fonction du risque de désabonnement prévu. Ces données peuvent vous aider ultérieurement si vous souhaitez créer un segment de clients à haut risque de désabonnement. Ces segments aident à comprendre où doit se situer votre limite pour l’appartenance à un segment.
        > [!div class="mx-imgBorder"]
-       > ![Graphique montrant la distribution des résultats de désabonnement, divisés en plages de 0 à 100 %.](media/subscription-churn-resultdistribution.PNG "Graphique montrant la distribution des résultats de désabonnement, divisés en plages de 0 à 100 %")
+       > ![Graphique montrant la distribution des résultats de désabonnement, divisés en plages de 0 à 100 %](media/subscription-churn-resultdistribution.PNG "Graphique montrant la distribution des résultats de désabonnement, divisés en plages de 0 à 100 %")
     1. **Facteurs les plus influents :** De nombreux facteurs sont pris en compte lors de la création de votre prédiction. Chacun de ces facteurs a son importance calculée pour les prévisions agrégées qu’un modèle crée. Vous pouvez utiliser ces facteurs pour aider à valider vos résultats de prédiction. Ou vous pouvez utiliser ces informations ultérieurement pour [créer des segments](segments.md) qui pourraient contribuer à influer sur le risque de désabonnement des clients
        > [!div class="mx-imgBorder"]
-       > ![Liste montrant les facteurs influents et leur importance dans la prévision du résultat du désabonnement.](media/subscription-churn-influentialfactors.PNG "Liste montrant les facteurs influents et leur importance dans la prévision du résultat du désabonnement")
+       > ![Liste montrant les facteurs influents et leur importance dans la prévision du résultat du désabonnement](media/subscription-churn-influentialfactors.PNG "Liste montrant les facteurs influents et leur importance dans la prévision du résultat du désabonnement")
 
-## <a name="manage-predictions"></a>Gérer les prédictions
+## <a name="fix-a-failed-prediction"></a>Correction d’une prédiction ayant échoué
 
-Il est possible d’optimiser, de dépanner, d’actualiser ou de supprimer des prédictions. Consultez un rapport d’utilisation des données d’entrée pour découvrir comment rendre un prédiction plus rapide et plus fiable. Pour plus d’informations, consultez [Gérer les prédictions](manage-predictions.md).
+1. Accédez à l’onglet **Mes prédictions** sur **Intelligence** > **Prédictions**.
+1. Sélectionnez la prédiction pour laquelle vous souhaitez afficher les journaux d’erreurs et sélectionnez **Journaux**.
+   > [!div class="mx-imgBorder"]
+   > ![Affichage de la barre de menu des résultats, y compris les boutons de fermeture, de modification du modèle et de journaux](media/subscription-churn-logsbutton.PNG "Affichage de la barre de menu des résultats, y compris les boutons de fermeture, de modification du modèle et de journaux")
+1. Passez toutes les erreurs en revue. Plusieurs types d’erreurs peuvent survenir et décrivent la condition à l’origine de l’erreur. Par exemple, une erreur indiquant qu’il n’y a pas assez de données pour des prédictions précises est généralement résolue en chargeant des données supplémentaires.
 
+## <a name="refresh-a-prediction"></a>Actualiser une prédiction
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Les prédictions seront automatiquement actualisées sur le même paramètre [planifier vos actualisations de données](system.md#schedule-tab) comme configuré dans les paramètres.
+
+1. Accédez à l’onglet **Mes prédictions** sur **Intelligence** > **Prédictions**.
+1. Sélectionnez les ellipses verticales à côté de la prédiction que vous souhaitez actualiser.
+1. Cliquez sur **Actualiser**.
+
+## <a name="delete-a-prediction"></a>Supprimer une prédiction
+
+1. Accédez à l’onglet **Mes prédictions** sur **Intelligence** > **Prédictions**.
+1. Sélectionnez les ellipses verticales à côté de la prédiction que vous souhaitez supprimer.
+1. Sélectionnez **Supprimer**.
+
+> [!NOTE]
+> La suppression d’un prévision supprimera son entité de sortie.

@@ -3,24 +3,20 @@ title: Prédiction de la valeur de la durée de vie du client
 description: Prévoyez le potentiel de revenus des clients actifs à l’avenir.
 ms.date: 02/05/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-searchScope:
-- ci-predictions
-- ci-create-prediction
-- ci-custom-models
-- customerInsights
-ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355786"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595804"
 ---
-# <a name="customer-lifetime-value-clv-prediction"></a>Prédiction de la valeur de la durée de vie du client
+# <a name="customer-lifetime-value-clv-prediction-preview"></a>Prédiction de la valeur de durée de vie du client (version préliminaire)
 
 Prévoyez la valeur potentielle (revenus) que les clients actifs individuels apporteront à votre entreprise sur une période future définie. Cette fonctionnalité peut vous aider à atteindre divers objectifs : 
 - Identifier les clients à forte valeur ajoutée et traitez ces informations
@@ -42,11 +38,11 @@ Les données suivantes sont obligatoires et, lorsqu’elles sont marquées comme
 - ID client : identificateur unique pour faire correspondre les transactions à un client individuel
 
 - Historique des transactions : journal des transactions historiques avec le schéma de données sémantique ci-dessous
-    - **ID de transaction** : identifiant unique de chaque transaction
-    - **Date de transaction** : date, de préférence un horodatage de chaque transaction
-    - **Montant de la transaction** : valeur monétaire (par exemple, chiffre d’affaires ou marge bénéficiaire) de chaque transaction
-    - **Libellé affecté aux retours (facultatif)**  : valeur booléenne indiquant si la transaction est un retour 
-    - **ID produit (facultatif)**  : ID produit du produit impliqué dans la transaction
+    - ID de transaction : identifiant unique de chaque transaction
+    - Date de transaction : date, de préférence un horodatage de chaque transaction
+    - Montant de la transaction : valeur monétaire (par exemple, chiffre d’affaires ou marge bénéficiaire) de chaque transaction
+    - Libellé affecté aux retours (facultatif) : valeur booléenne indiquant si la transaction est un retour 
+    - ID produit (facultatif) : ID produit du produit impliqué dans la transaction
 
 - Données supplémentaires (facultatives), par exemple
     - Activités web : historique des visites du site web, historique des e-mails
@@ -57,20 +53,10 @@ Les données suivantes sont obligatoires et, lorsqu’elles sont marquées comme
     - ID client pour faire correspondre les activités à vos clients
     - Informations sur l’activité contenant le nom et la date de l’activité
     - Le schéma de données sémantique pour les activités comprend : 
-        - **Clé primaire :** identificateur unique pour une activité
-        - **Horodatage** : date et heure de l’événement identifié par la clé primaire
-        - **Événement (nom de l’activité)**  : nom de l’événement que vous souhaitez utiliser
-        - **Détails (montant ou valeur)**  : détails sur l’activité du client
-
-- Caractéristiques des données suggérées :
-    - Données historiques suffisantes : au moins un an de données transactionnelles. De préférence, deux à trois ans de données transactionnelles pour prédire la CLV pendant un an.
-    - Achats multiples par client : idéalement, au moins deux à trois transactions par ID client, de préférence sur plusieurs dates.
-    - Nombre de clients : au moins 100 clients uniques, de préférence plus de 10 000 clients. Le modèle échouera s’il y a moins de 100 clients et des données historiques insuffisantes
-    - Exhaustivité des données : moins de 20 % de valeurs manquantes dans les champs obligatoires des données d’entrée   
-
-> [!NOTE]
-> - Le modèle nécessite l’historique des transactions de vos clients. Une seule entité de l’historique des transactions peut être configurée actuellement. S’il existe plusieurs entités d’achats/transactions, vous pouvez les réunir dans Power Query avant l’ingestion des données.
-> - Pour obtenir des données d’activité client supplémentaires (facultatif), cependant, vous pouvez ajouter autant d’entités d’activité client que vous le souhaitez pour que le modèle les prenne en compte.
+        - Clé primaire : Identificateur unique pour une activité
+        - Horodatage : date et heure de l’événement, identifiées par la clé primaire
+        - Événement (nom de l’activité) : nom de l’événement que vous souhaitez utiliser
+        - Détails (montant ou valeur) : détails sur l’activité du client
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Créer une prédiction de la valeur de durée de vie du client
 
@@ -78,7 +64,7 @@ Les données suivantes sont obligatoires et, lorsqu’elles sont marquées comme
 
 1. Sélectionnez la vignette **Valeur de la durée de vie du client** et sélectionnez **Utiliser le modèle**. 
 
-1. Dans le volet **Valeur de durée de vie du client (version préliminaire)**, sélectionnez **Démarrer**.
+1. Dans le volet **Valeur de la durée de vie du client (aperçu)**, sélectionnez **Démarrer**.
 
 1. **Nommez ce modèle** et le **Nom de l’entité de sortie** pour les distinguer des autres modèles ou entités.
 
@@ -90,7 +76,7 @@ Les données suivantes sont obligatoires et, lorsqu’elles sont marquées comme
    Par défaut, l’unité est définie sur les mois. Vous pouvez le changer en années pour regarder plus loin dans le futur.
 
    > [!TIP]
-   > Pour prédire avec précision la Valeur de la durée de vie du client pour la période que vous avez définie, vous avez besoin d’une période comparable de données historiques. Par exemple, si vous souhaitez prévoir la CLV pour les 12 prochains mois, il est recommandé de disposer d’au moins 18 à 24 mois de données historiques.
+   > Pour prédire avec précision la Valeur de la durée de vie du client pour la période que vous avez définie, vous avez besoin d’une période comparable de données historiques. Par exemple, si vous souhaitez prévoir pour les 12 prochains mois, il est recommandé de disposer d’au moins 18 à 24 mois de données historiques.
 
 1. Précisez ce que **Clients actifs** signifie pour votre entreprise. Définissez le délai d’exécution dans lequel un client doit avoir eu au moins une transaction pour être considéré comme actif. Le modèle ne prédira la Valeur de la durée de vie du client que pour les clients actifs. 
    - **Laisser le modèle calculer l’intervalle d’achat (recommandé)**  : Le modèle analyse vos données et détermine une période en fonction de l’historique des achats.
@@ -153,6 +139,7 @@ Les données reflétant les interactions client clés (comme le web, le service 
 
 1. Cliquez sur **Suivant**.
 
+
 ### <a name="review-and-run-the-model-configuration"></a>Examiner et exécuter la configuration du modèle
 
 1. Dans l’étape **Vérifier les détails de votre modèle**, validez la configuration du prédiction. Vous pouvez revenir à n’importe quelle partie de la configuration de prédiction en sélectionnant **Modifier** sous la valeur indiquée. Vous pouvez également sélectionner une étape de configuration à partir de l’indicateur de progression.
@@ -173,10 +160,11 @@ Les données reflétant les interactions client clés (comme le web, le service 
 - **Statut :** Statut de l’exécution de la prédiction.
     - **Mis en file d’attente :** La prédiction attend l’achèvement des autres processus.
     - **Actualisation en cours :** La prédiction est en cours d’exécution pour créer des résultats qui seront envoyés vers l’entité de sortie.
-    - **Échec :** L’exécution de la prédiction a échoué. [Consultez les journaux](manage-predictions.md#troubleshoot-a-failed-prediction) pour plus de détails.
+    - **Échec :** L’exécution de la prédiction a échoué. [Consultez les journaux](#troubleshoot-a-failed-prediction) pour plus de détails.
     - **Réussite :** La prédiction a réussi. Sélectionnez **Afficher** sous les points de suspension verticaux pour consulter les résultats de prédiction.
 - **Modifié :** Date de modification de la configuration de la prédiction.
 - **Dernière actualisation :** Date d’actualisation de la prédiction dans l’entité en sortie.
+
 
 ### <a name="review-prediction-results"></a>Revoir les résultats de la prédiction
 
@@ -193,14 +181,14 @@ La page de résultats comporte trois sections principales de données.
   À l’aide de la définition des clients à forte valeur ajoutée fournie lors de la configuration de prédiction, le système évalue les performances du modèle IA pour prédire les clients à forte valeur ajoutée par rapport à un modèle de base.    
 
   Les notes sont calculées selon les règles suivantes :
-  - **A** lorsque le modèle a prédit avec précision au moins 5 % de clients à forte valeur ajoutée en plus par rapport au modèle de référence.
-  - **B** lorsque le modèle a prédit avec précision entre 0 % et 5 % de clients à forte valeur ajoutée en plus par rapport au modèle de référence.
-  - **C** lorsque le modèle a prédit avec précision moins de clients à forte valeur ajoutée en plus par rapport au modèle de référence.
+  - A lorsque le modèle a prédit avec précision au moins 5 % de clients à forte valeur ajoutée en plus par rapport au modèle de référence.
+  - B lorsque le modèle a prédit avec précision entre 0 % et 5 % de clients à forte valeur ajoutée en plus par rapport au modèle de référence.
+  - C lorsque le modèle a prédit avec précision moins de clients à forte valeur ajoutée en plus par rapport au modèle de référence.
 
   Le volet **Évaluation du modèle** affiche des détails supplémentaires sur les performances du modèle IA et le modèle de base. Le modèle de base utilise une approche non basée sur l’IA pour calculer la valeur de la durée de vie du client en se basant principalement sur les achats historiques effectués par les clients.     
   Formule standard utilisée pour calculer la valeur de la durée de vie du client par le modèle de référence :    
 
-  _**Valeur de la durée de vie du client pour chaque client** = Achat mensuel moyen effectué par le client dans la fenêtre client actif * Nombre de mois dans la période de prédiction de la valeur de la durée de vie du client * Taux de rétention global de tous les clients*_
+  *Valeur de la durée de vie du client pour chaque client = Achat mensuel moyen effectué par le client dans la fenêtre client actif x Nombre de mois dans la période de prédiction de la valeur de la durée de vie du client x Taux de rétention global de tous les clients*
 
   Le modèle IA est comparé au modèle de base sur la base de deux mesures de performance du modèle.
   
@@ -218,8 +206,28 @@ La page de résultats comporte trois sections principales de données.
 
 - **Facteurs les plus influents** : Différents facteurs sont pris en compte lors de la création de votre prédiction de valeur de la durée de vie du client en fonction des données d’entrée fournies au modèle IA. Chacun de ces facteurs a son importance calculée pour les prévisions agrégées qu’un modèle crée. Vous pouvez utiliser ces facteurs pour valider les résultats de votre prédiction. Ces facteurs permettent également de mieux comprendre les facteurs les plus influents qui ont contribué à prédire la valeur de la durée de vie du client pour tous vos clients.
 
-## <a name="manage-predictions"></a>Gérer les prédictions
+## <a name="refresh-a-prediction"></a>Actualiser une prédiction
 
-Il est possible d’optimiser, de dépanner, d’actualiser ou de supprimer des prédictions. Consultez un rapport d’utilisation des données d’entrée pour découvrir comment rendre un prédiction plus rapide et plus fiable. Pour plus d’informations, consultez [Gérer les prédictions](manage-predictions.md).
+Les prédictions s’actualisent automatiquement sur le même [Planning des actualisations de vos données](system.md#schedule-tab) tel que configuré dans les paramètres. Vous pouvez également les actualiser manuellement.
+
+1. Accédez à **Intelligence** > **Prédictions** et sélectionnez l’onglet **Mes prédictions**.
+2. Sélectionnez les ellipses verticales à côté de la prédiction que vous souhaitez actualiser.
+3. Cliquez sur **Actualiser**.
+
+## <a name="delete-a-prediction"></a>Supprimer une prédiction
+
+La suppression d’une prédiction entraîne également la suppression de son entité de sortie.
+
+1. Accédez à **Intelligence** > **Prédictions** et sélectionnez l’onglet **Mes prédictions**.
+2. Sélectionnez les ellipses verticales à côté de la prédiction que vous souhaitez supprimer.
+3. Sélectionnez **Supprimer**.
+
+## <a name="troubleshoot-a-failed-prediction"></a>Résoudre les problèmes liés à un échec de prédiction
+
+1. Accédez à **Intelligence** > **Prédictions** et sélectionnez l’onglet **Mes prédictions**.
+2. Sélectionnez les points de suspension verticaux en regard de la prédiction pour laquelle vous souhaitez afficher les journaux d’erreurs.
+3. Sélectionnez **Journaux**.
+4. Passez toutes les erreurs en revue. Plusieurs types d’erreurs peuvent survenir et décrivent la condition à l’origine de l’erreur. Par exemple, une erreur indiquant qu’il n’y a pas assez de données pour des prédictions précises est généralement résolue en chargeant des données supplémentaires dans les informations sur l’audience.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

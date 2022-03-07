@@ -1,25 +1,20 @@
 ---
-title: Enrichissement de l’amélioration des adresses (contient une vidéo)
+title: Enrichissement de l’amélioration des adresses
 description: Enrichissez et normalisez les informations sur les adresses des profils client avec les modèles Microsoft.
-ms.date: 01/19/2022
+ms.date: 07/25/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-searchScope:
-- ci-data-sources-enrichment
-- ci-data-sources-enrichment-details
-- ci-enrichments
-- ci-enrichment-wizard
-- customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 65db6ce05f4d6f7f7b08ada172fec057027dd310
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353633"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692250"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enrichissement des profils client avec des adresses améliorées
 
@@ -28,8 +23,6 @@ Les adresses dans vos données peuvent être non structurées, incomplètes ou i
 ## <a name="how-we-enhance-addresses"></a>Valorisation des adresses
 
 Notre modèle passe par un processus en deux étapes pour améliorer une adresse. Tout d’abord, il analyse l’adresse pour identifier ses composants, puis les met dans un format structuré. Ensuite, nous utilisons l’IA pour corriger, compléter et normaliser les valeurs de l’adresse.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
 
 ### <a name="example"></a>Exemple
 
@@ -105,20 +98,10 @@ Pour démarrer le processus d’enrichissement, sélectionnez **Exécuter** dans
 
 Une fois le processus d’enrichissement terminé, vous pouvez consulter les données des profils clients nouvellement enrichis sous **Mes enrichissements**. De plus, vous trouverez l’heure de la dernière mise à jour et le nombre de profils enrichis.
 
-Vous pouvez voir un exemple des données enrichies dans la vignette **Aperçu des clients enrichis**. Sélectionnez **Afficher plus** et sélectionnez l’onglet **Données** pour accéder à une vue détaillée de chaque profil enrichi.
-
-### <a name="overview-card"></a>Carte de présentation
-
-La carte de présentation affiche des détails sur la couverture de l’enrichissement. 
-
-* **Adresses traitées et modifiées** : le nombre de profils clients avec des adresses qui ont été enrichis avec succès.
-
-* **Adresses traitées et non modifiées** : le nombre de profils clients avec des adresses qui ont été reconnus mais non modifiés. Cela se produit généralement lorsque les données d’entrée sont valides et ne peuvent pas être améliorées par l’enrichissement.
-
-* **Adresses non traitées et non modifiées** : le nombre de profils clients avec des adresses qui n’ont pas été reconnus. Généralement pour les données d’entrée non valides ou non prises en charge par l’enrichissement.
+Vous pouvez accéder à une vue détaillée de chaque profil enrichi en sélectionnant **Afficher des données enrichies**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Exploitez vos données client enrichies. Créez des [segments](segments.md) et des [mesures](measures.md) et [exportez les données](export-destinations.md) pour offrir des expériences personnalisées à vos clients.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

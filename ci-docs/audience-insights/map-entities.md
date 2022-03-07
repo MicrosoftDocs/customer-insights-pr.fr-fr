@@ -2,6 +2,7 @@
 title: Mapper des entités et des attributs pour l’unification des données
 description: Sélectionnez des entités, des attributs, des clés primaires et des types sémantiques pour mapper les données au profil client unifié.
 ms.date: 10/18/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: adkuppa
@@ -10,14 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-map
-- ci-match
-- customerInsights
-ms.openlocfilehash: 81f1e97dfbecd9292c50529ca21da8dab9295b5d
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 8b84ed1a860e383e4eb3f7499be6d397ba3f1db1
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354955"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673260"
 ---
 # <a name="map-entities-and-attributes"></a>Mapper les entités et attributs
 
