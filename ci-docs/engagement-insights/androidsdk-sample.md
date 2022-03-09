@@ -5,16 +5,15 @@ author: britl
 ms.reviewer: m-hartmann
 ms.author: britl
 ms.date: 06/23/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: d3890a3719efcacfee649a250498e1d30306f1ba
-ms.sourcegitcommit: 52f587ab6cdd30bdddd02290f9adab9373c1bcea
+ms.openlocfilehash: 2ee29a98192bb53bd92241d71c1a76ec2b7bf846
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "6296909"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229915"
 ---
 # <a name="run-the-android-sdk-sample"></a>Exécuter l’exemple de SDK Android
 

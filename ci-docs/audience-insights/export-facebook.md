@@ -1,24 +1,25 @@
 ---
-title: Exporter des données Customer Insights vers Facebook Ads Manager
+title: Exporter des données Customer Insights vers Facebook Ads Manager (contient une vidéo)
 description: Apprenez à configurer la connexion et à exporter vers Facebook Ads Manager.
 ms.date: 04/15/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4403c6f535f5dc60919be3717073d52640bbe61a
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 781cf10e1bb5ddaf82d4a17c7a77e0c43c41a1c2
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619208"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226492"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Exporter une liste de segments vers Facebook Ads Manager (version préliminaire)
 
 Exportez des segments de profils client unifiés vers Facebook Ads Manager pour créer des campagnes sur Facebook et Instagram.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO1aN]
 
 ## <a name="prerequisites-for-connection"></a>Conditions préalables à une connexion
 
@@ -78,7 +79,7 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
    > [!TIP]
    > Les meilleures chances de correspondance se produisent si vous sélectionnez **E-mail** comme identificateur de la clé. L’ajout d’identificateurs supplémentaires peut améliorer la correspondance.
 
-1. Sélectionnez **Ajouter un attribut** pour mapper d’autres attributs à envoyer vers Facebook Ads Manager. Les attributs de Facebook Ads Manager sont associés aux noms conviviaux suivants : **FN** = **Prénom**, **LN** = **Nom de famille**, **FI** = **Première initiale**, **PHONE** = **Téléphone**, **GEN** = **Sexe**, **DOB** = **Date de naissance**, **ST** = **État**, **CT** = **Ville**, **ZIP** = **Code postal**, **COUNTRY** = **Pays/Région**
+1. Sélectionnez **Ajouter un attribut** pour mapper d’autres attributs à envoyer vers Facebook Ads Manager. Les attributs de Facebook Ads Manager sont associés aux noms conviviaux suivants : **FN** = **Prénom**, **LN** = **Nom de famille**, **FI** = **Première initiale**, **PHONE** = **Téléphone**, **GEN** = **Sexe**, **DOB** = **Date de naissance**, **ST** = **État**, **CT** = **Ville**, **ZIP** = **Code postal**,**COUNTRY** = **Pays/Région**
 
 1. Sélectionnez les segments que vous souhaitez exporter.
 

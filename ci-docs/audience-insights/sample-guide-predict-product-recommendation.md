@@ -3,26 +3,29 @@ title: Exemple de guide de prédiction de recommandation de produit
 description: Utilisez cet exemple de guide pour essayer le modèle de prédiction de recommandation de produit prédéfini.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: b219935dfbd9f7acc1104d83e2ca281801a1a4251ae4c19fc03d4b1ce46f4613
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035182"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354644"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Exemple de guide (version préliminaire) de prédiction de recommandation de produit
+# <a name="product-recommendation-prediction-sample-guide"></a>Exemple de guide de prédiction de recommandation de produit
 
 Nous vous présenterons un exemple de bout en bout de prédiction de recommandation de produit en utilisant les exemples de données fournis ci-dessous.
 
 ## <a name="scenario"></a>Scénario
 
-Contoso est une entreprise qui produit du café et des machines à café de haute qualité, qu'elle vend via son site web Contoso Coffee. Leur objectif est de comprendre quels produits doivent-ils recommander à leurs clients récurrents. Savoir ce que sont les clients **susceptible d’acheter**, peut les aider à économiser leurs efforts de marketing en se concentrant sur des éléments spécifiques.
+Contoso est une société qui produit du café et des machines à café de haute qualité qu’elle vend sur son site web Contoso Coffee. Leur objectif est de comprendre quels produits doivent-ils recommander à leurs clients récurrents. Savoir ce que sont les clients **susceptible d’acheter**, peut les aider à économiser leurs efforts de marketing en se concentrant sur des éléments spécifiques.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -31,7 +34,7 @@ Contoso est une entreprise qui produit du café et des machines à café de haut
 
 ## <a name="task-1---ingest-data"></a>Tâche 1 : ingérer les données
 
-Passez en revue les articles sur [l’ingestion de données](data-sources.md) et [l’importation de sources de données à l’aide des connecteurs Power Query](connect-power-query.md) en particulier. Les informations suivantes supposent que vous vous êtes familiarisé avec l’ingestion de données en général.
+Consultez les articles [à propos de l’ingestion de données](data-sources.md) et [importation de sources de données à l’aide connecteurs Power Query](connect-power-query.md) spécifiquement. Les informations suivantes supposent que vous vous êtes familiarisé avec l’ingestion de données en général.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingérer les données client d’une plateforme d’eCommerce
 
@@ -87,7 +90,7 @@ Passez en revue les articles sur [l’ingestion de données](data-sources.md) et
 
 ## <a name="task-2---data-unification"></a>Tâche 2 : unification des données
 
-Après avoir ingéré les données, nous commençons maintenant le processus d'unification des données pour créer un profil client unifié. Pour plus d’informations, consultez [Unification des données](data-unification.md).
+Après avoir ingéré les données, nous commençons maintenant le processus d’unification des données pour créer un profil client unifié. Pour plus d’informations, consultez [Unification des données](data-unification.md).
 
 ### <a name="map"></a>Mappage
 

@@ -3,18 +3,23 @@ title: Afficher les profils de client
 description: Obtenez une vue combinée de vos données client unifiées.
 ms.date: 09/30/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 07d2206372f89cd7dcd9df84c87024a6f87d5eac
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+searchScope:
+- ci-customers-page
+- ci-customer-card
+- ci-activities
+- ci-activities-wizard
+- customerInsights
+ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623266"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354878"
 ---
 # <a name="customer-profiles"></a>Profils clients
 

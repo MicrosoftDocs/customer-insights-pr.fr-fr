@@ -1,39 +1,33 @@
 ---
-title: Activer les rapports de profil prêts à l'emploi
-description: Comment créer des rapports de profil prêts à l'emploi regroupés par sexe, âge et pays d'origine.
+title: Activer les rapports de profil prêts à l’emploi (OOB)
+description: Comment créer des rapports de profil prêts à l’emploi regroupés par sexe, âge et pays d’origine.
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 05/03/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 3aa9599fc780098a2f7f31f0210d76ed2ef27ece774dd6212b5cb2a599ad537e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4c165c4278a4870e6872d460e20cf7cb1eb8df83
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033949"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233951"
 ---
-# <a name="out-of-box-profile-reports"></a>Rapports de profil prêts à l'emploi
+# <a name="out-of-box-oob-unified-profile-reports"></a>Activer les rapports de profil unifiés prêts à l’emploi
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Un rapport est un ensemble de visualisation de données pour vous aider à comprendre le comportement des utilisateurs. En vous connectant à la fonction Informations sur l’audience de Customer Insights., la fonction Informations sur l’engagement peut afficher un rapport contenant des informations sur les profils client unifiés. Ce rapport comprend le nombre de profils dont vous disposez, regroupés par sexe, âge et emplacement géographique.
+Un rapport de profil unifié est une collection de visualisation de données pour vous aider à comprendre le comportement des utilisateurs. En se connectant à la fonctionnalité d’informations d’ audience de Customer Insights, les informations d’engagement peuvent afficher des rapports OOB contenant des informations sur les profils clients unifiés. Ce rapport comprend le nombre de profils dont vous disposez, regroupés par sexe, âge et emplacement géographique. Pour plus d’informations sur les profils clients, voir [Profils clients](../audience-insights/customer-profiles.md).
 
 ## <a name="prerequisites"></a>Conditions préalables
 
-L'environnement Informations sur l’audience doit stocker les données dans un compte Azure Data Lake Storage géré par le client.
-
-Si vous utilisez une version d'essai de la fonction Informations sur l’audience ou un environnement dans un lac de données géré par Customer Insights, [contactez-nous](https://go.microsoft.com/fwlink/?linkid=2145734) pour obtenir de l'aide.  
-
+Un administrateur d’environnement doit [créer un lien entre les insights d’engagement et les insights d’audience](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="enable-the-customer-profile-report"></a>Activer le rapport de profil client
 
-Un administrateur d'environnement doit [créer une connexion à Informations sur l’audience](configure-connections.md).
-
-Après avoir spécifié les détails de connexion, l'administrateur peut accorder l'accès à d'autres personnes de l'organisation pour voir le rapport. L'administrateur de l'environnement qui configure la connexion a automatiquement accès au rapport. 
+Après avoir spécifié le lien entre les insights sur l’engagement et les insights d’audience, l’administrateur peut alors accorder l’accès à d’autres personnes de l’organisation pour voir le rapport. L'administrateur de l'environnement qui configure la connexion a automatiquement accès au rapport. 
 
 Une fois la connexion établie, la fonction **Profils** sera disponible dans le volet de navigation de gauche. 
 

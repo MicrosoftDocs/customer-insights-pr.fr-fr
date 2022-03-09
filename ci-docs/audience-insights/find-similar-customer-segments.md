@@ -1,24 +1,29 @@
 ---
-title: Trouver des clients similaires avec l’IA
+title: Rechercher des clients similaires avec l’IA (contient une vidéo)
 description: Recherchez des segments de client similaires grâce à l’intelligence artificielle.
 ms.date: 06/25/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 96fbd18a20e0df7abd4e79ff77e2c3a396e33ccc
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+searchScope:
+- ci-segment-builder
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554202"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355242"
 ---
 # <a name="similar-customers-preview"></a>Clients similaires (version préliminaire)
 
 Cette fonctionnalité vous permet de trouver des clients similaires dans votre clientèle en utilisant l’intelligence artificielle. Vous devez avoir créé au moins un segment pour utiliser cette fonction. L’élargissement des critères d’un segment existant permet de trouver des clients similaires à ce segment.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *Rechercher des clients similaires* utilise des moyens automatisés pour évaluer les données et faire des prévisions sur la base de ces données, et a donc la capacité d’être utilisé comme méthode de profilage, tel que ce terme est défini par le Règlement général sur la protection des données (« RGPD »). L’utilisation par le client de cette fonctionnalité pour traiter des données peut être soumise au RGPD ou à d’autres lois ou réglementations. Vous êtes tenu de vous assurer que votre utilisation de Dynamics 365 Customer Insights, notamment les prédictions, est conforme à toutes les lois et réglementations applicables, notamment les lois relatives à la confidentialité, aux données personnelles, aux données biométriques, à la protection des données et à la confidentialité des communications.

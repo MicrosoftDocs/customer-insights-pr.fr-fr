@@ -2,7 +2,6 @@
 title: Fusionner des entités pour l’unification des données
 description: Fusionnez des données pour créer des profils clients unifiés.
 ms.date: 01/28/2022
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: adkuppa
@@ -10,13 +9,16 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
+- ci-match
 - ci-merge
-ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+- ci-relationships
+- customerInsights
+ms.openlocfilehash: c7743104bf89d9a2a741f1b358a89ed0240be024
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046560"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355842"
 ---
 # <a name="merge-entities"></a>Fusionner des entités
 

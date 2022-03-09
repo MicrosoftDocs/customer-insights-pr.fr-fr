@@ -5,16 +5,15 @@ author: britl
 ms.reviewer: mhart
 ms.author: britl
 ms.date: 06/23/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 38f0c13b3a61f1edb0f2ac462d42c1db67b313cf
-ms.sourcegitcommit: 52f587ab6cdd30bdddd02290f9adab9373c1bcea
+ms.openlocfilehash: bbe4ba648952a8081af4c8f2610276809fa5efeb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "6296907"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232839"
 ---
 # <a name="run-the-ios-sdk-sample"></a>Exécuter l’exemple de SDK iOS
 

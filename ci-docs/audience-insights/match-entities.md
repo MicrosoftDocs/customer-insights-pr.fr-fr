@@ -2,7 +2,6 @@
 title: Mettre en correspondance des entités pour l’unification des données
 description: Mettez en correspondance des données pour créer des profils clients unifiés.
 ms.date: 02/07/2022
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: adkuppa
@@ -11,12 +10,15 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
-ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+- ci-merge
+- ci-map
+- customerInsights
+ms.openlocfilehash: 49729a13d26885c30039f9fa426eaee92c172424
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "8098832"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355150"
 ---
 # <a name="match-entities"></a>Mettre en correspondance des entités
 

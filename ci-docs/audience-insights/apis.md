@@ -3,18 +3,20 @@ title: Utiliser les API
 description: Utilisez les API et comprenez leurs limitations.
 ms.date: 05/10/2021
 ms.reviewer: wimohabb
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: b1e022f8afb8b7dbb707636009b6a25ee242a4e0
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033582"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354782"
 ---
 # <a name="work-with-customer-insights-apis"></a>Utiliser les API de Customer Insights
 
@@ -35,7 +37,7 @@ Cet article explique comment accéder aux API de Customer Insights, créer un en
  
    L’activation des API crée une clé d’abonnement primaire et secondaire pour votre instance qui est utilisée dans les demandes de l’API. Vous pouvez régénérer les clés en sélectionnant **Régénérer primaire** ou **Régénérer secondaire** sous **Administration** > **Autorisations** > **API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Activez les API de Customer Insights.":::
+<!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
 1. Sélectionnez **Explorer nos API** pour [essayer les API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -49,7 +51,7 @@ Cet article explique comment accéder aux API de Customer Insights, créer un en
 
 La réponse HTTP apparaîtra bientôt en-dessous.
 
-   :::image type="content" source="media/try-apis.gif" alt-text="Comment tester les API.":::
+<!--   :::image type="content" source="media/try-apis.gif" alt-text="How to test the APIs."::: -->
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Créer une nouvelle inscription d’application dans le portail Azure
 
@@ -65,7 +67,7 @@ Ces étapes vous aident à commencer à utiliser les API de Customer Insights da
 
 1. Dans votre nouvelle inscription d’application, accédez à **Autorisations de l’API**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Comment définir les autorisations de l’API dans l’inscription de l’application.":::
+<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
 
 1. Sélectionnez **Ajouter une autorisation** et sélectionnez **Customer Insights** dans le volet latéral.
 
@@ -77,7 +79,7 @@ Ces étapes vous aident à commencer à utiliser les API de Customer Insights da
 
 Vous pouvez utiliser l’ID d’application/de client pour cette inscription d’application avec la bibliothèque d’authentification Microsoft (MSAL) pour obtenir un jeton porteur à envoyer avec votre demande à l’API.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Comment accorder le consentement de l’administrateur.":::
+<!-- :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 Pour plus d’informations sur MSAL, consultez [Vue d’ensemble de la bibliothèque d’authentification Microsoft (MSAL)](/azure/active-directory/develop/msal-overview).
 
@@ -103,7 +105,7 @@ La [section Inscription d’application](#create-a-new-app-registration-in-the-a
 
 1. Sélectionnez **Accorder un consentement d’administrateur pour...** pour terminer l’inscription de l’application.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Comment accorder le consentement de l’administrateur.":::
+ <!--  :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 1. Pour conclure, nous devons ajouter le nom de l’inscription d’application en tant qu’utilisateur dans Customer Insights.  
    
@@ -129,19 +131,19 @@ Découvrez comment utiliser les bibliothèques client C# de NuGet.org. Pour plus
  
    Vous pouvez également exécuter cette commande dans la **Console du gestionnaire de package NuGet** : `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Ajoutez un package NuGet à un projet Visual Studio.":::
+ <!--  :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Add NuGet package to Visual Studio project."::: -->
 
 #### <a name="use-the-c-client-library"></a>Utiliser la bibliothèque client C#
 
 1. Utilisez la [Bibliothèque d’authentification Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) pour obtenir un `AccessToken` en utilisant votre [Inscription d’application Azure](#create-a-new-app-registration-in-the-azure-portal) existante.
 
-1. Une fois l’authentification et l’acquisition d’un jeton réalisées avec succès, construisez un nouveau jeton ou utilisez un jeton `HttpClient` existant avec le paramètre **DefaultRequestHeaders "Authorisation"** supplémentaire défini sur le **<access token> du porteur** et le paramètre **Ocp-Apim-Subscription-Key** défini sur la [**clé d’abonnement** de votre environnement Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. Après avoir réussi à authentifier et à acquérir un jeton, construisez un nouveau `HttpClient` ou utilisez-en un existant avec, en plus, l’**Autorisation DefaultRequestHeaders** définie sur **jeton d’accès Porteur** et **Ocp-Apim-Subscription-Key** définie sur la [**clé d’abonnement** depuis votre environnement Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Rédéfinissez l’en-tête **Autorisation**, le cas échéant. Par exemple, lorsque le jeton a expiré.
 
 1. Transmettez ce `HttpClient` dans la construction du client `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Exemple de httpclient.":::
+<!--   :::image type="content" source="media/httpclient-sample.png" alt-text="Sample of httpclient."::: -->
 
 1. Utilisez le client pour appeler les « méthodes d’extension », par exemple, `GetAllInstancesAsync`. Si l’accès au `Microsoft.Rest.HttpOperationResponse` sous-jacent est recommandé, utilisez les « méthodes de message http », par exemple `GetAllInstancesWithHttpMessagesAsync`.
 

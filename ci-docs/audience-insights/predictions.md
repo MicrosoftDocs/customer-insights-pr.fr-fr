@@ -1,24 +1,28 @@
 ---
 title: Compléter des données partielles avec des prédictions
 description: Utilisez des prédictions pour remplir des données client incomplètes.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: zacook
+author: zacookmsft
+ms.author: zacook
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 577232c7e901dfd54a195c3e9cfac5d1f0f866e6
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268269"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354000"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Compléter vos données partielles avec des prédictions
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Complétez vos données partielles avec des prédictions (plus disponible)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Cette fonctionnalité ne sera **plus disponible** à partir de **5 novembre 2021**. Les implémentations actuelles continueront de fonctionner jusqu’à ce que la fonctionnalité soit supprimée, mais vous ne pourrez pas créer de nouvelles intégrations à l’aide des instructions ci-dessous.
 
 Les prédictions vous permettent de créer facilement des valeurs prédites qui peuvent améliorer votre compréhension d’un client. Sur la page **Intelligence** > **Prédictions**, vous pouvez sélectionner **Mes prédictions** pour voir les prédictions que vous avez configurées dans d’autres parties des informations sur l’audience, et les personnaliser davantage.
 
@@ -31,11 +35,11 @@ Les prédictions vous permettent de créer facilement des valeurs prédites qui 
 
 Avant que votre organisation ne puisse utiliser la fonction de prévisions, les conditions préalables suivantes doivent être remplies :
 
-1. Votre organisation a une instance [configurée dans Common Data Service](https://docs.microsoft.com/ai-builder/build-model#prerequisites) qui se trouve dans la même organisation que Customer Insights.
+1. Votre organisation a une instance [mise en place dans Microsoft Dataverse](/ai-builder/build-model#prerequisites) qui se trouve dans la même organisation que Customer Insights.
 
-2. Votre environnement est associé à votre instance Common Data Service.
+2. Votre environnement d’informations sur l’audience est joint à votre instance Dataverse.
 
-Si vous [créez un environnement](manage-environments.md), configurez-le dans la boîte de dialogue **Créer un environnement** et sélectionnez **Avancée**. Si vous avez déjà créé un environnement, accédez à ses paramètres et sélectionnez **Avancés**. Dans les deux cas, dans la section **Utiliser des prédictions**, entrez l’URL de l’instance Common Data Service à laquelle vous souhaitez associer votre environnement.
+Pour plus d’informations, consultez [Créer un environnement](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Créer une prédiction dans l’entité Client
 
@@ -47,19 +51,21 @@ Si vous [créez un environnement](manage-environments.md), configurez-le dans la
 
 4. Recherchez le nom d’attribut pour lequel vous souhaitez prédire des valeurs, puis sélectionnez l’icône **Aperçu** dans la colonne **Résumé**.
    > [!div class="mx-imgBorder"]
-   > ![Icône de présentation](media/intelligence-overviewicon.png "Icône de présentation")
+   > ![Icône de présentation.](media/intelligence-overviewicon.png "Icône de présentation")
 
 5. S’il y a un taux élevé de valeurs manquantes pour votre attribut, sélectionnez **Prédire les valeurs manquantes** pour continuer votre prédiction.
    > [!div class="mx-imgBorder"]
-   > ![Aperçu du statut avec bouton de prédiction des valeurs manquantes affiché](media/intelligence-overviewpredictmissingvalues.png "Aperçu du statut avec bouton de prédiction des valeurs manquantes affiché")
+   > ![Aperçu du statut avec bouton de prédiction des valeurs manquantes affiché.](media/intelligence-overviewpredictmissingvalues.png "Aperçu du statut avec bouton de prédiction des valeurs manquantes affiché")
 
 6. Fournissez un **nom complet** et un **Nom d’entité de sortie** pour les résultats de la prédiction.
 
 7. Une liste d’options préremplie indique où vous pouvez mapper les valeurs à une catégorie prédite. Dans ce cas, vos seules options de catégorie seront 0 ou 1, car elles correspondent à la nature vraie/fausse ou binaire de la prédiction. Dans la colonne Catégorie, mappez les valeurs de champ que vous souhaitez classer comme « 0 » dans la prédiction finale à « 0 » et les éléments que vous souhaitez classer comme « 1 » dans la prédiction finale à « 1 ».
    > [!div class="mx-imgBorder"]
-   > ![Exemple montrant des valeurs de champ mappées à des catégories](media/intelligence-categorymapping.png "Exemple montrant des valeurs de champ mappées à des catégories")
+   > ![Exemple montrant des valeurs de champ mappées à des catégories.](media/intelligence-categorymapping.png "Exemple montrant des valeurs de champ mappées à des catégories")
 
 8. Sélectionnez **Terminé** et la prédiction sera traitée. Le traitement prendra un certain temps, selon la taille et la complexité des données. Les résultats seront disponibles dans une nouvelle entité basée sur la prédiction **Nom de l’entité de sortie** que vous avez créée.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Créer une prédiction tout en créant un segment
 
@@ -77,7 +83,7 @@ Dans le cadre de ce flux, vous choisissez un attribut spécifique sur lequel bas
 
 5. Si le segment que vous avez créé contient des données incomplètes dans le champ source, vous pouvez choisir de prédire les valeurs manquantes.
    > [!div class="mx-imgBorder"]
-   > ![Bouton Prédiction](media/segments-predictoption.png "Bouton Prédiction")
+   > ![Bouton Prédiction.](media/segments-predictoption.png "Bouton Prédiction")
 
 6. Fournissez un **nom complet** et un **Nom d’entité de sortie** pour les résultats de la prédiction.
 
@@ -93,7 +99,7 @@ Dans le cadre de ce flux, vous choisissez un attribut spécifique sur lequel bas
 
 4. Vous verrez un certain nombre de points de données dans la vue de votre prédiction.
    > [!div class="mx-imgBorder"]
-   > ![Page Prédictions](media/intelligence-predictionsviewpage.png "Page Prédictions")
+   > ![Page Prédictions.](media/intelligence-predictionsviewpage.png "Page Prédictions")
 
    - **Valeurs prédites** affiche le mappage que vous avez créé pendant la phase de mappage de la valeur du champ à la catégorie. Il s’agit des valeurs de votre jeu de données qui ont été mappées à une catégorie spécifique.
    -**Principaux influenceurs** sont les facteurs au sein de votre jeu de données qui étaient les plus susceptibles d’influencer la confiance de la prédiction quant à la valeur de votre champ mappé à une catégorie spécifique.
@@ -110,7 +116,7 @@ Dans le cadre de ce flux, vous choisissez un attribut spécifique sur lequel bas
 
 ## <a name="edit-a-prediction"></a>Modifier une prédiction
 
-Après avoir créé une prédiction, vous pouvez personnaliser le modèle dans AI Builder pour augmenter l’efficacité de votre modèle.  
+Après avoir créé une prédiction, vous pouvez personnaliser le modèle dans AI Builder pour augmenter son efficacité.  
 
 1. Dans les informations sur l’audience, accédez à **Intelligence** > **Prédictions** > **Mes prédictions**.
 
@@ -120,12 +126,12 @@ Après avoir créé une prédiction, vous pouvez personnaliser le modèle dans A
 
 4. Sélectionnez **Personnaliser dans AI Builder**.
 
-5. Mettez à jour votre modèle dans AI Builder. [En savoir plus sur la gestion des modèles dans AI Builder](https://docs.microsoft.com/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Mettez à jour votre modèle dans AI Builder. [En savoir plus sur la gestion des modèles dans AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 La prochaine exécution de votre prédiction utilisera le modèle mis à jour que vous avez créé.
 
 > [!NOTE]
-> Les nouveaux modèles créés dans AI Builder ne seront pas affichés dans les informations sur l’audience, sauf si le modèle a été créé à partir des expériences répertoriées ci-dessus.
+> Les nouveaux modèles créés dans AI Builder ne s’afficheront pas dans les Informations sur l’audience, sauf si le modèle a été créé à partir des expériences répertoriées ci-dessus.
 
 ## <a name="remove-a-prediction"></a>Supprimer une prédiction
 
@@ -139,7 +145,7 @@ La prochaine exécution de votre prédiction utilisera le modèle mis à jour qu
 
 ## <a name="troubleshooting"></a>Dépannage
 
-Si vous ne pouvez pas terminer le processus d’attachement Common Data Service en raison d’une erreur, vous pouvez essayer de terminer le processus manuellement. Deux problèmes connus peuvent survenir dans le processus d’attachement :
+Si vous ne pouvez pas terminer le processus d’attachement Dataverse en raison d’une erreur, vous pouvez essayer de terminer le processus manuellement. Deux problèmes connus peuvent survenir dans le processus d’attachement :
 
 - La solution Complément de carte client n’est pas installée.
     1. Suivez les instructions pour [installer et configurer la solution](customer-card-add-in.md).

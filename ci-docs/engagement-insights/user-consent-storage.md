@@ -5,16 +5,15 @@ author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
 ms.date: 09/27/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: c824e50b723fe7f3b421048bb6ab96b7a9efc31f
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: 018263220d4628690e9f0beb8453e58b0356d099
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558868"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228982"
 ---
 # <a name="manage-cookies-and-user-consent"></a>Gérer les cookies et le consentement de l’utilisateur
 
