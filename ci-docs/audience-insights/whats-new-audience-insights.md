@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232655"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376459"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Nouveautés de la fonctionnalité d’informations sur l’audience de Dynamics 365 Customer Insights
-
-
 
 Nous sommes ravis d’annoncer nos mises à jour les plus récentes ! Cet article résume les fonctionnalités de version préliminaire publique, les améliorations de la disponibilité générale et les mises à jour de fonctionnalités. Pour connaître les plans de fonctionnalités à long terme, consultez les [Plans de versions Dynamics 365 et Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +24,62 @@ Nous déployons des mises à jour région par région. Ainsi, certaines régions
 > [!TIP]
 > Pour envoyer et voter sur les demandes de fonctionnalités et les suggestions de produits, accédez au [portail Idées d’application Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="february-2022-updates"></a>Mises à jour de février 2022
+
+Les mises à jour de février 2022 incluent de nouvelles fonctionnalités, des améliorations de performances et des corrections de bugs.
+
+### <a name="general-availability-for-prediction-models"></a>Disponibilité générale pour les modèles de prédiction
+
+Les modèles de prédiction prêts à l’emploi, y compris l’**attrition des abonnements**, l’**attrition transactionnelle**, et la **valeur de durée de vie du client (CLV)** sont mis à la disposition générale dans le cadre de Customer Insights. 
+
+Pour plus d’informations, voir [Présentation des prédictions](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Nouvelle source de données : Intégration avec Azure Synapse Analytics (version préliminaire)
+
+Azure Synapse Analytics est un service d’analyse d’entreprise qui accélère l’obtention d’informations entre entrepôts de données et systèmes de Big Data.
+
+Si votre organisation utilise déjà les capacités d’analyse avancées d’Azure Synapse Analytics et stocke la sortie dans les bases de données Data Lake, vous pouvez facilement ingérer ces données dans Customer Insights. Pour plus d’informations, voir [Connecter une source de données Azure Synapse (version préliminaire)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>Enrichissement LiveRamp (version préliminaire)
+
+LiveRamp fournit une résolution d’identité hors ligne déterministe et une consolidation des données client. Vous pouvez mapper des identifiants personnels dans vos données client avec le graphique d’identité AbiliTec et recevoir des identifiants AbiliTec. Vous pouvez ensuite utiliser ces identifiants pour une meilleure unification de vos données clients.
+
+Pour plus d’informations, voir [Enrichir les profils de clients avec les données d’identité de LiveRamp (version préliminaire)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Enrichissement des sources de données (version préliminaire)
+
+Utilisez des données provenant de sources telles que Microsoft et d’autres partenaires pour enrichir vos données client avant l’unification des données. Les enrichissements de sources de données permettent de produire des données plus complètes et de meilleure qualité, ce qui peut aider à obtenir de meilleurs résultats une fois que vous avez unifié vos données.
+
+Pour plus d’informations, voir [Enrichissement des sources de données (version préliminaire)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Changer le propriétaire de l’environnement
+
+Bien que plusieurs utilisateurs puissent disposer d’autorisations d’administration dans Customer Insights, un seul utilisateur est propriétaire d’un environnement. Une expérience améliorée vous permet de changer les propriétaires d’un environnement et de revendiquer la propriété si un ancien propriétaire a quitté l’organisation. 
+
+Pour plus d’informations, voir [Changer le propriétaire d’un environnement](manage-environments.md#change-the-owner-of-an-environment).
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Le processus de préparation des données répertorie les raisons de la corruption des enregistrements corrompus
+
+Le processus de préparation des données affiche désormais la raison de la corruption pour tous les champs avec des données corrompues au niveau de l’enregistrement individuel pour une identification facile. 
+
+Pour plus d’informations, voir [Sources de données endommagées](entities.md#corrupted-data-sources).
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Fin de l’aperçu des fonctionnalités de création de rapports dans la fonctionnalité d’informations sur l’engagement
+
+La fonctionnalité en version préliminaire d'informations sur l'engagement de Dynamics 365 Customer Insights a pris fin le 15 février 2022.  
+Ce changement signifie que l'expérience d'évaluation de Customer Insights n'inclut plus la possibilité de créer des entonnoirs ni d'autres fonctionnalités de création de rapports.
+
+Nous vous invitons à explorer et à évaluer les nombreuses autres fonctionnalités de [Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/), la plateforme de données client (CDP) de Microsoft.    
+ 
+Pendant une période de transition, les participants à la version préliminaire auront toujours accès à certaines capacités et fonctionnalités de la version préliminaire :
+
+- Obtenir du code pour instrumenter un site web ou une application mobile 
+- Afficher les événements et les propriétés d’événement 
+- Améliorer les profils unifiés avec des événements ingérés et raffinés pour bénéficier pleinement de la valeur des données clients
+  
+Pendant la période de transition, les événements capturés seront toujours diffusés vers le Data Lake connecté. Une fois cette fonctionnalité désactivée, le partage de données entre les informations d’engagement et les informations sur l’audience s’arrêtera et aucun nouvel événement ne sera envoyé au stockage connecté.
+Veuillez contacter directement l'équipe chargée de votre compte Microsoft si vous avez des questions sur la fin de la version préliminaire de la fonctionnalité. L’équipe chargée de votre compte vous tiendra au courant des prochains lancements. 
 
 ## <a name="january-2022-updates"></a>Mises à jour de janvier 2022
 
@@ -95,7 +149,7 @@ Vous pouvez maintenant configurer, afficher et filtrer les activités des contac
 
 ## <a name="october-2021-updates"></a>Mises à jour d’octobre 2021
 
-Les mises à jour de octobre 2021 incluent de nouvelles fonctionnalités, des améliorations de performances et des corrections de bugs.
+Les mises à jour d'octobre 2021 incluent de nouvelles fonctionnalités, des améliorations de performances et des corrections de bugs.
 
 ### <a name="b-to-b"></a>B2B
 
@@ -187,12 +241,12 @@ Les mises à jour de mai 2021 comprennent plusieurs fonctionnalités, mises à 
   Vous pouvez [définir des planifications d’actualisation personnalisées](export-destinations.md#schedule-and-run-exports) pour des exportations individuelles ou plusieurs exportations à la fois. Jusqu'à présent, toutes les exportations étaient exécutées à chaque actualisation du système.    
   Plutôt que de créer une nouvelle exportation à partir de zéro, vous pouvez commencer à partir d'une exportation existante pour gagner du temps.
 
-- **Exporter des segments vers Microsoft Advertising** : nous avons étendu nos destinations d’exportation pour inclure Microsoft Advertising. Créez des audiences Customer Match sur Microsoft Advertising avec vos données de profil client unifiées, et utilisez ces audiences pour vos campagnes publicitaires. Pour plus d'informations, consultez [Exporter des segments vers Microsoft Advertising](export-microsoft-advertising.md).
+- **Exporter des segments vers Microsoft Advertising** : Nous avons étendu nos destinations d’exportation pour inclure Microsoft Advertising. Créez des audiences Customer Match sur Microsoft Advertising avec vos données de profil client unifiées, et utilisez ces audiences pour vos campagnes publicitaires. Pour plus d'informations, consultez [Exporter des segments vers Microsoft Advertising](export-microsoft-advertising.md).
 
 - **Exporter des segments vers LinkedIn Ads** Nous avons étendu nos destinations d'exportation pour inclure LinkedIn Ads et vous permettre de déverrouiller le ciblage des contacts ainsi que le ciblage des entreprises via LinkedIn en exportant vos données de profil client unifiées. Pour plus d'informations, consultez [Exporter des segments vers LinkedIn Ads](export-linkedin-ads.md).
 
 
-- **Exporter des segments vers Omnisend** : nous avons étendu nos destinations d’exportation pour inclure Omnisend. Utilisez les segments créés dans les informations sur l’audience pour générer des campagnes, fournir du marketing par e-mail et utiliser certains groupes de clients avec Omnisend. Pour plus d'informations, consultez [Exporter des segments vers Omnisend](export-omnisend.md).
+- **Exporter des segments vers Omnisend** : Nous avons étendu nos destinations d’exportation pour inclure Omnisend. Utilisez les segments créés dans les informations sur l’audience pour générer des campagnes, fournir du marketing par e-mail et utiliser certains groupes de clients avec Omnisend. Pour plus d'informations, consultez [Exporter des segments vers Omnisend](export-omnisend.md).
 
 ### <a name="predictions"></a>Prédictions
 

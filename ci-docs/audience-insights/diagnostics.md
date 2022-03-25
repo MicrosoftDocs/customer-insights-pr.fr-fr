@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354405"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376413"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Transfert de journaux dans Dynamics 365 Customer Insights avec Azure Monitor (version préliminaire)
 
@@ -37,7 +37,7 @@ Customer Insights envoie les journaux d’événements suivants :
 Pour configurer les diagnostics dans Customer Insights, les conditions préalables suivantes doivent être remplies :
 
 - Vous disposez d’un [Abonnement Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) actif.
-- Vous disposez d’autorisations [administrateur](permissions.md#administrator) dans Customer Insights.
+- Vous disposez d’autorisations [administrateur](permissions.md#admin) dans Customer Insights.
 - Vous disposez du rôle **Contributeur** et **Administrateur de l’accès utilisateur** sur la ressource de destination dans Azure. La ressource peut être un compte de stockage Azure, un Azure Event Hub ou un espace de travail Azure Log Analytics. Pour plus d’informations, consultez [Ajouter ou supprimer des attributions de rôles Azure à l’aide du portail Azure](/azure/role-based-access-control/role-assignments-portal).
 - Les [Exigences de destination](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pour le stockage Azure, Azure Event Hub ou Azure Log Analytics sont remplies.
 - Vous disposez au moins du rôle **Lecteur** sur le groupe de ressources auquel appartient la ressource.
@@ -132,7 +132,7 @@ Les événements d’API et les événements de workflow ont une structure commu
 | `resultSignature` | String    | Facultatif          | Statut du résultat de l’événement. Si l’opération correspond à un appel d’API REST, il s’agit du code de statut HTTP.        | `200`             |
 | `durationMs`      | Long      | Facultatif          | Durée de l’opération en millisecondes.     | `133`     |
 | `callerIpAddress` | String    | Facultatif          | Adresse IP de l’appelant, si l’opération correspond à un appel d’API qui provient d’une adresse IP accessible au public.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Facultatif          | Objet JSON décrivant l’identité de l’utilisateur ou de l’application qui a effectué l’opération.       | Consultez la section [Identité](#identity-schema).     |  |
+| `identity`        | String    | Facultatif          | Objet JSON décrivant l’identité de l’utilisateur ou de l’application qui a effectué l’opération.       | Consultez la section [Identité](#identity-schema).     |  
 | `properties`      | String    | Facultatif          | Objet JSON avec plus de propriétés pour la catégorie particulière d’événements.      | Consultez la section [Propriétés](#api-properties-schema).    |
 | `level`           | String    | Requise          | Niveau de gravité de l’événement.    | `Informational`, `Warning`, `Error` ou `Critical`.           |
 | `uri`             | String    | Facultatif          | URI absolu de la requête.    |               |
@@ -239,7 +239,7 @@ Les événements de workflow ont les propriétés suivantes.
 | `properties.startTimestamp`                  | Oui      | Oui  | Horodateur UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | Oui      | Oui  | Horodateur UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Oui      | Oui  | Horodateur UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Oui      | Oui  | `instanceId` de Customer Insights                                                                                                                                                                                                                              |  |
+| `properties.instanceId`                      | Oui      | Oui  | `instanceId` de Customer Insights                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Oui  | - Pour OperationType = `Export`, l’identificateur est le GUID de la configuration d’exportation. <br> - Pour OperationType = `Enrichment`, il s’agit du GUID de l’enrichissement <br> - Pour OperationType `Measures` et `Segmentation`, l’identificateur est le nom de l’entité. |
 | `properties.friendlyName`                    | No       | Oui  | Nom convivial de l’exportation ou de l’entité traitée.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Oui  | Facultatif. Message d’erreur avec plus de détails.                                                                                                                                                                                                                  |

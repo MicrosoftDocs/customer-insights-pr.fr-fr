@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355888"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376505"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Apportez votre propre coffre de clés Azure (préversion)
 
@@ -31,7 +31,7 @@ Pour configurer le coffre de clés dans les insights d’audience, les condition
 
 - Vous devez disposer d’un abonnement Azure actif.
 
-- Vous disposez d’un rôle [Administrateur](permissions.md#administrator) dans les informations sur l’audience. En savoir plus sur [les autorisations des utilisateurs dans les insights d’audience](permissions.md#assign-roles-and-permissions).
+- Vous disposez d’un rôle [Administrateur](permissions.md#admin) dans les informations sur l’audience. En savoir plus sur [les autorisations des utilisateurs dans les insights d’audience](permissions.md#assign-roles-and-permissions).
 
 - Vous disposez des rôles [Contributeur](/azure/role-based-access-control/built-in-roles#contributor) et [Administrateur des accès utilisateur](/azure/role-based-access-control/built-in-roles#user-access-administrator) sur le coffre de clés ou le groupe de ressources auquel appartient le coffre de clés. Pour plus d’informations, accédez à [Ajouter ou supprimer des attributions de rôles Azure à l’aide du portail Azure](/azure/role-based-access-control/role-assignments-portal). Si vous n’avez pas le rôle Administrateur des accès utilisateur sur le coffre de clés, vous devez configurer les autorisations de contrôle d’accès basé sur les rôles pour le principal de service Azure pour Dynamics 365 Customer Insights séparément. Suivez les étapes pour [utiliser un principal de service Azure](connect-service-principal.md) pour le coffre de clés qui doit être lié.
 

@@ -1,7 +1,7 @@
 ---
 title: Créer et gérer des environnements
 description: Découvrez comment souscrire au service et comment gérer des environnements.
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354276"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376873"
 ---
 # <a name="manage-environments"></a>Gérer des environnements
-
-
 
 ## <a name="switch-environments"></a>Changer d’environnements
 
@@ -98,9 +96,29 @@ Après avoir actualisé les sources de données, accédez à **Données** > **Un
 
 Une fois l’unification des données terminée, accédez à **Mesures** et **Segments** pour les actualiser.
 
+## <a name="change-the-owner-of-an-environment"></a>Changer le propriétaire d’un environnement
+
+Bien que plusieurs utilisateurs puissent disposer d’autorisations d’administration dans Customer Insights, un seul utilisateur est propriétaire d’un environnement. Par défaut, il s’agit de l’administrateur qui crée initialement un environnement. En tant qu’administrateur d’un environnement, vous pouvez attribuer la propriété à un autre utilisateur avec des autorisations d’administrateur.
+
+1. Cliquez sur le sélecteur **Environnement** dans l’en-tête de l’application.
+
+1. Sélectionnez l’icône **Modifier**.
+
+1. Dans la zone **Modifier l’environnement**, allez à l’étape **Informations de base**.
+
+1. Dans le champ **Changer le propriétaire de l’environnement**, choisissez le nouveau propriétaire de l’environnement.  
+
+1. Sélectionnez **Réviser et terminer**, puis **Mettre à jour** pour appliquer les changements. 
+
+## <a name="claim-ownership-of-an-environment"></a>Revendiquer la propriété d’un environnement
+
+Si le propriétaire d’un environnement quitte l’organisation ou si son compte utilisateur est supprimé, l’environnement n’aura plus de propriétaire. Un utilisateur disposant d’autorisations d’administrateur peut revendiquer la propriété et devenir le nouveau propriétaire. Il peut continuer à être propriétaire de l’environnement ou [attribuer la propriété à un autre administrateur](#change-the-owner-of-an-environment). 
+
+Pour revendiquer la propriété, cliquez sur le bouton **Prendre possession** qui s’affiche en haut de chaque page dans Customer Insights lorsque le propriétaire d’origine a quitté l’organisation.
+
 ## <a name="reset-an-existing-environment"></a>Réinitialiser un environnement existant
 
-En tant qu’administrateur, vous pouvez réinitialiser un environnement à un état vide si vous souhaitez supprimer toutes les configurations et supprimer les données ingérées.
+En tant que propriétaire d’un environnement, vous pouvez réinitialiser un environnement à un état vide si vous souhaitez supprimer toutes les configurations et les données ingérées.
 
 1.  Cliquez sur le sélecteur **Environnement** dans l’en-tête de l’application. 
 
@@ -112,7 +130,7 @@ En tant qu’administrateur, vous pouvez réinitialiser un environnement à un �
 
 ## <a name="delete-an-existing-environment"></a>Supprimer un environnement existant
 
-En tant qu’administrateur, vous pouvez supprimer un environnement que vous administrez.
+En tant que propriétaire d’un environnement, vous pouvez supprimer un environnement que vous administrez.
 
 1.  Cliquez sur le sélecteur **Environnement** dans l’en-tête de l’application.
 

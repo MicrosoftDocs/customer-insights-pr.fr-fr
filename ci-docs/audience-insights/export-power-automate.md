@@ -8,16 +8,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dc9bbe22b7f10cf92f06cae18fbece9808b87dce
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: dd90ef4576246b49d4a9c74005196ee9813a6744
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226711"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455904"
 ---
 # <a name="power-automate-connector-preview"></a>Connecteur Power Automate (préversion)
 
 Déclenchez des événements spécifiques automatiques lorsque vos données sont modifiées et gérez des flux plus complexes directement dans [Power Automate](https://flow.microsoft.com/).
+
+## <a name="known-limitations"></a>Limitations connues
+
+- Vous pouvez passer au maximum 100 appels par minute. Vous pouvez appeler le point de terminaison d’API plusieurs fois en utilisant le paramètre $skip. [En savoir plus sur le paramètre $skip](/connectors/customerinsights/#get-items-from-an-entity).
 
 ## <a name="power-automate-triggers"></a>Déclencheurs Power Automate
 

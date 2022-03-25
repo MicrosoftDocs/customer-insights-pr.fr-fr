@@ -1,7 +1,7 @@
 ---
 title: Gérer les autorisations de l’utilisateur
 description: En savoir plus sur les autorisations et les rôles d’utilisateur.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355934"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376735"
 ---
 # <a name="user-permissions"></a>Autorisations de l’utilisateur
 
@@ -48,7 +48,7 @@ Il existe trois types de rôles :
 - Gérez la configuration et enrichissez les profils clients à partir de la page **Enrichissement** (pour les enrichissements propriétaires uniquement).
 - Gérez et créez des exportations basées sur les connexions partagées avec les contributeurs. [En savoir plus sur la manière dont les administrateurs autorisent les contributeurs à utiliser une connexion pour les exportations](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Administrateur
+## <a name="admin"></a>Admin
 
 - Toutes ces autorisations sont accessibles au Collaborateur.
 - Modifiez les paramètres de la page **Système**, notamment la langue, et actualisez les planifications de vos processus système.
@@ -60,6 +60,12 @@ Il existe trois types de rôles :
 - Installez et utilisez le **Complément de carte client**.
 - Ajoutez et utilisez le **connecteur Power Apps**.
 - Activez l’utilisation des [API de Customer Insights](apis.md).
+- [Attribuer la propriété de l’environnement](manage-environments.md#change-the-owner-of-an-environment) à un autre administrateur.
+
+## <a name="admin-owner"></a>Administrateur (propriétaire)
+
+- Toutes les autorisations disponibles pour l’administrateur.
+- [Réinitialisez et supprimez](manage-environments.md#reset-an-existing-environment) l’environnement.
 
 ## <a name="assign-roles-and-permissions"></a>Attribuer des autorisations et des rôles
 

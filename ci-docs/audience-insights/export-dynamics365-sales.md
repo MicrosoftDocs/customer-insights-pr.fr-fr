@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355014"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455835"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Utiliser des segments dans Dynamics 365 Sales (version préliminaire)
 
@@ -31,7 +31,7 @@ Utilisez vos données client pour créer des listes marketing, effectuer le suiv
 
 ## <a name="prerequisite-for-connection"></a>Conditions préalables à une connexion
 
-1. Les enregistrements de contact doivent être présents dans Dynamics 365 Sales avant de pouvoir exporter un segment de Customer Insights vers Sales. En savoir plus sur la façon d’intégrer des contacts dans [Dynamics 365 Sales utilisant Microsoft Dataverse](connect-power-query.md).
+1. Les enregistrements de contact doivent être présents dans Dynamics 365 Sales avant de pouvoir exporter un segment de Customer Insights vers Sales. En savoir plus sur la façon d’ingérer des contacts à partir de [Dynamics 365 Sales à l’aide de Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
    > L’exportation de segments des informations sur l’audience vers Sales ne créera pas des enregistrements de contact dans les instances Sales. Les enregistrements de contact de Sales doivent être intégrés aux informations sur l’audience et utilisés comme source de données. Ils doivent également être inclus dans l’entité Client unifiée pour mapper les ID client avec les ID de contact avant que les segments puissent être exportés.

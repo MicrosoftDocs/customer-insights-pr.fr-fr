@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 49729a13d26885c30039f9fa426eaee92c172424
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355150"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376919"
 ---
 # <a name="match-entities"></a>Mettre en correspondance des entités
 
@@ -180,7 +180,19 @@ Une entité de sortie de déduplication contient les informations suivantes :
   - Deduplication_WinnerId : ce champ contient l’ID gagnant des groupes ou clusters identifiés. Si Deduplication_WinnerId est identique à la valeur de clé primaire d’un enregistrement, cela signifie que l’enregistrement est l’enregistrement gagnant.
 - Champs utilisés pour définir les règles de déduplication.
 - Champs de règle et de score pour indiquer les règles de déduplication appliquées et le score renvoyé par l’algorithme de correspondance.
-   
+ 
+## <a name="include-enriched-entities-preview"></a>Inclure les entités enrichies (version préliminaire)
+
+Si vous avez enrichi des entités au niveau de la source de données, sélectionnez-les avant d’exécuter le processus de correspondance. Les entités enrichies peuvent améliorer vos résultats d’unification. Pour plus d’informations, voir [Enrichissement des sources de données](data-sources-enrichment.md). 
+
+L’entité enrichie contient les champs de source de données originaux et les champs enrichis. Ainsi, si vous choisissez de travailler avec l’entité enrichie, la configuration existante n’est pas impactée. Cependant, vous devrez peut-être mettre à jour les règles de correspondance pour utiliser les champs enrichis à la place.
+
+1. Allez dans **Données** > **Unifier** > **Correspondance** et sélectionnez **Utiliser les entités enrichies** en haut de la page.
+
+1. Dans le volet **Utiliser les entités enrichies**, choisissez une ou plusieurs entités enrichies.
+
+1. Cliquez sur **Terminé**. Partout où l’entité source est utilisée (telle que l’ordre de correspondance ou les règles), elle est automatiquement remplacée par l’entité enrichie.
+  
 ## <a name="run-the-match-process"></a>Exécuter le processus de mise en correspondance
 
 Avec les règles de mise en correspondance définies, notamment les règles de mise en correspondance entre entités et de déduplication, vous pouvez exécuter le processus de mise en correspondance. 
