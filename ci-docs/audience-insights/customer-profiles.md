@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354878"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523719"
 ---
 # <a name="customer-profiles"></a>Profils clients
 
 La page **Clients** affiche une vue combinée de vos profils clients unifiés. Les profils clients sont disponibles une fois que vous avez [créé l’entité Client unifiée](data-unification.md). La page vous permet de rechercher des clients et de définir l’index de cette recherche.
 
-Les clients peuvent être des individus ou des organisations. Chaque profil client est représenté par une vignette. Utilisez les contrôles de pagination pour obtenir plus d’enregistrements. La carte affiche les champs de l’entité *Client* telle que définie dans l’**index Rechercher et filtrer**. Sélectionnez une vignette pour voir les données du client sélectionné sur une page dédiée appelée [Page de détails du client](customer-profiles.md#customer-details-page).
+Les clients peuvent être des individus ou des organisations. Chaque profil client est représenté par une vignette. Utilisez les contrôles de pagination pour obtenir plus d’enregistrements. La carte affiche les champs de l’entité *Client* telle que définie dans l’**index Rechercher et filtrer**. L’ordre des champs dans chaque carte est choisi par le système.
+
+Sélectionnez une vignette pour voir les données du client sélectionné sur une page dédiée appelée [Page de détails du client](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Page Clients affichant les vignettes de résultats](media/customers-page-result-tiles-B2C.png "Page Clients affichant les vignettes de résultats")

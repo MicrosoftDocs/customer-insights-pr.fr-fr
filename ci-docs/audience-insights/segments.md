@@ -1,7 +1,7 @@
 ---
 title: Segments dans les informations sur l’audience
 description: Présentation des segments, de leur création et de leur gestion.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355980"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508563"
 ---
 # <a name="segments-overview"></a>Vue d’ensemble des segments
 
@@ -68,7 +68,9 @@ L’action suivante est disponible lorsque vous sélectionnez un segment :
 
 ## <a name="refresh-segments"></a>Actualiser des segments
 
-Vous pouvez actualiser tous les segments à la fois en sélectionnant **Actualiser tout** sur la page **Segments** ou vous pouvez actualiser un ou plusieurs segments lorsque vous les sélectionnez et choisissez **Actualiser** dans les options. Vous pouvez également configurer une actualisation périodique en cliquant sur **Administrateur** > **Système** > **Planifier**.
+Vous pouvez actualiser tous les segments à la fois en sélectionnant **Actualiser tout** sur la page **Segments** ou vous pouvez actualiser un ou plusieurs segments lorsque vous les sélectionnez et choisissez **Actualiser** dans les options. Vous pouvez également configurer une actualisation périodique en cliquant sur **Administrateur** > **Système** > **Planifier**. Lorsqu’une actualisation périodique est configurée, les règles suivantes s’appliquent :
+- Tous les segments avec le type **Dynamique** ou **Expansion** seront actualisés automatiquement à la fréquence définie. Lorsque l’actualisation est terminée, le **Statut** indique si des problèmes se sont produits pendant l’actualisation du segment. L’option **Dernière actualisation** affiche un horodatage de la dernière actualisation réussie. Si une erreur s’est produite, sélectionnez l’erreur pour voir les détails.
+- Les segments avec le type **Statique** *ne seront pas* actualisés automatiquement. L’option **Dernière actualisation** affiche un horodatage de la dernière exécution ou actualisation manuelle des segments statiques.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

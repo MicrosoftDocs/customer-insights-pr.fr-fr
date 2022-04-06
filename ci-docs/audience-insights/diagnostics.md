@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376413"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523666"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Transfert de journaux dans Dynamics 365 Customer Insights avec Azure Monitor (version préliminaire)
 
@@ -230,7 +230,7 @@ Les événements de workflow ont les propriétés suivantes.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Oui      | Oui  | Toujours `WorkflowEvent`, qui marque l’événement comme événement de workflow.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Oui      | Oui  | Identificateur de l’exécution du workflow. Tous les événements de workflow et de tâche dans l’exécution du workflow ont le même `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Oui      | Oui  | Identificateur de l’opération, consultez [Types d’opération].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Oui      | Oui  | Identificateur de l’opération, consultez [Types d’opération](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Oui      | No   | Workflow uniquement. Nombre de tâches déclenchées par le workflow.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Oui      | No   | Facultatif. Événements de workflow uniquement. [ObjectId de l’utilisateur Azure Active Directory](/azure/marketplace/find-tenant-object-id#find-user-object-id) qui a déclenché le workflow. Voir aussi `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Oui      | No   | Actualisation `full` ou `incremental`.                                                                                                                                                                                                                            |

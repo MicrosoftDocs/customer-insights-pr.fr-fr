@@ -1,7 +1,7 @@
 ---
 title: Utiliser des sources de données pour ingérer des données
 description: Découvrez comment importer des données depuis des sources diverses.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354046"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464046"
 ---
 # <a name="data-sources-overview"></a>Vue d’ensemble des sources de données
 
@@ -47,7 +47,18 @@ Les sources de données créées après avoir associé un environnement Datavers
 
 Les passerelles de données d’un environnement Power BI ou Power Apps existant seront visibles et vous pourrez les réutiliser dans Customer Insights. La page des sources de données affiche des liens pour accéder à l’environnement Microsoft Power Platform dans lequel vous pouvez afficher et configurer les passerelles de données locales.
 
+> [!IMPORTANT]
+> Assurez-vous que vos passerelles sont mises à jour vers la version la plus récente. Vous pouvez installer une mise à jour et reconfigurer une passerelle à partir d’une invite affichée sur l’écran de la passerelle directement ou [télécharger la version la plus récente](https://powerapps.microsoft.com/downloads/). Si vous n’utilisez pas la version la plus récente de la passerelle, l’actualisation du flux de données échoue avec des messages d’erreur comme **Le mot clé n’est pas pris en charge : propriétés de configuration. Nom du paramètre : mot clé**.
+
 ## <a name="review-ingested-data"></a>Évaluer les données ingérées
+Si votre environnement contient des flux de données Power Platform, la page **Sources de données** répertorie trois sections : 
+- **Partagé** : sources de données qui peuvent être gérées par tous les administrateurs Customer Insights. Les flux de données Power BI, votre propre compte de stockage et la connexion à un lac de données géré par Dataverse sont des exemples de sources de données partagées.
+- **Géré par moi** : flux de données Power Platform créés qui ne peuvent être gérés que par vous. Les autres administrateurs Customer Insights peuvent uniquement visualiser ces flux de données, mais pas les modifier, les actualiser ou les supprimer.
+- **Géré par d’autres** : flux de données Power Platform créés par d’autres administrateurs. Vous ne pouvez que les visualiser. Elle répertorie le propriétaire du flux de données à contacter pour obtenir de l’aide.
+> [!NOTE]
+> Toutes les entités peuvent être visualisées et utilisées par d’autres utilisateurs. La contextualité de l’utilisateur s’applique uniquement aux sources de données et non aux entités qui résultent de ces flux de données.
+
+Si aucun flux de données Power Platform n’est utilisé, vous ne verrez aucun groupe ni section. La page **Sources de données** contient uniquement une liste de toutes les sources de données.
 
 Vous avez accès au nom de chaque source de données ingérée, à son statut et à la dernière date d’actualisation des données pour cette source de données. Vous pouvez trier la liste des sources de données par colonne.
 

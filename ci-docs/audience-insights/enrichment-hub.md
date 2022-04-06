@@ -1,7 +1,7 @@
 ---
 title: Enrichir les profils clients unifiés
 description: Utilisez des fonctionnalités pour enrichir vos données client.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372699"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491955"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enrichissement des profils clients (aperçu)
 
@@ -97,5 +97,19 @@ Pour voir le statut d’un enrichissement
 1. Dans le volet **Détails de la progression**, développez la section **Enrichissements**. 
 1. Sous l’enrichissement dont vous souhaitez voir la progression, sélectionnez **Voir les détails**. 
 1. Dans le volet **Détails de la tâche**, sélectionnez **Afficher les détails** pour voir les processus impliqués dans la mise à jour de l’enrichissement et leur statut. 
+
+## <a name="enrichment-results"></a>Résultats d’enrichissement
+
+Une fois l’exécution de l’enrichissement terminée, vous pouvez consulter les résultats de l’enrichissement.
+
+1. Accédez à **Données** > **Enrichissement**. 
+1. Sélectionnez l’enrichissement sur lequel vous souhaitez des informations.
+
+Tous les enrichissements affichent des informations de base comme le nombre de profils enrichis, un aperçu de l’entité d’enrichissement générée et le nombre de profils enrichis dans le temps. S’il est disponible, le **Nombre de clients enrichis par champ** fournit une analyse détaillée de la couverture de chaque champ enrichi.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Page de résultats des enrichissements.":::
+
+Certains enrichissements affichent également des informations spécifiques au type d’enrichissement. Consultez la documentation de l’enrichissement approprié pour obtenir plus d’informations.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
