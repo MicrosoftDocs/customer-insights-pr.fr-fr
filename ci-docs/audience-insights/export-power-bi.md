@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225512"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552053"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connecteur pour Power BI (préversion)
 
@@ -72,6 +72,6 @@ Après avoir supprimé les relations dupliquées, essayez de reconfigurer le con
 
 Lors du chargement d’entités contenant des champs avec un format de date tel que MM/JJ/AAAA, vous pouvez rencontrer des erreurs dues à des formats de paramètres régionaux incompatibles. Ce décalage se produit lorsque votre fichier Power BI Desktop est défini sur un autre paramètre régional que l’anglais (États-Unis), car les champs de date dans les informations sur l’audience sont enregistrés au format américain.
 
-Le fichier Power BI Desktop a un seul paramètre régional, qui est appliqué lors de la récupération des données. Pour faire en sorte que ces champs de date soient correctement interprétés, définissez les paramètres régionaux du fichier .BPI sur l’anglais (États-Unis). [Découvrir comment changer les paramètres régionaux d’un fichier Power BI Desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+Le fichier Power BI Desktop a un seul paramètre régional, qui est appliqué lors de la récupération des données. Pour faire en sorte que ces champs de date soient correctement interprétés, définissez les paramètres régionaux du fichier .BPI sur l’anglais (États-Unis). [Découvrir comment changer les paramètres régionaux d’un fichier Power BI Desktop](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

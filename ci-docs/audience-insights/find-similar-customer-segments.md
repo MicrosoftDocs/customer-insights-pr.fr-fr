@@ -1,23 +1,23 @@
 ---
 title: Rechercher des clients similaires avec l’IA (contient une vidéo)
 description: Recherchez des segments de client similaires grâce à l’intelligence artificielle.
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355242"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561567"
 ---
 # <a name="similar-customers-preview"></a>Clients similaires (version préliminaire)
 
@@ -36,6 +36,8 @@ Cette fonctionnalité vous permet de trouver des clients similaires dans votre c
 
 1. Vérifiez le nom suggéré pour votre nouveau segment et modifiez-le si nécessaire.
 
+1. Si nécessaire, ajoutez des [étiquettes](work-with-tags-columns.md#manage-tags) au nouveau segment.
+
 1. Passez en revue les champs qui définissent votre nouveau segment. Ces champs définissent la base sur laquelle le système tentera de trouver des clients similaires à votre segment source. Le système sélectionnera les champs recommandés par défaut.
   Les champs susceptibles de réduire considérablement les performances du modèle sont automatiquement exclus :
   
@@ -44,9 +46,9 @@ Cette fonctionnalité vous permet de trouver des clients similaires dans votre c
 
 1. Choisissez si vous souhaitez inclure **Tous les clients** ou seulement des clients dans un **Segment existant spécifique** dans votre nouveau segment.
 
-1. Excluez les clients dans votre segment source en sélectionnant la case **Exclure tout le monde dans le segment source**.
-
 1. Par défaut, le système suggère d’inclure seulement 20 % de la taille cible audience dans votre sortie. Modifiez ce seuil si nécessaire. L’augmentation du seuil réduira la précision.
+
+1. Ajoutez des clients dans votre segment source en cochant la case **Inclure les membres de votre segment source en plus des clients avec des attributs similaires**.
 
 1. Sélectionnez **Exécuter** en bas de la page pour démarrer une tâche de classification binaire (une méthode de Machine Learning) qui analyse le jeu de données.
 
@@ -67,7 +69,7 @@ Vous pouvez [utiliser le résultat d’un segment similaire](segments.md) comme 
 
 Pour actualiser un segment similaire, sélectionnez-le sur la page **Segments** et sélectionnez **Actualiser** dans la barre d’actions.
 
-La modification d’un segment similaire retraitera vos données. Le segment précédemment créé est mis à jour avec des données actualisées.    
+La modification d’un segment similaire retraitera vos données. Le segment précédemment créé est mis à jour avec des données actualisées.
 Pour modifier un segment similaire, sélectionnez-le sur la page **Segments** et sélectionnez **Modifier** dans la barre d’actions. Appliquez vos modifications et sélectionnez **Exécuter** pour démarrer le traitement.
 
 ## <a name="delete-a-similar-segment"></a>Supprimer un segment similaire
@@ -84,6 +86,5 @@ Le modèle de classification binaire Machine Learning attribue un score aux cli
 - Les scores de similarité entre 0,85 et 1 sont des clients classés comme *très similaires*.
 
 Les clients avec des scores de similarité inférieurs à 0,4 ne sont pas inclus dans la sortie du modèle. Le système ne les considère pas suffisamment similaires au segment source.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

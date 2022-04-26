@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508563"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529536"
 ---
 # <a name="segments-overview"></a>Vue d’ensemble des segments
 
@@ -51,20 +51,26 @@ Accédez à la page **Segments** pour afficher tous vos segments enregistrés et
 
 Chaque segment est représenté par une ligne qui contient des informations supplémentaires sur le segment.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Segment sélectionné avec la liste déroulante d’options et les options disponibles.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segment sélectionné avec la liste déroulante d’options et les options disponibles." lightbox="media/segments-selected-segment.png":::
 
-L’action suivante est disponible lorsque vous sélectionnez un segment :
+Les actions suivantes sont disponibles lorsque vous sélectionnez un segment :
 
 - **Afficher** les détails du segment, y compris un aperçu de la tendance du nombre de membres du segment.
+- **Télécharger** la liste des membres en tant que fichier .CSV.
 - **Modifier** le segment pour modifier ses propriétés.
 - **Créez un doublon** d’un segment. Vous pouvez choisir de modifier ses propriétés immédiatement ou simplement d’enregistrer le doublon.
 - **Actualiser** le segment pour inclure les dernières données.
-- **Activer** ou **Désactiver** le segment. Les segments ont deux états possibles : actif ou inactif. Ces états sont utiles lors de l’édition d’un segment. Pour les segments inactifs, la définition de segment existe, mais elle ne contient pas encore de clients. Lorsque vous activez un segment, son état passe de « inactif » à « actif » et il commence à rechercher des clients qui correspondent à la définition du segment. Si une [actualisation programmée](system.md#schedule-tab) est configurée, les segments inactifs ont leur **Statut** répertorié comme **Ignoré**, indiquant qu’une actualisation n’a même pas été tentée. Lorsqu’un segment inactif est activé, il s’actualise et sera inclus dans les actualisations programmées.
+- **Activer** ou **Désactiver** le segment. Pour les segments inactifs, la définition de segment existe, mais elle ne contient pas encore de clients. Un segment actif recherche les clients qui correspondent à la définition du segment. Si une [actualisation programmée](system.md#schedule-tab) est configurée, les segments inactifs ont leur **Statut** répertorié comme **Ignoré**, indiquant qu’une actualisation n’a même pas été tentée. Lorsqu’un segment inactif est activé, il s’actualise et sera inclus dans les actualisations programmées.
   Vous pouvez également utiliser la fonctionnalité **Planifier plus tard** dans la liste déroulante **Activer/Désactiver** pour spécifier une date et une heure futures d’activation et de désactivation d’un segment particulier.
+- **[Rechercher des clients similaires](find-similar-customer-segments.md)** dans le segment.
 - **Renommer** le segment.
+- **Étiquette** pour [gérer les étiquettes](work-with-tags-columns.md#manage-tags) du segment.
 - **Télécharger** la liste des membres en tant que fichier .CSV.
 - **Gérer les exportations** pour voir le segment lié aux exportations et les gérer. [En savoir plus sur les exportations](export-destinations.md)
 - **Supprimer** le segment.
+- **Colonnes** pour [personnaliser les colonnes](work-with-tags-columns.md#customize-columns) qui s’affichent.
+- **Filtrer** pour [filtrer selon les étiquettes](work-with-tags-columns.md#filter-on-tags).
+- **Rechercher un nom** pour effectuer une recherche par nom de segment.
 
 ## <a name="refresh-segments"></a>Actualiser des segments
 
