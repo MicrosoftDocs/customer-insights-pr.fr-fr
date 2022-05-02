@@ -6,12 +6,12 @@ metadata:
   ms.author: mhart
   ms.date: 03/02/2022
   ms.topic: landing-page
-  ms.openlocfilehash: 5efa266dfe8d70812f4c668b04cee2f93f206f7b
-  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+  ms.openlocfilehash: e3a9f6d5f4d23ca3e85fa3f69272a0162ca7bd2d
+  ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 02/25/2022
-  ms.locfileid: "8350456"
+  ms.lasthandoff: 04/27/2022
+  ms.locfileid: "8641653"
 title: Documentation Dynamics 365 Customer Insights
 summary: Trouvez des ressources utiles pour démarrer et découvrez les fonctionnalités et les capacités de Customer Insights.
 landingContent:
@@ -23,8 +23,8 @@ landingContent:
       url: overview.md
     - text: Plans de mise en production
       url: /dynamics365/release-plans/
-    - text: Découvrir la CDP
-      url: https://dynamics.microsoft.com/ai/customer-insights/
+    - text: Fonctionnalités nouvelles et mises à jour
+      url: whats-new-customer-insights.md
   - linkListType: learn
     links:
     - text: Parcours d'apprentissage Customer Insights
@@ -35,24 +35,94 @@ landingContent:
     links:
     - text: S’inscrire à une version d’évaluation
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Nouveautés des informations sur l’audience
-      url: audience-insights/whats-new-audience-insights.md
-    - text: Guide de démarrage rapide
-      url: audience-insights/get-started.md
+    - text: Commencer par l’essai
+      url: trial-signup.md
+    - text: Mise en route de Customer Insights
+      url: get-started.md
   - linkListType: learn
     links:
     - text: Démarrer
       url: /learn/modules/get-started-customer-data-platform/
+- title: Unifier les données
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Vue d’ensemble des sources de données
+      url: data-sources.md
+    - text: Vue d’ensemble de l’unification
+      url: data-unification.md
+    - text: Comprendre les entités
+      url: entities.md
+  - linkListType: learn
+    links:
+    - text: Créer un profil unifié
+      url: /learn/modules/unified-customer-profile/
+- title: Obtenir des informations
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Enrichir des profils client
+      url: enrichment-hub.md
+    - text: Configurez des relations
+      url: relationships.md
+    - text: Données complètes avec prédictions
+      url: predictions.md
+  - linkListType: learn
+    links:
+    - text: Enrichir et prédire les données
+      url: /learn/modules/enrich-data/
+- title: Créer sur vos données
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Créer des segments
+      url: segments.md
+    - text: Créer des mesures
+      url: measures.md
+    - text: Définir les activités du client
+      url: activities.md
+  - linkListType: learn
+    links:
+    - text: Utiliser l’application
+      url: /learn/modules/working-with-customer-insights/
+- title: Exporter des données
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurer les destinations d’exportation
+      url: export-destinations.md
+    - text: Cartes client dans les applications Dynamics 365
+      url: customer-card-add-in.md
+    - text: Connecteur Power BI
+      url: export-power-bi.md
+  - linkListType: learn
+    links:
+    - text: Gérer les connexions externes
+      url: /learn/modules/configure-third-party-connections/
+- title: Administrer l’application
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configuration du système
+      url: system.md
+    - text: Définir des autorisations utilisateur
+      url: permissions.md
+    - text: Gérer plusieurs environnements
+      url: manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Administrer Customer Insights
+      url: /learn/modules/administer-customer-data-platform/
 - title: Administrer Customer Insights
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Configuration du système
-      url: audience-insights/system.md
+      url: system.md
     - text: Définir des autorisations utilisateur
-      url: audience-insights/permissions.md
+      url: permissions.md
     - text: Gérer plusieurs environnements
-      url: audience-insights/manage-environments.md
+      url: manage-environments.md
   - linkListType: learn
     links:
     - text: Administrer Customer Insights

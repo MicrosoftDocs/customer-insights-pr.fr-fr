@@ -3,17 +3,17 @@ title: S’inscrire à un essai gratuit - Dynamics 365 Customer Insights
 description: Découvrez comment vous inscrire rapidement et démarrer un essai gratuit de Customer Insights. Explorez l’application et trouvez des ressources d’apprentissage supplémentaires.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 04/12/2022
 ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: 2f27dd4fd9df679696d72f2eccde262de3e4afc4
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350220"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641713"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>S’abonner à une version d’essai gratuite de Dynamics 365 Customer Insights
 
@@ -21,7 +21,7 @@ Customer Insights propose une version d’essai gratuite de 30 jours. Après un
 
 **Pour s’inscrire à la version d’essai** :
 
-1. Allez à la [page d’aperçu de l’essai](https://dynamics.microsoft.com/get-started/?appname=customerinsights) et sélectionnez **Inscrivez-vous maintenant**.
+1. Accédez à la [page de présentation de l’essai](https://dynamics.microsoft.com/ai/customer-insights/) et sélectionnez **Essayer Customer Insights gratuitement**.
 1. Suivez les instructions à l’écran pour saisir [l’adresse e-mail associée à votre compte Microsoft](https://support.microsoft.com/windows/what-is-a-microsoft-account-4a7c48e9-ff5a-e9c6-5a5c-1a57d66c3bfa) et vos coordonnées.
 1. Effectuez des sélections et choisissez votre objectif jusqu’à ce que vous arriviez à la page d’accueil de la fonctionnalité que vous avez sélectionnée.
 
@@ -31,12 +31,12 @@ L’essai prend quelques instants à charger, puis vous pourrez commencer à uti
 
 Votre environnement d’essai comprend les mêmes fonctionnalités que la version payante. Les liens ci-dessous vous guideront dans l’utilisation de certaines des fonctionnalités clés.
 
-- [Démarrage rapide pour les informations d’audience.](audience-insights/get-started.md)
-- [Ajoutez plus d’utilisateurs et attribuez des autorisations.](audience-insights/permissions.md)
-- [Ingérez vos sources de données](audience-insights/data-sources.md) et faites-les passer par le [processus d’unification des données](audience-insights/data-unification.md) pour obtenir des [profils clients unifiés](audience-insights/customer-profiles.md).
-- [Enrichissez les profils clients unifiés](audience-insights/enrichment-hub.md) ou [exécutez des modèles prédictifs](audience-insights/predictions-overview.md).
-- Créez des [segments](audience-insights/segments.md) pour grouper des clients et des [mesures](audience-insights/measures.md) pour passer en revue les KPI.
-- Configurez les [connexions](audience-insights/connections.md) et les [exportations](audience-insights/export-destinations.md) pour traiter des sous-ensembles de vos données dans d’autres applications.
+- [Mise en route de Customer Insights.](get-started.md)
+- [Ajoutez plus d’utilisateurs et attribuez des autorisations.](permissions.md)
+- [Ingérez vos sources de données](data-sources.md) et faites-les passer par le [processus d’unification des données](data-unification.md) pour obtenir des [profils clients unifiés](customer-profiles.md).
+- [Enrichissez les profils clients unifiés](enrichment-hub.md) ou [exécutez des modèles prédictifs](predictions-overview.md).
+- Créez des [segments](segments.md) pour grouper des clients et des [mesures](measures.md) pour passer en revue les KPI.
+- Configurez les [connexions](connections.md) et les [exportations](export-destinations.md) pour traiter des sous-ensembles de vos données dans d’autres applications.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 

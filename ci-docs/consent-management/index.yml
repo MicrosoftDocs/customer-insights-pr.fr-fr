@@ -7,12 +7,12 @@ metadata:
   ms.date: 11/3/2021
   ms.subservice: consent-management
   ms.topic: landing-page
-  ms.openlocfilehash: fa33a053882753ed99ec487b6933c8da8d6ad8b6
-  ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+  ms.openlocfilehash: d686e85de0e3f19963e7b1d9b887ea9c17ea21ae
+  ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 02/16/2022
-  ms.locfileid: "8230467"
+  ms.lasthandoff: 04/27/2022
+  ms.locfileid: "8641689"
 title: La gestion du consentement, une fonctionnalité des documents Dynamics 365 Customer Insights
 summary: Trouvez des ressources utiles pour vous lancer et en savoir plus sur les fonctionnalités.
 landingContent:
@@ -45,6 +45,6 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Appliquer des règles de consentement
-      url: ../audience-insights/activate-consent.md
+      url: ../activate-consent.md
     - text: Remplacer des règles de consentement
-      url: ../audience-insights/change-default-consent-rules.md
+      url: ../change-default-consent-rules.md

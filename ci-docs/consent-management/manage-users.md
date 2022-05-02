@@ -1,26 +1,57 @@
 ---
 title: Gérer les utilisateurs dans la fonctionnalité de gestion des consentements
-description: Tous les utilisateurs d’une organisation qui possède la gestion des consentements peuvent accéder au service. Les administrateurs ajoutent des utilisateurs et leur attribuent les autorisations requises dans les insights d’audience.
-ms.date: 10/30/2021
+description: Tous les utilisateurs d’une organisation qui possède la gestion des consentements peuvent accéder au service. Les administrateurs ajoutent des utilisateurs et leur attribuent les autorisations requises dans Customer Insights.
+ms.date: 04/27/2022
 ms.subservice: consent-management
 ms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 534a3dd006f2a06e831fb7215d7a7e9386b7624f
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: ffc1010b6bc005c595c2083057d77c8dcf7e688f
+ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232917"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "8653457"
 ---
-# <a name="how-to-add-users-to-consent-management"></a>Comment ajouter des utilisateurs à la gestion des consentements
+# <a name="manage-users-and-permissions"></a>Gérer les utilisateurs et les autorisations
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-La [capacité de gestion des consentements](overview.md) est disponible via un abonnement. Tous les utilisateurs d'une organisation qui possède la gestion des consentements peuvent accéder au service. 
+Tous les administrateurs des insights d’audience ont accès à la capacité de gestion du consentement. Ils peuvent ajouter et supprimer d’autres utilisateurs et leur attribuer les autorisations requises.
 
-Actuellement, tous les administrateurs des insights d’audience ont accès à la capacité de gestion du consentement. Ils peuvent ajouter et supprimer d’autres utilisateurs, et leur attribuer les autorisations requises dans les insights d’audience. Les administrateurs ne peuvent pas ajouter des utilisateurs directement au Centre de consentement. 
+## <a name="roles"></a>Rôles
 
-Consultez la documentation sur les [autorisations utilisateur](../audience-insights/permissions.md) dans les insights audience pour gérer les utilisateurs et les rôles des utilisateurs.
+- Lecteur
+    - Est un rôle en lecture seule qui peut voir les données de consentement importées et leur analyse récapitulative associée sur la page d’accueil.
+
+- Contributeur
+    - Peut configurer l’importation des données de consentement.
+    - Peut configurer les règles de consentement.
+
+- Administrateur : 
+    - Dispose de toutes les autorisations du rôle Contributeur.
+    - Peut définir les paramètres du système.
+    - Peut gérer les utilisateurs et les autorisations.
+    - Le premier administrateur qui active la capacité de gestion du consentement dans Customer Insights obtient le rôle Administrateur (propriétaire). Cet utilisateur ne peut pas être supprimé du système.
+
+## <a name="add-users"></a>Ajouter des utilisateurs
+
+1. Dans le Centre de consentement (version préliminaire), accédez à **Administrateur** > **Autorisations**.
+1. Sélectionnez **Ajouter des utilisateurs**
+1. Dans le volet **Ajouter des utilisateurs**, choisissez le **Rôle** et les utilisateurs à ajouter. 
+1. Sélectionnez **Autoriser l’accès**. 
+
+## <a name="remove-users"></a>Supprimer des utilisateurs
+
+1. Dans le Centre de consentement (version préliminaire), accédez à **Administrateur** > **Autorisations**.
+1. Sélectionnez l’utilisateur que vous souhaitez supprimer de la liste.
+1. Sélectionnez **Plus d’options (...)** et choisissez **Supprimer l’utilisateur**
+1. Confirmez la suppression pour révoquer l’accès aux utilisateurs.
+
+## <a name="change-roles"></a>Modifier les rôles
+
+1. Dans le Centre de consentement (version préliminaire), accédez à **Administrateur** > **Autorisations**.
+1. Sélectionnez l’utilisateur que vous souhaitez supprimer de la liste.
+1. Sélectionnez **Plus d’options (...)** et choisissez **Supprimer l’utilisateur**

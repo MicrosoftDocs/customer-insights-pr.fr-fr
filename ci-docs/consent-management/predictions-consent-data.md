@@ -7,24 +7,24 @@ author: dimutako
 ms.author: dimutako
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b8fedb298c4324539c8c6a744a90f102e9f6f698
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: b3c2c8e847bc3c13907392d518fcf95fa49a8e44
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232455"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641687"
 ---
 # <a name="use-consent-data-in-prediction-models"></a>Utilisez des données de consentement dans des modèles de prédiction
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Vous pouvez créer des modèles de prédiction prêts à l’emploi dans des informations d’audience pour prédire l’attrition clients ou la valeur de la durée de vie des clients. Utilisez les données de consentement de la [fonction de gestion des consentements](overview.md) pour augmenter la précision de ces prédictions.
+Vous pouvez créer des modèles de prédiction prêts à l’emploi dans Customer Insights pour prédire l’attrition clients ou la valeur de la durée de vie des clients. Utilisez les données de consentement de la [fonction de gestion des consentements](overview.md) pour augmenter la précision de ces prédictions.
 
 Les étapes ci-dessous expliquent comment utiliser les données de consentement dans les modèles prêts à l’emploi, en mettant l’accent sur le modèle d’attrition transactionnelle. Cependant, vous pouvez appliquer ces mêmes étapes aux modèles d’attrition des clients ou de valeur de la durée de vie des clients. 
 
 ## <a name="required-entities-and-fields"></a>Champs et entités requis
 
-La liste suivante souligne les entités requises et les champs que ces entités doivent contenir. Pour plus d’informations, accédez aux [Conditions préalables requises pour un modèle de transaction](../audience-insights/predict-transactional-churn.md).
+La liste suivante souligne les entités requises et les champs que ces entités doivent contenir. Pour plus d’informations, accédez aux [Conditions préalables requises pour un modèle de transaction](../predict-transactional-churn.md).
 
 1. Entité de *Consentement d'abonnement*
     - **Clé primaire ou ID :** une clé primaire pour chaque valeur de consentement unique. Requiert des valeurs uniques dans chaque ligne, par exemple, un e-mail ou un ID client. 
@@ -48,7 +48,7 @@ La procédure ci-dessous explique comment utiliser les données de consentement 
 
 ### <a name="step-1-create-a-consent-activity"></a>Étape 1 : Créer une activité de consentement
 
-[Créez une activité](../audience-insights/activities.md) en fonction de votre entité de consentement : 
+[Créez une activité](../activities.md) en fonction de votre entité de consentement : 
 
 1. Démarrez l'expérience guidée pour créer une activité.
 1. À l'étape **Relations**, sélectionnez l'*ID client* de l'entité *Consentement* comme clé étrangère.
@@ -64,11 +64,11 @@ La procédure ci-dessous explique comment utiliser les données de consentement 
 
    :::image type="content" source="media/new-consent-activity-type.png" alt-text="Créez un nouveau type d'activité pour les données de consentement.":::
 
-1. Examinez et exécutez l'activité de consentement. Passez à l'étape suivante après une exécution réussie. Pour plus d’informations sur les activités, accédez à [Activités client](../audience-insights/activities.md).
+1. Examinez et exécutez l'activité de consentement. Passez à l'étape suivante après une exécution réussie. Pour plus d’informations sur les activités, accédez à [Activités client](../activities.md).
 
 ### <a name="step-2-configure-and-run-the-model"></a>Étape 2 : configurer et exécuter le modèle 
 
-Suivez ces instructions pour [créer un modèle transactionnel](../audience-insights/predict-transactional-churn.md) jusqu’à ce que vous configuriez les données supplémentaires :
+Suivez ces instructions pour [créer un modèle transactionnel](../predict-transactional-churn.md) jusqu’à ce que vous configuriez les données supplémentaires :
 
 1. À l'étape **Données supplémentaires (facultatif)** de la création du modèle, sélectionnez **Ajouter des données**. 
 
@@ -95,7 +95,7 @@ Affichez les résultats du modèle pour obtenir des informations.
 
 :::image type="content" source="media/influential-factors-activity.png" alt-text="Facteurs d'influence dans la sortie du modèle.":::
 
-Pour plus d’informations sur les résultats du modèle, accédez à [Prédiction d’attrition des transactions](../audience-insights/predict-transactional-churn.md).
+Pour plus d’informations sur les résultats du modèle, accédez à [Prédiction d’attrition des transactions](../predict-transactional-churn.md).
 
  
 

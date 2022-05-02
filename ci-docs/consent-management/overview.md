@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-consent
 - customerInsights
-ms.openlocfilehash: 1d84ada6125ea3a7a8ee19eb9d329601f2f2048a
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 6739803e078f991d41c0e61bfdbc8cab4aa7133f
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355826"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641691"
 ---
 # <a name="consent-management-preview-overview"></a>Vue d'ensemble de la gestion des consentements (version préliminaire)
 
@@ -33,7 +33,7 @@ En tant qu'organisation basée sur la confiance, Microsoft permet à ses clients
 
 La capacité de gestion du consentement de Dynamics 365 Customer Insights permet aux organisations de gérer l’utilisation du consentement client. Elle crée un ensemble unifié de données de consentement à partir des divers points de vente qu’une organisation utilise pour se connecter avec ses clients. 
 
-L’intégration des données de consentement unifiées avec d’autres fonctionnalités telles que les insights d’audience peut aider les organisations à respecter leurs engagements en matière de confidentialité. Les préférences de consentement et de contact sont automatiquement disponibles dans les processus métier dans les insights d’audience.
+L’intégration des données de consentement unifiées avec Customer Insights peut aider les organisations à respecter leurs engagements en matière de confidentialité. Les préférences de consentement et de contact sont automatiquement disponibles dans les processus métier de Customer Insights.
 
 ## <a name="main-personas"></a>Personnages principaux
 

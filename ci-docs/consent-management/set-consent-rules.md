@@ -8,12 +8,12 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ba14bfbf1b459f5cb407d1f27b12d29cd14fc932
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 8645db145ba34019f9cd119972a13cb60d0b2270
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232421"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641697"
 ---
 # <a name="set-consent-data-rules-and-apply-consent-preferences"></a>Définir des règles de données de consentement et appliquer des préférences de consentement
 
@@ -31,7 +31,7 @@ Une fois les données de consentement dans le système, accédez à la page **Co
 
 ## <a name="set-up-rules"></a>Configurer des règles
 
-Les règles de données de consentement seront disponibles dans les informations d'audience où vous pourrez les appliquer en tant que règles à des segments ou des exportations individuels. Vous pouvez affecter ces règles par défaut aux objectifs et aux abonnements qui s’appliquent automatiquement à tous les segments. L’application vous guide à travers les étapes à suivre pour le mappage des données de consentement. 
+Les règles de données de consentement seront disponibles dans Customer Insights où vous pourrez les appliquer en tant que règles à des segments ou exportations individuels. Vous pouvez affecter ces règles par défaut aux objectifs et aux abonnements qui s’appliquent automatiquement à tous les segments. L’application vous guide à travers les étapes à suivre pour le mappage des données de consentement. 
 
 1. Dans le Centre de consentement, accédez à **Sources d'information** et sélectionnez **Définir des règles** pour commencer le processur de **Mappage des données de consentement**.
 
@@ -51,20 +51,20 @@ La première étape définit comment les clients doivent être inclus ou exclus 
 
 ### <a name="apply-rules-as-default-optional"></a>Appliquer les règles par défaut (facultatif)
 
-Dans cette étape, vous pouvez choisir les objectifs et les abonnements auxquels les mappages de règles seront appliqués à tous les segments dans les informations d’audience. Les règles pour les données de consentement importées sont automatiquement synchronisées avec les informations d'audience. Les administrateurs doivent [activer les règles de consentement](../audience-insights/activate-consent.md) et peut permettre aux utilisateurs de remplacer la sélection par défaut.
+Dans cette étape, vous pouvez choisir les objectifs et les abonnements pour lesquels les mappages de règles seront appliqués à tous les segments dans Customer Insights. Les règles pour les données de consentement importées sont automatiquement synchronisées avec Customer Insights. Les administrateurs doivent [activer les règles de consentement](../activate-consent.md) et peut permettre aux utilisateurs de remplacer la sélection par défaut.
 
-1. À l’étape **Appliquer les règles par défaut (facultatif)**, choisissez les objectifs et/ou les abonnements auxquels appliquer la règle par défaut. Ces règles sont ensuite appliquées à tous les segments dans les informations d’audience.
+1. À l’étape **Appliquer les règles par défaut (facultatif)**, choisissez les objectifs et/ou les abonnements auxquels appliquer la règle par défaut. Ces règles sont ensuite appliquées à tous les segments dans Customer Insights.
 
    :::image type="content" source="media/apply-rules-default.png" alt-text="Sélectionnez les données auxquelles les règles s'appliquent par défaut.":::
 
-1. Sélectionnez **Suivant**.
+1. Cliquez sur **Suivant**.
 
 ### <a name="review-and-finish"></a>Passer en revue et terminer
 
 1. Vérifiez la configuration et sélectionnez **Définir des règles** pour terminer le processus. 
 
-1. Si vous avez sélectionné certaines règles à appliquer par défaut, sélectionnez **Activer les règles de consentement dans Customer Insights** pour accéder aux informations d’audience et [activer les règles de consentement par défaut](../audience-insights/activate-consent.md). Sinon, sélectionnez **Terminé** pour compléter l'expérience guidée et appliquer la cartographie dans les processus métier.
+1. Si vous avez sélectionné certaines règles à appliquer par défaut, sélectionnez **Activer les règles de consentement dans Customer Insights** pour accéder à Customer Insights et [activer les règles de consentement par défaut](../activate-consent.md). Sinon, sélectionnez **Terminé** pour compléter l'expérience guidée et appliquer la cartographie dans les processus métier.
 
-## <a name="activate-rules-in-audience-insights"></a>Activer les règles dans les informations d'audience
+## <a name="activate-rules-in-customer-insights"></a>Activer les règles dans Customer Insights
 
-Avant que les règles ne soient appliquées aux processus métier via les informations d'audience, un administrateur doit les activer. Pour plus d'informations, consultez [Activer les règles de consentement](../audience-insights/activate-consent.md).
+Avant que les règles ne soient appliquées aux processus métier via Customer Insights, un administrateur doit les activer. Pour plus d'informations, consultez [Activer les règles de consentement](../activate-consent.md).

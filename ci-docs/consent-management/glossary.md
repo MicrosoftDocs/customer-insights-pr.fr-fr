@@ -1,6 +1,6 @@
 ---
 title: Termes et concepts de la gestion du consentement
-description: Découvrez les termes et concepts couramment utilisés dans la capacité de gestion du consentement de Dynamics 365 Customer Insights.
+description: Comprenez les termes et concepts couramment utilisés dans la capacité de gestion du consentement.
 ms.date: 09/30/2021
 ms.subservice: consent-management
 ms.topic: how-to
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-consent
 - customerInsights
-ms.openlocfilehash: bbe1e37d22d4ae2691187f16116f2fa07c55ab78
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: b94279371943371aca0ef1db00820d59ed226354
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353524"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641685"
 ---
 # <a name="terms-and-concepts"></a>Termes et concepts
 
@@ -24,7 +24,7 @@ ms.locfileid: "8353524"
 
 ## <a name="subscription-consent"></a>Consentement d’abonnement
 
-Le consentement d’abonnement est l’un des deux types de consentement qu’une personne peut fournir. Cela indique généralement l’intérêt d’une personne à être contactée pour la raison pour laquelle elle s’est abonnée. Par exemple, une personne peut consentir à recevoir une newsletter qui l’informe des mises à jour d’un produit qu’elle possède.
+Le consentement d’abonnement est l’un des deux types de consentement qu’une personne peut fournir. Cela indique généralement l’intérêt d’une personne à être contactée pour la raison pour laquelle elle s’est abonnée. Par exemple, une personne peut consentir à recevoir une newsletter qui l’informe des mises à jour du produit.
 
 ## <a name="purpose-consent"></a>Consentement d'objet
 
@@ -36,5 +36,5 @@ Une entité de consentement est un tableau de données qui résulte de l’impor
 
 ## <a name="standard-actions"></a>Actions standards
 
-Dans le cadre de [l’étape de mappage des données pour la définition des règles des données de consentement](set-consent-rules.md), les administrateurs définissent des règles qui s’appliquent à un type de consentement. Ils peuvent choisir d'inclure ou d'exclure les données de consentement selon une logique métier. Ces règles sont ensuite utilisées dans d’autres applications pour appliquer des règles de consentement à des processus métier. Par exemple, une règle peut être définie pour exclure tous les contacts qui ont défini leurs préférences pour ne recevoir aucune information. Ces contacts sont ensuite supprimés de tous les segments d’informations audience utilisées pour l’envoi de newsletters.
+Les administrateurs définissent les règles qui s’appliquent à un type de consentement pendant le [mappage de données pour définir les règles de consentement](set-consent-rules.md). Ils peuvent choisir d'inclure ou d'exclure les données de consentement selon une logique métier. Les règles sont ensuite utilisées dans d’autres applications pour appliquer des règles de consentement aux processus métier. Par exemple, une règle peut être définie pour exclure tous les contacts qui ont défini leurs préférences pour ne recevoir aucune information. Ces contacts sont ensuite supprimés de tous les segments de Customer Insights utilisées pour l’envoi de newsletters.
 
