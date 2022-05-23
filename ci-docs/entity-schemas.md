@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646189"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757429"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Schémas des entités dans Common Data Model
 
@@ -23,7 +23,7 @@ ms.locfileid: "8646189"
 
 Ce modèle de données partagé permet aux applications et aux intégrateurs de données de collaborer plus facilement en fournissant une définition unifiée des données. Common Data Model comprend un système complet de métadonnées avec des entités standard, des relations, des hiérarchies, des caractéristiques, etc. Il est issu des applications Dynamics 365 et est en open-source sur GitHub avec plus de 260 entités standard. Un vaste système de partenaires internes et externes contribue aux concepts propres au secteur du Common Data Model.
 
-Plusieurs systèmes et plateformes mettent en œuvre le Common Data Model aujourd'hui, y compris les flux de données Power BI et Azure Data Services. Il est déjà pris en charge dans Microsoft Dataverse, Dynamics 365, Power Apps, Power BI et les services de données Azure à venir, accumulant directement de la valeur pour l'[Open Data Initiative](https://www.microsoft.com/open-data-initiative).
+Plusieurs systèmes et plateformes mettent en œuvre le Common Data Model aujourd’hui, y compris les flux de données Power BI et Azure Data Services. Il est déjà pris en charge dans Microsoft Dataverse, Dynamics 365, Power Apps, Power BI et les services de données Azure à venir, accumulant directement de la valeur pour l’[Open Data Initiative](https://dynamics.microsoft.com/en-us/open-data-initiative/).
 
 ## <a name="customer-insights-entity-schemas"></a>Schémas d’entité Customer Insights
 

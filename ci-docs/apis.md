@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646132"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755447"
 ---
 # <a name="work-with-customer-insights-apis"></a>Utiliser les API de Customer Insights
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights fournit des API pour créer vos propres applicati
 > [!IMPORTANT]
 > Les détails de ces API sont répertoriés dans la [Référence des API de Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Ils comprennent des informations supplémentaires sur les opérations, les paramètres et les réponses.
 
-Cet article explique comment accéder aux API de Customer Insights, créer un enregistrement d’application Azure et commencer à utiliser les bibliothèques clientes disponibles.
+Cet article explique comment accéder aux API Customer Insights, effectuer une inscription à Azure App et démarrer avec les bibliothèques clientes.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Se familiariser avec les API de Customer Insights
 
@@ -83,13 +83,13 @@ Vous pouvez utiliser l’ID d’application/de client pour cette inscription d�
 
 Pour plus d’informations sur MSAL, consultez [Vue d’ensemble de la bibliothèque d’authentification Microsoft (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Pour plus d’informations sur l’inscription d’applications dans Azure, consultez [Inscrire une application](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
+Pour plus d’informations sur l’inscription d’applications dans Azure, consultez [Inscrire une application](/graph/auth-register-app-v2).
 
 Pour plus d’informations sur l’utilisation des API dans nos bibliothèques clientes, consultez [Bibliothèques clientes de Customer Insights](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Autorisations d’application de serveur à serveur
 
-La [section Inscription d’application](#create-a-new-app-registration-in-the-azure-portal) décrit comment inscrire une application qui nécessite la connexion de l’utilisateur pour l’authentification. Découvrez comment créer une inscription d’application qui ne nécessite pas d’interaction de l’utilisateur et qui peut être exécutée sur un serveur.
+La [section Inscription d’application](#create-a-new-app-registration-in-the-azure-portal) décrit comment inscrire une application qui nécessite la connexion de l’utilisateur pour l’authentification. Découvrez comment créer une inscription à une application qui ne nécessite aucune interaction utilisateur et peut être exécutée sur un serveur.
 
 1. Dans votre inscription d’application sur le portail Azure, accédez à **Autorisations de l’API**.
 
@@ -112,6 +112,10 @@ La [section Inscription d’application](#create-a-new-app-registration-in-the-a
    Ouvrez Customer Insights, accédez à **Administration** > **Autorisations** et sélectionnez **Ajouter un utilisateur**.
 
 1. Recherchez le nom de votre inscription d’application, sélectionnez-le dans les résultats de la recherche, puis sélectionnez **Enregistrer**.
+
+## <a name="sample-queries"></a>Exemples de requêtes
+
+Nous avons compilé une courte liste d’exemples de requêtes OData à utiliser avec les API : [Exemples de requêtes OData](odata-examples.md).
 
 ## <a name="customer-insights-client-libraries"></a>Bibliothèques client de Customer Insights
 
@@ -137,7 +141,7 @@ Découvrez comment utiliser les bibliothèques client C# de NuGet.org. Pour plus
 
 1. Utilisez la [Bibliothèque d’authentification Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) pour obtenir un `AccessToken` en utilisant votre [Inscription d’application Azure](#create-a-new-app-registration-in-the-azure-portal) existante.
 
-1. Après avoir réussi à authentifier et à acquérir un jeton, construisez un nouveau `HttpClient` ou utilisez-en un existant avec, en plus, l’**Autorisation DefaultRequestHeaders** définie sur **jeton d’accès Porteur** et **Ocp-Apim-Subscription-Key** définie sur la [**clé d’abonnement** depuis votre environnement Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. Après avoir réussi à authentifier et à acquérir un jeton, construisez un nouveau `HttpClient` ou utilisez-en un existant avec l’**Autorisation DefaultRequestHeaders** définie sur **jeton d’accès Porteur** et **Ocp-Apim-Subscription-Key** définie sur la [**clé d’abonnement** depuis votre environnement Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Rédéfinissez l’en-tête **Autorisation**, le cas échéant. Par exemple, lorsque le jeton a expiré.
 
@@ -147,7 +151,7 @@ Découvrez comment utiliser les bibliothèques client C# de NuGet.org. Pour plus
 
 1. Utilisez le client pour appeler les « méthodes d’extension », par exemple, `GetAllInstancesAsync`. Si l’accès au `Microsoft.Rest.HttpOperationResponse` sous-jacent est recommandé, utilisez les « méthodes de message http », par exemple `GetAllInstancesWithHttpMessagesAsync`.
 
-1. La réponse sera probablement de type `object`, car la méthode peut renvoyer plusieurs types (par exemple, `IList<InstanceInfo>` et `ApiErrorResult`). Pour vérifier le type de retour, vous pouvez convertir en toute sécurité les objets dans les types de réponse spécifiés sur la [Page des détails de l’API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) pour cette opération.    
+1. La réponse sera probablement de type `object`, car la méthode peut renvoyer plusieurs types (par exemple, `IList<InstanceInfo>` et `ApiErrorResult`). Pour vérifier le type de retour, vous devez utiliser les objets dans les types de réponse spécifiés sur la [page de détails de l’API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) pour cette opération.    
    
    Si des informations supplémentaires sur la demande sont nécessaires, utilisez les **méthodes de message http** pour accéder à l’objet de réponse brute.
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645992"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755351"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Enrichissement de profils clients avec Azure Maps (version préliminaire)
 
@@ -51,7 +51,7 @@ Pour configurer l’enrichissement de données Azure Maps, les conditions préal
 
 1. Sélectionnez **Suivant** pour terminer le mappage de champs.
 
-1. Évaluez si vous souhaitez modifier les **Paramètres avancés**. Ceux-ci sont fournis pour offrir une flexibilité maximale pour gérer les cas d’utilisation avancés, mais les valeurs par défaut seront adéquates dans la plupart des cas :
+1. Évaluez si vous souhaitez modifier les **Paramètres avancés**. Ces paramètres sont fournis pour donner une flexibilité maximale pour gérer les cas d’utilisation avancés, mais les valeurs par défaut seront adéquates dans la plupart des cas :
    - **Type d’adresses** : le comportement par défaut est que l’enrichissement renverra la meilleure correspondance d’adresse même si elle est incomplète. Pour obtenir uniquement les adresses complètes, par exemple, les adresses incluant le numéro de la maison, décochez toutes les cases sauf **Adresses des points**. 
    - **Langue** : par défaut, les adresses sont renvoyées dans la langue de la région à laquelle l’adresse a été déterminée comme appartenant. Pour appliquer une langue d’adresse normalisée, sélectionnez la langue dans le menu déroulant. Par exemple, si vous sélectionnez **Anglais**, **Copenhague, Danemark** sera renvoyé au lieu de **København, Danemark**.
 
@@ -89,7 +89,7 @@ Vous pouvez accéder à une vue détaillée de chaque profil enrichi en sélecti
 
 ## <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données
 
-Lorsque vous activez Dynamics 365 Customer Insights pour transmettre des données à Azure Maps, vous autorisez le transfert de données en dehors de la limite de conformité pour Dynamics 365 Customer Insights, y compris les données potentiellement sensibles telles que les données personnelles. Microsoft transférera ces données selon vos instructions, mais vous êtes tenu de vous assurer qu’Azure Maps respecte vos éventuelles obligations de confidentialité ou de sécurité. Pour plus d’informations, voir [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Lorsque vous activez Dynamics 365 Customer Insights pour transmettre des données à Azure Maps, vous autorisez le transfert de données en dehors de la limite de conformité pour Dynamics 365 Customer Insights, y compris les données potentiellement sensibles telles que les données personnelles. Microsoft transférera ces données selon vos instructions, mais vous devez vous assurer qu’Azure Maps respecte toutes les obligations de confidentialité ou de sécurité qui vous incombent. Pour plus d’informations, voir [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Votre administrateur Dynamics 365 Customer Insights peut supprimer cet enrichissement à tout moment pour interrompre l’utilisation de cette fonctionnalité.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

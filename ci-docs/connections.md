@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 10704e287960c1a9171031135ff8f78a45b6e965
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646169"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755306"
 ---
 # <a name="connections-preview-overview"></a>Présentation des connexions (version préliminaire)
 
@@ -24,15 +24,15 @@ Les connexions sont essentielles pour activer le partage de données vers et dep
 
 Accédez à **Administrateur** > **Connexions** pour créer et afficher les connexions.
 
-L’onglet **Connexions** affiche toutes les connexions actives. La liste affiche une ligne pour chaque connexion. 
+L’onglet **Connexions** affiche toutes les connexions actives. La liste affiche une ligne pour chaque connexion.
 
 Obtenez une description générale rapide et découvrez ce que vous pouvez faire avec chaque option d’extensibilité dans l’onglet **Découvrir**.
 
-### <a name="exports"></a>Exportations
+## <a name="exports"></a>Exportations
 
 Seuls les administrateurs peuvent configurer de nouvelles connexions, mais ils peuvent accorder l’accès aux contributeurs pour qu’ils utilisent les connexions existantes. Les administrateurs contrôlent l’emplacement des données, les contributeurs définissent la charge utile et la fréquence correspondant à leurs besoins. Pour plus d’informations, voir [Autoriser les contributeurs à utiliser une connexion pour les exportations](#allow-contributors-to-use-a-connection-for-exports).
 
-### <a name="enrichments"></a>Enrichissements
+## <a name="enrichments"></a>Enrichissements
 
 Seuls les administrateurs peuvent configurer de nouvelles connexions, mais les connexions créées sont toujours disponibles à la fois pour les administrateurs et les contributeurs. Les administrateurs gèrent les informations d’identification et donnent leur consentement pour les transferts de données. Les connexions peuvent ensuite être utilisées pour les enrichissements à la fois par les administrateurs et les contributeurs.
 
@@ -46,7 +46,7 @@ Pour ajouter des connexions, vous devez disposer d’[autorisations administrate
 
 1. Sélectionnez **Ajouter une connexion** pour créer une connexion. Choisissez dans le menu déroulant le type de connexion que vous souhaitez créer.
 
-1. Dans le volet **Configurer la connexion**, fournissez les détails nécessaires. 
+1. Dans le volet **Configurer la connexion**, fournissez les détails nécessaires.
    1. Le **Nom d’affichage** et le type de connexion décrivent une connexion. Nous vous recommandons de choisir un nom qui explique l’objectif et la cible de cette connexion.
    1. Les champs exacts dépendent du service auquel vous vous connectez. Vous pouvez obtenir des informations sur les détails d’un type de connexion spécifique dans l’article sur le service cible.
    1. Si vous [utilisez votre propre Key Vault](use-azure-key-vault.md) pour stocker des secrets, activez **Key Vault** et choisissez le secret dans la liste.
@@ -77,7 +77,7 @@ Lors de la configuration ou de la modification d’une connexion d’exportation
 
 ## <a name="remove-a-connection"></a>Supprimer une connexion
 
-Si des enrichissements ou des exportations utilisent la connexion que vous supprimez, vous devez d’abord les détacher ou les supprimer. La boîte de dialogue de suppression vous guidera vers les enrichissements ou les exportations appropriés. 
+Si la connexion que vous supprimez est utilisée par des enrichissements ou des exportations, vous devez d’abord les détacher ou les supprimer. La boîte de dialogue de suppression vous guidera vers les enrichissements ou les exportations appropriés.
 
 Les enrichissements et les exportations détachés deviennent inactifs. Vous les réactivez en leur ajoutant une autre connexion dans la page [Enrichissements](enrichment-hub.md) ou [Exportations](export-destinations.md).
 
@@ -91,7 +91,7 @@ Les enrichissements et les exportations détachés deviennent inactifs. Vous les
 
    1. Si des enrichissements ou des exportations utilisent cette connexion, sélectionnez le bouton pour voir ce que la connexion utilise.
       - **Exportations :** vous pouvez choisir de supprimer ou de déconnecter les exportations pour pouvoir supprimer la connexion. Pour déconnecter une exportation, les administrateurs peuvent utiliser l’action **Déconnecter**. Cette action est disponible pour les exportations sélectionnées individuelles et multiples. En déconnectant une exportation, vous conservez la configuration d’exportation, mais celle-ci ne sera exécutée que quand une autre connexion lui sera ajoutée.
-      - **Enrichissements :** vous pouvez choisir de supprimer ou de désactiver les enrichissements pour pouvoir supprimer la connexion. 
+      - **Enrichissements :** vous pouvez choisir de supprimer ou de désactiver les enrichissements pour pouvoir supprimer la connexion.
    1. Une fois que la connexion n’a plus de dépendances, revenez à **Administrateur** > **Connexions** et essayez de supprimer à nouveau la connexion.
 
 1. Pour confirmer la suppression, sélectionnez **Supprimer**.

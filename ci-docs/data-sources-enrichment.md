@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646012"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755683"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Enrichissement des sources de données (version préliminaire)
 
@@ -26,7 +26,7 @@ Vous devez disposer des autorisations Contributeur ou Administrateur pour créer
 1. Accédez à **Données** > **Unifier**. Sélectionnez l’entité que vous souhaitez enrichir et sélectionnez un attribut comme clé primaire pour l’entité. Pour plus d’informations, consultez [Sélectionner la clé primaire](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
 1. Accédez à **Données** > **Sources de données**.
- 
+
 1. Sélectionnez les points de suspension verticaux à côté de la source de données à enrichir et sélectionnez **Enrichir**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Page d’enrichissement des sources de données.":::

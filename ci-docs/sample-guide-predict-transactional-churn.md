@@ -1,19 +1,19 @@
 ---
 title: Exemple de guide de prédiction de l’attrition transactionnelle
 description: Utilisez cet exemple de guide pour essayer le modèle de prédiction de l’attrition transactionnelle prédéfini.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646359"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741316"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Exemple de guide de prédiction de l’attrition transactionnelle
 
@@ -86,69 +86,13 @@ Consultez les articles [à propos de l’ingestion de données](data-sources.md)
 
 1. Enregistrez la source de données.
 
-
 ## <a name="task-2---data-unification"></a>Tâche 2 : unification des données
 
-Une fois les données ingérées, nous commençons maintenant le processus de **Mappage, correspondance, fusion** pour créer un profil client unifié. Pour plus d’informations, consultez [Unification des données](data-unification.md).
-
-### <a name="map"></a>Mappage
-
-1. Une fois les données ingérées, mappez les contacts des données d’eCommerce et du programme de fidélité aux types de données courants. Accédez à **Données** > **Unifier** > **Mettre en correspondance**.
-
-1. Sélectionnez les entités qui représentent le profil client : **eCommerceContacts** et **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="Unifiez les sources de données d’eCommerce et du programme de fidélité.":::
-
-1. Sélectionnez **ContactId** comme clé primaire pour **eCommerceContacts** et **LoyaltyID** comme clé primaire pour **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Unifiez LoyaltyId comme clé primaire.":::
-
-### <a name="match"></a>Correspondance
-
-1. Accédez à l’onglet **Mettre en correspondance** et sélectionnez **Définir l’ordre**.
-
-1. Dans la liste déroulante **Principal**, choisissez **eCommerceContacts : eCommerce** comme source principale et incluez tous les enregistrements.
-
-1. Dans la liste déroulante **Entité 2**, choisissez **loyCustomers : LoyaltyScheme** et incluez tous les enregistrements.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Unifiez l’ordre de mise en correspondance des données d’eCommerce et du programme de fidélité.":::
-
-1. Sélectionnez **Créer une nouvelle règle**
-
-1. Ajoutez votre première condition en utilisant FullName.
-
-   * Pour eCommerceContacts, sélectionnez **FullName** dans la liste déroulante.
-   * Pour loyCustomers, sélectionnez **FullName** dans la liste déroulante.
-   * Sélectionnez la liste déroulante **Normaliser** et choisissez **Type (téléphone, nom, adresse, ...)**.
-   * Définissez le **Niveau de précision** sur **Base** et la **Valeur** sur **Élevé**.
-
-1. Saisissez le nom **FullName, Email** pour la nouvelle règle.
-
-   * Ajoutez une deuxième condition pour l’adresse e-mail en sélectionnant **Ajouter une condition**
-   * Pour l’entité eCommerceContacts, choisissez **E-mail** dans la liste déroulante.
-   * Pour l’entité loyCustomers, choisissez **E-mail** dans la liste déroulante. 
-   * Laissez le champ Normaliser vide. 
-   * Définissez le **Niveau de précision** sur **Base** et la **Valeur** sur **Élevé**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Unifiez la règle de mise en correspondance pour le nom et l’adresse e-mail.":::
-
-7. Sélectionnez **Enregistrer** et **Exécuter**.
-
-### <a name="merge"></a>Fusionner
-
-1. Accédez à l’onglet **Fusionner**.
-
-1. Dans le champ **ContactId** de l’entité **loyCustomers**, modifiez le nom d’affichage en **ContactIdLOYALTY** pour le différencier des autres ID ingérés.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="Renommez contactid à partir de l’ID du programme de fidélité.":::
-
-1. Sélectionnez **Enregistrer** et **Exécuter** pour démarrer le processus de fusion.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Tâche 3 : configurer la prédiction de l’attrition des transactions
 
-Une fois les profils clients unifiés en place, nous pouvons maintenant exécuter la prédiction de l’attrition des abonnements. Pour connaître les étapes détaillées, consultez l’article [Prédiction du taux de désabonnement](predict-subscription-churn.md). 
+Avec les profils de clients unifiés en place, nous pouvons maintenant exécuter la prédiction d’attrition des transactions. Pour connaître les étapes détaillées, consultez l’article [Prédiction de l’attrition des transactions](predict-transactional-churn.md). 
 
 1. Accédez à **Intelligence** > **Découvrir** et choisissez le **Modèle d’attrition clients**.
 
@@ -180,7 +124,7 @@ Une fois les profils clients unifiés en place, nous pouvons maintenant exécute
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Tâche 4 : passer en revue les résultats et les explications du modèle
 
-Laissez le modèle terminer la formation et la notation des données. Vous pouvez maintenant passer en revue les explications du modèle d’attrition des abonnements. Pour plus d’informations, consultez [Passer en revue le statut et les résultats d’une prédiction](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Laissez le modèle terminer la formation et la notation des données. Vous pouvez maintenant consulter les explications sur le modèle d’attrition. Pour plus d’informations, consultez [Passer en revue le statut et les résultats d’une prédiction](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Tâche 5 : créer un segment de clients à haut risque d’attrition
 
@@ -192,14 +136,12 @@ Vous pouvez créer un nouveau segment basé sur l’entité créée par le modè
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Création d’un segment avec la sortie du modèle.":::
 
-1. Sélectionnez le point de terminaison **OOBSubscriptionChurnPrediction** et définissez le segment : 
+1. Sélectionnez le point de terminaison **OOBeCommerceChurnPrediction** et définissez le segment : 
    - Champ : ChurnScore
    - Opérateur : supérieur à
    - Valeur : 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Configurez le segment d’attrition des abonnements.":::
 
-Vous disposez maintenant d’un segment mis à jour de manière dynamique qui identifie les clients à haut risque d’attrition pour cette activité d’abonnement.
+Vous avez maintenant un segment mis à jour dynamiquement qui identifie les clients présentant un haut risque de désabonnement.
 
 Pour plus d’informations, consultez [Créer et gérer les segments](segments.md).
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e77227e1e353c02cfb13e26a8ecbe0768ba6c0fa
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646072"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741500"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exporter des données vers Azure Synapse Analytics (Version préliminaire)
 
@@ -34,7 +34,7 @@ Dans Azure :
 
 - Un abonnement Azure actif.
 
-- Si vous utilisez un nouveau compte Gen2 Azure Data Lake Storage, le *principal de service pour Customer Insights* a besoin d’autorisations **Données d’objets blob de stockage collaborateur**. En savoir plus sur la [connexion à un compte Azure Data Lake Storage Gen2 avec le principal de service Azure pour les informations sur l’audience](connect-service-principal.md). Le compte Data Lake Storage Gen2 **doit avoir un** [espace de noms hiérarchique](/azure/storage/blobs/data-lake-storage-namespace) activé.
+- Si vous utilisez un nouveau compte Gen2 Azure Data Lake Storage, le *principal de service pour Customer Insights* a besoin d’autorisations **Données d’objets blob de stockage collaborateur**. En savoir plus sur la [connexion à un compte Azure Data Lake Storage Gen2 avec un principal de service Azure pour Customer Insights](connect-service-principal.md). Le compte Data Lake Storage Gen2 **doit avoir un** [espace de noms hiérarchique](/azure/storage/blobs/data-lake-storage-namespace) activé.
 
 - Dans le groupe de ressources où se trouve Azure Synapse workspace, le *principal de service* et l’*utilisateur Azure AD avec les autorisations d’administrateur dans Customer Insights* doivent au moins disposer des autorisations de **Lecteur**. Pour plus d’informations, voir [Attribuer des rôles Azure à l’aide du portail Azure](/azure/role-based-access-control/role-assignments-portal).
 

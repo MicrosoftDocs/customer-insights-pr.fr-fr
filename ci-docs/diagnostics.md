@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646002"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755259"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Transfert de journaux dans Dynamics 365 Customer Insights avec Azure Monitor (version préliminaire)
 
@@ -27,7 +27,7 @@ Customer Insights envoie les journaux d’événements suivants :
 - **Événements d’audit**
   - **APIEvent** : active le suivi des modifications effectué via l’interface utilisateur de Dynamics 365 Customer Insights.
 - **Événements opérationnels**
-  - **WorkflowEvent** : le workflow permet de configurer des [Sources de données](data-sources.md), d’[unifier](data-unification.md), d’[enrichir](enrichment-hub.md) et enfin d’[exporter](export-destinations.md) des données dans d’autres systèmes. Toutes ces étapes peuvent être effectuées individuellement (par exemple, déclencher une exportation unique) ou orchestrées (par exemple, l’actualisation des données à partir de sources de données qui déclenchent le processus d’unification qui extraira des enrichissements supplémentaires et, une fois terminé, exportera les données dans un autre système). Pour plus d’informations, consultez [Schéma de WorkflowEvent](#workflow-event-schema).
+  - **WorkflowEvent** : le workflow vous permet de configurer des [Sources de données](data-sources.md), d’[unifier](data-unification.md), d’[enrichir](enrichment-hub.md) et enfin d’[exporter](export-destinations.md) des données dans d’autres systèmes. Toutes ces étapes peuvent être effectuées individuellement (par exemple, déclencher une seule exportation). Elles peuvent également s’exécuter de manière orchestrée (par exemple, l’actualisation des données à partir de sources de données qui déclenche le processus d’unification, qui va ensuite extraire des enrichissements et une fois terminé, exportera les données dans un autre système). Pour plus d’informations, consultez [Schéma de WorkflowEvent](#workflow-event-schema).
   - **APIEvent** : tous les appels d’API à l’instance clients de Dynamics 365 Customer Insights. Pour plus d’informations, consultez [Schéma d’APIEvent](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Configurer les paramètres de diagnostic
@@ -65,7 +65,7 @@ Pour configurer les diagnostics dans Customer Insights, les conditions préalabl
 
 1. Confirmez la déclaration **Confidentialité et conformité des données**.
 
-1. Sélectionnez **Se connecter au système** pour se connecter à la ressource de destination. Les journaux commencent à apparaître dans la destination après 15 minutes, si l'API est en cours d’utilisation et génère des événements.
+1. Sélectionnez **Se connecter au système** pour se connecter à la ressource de destination. Les journaux commencent à apparaître dans la destination après 15 minutes, si l’API est en cours d’utilisation et génère des événements.
 
 ### <a name="remove-a-destination"></a>Supprimer une destination
 
@@ -176,13 +176,13 @@ Les [événements d’API](apis.md) ont les propriétés suivantes.
 | `properties.origin`          | URI indiquant l’origine d’une extraction ou `unknown`.                                                                  |
 | `properties.operationStatus` | `Success` pour le code de statut HTTP < 400 <br> `ClientError` pour le code de statut HTTP < 500 <br> `Error` pour le statut HTTP >= 500 |
 | `properties.tenantId`        | ID d’organisation                                                                                                        |
-| `properties.tenantName`      | Nom de l'organisation.                                                                                              |
+| `properties.tenantName`      | Nom de l’organisation.                                                                                              |
 | `properties.callerObjectId`  | ObjectId Azure Active Directory de l’appelant.                                                                         |
 | `properties.instanceId`      | `instanceId` de Customer Insights                                                                                         |
 
 ### <a name="workflow-event-schema"></a>Schéma de l’événement de workflow
 
-Le workflow contient plusieurs étapes. [Ingérez des sources de données](data-sources.md), [unifiez](data-unification.md), [enrichissez](enrichment-hub.md) et [exportez](export-destinations.md) des données. Toutes ces étapes peuvent être exécutées individuellement ou orchestrées avec les processus suivants. 
+Le workflow contient plusieurs étapes. [Ingérez des sources de données](data-sources.md), [unifiez](data-unification.md), [enrichissez](enrichment-hub.md) et [exportez](export-destinations.md) des données. Toutes ces étapes peuvent être exécutées individuellement ou orchestrées avec les processus suivants.
 
 #### <a name="operation-types"></a>Types d’opération
 
@@ -215,7 +215,7 @@ Le workflow contient plusieurs étapes. [Ingérez des sources de données](data-
 | `time`          | Horodateur | Requise          | Horodatage de l’événement (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Requise          | ResourceId de l’instance qui a émis l’événement.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Requise          | Nom de l’opération représentée par cet événement. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Consultez [Types d’opération](#operation-types) pour référence. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Requise          | Catégorie de journal de l’événement. Toujours `Operational` pour les événements de workflow                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | Requise          | Catégorie de journal de l’événement. Toujours `Operational` pour les événements de workflow                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Requise          | Statut de l’événement. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Long      | Facultatif          | Durée de l’opération en millisecondes.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Facultatif          | Objet JSON avec plus de propriétés pour la catégorie particulière d’événements.                                                                                        | Consultez la sous-section [Propriétés du workflow](#workflow-properties-schema)                                                                                                       |

@@ -1,8 +1,8 @@
 ---
 title: Exemple de guide de prédiction de l’attrition des abonnements
 description: Utilisez cet exemple de guide pour essayer le modèle de prédiction de l’attrition des abonnements prédéfini.
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646292"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741408"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Exemple de guide de prédiction de l’attrition des abonnements
 
@@ -112,61 +112,7 @@ Consultez les articles [à propos de l’ingestion de données](data-sources.md)
 
 ## <a name="task-2---data-unification"></a>Tâche 2 : unification des données
 
-Une fois les données ingérées, nous commençons maintenant le processus de **Mappage, correspondance, fusion** pour créer un profil client unifié. Pour plus d’informations, consultez [Unification des données](data-unification.md).
-
-### <a name="map"></a>Mappage
-
-1. Une fois les données ingérées, mappez les contacts des données d’eCommerce et du programme de fidélité aux types de données courants. Accédez à **Données** > **Unifier** > **Mettre en correspondance**.
-
-1. Sélectionnez les entités qui représentent le profil client : **eCommerceContacts** et **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="Unifiez les sources de données d’eCommerce et du programme de fidélité.":::
-
-1. Sélectionnez **ContactId** comme clé primaire pour **eCommerceContacts** et **LoyaltyID** comme clé primaire pour **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Unifiez LoyaltyId comme clé primaire.":::
-
-### <a name="match"></a>Correspondance
-
-1. Accédez à l’onglet **Mettre en correspondance** et sélectionnez **Définir l’ordre**.
-
-1. Dans la liste déroulante **Principal**, choisissez **eCommerceContacts : eCommerce** comme source principale et incluez tous les enregistrements.
-
-1. Dans la liste déroulante **Entité 2**, choisissez **loyCustomers : LoyaltyScheme** et incluez tous les enregistrements.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Unifiez l’ordre de mise en correspondance des données d’eCommerce et du programme de fidélité.":::
-
-1. Sélectionnez **Créer une nouvelle règle**
-
-1. Ajoutez votre première condition en utilisant FullName.
-
-   * Pour eCommerceContacts, sélectionnez **FullName** dans la liste déroulante.
-   * Pour loyCustomers, sélectionnez **FullName** dans la liste déroulante.
-   * Sélectionnez la liste déroulante **Normaliser** et choisissez **Type (téléphone, nom, adresse, ...)**.
-   * Définissez le **Niveau de précision** sur **Base** et la **Valeur** sur **Élevé**.
-
-1. Saisissez le nom **FullName, Email** pour la nouvelle règle.
-
-   * Ajoutez une deuxième condition pour l’adresse e-mail en sélectionnant **Ajouter une condition**
-   * Pour l’entité eCommerceContacts, choisissez **E-mail** dans la liste déroulante.
-   * Pour l’entité loyCustomers, choisissez **E-mail** dans la liste déroulante. 
-   * Laissez le champ Normaliser vide. 
-   * Définissez le **Niveau de précision** sur **Base** et la **Valeur** sur **Élevé**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Unifiez la règle de mise en correspondance pour le nom et l’adresse e-mail.":::
-
-7. Sélectionnez **Enregistrer** et **Exécuter**.
-
-### <a name="merge"></a>Fusionner
-
-1. Accédez à l’onglet **Fusionner**.
-
-1. Dans le champ **ContactId** de l’entité **loyCustomers**, modifiez le nom d’affichage en **ContactIdLOYALTY** pour le différencier des autres ID ingérés.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="Renommez contactid à partir de l’ID du programme de fidélité.":::
-
-1. Sélectionnez **Enregistrer** et **Exécuter** pour démarrer le processus de fusion.
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Tâche 3 : configurer la prédiction de l’attrition des abonnements
 

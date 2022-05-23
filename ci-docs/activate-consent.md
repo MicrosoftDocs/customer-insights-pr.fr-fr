@@ -1,23 +1,22 @@
 ---
 title: Activer les règles de consentement pour les segments
 description: Suivez cette procédure pour lier les données de consentement et activer les contrôles de consentement dans Dynamics 365 Customer Insights. Un administrateur peut également désactiver les contrôles de consentement.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646049"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755167"
 ---
 # <a name="activate-consent-rules"></a>Activer les règles de consentement
 
-Le [Centre de consentement (version préliminaire)](consent-management/overview.md) vous aide à harmoniser les données de consentement provenant de diverses sources. Utiliser l’entité *Consentement* unifiée pour appliquer les contrôles de consentement par défaut. Après avoir importé les données de consentement dans le Centre de consentement et configuré les règles pour les données, l’entité *Consentement* est automatiquement synchronisée avec Dynamics 365 Customer Insights.
+Le [Centre de consentement (version préliminaire)](consent-management/overview.md) vous aide à harmoniser les données de consentement provenant de diverses sources. Utiliser l’entité *Consentement* unifiée pour appliquer les contrôles de consentement par défaut. Après l’importation des données de consentement et la configuration des règles de mappage, l’entité *Consentement* est automatiquement synchronisée avec Dynamics 365 Customer Insights.
 
 ## <a name="enable-consent-checks"></a>Activer les vérifications de consentement
 

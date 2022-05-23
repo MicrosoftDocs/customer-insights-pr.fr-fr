@@ -4,16 +4,16 @@ description: Découvrez comment importer des données dans la capacité de gesti
 ms.date: 12/03/2021
 ms.subservice: consent-management
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 1cb5c158ce38454b459e41c71f589399447b12e0
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 2b61114c1bb27bfc03229333bebf3ace6a444710
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232921"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755479"
 ---
 # <a name="import-consent-data"></a>Importer des données de consentement
 

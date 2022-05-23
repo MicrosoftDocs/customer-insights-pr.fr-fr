@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 0efda9d2997bcfd069b6d2445b69d159d7d3e59b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
+ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646039"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "8712899"
 ---
 # <a name="create-an-environment-in-customer-insights"></a>Créer un environnement dans Customer Insights
 
@@ -48,7 +48,7 @@ Une expérience guidée vous aide à travers les étapes pour rassembler toutes 
 
 Indiquez les détails suivants :
    - **Nom** : nom de cet environnement. Ce champ est déjà rempli si vous copiez à partir d’un environnement existant, mais vous pouvez le modifier.
-   - **Choisissez votre entreprise** : Choisissez l’audience principale pour le nouvel environnement. Vous pouvez travailler avec des consommateurs individuels (B2C) ou [comptes d’entreprise](work-with-business-accounts.md) (B2B).
+   - **Choisissez votre entreprise** : Choisissez l’audience principale pour le nouvel environnement. Vous pouvez travailler avec des clients particuliers (B2C) ou des [comptes professionnels](work-with-business-accounts.md) (B2B).
    - **Type** : Indiquez si vous souhaitez créer un environnement de Production ou Sandbox. Les environnements sandbox n’autorisent pas l’actualisation planifiée des données et sont destinés à la pré-implémentation et aux tests. Les environnements de bac à sable utilisent la même audience principale que l’environnement de production actuellement sélectionné.
    - **Région** : Région dans laquelle le service est déployé et hébergé.
 
@@ -63,8 +63,7 @@ Vous aurez deux options : **Stockage Customer Insights** (un lac de données Az
 En enregistrant les données dans Azure Data Lake Storage, vous acceptez que les données soient transférées et stockées à l’emplacement géographique approprié pour ce compte de stockage Azure. Cet emplacement peut différer de l’endroit où les données sont stockées dans Dynamics 365 Customer Insights. En savoir plus sur le [Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
 > [!NOTE]
-> Customer Insights prend actuellement en charge les éléments suivants :
-> - Entités ingérées à partir des flux de données Power BI stockés dans un Data Lake géré par Microsoft Dataverse.  
+> Customer Insights prend actuellement en charge les éléments suivants :  
 > - Les comptes Azure Data Lake Storage de la même région Azure que vous avez sélectionnée lors de la création de l’environnement.
 > - Comptes Azure Data Lake Storage Gen2 dont l’*espace de noms hiérarchique* est activé. Les comptes de stockage Azure Data Lake Gen1 ne sont pas pris en charge.
 
@@ -80,7 +79,7 @@ L’étape **Microsoft Dataverse** vous permet de connecter Customer Insights à
 
 Configurez votre environnement Microsoft Dataverse de manière à partager des données (profils et informations) avec des applications métier basées sur Dataverse, telles que Dynamics 365 Marketing ou des applications pilotées par modèle dans Power Apps. Laissez ce champ vide si vous n’avez pas votre propre environnement Dataverse ; nous en configurerons un pour vous.
 
-La connexion à votre environnement Dataverse vous permet également [d’ingérer des données à partir de sources de données locales à l’aide de flux de données et de passerelles Power Platform](data-sources.md#add-data-from-on-premises-data-sources). Vous pouvez aussi utiliser des [modèles de prédiction prêts à l’emploi](predictions-overview.md?tabs=b2c#out-of-box-models) en vous connectant à un environnement Dataverse.
+La connexion à votre environnement Dataverse vous permet également [d’ingérer des données à partir de sources de données locales à l’aide de flux de données et de passerelles Power Platform](data-sources.md#add-data-from-on-premises-data-sources).
 
 > [!IMPORTANT]
 > 1. Customer Insights et Dataverse doivent se trouver dans la même région pour activer le partage de données.

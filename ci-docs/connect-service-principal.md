@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 1dd99edc327bd41b0442b390f2e4f8664269f553
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646179"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739159"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Se connecter à un compte Azure Data Lake Storage en utilisant un principal de service Azure
 
@@ -25,7 +25,7 @@ Cet article décrit comment connecter Dynamics 365 Customer Insights à un compt
 Les outils automatisés qui utilisent les services Azure doivent toujours avoir des autorisations restreintes. Au lieu que les applications se connectent en tant qu’utilisateur entièrement privilégié, Azure propose des principaux de service. Vous pouvez utiliser les principaux de service pour [ajouter ou modifier un dossier Common Data Model en tant que source de données](connect-common-data-model.md) ou [créer ou mettre à jour un environnement](create-environment.md) en toute sécurité.
 
 > [!IMPORTANT]
-> - Le compte Data Lake Storage qui utilisera le principal de service doit être Gen2 et avoir [l'espace de noms hiérarchique activé](/azure/storage/blobs/data-lake-storage-namespace). Les comptes de stockage Azure Data Lake Gen1 ne sont pas pris en charge.
+> - Le compte Data Lake Storage qui utilisera le principal de service doit être Gen2 et avoir [l’espace de noms hiérarchique activé](/azure/storage/blobs/data-lake-storage-namespace). Les comptes de stockage Azure Data Lake Gen1 ne sont pas pris en charge.
 > - Des autorisations administrateur pour votre abonnement Azure sont nécessaires pour créer un principal de service.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Créer un principal de service Azure pour Customer Insights
@@ -40,7 +40,7 @@ Avant de créer un nouveau principal de service pour Customer Insights, vérifie
 
 3. Sous **Gérer**, sélectionnez **Applications d’entreprise**.
 
-4. Recherchez l’ID d’application Microsoft `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` avec le nom `Dynamics 365 AI for Customer Insights`.
+4. Ajoutez un filtre pour **L’ID application commence par** `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` ou recherchez le nom `Dynamics 365 AI for Customer Insights`.
 
 5. Si vous trouvez un enregistrement correspondant, cela signifie que le principal de service existe déjà. 
    

@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646139"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755495"
 ---
 # <a name="customer-activities"></a>Activités du client
 
-Combinez les activités client de [différentes sources de données](data-sources.md) dans Dynamics 365 Customer Insights pour créer une chronologie qui répertorie les activités dans l’ordre chronologique. Incluez la chronologie dans les applications Dynamics 365 avec la solution [Complément de carte client](customer-card-add-in.md), ou dans un tableau de bord Power BI.
+Combinez les activités du client à partir de [diverses sources de données](data-sources.md) dans Dynamics 365 Customer Insights. Créez une chronologie qui répertorie les activités par ordre chronologique. Intégrez la chronologie dans les applications Dynamics 365 avec la solution [Complément de carte client](customer-card-add-in.md).
 
 ## <a name="define-an-activity"></a>Définir une activité
 
@@ -78,7 +78,7 @@ Une entité doit avoir au moins un attribut de type **Date** à inclure dans une
 
 1. Sélectionnez **Suivant** pour passer à l’étape suivante. Vous pouvez sélectionner **Terminer et réviser** pour enregistrer l’activité maintenant avec le type d’activité défini sur **Autre**. 
 
-1. Dans l’étape **Type d’activité**, choisissez le type d’activité et, éventuellement, sélectionnez si vous souhaitez mapper sémantiquement certains des types d’activités pour les utiliser dans d’autres zones de Customer Insights. Actuellement, les types d’activité *Commentaires*, *Fidélité*, *SalesOrder*, *SalesOrderLine* et *Abonnement* peuvent être mappés sémantiquement après avoir accepté de mapper les champs. Si un type d’activité n’est pas pertinent pour la nouvelle activité, vous pouvez choisir *Autre* ou *Créer* pour un type d’activité personnalisé.
+1. Dans l’étape **Type d’activité**, choisissez le type d’activité et, éventuellement, sélectionnez si vous souhaitez mapper sémantiquement certains des types d’activités pour les utiliser dans d’autres zones de Customer Insights. Actuellement, les types d’activité *Commentaires*, *Fidélité*, *SalesOrder*, *SalesOrderLine* et *Abonnement* prennent en charge la sémantique après avoir accepté de mapper les champs. Si un type d’activité n’est pas pertinent pour la nouvelle activité, vous pouvez choisir *Autre* ou *Créer* pour un type d’activité personnalisé.
 
 1. Sélectionnez **Suivant** pour passer à l’étape suivante. 
 
@@ -110,7 +110,7 @@ Après avoir configuré les activités client, sélectionnez **Afficher dans la 
 
 Pour ouvrir la chronologie d’un client, accédez à **Clients** et choisissez le profil client que vous souhaitez consulter.
 
-Si un client a participé à une activité que vous avez configurée, vous la trouverez dans la section **Chronologie des activités**.
+Si un client a participé à une activité configurée, vous la trouverez dans la section **Chronologie des activités**.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Affichez les activités configurées dans les profils client.":::
 

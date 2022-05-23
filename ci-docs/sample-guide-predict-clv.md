@@ -1,19 +1,19 @@
 ---
 title: Exemple de guide Prédiction de la valeur de durée de vie du client
 description: Utilisez cet exemple de guide pour essayer le modèle de prédiction de la valeur de durée de vie du client.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646300"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740808"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Exemple de guide Prédiction de la valeur de durée de vie du client (CLV)
 
@@ -102,64 +102,7 @@ Consultez les articles [à propos de l’ingestion de données](data-sources.md)
 
 ## <a name="task-2---data-unification"></a>Tâche 2 : unification des données
 
-Après avoir ingéré les données, nous commençons maintenant le processus d’unification des données pour créer un profil client unifié. Pour plus d’informations, consultez [Unification des données](data-unification.md).
-
-### <a name="map"></a>Mappage
-
-1. Une fois les données ingérées, mappez les contacts des données d’eCommerce et du programme de fidélité aux types de données courants. Accédez à **Données** > **Unifier** > **Mettre en correspondance**.
-
-1. Sélectionnez les entités qui représentent le profil client : **eCommerceContacts** et **loyCustomers**. Sélectionnez ensuite **Appliquer**.
-
-   ![Unifiez les sources de données d’eCommerce et du programme de fidélité.](media/unify-ecommerce-loyalty.png)
-
-1. Sélectionnez **ContactId** comme clé primaire pour **eCommerceContacts** et **LoyaltyID** comme clé primaire pour **loyCustomers**.
-
-   ![Unifiez LoyaltyId comme clé primaire.](media/unify-loyaltyid.png)
-
-1. Sélectionnez **Enregistrer**.
-
-### <a name="match"></a>Correspondance
-
-1. Accédez à l’onglet **Mettre en correspondance** et sélectionnez **Définir l’ordre**.
-
-1. Dans la liste déroulante **Principal**, choisissez **eCommerceContacts : eCommerce** comme source principale et incluez tous les enregistrements.
-
-1. Dans la liste déroulante **Entité 2**, choisissez **loyCustomers : LoyaltyScheme** et incluez tous les enregistrements.
-
-   ![Unifiez l’ordre de mise en correspondance des données d’eCommerce et du programme de fidélité.](media/unify-match-order.png)
-
-1. Sélectionnez **Ajouter une règle**
-
-1. Ajoutez votre première condition en utilisant FullName.
-
-   - Pour eCommerceContacts, sélectionnez **FullName** dans la liste déroulante.
-   - Pour loyCustomers, sélectionnez **FullName** dans la liste déroulante.
-   - Sélectionnez la liste déroulante **Normaliser** et choisissez **Type (Téléphone, nom, adresse...)**.
-   - Définissez le **Niveau de précision** sur **Base** et la **Valeur** sur **Élevé**.
-
-1. Saisissez le nom **FullName, Email** pour la nouvelle règle.
-
-   - Ajoutez une deuxième condition pour l’adresse e-mail en sélectionnant **Ajouter une condition**
-   - Pour l’entité eCommerceContacts, choisissez **E-mail** dans la liste déroulante.
-   - Pour l’entité loyCustomers, choisissez **E-mail** dans la liste déroulante.
-   - Laissez le champ Normaliser vide.
-   - Définissez le **Niveau de précision** sur **Base** et la **Valeur** sur **Élevé**.
-
-   ![Unifiez la règle de mise en correspondance pour le nom et l’adresse e-mail.](media/unify-match-rule.png)
-
-1. Cliquez sur **Terminé**.
-
-1. Sélectionnez **Enregistrer** et **Exécuter**.
-
-### <a name="merge"></a>Fusionner
-
-1. Accédez à l’onglet **Fusionner**.
-
-1. Dans le champ **ContactId** de l’entité **loyCustomers**, modifiez le nom d’affichage en **ContactIdLOYALTY** pour le différencier des autres ID ingérés.
-
-   ![Renommez contactid à partir de l’ID du programme de fidélité.](media/unify-merge-contactid.png)
-
-1. Sélectionnez **Enregistrer** et **Exécuter les processus de fusion et en aval**.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Tâche 3 – Configurer la prédiction de la valeur de durée de vie du client
 

@@ -12,19 +12,19 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646301"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740716"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Complétez vos données partielles avec des prédictions (plus disponible)
 
 > [!IMPORTANT]
 > Cette fonctionnalité ne sera **plus disponible** à partir de **5 novembre 2021**. Les implémentations actuelles continueront de fonctionner jusqu’à ce que la fonctionnalité soit supprimée, mais vous ne pourrez pas créer de nouvelles intégrations à l’aide des instructions ci-dessous.
 
-Les prédictions vous permettent de créer facilement des valeurs prédites qui peuvent améliorer votre compréhension d’un client. Sur la page **Intelligence** > **Prévisions**, vous pouvez sélectionner **Mes prévisions** pour voir les prévisions que vous avez configurées dans d'autres parties de Customer Insights, et vous permet de les personnaliser davantage.
+Les prédictions vous permettent de créer facilement des valeurs prédites qui peuvent améliorer votre compréhension d’un client. Sur la page **Intelligence** > **Prévisions**, vous pouvez sélectionner **Mes prévisions** pour voir les prévisions que vous avez configurées dans d’autres parties de Customer Insights, et vous permet de les personnaliser davantage.
 
 > [!NOTE]
 > Vous ne pouvez pas utiliser cette fonctionnalité si votre environnement utilise le stockage Azure Data Lake Gen 2.
@@ -37,7 +37,7 @@ Avant que votre organisation ne puisse utiliser la fonction de prévisions, les 
 
 1. Votre organisation a une instance [mise en place dans Microsoft Dataverse](/ai-builder/build-model#prerequisites) qui se trouve dans la même organisation que Customer Insights.
 
-2. Votre environnement d’informations sur l’audience est joint à votre instance Dataverse.
+2. Votre environnement Customer Insights est attaché à votre instance de Dataverse.
 
 Pour plus d’informations, consultez [Créer un environnement](create-environment.md).
 
@@ -57,7 +57,7 @@ Pour plus d’informations, consultez [Créer un environnement](create-environme
    > [!div class="mx-imgBorder"]
    > ![Aperçu du statut avec bouton de prédiction des valeurs manquantes affiché.](media/intelligence-overviewpredictmissingvalues.png "Aperçu du statut avec bouton de prédiction des valeurs manquantes affiché")
 
-6. Fournissez un **nom complet** et un **Nom d’entité de sortie** pour les résultats de la prédiction.
+6. Fournissez un **Nom d’affichage** et un **Nom d’entité de sortie** pour les résultats de la prédiction.
 
 7. Une liste d’options préremplie indique où vous pouvez mapper les valeurs à une catégorie prédite. Dans ce cas, vos seules options de catégorie seront 0 ou 1, car elles correspondent à la nature vraie/fausse ou binaire de la prédiction. Dans la colonne Catégorie, mappez les valeurs de champ que vous souhaitez classer comme « 0 » dans la prédiction finale à « 0 » et les éléments que vous souhaitez classer comme « 1 » dans la prédiction finale à « 1 ».
    > [!div class="mx-imgBorder"]
@@ -77,7 +77,7 @@ Dans le cadre de ce flux, vous choisissez un attribut spécifique sur lequel bas
 
 2. Choisissez un **champ** pour créer un segment et sélectionner un **Opérateur**, puis sélectionnez **Réviser**.
 
-3. Fournissez un **Nom** et un **Nom complet** pour le segment.
+3. Fournissez un **Nom** et un **Nom d’affichage** pour le segment.
 
 4. Sélectionnez **Enregistrer**.
 
@@ -85,7 +85,7 @@ Dans le cadre de ce flux, vous choisissez un attribut spécifique sur lequel bas
    > [!div class="mx-imgBorder"]
    > ![Bouton Prédiction.](media/segments-predictoption.png "Bouton Prédiction")
 
-6. Fournissez un **nom complet** et un **Nom d’entité de sortie** pour les résultats de la prédiction.
+6. Fournissez un **Nom d’affichage** et un **Nom d’entité de sortie** pour les résultats de la prédiction.
 
 7. Sélectionnez **Terminé**. Votre prédiction sera générée sous peu dans une nouvelle entité avec le nom que vous avez fourni pour le **Nom de l’entité de sortie**.
 

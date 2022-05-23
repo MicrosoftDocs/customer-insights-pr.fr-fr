@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 409792bc3f12fca451ef038e3300758bdf9ecf3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646340"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741176"
 ---
 # <a name="power-automate-connector-preview"></a>Connecteur Power Automate (préversion)
 
@@ -25,14 +25,14 @@ Déclenchez des événements spécifiques automatiques lorsque vos données sont
 
 ## <a name="power-automate-triggers"></a>Déclencheurs Power Automate
 
-Utilisez des déclencheurs pour créer des flux de cloud et automatiser des tâches répétitives, telles que des notifications ou des actions plus avancées. 
+Utilisez des déclencheurs pour créer des flux de cloud et automatiser des tâches répétitives, telles que des notifications ou des actions plus avancées.
 
-- Déclencher quand une actualisation source de données échoue. 
+- Déclencher quand une actualisation source de données échoue.
 - Déclencher quand une actualisation source de données réussit.
 - Déclencher lorsqu’un seuil est franchi sur un segment. Le déclencheur se limite à franchir le seuil.
 - Déclencher lorsqu’un seuil est franchi sur une mesure d’activité. Seules les mesures d’entreprise sans dimension sont prises en charge. Le déclencheur se limite à franchir le seuil.
 - Déclencher quand une actualisation complète (sources de données, segments, mesures...) est terminée.
-- Déclencher lorsqu’une actualisation du processus d’unification (mappage, correspondance, fusion) est terminée.
+- Déclenchement lorsqu’une actualisation du processus d’unification est terminée.
 
 [Configurer vos déclencheurs dans Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 

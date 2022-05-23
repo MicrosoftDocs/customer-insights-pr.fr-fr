@@ -4,20 +4,20 @@ description: Suivez ces quatre étapes pour configurer rapidement la gestion du 
 ms.date: 04/28/2022
 ms.subservice: consent-management
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-system-consent
 - customerInsights
-ms.openlocfilehash: 5ded1c685e0c4588da0971b9dcea50f6a5dcf53d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 5aa52848aa1ee03c7c582d4208b438713acf93a2
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653597"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755429"
 ---
 # <a name="get-started-with-consent-management"></a>Démarrer avec la gestion du consentement
 

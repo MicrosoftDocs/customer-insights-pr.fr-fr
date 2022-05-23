@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646032"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755633"
 ---
 # <a name="customer-card-add-in-preview"></a>Complément Carte client (préversion)
-
-
 
 Obtenez une vue globale de vos clients directement dans les applications Dynamics 365. Avec le complément Customer Card installé dans une application Dynamics 365 prise en charge, vous pouvez choisir d’afficher les champs de profil client, les informations et la chronologie des activités. Le complément récupérera les données de Customer Insights sans affecter les données de l’application Dynamics 365 connectée.
 
@@ -31,7 +29,7 @@ Obtenez une vue globale de vos clients directement dans les applications Dynamic
 ## <a name="prerequisites"></a>Conditions préalables
 
 - Le complément fonctionne uniquement avec les applications pilotées par modèle Dynamics 365, telles que Sales ou Customer Service, versions 9.0 et ultérieures.
-- Pour que vos données Dynamics 365 soient mappées aux profils client Customer Insights, nous vous recommandons de les [ingérer à partir de l’application Dynamics 365 avec le connecteur Microsoft Dataverse](connect-power-query.md). Si vous utilisez une méthode différente pour ingérer des contacts (ou des comptes) Dynamics 365, vous devez vous assurer que le champ `contactid` (ou `accountid`) est défini comme la [clé primaire pour cette source de données à l’étape de mappage du processus d’unification des données](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Pour que vos données Dynamics 365 soient mappées aux profils client Customer Insights, nous vous recommandons de les [ingérer à partir de l’application Dynamics 365 avec le connecteur Microsoft Dataverse](connect-power-query.md). Si vous utilisez une méthode différente pour ingérer des contacts (ou des comptes) Dynamics 365, vous devez vous assurer que le champ `contactid` (ou `accountid`) est défini comme la [clé primaire pour cette source de données à l’étape de mappage du processus d’unification des données](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Tous les utilisateurs Dynamics 365 du complément de carte client doivent être [ajoutés en tant qu’utilisateurs](permissions.md) dans Customer Insights pour voir les données.
 - Les [capacités de recherche et de filtrage configurées](search-filter-index.md) dans Customer Insights sont nécessaires pour que la recherche de données puisse fonctionner.
 - Chaque contrôle de complément s’appuie sur des données spécifiques dans Customer Insights. Certaines données et certains contrôles ne sont disponibles que dans des environnements de types spécifiques. La configuration du complément vous informera si un contrôle n’est pas disponible en raison du type d’environnement sélectionné. En savoir plus sur les [cas d’utilisation de l’environnement](work-with-business-accounts.md).
@@ -52,10 +50,10 @@ Vous devrez peut-être vous connecter avec vos informations d’identification d
 
 1. En tant qu’administrateur, accédez à la section **Paramètres** de Dynamics 365 et sélectionnez **Solutions**.
 
-1. Sélectionnez le lien **Nom complet** pour la solution **Complément Carte client Dynamics 365 Customer Insights (version préliminaire)**.
+1. Sélectionnez le lien **Nom d’affichage** pour la solution **Complément Carte client Dynamics 365 Customer Insights (version préliminaire)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Sélectionnez le nom complet.](media/select-display-name.png "Sélectionnez le nom complet.")
+   > ![Sélectionnez le nom d’affichage.](media/select-display-name.png "Sélectionnez le nom d’affichage.")
 
 1. Sélectionnez **Se connecter** et entrez les identifiants du compte d’administrateur que vous utilisez pour configurer Customer Insights.
 
@@ -128,20 +126,20 @@ Le complément de carte client ne se met pas à niveau automatiquement. Pour eff
 
 **Problème :**
 
-Même avec des champs d'ID correctement configurés, les contrôles ne peuvent trouver de données pour aucun client.  
+Même avec des champs d’ID correctement configurés, les contrôles ne peuvent trouver de données pour aucun client.  
 
 **Solution :**
 
-1. Assurez-vous d'avoir configuré le complément de carte conformément aux instructions : [Configurer le complément de carte client](#configure-the-customer-card-add-in) 
+1. Assurez-vous d’avoir configuré le complément de carte conformément aux instructions : [Configurer le complément de carte client](#configure-the-customer-card-add-in)
 
-1. Vérifiez la configuration de l'ingestion de données. Modifiez la source de données pour le système Dynamics 365 qui contient le GUID d'ID de contact. Si le GUID de l'ID de contact s'affiche avec des caractères majuscules dans l'éditeur Power Query, essayez ce qui suit : 
-    1. Modifiez la source de données pour ouvrir la source de données dans l'éditeur Power Query.
+1. Vérifiez la configuration de l’ingestion de données. Modifiez la source de données pour le système Dynamics 365 qui contient le GUID d’ID de contact. Si le GUID de l’ID de contact s’affiche avec des caractères majuscules dans l’éditeur Power Query, procédez comme suit :
+    1. Modifiez la source de données pour ouvrir la source de données dans l’éditeur Power Query.
     1. Sélectionnez la colonne ID de contact.
-    1. Sélectionnez **Transformer** dans la barre d'en-tête pour voir les actions disponibles.
+    1. Sélectionnez **Transformer** dans la barre d’en-tête pour voir les actions disponibles.
     1. Sélectionnez **minuscule**. Vérifiez si les GUID du tableau sont désormais en minuscules.
     1. Enregistrez la source de données.
-    1. Exécutez l'ingestion de données, l'unification et les processus en aval pour propager les modifications au GUID. 
+    1. Exécutez l’ingestion de données, l’unification et les processus en aval pour propager les modifications au GUID.
 
-Une fois l'actualisation complète terminée, les contrôles du complément de carte client doivent afficher les données attendues. 
+Une fois l’actualisation complètement terminée, les contrôles du complément de carte client doivent afficher les données attendues.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

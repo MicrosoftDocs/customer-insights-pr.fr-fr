@@ -4,22 +4,22 @@ description: Tous les utilisateurs d’une organisation qui possède la gestion 
 ms.date: 04/27/2022
 ms.subservice: consent-management
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ffc1010b6bc005c595c2083057d77c8dcf7e688f
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 32551b5bb47a0bb912ae458b37e22bb57b36eacc
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653457"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755667"
 ---
 # <a name="manage-users-and-permissions"></a>Gérer les utilisateurs et les autorisations
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Tous les administrateurs des insights d’audience ont accès à la capacité de gestion du consentement. Ils peuvent ajouter et supprimer d’autres utilisateurs et leur attribuer les autorisations requises.
+Tous les administrateurs de Customer Insights ont accès à la capacité de gestion du consentement. Ils peuvent ajouter et supprimer d’autres utilisateurs et leur attribuer les autorisations requises.
 
 ## <a name="roles"></a>Rôles
 

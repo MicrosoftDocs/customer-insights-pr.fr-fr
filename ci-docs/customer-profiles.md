@@ -1,7 +1,7 @@
 ---
 title: Afficher les profils de client
 description: Obtenez une vue combinée de vos données client unifiées.
-ms.date: 09/30/2021
+ms.date: 05/13/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 45ef6abcd612178a097569825e32ff9ac779de01
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646022"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755779"
 ---
 # <a name="customer-profiles"></a>Profils clients
 
@@ -29,7 +29,7 @@ Les clients peuvent être des individus ou des organisations. Chaque profil clie
 
 Sélectionnez une vignette pour voir les données du client sélectionné sur une page dédiée appelée [Page de détails du client](customer-profiles.md#customer-details-page).
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Page Clients affichant les vignettes de résultats](media/customers-page-result-tiles-B2C.png "Page Clients affichant les vignettes de résultats")
 
 > [!NOTE]
@@ -37,13 +37,13 @@ Sélectionnez une vignette pour voir les données du client sélectionné sur un
 
 ## <a name="search-for-customers"></a>Rechercher des clients
 
-Recherchez des clients en saisissant un nom ou d’autres attributs dans la zone de recherche. La recherche ne fonctionne que dans l’entité _Client_ créée au cours du processus d’unification des données.
+Recherchez des clients en saisissant un nom ou d’autres attributs dans la zone de recherche. La recherche ne fonctionne que dans l’entité *Client* créée au cours du processus d’unification des données.
 
 En tant qu’administrateur, vous pouvez configurer les attributs de recherche à l’aide de la page **Index Rechercher et filtrer**. Pour plus d’informations, rendez-vous sur [Gérer l’index de recherche et de filtrage](search-filter-index.md).
 
 ## <a name="filter-customers"></a>Filtrer les clients
 
-Vous pouvez filtrer les clients par les champs d’entité _Client_. Comme pour la recherche, votre administrateur devra tout d’abord définir ces champs comme pouvant être filtrés à l’aide de la page **Index Rechercher et filtrer**.
+Vous pouvez filtrer les clients par les champs d’entité *Client*. Comme pour la recherche, votre administrateur devra tout d’abord définir ces champs comme pouvant être filtrés à l’aide de la page **Index Rechercher et filtrer**.
 
 1. Sélectionnez **Afficher les filtres** sur la page **Clients**.
 
@@ -55,24 +55,25 @@ Vous pouvez filtrer les clients par les champs d’entité _Client_. Comme pour 
 
 Sélectionnez l’une des vignettes client pour ouvrir la **Page des détails du client**. Cette vue contient des informations unifiées pour le client sélectionné. Les détails du client incluent le contenu suivant :
 
-**Vignette de profil client** : cette vignette montre les différentes valeurs de l’entité _Client_ unifiée. Si un champ n’a pas de valeur pour le profil client sélectionné, il ne s’affichera pas. La vignette est structurée en sections :  
-  - La première section affiche un ensemble prédéfini de champs suivi de tous les champs faisant partie de l’index de recherche et de filtrage. Tous les champs liés à l’adresse sont combinés en une seule ligne si le profil contient de tels champs. 
-  - **Contacts pour ce client** : dans les environnements de comptes professionnels, vous verrez tous les contacts associés à ce client dans la deuxième section. Chaque contact est affiché avec ses champs. Les champs vides sont masqués.
-  - **Champs supplémentaires** : Affiche les champs restants du client sélectionné, à l’exception des ID. 
-  - **ID** : répertorie tous les ID sous leur nom d’entité correspondant. Les champs sont identifiés comme des identifiants par leur sémantique, qui les catégorise comme tels.
+**Vignette de profil client** : cette vignette montre les différentes valeurs de l’entité *Client* unifiée. Si un champ n’a pas de valeur pour le profil client sélectionné, il ne s’affichera pas. La vignette est structurée en sections :
+
+- La première section affiche un ensemble prédéfini de champs suivi de tous les champs faisant partie de l’index de recherche et de filtrage. Tous les champs liés à l’adresse sont combinés en une seule ligne si le profil contient de tels champs.
+- **Contacts pour ce client** : dans les environnements de comptes professionnels, vous verrez tous les contacts associés à ce client dans la deuxième section. Chaque contact est affiché avec ses champs. Les champs vides sont masqués.
+- **Champs supplémentaires** : Affiche les champs restants du client sélectionné, à l’exception des ID.
+- **ID** : répertorie tous les ID sous leur nom d’entité correspondant. Les champs sont identifiés comme des identifiants par leur sémantique, qui les catégorise comme tels.
 
 **Chronologie des activités** : Affiche les données si vous avez configuré des activités. La vue chronologique contient les activités triées par ordre chronologique du client sélectionné, en commençant par l’activité la plus récente. Pour plus d’informations, consultez [Activités client](activities.md).
 
-**Insights** :  
-  - **Mesures** : indique si vous avez configuré une ou plusieurs mesures d’attribut client. Elles englobent les KPI calculés de vos clients au niveau de chaque client. Pour plus d’informations, rendez-vous sur [Définir et gérer les mesures](measures.md).
+**Insights** :
 
-  - **Intérêts potentiels, marques potentielles** : indique si vous avez configuré un enrichissement par marque ou par affinité d’intérêt. Il représente des intérêts et affinités potentiels pour les marques en fonction d’autres clients dont le profil est similaire au profil client sélectionné. Pour plus d’informations, rendez-vous sur [Enrichir les profils clients avec des affinités de marque et d’intérêt](enrichment-microsoft.md).
+- **Mesures** : indique si vous avez configuré une ou plusieurs mesures d’attribut client. Elles englobent les KPI calculés de vos clients au niveau de chaque client. Pour plus d’informations, rendez-vous sur [Définir et gérer les mesures](measures.md).
+
+- **Intérêts potentiels, marques potentielles** : indique si vous avez configuré un enrichissement par marque ou par affinité d’intérêt. Il représente des intérêts et affinités potentiels pour les marques en fonction d’autres clients dont le profil est similaire au profil client sélectionné. Pour plus d’informations, rendez-vous sur [Enrichir les profils clients avec des affinités de marque et d’intérêt](enrichment-microsoft.md).
 
 Pour revenir à la page de recherche de clients, sélectionnez **Retour aux clients**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Ajoutez plus de sources de données](data-sources.md), [enrichissez les profils unifiés](enrichment-hub.md) ou [créez des segments](segments.md) pour travailler avec des profils clients unifiés dans d’autres applications.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

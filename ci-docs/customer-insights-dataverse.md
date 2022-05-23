@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 85995cbd7f797810bfb6ecdc8a24d56542f0b5a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1e629cd218b104b115f74f59a53a14e9d60fcc8a
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646029"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741362"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Utiliser des données Customer Insights dans Microsoft Dataverse
 
@@ -33,7 +33,7 @@ Si vous ne souhaitez pas utiliser un environnement Dataverse existant, le systè
 > [!NOTE]
 > Si votre organisation utilise déjà Dataverse dans son client, il est important de se rappeler que la [création d’un environnement Dataverse est contrôlée par un administrateur](/power-platform/admin/control-environment-creation). Par exemple, si vous configurez un nouvel environnement Customer Insights avec votre compte d’organisation et que l’administrateur a désactivé la création d’environnements d’essai Dataverse pour tout le monde à l’exception des administrateurs, vous ne pouvez pas créer un nouvel environnement d’essai.
 > 
-> Les environnements d'essai Dataverse créés dans Customer Insights disposent de 3 Go de stockage qui ne seront pas pris en compte dans la capacité globale à laquelle le locataire a droit. Les abonnements payants obtiennent un droit Dataverse de 15 Go pour la base de données et de 20 Go pour le stockage de fichiers.
+> Les environnements d’essai Dataverse créés dans Customer Insights disposent de 3 Go de stockage qui ne seront pas pris en compte dans la capacité globale à laquelle le locataire a droit. Les abonnements payants obtiennent un droit Dataverse de 15 Go pour la base de données et de 20 Go pour le stockage de fichiers.
 
 **Nouvelle organisation**
 
@@ -54,17 +54,17 @@ Certaines entités de sortie de Customer Insights sont disponibles en tant que t
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Cette table contient le profil client unifié de Customer Insights. Le schéma d'un profil client unifié dépend des entités et des attributs utilisés dans le processus de fusion. Le schéma d'un profil client contient généralement un sous-ensemble des attributs de la [définition Common Data Model de CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Cette table contient le profil client unifié de Customer Insights. Le schéma d’un profil client unifié dépend des entités et des attributs utilisés dans le processus d’unification des données. Le schéma d’un profil client contient généralement un sous-ensemble des attributs de la [définition Common Data Model de CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
 
 ### <a name="alternatekey"></a>AlternateKey
 
-La table AlternateKey contient les clés des entités qui ont participé au processus d'unification.
+La table AlternateKey contient les clés des entités qui ont participé au processus d’unification.
 
 |Column  |Type  |Description  |
 |---------|---------|---------|
 |DataSourceName    |String         | Nom de la source de données. Par exemple : `datasource5`        |
 |Nom de l’entité        | String        | Nom de l’entité dans Customer Insights. Par exemple : `contact1`        |
-|AlternateValue    |String         |ID alternatif mappé à l'ID client. Exemple : `cntid_1078`         |
+|AlternateValue    |String         |ID alternatif mappé à l’ID client. Exemple : `cntid_1078`         |
 |KeyRing           | Texte multiligne        | Valeur JSON  </br> Exemple : [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
 |Customerid         | String        | ID du profil client unifié.         |
 |AlternateKeyId     | GUID         |  GUID déterministe AlternateKey basé sur msdynci_identifier       |
@@ -77,17 +77,17 @@ Cette table contient les activités des utilisateurs qui sont disponibles dans C
 | Column            | Type        | Description                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
 | Customerid        | String      | ID profil client                                                                      |
-| ActivityId        | String      | ID interne de l'activité client (clé primaire)                                       |
-| SourceEntityName  | String      | Nom de l'entité source                                                                |
-| SourceActivityId  | String      | Clé primaire de l'entité source                                                       |
-| ActivityType      | String      | Type d'activité sémantique ou nom de l'activité personnalisée                                        |
-| ActivityTimeStamp | DATETIME    | Horodatage de l'activité                                                                      |
+| ActivityId        | String      | ID interne de l’activité client (clé primaire)                                       |
+| SourceEntityName  | String      | Nom de l’entité source                                                                |
+| SourceActivityId  | String      | Clé primaire de l’entité source                                                       |
+| ActivityType      | String      | Type d’activité sémantique ou nom de l’activité personnalisée                                        |
+| ActivityTimeStamp | DATETIME    | Horodatage de l’activité                                                                      |
 | Titre             | String      | Titre ou non de l’activité                                                               |
 | Description       | String      | Description de l’activité                                                                     |
-| URL               | String      | Lien vers une URL externe spécifique à l'activité                                         |
-| SemanticData      | Chaîne JSON | Comprend une liste de paires clé-valeur pour les champs de mappage sémantique spécifiques au type d'activité |
+| URL               | String      | Lien vers une URL externe spécifique à l’activité                                         |
+| SemanticData      | Chaîne JSON | Comprend une liste de paires clé-valeur pour les champs de mappage sémantique spécifiques au type d’activité |
 | RangeIndex        | String      | Horodatage Unix utilisé pour trier la chronologie des activités et les requêtes de plage effective |
-| mydynci_unifiedactivityid   | GUID | ID interne de l'activité client (ActivityId) |
+| mydynci_unifiedactivityid   | GUID | ID interne de l’activité client (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
@@ -103,14 +103,14 @@ Cette table contient les données de sortie des mesures basées sur les attribut
 
 ### <a name="enrichment"></a>Enrichissement
 
-Cette table contient le résultat du processus d'enrichissement.
+Cette table contient le résultat du processus d’enrichissement.
 
 | Column               | Type             |  Description                                          |
 |----------------------|------------------|------------------------------------------------------|
 | Customerid           | String           | ID profil client                                 |
 | EnrichmentProvider   | String           | Nom du fournisseur pour l’enrichissement                                  |
-| EnrichmentType       | String           | Type d'enrichissement                                      |
-| Valeurs               | Chaîne JSON      | Liste des attributs produits par le processus d'enrichissement |
+| EnrichmentType       | String           | Type d’enrichissement                                      |
+| Valeurs               | Chaîne JSON      | Liste des attributs produits par le processus d’enrichissement |
 | msdynci_enrichmentid | GUID             | GUID déterministe généré à partir de msdynci_identifier |
 | msdynci_identifier   | String           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
@@ -129,7 +129,7 @@ Cette table contient le résultat des prédictions de modèle.
 
 ### <a name="segment-membership"></a>Appartenance aux segments
 
-Ce tableau contient des informations sur l'appartenance aux segments des profils clients.
+Ce tableau contient des informations sur l’appartenance aux segments des profils clients.
 
 | Column        | Type | Description                        |
 |--------------------|--------------|-----------------------------|
