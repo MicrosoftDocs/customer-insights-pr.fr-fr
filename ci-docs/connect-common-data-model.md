@@ -1,7 +1,7 @@
 ---
 title: Connecter les données Common Data Model à un compte Azure Data Lake
 description: Utilisez les données Common Data Model avec Azure Data Lake Storage.
-ms.date: 01/25/2022
+ms.date: 05/24/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -13,12 +13,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: eeb6b9d97be5f9c0b9f6cbd6dbc6985559a1cd9d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646162"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833353"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Se connecter à un dossier Common Data Model à l’aide d’un compte Azure Data Lake
 
@@ -46,16 +46,16 @@ Cet article fournit des informations sur l’ingestion de données dans Dynamics
 
 1. Sélectionnez **Azure Data Lake Storage**, entrez un **Nom** pour la source de données, puis sélectionnez **Suivant**.
 
-   - Si vous y êtes invité, sélectionnez l’un des exemples d’ensembles de données qui se rapportent à votre secteur d’activité, puis sélectionnez **Suivant**. 
+   - Si vous y êtes invité, sélectionnez l’un des exemples d’ensembles de données qui se rapportent à votre secteur d’activité, puis sélectionnez **Suivant**.
 
 1. Vous pouvez choisir entre une option basée sur une ressource et une option basée sur un abonnement pour l’authentification. Pour plus d’informations, consultez [Se connecter à un compte Azure Data Lake Storage Gen2 avec un principal de service Azure](connect-service-principal.md). Entrez l’**Adresse du serveur**, sélectionnez **Se connecter**, puis sélectionnez **Suivant**.
    > [!div class="mx-imgBorder"]
    > ![Boîte de dialogue pour entrer de nouveaux détails de connexion pour Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Vous avez besoin de l’un des rôles suivants pour le conteneur ou le compte de stockage mentionné ci-dessus pour pouvoir vous connecter et créer une source de données :
-   >  - Lecteur de données d’objets BLOB de stockage
-   >  - Propriétaire de données d’objets BLOB de stockage
-   >  - Contributeur de données BLOB de stockage
+   > L’un des rôles suivants pour le conteneur du compte de stockage est nécessaire pour créer la source de données :
+   >
+   >  - Le rôle Lecteur des données blob de stockage est suffisant pour lire à partir d’un compte de stockage et ingérer les données dans Customer Insights. 
+   >  - Le rôle Contributeur ou propriétaire des données blob de stockage est nécessaire si vous souhaitez modifier les fichiers manifeste directement dans Customer Insights.
 
 1. Dans la boîte de dialogue **Sélectionner un dossier Common Data Model**, sélectionnez le fichier model.json ou manifest.json à partir duquel importer les données, puis sélectionnez **Suivant**.
    > [!NOTE]
@@ -65,11 +65,11 @@ Cet article fournit des informations sur l’ingestion de données dans Dynamics
    > [!div class="mx-imgBorder"]
    > ![Boîte de dialogue affichant une liste d’entités à partir d’un fichier model.json.](media/review-entities.png)
 
-8. Indiquez pour quelles entités de données vous souhaitez activer le profilage des données, puis sélectionnez **Enregistrer**. Le profilage des données permet l’analyse et d’autres fonctionnalités. Vous pouvez sélectionner toute l’entité, ce qui entraîne la sélection de tous les attributs de l’entité, ou sélectionner certains attributs de votre choix. Par défaut, aucune entité n’est activée pour le profilage des données.
+1. Indiquez pour quelles entités de données vous souhaitez activer le profilage des données, puis sélectionnez **Enregistrer**. Le profilage des données permet l’analyse et d’autres fonctionnalités. Vous pouvez sélectionner toute l’entité, ce qui entraîne la sélection de tous les attributs de l’entité, ou sélectionner certains attributs de votre choix. Par défaut, aucune entité n’est activée pour le profilage des données.
    > [!div class="mx-imgBorder"]
    > ![Boîte de dialogue illustrant un profilage des données.](media/dataprofiling-entities.png)
 
-9. Après avoir enregistré vos sélections, la page **Source d’informations** s’ouvre. Vous devriez maintenant voir la connexion au dossier Common Data Model en tant que source de données.
+1. Après avoir enregistré vos sélections, la page **Source d’informations** s’ouvre. Vous devriez maintenant voir la connexion au dossier Common Data Model en tant que source de données.
 
 > [!NOTE]
 > Un fichier model.json ou manifest.json ne peut être associé qu’à une seule source de données dans le même environnement. Cependant, le même fichier model.json ou manifest.json peut être utilisé pour les sources de données dans plusieurs environnements.
@@ -80,7 +80,7 @@ Vous pouvez mettre à jour la clé d’accès du compte de stockage contenant le
 
 1. Accédez à **Données** > **Sources de données**.
 
-2. En regard de la source de données que vous souhaitez mettre à jour, sélectionnez les points de suspension.
+2. En regard de la source de données que vous souhaitez mettre à jour, sélectionnez les points de suspension verticaux (&vellip;).
 
 3. Sélectionnez l’option **Modifier** dans la liste.
 
@@ -93,13 +93,6 @@ Vous pouvez mettre à jour la clé d’accès du compte de stockage contenant le
 
    > ![Boîte de dialogue pour entrer les détails de connexion d’Azure Data Lake à un compte de stockage existant.](media/enter-existing-storage-details.png)
 
-   > [!NOTE]
-   > Vous avez besoin de l’un des rôles suivants pour le conteneur ou le compte de stockage mentionné ci-dessus pour pouvoir vous connecter et créer une source de données :
-   >  - Lecteur de données d’objets BLOB de stockage
-   >  - Propriétaire de données d’objets BLOB de stockage
-   >  - Contributeur de données BLOB de stockage
-
-
 6. Vous pouvez également choisir un fichier model.json ou manifest.json différent avec un ensemble d’entités différent du conteneur.
 
 7. Vous pouvez éventuellement sélectionner des entités supplémentaires à ingérer. Vous pouvez également supprimer toutes les entités déjà sélectionnées s’il n’y a pas de dépendances.
@@ -107,7 +100,6 @@ Vous pouvez mettre à jour la clé d’accès du compte de stockage contenant le
    > [!IMPORTANT]
    > S’il existe des dépendances sur le fichier model.json ou manifest.json existant et sur l’ensemble d’entités, vous verrez un message d’erreur et vous ne pourrez pas sélectionner un autre fichier model.json ou manifest.json. Supprimez ces dépendances avant de modifier le fichier model.json ou manifest.json ou créez une source de données avec le fichier model.json ou manifest.json que vous souhaitez utiliser pour éviter de supprimer les dépendances.
 
-8. Vous pouvez éventuellement sélectionner des attributs ou entités supplémentaires pour activer le profilage des données, ou désactiver ceux déjà sélectionnés.   
-
+8. Vous pouvez éventuellement sélectionner des attributs ou entités supplémentaires pour activer le profilage des données, ou désactiver ceux déjà sélectionnés.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ author: anubhav-t
 ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 32551b5bb47a0bb912ae458b37e22bb57b36eacc
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1767f96e3fd32f54f6792fa0697bdb47fd1e74e8
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755667"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800401"
 ---
 # <a name="manage-users-and-permissions"></a>Gérer les utilisateurs et les autorisations
 
@@ -47,11 +47,11 @@ Tous les administrateurs de Customer Insights ont accès à la capacité de gest
 
 1. Dans le Centre de consentement (version préliminaire), accédez à **Administrateur** > **Autorisations**.
 1. Sélectionnez l’utilisateur que vous souhaitez supprimer de la liste.
-1. Sélectionnez **Plus d’options (...)** et choisissez **Supprimer l’utilisateur**
+1. Sélectionnez **Plus d’options (&vellip;)** et choisissez **Supprimer l’utilisateur**
 1. Confirmez la suppression pour révoquer l’accès aux utilisateurs.
 
 ## <a name="change-roles"></a>Modifier les rôles
 
 1. Dans le Centre de consentement (version préliminaire), accédez à **Administrateur** > **Autorisations**.
 1. Sélectionnez l’utilisateur que vous souhaitez supprimer de la liste.
-1. Sélectionnez **Plus d’options (...)** et choisissez **Supprimer l’utilisateur**
+1. Sélectionnez **Plus d’options (&vellip;)** et choisissez **Supprimer l’utilisateur**

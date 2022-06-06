@@ -4,14 +4,14 @@ metadata:
   author: m-hartmann
   description: Trouvez des articles pertinents pour commencer avec le contenu de l'aide.
   ms.author: mhart
-  ms.date: 03/02/2022
+  ms.date: 05/18/2022
   ms.topic: landing-page
-  ms.openlocfilehash: e3a9f6d5f4d23ca3e85fa3f69272a0162ca7bd2d
-  ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+  ms.openlocfilehash: e8134fa66ce47cdf8aeab144b8405104fb257f6c
+  ms.sourcegitcommit: 6108152b3d28a2ec140eae32a61dbf4317baa37b
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 04/27/2022
-  ms.locfileid: "8641653"
+  ms.lasthandoff: 05/19/2022
+  ms.locfileid: "8781361"
 title: Documentation Dynamics 365 Customer Insights
 summary: Trouvez des ressources utiles pour démarrer et découvrez les fonctionnalités et les capacités de Customer Insights.
 landingContent:
@@ -43,16 +43,30 @@ landingContent:
     links:
     - text: Démarrer
       url: /learn/modules/get-started-customer-data-platform/
-- title: Unifier les données
+- title: Ingérer des données
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Vue d’ensemble des sources de données
       url: data-sources.md
+    - text: Se connecter avec Power Query
+      url: connect-power-query.md
+    - text: Se connecter à Microsoft Dataverse
+      url: connect-dataverse-managed-lake.md
+  - linkListType: learn
+    links:
+    - text: Ingérer des données dans Customer Insights
+      url: /learn/modules/ingest-data-customer-insights/
+- title: Unifier les données
+  linkLists:
+  - linkListType: how-to-guide
+    links:
     - text: Vue d’ensemble de l’unification
       url: data-unification.md
     - text: Comprendre les entités
       url: entities.md
+    - text: Examiner les profils unifiés
+      url: customer-profiles.md
   - linkListType: learn
     links:
     - text: Créer un profil unifié
@@ -99,20 +113,6 @@ landingContent:
     links:
     - text: Gérer les connexions externes
       url: /learn/modules/configure-third-party-connections/
-- title: Administrer l’application
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Configuration du système
-      url: system.md
-    - text: Définir des autorisations utilisateur
-      url: permissions.md
-    - text: Gérer plusieurs environnements
-      url: manage-environments.md
-  - linkListType: learn
-    links:
-    - text: Administrer Customer Insights
-      url: /learn/modules/administer-customer-data-platform/
 - title: Administrer Customer Insights
   linkLists:
   - linkListType: how-to-guide

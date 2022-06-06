@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646284"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800093"
 ---
 # <a name="create-segments"></a>Créer des segments
 
@@ -134,8 +134,9 @@ Lors de la création d’un segment, vous pouvez enregistrer un brouillon. Au st
 > - Le générateur de segments ne suggérera pas de valeurs valides à partir d’entités lors de la définition des opérateurs pour les conditions. Vous pouvez accéder à **Données** > **Entités** et télécharger les données de l’entité pour voir les valeurs disponibles.
 > - Les conditions basées sur les dates vous permettent de basculer entre des dates fixes et une plage de dates flottante.
 > - Si vous avez plusieurs règles pour votre segment, la règle que vous modifiez a une ligne bleue verticale à côté d’elle.
-> - Vous pouvez déplacer les règles et les conditions vers d’autres emplacements dans la définition du segment. Sélectionnez [...] en regard d’une règle ou d’une condition et choisissez comment et où la déplacer.
+> - Vous pouvez déplacer les règles et les conditions vers d’autres emplacements dans la définition du segment. Sélectionnez les points de suspension verticaux (&vellip;) en regard d’une règle ou d’une condition et choisissez comment et où la déplacer.
 > - Les commandes **Annuler** et **Rétablir** de la barre de commandes vous permettent de restaurer les modifications.
+> - Après avoir créé un segment, certains segments vous permettent de [suivre l’utilisation du segment](segments.md#track-usage-of-a-segment).
 
 ## <a name="quick-segments"></a>Segments rapides
 

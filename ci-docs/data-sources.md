@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739205"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800463"
 ---
 # <a name="data-sources-overview"></a>Vue d’ensemble des sources de données
 
@@ -76,7 +76,7 @@ Pour actualiser une source de données à la demande, procédez comme suit :
 
 1. Accédez à **Données** > **Sources de données**.
 
-2. Sélectionnez les points de suspension verticaux en regard de la source de données que vous souhaitez actualiser et sélectionnez **Actualiser** dans la liste déroulante.
+2. Sélectionnez les points de suspension verticaux (&vellip;) en regard de la source de données à actualiser et sélectionnez **Actualiser** dans la liste déroulante.
 
 3. La source de données est maintenant déclenchée pour une actualisation manuelle. Si vous actualisez une source de données, à la fois le schéma de l’entité et les données seront mis à jour pour toutes les entités spécifiées dans la source de données.
 
@@ -86,7 +86,7 @@ Pour actualiser une source de données à la demande, procédez comme suit :
 
 1. Accédez à **Données** > **Sources de données**.
 
-2. Sélectionnez les points de suspension verticaux en regard de la source de données que vous souhaitez supprimer et sélectionnez **Supprimer** dans le menu déroulant.
+2. Sélectionnez les points de suspension verticaux (&vellip;) en regard de la source de données à supprimer et sélectionnez **Supprimer** dans le menu déroulant.
 
 3. Confirmez votre suppression.
 

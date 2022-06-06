@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641805"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833765"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>FAQ sur la version d’évaluation de Dynamics 365 Customer Insights
 
@@ -62,9 +62,9 @@ Vous pouvez prolonger l’essai directement dans l’application. Vous pouvez pr
 
 En règle générale, nous vous recommandons de recommencer avec vos propres données lors de la mise à niveau vers la version payante de Customer Insights. 
 
-Facultativement, si vous utilisez uniquement Customer Insights, vous pouvez copier vos données à partir d’un environnement d’essai si vous achetez Customer Insights. Vous devez être administrateur de l'essai Customer Insights et l'administrateur général de votre locataire Microsoft 365 ou administrateur de Dynamics 365 de votre organisation pour migrer les paramètres d'un environnement d'essai vers un environnement payant. 
+Facultativement, si vous utilisez uniquement Customer Insights, vous pouvez copier vos données à partir d’un environnement d’essai si vous achetez Customer Insights. Vous devez être administrateur de l'essai Customer Insights et l'administrateur général de votre locataire Microsoft 365 ou administrateur de Dynamics 365 de votre organisation pour migrer les paramètres d'un environnement d'essai vers un environnement payant.
 
-Après vous être connecté à votre instance payante de Customer Insights pour la première fois, vous êtes invité à créer un environnement. Dans ce processus, vous pouvez choisir de copier la configuration à partir d’un environnement existant et de migrer la plupart des paramètres. Si vous disposez des autorisations mentionnées ci-dessus, l’environnement de la version d’essai apparaît dans cette liste. Pour plus d’informations, voir [Copier la configuration de l’environnement](manage-environments.md#copy-the-environment-configuration).
+Après vous être connecté à votre instance payante de Customer Insights pour la première fois, vous êtes invité à créer un environnement. Dans ce processus, vous pouvez choisir de copier la configuration à partir d’un environnement existant et de migrer la plupart des paramètres. Si vous disposez des autorisations mentionnées ci-dessus, l’environnement de la version d’essai apparaît dans cette liste. Pour plus d’informations, voir [Copier la configuration de l’environnement](create-environment.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Quelles sont les limites d’essai et les quotas ?
 
@@ -81,9 +81,10 @@ Après vous être inscrit à l’essai, vous arriverez sur l’écran principal 
 
 La plupart des fonctionnalités de Customer Insights sont disponibles dans la version d’évaluation.
 
-Les fonctions suivantes **ne sont pas disponibles** : 
+Les fonctions suivantes **ne sont pas disponibles** :
+
 - Vous ne pouvez pas créer de nouveaux environnements qui utilisent votre propre compte Azure Data Lake Storage.
-- Vous ne pouvez pas supprimer l’environnement d’évaluation. 
+- Vous ne pouvez pas supprimer l’environnement d’évaluation.
 
 ### <a name="how-long-does-the-trial-last"></a>Quelle est la durée de l’essai ?
 

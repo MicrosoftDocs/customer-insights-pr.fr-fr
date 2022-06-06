@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646092"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800417"
 ---
 # <a name="custom-machine-learning-models"></a>Modèles personnalisés Machine Learning
 
@@ -92,7 +92,7 @@ Les prédictions offrent des fonctionnalités pour créer de meilleures expérie
 
 ## <a name="edit-a-workflow"></a>Modifier un workflow
 
-1. Sur la page **Modèles personnalisés**, sélectionnez les points de suspension dans la colonne **Actions** en regard d’un workflow que vous avez créé précédemment, puis sélectionnez **Modifier**.
+1. Sur la page **Modèles personnalisés**, sélectionnez les points de suspension verticaux (&vellip;) dans la colonne **Actions** en regard d’un workflow que vous avez créé précédemment, puis sélectionnez **Modifier**.
 
 1. Vous pouvez mettre à jour le nom reconnaissable de votre workflow dans le champ **Nom complet**, mais vous ne pouvez pas modifier le service web ou le pipeline configuré. Cliquez sur **Suivant**.
 
@@ -108,7 +108,7 @@ Les prédictions offrent des fonctionnalités pour créer de meilleures expérie
 
 ## <a name="run-a-workflow"></a>Exécuter un workflow
 
-1. Sur la page **Modèles personnalisés**, sélectionnez les points de suspension dans la colonne **Actions** en regard d’un workflow que vous avez créé précédemment, puis sélectionnez Modifier.
+1. Sur la page **Modèles personnalisés**, sélectionnez les points de suspension verticaux (&vellip;) dans la colonne **Actions** en regard d’un workflow que vous avez créé précédemment.
 
 1. Sélectionnez **Exécuter**.
 
@@ -116,7 +116,7 @@ Votre workflow s’exécute également automatiquement à chaque actualisation p
 
 ## <a name="delete-a-workflow"></a>Supprimer un flux de travail
 
-1. Sur la page **Modèles personnalisés**, sélectionnez les points de suspension dans la colonne **Actions** en regard d’un workflow que vous avez créé précédemment, puis sélectionnez Modifier.
+1. Sur la page **Modèles personnalisés**, sélectionnez les points de suspension verticaux (&vellip;) dans la colonne **Actions** en regard d’un workflow que vous avez créé précédemment.
 
 1. Sélectionnez **Supprimer**, puis confirmez votre suppression.
 

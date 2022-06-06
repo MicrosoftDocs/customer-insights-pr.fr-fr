@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755447"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808503"
 ---
 # <a name="work-with-customer-insights-apis"></a>Utiliser les API de Customer Insights
 
@@ -31,11 +31,11 @@ Cet article explique comment accéder aux API Customer Insights, effectuer une i
 
 1. [Connectez-vous](https://home.ci.ai.dynamics.com) à Customer Insights. Si vous n’avez pas encore d’abonnement, [inscrivez-vous pour obtenir une version d’évaluation de Customer Insights](https://aka.ms/tryci).
 
-1. Pour activer les API dans votre environnement Customer Insights, accédez à **Administration** > **Autorisations**. Des autorisations administrateur sont nécessaires pour effectuer cette opération.
+1. Pour activer les API dans votre environnement Customer Insights, accédez à **Administrateur** > **Sécurité**. Des autorisations administrateur sont nécessaires pour effectuer cette opération.
 
 1. Accédez à l’onglet **API** et sélectionnez le bouton **Activer**.    
  
-   L’activation des API crée une clé d’abonnement primaire et secondaire pour votre instance qui est utilisée dans les demandes de l’API. Vous pouvez régénérer les clés en sélectionnant **Régénérer primaire** ou **Régénérer secondaire** sous **Administration** > **Autorisations** > **API**.
+   L’activation des API crée une clé d’abonnement primaire et secondaire pour votre instance qui est utilisée dans les demandes de l’API. Vous pouvez régénérer les clés en sélectionnant **Régénérer la clé primaire** ou **Régénérer la clé secondaire** sous **Administrateur** > **Sécurité** > **API**.
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -62,14 +62,12 @@ Ces étapes vous aident à commencer à utiliser les API de Customer Insights da
 1. Sur la gauche, sélectionnez **Inscriptions d’application**.
 
 1. Sélectionnez **Nouvelle inscription**, indiquez un nom d’application et choisissez le type de compte.
- 
+
    Vous pouvez, si vous le souhaitez, ajouter une URL de redirection. http://localhost est suffisant pour développer une application sur votre ordinateur local.
 
 1. Dans votre nouvelle inscription d’application, accédez à **Autorisations de l’API**.
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
-1. Sélectionnez **Ajouter une autorisation** et sélectionnez **Customer Insights** dans le volet latéral.
+1. Sélectionnez **Ajouter une autorisation** et sélectionnez **Dynamics 365 AI for Customer Insights** dans le volet latéral.
 
 1. Pour le **Type d’autorisation**, sélectionnez **Autorisations déléguées**, puis sélectionnez l’autorisation **user_impersonation**.
 
@@ -109,7 +107,7 @@ La [section Inscription d’application](#create-a-new-app-registration-in-the-a
 
 1. Pour conclure, nous devons ajouter le nom de l’inscription d’application en tant qu’utilisateur dans Customer Insights.  
    
-   Ouvrez Customer Insights, accédez à **Administration** > **Autorisations** et sélectionnez **Ajouter un utilisateur**.
+   Ouvrez Customer Insights, accédez à **Administrateur** > **Sécurité** et sélectionnez **Ajouter un utilisateur**.
 
 1. Recherchez le nom de votre inscription d’application, sélectionnez-le dans les résultats de la recherche, puis sélectionnez **Enregistrer**.
 

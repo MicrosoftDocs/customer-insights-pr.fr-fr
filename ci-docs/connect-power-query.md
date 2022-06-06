@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646182"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800141"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Se connecter à une source de données Power Query
 
@@ -72,11 +72,11 @@ Les connecteurs avec une coche dans la colonne **Customer Insights (dataflows)**
 > [!NOTE]
 > Remarque : il se peut qu’apporter des modifications aux sources de données qui sont actuellement utilisées dans un des processus de l’application (*segmentation*, *mise en correspondance*, *fusion*, etc.) ne soit pas possible. 
 >
-> Dans la page **Paramètres**, vous pouvez suivre la progression de chacun des processus actifs. Lorsqu'un processus est terminé, vous pouvez revenir à la page **Sources de données**, puis apporter vos modifications.
+> Dans la page **Paramètres**, vous pouvez suivre la progression de chacun des processus actifs. Lorsqu’un processus est terminé, vous pouvez revenir à la page **Sources de données**, puis apporter vos modifications.
 
 1. Accédez à **Données** > **Sources de données**.
 
-2. Sélectionnez les points de suspension verticaux en regard de la source de données que vous souhaitez modifier et sélectionnez **Modifier** dans le menu déroulant.
+2. Sélectionnez les points de suspension verticaux (&vellip;) en regard de la source de données à modifier et sélectionnez **Modifier** dans le menu déroulant.
 
    > [!div class="mx-imgBorder"]
    > ![Option Modifier.](media/edit-option-data-sources.png "Option Modifier")

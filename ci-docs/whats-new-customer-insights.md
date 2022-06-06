@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700934"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833627"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nouveautés de Dynamics 365 Customer Insights
 
@@ -58,6 +58,7 @@ LiveRamp fournit une résolution d’identité et une consolidation des données
 Pour plus d’informations, voir [Enrichir les profils de clients avec les données d’identité de LiveRamp (version préliminaire)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organiser les segments et les mesures avec des étiquettes et des filtres
+
 Si votre organisation gère de nombreux segments ou mesures, il peut parfois être difficile de trouver le bon. Cette nouvelle fonctionnalité vous permet d’organiser des listes à l’aide d’étiquettes et de colonnes. Il aide à trouver des données rapidement et facilement, ainsi qu’à personnaliser les vues.
 
 Pour plus d’informations, consultez [Utiliser des étiquettes et des colonnes](work-with-tags-columns.md).
@@ -65,9 +66,9 @@ Pour plus d’informations, consultez [Utiliser des étiquettes et des colonnes]
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Activer le partage de données avec Dataverse lors de l’utilisation de votre propre compte de stockage
 
 Si votre environnement utilise Azure Data Lake Storage pour stocker les données Customer Insights, le partage de données avec Microsoft Dataverse nécessite une configuration supplémentaire.
-Auparavant, vous ne pouviez activer le partage de données qu’avec Dataverse lorsque vos données étaient stockées dans notre lac de données géré. 
+Auparavant, vous ne pouviez activer le partage de données qu’avec Dataverse lorsque vos données étaient stockées dans notre lac de données géré.
 
-Pour plus d’informations, consultez [Activer le partage de données avec Dataverse à partir de votre propre Azure Data Lake Storage (version préliminaire)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Pour plus d’informations, consultez [Activer le partage de données avec Dataverse à partir de votre propre Azure Data Lake Storage (version préliminaire)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Nouvelles destinations d’exportation : Iterable et Braze
 
@@ -81,7 +82,6 @@ La modification des API dans les services connectés entraîne des mises à jour
 
 - Google Ads : la nouvelle version du connecteur d’exportation Google Ads simplifie l’expérience d’authentification et vous permet désormais de créer automatiquement de nouvelles audiences Google Ads. 
 - Marketo : la nouvelle version du connecteur d’exportation Marketo prend en charge l’ID Marketo, ce qui vous permet d’éviter la duplication des données, de mettre à jour les enregistrements existants et de créer de nouveaux enregistrements dans Marketo. 
-
 
 ## <a name="february-2022-updates"></a>Mises à jour de février 2022
 
@@ -147,7 +147,7 @@ Les mises à jour de janvier 2022 incluent de nouvelles fonctionnalités, des a
 
 ### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analyse des sentiments des commentaires de vos clients
 
-Customer Insights fournit une nouvelle fonctionnalité basée sur l’IA pour synthétiser le sentiment des clients et identifier des aspects commerciaux spécifiques comme opportunités d’améliorations ciblées. En analysant les commentaires écrits de vos clients, vous pouvez obtenir des informations précises à moindre coût. L’analyse des sentiments alimentée par des modèles de traitement du langage naturel (NLP) qui génèrent deux informations dérivées pour chaque ID client. Un score de sentiment (de -5 à 5) et une liste des aspects commerciaux applicables. 
+Customer Insights fournit une nouvelle fonctionnalité basée sur l'IA pour synthétiser le sentiment des clients et identifier des aspects commerciaux spécifiques comme opportunités d'améliorations ciblées. En analysant les commentaires écrits de vos clients, vous pouvez obtenir des informations précises à moindre coût. L’analyse des sentiments alimentée par des modèles de traitement du langage naturel (NLP) qui génèrent deux informations dérivées pour chaque ID client. Un score de sentiment (de -5 à 5) et une liste des aspects commerciaux applicables. 
 
 Pour plus d’informations, voir [Analyser le sentiment dans les commentaires des clients (version préliminaire)](sentiment-analysis.md).
 

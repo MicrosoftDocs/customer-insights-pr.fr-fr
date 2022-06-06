@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646369"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800323"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Utiliser le générateur de mesures pour créer des mesures à partir de zéro
 
@@ -88,7 +88,7 @@ Vous pouvez créer des mesures au niveau de clients individuels (attribut client
 
 1. Pour ajouter d’autres calculs pour la mesure, sélectionnez **Nouveau calcul**. Vous ne pouvez utiliser des entités sur le même chemin d’entité que pour les nouveaux calculs. Des calculs supplémentaires s’affichent sous forme de nouvelles colonnes dans l’entité de sortie de mesure.
 
-1. Sélectionnez **...** sur le calcul pour **Dupliquer**, **Renommer** ou **Supprimer** un calcul à partir d’une mesure.
+1. Sélectionnez les points de suspension verticaux (&vellip;) sur le calcul pour **Dupliquer**, **Renommer** ou **Supprimer** un calcul d’une mesure.
 
 1. Dans la zone **Aperçu**, vous verrez le schéma de données de l’entité de sortie de mesure, y compris les filtres et les dimensions. L’aperçu réagit de manière dynamique aux modifications de la configuration.
 
@@ -158,7 +158,7 @@ Vous pouvez créer des mesures au niveau de comptes individuels (mesure client) 
    1. Sélectionner **Chemin d’accès vers la relation** et choisissez le chemin d’entité qui doit être utilisé pour identifier votre mesure. S’il n’y a qu’un seul chemin vers l’entité *Client*, ce contrôle ne s’affichera pas.
    1. Sélectionnez **Terminé** pour appliquer votre sélection.
 
-1. Sélectionnez **...** sur le calcul pour **Dupliquer**, **Renommer** ou **Supprimer** un calcul à partir d’une mesure.
+1. Sélectionnez les points de suspension verticaux (&vellip;) sur le calcul pour **Dupliquer**, **Renommer** ou **Supprimer** un calcul d’une mesure.
 
 1. Dans la zone **Aperçu**, vous verrez le schéma de données de l’entité de sortie de mesure, y compris les filtres et les dimensions. L’aperçu réagit de manière dynamique aux modifications de la configuration.
 

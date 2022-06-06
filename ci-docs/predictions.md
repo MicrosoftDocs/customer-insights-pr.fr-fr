@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740716"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800647"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Complétez vos données partielles avec des prédictions (plus disponible)
 
@@ -95,7 +95,7 @@ Dans le cadre de ce flux, vous choisissez un attribut spécifique sur lequel bas
 
 2. Sélectionnez la prédiction à réviser.
 
-3. Sélectionnez les points de suspension dans la colonne **Actions**, puis choisissez **Vue**.
+3. Sélectionnez les points de suspension verticaux (&vellip;) dans la colonne **Actions** et choisissez **Afficher**.
 
 4. Vous verrez un certain nombre de points de données dans la vue de votre prédiction.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Après avoir créé une prédiction, vous pouvez personnaliser le modèle dans A
 
 2. Sélectionnez la prédiction que vous souhaitez modifier.
 
-3. Sélectionnez les points de suspension dans la colonne **Actions**, puis choisissez **Vue**.
+3. Sélectionnez les points de suspension verticaux (&vellip;) dans la colonne **Actions** et choisissez **Afficher**.
 
 4. Sélectionnez **Personnaliser dans AI Builder**.
 
@@ -139,7 +139,7 @@ La prochaine exécution de votre prédiction utilisera le modèle mis à jour qu
 
 2. Sélectionnez la prédiction à supprimer.
 
-3. Sélectionnez les points de suspension dans la colonne **Actions**, puis choisissez **Supprimer**.
+3. Sélectionnez les points de suspension verticaux (&vellip;) dans la colonne **Actions** et choisissez **Supprimer**.
 
 4. Confirmez la suppression.
 
@@ -153,7 +153,7 @@ Si vous ne pouvez pas terminer le processus d’attachement Dataverse en raison 
 - Les autorisations de l’application ne sont pas accordées.
     1. Accédez à [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Sélectionnez **Environnements**.
-    1. Sélectionnez les points de suspension en regard de l’environnement auquel vous souhaitez ajouter l’autorisation et sélectionnez **Paramètres**.
+    1. Sélectionnez les points de suspension verticaux (&vellip;) en regard de l’environnement auquel vous souhaitez ajouter l’autorisation et sélectionnez **Paramètres**.
     1. Développez **Utilisateurs + autorisations** et sélectionnez **Utilisateurs**.
     1. Sélectionnez **+ Nouveau** et sélectionnez **Utilisateur**.
     1. Sélectionnez **Utilisateur de l’application** s’il n’est pas déjà sélectionné et entrez les informations suivantes :

@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1a19d83930d667bdca5301dcc5a3ffa5db6a7bdc
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741130"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833536"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Mise en route de Dynamics 365 Customer Insights
 
@@ -25,21 +25,21 @@ Customer Insights peut vous aider à mieux comprendre vos clients. Connectez les
 
 ## <a name="step-1-create-an-environment"></a>Étape 1 : Créer un environnement
 
-Pour commencer, vous devez d’abord créer un environnement dans lequel travailler. Si votre organisation a déjà acheté une licence, consultez [Créer un environnement](create-environment.md). Pour démarrer un essai de Customer Insights, consultez [Configurer un environnement d’essai](trial-signup.md).
+Tout d’abord, créez un environnement de travail. Si votre organisation a déjà acheté une licence, consultez [Créer un environnement](create-environment.md). Pour démarrer un essai de Customer Insights, consultez [Configurer un environnement d’essai](trial-signup.md).
 
 ## <a name="step-2-explore-customer-insights"></a>Étape 2 : Explorer Customer Insights
 
-La première fois que vous vous connectez à Customer Insights, vous pouvez configurer les paramètres et explorer le produit.
+La première fois que vous vous connectez à Customer Insights, configurez les paramètres et explorez le produit.
 
 1. [Connectez-vous à Customer Insights](https://home.ci.ai.dynamics.com) en utilisant votre compte d’utilisateur Microsoft Azure Active Directory (AAD).
 
-1. [Changez l’environnement](manage-environments.md#switch-environments) pour voir les données de démonstration et [explorer Customer Insights](home.md).
+1. Changez l’environnement pour voir les données de démonstration et [explorer Customer Insights](home.md).
 
 ## <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>Étape 3 : Ingérer, unifier et configurer les relations pour vos données
 
-Les profils unifiés sont la base pour obtenir des informations et agir sur les données. Importez des données de diverses sources et exécutez le processus d’unification des données pour combiner des profils unifiés. Spécifiez les relations entre les entités ingérées et utilisez les fonctionnalités d’enrichissement pour ajouter des informations aux profils.
+Les profils unifiés sont la base pour obtenir des informations et agir sur les données. Importez des données de diverses sources et exécutez le processus d’unification des données pour combiner des profils unifiés. Spécifiez les relations entre les entités ingérées et utilisez les fonctions d’enrichissement pour ajouter des informations aux profils.
 
-1. Ingérez des données en créant des sources de données à partir de plusieurs options. Choisissez entre des [connecteurs Power Query](connect-power-query.md), un [dossier Common Data Model](connect-common-data-model.md), ou [Microsoft Dataverse](connect-dataverse-managed-lake.md). 
+1. Ingérez des données en créant des sources de données à partir de plusieurs options. Choisissez entre des [connecteurs Power Query](connect-power-query.md), un [dossier Common Data Model](connect-common-data-model.md), ou [Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
 1. Exécutez le [processus d’unification des données](data-unification.md) en identifiant les [champs source](map-entities.md), en supprimant les [doublons](remove-duplicates.md), les [conditions de correspondance](match-entities.md), et les [champs d’unification](merge-entities.md).
 
@@ -47,7 +47,7 @@ Les profils unifiés sont la base pour obtenir des informations et agir sur les 
 
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>Étape 4 : Améliorer les profils unifiés avec des prédictions, activités et mesures
 
-Une fois les profils unifiés configurés, vous pouvez améliorer vos données et augmenter davantage les informations qu’ils fournissent.
+Avec la configuration des profils unifiés, améliorez vos données et augmentez davantage les informations qu’ils fournissent.
 
 1. Choisissez dans une bibliothèque extensible de fournisseurs d’enrichissement pour [enrichir vos données clientes](enrichment-hub.md).
 
@@ -59,7 +59,7 @@ Une fois les profils unifiés configurés, vous pouvez améliorer vos données e
 
 ## <a name="step-5-create-segments-and-activate-data-through-various-export-options"></a>Étape 5 : Créer des segments et activer les données via diverses options d’exportation
 
-Maintenant que vos données sont complètes et contiennent un large éventail d’informations sur vos clients, il est temps de rechercher des moyens d’agir sur ces données.
+Maintenant que vos données sont complètes et contiennent un large éventail d’informations sur vos clients, cherchez des moyens d’agir sur ces données.
 
 1. [Créez des segments](segments.md), c’est-à-dire des sous-ensembles de votre clientèle, pour vous assurer que vos actions sont pertinentes pour les clients ciblés.
 

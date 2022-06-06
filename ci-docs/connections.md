@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 2a3175737ac95e10d75fad4a69db303b0564c6cc
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755306"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800369"
 ---
 # <a name="connections-preview-overview"></a>Présentation des connexions (version préliminaire)
 
@@ -69,7 +69,7 @@ Lors de la configuration ou de la modification d’une connexion d’exportation
 
 1. Accédez à l’onglet **Connexions**.
 
-1. Sélectionnez les points de suspension verticaux de la connexion que vous souhaitez modifier.
+1. Sélectionnez les points de suspension verticaux (&vellip;) de la connexion que vous souhaitez modifier.
 
 1. Cliquez sur **Modifier**.
 
@@ -85,7 +85,7 @@ Les enrichissements et les exportations détachés deviennent inactifs. Vous les
 
 1. Accédez à l’onglet **Connexions**.
 
-1. Sélectionnez les points de suspension verticaux de la connexion que vous souhaitez supprimer.
+1. Sélectionnez les points de suspension verticaux (&vellip;) de la connexion que vous souhaitez supprimer.
 
 1. Sélectionnez **Supprimer** dans la liste déroulante. Une boîte de dialogue de confirmation s’affiche.
 
