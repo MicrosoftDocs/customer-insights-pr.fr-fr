@@ -1,19 +1,19 @@
 ---
 title: Demandes de droits de la personne concernée dans le cadre du RGPD | Microsoft Docs
 description: Répondre aux demandes de droits de la personne concernée pour Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808543"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947365"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Demandes de droits de la personne concernée dans le cadre du RGPD
 
@@ -77,11 +77,5 @@ Un administrateur du client peut exécuter la procédure suivante pour exporter 
 1. Envoyer un e-mail à D365CI@microsoft.com en indiquant l’adresse de messagerie de l’utilisateur dans la demande. L’équipe Customer Insights enverra un e-mail à l’adresse de messagerie enregistrée de l’administrateur du client, en demandant confirmation de l’exportation des données.
 2. Acquitter la confirmation de l’exportation des données pour l’utilisateur demandé.
 3. Recevoir les données exportées via l’adresse de messagerie de l’administrateur du client.
-
-## <a name="consent-management-preview"></a>Gestion du consentement (version préliminaire)
-
-La capacité de gestion du consentement ne collecte pas directement les données des utilisateurs. Elle n’importe et ne traite que les données de consentement fournies par les utilisateurs dans d’autres applications.
-
-Pour supprimer les données de consentement concernant des utilisateurs spécifiques, supprimez-les dans les sources de données ingérées dans la fonctionnalité de gestion du consentement. Après avoir actualisé le source de données, les données supprimées sont également supprimées dans le Centre de consentement. Les applications qui utilisent l’entité de consentement suppriment également les données qui ont été supprimées de la source après une [actualisation](system.md#refresh-processes). Nous vous recommandons d’actualiser rapidement les sources de données après avoir répondu à une demande de personne concernée pour supprimer les données de l’utilisateur de tous les autres processus et applications.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

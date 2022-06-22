@@ -1,19 +1,19 @@
 ---
 title: Enrichissement avec l’importation personnalisée SFTP
 description: Informations générales sur l’enrichissement avec l’importation personnalisée SFTP.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f52d24cbe793bee7948ad2af31059cd3edf40f94
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645999"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953716"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enrichir les profils clients avec des données personnalisées (version préliminaire)
 
@@ -21,54 +21,13 @@ L’importation personnalisée SFTP (Secure File Transfer Protocol) vous permet 
 
 ## <a name="prerequisites"></a>Conditions préalables
 
-Pour configurer l’importation personnalisée SFTP, les conditions préalables suivantes doivent être remplies :
+- Le nom de fichier et l'emplacement (chemin) du fichier à importer sur l'hôte SFTP sont connus.
 
-- Vous disposez du nom de fichier et de l’emplacement (chemin d’accès) du fichier à importer dans l’hôte SFTP.
-- Il existe un fichier *model.json* qui spécifie le [schéma Common Data Model](/common-data-model/) pour les données à importer. Ce fichier doit se trouver dans le même répertoire que le fichier à importer.
-- Une connexion SFTP a déjà été configurée par un administrateur *ou* vous disposez d’autorisations [administrateur](permissions.md#admin). Vous aurez besoin des informations d’identification de l’utilisateur, de l’URL et du numéro de port de l’emplacement SFTP à partir duquel vous souhaitez importer des données.
+- Un fichier *model.json* qui spécifie le schéma Common Data Model pour les données à importer est disponible. Ce fichier doit se trouver dans le même répertoire que le fichier à importer.
 
+- Une [connexion](connections.md) SFTP est [configurée](#configure-the-connection-for-sftp-custom-import).
 
-## <a name="configure-the-import"></a>Configurer l’importation
-
-1. Accédez à **Données** > **Enrichissement** et sélectionnez l’onglet **Découvrir**.
-
-1. Sur la **Vignette d’importation personnalisée SFTP**, sélectionnez **Enrichir mes données**, puis sélectionnez **Démarrer**.
-
-   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Vignette d’importation personnalisée SFTP.":::
-
-1. Sélectionnez une [connexion](connections.md) dans la liste déroulante. Contactez un administrateur si aucune connexion n’est disponible. Si vous êtes un administrateur, vous pouvez créer une connexion en sélectionnant **Ajouter une connexion** et en choisissant **Importation personnalisée SFTP** dans la liste déroulante.
-
-1. Sélectionnez **Se connecter à l’importation personnalisée** pour confirmer la connexion sélectionnée.
-
-1.  Sélectionnez **Suivant** et entrez le **Chemin d’accès** et le **Nom de fichier** du fichier de données que vous souhaitez importer.
-
-    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Capture d’écran lors de la saisie de l’emplacement des données.":::
-
-1. Sélectionnez **Suivant** et choisissez le jeu de données client. Il peut s’agir de tous les profils clients ou d’un segment.
-
-1. Sélectionnez **Suivant** et fournissez un nom pour l’enrichissement et un nom pour l’entité de sortie. 
-
-1. Sélectionnez **Enregistrer l’enrichissement** après avoir vérifié vos choix.
-
-## <a name="configure-the-connection-for-sftp-custom-import"></a>Configurer la connexion pour l’importation personnalisée SFTP 
-
-Vous devez être un administrateur pour configurer les connexions. Sélectionnez **Ajouter une connexion** lors de la configuration d’un enrichissement *ou* accédez à **Administrateur** > **Connexions** et sélectionnez **Configurer** sur la vignette d’importation personnalisée.
-
-1. Entrez un nom pour la connexion dans la zone **Nom d’affichage**.
-
-1. Entrez un nom d’utilisateur, un mot de passe et une URL d’hôte valides pour le serveur SFTP dans lequel résident les données à importer.
-
-1. Vérifiez et donnez votre consentement pour **Confidentialité et conformité des données** en cochant la case **J’accepte**.
-
-1. Sélectionnez **Vérifier** pour valider la configuration.
-
-1. Une fois la vérification terminée, la connexion peut être enregistrée en sélectionnant **Enregistrer**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Page de configuration de la connexion Experian.](media/enrichment-SFTP-connection.png "Page de configuration de la connexion Experian")
-
-
-## <a name="defining-field-mappings"></a>Définition des mappages de champ 
+## <a name="file-schema-example"></a>Exemple de schéma de fichier
 
 Le répertoire contenant le fichier à importer sur le serveur SFTP doit également contenir un fichier *model.json*. Ce fichier définit le schéma à utiliser pour importer les données. Le schéma doit utiliser [Common Data Model](/common-data-model/) pour spécifier le mappage de champ. Un exemple simple de fichier model.json se présente comme suit :
 
@@ -82,12 +41,12 @@ Le répertoire contenant le fichier à importer sur le serveur SFTP doit égalem
             "attributes": [
                 {
                     "name": "CustomerId",
-                    "friendlyName": "Client id",
+                    "friendlyName": "Client ID",
                     "dataType": "string"
                 },
                 {
                     "name": "PreferredCity",
-                    "friendlyName": "Preferred City for vacation",
+                    "friendlyName": "Preferred city for vacation",
                     "dataType": "string"
                 },
                 {
@@ -114,13 +73,56 @@ Le répertoire contenant le fichier à importer sur le serveur SFTP doit égalem
 }
 ```
 
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Configurer la connexion pour l’importation personnalisée SFTP
+
+Vous devez être un [Administrateur](permissions.md#admin) dans Customer Insights et disposez des informations d'identification de l'utilisateur, de l'URL et du numéro de port de l'emplacement SFTP à partir duquel vous souhaitez importer des données.
+
+1. Sélectionnez **Ajouter une connexion** lors de la configuration d’un enrichissement ou accédez à **Administrateur** > **Connexions** et sélectionnez **Configurer** sur la vignette d’importation personnalisée.
+
+   :::image type="content" source="media/enrichment-SFTP-connection.png" alt-text="Page de configuration Connexion pour l'importation personnalisée.":::
+
+1. Saisissez un nom pour l’ensemble de connexions.
+
+1. Entrez un nom d’utilisateur, un mot de passe et une URL d’hôte valides pour le serveur SFTP dans lequel résident les données à importer.
+
+1. Vérifiez et donnez votre consentement pour [Confidentialité et conformité des données](#data-privacy-and-compliance) en sélectionnant **J’accepte**.
+
+1. Sélectionnez **Vérifier** pour valider la configuration, puis sélectionnez **Enregistrer**.
+
+### <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données
+
+Lorsque vous activez Dynamics 365 Customer Insights pour transmettre des données à l'aide de l'importation personnalisée, vous autorisez le transfert de données en dehors de la limite de conformité de Dynamics 365 Customer Insights, notamment des données potentiellement sensibles, telles que des données personnelles. Microsoft transférera ces données selon vos instructions, mais vous devez vous assurer que les données respectent toutes les obligations de confidentialité ou de sécurité qui vous incombent. Pour plus d’informations, consultez [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Votre administrateur Dynamics 365 Customer Insights peut supprimer cet enrichissement à tout moment pour ne plus utiliser cette fonctionnalité.
+
+## <a name="configure-the-import"></a>Configurer l’importation
+
+1. Accédez à **Données** > **Enrichissement** et sélectionnez l’onglet **Découvrir**.
+
+1. Sélectionnez **Enrichir mes données** sur la vignette **Importation personnalisée SFTP**.
+
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Vignette d’importation personnalisée SFTP.":::
+
+1. Passez la synthèse en revue et sélectionnez **Suivant**.
+
+1. Sélectionnez la connexion. Contactez un Administrateur si aucun n'est disponible.
+
+1. Sélectionnez le **Jeu de données client**, puis choisissez le profil ou segment que vous souhaitez enrichir. L’entité *Client* enrichit tous vos profils clients tandis qu'un segment enrichit uniquement les profils clients contenus dans ce segment.
+
+1. Cliquez sur **Suivant**.
+
+1. Entrez le **Chemin** et le **Nom de fichier** du fichier de données que vous souhaitez importer.
+
+1. Cliquez sur **Suivant**.
+
+1. Fournissez un **Nom** pour l’enrichissement et pour le **Nom de l'entité de sortie**.
+
+1. Sélectionnez **Enregistrer l’enrichissement** après avoir vérifié vos choix.
+
+1. Sélectionnez **Exécuter** pour démarrer le processus d'enrichissement ou fermer pour revenir à la page **Enrichissements**.
+
 ## <a name="enrichment-results"></a>Résultats d’enrichissement
 
-Pour démarrer le processus d’enrichissement, sélectionnez **Exécuter** dans la barre de commandes. Vous pouvez également laisser le système exécuter l’enrichissement automatiquement dans le cadre d’une [actualisation programmée](system.md#schedule-tab). Le temps de traitement dépendra de la taille des données à importer et de la connexion au serveur SFTP.
-
-Une fois le processus d’enrichissement terminé, vous pouvez consulter vos données d’enrichissement personnalisées nouvellement importées sous **Mes enrichissements**. De plus, vous trouverez l’heure de la dernière mise à jour et le nombre de profils enrichis.
-
-Vous pouvez accéder à une vue détaillée de chaque profil enrichi en sélectionnant **Afficher des données enrichies**.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ## <a name="next-steps"></a>Étapes suivantes
 

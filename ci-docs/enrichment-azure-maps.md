@@ -1,95 +1,95 @@
 ---
 title: Enrichir les profils clients avec les données de localisation d’Azure Maps
 description: Informations générales sur l’enrichissement tiers Azure Maps.
-ms.date: 08/31/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755351"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953625"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Enrichissement de profils clients avec Azure Maps (version préliminaire)
 
-Azure Maps fournit des données et des services centrés sur la localisation pour offrir des expériences basées sur les données géospatiales avec l’intelligence de localisation intégrée. Les services d’enrichissement de données Azure Maps améliorent la précision des informations de localisation de vos clients. Il fournit des fonctionnalités telles que la normalisation de l’adresse et l’extraction de la latitude et de la longitude dans Dynamics 365 Customer Insights.
+Azure Maps fournit des données et services axés sur l’emplacement pour offrir des expériences basées sur des données géospatiales avec une intelligence de localisation intégrée. Les services d’enrichissement de données Azure Maps améliorent la précision des informations de localisation de vos clients. Il fournit des fonctionnalités telles que la normalisation de l’adresse et l’extraction de la latitude et de la longitude dans Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
-Pour configurer l’enrichissement de données Azure Maps, les conditions préalables suivantes doivent être remplies :
+- Un abonnement Azure Maps actif. Pour obtenir un abonnement, [inscrivez-vous ou obtenez une évaluation gratuite](https://azure.microsoft.com/services/azure-maps/).
 
-- Vous disposez d’un abonnement Azure Maps actif. Pour souscrire un abonnement, vous pouvez vous [inscrire ou obtenir un essai gratuit](https://azure.microsoft.com/services/azure-maps/).
-
-- Une [connexion](connections.md) Azure Maps est disponible, *ou* vous disposez d’autorisations [administrateur](permissions.md#admin) et d’une clé d’API Azure Maps active.
-
-## <a name="configure-the-enrichment"></a>Configurer l’enrichissement
-
-1. Accédez à **Données** > **Enrichissement**. 
-
-1. Sur la vignette **Emplacement**, sélectionnez **Enrichir mes données**.
-
-   :::image type="content" source="media/azure-maps-tile.png" alt-text="Vignette Azure Maps.":::
-
-1. Sélectionnez une [connexion](connections.md) dans la liste déroulante. Contactez un administrateur si aucune connexion Azure Maps n’est disponible. Si vous êtes un administrateur, vous pouvez [configurer la connexion pour Azure Maps](#configure-the-connection-for-azure-maps). 
-
-1. Sélectionnez **Suivant** pour confirmer la sélection.
-
-1. Choisissez le **jeu de données client** que vous souhaitez enrichir avec les données de localisation d’Azure Maps. Vous pouvez sélectionner l’entité **Client** pour enrichir tous vos profils clients unifiés, ou sélectionner une entité de segment pour n’enrichir que les profils clients contenus dans ce segment.
-
-    :::image type="content" source="media/enrichment-azure-maps-configuration-customer-data-set.png" alt-text="Capture d’écran lors du choix du jeu de données client.":::
-
-1. Choisissez si vous souhaitez mapper les champs à l’adresse principale et/ou secondaire. Vous pouvez spécifier un mappage de champ pour les deux adresses et enrichir les profils pour les deux adresses séparément (par exemple, pour une adresse personnelle et une adresse professionnelle). Sélectionnez **Suivant**.
-
-1. Définissez quels champs de vos profils unifiés utiliser pour rechercher les données de localisation correspondantes depuis Azure Maps. Les champs **Rue 1** et **Code postal** sont obligatoires pour l’adresse principale ou secondaire sélectionnée. Pour une plus grande précision de la correspondance, vous pouvez ajouter d’autres champs.
-
-   :::image type="content" source="media/enrichment-azure-maps-configuration.png" alt-text="Page de configuration de l’enrichissement Azure Maps.":::
-
-1. Sélectionnez **Suivant** pour terminer le mappage de champs.
-
-1. Évaluez si vous souhaitez modifier les **Paramètres avancés**. Ces paramètres sont fournis pour donner une flexibilité maximale pour gérer les cas d’utilisation avancés, mais les valeurs par défaut seront adéquates dans la plupart des cas :
-   - **Type d’adresses** : le comportement par défaut est que l’enrichissement renverra la meilleure correspondance d’adresse même si elle est incomplète. Pour obtenir uniquement les adresses complètes, par exemple, les adresses incluant le numéro de la maison, décochez toutes les cases sauf **Adresses des points**. 
-   - **Langue** : par défaut, les adresses sont renvoyées dans la langue de la région à laquelle l’adresse a été déterminée comme appartenant. Pour appliquer une langue d’adresse normalisée, sélectionnez la langue dans le menu déroulant. Par exemple, si vous sélectionnez **Anglais**, **Copenhague, Danemark** sera renvoyé au lieu de **København, Danemark**.
-
-1. Fournissez un nom pour l’enrichissement.
-
-1. Vérifiez vos choix, puis sélectionnez **Enregistrer l’enrichissement**.
+- Une [connexion](connections.md) Azure Maps est [configurée](#configure-the-connection-for-azure-maps) par un administrateur.
 
 ## <a name="configure-the-connection-for-azure-maps"></a>Configurer la connexion pour Azure Maps
 
-Vous devez être un administrateur dans Customer Insights pour configurer les connexions. Sélectionnez **Ajouter une connexion** lors de la configuration d’un enrichissement ou accédez à **Administrateur** > **Connexions** et sélectionnez **Configurer** dans la vignette Azure Maps.
+Vous devez être un [administrateur](permissions.md#admin) dans Customer Insights et avoir une clé API Azure Maps active.
 
-1. Dans la zone **Nom d’affichage**, entrez un nom pour la connexion.
+1. Sélectionnez **Ajouter une connexion** lors de la configuration d’un enrichissement ou accédez à **Administrateur** > **Connexions** et sélectionnez **Configurer** dans la vignette Azure Maps.
 
-1. Fournissez une clé d’API Azure Maps valide.
+   :::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Page de configuration de la connexion Azure Maps.":::
 
-1. Vérifiez et donnez votre consentement pour la **Confidentialité et conformité des données** en cochant la case **J’accepte**
+1. Entrez un nom pour la connexion et une clé API Azure Maps valide.
 
-1. Sélectionnez **Vérifier** pour valider la configuration.
+1. Vérifiez et donnez votre consentement pour [Confidentialité et conformité des données](#data-privacy-and-compliance) en sélectionnant **J’accepte**.
 
-1. Une fois la vérification terminée, sélectionnez **Enregistrer**.
+1. Sélectionnez **Vérifier** pour valider la configuration, puis sélectionnez **Enregistrer**.
 
-:::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Page de configuration de la connexion Azure Maps.":::
+### <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données
+
+Lorsque vous activez Dynamics 365 Customer Insights pour transmettre des données à Azure Maps, vous autorisez le transfert de données en dehors de la limite de conformité pour Dynamics 365 Customer Insights, y compris les données potentiellement sensibles telles que les données personnelles. Microsoft transférera ces données selon vos instructions, mais vous devez vous assurer qu’Azure Maps respecte toutes les obligations de confidentialité ou de sécurité qui vous incombent. Pour plus d’informations, voir [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Votre administrateur Dynamics 365 Customer Insights peut supprimer cet enrichissement à tout moment pour interrompre l’utilisation de cette fonctionnalité.
+
+## <a name="configure-the-enrichment"></a>Configurer l’enrichissement
+
+1. Accédez à **Données** > **Enrichissement** et sélectionnez l’onglet **Découvrir**.
+
+1. Sélectionnez **Enrichir mes données** pour l'**Emplacement** dans la vignette Microsoft Azure Maps.
+
+   :::image type="content" source="media/azure-maps-tile.png" alt-text="Vignette Azure Maps.":::
+
+1. Passez la synthèse en revue et sélectionnez **Suivant**.
+
+1. Sélectionnez la connexion. Contactez un administrateur si aucune connexion n’est disponible.
+
+1. Cliquez sur **Suivant**.
+
+1. Sélectionnez le **Jeu de données client**, puis choisissez le profil ou segment que vous souhaitez enrichir avec les données démographiques à partir de Microsoft. L’entité *Client* enrichit tous vos profils clients tandis qu'un segment enrichit uniquement les profils clients contenus dans ce segment.
+
+1. Définissez le type de champs de vos profils unifiés à utiliser pour la mise en correspondance : l'adresse principale et/ou secondaire. Vous pouvez spécifier un mappage de champs pour les deux adresses et enrichir les profils pour les deux adresses séparément. Par exemple, pour une adresse personnelle et une adresse professionnelle. Cliquez sur **Suivant**.
+
+1. Mappez vos champs aux données de localisation à partir d'Azure Maps. Les champs **Rue 1** et **Code postal** sont obligatoires pour l’adresse principale et/ou secondaire sélectionnée. Pour une plus grande précision de correspondance, ajoutez plus de champs.
+
+   :::image type="content" source="media/enrichment-azure-maps-attributes.png" alt-text="Mappage d'attributs Azure Maps.":::
+
+1. Sélectionnez **Suivant** pour terminer le mappage de champs.
+
+1. Consultez **Paramètres avancés** qui offrent une flexibilité maximale pour gérer les cas d'utilisation avancés. Cependant, les valeurs par défaut suivantes n'ont généralement pas besoin d'être modifiées.
+
+   - **Type d'adresses** : la meilleure correspondance d'adresse est renvoyée même si elle est incomplète. Pour obtenir uniquement les adresses complètes, par exemple, les adresses incluant le numéro de la maison, décochez toutes les cases sauf **Adresses des points**.
+   - **Langue** : les adresses sont renvoyées dans la langue en fonction de la région de l'adresse. Pour appliquer une langue d’adresse normalisée, sélectionnez la langue dans le menu déroulant. Par exemple, la sélection de **Anglais** renvoie **Copenhague, Danemark** à la place de **København, Danemark**.
+   - **Nombre maximal de résultats** : Nombre de résultats par adresse.
+
+1. Cliquez sur **Suivant**.
+
+1. Fournissez un **Nom** pour l’enrichissement et pour le **Nom de l'entité de sortie**.
+
+1. Sélectionnez **Enregistrer l’enrichissement** après avoir vérifié vos choix.
+
+1. Sélectionnez **Exécuter** pour démarrer le processus d'enrichissement ou fermer pour revenir à la page **Enrichissements**.
 
 ## <a name="enrichment-results"></a>Résultats d’enrichissement
 
-Pour démarrer le processus d’enrichissement, sélectionnez **Exécuter** dans la barre de commandes. Vous pouvez également laisser le système exécuter l’enrichissement automatiquement dans le cadre d’une [actualisation programmée](system.md#schedule-tab). Le temps de traitement dépendra de la taille de vos données clientes et des temps de réponse de l’API.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Une fois le processus d’enrichissement terminé, vous pouvez consulter les données des profils clients nouvellement enrichis sous **Mes enrichissements**. De plus, vous trouverez l’heure de la dernière mise à jour et le nombre de profils enrichis.
-
-Vous pouvez accéder à une vue détaillée de chaque profil enrichi en sélectionnant **Afficher des données enrichies**.
+Le paramètre **Nombre de clients enrichis par champ** fournit une analyse détaillée de la couverture de chaque champ enrichi.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données
-
-Lorsque vous activez Dynamics 365 Customer Insights pour transmettre des données à Azure Maps, vous autorisez le transfert de données en dehors de la limite de conformité pour Dynamics 365 Customer Insights, y compris les données potentiellement sensibles telles que les données personnelles. Microsoft transférera ces données selon vos instructions, mais vous devez vous assurer qu’Azure Maps respecte toutes les obligations de confidentialité ou de sécurité qui vous incombent. Pour plus d’informations, voir [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Votre administrateur Dynamics 365 Customer Insights peut supprimer cet enrichissement à tout moment pour interrompre l’utilisation de cette fonctionnalité.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

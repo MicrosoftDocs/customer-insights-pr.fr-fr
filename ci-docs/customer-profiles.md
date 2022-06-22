@@ -1,7 +1,7 @@
 ---
 title: Afficher les profils de client
 description: Obtenez une vue combinée de vos données client unifiées.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755779"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947043"
 ---
 # <a name="customer-profiles"></a>Profils clients
 
@@ -55,9 +55,9 @@ Vous pouvez filtrer les clients par les champs d’entité *Client*. Comme pour 
 
 Sélectionnez l’une des vignettes client pour ouvrir la **Page des détails du client**. Cette vue contient des informations unifiées pour le client sélectionné. Les détails du client incluent le contenu suivant :
 
-**Vignette de profil client** : cette vignette montre les différentes valeurs de l’entité *Client* unifiée. Si un champ n’a pas de valeur pour le profil client sélectionné, il ne s’affichera pas. La vignette est structurée en sections :
+**Vignette de profil client** : cette vignette montre les différentes valeurs de l’entité *Client* unifiée. Si un champ n'a pas de valeur pour le profil client sélectionné, il ne s'affichera pas sauf pour le champ d'adresse. La vignette est structurée en sections :
 
-- La première section affiche un ensemble prédéfini de champs suivi de tous les champs faisant partie de l’index de recherche et de filtrage. Tous les champs liés à l’adresse sont combinés en une seule ligne si le profil contient de tels champs.
+- La première section affiche un ensemble prédéfini de champs suivi de tous les champs faisant partie de l’index de recherche et de filtrage. Tous les champs liés à l'adresse sont combinés sur une seule ligne, qui s'affiche même si le profil ne contient aucune information d'adresse.
 - **Contacts pour ce client** : dans les environnements de comptes professionnels, vous verrez tous les contacts associés à ce client dans la deuxième section. Chaque contact est affiché avec ses champs. Les champs vides sont masqués.
 - **Champs supplémentaires** : Affiche les champs restants du client sélectionné, à l’exception des ID.
 - **ID** : répertorie tous les ID sous leur nom d’entité correspondant. Les champs sont identifiés comme des identifiants par leur sémantique, qui les catégorise comme tels.

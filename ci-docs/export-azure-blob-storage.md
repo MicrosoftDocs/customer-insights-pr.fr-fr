@@ -1,19 +1,19 @@
 ---
 title: Exporter des données Customer Insights vers un stockage Blob Azure
 description: Apprenez à configurer la connexion et à exporter vers un stockage Blob.
-ms.date: 10/06/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
-ms.author: philk
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757383"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947135"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Exporter une liste de segments et d’autres données vers un stockage Blob Azure (version préliminaire)
 
@@ -58,16 +58,19 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 L’enregistrement d’une exportation n’exécute pas l’exportation immédiatement.
 
-L’exportation s’exécute avec chaque [actualisation planifiée](system.md#schedule-tab).     
+L’exportation s’exécute avec chaque [actualisation planifiée](system.md#schedule-tab).
 
-Vous pouvez également [exporter des données à la demande](export-destinations.md#run-exports-on-demand). 
+Vous pouvez également [exporter des données à la demande](export-destinations.md#run-exports-on-demand).
 
 Les données exportées sont stockées dans le conteneur de Stockage Blob que vous avez configuré. Les chemins d’accès suivants aux dossiers sont créés automatiquement dans votre conteneur :
 
 - Pour les entités sources et les entités générées par le système :  
   `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Exemple : `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
- 
+  
+  > [!TIP]
+  > L'exportation d'entités contenant une grande quantité de données peut générer plusieurs fichiers CSV dans le même dossier pour chaque exportation. Le fractionnement des exportations se produit pour des raisons de performances afin de minimiser le temps nécessaire à l'exécution d'une exportation.
+
 - Le fichier model.json des entités exportées sera au niveau de %ExportDestinationName%.  
   - Exemple : `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 

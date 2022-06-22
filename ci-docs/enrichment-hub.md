@@ -1,7 +1,7 @@
 ---
 title: Enrichir les profils clients unifiés
 description: Utilisez des fonctionnalités pour enrichir vos données client.
-ms.date: 03/29/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800602"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954038"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enrichissement des profils clients (aperçu)
 
@@ -35,29 +35,29 @@ Sous l’onglet **Découvrir**, vous trouverez toutes les options d’enrichisse
 
 # <a name="individual-consumers-b-to-c"></a>[Consommateurs individuels (B-to-C)](#tab/b2c)
 
+- [Identité AbiliTec](enrichment-liveramp.md) fournie par LiveRamp AbiliTec
 - [Marques](enrichment-microsoft.md) fournies par Microsoft
-- [Intérêts](enrichment-microsoft.md) fournis par Microsoft
-- [Adresses améliorées](enrichment-enhanced-addresses.md) fournies par Microsoft 
 - [Données démographiques](enrichment-experian.md) fournies par Experian
-- [Données personnalisées](enrichment-SFTP-custom-import.md) via SFTP (Secure File Transfer Protocol) 
-- [Azure Maps](enrichment-azure-maps.md) fourni par Microsoft
-- [Données de localisation](enrichment-here.md) fournies par HERE Technologies 
-- [Identité](enrichment-liveramp.md) fournie par LiveRamp AbiliTec
+- [Adresses améliorées](enrichment-enhanced-addresses.md) fournies par Microsoft
+- [Intérêts](enrichment-microsoft.md) fournis par Microsoft
+- [Données d'emplacement](enrichment-azure-maps.md) fourni par Microsoft Azure Maps
+- [Données de localisation](enrichment-here.md) fournies par HERE Technologies
+- [Données personnalisées SFTP](enrichment-SFTP-custom-import.md) via SFTP (Secure File Transfer Protocol)
 
 # <a name="business-accounts-b-to-b"></a>[Comptes d’entreprise (B-to-B)](#tab/b2b)
 
-- [Données de la société](enrichment-leadspace.md) fournies par Leadspace
-- [Adresses améliorées](enrichment-enhanced-addresses.md) fournies par Microsoft 
-- [Données d'entreprise améliorées](enrichment-enhanced-company-data.md) fournies par Microsoft
-- [Données de localisation](enrichment-here.md) fournies par HERE Technologies 
-- [Données personnalisées](enrichment-SFTP-custom-import.md) via SFTP (Secure File Transfer Protocol) 
-- [Azure Maps](enrichment-azure-maps.md) fourni par Microsoft
-- [Données d’entreprise](enrichment-dnb.md) fournies par Dun & Bradstreet
 - [Données d’engagement de compte](enrichment-office.md) fournies par Microsoft
+- [Données d’entreprise](enrichment-dnb.md) fournies par Dun & Bradstreet
+- [Données de la société](enrichment-leadspace.md) fournies par Leadspace
+- [Adresses améliorées](enrichment-enhanced-addresses.md) fournies par Microsoft
+- [Données d'entreprise améliorées](enrichment-enhanced-company-data.md) fournies par Microsoft
+- [Données d'emplacement](enrichment-azure-maps.md) fourni par Microsoft Azure Maps
+- [Données de localisation](enrichment-here.md) fournies par HERE Technologies
+- [Données personnalisées SFTP](enrichment-SFTP-custom-import.md) via SFTP (Secure File Transfer Protocol)
 
 ---
 
-Sur l’onglet **Mes enrichissements**, vous pouvez voir les enrichissements que vous avez configurés et modifier leurs propriétés.
+Sur l’onglet **Mes enrichissements**, vous pouvez voir les enrichissements que vous avez configurés et modifier leurs propriétés. Vous pouvez également créer des [segments](segments.md) ou des [mesures](measures.md) à partir des enrichissements.
 
 ## <a name="manage-existing-enrichments"></a>Gérer les enrichissements existants
 
@@ -81,36 +81,45 @@ Les enrichissements tiers sont configurés à l’aide de [connexions](connectio
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Enrichissements multiples du même type
 
-L’entité à enrichir est spécifiée lors de la configuration de l’enrichissement, ce qui vous permet d’enrichir uniquement un sous-ensemble de vos profils. Par exemple, enrichissez les données uniquement pour un segment spécifique. Vous pouvez configurer plusieurs enrichissements du même type et réutiliser la même connexion. Certains enrichissements auront des limites au nombre d’enrichissements du même type pouvant être créés. Les limites et l’utilisation actuelle sont visibles sur la page **Enrichissement**.
+L’entité à enrichir est spécifiée lors de la configuration de l’enrichissement, ce qui vous permet d’enrichir uniquement un sous-ensemble de vos profils. Par exemple, enrichissez les données uniquement pour un segment spécifique. Vous pouvez configurer plusieurs enrichissements du même type et réutiliser la même connexion. Certains enrichissements auront des limites au nombre d’enrichissements du même type pouvant être créés. Les limites et l'utilisation actuelle peuvent être vues sur chaque mosaïque dans l'onglet **Découvrir** sur la page **Enrichissement**.
 
 ## <a name="enrich-data-sources-before-unification"></a>Enrichir les sources de données avant l’unification
 
 Vous pouvez enrichir vos données client avant l’unification des données pour améliorer la qualité d’une correspondance de données. Pour plus d’informations, voir [enrichissement de source de données](data-sources-enrichment.md).
 
-## <a name="see-the-progress-of-the-enrichment-process"></a>Voir la progression du processus d’enrichissement
+## <a name="run-or-refresh-enrichments"></a>Exécuter ou actualiser des enrichissements
+
+1. Pour démarrer le processus d'enrichissement, sélectionnez **Exécuter**. Ou laissez le système exécuter l’enrichissement automatiquement dans le cadre d’une [actualisation programmée](system.md#schedule-tab). Le temps de traitement dépend de la taille de vos données client.
+
+1. En option, [voir l'avancement du processus d'enrichissement](#see-the-progress-of-the-enrichment-process).
+
+1. Une fois le processus d'enrichissement terminé, accédez à **Mes enrichissements** pour examiner les données des profils clients nouvellement enrichis, l'heure de la dernière mise à jour et le nombre de profils enrichis.
+
+1. Sélectionnez l'enrichissement pour afficher les [résultats d'enrichissement](#enrichment-results).
+
+### <a name="see-the-progress-of-the-enrichment-process"></a>Voir la progression du processus d’enrichissement
 
 Vous trouverez des détails sur le traitement d’un enrichissement, y compris son statut et les problèmes potentiels pendant son actualisation ou à la fin d’une actualisation. Comprenez les processus impliqués pour actualiser un enrichissement et leur durée d’exécution. Le statut d’enrichissement est pris en charge pour Experian, Leadspace, HERE Technologies, SFTP Import et Azure Maps.
 
-Pour voir le statut d’un enrichissement
-
-1. Accédez à **Données** > **Enrichissement**. 
-1. Dans l’onglet **Mes enrichissements**, sélectionnez le statut d’un enrichissement pour ouvrir un volet latéral. 
-1. Dans le volet **Détails de la progression**, développez la section **Enrichissements**. 
-1. Sous l’enrichissement dont vous souhaitez voir la progression, sélectionnez **Voir les détails**. 
-1. Dans le volet **Détails de la tâche**, sélectionnez **Afficher les détails** pour voir les processus impliqués dans la mise à jour de l’enrichissement et leur statut. 
+1. Accédez à **Données** > **Enrichissement**.
+1. Dans l'onglet **Mes enrichissements**, sélectionnez le statut de l'enrichissement pour ouvrir un volet latéral.
+1. Dans le volet **Détails de la progression**, développez la section **Enrichissements**.
+1. Sous l’enrichissement dont vous souhaitez voir la progression, sélectionnez **Voir les détails**.
+1. Dans le volet **Détails de la tâche**, sélectionnez **Afficher les détails** pour voir les processus impliqués dans la mise à jour de l’enrichissement et leur statut.
 
 ## <a name="enrichment-results"></a>Résultats d’enrichissement
 
-Une fois l’exécution de l’enrichissement terminée, vous pouvez consulter les résultats de l’enrichissement.
+Une fois l’exécution de l’enrichissement terminée, consultez les résultats de l’enrichissement.
 
-1. Accédez à **Données** > **Enrichissement**. 
-1. Sélectionnez l’enrichissement sur lequel vous souhaitez des informations.
+1. Accédez à **Données** > **Enrichissement**.
+1. Dans l'onglet **Mes enrichissements**, sélectionnez l'enrichissement sur lequel vous souhaitez obtenir des informations.
 
-Tous les enrichissements affichent des informations de base comme le nombre de profils enrichis, un aperçu de l’entité d’enrichissement générée et le nombre de profils enrichis dans le temps. S’il est disponible, le **Nombre de clients enrichis par champ** fournit une analyse détaillée de la couverture de chaque champ enrichi.
+Tous les enrichissements affichent des informations de base comme le nombre de profils enrichis et le nombre de profils enrichis dans le temps. La vignette **Aperçu clients enrichis** montre un échantillon de l'entité d'enrichissement générée. Pour afficher une vue détaillée, sélectionnez **Afficher plus** et sélectionnez l’onglet **Données**.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Page de résultats des enrichissements.":::
 
-Certains enrichissements affichent également des informations spécifiques au type d’enrichissement. Consultez la documentation de l’enrichissement approprié pour obtenir plus d’informations.
+S’il est disponible, le **Nombre de clients enrichis par champ** fournit une analyse détaillée de la couverture de chaque champ enrichi.
 
+Certains enrichissements affichent également des informations spécifiques au type d’enrichissement. Pour plus d'informations, consultez la documentation associée.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

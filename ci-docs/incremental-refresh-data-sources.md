@@ -1,40 +1,38 @@
 ---
-title: Actualisation incrémentielle de sources de données Power Query
-description: Actualisez les données nouvelles et mises à jour des grandes sources de données basées sur Power Query.
-ms.date: 12/06/2021
-ms.reviewer: mhart
+title: Actualisation incrémentielle pour les sources de données Power Query et Azure Data Lake
+description: Actualisez les données nouvelles et mises à jour pour les grandes sources de données en fonction des sources de données Power Query ou Azure Data Lake.
+ms.date: 05/30/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 3d21baf9804f300802b066df0183fc8f01abba9a
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646325"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9012022"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Actualisation incrémentielle de sources de données basées sur Power Query
+# <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Actualisation incrémentielle pour les sources de données Power Query et Azure Data Lake
 
-Cet article explique comment configurer l’actualisation incrémentielle pour les sources de données basées sur Power Query.
+Cet article explique comment configurer l’actualisation incrémentielle pour les sources de données basées sur Power Query ou Azure Data Lake.
 
 L’actualisation incrémentielle des sources de données offre les avantages suivants :
 
 - **Actualisations plus rapides** - Seules les données modifiées ont été actualisées. Par exemple, vous pouvez actualiser uniquement les cinq derniers jours d’un historique jeu de données.
 - **Fiabilité accrue** - Avec des actualisations plus petites, vous n’avez pas besoin de maintenir les connexions aux systèmes sources volatils aussi longtemps, ce qui réduit le risque de problèmes de connexion.
-- **Réduction de la consommation de ressources** - Actualiser uniquement un sous-ensemble de vos données totales permet une utilisation plus efficace des ressources informatiques et diminue l'empreinte environnementale.
+- **Réduction de la consommation de ressources** - Actualiser uniquement un sous-ensemble de vos données totales permet une utilisation plus efficace des ressources informatiques et diminue l’empreinte environnementale.
 
-## <a name="configure-incremental-refresh"></a>Configurer l'actualisation incrémentielle
+## <a name="configure-incremental-refresh-for-data-sources-based-on-power-query"></a>Configurer l'actualisation incrémentielle de sources de données basées sur Power Query
 
 Customer Insights permet l’actualisation incrémentielle des sources de données importées via Power Query qui prennent en charge l’ingestion incrémentielle. Par exemple, des bases de données SQL Azure avec des champs de date et d’heure, qui indiquent quand les enregistrements de données ont été mis à jour pour la dernière fois.
 
 1. [Créer une source de données basée sur Power Query](connect-power-query.md).
-
-1. Fournissez un **Nom** pour la source de données.
 
 1. Sélectionnez une source de données qui prend en charge l’actualisation incrémentielle, telle qu’une [base de données Azure SQL](/power-query/connectors/azuresqldatabase).
 
@@ -48,7 +46,7 @@ Customer Insights permet l’actualisation incrémentielle des sources de donné
 
 1. Sur **Paramètres d’actualisation incrémentielle**, vous allez configurer l’actualisation incrémentielle pour toutes les entités que vous avez sélectionnées lors de la création de la source de données.
 
-   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Configurez des entités dans une source de données pour une actualisation incrémentielle.":::
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Configurer les paramètres d’actualisation incrémentielle.":::
 
 1. Sélectionnez une entité et fournissez les détails suivants :
 
@@ -58,5 +56,31 @@ Customer Insights permet l’actualisation incrémentielle des sources de donné
 
 1. Sélectionnez **Enregistrer** pour terminer la création de la source de données. L’actualisation initiale des données sera une actualisation complète. Ensuite, l’actualisation incrémentielle des données se produit comme configuré à l’étape précédente.
 
+## <a name="configure-incremental-refresh-for-azure-data-lake-data-sources"></a>Configurer l'actualisation incrémentielle pour les sources de données Azure Data Lake
+
+Customer Insights permet une actualisation incrémentielle des sources de données connectées à Azure Data Lake Storage. Pour utiliser l'ingestion et l'actualisation incrémentielles pour une entité, configurez cette entité lors de l'ajout de la source de données Azure Data Lake ou ultérieurement lors de la modification de la source de données. Le dossier de données d'entité doit contenir les dossiers suivants :
+
+- **FullData** : Dossier avec les fichiers de données contenant les enregistrements initiaux
+- **IncrementalData** : Dossier avec des dossiers de hiérarchie date/heure au format **aaaa/mm/jj/hh** contenant les mises à jour incrémentielles. **hh** représente l'heure UTC des mises à jour et contient les dossiers **Upserts** et **Deletes**. **Upserts** contient des fichiers de données avec des mises à jour d'enregistrements existants ou de nouveaux enregistrements. **Deletes** contient des fichiers de données avec des enregistrements à supprimer.
+
+1. Lors de l'ajout ou de la modification d'une source de données, accédez au volet **Attributs** de l'entité.
+
+1. Examinez les attributs. Assurez-vous qu'un attribut de date de création ou de dernière mise à jour est configuré avec *dateTime* pour le **format de date** et *Calendar.Date* pour le **type de sémantique**. Modifiez l'attribut si nécessaire, puis sélectionnez **Terminé**.
+
+1. Dans le volet **Sélectionner les entités**, modifiez l'entité. La case **Ingestion incrémentielle** est cochée.
+
+   :::image type="content" source="media/ADLS_inc_refresh.png" alt-text="Configurez des entités dans une source de données pour une actualisation incrémentielle.":::
+
+   1. Accédez au dossier racine qui contient les fichiers .csv ou .parquet pour les données complètes, les mises à jour de données incrémentielles et les suppressions de données incrémentielles.
+   1. Entrez l'extension pour les données complètes et les deux fichiers incrémentiels (\.csv or \.parquet).
+   1. Cliquez sur **Enregistrer**.
+
+1. Pour **Dernière mise à jour**, sélectionnez l'attribut d'horodatage de date.
+
+1. Si la **Clé primaire** n'est pas sélectionnée, sélectionnez-la. La clé primaire est un attribut unique à l’entité. Pour qu’un attribut soit une clé primaire valide, il ne doit inclure aucune valeur en double, aucune valeur manquante, ni aucune valeur nulle. Les attributs de type de données chaîne, entier et GUID sont pris en charge en tant que clés primaires.
+
+1. Sélectionnez **Fermer**, puis enregistrez et fermez le volet.
+
+1. Continuez en ajoutant ou en modifiant la source de données.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

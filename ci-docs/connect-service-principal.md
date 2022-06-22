@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833382"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011838"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Se connecter à un compte Azure Data Lake Storage en utilisant un principal de service Azure
 
@@ -51,7 +51,13 @@ Avant de créer un nouveau principal de service pour Customer Insights, vérifie
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Accorder des autorisations au principal de service pour accéder au compte de stockage
 
-Accédez au portail Azure pour accorder des autorisations au principal de service pour le compte de stockage que vous souhaitez utiliser dans Customer Insights.
+Accédez au portail Azure pour accorder des autorisations au principal de service pour le compte de stockage que vous souhaitez utiliser dans Customer Insights. L'un des rôles suivants doit être attribué au compte de stockage ou au conteneur :
+
+|Informations d’identification|Exigences|
+|----------|------------|
+|Utilisateur actuellement connecté|**Rôle** : Lecteur de données d’objets blob de stockage, Contributeur blob de stockage ou Propriétaire des données d’objets Blob de stockage.<br>**Niveau** : les autorisations peuvent être accordées sur le compte de stockage ou le conteneur.</br>|
+|Principal de service Customer Insights -<br>Utilisation de Azure Data Lake Storage comme source de données</br>|Option 1<ul><li>**Rôle** : Lecteur de données d’objets blob de stockage, Contributeur de données blob de stockage ou Propriétaire des données d’objets Blob de stockage.</li><li>**Niveau** : les autorisations doivent être accordées sur le compte de stockage.</li></ul>Option 2 *(sans partager l'accès du principal du service au compte de stockage)*<ul><li>**Rôle 1** : Lecteur de données d’objets blob de stockage, Contributeur de données blob de stockage ou Propriétaire des données d’objets Blob de stockage.</li><li>**Niveau** : les autorisations doivent être accordées sur le conteneur.</li><li>**Rôle 2** : Délégant de données Storage Blob.</li><li>**Niveau** : les autorisations doivent être accordées sur le compte de stockage.</li></ul>|
+|Principal de service Customer Insights - <br>Utilisation de Azure Data Lake Storage comme sortie ou destination</br>|Option 1<ul><li>**Rôle** : Contributeur de données blob de stockage ou Propriétaire des données d’objets Blob de stockage.</li><li>**Niveau** : les autorisations doivent être accordées sur le compte de stockage.</li></ul>Option 2 *(sans partager l'accès du principal du service au compte de stockage)*<ul><li>**Rôle** : Contributeur de données blob de stockage ou Propriétaire des données d’objets Blob de stockage.</li><li>**Niveau** : les autorisations doivent être accordées sur le conteneur.</li><li>**Rôle 2** : Délégant Storage Blob.</li><li>**Niveau** : les autorisations doivent être accordées sur le compte de stockage.</li></ul>|
 
 1. Accédez au [Portail d’administration Azure](https://portal.azure.com) et connectez-vous à votre organisation.
 
@@ -62,7 +68,7 @@ Accédez au portail Azure pour accorder des autorisations au principal de servic
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Capture d’écran montrant le portail Azure lors de l’ajout d’une attribution de rôle.":::
 
 1. Dans le volet **Ajouter une attribution de rôle**, définissez les propriétés suivantes :
-   - Rôle : **Contributeur de données Blob de stockage**
+   - Rôle : Lecteur de données d’objets blob de stockage, Contributeur blob de stockage ou Propriétaire des données d’objets Blob de stockage en fonction des informations d'identification répertoriées ci-dessus.
    - Attribuer l’accès à : **Utilisateur, groupe ou principal de service**
    - Sélectionnez les membres : **Dynamics 365 AI for Customer Insights** (le [principal de service](#create-a-new-service-principal) que vous avez recherché précédemment dans cette procédure)
 

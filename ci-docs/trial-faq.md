@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833765"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011884"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>FAQ sur la version d’évaluation de Dynamics 365 Customer Insights
 
@@ -66,7 +66,7 @@ Facultativement, si vous utilisez uniquement Customer Insights, vous pouvez copi
 
 Après vous être connecté à votre instance payante de Customer Insights pour la première fois, vous êtes invité à créer un environnement. Dans ce processus, vous pouvez choisir de copier la configuration à partir d’un environnement existant et de migrer la plupart des paramètres. Si vous disposez des autorisations mentionnées ci-dessus, l’environnement de la version d’essai apparaît dans cette liste. Pour plus d’informations, voir [Copier la configuration de l’environnement](create-environment.md#copy-the-environment-configuration).
 
-### <a name="what-are-the-trial-limits-and-quotas"></a>Quelles sont les limites d’essai et les quotas ?
+### <a name="what-are-the-trial-limits-and-quotas"></a>Quelles sont les limites et les quotas de la version d’évaluation ?
 
 - Vous ne pouvez pas utiliser votre propre compte Azure Data Lake Storage pour stocker les données de sortie pendant un essai de Customer Insights. Cependant, vous pouvez ingérer des données à partir d’un compte de Data Lake Storage.
 - Vous pouvez stocker jusqu’à 3 Go de données dans l’environnement Dataverse qui est mis en service automatiquement lorsque vous démarrez un essai de Customer Insights.

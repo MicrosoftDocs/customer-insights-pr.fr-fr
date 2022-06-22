@@ -1,19 +1,19 @@
 ---
-title: Fonctionnalités nouvelles et à venir
+title: Fonctionnalités nouvelles et mises à jour
 description: Informations sur les nouvelles fonctionnalités, les améliorations et les corrections de bogues.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833627"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843344"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nouveautés de Dynamics 365 Customer Insights
 
@@ -24,6 +24,37 @@ Nous déployons des mises à jour région par région. Ainsi, certaines régions
 > [!TIP]
 > Pour envoyer et voter sur les demandes de fonctionnalités et les suggestions de produits, accédez au [portail Idées d’application Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>Mises à jour de mai 2022
+
+Les mises à jour de mai 2022 incluent de nouvelles fonctionnalités, des améliorations de performances et des corrections de bugs.
+
+### <a name="updated-data-unification-experience"></a>Expérience d'unification des données mise à jour
+
+ L’unification des données vous permet d’unifier des sources de données qui étaient auparavant disparates en un seul jeu de données principal qui en fournit une vue unifiée. Les données peuvent être unifiées sur une ou plusieurs entités. D'abord, [sélectionnez les entités et les champs source](map-entities.md), [supprimez les enregistrements en double](remove-duplicates.md), spécifiez les règles pour les [conditions de correspondance](match-entities.md) et définissez quels [champs à inclure dans les profils clients unifiés](merge-entities.md).
+
+Pour en savoir plus, consultez [Vue d’ensemble de l'unification des données](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Actualisation de la page d'accueil dans Customer Insights
+
+**Accueil** vous guide tout au long du processus de configuration des fonctionnalités clés et fournit une vue d’ensemble des segments, des mesures et des données d’enrichissement. Nous avons actualisé l'expérience pour fournir des informations plus pertinentes en un coup d'œil.
+
+Pour plus d’informations, voir [Explorer Customer Insights](home.md).
+
+### <a name="track-usage-of-a-segment"></a>Suivre l’utilisation d’un segment
+
+Vous pouvez désormais [suivre l'utilisation d'un segment](segments.md#track-usage-of-a-segment) dans les applications qui sont basées sur la même organisation Dataverse connectée à Customer Insights. Pour les [segments Customer Insights utilisés dans les parcours du client de Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), le système vous informe de l’utilisation de ce segment.
+
+### <a name="export-to-criteo"></a>Exporter vers Criteo
+
+Criteo est une plateforme en ligne qui aide les utilisateurs à gérer la publicité numérique. Vous pouvez désormais exporter des segments de profils clients unifiés pour générer des campagnes, fournir un marketing par e-mail et utiliser des groupes de clients spécifiques avec Criteo.
+
+Pour plus d'informations, voir [Exporter des segments vers Criteo (version préliminaire)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Structure de documentation raffinée pour la création d'environnement
+
+Nous avons revu les documents d'aide liés à la création et à la gestion des environnements dans Customer Insights. Les articles sont maintenant regroupés sous le nœud Environnements dans la table des matières. Les articles restructurés fournissent plus de conseils sur les différentes manières de configurer des environnements et ont une structure plus claire. Si vous avez des commentaires à partager, faites-le nous savoir via les contrôles vers la fin des articles d'aide.
+
+Pour plus d’informations, consultez [Procédure : Créer un environnement](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Mises à jour d’avril 2022
 

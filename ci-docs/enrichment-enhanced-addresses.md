@@ -1,7 +1,7 @@
 ---
 title: Enrichissement de l’amélioration des adresses (contient une vidéo)
 description: Enrichissez et normalisez les informations sur les adresses des profils client avec les modèles Microsoft.
-ms.date: 01/19/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b4fef3b5e30e1cac4e5cb4401498f2f0981a409e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645989"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953808"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enrichissement des profils client avec des adresses améliorées
 
@@ -53,17 +53,17 @@ Les informations d’adresse peuvent avoir un format non standard et contenir de
 
 ### <a name="limitations"></a>Limitations
 
-Les adresses améliorées ne fonctionnent qu’avec les valeurs qui existent déjà dans vos données d’adresse ingérées. Le modèle ne : 
+Les adresses améliorées n’utilisent que les valeurs qui existent déjà dans les données d’adresse ingérées. Le modèle ne :
 
 1. vérifie pas si l’adresse est une adresse valide ;
 2. vérifie pas si les valeurs, telles que le code postal ou le nom de rue, sont valides ;
 3. modifie pas les valeurs qu’il ne reconnaît pas.
 
-Le modèle utilise des techniques basées sur le Machine Learning pour améliorer les adresses. Bien que nous appliquions un seuil de confiance élevé lorsque le modèle modifie une valeur d’entrée, comme pour tout modèle basé sur Machine Learning, une précision de 100 % n’est pas garantie.
+Le modèle utilise des techniques basées sur le Machine Learning pour améliorer les adresses. Comme pour tout modèle basé sur l'apprentissage automatique, une précision à 100 % n'est pas garantie.
 
 ## <a name="supported-countries-or-regions"></a>Pays ou régions pris en charge
 
-Nous prenons actuellement en charge l’enrichissement des adresses dans les pays ou régions suivants : 
+Nous prenons actuellement en charge l’enrichissement des adresses dans les pays ou régions suivants :
 
 - Australie
 - Canada
@@ -74,50 +74,46 @@ Nous prenons actuellement en charge l’enrichissement des adresses dans les pay
 - Royaume-Uni
 - États-Unis
 
-Les adresses doivent contenir une valeur de pays/région. Nous ne traitons pas les adresses de pays ou de régions qui ne sont pas pris en charge et les adresses pour lesquelles aucun pays ou région n’a été fourni.
-
 ## <a name="configure-the-enrichment"></a>Configurer l’enrichissement
 
-1. Accédez à **Données** > **Enrichissement**.
+1. Accédez à **Données** > **Enrichissement** et sélectionnez l’onglet **Découvrir**.
 
 1. Sélectionnez **Enrichir mes données** sur la vignette **Adresses améliorées**.
 
    :::image type="content" source="media/enhanced-addresses-tile.png" alt-text="Capture d’écran de la vignette Adresses améliorées.":::
 
-1. Sélectionnez le **jeu de données client** et choisissez l’entité contenant les adresses que vous souhaitez enrichir. Vous pouvez sélectionner l’entité *Client* pour enrichir les adresses de tous vos profils client ou sélectionner une entité de segment pour enrichir les adresses uniquement dans les profils client contenus dans ce segment.
+1. Passez la synthèse en revue et sélectionnez **Suivant**.
+
+1. Sélectionnez le **Jeu de données client**, puis choisissez le profil ou segment que vous souhaitez enrichir. L’entité *Client* enrichit tous vos profils clients tandis qu'un segment enrichit uniquement les profils clients contenus dans ce segment.
 
 1. Sélectionnez la mise en forme des adresses dans votre jeu de données. Choisissez **Adresse à attribut unique** si les adresses de vos données utilisent un seul champ. Choisissez **Adresse à attributs multiples** si les adresses de vos données utilisent plusieurs champs de données.
+
+1. Sélectionnez **Suivant** et mappez les champs d'adresse de votre entité client unifiée.
+
+    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Page de mappage de champs d’adresse améliorée.":::
 
    > [!NOTE]
    > Le pays ou la région est obligatoire à la fois dans les adresses à attribut unique et à attributs multiples. Les adresses qui ne contiennent pas de valeurs de pays ou de région valides ou prises en charge ne seront pas enrichies.
 
-1.  Mappez les champs d’adresse de votre entité client unifiée.
-
-    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Page de mappage de champs d’adresse améliorée.":::
-
 1. Sélectionnez **Suivant** pour terminer le mappage de champs.
 
-1. Fournissez un nom pour l’enrichissement et pour l’entité de sortie.
+1. Fournissez un **Nom** pour l’enrichissement et pour l’**Entité de sortie**.
 
 1. Sélectionnez **Enregistrer l’enrichissement** après avoir vérifié vos choix.
 
 ## <a name="enrichment-results"></a>Résultats d’enrichissement
 
-Pour démarrer le processus d’enrichissement, sélectionnez **Exécuter** dans la barre de commandes. Vous pouvez également laisser le système exécuter l’enrichissement automatiquement dans le cadre d’une [actualisation programmée](system.md#schedule-tab). Le temps de traitement dépend de la taille de vos données client.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Une fois le processus d’enrichissement terminé, vous pouvez consulter les données des profils clients nouvellement enrichis sous **Mes enrichissements**. De plus, vous trouverez l’heure de la dernière mise à jour et le nombre de profils enrichis.
-
-Vous pouvez voir un exemple des données enrichies dans la vignette **Aperçu des clients enrichis**. Sélectionnez **Afficher plus** et sélectionnez l’onglet **Données** pour accéder à une vue détaillée de chaque profil enrichi.
+Le paramètre **Nombre de clients enrichis par champ** fournit une analyse détaillée de la couverture de chaque champ enrichi.
 
 ### <a name="overview-card"></a>Carte de présentation
 
-La carte de présentation affiche des détails sur la couverture de l’enrichissement. 
+La carte **Vue d’ensemble des modifications apportées par les clients** affiche des détails sur la couverture de l’enrichissement :
 
-* **Adresses traitées et modifiées** : le nombre de profils clients avec des adresses qui ont été enrichis avec succès.
-
-* **Adresses traitées et non modifiées** : le nombre de profils clients avec des adresses qui ont été reconnus mais non modifiés. Cela se produit généralement lorsque les données d’entrée sont valides et ne peuvent pas être améliorées par l’enrichissement.
-
-* **Adresses non traitées et non modifiées** : le nombre de profils clients avec des adresses qui n’ont pas été reconnus. Généralement pour les données d’entrée non valides ou non prises en charge par l’enrichissement.
+- **Adresses traitées et modifiées** : le nombre de profils clients avec des adresses qui ont été enrichis avec succès.
+- **Adresses traitées et non modifiées** : le nombre de profils clients avec des adresses qui ont été reconnus mais non modifiés. Cela se produit généralement lorsque les données d’entrée sont valides et ne peuvent pas être améliorées par l’enrichissement.
+- **Adresses non traitées et non modifiées** : le nombre de profils clients avec des adresses qui n’ont pas été reconnus. Généralement pour les données d’entrée non valides ou non prises en charge par l’enrichissement.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

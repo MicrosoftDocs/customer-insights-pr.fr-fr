@@ -1,7 +1,7 @@
 ---
 title: Examiner l’unification des données
 description: Passer en revue les étapes d’unification des données, créer des profils client unifiés et examiner les résultats
-ms.date: 05/04/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4c709dfb55bf079dd2fe99e41adb4c77c2bece4b
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 0f7b2e9af65796c4d304dbd9893a21617e847620
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741657"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844083"
 ---
 # <a name="review-data-unification"></a>Examiner l’unification des données
 
@@ -32,11 +32,13 @@ Cette dernière étape du processus d’unification affiche un résumé des éta
 
 1. Sélectionnez **Modifier** sur l’une des étapes d’unification des données pour examiner et apporter des modifications.
 
-1. Si vous êtes satisfait de vos sélections, sélectionnez **Créer des profils clients**. La page **Unifier** s’affiche pendant la création du profil client unifié. La création de l’algorithme d’unification prend un certain temps et vous ne pouvez pas modifier la configuration tant qu’il n’est pas terminé.
+1. Si vous êtes satisfait de vos sélections, sélectionnez **Créer des profils clients**. La page **Unifier** s’affiche pendant la création du profil client unifié. Tous les carreaux sauf **Champs sources** affichent le statut **En file d'attente** ou **Actualisation en cours**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   :::image type="content" source="media/m3_unify_refreshing.png" alt-text="Capture d'écran de la page Unify avec des vignettes indiquant En file d'attente ou Actualisation en cours.":::
 
-Une fois le processus d’unification terminé, l’entité de profil client unifiée, appelée *Client*, est répertoriée sur la page **Entités** de la section **Profils**. La première exécution d’unification réussie crée l’entité *Client*. Toutes les exécutions suivantes développent cette entité.
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+La création de l’algorithme d’unification prend un certain temps et vous ne pouvez pas modifier la configuration tant qu’il n’est pas terminé. Une fois le processus d’unification terminé, l’entité de profil client unifiée, appelée *Client*, est répertoriée sur la page **Entités** de la section **Profils**. La première exécution d’unification réussie crée l’entité *Client*. Toutes les exécutions suivantes développent cette entité.
 
 ## <a name="review-the-results-of-data-unification"></a>Passer en revue les résultats de l’unification des données
 

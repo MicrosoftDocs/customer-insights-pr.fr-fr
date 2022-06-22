@@ -7,20 +7,20 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: c470956b0453ac2558ed85acdeebba120a0ca55d
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800169"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011700"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Se connecter aux données dans un lac de données géré Microsoft Dataverse
 
-Cet article fournit des informations sur la façon dont les utilisateurs Dataverse peuvent se connecter rapidement aux entités analytiques dans un lac géré par Microsoft Dataverse. 
+Les utilisateurs Microsoft Dataverse peuvent se connecter rapidement aux entités analytiques dans un lac géré Microsoft Dataverse.
 
 > [!NOTE]
 > Vous devez être un administrateur dans l’organisation Dataverse pour continuer et afficher la liste des entités disponibles dans le lac géré.
@@ -32,40 +32,34 @@ Cet article fournit des informations sur la façon dont les utilisateurs Dataver
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Se connecter à un lac géré Dataverse
 
-1. Dans Customer Insights, accédez à **Données** > **Sources de données**.
+1. Accédez à **Données** > **Sources de données**.
 
-2. Sélectionnez **Ajouter une source de données**.
+1. Sélectionnez **Ajouter une source de données**.
 
-3. Sélectionnez **Microsoft Dataverse** et sélectionnez **Suivant**.
+1. Sélectionnez **Microsoft Dataverse**.
 
-4. Saisissez un **Nom** pour la source de données, puis sélectionnez **Suivant**. 
+1. Entrez le **nom** de la source de données et une **description** facultative.
 
-5. Fournissez l’**adresse du serveur** pour l’organisation Dataverse et sélectionnez **Connexion**.
+1. Fournissez l’**adresse du serveur** pour l’organisation Dataverse et sélectionnez **Connexion**.
 
-   :::image type="content" source="media/ingest-dataverse-server-address.png" alt-text="Écran dans l’étape d’ingestion des données où un utilisateur peut saisir l’URL d’environnement Dataverse.":::
-
-6. Sélectionnez dans la liste disponible les tables que vous souhaitez ingérer en tant qu’entités dans Customer Insights.    
+1. Sélectionnez dans la liste disponible les tables que vous souhaitez ingérer en tant qu’entités dans Customer Insights.
 
    > [!NOTE]
    > Si vous remarquez que certaines tables sont déjà sélectionnées, c’est probablement parce qu’elles sont utilisées par d’autres applications Dynamics 365 (telles que Dynamics 365 Sales Insights ou Customer Service Insights). Vous ne pouvez pas modifier la sélection. Ces tables seront disponibles comme entités une fois la source de données créée.
 
-   :::image type="content" source="media/select-dataverse-entities.png" alt-text="Boîte de dialogue affichant une liste d’entités dans l’environnement Dataverse.":::
+    :::image type="content" source="media/select-dataverse-entities.png" alt-text="Boîte de dialogue affichant une liste d’entités dans l’environnement Dataverse.":::
 
-7. Enregistrez votre sélection pour commencer à synchroniser les tables sélectionnées à partir de Dataverse. Vous trouverez la connexion récemment ajoutée sur la page **Sources de données**. Elle est mise dans la file d’attente pour actualisation et présente le nombre d’entités comme 0 jusqu’à la synchronisation de l’ensemble des tables.
+1. Enregistrez votre sélection pour commencer à synchroniser les tables sélectionnées à partir de Dataverse. Vous trouverez la connexion récemment ajoutée sur la page **Sources de données**. Elle est mise dans la file d’attente pour actualisation et présente le nombre d’entités comme 0 jusqu’à la synchronisation de l’ensemble des tables.
 
 Une seule source de données d’un environnement peut utiliser simultanément le même lac géré Dataverse.
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Modifier une source de données du lac géré Dataverse
 
-Vous ne modifiez la sélection d’entités qu’après avoir créé la source de données. Par exemple, si des entités supplémentaires ont été ajoutées à Dataverse et que vous souhaitez également les importer.    
+Vous ne modifiez la sélection d’entités qu’après avoir créé la source de données. Par exemple, si des entités supplémentaires ont été ajoutées à Dataverse et que vous souhaitez également les importer.
 Pour se connecter à un autre lac de données Dataverse, [créez une source de données](#connect-to-a-dataverse-managed-lake).
 
 1. Accédez à **Données** > **Sources de données**.
 
-2. En regard de la source de données que vous souhaitez mettre à jour, sélectionnez les points de suspension verticaux (&vellip;).
+1. En regard de la source de données que vous souhaitez mettre à jour, sélectionnez **Modifier**.
 
-3. Sélectionnez l’option **Modifier** dans la liste.
-
-4. Sélectionnez des entités supplémentaires dans la liste des entités disponibles et sélectionnez **Enregistrer**.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Sélectionnez des entités supplémentaires dans la liste des entités disponibles et sélectionnez **Enregistrer**.
