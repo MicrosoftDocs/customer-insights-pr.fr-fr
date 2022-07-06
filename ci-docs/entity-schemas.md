@@ -1,5 +1,5 @@
 ---
-title: Schéma des entités Customer Insights dans Common Data Model
+title: Schémas des entités dans Common Data Model
 description: Utilisez des entités dans Common Data Model.
 ms.date: 08/13/2021
 ms.reviewer: mhart
@@ -8,16 +8,14 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757429"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054751"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Schémas des entités dans Common Data Model
-
-
 
 [Common Data Model](/common-data-model/) est une spécification déclarative, qui définit les entités standard qui représentent les concepts et les activités couramment utilisés dans les applications métier et de productivité. Ce modèle est également étendu aux données d’observation et d’analyse. Common Data Model fournit des entités métier bien définies, modulaires et extensibles, telles que les entités Compte, Division, Incident, Contact, Prospect, Opportunité et Produit, ainsi que des interactions avec les fournisseurs, les collaborateurs et les clients, telles que les activités et les contrats de niveau de service. Tout le monde peut s’appuyer sur des définitions Common Data Model et les étendre pour capturer des idées supplémentaires propres à l’entreprise.
 

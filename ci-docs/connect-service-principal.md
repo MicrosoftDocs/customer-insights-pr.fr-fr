@@ -1,5 +1,5 @@
 ---
-title: Se connecter à un compte Azure Data Lake Storage en utilisant un principal de service
+title: Se connecter à un compte Azure Data Lake Storage en utilisant un principal de service Azure
 description: Utilisez un principal de service Azure pour vous connecter à votre lac de données personnel.
 ms.date: 05/31/2022
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 949caa73578dbe0a511726ec045c0fd5f4621de4
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011838"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081010"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Se connecter à un compte Azure Data Lake Storage en utilisant un principal de service Azure
 

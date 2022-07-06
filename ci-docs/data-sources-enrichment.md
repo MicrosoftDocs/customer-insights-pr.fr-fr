@@ -1,5 +1,5 @@
 ---
-title: Enrichissement des sources de données
+title: Enrichissement des sources de données (version préliminaire)
 description: Enrichissez les sources de données avant de passer par le processus d’unification des données.
 ms.date: 05/20/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011470"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080980"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Enrichissement des sources de données (version préliminaire)
 

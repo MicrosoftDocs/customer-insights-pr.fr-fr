@@ -1,5 +1,5 @@
 ---
-title: Segments dans Customer Insights
+title: Vue d’ensemble des segments
 description: Présentation des segments, de leur création et de leur gestion.
 ms.date: 05/20/2022
 ms.subservice: audience-insights
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: d616ec8273115203dddb59334a348c66e72fa678
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 8b2c2f9b84bf8b7f37d1468b871946ecb3e6aa98
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800739"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050944"
 ---
 # <a name="segments-overview"></a>Vue d’ensemble des segments
 

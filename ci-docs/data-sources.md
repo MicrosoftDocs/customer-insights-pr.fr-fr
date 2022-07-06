@@ -1,7 +1,7 @@
 ---
-title: Utiliser des sources de données pour ingérer des données
-description: Découvrez comment importer des données depuis des sources diverses.
-ms.date: 05/31/2022
+title: Vue d’ensemble des sources de données
+description: Découvrez comment importer ou ingérer des données à partir de diverses sources.
+ms.date: 05/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e22977107565a0b28b74f41576a1c7ccc74f6dc1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011746"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051450"
 ---
 # <a name="data-sources-overview"></a>Vue d’ensemble des sources de données
 

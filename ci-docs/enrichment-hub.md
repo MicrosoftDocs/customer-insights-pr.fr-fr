@@ -1,6 +1,6 @@
 ---
-title: Enrichir les profils clients unifiés
-description: Utilisez des fonctionnalités pour enrichir vos données client.
+title: Présentation de l’enrichissement des données (version préliminaire)
+description: Utilisez les fonctionnalités de Microsoft et d’autres services tiers pour enrichir vos données clients.
 ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,24 +14,32 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954038"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053864"
 ---
-# <a name="enrichment-for-customer-profiles-preview"></a>Enrichissement des profils clients (aperçu)
+# <a name="data-enrichment-preview-overview"></a>Présentation de l’enrichissement des données (version préliminaire)
 
-Utilisez des données provenant de sources telles que Microsoft et d’autres partenaires pour enrichir vos données client.
+Utilisez des données provenant de sources telles que Microsoft et d’autres partenaires pour enrichir vos données client. Les enrichissements tiers sont configurés à l’aide de [connexions](connections.md), qu’un administrateur configure avec les informations d’identification et donne son consentement pour les transferts de données. Les connexions peuvent être utilisées par les administrateurs et les contributeurs pour configurer les enrichissements.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Enrichissements multiples du même type
+
+L’entité à enrichir est spécifiée lors de la configuration de l’enrichissement, ce qui vous permet d’enrichir uniquement un sous-ensemble de vos profils. Par exemple, enrichissez les données uniquement pour un segment spécifique. Vous pouvez configurer plusieurs enrichissements du même type et réutiliser la même connexion. Certains enrichissements auront des limites au nombre d’enrichissements du même type pouvant être créés. Les limites et l'utilisation actuelle peuvent être vues sur chaque mosaïque dans l'onglet **Découvrir** sur la page **Enrichissement**.
+
+## <a name="enrich-data-sources-before-unification"></a>Enrichir les sources de données avant l’unification
+
+Vous pouvez enrichir vos données client avant l’unification des données pour améliorer la qualité d’une correspondance de données. Pour plus d’informations, voir [enrichissement de source de données](data-sources-enrichment.md).
+
+## <a name="create-an-enrichment"></a>Créer un enrichissement
+
+Vous devez disposer des [autorisations](permissions.md) Collaborateur ou Administrateur pour créer ou modifier des enrichissements.
+
+Accédez à **Données** > **Enrichissement**. L’onglet **Découvrir** affiche toutes les options d’enrichissement prises en charge.
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Page du Centre d’enrichissement.":::
-
-Accédez à **Données** > **Enrichissement** pour utiliser les options d’enrichissement.  
-
-Vous devez disposer des autorisations Collaborateur ou Administrateur pour créer ou modifier des enrichissements. Pour plus d’informations, voir [Autorisations](permissions.md).
-
-Sous l’onglet **Découvrir**, vous trouverez toutes les options d’enrichissement prises en charge.
 
 # <a name="individual-consumers-b-to-c"></a>[Consommateurs individuels (B-to-C)](#tab/b2c)
 
@@ -57,45 +65,33 @@ Sous l’onglet **Découvrir**, vous trouverez toutes les options d’enrichisse
 
 ---
 
-Sur l’onglet **Mes enrichissements**, vous pouvez voir les enrichissements que vous avez configurés et modifier leurs propriétés. Vous pouvez également créer des [segments](segments.md) ou des [mesures](measures.md) à partir des enrichissements.
-
 ## <a name="manage-existing-enrichments"></a>Gérer les enrichissements existants
 
-Accédez à l’onglet **Mes enrichissements** pour voir tous les enrichissements configurés. Chaque enrichissement est représenté sous la forme d’une ligne contenant des informations supplémentaires sur l’enrichissement.
+Accédez à **Données** > **Enrichissement**. Dans l’onglet **Mes enrichissements**, affichez les enrichissements configurés, leur statut, le nombre de clients enrichis et la dernière date d’actualisation des données. Vous pouvez trier la liste des enrichissements par colonne ou utiliser la zone de recherche pour trouver l’enrichissement que vous souhaitez gérer.
 
-Sélectionnez l’enrichissement pour voir les options disponibles. Vous pouvez également sélectionner les points de suspension verticaux (&vellip;) d’un élément de liste pour voir les options. Si vous avez configuré plusieurs enrichissements, vous pouvez utiliser le champ de recherche pour le retrouver rapidement.
+Sélectionnez l’enrichissement pour afficher les actions disponibles.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Options pour gérer les enrichissements dans la liste des enrichissements.":::
 
 - **Affichez** les détails de l’enrichissement avec le nombre de profils clients enrichis.
 - **Modifiez** la configuration de l’enrichissement.
-- **Exécutez** l’enrichissement pour mettre à jour les profils clients avec les dernières données.
-- **Désactivez** un enrichissement existant pour empêcher qu’il s’actualise automatiquement à chaque actualisation programmée. (Les données de la dernière actualisation réussie restent disponibles.) **Activez** un enrichissement inactif pour redémarrer l’actualisation automatique à chaque actualisation programmée.
+- [**Exécutez**](#run-or-refresh-enrichments) l’enrichissement pour mettre à jour les profils clients avec les données les plus récentes. Exécutez plusieurs enrichissements simultanément en les sélectionnant dans la liste.
+- **Activez** ou **désactivez** un enrichissement. Les enrichissements inactifs ne seront pas actualisés pendant une [actualisation planifiée](system.md#schedule-tab).
 - **Supprimez** l’enrichissement.
 
-Exécutez ou désactivez plusieurs enrichissements simultanément en les sélectionnant dans la liste. Les options d’affichage et de modification ne sont pas disponibles en tant qu’action groupée. Elles ne fonctionnent que pour un enrichissement à la fois.
-
-## <a name="enrichments-and-connections"></a>Enrichissements et connexions
-
-Les enrichissements tiers sont configurés à l’aide de [connexions](connections.md), qu’un administrateur configure avec les informations d’identification et donne son consentement pour les transferts de données. Les connexions peuvent être utilisées par les administrateurs et les contributeurs pour configurer les enrichissements.  
-
-## <a name="multiple-enrichments-of-the-same-type"></a>Enrichissements multiples du même type
-
-L’entité à enrichir est spécifiée lors de la configuration de l’enrichissement, ce qui vous permet d’enrichir uniquement un sous-ensemble de vos profils. Par exemple, enrichissez les données uniquement pour un segment spécifique. Vous pouvez configurer plusieurs enrichissements du même type et réutiliser la même connexion. Certains enrichissements auront des limites au nombre d’enrichissements du même type pouvant être créés. Les limites et l'utilisation actuelle peuvent être vues sur chaque mosaïque dans l'onglet **Découvrir** sur la page **Enrichissement**.
-
-## <a name="enrich-data-sources-before-unification"></a>Enrichir les sources de données avant l’unification
-
-Vous pouvez enrichir vos données client avant l’unification des données pour améliorer la qualité d’une correspondance de données. Pour plus d’informations, voir [enrichissement de source de données](data-sources-enrichment.md).
+Vous pouvez également créer des [segments](segments.md) ou des [mesures](measures.md) à partir des enrichissements.
 
 ## <a name="run-or-refresh-enrichments"></a>Exécuter ou actualiser des enrichissements
 
-1. Pour démarrer le processus d'enrichissement, sélectionnez **Exécuter**. Ou laissez le système exécuter l’enrichissement automatiquement dans le cadre d’une [actualisation programmée](system.md#schedule-tab). Le temps de traitement dépend de la taille de vos données client.
+Une fois exécutés, les enrichissements peuvent être actualisés selon une planification automatique ou actualisés manuellement à la demande.
+
+1. Pour actualiser manuellement un ou plusieurs enrichissements, sélectionnez-les et choisissez **Exécuter**. Pour [planifier une actualisation automatique](system.md#schedule-tab), accédez à **Administrateur** > **Système** > **Planification**. Le temps de traitement dépend de la taille de vos données client.
 
 1. En option, [voir l'avancement du processus d'enrichissement](#see-the-progress-of-the-enrichment-process).
 
 1. Une fois le processus d'enrichissement terminé, accédez à **Mes enrichissements** pour examiner les données des profils clients nouvellement enrichis, l'heure de la dernière mise à jour et le nombre de profils enrichis.
 
-1. Sélectionnez l'enrichissement pour afficher les [résultats d'enrichissement](#enrichment-results).
+1. Sélectionnez l'enrichissement pour afficher les [résultats d'enrichissement](#view-enrichment-results).
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Voir la progression du processus d’enrichissement
 
@@ -107,12 +103,12 @@ Vous trouverez des détails sur le traitement d’un enrichissement, y compris s
 1. Sous l’enrichissement dont vous souhaitez voir la progression, sélectionnez **Voir les détails**.
 1. Dans le volet **Détails de la tâche**, sélectionnez **Afficher les détails** pour voir les processus impliqués dans la mise à jour de l’enrichissement et leur statut.
 
-## <a name="enrichment-results"></a>Résultats d’enrichissement
+## <a name="view-enrichment-results"></a>Afficher les résultats de l’enrichissement
 
 Une fois l’exécution de l’enrichissement terminée, consultez les résultats de l’enrichissement.
 
 1. Accédez à **Données** > **Enrichissement**.
-1. Dans l'onglet **Mes enrichissements**, sélectionnez l'enrichissement sur lequel vous souhaitez obtenir des informations.
+1. Dans l’onglet **Mes enrichissements**, sélectionnez l’enrichissement que vous souhaitez afficher.
 
 Tous les enrichissements affichent des informations de base comme le nombre de profils enrichis et le nombre de profils enrichis dans le temps. La vignette **Aperçu clients enrichis** montre un échantillon de l'entité d'enrichissement générée. Pour afficher une vue détaillée, sélectionnez **Afficher plus** et sélectionnez l’onglet **Données**.
 

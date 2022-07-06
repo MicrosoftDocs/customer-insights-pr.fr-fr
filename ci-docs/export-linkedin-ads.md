@@ -1,5 +1,5 @@
 ---
-title: Exporter des données Customer Insights vers LinkedIn Ads
+title: Exporter des segments vers LinkedIn Ads (version préliminaire)
 description: Apprenez à configurer la connexion et à exporter vers LinkedIn Ads.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bf1d12ffbd7a4cfd7d268fea8a1f90cc37589e00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e6ad3901f7b8dc1ae8edc54c0b09a99b01be34cd
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646449"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050853"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Exporter des segments vers LinkedIn Ads (version préliminaire)
 

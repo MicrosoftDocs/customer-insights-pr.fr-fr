@@ -1,5 +1,5 @@
 ---
-title: Enrichir les profils clients avec des données de Microsoft Office 365
+title: Enrichir les profils clients avec des données de Microsoft Office 365 (version préliminaire)
 description: Utilisez les données propriétaires de Microsoft Office pour enrichir vos profils clients avec des données d’engagement.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954130"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055671"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Enrichir les profils clients avec des données d’engagement (version préliminaire)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>Enrichir les profils clients avec des données de Microsoft Office 365 (version préliminaire)
 
 Utilisez les données de Microsoft Office 365 pour enrichir vos profils de compte client avec des informations sur les engagements dans les applications Office 365. Les données d’engagement se composent de l’activité d’e-mail et de réunion, qui est regroupée au niveau du compte. Par exemple, le nombre d’e-mails d’un compte professionnel ou le nombre de réunions avec le compte. Aucune donnée sur les utilisateurs individuels n’est disponible.
 
@@ -75,7 +75,7 @@ Sélectionnez **Exécuter** pour démarrer le processus d'enrichissement.
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>Résultats d’enrichissement
+## <a name="view-enrichment-results"></a>Afficher les résultats de l’enrichissement
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)] Il s'agit de l'entité *Office*. *Office_UserEntity* contient les ID Active Directory des adresses e-mail choisies lors de la configuration de l’enrichissement.
 

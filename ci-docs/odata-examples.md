@@ -1,5 +1,5 @@
 ---
-title: Exemples OData pour l’API Dynamics 365 Customer Insights
+title: Exemples de requêtes OData pour les API Customer Insights
 description: Exemples couramment utilisés pour le protocole Open Data Protocol (OData) pour interroger les API Customer Insights afin d’examiner les données.
 ms.date: 05/25/2022
 ms.subservice: audience-insights
@@ -8,14 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808458"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081216"
 ---
-# <a name="odata-query-examples"></a>Exemples de requête OData
+# <a name="odata-query-examples-for-customer-insights-apis"></a>Exemples de requêtes OData pour les API Customer Insights
 
 L’Open Data Protocol (OData) est un protocole d’accès aux données basé sur des protocoles de base comme HTTP. Il utilise des méthodologies communément acceptées comme REST pour le Web. Il existe différents types de bibliothèques et d’outils qui peuvent être utilisés pour utiliser les services OData.
 

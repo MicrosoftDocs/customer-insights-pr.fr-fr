@@ -1,5 +1,5 @@
 ---
-title: Exporter les données Customer Insights vers Adobe Campaign Standard
+title: Exporter des segments Customer Insights vers Adobe Campaign Standard (version préliminaire)
 description: Découvrez comment utiliser les segments Customer Insights dans Adobe Campaign Standard.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 2a62d2f889f199222eeb8cc969fce62fa89fa6f0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646232"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081033"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Utiliser les segments Customer Insights dans Adobe Campaign Standard (version préliminaire)
+# <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Exporter des segments Customer Insights vers Adobe Campaign Standard (version préliminaire)
 
 En tant qu’utilisateur de Dynamics 365 Customer Insights, vous avez peut-être créé des segments pour rendre vos campagnes marketing plus efficaces en ciblant des audiences pertinentes. Pour utiliser un segment de Customer Insights dans Adobe Experience Platform et les applications comme Adobe Campaign Standard, vous devez suivre quelques étapes décrites dans cet article.
 
@@ -23,9 +23,9 @@ En tant qu’utilisateur de Dynamics 365 Customer Insights, vous avez peut-être
 
 ## <a name="prerequisites"></a>Conditions préalables
 
--   Licence Dynamics 365 Customer Insights
--   Licence Adobe Campaign Standard
--   Compte de stockage Blob Azure
+- Licence Dynamics 365 Customer Insights
+- Licence Adobe Campaign Standard
+- Compte de stockage Blob Azure
 
 ## <a name="campaign-overview"></a>Vue d’ensemble de la campagne
 

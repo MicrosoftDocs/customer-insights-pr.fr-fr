@@ -1,6 +1,6 @@
 ---
-title: Commencez avec les comptes professionnels comme audience cible principale
-description: Découvrez les comptes professionnels comme audience cible principale Dynamics 365 Customer Insights.
+title: Utiliser des comptes professionnels
+description: Découvrez les comptes professionnels comme audience cible principale dans Dynamics 365 Customer Insights.
 ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -13,12 +13,12 @@ searchScope:
 - ci-semantic-mapping
 - ci-connections
 - customerInsights
-ms.openlocfilehash: f16c8ad50ed290562fa9f223a3e8c86228e5331e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9bf91671b744198b2f37391edc7abf58eca3c820
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646249"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053110"
 ---
 # <a name="work-with-business-accounts"></a>Utiliser des comptes professionnels
 

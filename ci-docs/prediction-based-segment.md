@@ -1,5 +1,5 @@
 ---
-title: Segments basés sur la sortie de prédiction
+title: Créer un segment basé sur un modèle de prédiction
 description: Créez des segments basés sur l’entité de sortie d’un modèle de prédiction.
 ms.date: 03/24/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0b3357cdf3c049bd92f6c3f690f27433df9117b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d67594f2467c1a0fde84b1ba0bd1afa4025e7b71
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646366"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081053"
 ---
 # <a name="create-a-segment-based-on-a-prediction-model-preview"></a>Créer un segment basé sur un modèle de prédiction (version préliminaire)
 

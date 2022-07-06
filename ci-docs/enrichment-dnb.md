@@ -1,5 +1,5 @@
 ---
-title: Enrichissement des profils d’entreprise avec Dun & Bradstreet
+title: Enrichir les profils d’entreprise avec Dun & Bradstreet (version préliminaire)
 description: Informations générales sur l’enrichissement tiers de Dun & Bradstreet.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953888"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081083"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Enrichissement des profils d’entreprise avec Dun & Bradstreet (version préliminaire)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Enrichir les profils d’entreprise avec Dun & Bradstreet (version préliminaire)
 
 Dun & Bradstreet fournit des données commerciales, des analyses et des informations aux entreprises. Elle permet aux clients ayant un profil client unifié pour les entreprises d’enrichir leurs données. Les enrichissements incluent des attributs tels que le numéro DUNS, la taille de la société, son emplacement, son secteur d’activité, et plus encore.
 
@@ -102,7 +102,7 @@ Nous prenons actuellement en charge les options de pays/région suivantes : Can
 
 1. Sélectionnez **Exécuter** pour démarrer le processus d'enrichissement ou fermer pour revenir à la page **Enrichissements**.
 
-## <a name="enrichment-results"></a>Résultats d’enrichissement
+## <a name="view-enrichment-results"></a>Afficher les résultats de l’enrichissement
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Complément de carte client pour les applications Dynamics 365 (contient une vidéo)
+title: Complément de carte client pour les applications Dynamics 365 (version préliminaire) (contient une vidéo)
 description: Affichez les données de profil client de Customer Insights dans les applications Dynamics 365 avec ce complément.
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755633"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080983"
 ---
-# <a name="customer-card-add-in-preview"></a>Complément Carte client (préversion)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Complément de carte client pour les applications Dynamics 365 (version préliminaire)
 
 Obtenez une vue globale de vos clients directement dans les applications Dynamics 365. Avec le complément Customer Card installé dans une application Dynamics 365 prise en charge, vous pouvez choisir d’afficher les champs de profil client, les informations et la chronologie des activités. Le complément récupérera les données de Customer Insights sans affecter les données de l’application Dynamics 365 connectée.
 

@@ -1,5 +1,5 @@
 ---
-title: Enrichissement avec l’importation personnalisée SFTP
+title: Enrichir les profils clients avec l’importation personnalisée SFTP (version préliminaire)
 description: Informations générales sur l’enrichissement avec l’importation personnalisée SFTP.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953716"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081030"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enrichir les profils clients avec des données personnalisées (version préliminaire)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Enrichir les profils clients avec l’importation personnalisée SFTP (version préliminaire)
 
 L’importation personnalisée SFTP (Secure File Transfer Protocol) vous permet d’importer des données qui ne doivent pas passer par le processus d’unification des données. C’est un moyen flexible, sécurisé et facile d’importer vos données. L’importation personnalisée SFTP peut être utilisée en combinaison avec l’[exportation SFTP](export-sftp.md) qui vous permet d’exporter les données de profil client nécessaires à l’enrichissement. Les données peuvent ensuite être traitées et enrichies et l’importation personnalisée SFTP peut être utilisée pour réimporter les données enrichies dans Dynamics 365 Customer Insights.
 
@@ -120,7 +120,7 @@ Votre administrateur Dynamics 365 Customer Insights peut supprimer cet enrichiss
 
 1. Sélectionnez **Exécuter** pour démarrer le processus d'enrichissement ou fermer pour revenir à la page **Enrichissements**.
 
-## <a name="enrichment-results"></a>Résultats d’enrichissement
+## <a name="view-enrichment-results"></a>Afficher les résultats de l’enrichissement
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

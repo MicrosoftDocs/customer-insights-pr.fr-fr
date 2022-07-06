@@ -1,5 +1,5 @@
 ---
-title: Amélioration des données de l’entreprise
+title: Enrichir les profils d’entreprise avec des données d’entreprise améliorées
 description: Enrichissez et normalisez les données de l’entreprise avec les modèles de Microsoft.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4247d59806468907d93fc7848231ec5a2985580e
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 131ef3d1e123628779609ddec368cfef8f4d607e
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953946"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054245"
 ---
-# <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Enrichissement des profils d’entreprise avec des données d’entreprise enrichies
+# <a name="enrich-company-profiles-with-enhanced-company-data"></a>Enrichir les profils d’entreprise avec des données d’entreprise améliorées
 
 Utilisez les modèles de Microsoft et les données d’entreprise compilées pour corriger, compléter et standardiser les profils de votre entreprise. Nous allons utiliser le [format Common Data Model](/common-data-model/schema/core/applicationcommon/account) pour une meilleure précision et de meilleures informations.
 
@@ -84,7 +84,7 @@ Le modèle ne :
 
 1. Sélectionnez **Exécuter** pour démarrer le processus d'enrichissement ou fermer pour revenir à la page **Enrichissements**.
 
-## <a name="enrichment-results"></a>Résultats d’enrichissement
+## <a name="view-enrichment-results"></a>Afficher les résultats de l’enrichissement
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

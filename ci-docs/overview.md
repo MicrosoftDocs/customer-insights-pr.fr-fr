@@ -1,17 +1,17 @@
 ---
-title: Vue d’ensemble du produit Dynamics 365 Customer Insights
+title: Vue d’ensemble du produit pour Dynamics 365 Customer Insights
 author: m-hartmann
 description: Obtenez une vue d’ensemble de Dynamics 365 Customer Insights et de ses principales fonctionnalités.
 ms.author: mhart
 ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 820d295a95e1536be1ffcbebc5ca153c10ad60ea
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: a8b982d761b6598fb5c582963dbc00852089a396
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947089"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051128"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Vue d’ensemble du produit pour Dynamics 365 Customer Insights
 

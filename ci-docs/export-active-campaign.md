@@ -1,5 +1,5 @@
 ---
-title: Exporter les données Customer Insights vers ActiveCampaign
+title: Exporter des segments vers ActiveCampaign
 description: Apprenez à configurer la connexion et à exporter vers ActiveCampaign.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5d15b9bf7383d06070ac92d7a729fc6e6e00c9d7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: eb6f2bb69bb30c319e17390562b3f33512f33ff1
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646212"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054705"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Exporter des segments vers ActiveCampaign (version préliminaire)
 
@@ -21,9 +21,9 @@ Exportez des segments de profils client unifiés vers ActiveCampaign et utilisez
 
 ## <a name="prerequisites"></a>Conditions préalables
 
--   Vous disposez d’un [compte ActiveCampaign](https://www.activecampaign.com/) et des informations d’identification administrateur correspondantes.
--   Vous avez des [segments configurés](segments.md) dans Customer Insights.
--   Les profils client unifiés dans les segments exportés contiennent un champ avec une adresse e-mail.
+- Vous disposez d’un [compte ActiveCampaign](https://www.activecampaign.com/) et des informations d’identification administrateur correspondantes.
+- Vous avez des [segments configurés](segments.md) dans Customer Insights.
+- Les profils client unifiés dans les segments exportés contiennent un champ avec une adresse e-mail.
 
 ## <a name="known-limitations"></a>Limitations connues
 

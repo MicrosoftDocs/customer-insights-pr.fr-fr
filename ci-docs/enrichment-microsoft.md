@@ -1,5 +1,5 @@
 ---
-title: Enrichir les profils clients avec les marques et les données d'intérêts de Microsoft
+title: Enrichir les profils clients avec les données de marques et d’intérêts de Microsoft (version préliminaire)
 description: Utilisez les données propriétaires de Microsoft pour enrichir vos données clients avec des affinités et le partage de voix.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953762"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081114"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Enrichir les profils clients avec des affinités et le partage de voix (version préliminaire)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Enrichir les profils clients avec les données de marques et d’intérêts de Microsoft (version préliminaire)
 
 Utilisez les données propriétaires de Microsoft pour enrichir vos données clients avec des affinités de marques, des affinités d’intérêt et le partage de voix (PdV). Ces affinités et le PdV sont basés sur les données des personnes présentant des caractéristiques démographiques similaires à celles de vos clients. Ces informations vous aident à mieux comprendre et segmenter vos clients en fonction de leurs affinités ou du PdV pour des marques et des intérêts spécifiques.
 
@@ -104,7 +104,7 @@ Nous prenons actuellement en charge les options de pays/région suivantes : Aus
 
    Lors de l’enrichissement des profils, nous enrichirons tous les profils client pour lesquels nous obtenons des données pour les marques et les intérêts sélectionnés, y compris les profils qui ne se trouvent pas dans le pays ou la région sélectionné. Par exemple, si vous avez sélectionné l’Allemagne, nous enrichirons les profils situés aux États-Unis si des données sont disponibles pour les marques et les intérêts sélectionnés aux États-Unis.
 
-## <a name="enrichment-results"></a>Résultats d’enrichissement
+## <a name="view-enrichment-results"></a>Afficher les résultats de l’enrichissement
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

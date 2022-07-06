@@ -1,5 +1,5 @@
 ---
-title: Enrichissement de l’amélioration des adresses (contient une vidéo)
+title: Enrichir les profils clients avec des adresses améliorées (contient une vidéo)
 description: Enrichissez et normalisez les informations sur les adresses des profils client avec les modèles Microsoft.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -14,14 +14,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 01f1c917c75e932cc69f4c7251e57524fc859dce
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953808"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080970"
 ---
-# <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enrichissement des profils client avec des adresses améliorées
+# <a name="enrich-customer-profiles-with-enhanced-addresses"></a>Enrichir les profils clients avec des adresses améliorées
 
 Les adresses dans vos données peuvent être non structurées, incomplètes ou incorrectes. Utilisez les modèles de Microsoft pour normaliser et enrichir vos adresses dans le [format Common Data Model](/common-data-model/schema/core/applicationcommon/address) pour une meilleure précision et une meilleure compréhension.
 
@@ -101,7 +101,7 @@ Nous prenons actuellement en charge l’enrichissement des adresses dans les pay
 
 1. Sélectionnez **Enregistrer l’enrichissement** après avoir vérifié vos choix.
 
-## <a name="enrichment-results"></a>Résultats d’enrichissement
+## <a name="view-enrichment-results"></a>Afficher les résultats de l’enrichissement
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

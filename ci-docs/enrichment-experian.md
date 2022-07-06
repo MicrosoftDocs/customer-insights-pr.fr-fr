@@ -1,5 +1,5 @@
 ---
-title: Enrichissement avec l’enrichissement tiers d’Experian
+title: Enrichir les profils client avec les données démographiques de Experian (version préliminaire)
 description: Informations générales sur l’enrichissement tiers d’Experian.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954084"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053018"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enrichir les profils client avec les données démographiques de Experian (version préliminaire)
 
@@ -79,7 +79,7 @@ Lorsque vous activez Dynamics 365 Customer Insights pour transmettre des donnée
 
 1. Sélectionnez **Exécuter** pour démarrer le processus d'enrichissement ou fermer pour revenir à la page **Enrichissements**.
 
-## <a name="enrichment-results"></a>Résultats d’enrichissement
+## <a name="view-enrichment-results"></a>Afficher les résultats de l’enrichissement
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
