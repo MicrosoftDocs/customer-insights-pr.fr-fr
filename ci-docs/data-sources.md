@@ -1,7 +1,7 @@
 ---
 title: Vue d’ensemble des sources de données
 description: Découvrez comment importer ou ingérer des données à partir de diverses sources.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051450"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207088"
 ---
 # <a name="data-sources-overview"></a>Vue d’ensemble des sources de données
 
 Dynamics 365 Customer Insights fournit des connexions pour apporter des données à partir d'un large éventail de sources. La connexion à une source de données est souvent appelée processus d’*ingestion de données*. Après avoir ingéré les données, vous pouvez [unifier](data-unification.md), générer des informations et activer les données pour créer des expériences personnalisées.
 
-## <a name="add-data-sources"></a>Ajouter des sources de données
+## <a name="add-or-edit-data-sources"></a>Ajouter ou modifier des sources de données
 
-Vous pouvez joindre ou importer des sources de données dans Customer Insights. Les liens ci-dessous fournissent des instructions sur l'ajout de sources de données.
+Vous pouvez joindre ou importer des sources de données dans Customer Insights. Les liens ci-dessous fournissent des instructions sur l’ajout et la modification des sources de données.
 
 **Joindre une source de données**
 
@@ -50,13 +50,18 @@ Si votre environnement a été configuré pour utiliser le stockage Customer Ins
 
 Si votre environnement n'utilise pas les flux de données Power Platform, la page **Source d'information** contient uniquement une liste de toutes les sources de données. Aucune section affichée.
 
-Accédez à **Données** > **Source de données** pour afficher le nom de chaque source de données ingérée, son statut, ainsi que la dernière fois que les données ont été actualisées pour cette source. Vous pouvez trier la liste des sources de données par colonne.
+## <a name="manage-existing-data-sources"></a>Gérer les sources de données existantes
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Source de données ajoutée.":::
+Accédez à **Données** > **Source de données** pour afficher le nom de chaque source de données ingérée, son statut, ainsi que la dernière fois que les données ont été actualisées pour cette source. Vous pouvez trier la liste des sources de données par colonne ou utiliser la zone de recherche pour trouver la source de données que vous souhaitez gérer.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Sélectionnez une source de données pour afficher les actions disponibles.
 
-Le chargement des données peut prendre du temps. Après une actualisation réussie, les données ingérées peuvent être consultées à partir de la page **Entités**. Pour plus d’informations, voir [Entités](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Source de données ajoutée.":::
+
+- [**Modifier**](#add-or-edit-data-sources) la source de données pour modifier ses propriétés.
+- [**Actualiser**](#refresh-data-sources) la source de données pour inclure les dernières données.
+- [**Enrichir**](data-sources-enrichment.md) la source de données avant l’unification.
+- **Supprimer** la source de données. Une source de données ne peut être supprimée que si les données ne sont utilisées dans aucun traitement tel que l'unification, les informations, les activations ou les exportations.
 
 ## <a name="refresh-data-sources"></a>Actualiser les sources de données
 
@@ -64,23 +69,12 @@ Les sources de données peuvent être actualisées selon un calendrier automatiq
 
 Accédez à **Administrateur** > **Système** > [**Programme**](system.md#schedule-tab) pour configurer les actualisations planifiées par le système de vos sources de données ingérées.
 
-Pour actualiser une source de données à la demande, procédez comme suit :
+Pour actualiser une source de données à la demande :
 
 1. Accédez à **Données** > **Sources de données**.
 
-1. Sélectionnez les points de suspension verticaux (&vellip;) en regard de la source de données à actualiser et sélectionnez **Actualiser** dans la liste déroulante. La source de données est maintenant déclenchée pour une actualisation manuelle. Si vous actualisez une source de données, à la fois le schéma de l’entité et les données seront mis à jour pour toutes les entités spécifiées dans la source de données.
+1. Sélectionnez la source de données que vous souhaitez actualiser et sélectionnez **Actualiser**. La source de données est maintenant déclenchée pour une actualisation manuelle. Si vous actualisez une source de données, à la fois le schéma de l’entité et les données seront mis à jour pour toutes les entités spécifiées dans la source de données.
 
-1. Sélectionnez **Arrêtez l’actualisation** si vous souhaitez annuler une actualisation existante et rétablir le dernier statut d’actualisation de la source de données.
-
-## <a name="delete-a-data-source"></a>Supprimer une source de données
-
-Une source de données ne peut être supprimée que si les données ne sont utilisées dans aucun traitement tel que l'unification, les informations, les activations ou les exportations.
-
-1. Accédez à **Données** > **Sources de données**.
-
-2. Sélectionnez les points de suspension verticaux (&vellip;) en regard de la source de données à supprimer et sélectionnez **Supprimer** dans le menu déroulant.
-
-3. Confirmez votre suppression.
-
+1. Sélectionnez le statut pour ouvrir le volet **Détails de la progression** et afficher la progression. Pour annuler la tâche, sélectionnez **Annuler la tâche** en bas du volet.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

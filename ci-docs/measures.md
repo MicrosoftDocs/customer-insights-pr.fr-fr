@@ -14,43 +14,56 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081206"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170817"
 ---
 # <a name="measures-overview"></a>Vue d’ensemble des mesures
 
-Les mesures vous aident à mieux comprendre les comportements des clients et les performances commerciales. Elles examinent les valeurs pertinentes des [profils unifiés](data-unification.md). Par exemple, une entreprise veut voir les *des dépenses totales par client* pour comprendre l’historique des achats d’un client individuel ou mesurer les *ventes totales de l’entreprise* pour comprendre les revenus au niveau agrégé dans l’ensemble de l’entreprise.  
+Les mesures vous aident à mieux comprendre les comportements des clients et les performances commerciales. Elles examinent les valeurs pertinentes des [profils unifiés](data-unification.md). Par exemple, une entreprise veut voir les *des dépenses totales par client* pour comprendre l’historique des achats d’un client individuel ou mesurer les *ventes totales de l’entreprise* pour comprendre les revenus au niveau agrégé dans l’ensemble de l’entreprise.
 
-Les mesures sont créées [à l’aide du générateur de mesures](measure-builder.md), une plateforme de requête de données avec divers opérateurs et des options de mappage simples. Elle vous permet de filtrer les données, de regrouper les résultats, de détecter les [chemins d’accès aux relations d’entités](relationships.md) et prévisualisez la sortie. Vous pouvez [utiliser des modèles prédéfinis](measure-templates.md) pour configurer efficacement les mesures couramment utilisées.
+Créez des mesures pour planifier les activités commerciales en interrogeant les données client et en extrayant des informations. Par exemple, créer une mesure de *total des dépenses par client* et de *total des retours par client* permet d’identifier un groupe de clients avec des dépenses élevées mais un rendement élevé. Ensuite, [créez un segment](segments.md) sur la base de ces mesures pour orienter les prochaines meilleures actions.
 
-Utilisez le générateur de mesures pour planifier les activités commerciales en interrogeant les données client et en extrayant des informations. Par exemple, créer une mesure de *total des dépenses par client* et de *total des retours par client* aide à identifier un groupe de clients avec des dépenses élevées mais un rendement élevé. Vous pouvez [créer un segment](segments.md) sur la base de ces mesures pour orienter les prochaines meilleures actions.
+## <a name="create-a-measure"></a>Créer une mesure
 
-## <a name="manage-your-measures"></a>Gérer vos mesures
+Choisissez comment créer une mesure basée sur votre audience cible.
 
-Vous trouverez la liste des mesures sur la page **Mesures**.
+# <a name="individual-consumers-b-to-c"></a>[Consommateurs individuels (B-to-C)](#tab/b2c)
 
-Vous trouverez des informations sur le type de mesure, le créateur, la date de création, le statut et l’état. Lorsque vous sélectionnez une mesure dans la liste, vous pouvez prévisualiser la sortie et télécharger un fichier CSV.
+- À partir de rien avec le créateur de mesures : [créez le vôtre](measure-builder.md).
+- À partir de mesure couramment utilisées : [utilisez des modèles prédéfinis](measure-templates.md).
+
+# <a name="business-accounts-b-to-b"></a>[Comptes d’entreprise (B-to-B)](#tab/b2b)
+
+À partir de rien avec le créateur de mesures : [créez le vôtre](measure-builder.md).
+
+---
+
+## <a name="manage-existing-measures"></a>Gérer les mesures existantes
+
+Accédez à la page **Mesures** pour afficher les mesures que vous avez créées, leur état, le type de mesure et la dernière fois que les données ont été actualisées. Vous pouvez trier la liste des mesures par colonne ou utiliser la zone de recherche pour trouver la mesure que vous souhaitez gérer.
+
+Sélectionnez en regard d’une mesure pour afficher les actions disponibles. Sélectionnez le nom de la mesure pour prévisualiser la sortie et télécharger un fichier CSV.
 
 :::image type="content" source="media/measures-actions.png" alt-text="Actions pour gérer des mesures uniques."lightbox="media/measures-actions.png":::
 
-Les actions suivantes sont disponibles lorsque vous sélectionnez une mesure :
-
-- **Modifier** la configuration de la mesure.
-- **Dupliquer** une mesure. Vous pouvez choisir de modifier ses propriétés immédiatement ou simplement d’enregistrer le doublon.
-- **Actualisez** la mesure basée sur les dernières données. Pour actualiser toutes vos mesures en même temps, sélectionnez toutes les mesures, puis **Actualiser**.
+- **Modifier** la mesure pour modifier ses propriétés.
+- **Actualiser** la mesure pour inclure les dernières données.
 - **Renommer** la mesure.
-- **Activer** ou **Désactiver**. Les mesures inactives ne seront pas actualisées pendant une [actualisation programmée](system.md#schedule-tab).
-- **Étiquette** pour [gérer les étiquettes](work-with-tags-columns.md#manage-tags) du segment.
+- **Activer** ou **Désactiver** la mesure. Les mesures inactives ne seront pas actualisées pendant une [actualisation planifiée](system.md#schedule-tab) et auront le **statut** **Ignoré**, indiquant qu’aucune actualisation n’a été tentée.
+- **Étiquette** pour [gérer les étiquettes](work-with-tags-columns.md#manage-tags) de la mesure.
 - **Supprimer** la mesure.
+- **Colonnes** pour [personnaliser les colonnes](work-with-tags-columns.md#customize-columns) qui s’affichent.
+- **Filtrer** pour [filtrer selon les étiquettes](work-with-tags-columns.md#filter-on-tags).
+- **Rechercher un nom** pour effectuer une recherche par nom de mesure.
+
+## <a name="refresh-measures"></a>Actualiser les mesures
+
+Les mesures peuvent être actualisées selon un calendrier automatique ou actualisées manuellement à la demande. Pour actualiser manuellement un ou plusieurs mesures, sélectionnez-les et choisissez **Actualiser**. Pour [planifier une actualisation automatique](system.md#schedule-tab), accédez à **Administrateur** > **Système** > **Planification**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-## <a name="next-step"></a>Étape suivante
-
-Vous pouvez utiliser des mesures existantes pour créer un [segment de clients](segments.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

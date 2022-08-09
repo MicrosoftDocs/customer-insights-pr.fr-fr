@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 26de9fce863c9832b70adf3ce39cb2ae0ce43d0e
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052048"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196253"
 ---
 # <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Enrichir les profils clients avec HERE Technologies (version préliminaire)
 
@@ -54,7 +54,7 @@ Votre administrateur Dynamics 365 Customer Insights peut supprimer cet enrichiss
 
 1. Passez la synthèse en revue et sélectionnez **Suivant**.
 
-1. Sélectionnez la connexion. Contactez un Administrateur si aucun n'est disponible.
+1. Sélectionnez la connexion. Contactez un administrateur si aucune connexion n’est disponible.
 
 1. Cliquez sur **Suivant**.
 

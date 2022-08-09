@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947365"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146692"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Demandes de droits de la personne concernée dans le cadre du RGPD
 
@@ -31,18 +31,22 @@ Le « droit d’effacement », par la suppression des données personnelles da
 
 Customer Insights offre les expériences intégrées suivantes pour supprimer les données personnelles d’un client ou d’un utilisateur spécifique :
 
-- **Gérer les demandes de suppression de données client** : Les données client dans Customer Insights sont ingérées à partir de sources de données d’origine externes à Customer Insights. Toutes les demandes de suppression du RGPD doivent être effectuées dans la source de données d’origine.
+- **Gérer les demandes de suppression de données client** : Les données client dans Customer Insights sont ingérées à partir de sources de données d’origine externes à Customer Insights. Effectuez les demandes de suppression du RGPD dans la source de données d’origine en premier lieu.
 - **Gérer les demandes de suppression de données utilisateur de Customer Insights** : les données des utilisateurs sont créées par Customer Insights. Toutes les demandes de suppression du RGPD doivent être effectuées dans Customer Insights.
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>Gérer les demandes de suppression de données clientes
 
-Un administrateur Customer Insights peut suivre ces étapes pour supprimer les données client qui ont été supprimées dans le source de données :
+Un administrateur Customer Insights peut suivre ces étapes pour supprimer les données client qui ont été supprimées dans le source de données : Assurez-vous que la demande de suppression a été effectuée dans votre source de données avant de procéder aux étapes répertoriées ci-dessous. 
 
 1. Connectez-vous à Dynamics 365 Customer Insights.
-2. Accédez à **Données** > **Sources de données**
-3. Pour chaque source de données de la liste contenant des données client supprimées, procédez comme suit :
+1. Accédez à **Données** > **Sources de données**
+1. Pour chaque source de données de la liste contenant des données client supprimées, procédez comme suit :
    1. Sélectionnez les points de suspension verticaux (&vellip;), puis sélectionnez **Actualiser**.
-   2. Vérifiez le statut de la source de données sous **Statut**. Une coche signifie que l’actualisation a réussi. Un triangle d’avertissement indique que quelque chose n’a pas fonctionné. Si un triangle d’avertissement s’affiche, contactez D365CI@microsoft.com.
+   1. Vérifiez le statut de la source de données sous **Statut**. Une coche signifie que l’actualisation a réussi. Un triangle d’avertissement indique que quelque chose n’a pas fonctionné. Si un triangle d’avertissement s’affiche, contactez D365CI@microsoft.com.
+1. Après une actualisation réussie des sources de données, exécutez également les actualisations en aval. Surtout si vous n’avez pas prévu d’actualisation complète et récurrente de Customer Insights. 
+
+> [!IMPORTANT]
+> Les segments statiques ne sont pas inclus dans une actualisation complète ou l’exécution d’actualisations en aval après une demande de suppression. Pour vous assurer que les données client sont également supprimées des segments statiques, recréez les segments statiques avec les données source actualisées.
 
 > [!div class="mx-imgBorder"]
 > ![Gestion des demandes de suppression de données client dans le cadre du RGPD.](media/gdpr-data-sources.png "Gestion des demandes de suppression de données client dans le cadre du RGPD")
@@ -77,5 +81,10 @@ Un administrateur du client peut exécuter la procédure suivante pour exporter 
 1. Envoyer un e-mail à D365CI@microsoft.com en indiquant l’adresse de messagerie de l’utilisateur dans la demande. L’équipe Customer Insights enverra un e-mail à l’adresse de messagerie enregistrée de l’administrateur du client, en demandant confirmation de l’exportation des données.
 2. Acquitter la confirmation de l’exportation des données pour l’utilisateur demandé.
 3. Recevoir les données exportées via l’adresse de messagerie de l’administrateur du client.
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Gestion de la suppression des données dans Dynamics 365 Customer Insights
+
+1. Les données seront supprimées (partitions de données et instantanés de données) si les partitions de données et les instantanés de données sont inactifs pendant plus de 30 jours, ce qui signifie qu’ils ont été remplacés par une nouvelle partition de données et un nouvel instantané via une actualisation des sources de données.
+2. Toutes les données et tous les instantanés ne sont pas supprimés. La partition de données et l’instantané de données les plus récents sont par définition actifs car ils sont utilisés dans Customer Insights. Pour les données les plus récentes, peu importe si les sources de données n’ont pas été actualisées au cours des 30 derniers jours.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

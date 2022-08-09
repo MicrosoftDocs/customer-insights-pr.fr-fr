@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080980"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207180"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Enrichissement des sources de données (version préliminaire)
 
@@ -21,9 +21,9 @@ Utilisez des données provenant de sources telles que Microsoft et d’autres pa
 
 ## <a name="enrich-a-data-source"></a>Enrichir une source de données
 
-Vous devez disposer des autorisations Contributeur ou Administrateur pour créer ou modifier des enrichissements. Pour plus d’informations, voir [Autorisations](permissions.md).  
+Vous devez disposer des [autorisations](permissions.md) Contributeur ou Administrateur pour créer ou modifier des enrichissements.  
 
-1. Accédez à **Données** > **Unifier**. Sélectionnez l’entité que vous souhaitez enrichir et sélectionnez un attribut comme clé primaire pour l’entité. Pour plus d’informations, consultez [Sélectionner la clé primaire](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Accédez à **Données** > **Unifier**. Sélectionnez l’entité que vous souhaitez enrichir et sélectionnez un attribut comme [clé primaire](map-entities.md#select-primary-key-and-semantic-type-for-attributes) de l’entité.
 
 1. Accédez à **Données** > **Sources de données**.
 
@@ -47,8 +47,8 @@ Les enrichissements suivants sont actuellement disponibles pour les sources de d
 
 ## <a name="manage-existing-data-source-enrichments"></a>Gérer les enrichissements de source de données existants
 
-Accédez à l’onglet **Mes enrichissements** pour voir tous les enrichissements configurés.
+Accédez à **Données** > **Enrichissement**. Dans l’onglet **Mes enrichissements**, affichez les enrichissements configurés, leur statut, le nombre de clients enrichis et la dernière date d’actualisation des données. Vous pouvez trier la liste des enrichissements par colonne ou utiliser la zone de recherche pour trouver l’enrichissement que vous souhaitez gérer.
 
-Sélectionnez l’enrichissement pour voir les options disponibles. Vous pouvez également sélectionner les points de suspension verticaux (&vellip;) d’un élément de liste pour voir les options. Si vous avez configuré plusieurs enrichissements, vous pouvez utiliser le champ de recherche pour le retrouver rapidement.
+Sélectionnez l’enrichissement pour voir les options disponibles. Vous pouvez également sélectionner les points de suspension verticaux (&vellip;) d’un élément de liste pour voir les options.
 
-Vous pouvez afficher, modifier, exécuter ou supprimer un enrichissement de source de données. Pour plus d’informations, voir [Gérer les enrichissements existants](enrichment-hub.md)..
+Vous pouvez afficher, modifier, exécuter ou supprimer un enrichissement de source de données. Pour plus d’informations, voir [Gérer les enrichissements existants](enrichment-hub.md#manage-existing-enrichments)..

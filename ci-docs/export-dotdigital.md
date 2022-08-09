@@ -1,88 +1,82 @@
 ---
 title: Exporter des segments vers DotDigital (version préliminaire)
 description: Apprenez à configurer la connexion et à exporter vers DotDigital.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: af0cce4edb9d47247c79ae08491366349da98b1c
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: cabaea84e31f8fe97bc558a8dca8d93bc40f43b7
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081159"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196069"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Exporter des segments vers DotDigital (version préliminaire)
 
-Exportez des segments de profils clients unifiés vers les carnets d’adresses DotDigital et utilisez-les pour les campagnes, le marketing par e-mail, ainsi que pour créer des segments de client avec DotDigital. 
+Exportez des segments de profils clients unifiés vers les carnets d’adresses DotDigital et utilisez-les pour les campagnes, le marketing par e-mail, ainsi que pour créer des segments de client avec DotDigital.
 
-## <a name="prerequisites-for-a-connection"></a>Conditions préalables à une connexion
+## <a name="prerequisites"></a>Conditions préalables
 
--   Vous avez un [compte DotDigital](https://dotdigital.com/) et vous avez créé un [utilisateur API](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). Vous devrez utiliser les informations d’identification de l’utilisateur de l’API pour créer une connexion
--   Il existe des carnets d’adresses dans DotDigital et les ID correspondants. L’ID se trouve dans l’URL lorsque vous sélectionnez et ouvrez un carnet d’adresses. Pour plus d’informations, consultez [Carnets d’adresses DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
--   Vous avez des [segments configurés](segments.md) dans Customer Insights.
--   Les profils clients unifiés dans les segments exportés contiennent un champ représentant une adresse e-mail.
+- Un [compte DotDigital](https://dotdigital.com/) et un [utilisateur API](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user).
+- Un identifiant DotDigital d’un carnet d’adresses [nouveau](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book) ou existant dans DotDigital. L’ID se trouve dans l’URL lorsque vous sélectionnez et ouvrez un carnet d’adresses.
+- [Segments configurés](segments.md) dans Customer Insights.
+- Les profils clients unifiés dans les segments exportés contiennent un champ représentant une adresse e-mail.
 
 ## <a name="known-limitations"></a>Limitations connues
 
-- Jusqu’à 1 million de profils clients par exportation vers DotDigital.
-- L’exportation vers DotDigital est limitée aux segments.
-- L’exportation de segments avec un total de 1 million de profils clients peut prendre jusqu’à 3 heures en raison des limitations du côté du fournisseur. 
-- Le nombre de profils clients que vous pouvez exporter vers DotDigital dépend de votre contrat et est limité à DotDigital.
+- Jusqu’à 1 million de profils clients par exportation vers DotDigital, ce qui peut prendre jusqu’à trois heures en raison des limitations du côté du fournisseur. Le nombre de profils clients que vous pouvez exporter vers DotDigital dépend de votre contrat avec DotDigital.
+- Segments uniquement.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Configurer la connexion à DotDigital
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Accédez à **Administrateur** > **Connexions**.
 
-1. Sélectionnez **Ajouter une connexion** et choisissez **DotDigital** pour configurer la connexion.
+1. Sélectionnez **Ajouter une connexion**, puis choisissez **DotDigital**.
 
 1. Donnez à votre connexion un nom reconnaissable dans le champ **Nom d’affichage**. Le nom et le type de connexion décrivent cette connexion. Nous vous recommandons de choisir un nom qui explique l’objectif et la cible de la connexion.
 
-1. Choisissez qui peut utiliser cette connexion. Si vous n’effectuez aucune action, la valeur par défaut sera Administrateurs. Pour plus d’informations, voir [Autoriser les contributeurs à utiliser une connexion pour les exportations](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Choisissez qui peut utiliser cette connexion. Par défaut, il s’agit uniquement des administrateurs. Pour plus d’informations, voir [Autoriser les contributeurs à utiliser une connexion pour les exportations](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Entrez vos **Nom d’utilisateur et mot de passe DotDigital**. 
+1. Entrez vos **Nom d’utilisateur et mot de passe DotDigital**.
 
-1. Entrez votre **[ID de carnet d’adresses DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)**.
+1. Entrez votre **ID de carnet d’adresses DotDigital**.
 
-1. Sélectionnez **J’accepte** de confirmer la **Confidentialité et conformité des données**.
+1. Passez en revue la [confidentialité et conformité des données](connections.md#data-privacy-and-compliance) et sélectionnez **J’accepte**.
 
-1. Sélectionnez **Connecter** pour initialiser la connexion à DotDigital.
+1. Sélectionnez **Connecter** pour initialiser la connexion.
 
 1. Sélectionnez **Vous ajouter en tant qu’utilisateur à exporter** et fournissez vos informations d’identification Customer Insights.
 
-1. Sélectionnez **Enregistrer** pour terminer la connexion. 
+1. Sélectionnez **Enregistrer** pour terminer la connexion.
 
 ## <a name="configure-an-export"></a>Configurer une exportation
 
-Vous pouvez configurer cette exportation si vous avez accès à une connexion de ce type. Pour plus d’informations, voir [Autorisations nécessaires pour configurer une exportation](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Accédez à **Données** > **Exportations**.
 
-1. Pour créer une nouvelle exportation, sélectionnez **Ajouter une destination**.
+1. Sélectionnez **Ajouter une exportation**.
 
-1. Dans le champ **Connexion pour l’exportation**, choisissez une connexion dans la section DotDigital. Si ce nom de section ne s’affiche pas, cela signifie qu’aucune connexion de ce type n’est disponible.
+1. Dans le champ **Connexion pour l’exportation**, choisissez une connexion dans la section DotDigital. Contactez un administrateur si aucune connexion n’est disponible.
 
+1. Entrez un nom pour l’exportation.
 
-1. Dans la section **Correspondance des données**, dans le champ **E-mail**, sélectionnez le champ qui représente l’adresse e-mail d’un client. Répétez les mêmes étapes pour les autres champs facultatifs tels que **Prénom**, **Nom**, **Nom complet**, **Sexe** et **Code postal**.
+1. Dans la section **Correspondance des données**, dans le champ **E-mail**, sélectionnez le champ qui représente l’adresse e-mail d’un client.
 
-1. Sélectionnez les segments que vous souhaitez exporter. Vous pouvez exporter jusqu’à 1 million de profils clients au total vers DotDigital.
+1. Si nécessaire, exportez les **Prénom**, **Nom**, **Nom et prénom**, **Genre** et **Code postal**.
 
-1. Sélectionnez **Enregistrer**.
+1. Sélectionnez les segments que vous souhaitez exporter.
 
-L’enregistrement d’une exportation n’exécute pas l’exportation immédiatement.
+1. Cliquez sur **Enregistrer**.
 
-L’exportation s’exécute avec chaque [actualisation planifiée](system.md#schedule-tab). Vous pouvez également [exporter des données à la demande](export-destinations.md#run-exports-on-demand). 
- 
-Dans DotDigital, vous trouverez désormais vos segments dans le [Carnets d’adresses DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-
-## <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données
-
-Lorsque vous activez Dynamics 365 Customer Insights pour transmettre des données vers DotDigital, vous autorisez le transfert de données en dehors de la limite de conformité de Dynamics 365 Customer Insights, notamment des données potentiellement sensibles, telles que des données personnelles. Microsoft transférera ces données selon vos instructions, mais vous êtes tenu de vous assurer que DotDigital respecte les obligations de confidentialité ou de sécurité qui vous incombent. Pour plus d’informations, consultez [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Votre administrateur Dynamics 365 Customer Insights peut supprimer cette destination d’exportation à tout moment pour interrompre l’utilisation de cette fonctionnalité.
-
+Dans DotDigital, trouvez vos segments dans le [Carnets d’adresses DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

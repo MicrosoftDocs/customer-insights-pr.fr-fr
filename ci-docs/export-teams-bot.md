@@ -1,32 +1,29 @@
 ---
 title: Bot Teams pour Dynamics 365 Customer Insights (version préliminaire)
 description: Recherchez des profils clients unifiés dans Microsoft Teams avec l’aide d’un bot.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 62a0216de848b5a3a81fdd6ac078feb551fcfec6
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: d140ae72578b48091a41005c4acafe03bac540da
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081091"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195839"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot Teams pour Dynamics 365 Customer Insights (version préliminaire)
 
 Connectez-vous à Microsoft Teams pour permettre à un bot de rechercher des profils clients unifiés dans les canaux Teams.
 
-> [!div class="mx-imgBorder"]
-> ![Bot Teams montrant un dossier client.](media/teams-bot.png "Bot Teams montrant un dossier client")
+:::image type="content" source="media/teams-bot.png" alt-text="Bot Teams montrant un dossier client":::
 
 ## <a name="prerequisites"></a>Conditions préalables
 
-Pour installer et configurer le bot, les conditions préalables suivantes doivent être remplies :
-
-- Il y a au moins une [source de données ajoutée](data-sources.md).
+- Au moins une [source de données ajoutée](data-sources.md).
 - Le [processus d’unification](data-unification.md) est complet.
 - Des champs sont ajoutés à l’[index de recherche et de filtrage](search-filter-index.md).
 - Customer Insights et Teams sont dans la même organisation.
@@ -37,12 +34,12 @@ Pour installer et configurer le bot, les conditions préalables suivantes doiven
 
 ## <a name="configure-the-bot"></a>Configurer le bot
 
-1. Accédez à **Administrateur** > **Destinations d’exportation**.
+1. Accédez à **Administrateur** > **Connexions**.
 1. Sur la vignette Microsoft Teams, sélectionnez **Configurer**.
 1. Vous êtes redirigé vers la zone **Applications** dans Teams. Vous pouvez également ouvrir Teams et sélectionner **Applications** dans l’angle inférieur gauche ou [l’obtenir depuis AppSource](https://go.microsoft.com/fwlink/?linkid=2124104) directement.
 1. Recherchez **Customer Insights** et sélectionnez l’application.
 1. Cliquez sur **Ajouter**.
-1. Une fois connecté à Customer Insights dans Teams, vous voyez un message de bienvenue et vous pouvez commencer.
+1. Connectez-vous à Customer Insights dans Teams. Un message d’accueil s’affiche.
 
 ## <a name="things-you-can-do-with-the-bot"></a>Choses que vous pouvez faire avec le bot
 
@@ -50,11 +47,10 @@ Le bot offre des capacités de recherche pour les profils client unifiés.
 
 - Saisissez **rechercher** suivi d’un nom, d’une adresse e-mail ou de tout autre champ du profil client unifié ajouté à l’index de recherche et de filtrage.
 
-  Vous obtenez une carte avec jusqu’à 15 champs de profil client résultant. Plusieurs correspondances renvoient une liste de résultats où vous pouvez sélectionner un profil. Vous pouvez ajouter le critère de recherche entre guillemets doubles pour rechercher une correspondance exacte.
+  Vous obtenez une carte avec jusqu’à 15 champs de profil client résultant. Plusieurs correspondances renvoient une liste de résultats où vous pouvez sélectionner un profil. Pour rechercher une correspondance exacte, ajoutez le critère de recherche entre guillemets doubles.
 
-- Si votre organisation gère plusieurs environnements Customer Insights dans la même organisation, vous pouvez entrer **switchinstance** pour choisir l’environnement auquel vous souhaitez connecter le bot.
+- Si votre organisation gère plusieurs environnements Customer Insights dans la même organisation, entrez **switchinstance** pour choisir l’environnement auquel vous souhaitez connecter le bot.
 
 - Saisissez **aide** pour voir une liste des commandes disponibles pour le bot.  
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

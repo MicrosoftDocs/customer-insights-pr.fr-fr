@@ -13,16 +13,14 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 0f7b2e9af65796c4d304dbd9893a21617e847620
-ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
+ms.openlocfilehash: 20728ffaef9bb705410b3ac22d19868ffd5d1243
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8844083"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139577"
 ---
 # <a name="review-data-unification"></a>Examiner l’unification des données
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Cette dernière étape du processus d’unification affiche un résumé des étapes du processus et offre la possibilité d’apporter des modifications avant de créer le profil unifié.
 

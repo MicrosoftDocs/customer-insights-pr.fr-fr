@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: cc65314f1b083694b60ac0a2625bea906be7272b
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054751"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183490"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Schémas des entités dans Common Data Model
 
@@ -39,9 +39,8 @@ Pour plus d’informations, consultez la documentation sur les [Schémas d’ent
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Afficher les entités à l’aide du navigateur d’entités de Common Data Model
 
-Vous pouvez afficher les entités dans le [Navigateur d’entités de Common Data Model](https://microsoft.github.io/CDM/). Sélectionnez une entité dans la section Application Insights pour obtenir la liste des entités Customer Insights et leurs définitions.
-> [!div class="mx-imgBorder"]
-> ![Navigateur d’entité CDM affichant l’entité CustomerActivity.](media/CDM-entity-navigator.png "Navigateur d’entité CDM affichant l’entité CustomerActivity")
+Afficher les entités dans le [Navigateur d’entités de Common Data Model](https://microsoft.github.io/CDM/). Sélectionnez une entité dans la section Application Insights pour obtenir la liste des entités Customer Insights et leurs définitions.
 
+:::image type="content" source="media/CDM-entity-navigator.png" alt-text="Navigateur d’entité CDM affichant l’entité CustomerActivity.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

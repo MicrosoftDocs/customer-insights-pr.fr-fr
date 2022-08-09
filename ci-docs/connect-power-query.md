@@ -1,7 +1,7 @@
 ---
 title: Se connecter à une source de données Power Query (contient une vidéo)
 description: Ingérer des données via un connecteur Power Query (contient une vidéo).
-ms.date: 06/13/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6736b253e3a7e652f92f61bc44bfb31ca69be31a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080993"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207042"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Se connecter à une source de données Power Query
 
@@ -41,22 +41,29 @@ L’ajout de sources de données basées sur les connecteurs Power Query suit g�
 
 1. Entrez les détails requis dans les **Paramètres de connexion** pour le connecteur sélectionné et sélectionnez **Suivant** pour voir un aperçu des données.
 
-1. Sélectionnez **Transformer les données**. Dans la cette étape, vous allez ajouter des entités à votre source de données. Les entités sont des jeux de données. Si vous avez une base de données qui comprend plusieurs jeux de données, chaque jeu de données est sa propre entité.
+1. Sélectionnez **Transformer les données**.
 
 1. La boîte de dialogue **Power Query – Modifier les requêtes** vous permet de revoir et d'affiner les données. Les entités que les systèmes ont identifiées dans votre source de données sélectionnée s’affiche dans le volet de gauche.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Boîte de dialogue Modifier les requêtes":::
 
-1. Vous pouvez également transformer vos données. Sélectionnez une entité à modifier ou transformer. Utilisez les options de la fenêtre Power Query pour appliquer les transformations. Chaque transformation est répertoriée sous **Étapes appliquées**. Power Query fournit de nombreuses options de transformation prédéfinies. Pour plus d’informations, voir l’aide de [Transformations Power Query](/power-query/power-query-what-is-power-query#transformations).
+1. Vous pouvez également transformer vos données. Sélectionnez une entité à modifier ou transformer. Utilisez les options de la fenêtre Power Query pour appliquer les transformations. Chaque transformation est répertoriée sous **Étapes appliquées**. Power Query fournit de nombreuses options de [transformation prédéfinie](/power-query/power-query-what-is-power-query#transformations).
 
    Nous vous recommandons d’utiliser les transformations suivantes :
 
    - Si vous ingérez des données à partir d’un fichier CSV, la première ligne contient souvent des en-têtes. Accédez à **Transformer**, puis sélectionnez **Utiliser la première ligne pour les en-têtes**.
    - Assurez-vous que le type de données est défini de manière appropriée. Par exemple, pour les champs de date, sélectionnez un type de date.
 
-1. Pour ajouter des entités supplémentaires à votre source de données dans la boîte de dialogue **Modifier les requêtes**, accédez à **Accueil** et sélectionnez **Obtenir des données**. Répétez les étapes 6 à 10 jusqu'à ce que vous ayez ajouté toutes les entités pour ce source de données.
+1. Pour ajouter des entités supplémentaires à votre source de données dans la boîte de dialogue **Modifier les requêtes**, accédez à **Accueil** et sélectionnez **Obtenir des données**. Répétez les étapes 5 à 10 jusqu'à ce que vous ayez ajouté toutes les entités pour ce source de données. Si vous avez une base de données qui comprend plusieurs jeux de données, chaque jeu de données est sa propre entité.
 
 1. Cliquez sur **Enregistrer**. La page **Source de données** s'ouvre et affiche la nouvelle source de données avec le statut **Actualisation en cours**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Le chargement des données peut prendre du temps. Après une actualisation réussie, les données ingérées peuvent être consultées à partir de la page [**Entités**](entities.md).
+
+> [!CAUTION]
+> Une source de données basée sur Power Query crée un [flux de données dans Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Ne modifiez pas le nom d’un flux de données dans le Centre d’administration de Power Platform utilisé dans Customer Insights. Renommer un flux de données entraîne des problèmes avec les références entre la source de données Customer Insights et le flux de données Dataverse.
 
 ### <a name="available-power-query-data-sources"></a>Sources de données Power Query disponibles
 
@@ -74,11 +81,13 @@ Les passerelles de données d’un environnement Power BI ou Power Apps existant
 
 > [!IMPORTANT]
 > Assurez-vous que vos passerelles sont mises à jour vers la version la plus récente. Vous pouvez installer une mise à jour et reconfigurer une passerelle à partir d’une invite affichée sur l’écran de la passerelle directement ou [télécharger la version la plus récente](https://powerapps.microsoft.com/downloads/). Si vous n’utilisez pas la version la plus récente de la passerelle, l’actualisation du flux de données échoue avec des messages d’erreur comme **Le mot clé n’est pas pris en charge : propriétés de configuration. Nom du paramètre : mot clé**.
+>
+> Les erreurs avec les passerelles de données sur site dans Customer Insights sont souvent dues à des problèmes de configuration. Pour plus d’informations sur la résolution des problèmes liés aux passerelles de données, consultez [Résoudre les problèmes de passerelle de données locale](/data-integration/gateway/service-gateway-tshoot).
 
 ## <a name="edit-power-query-data-sources"></a>Modifier les sources de données Power Query
 
 > [!NOTE]
-> Remarque : il se peut qu’apporter des modifications aux sources de données qui sont actuellement utilisées dans un des processus de l’application (*segmentation*, *mise en correspondance*, *fusion*, etc.) ne soit pas possible.
+> Remarque : il se peut qu’apporter des modifications aux sources de données qui sont actuellement utilisées dans un des processus de l’application (segmentation ou unification des données par exemple) ne soit pas possible.
 >
 > Dans la page **Paramètres**, vous pouvez suivre la progression de chacun des processus actifs. Lorsqu’un processus est terminé, vous pouvez revenir à la page **Sources de données**, puis apporter vos modifications.
 
@@ -86,8 +95,10 @@ Les passerelles de données d’un environnement Power BI ou Power Apps existant
 
 1. En regard de la source de données que vous souhaitez mettre à jour, sélectionnez **Modifier**.
 
-   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
 1. Appliquez vos changements et transformations dans la boîte de dialogue **Power Query – Modifier les requêtes** comme décrit dans la section [Créer une source de données](#create-a-new-data-source).
 
-1. Sélectionnez **Enregistrer** dans Power Query après avoir terminé vos modifications pour enregistrer vos modifications.
+1. Sélectionnez **Enregistrer** pour appliquer vos modifications et revenir à la page **Sources de données**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

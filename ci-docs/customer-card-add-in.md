@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080983"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9194920"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Complément de carte client pour les applications Dynamics 365 (version préliminaire)
 
@@ -28,21 +28,25 @@ Obtenez une vue globale de vos clients directement dans les applications Dynamic
 
 ## <a name="prerequisites"></a>Conditions préalables
 
-- Le complément fonctionne uniquement avec les applications pilotées par modèle Dynamics 365, telles que Sales ou Customer Service, versions 9.0 et ultérieures.
-- Pour que vos données Dynamics 365 soient mappées aux profils client Customer Insights, nous vous recommandons de les [ingérer à partir de l’application Dynamics 365 avec le connecteur Microsoft Dataverse](connect-power-query.md). Si vous utilisez une méthode différente pour ingérer des contacts (ou des comptes) Dynamics 365, vous devez vous assurer que le champ `contactid` (ou `accountid`) est défini comme la [clé primaire pour cette source de données à l’étape de mappage du processus d’unification des données](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Applications pilotées par modèle Dynamics 365, telles que Sales ou Customer Service, versions 9.0 et ultérieures.
+- Pour que vos données Dynamics 365 soient mappées aux profils client Customer Insights, nous vous recommandons de les [ingérer à partir de l’application Dynamics 365 avec le connecteur Microsoft Dataverse](connect-power-query.md). Si vous utilisez une méthode différente pour ingérer des contacts (ou des comptes) Dynamics 365, vous devez vous assurer que le champ `contactid` (ou `accountid`) est défini comme la [clé primaire pour cette source de données pendant le processus d’unification des données](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Tous les utilisateurs Dynamics 365 du complément de carte client doivent être [ajoutés en tant qu’utilisateurs](permissions.md) dans Customer Insights pour voir les données.
-- Les [capacités de recherche et de filtrage configurées](search-filter-index.md) dans Customer Insights sont nécessaires pour que la recherche de données puisse fonctionner.
+- [Fonctions de recherche et de filtrage configurées](search-filter-index.md) dans Customer Insights.
 - Chaque contrôle de complément s’appuie sur des données spécifiques dans Customer Insights. Certaines données et certains contrôles ne sont disponibles que dans des environnements de types spécifiques. La configuration du complément vous informera si un contrôle n’est pas disponible en raison du type d’environnement sélectionné. En savoir plus sur les [cas d’utilisation de l’environnement](work-with-business-accounts.md).
-  - **Contrôle de mesure** : A besoin [de mesures configurées](measures.md) de type attributs client.
-  - **Contrôle de l’intelligence**: nécessite des données générées à l’aide de [prédictions ou de modèles personnalisés](predictions-overview.md).
-  - **Contrôle des détails du client** : Tous les champs du profil sont disponibles dans le profil client unifié.
+  - **Contrôle de mesure** : a besoin [de mesures configurées](measures.md).
+  - **Contrôle de l’intelligence** : nécessite des données générées à l’aide de [prédictions ou de modèles personnalisés](predictions-overview.md).
+  - **Contrôle des détails du client** : affiche tous les champs du profil disponibles dans le profil client unifié.
   - **Contrôle d’enrichissement** : nécessite des [enrichissements](enrichment-hub.md) actifs appliqués aux profils clients. Le complément de carte prend en charge ces enrichissements : [Marques](enrichment-microsoft.md) fournies par Microsoft, [Intérêts](enrichment-microsoft.md) fournis par Microsoft et [Données d’engagement Office](enrichment-office.md) fournies par Microsoft.
-  - **Contrôle des contacts** : Nécessite la définition d’une entité sémantique de type contacts.
+  - **Contrôle des contacts** : nécessite la définition d’un type d’entité sémantique de contact.
   - **Contrôle de chronologie** : nécessite des [activités configurées](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Installer le complément Fiche client
 
-Le complément de carte client est une solution pour les applications Customer Engagement dans Dynamics 365. Pour installer la solution, accédez à AppSource et recherchez **Carte client Dynamics**. Sélectionnez le [Complément Carte client sur AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) et sélectionnez **Obtenir maintenant**.
+Le complément de carte client est une solution pour les applications Customer Engagement dans Dynamics 365. Pour installer la solution :
+
+1. Accédez à AppSource et recherchez **Carte client Dynamics**.
+
+1. Sélectionnez le [Complément Carte client sur AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) et sélectionnez **Obtenir maintenant**.
 
 Vous devrez peut-être vous connecter avec vos informations d’identification d’administrateur à l’application Dynamics 365 pour installer la solution. L’installation de la solution dans votre environnement peut prendre un certain temps.
 

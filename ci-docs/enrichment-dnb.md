@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081083"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196023"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Enrichir les profils d’entreprise avec Dun & Bradstreet (version préliminaire)
 
@@ -80,7 +80,7 @@ Nous prenons actuellement en charge les options de pays/région suivantes : Can
 
 1. Passez la synthèse en revue et sélectionnez **Suivant**.
 
-1. Sélectionnez la connexion et validez. Contactez un Administrateur si aucun n'est disponible.
+1. Sélectionnez la connexion et validez. Contactez un administrateur si aucune connexion n’est disponible.
 
 1. Cliquez sur **Suivant**.
 

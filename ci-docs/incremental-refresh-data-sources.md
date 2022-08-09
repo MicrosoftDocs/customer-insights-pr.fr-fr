@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012022"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207134"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Actualisation incrémentielle pour les sources de données Power Query et Azure Data Lake
 
-Cet article explique comment configurer l’actualisation incrémentielle pour les sources de données basées sur Power Query ou Azure Data Lake.
-
-L’actualisation incrémentielle des sources de données offre les avantages suivants :
+L’actualisation incrémentielle des sources de données dans Power Query ou Azure Data Lake fournit les avantages suivants :
 
 - **Actualisations plus rapides** - Seules les données modifiées ont été actualisées. Par exemple, vous pouvez actualiser uniquement les cinq derniers jours d’un historique jeu de données.
 - **Fiabilité accrue** - Avec des actualisations plus petites, vous n’avez pas besoin de maintenir les connexions aux systèmes sources volatils aussi longtemps, ce qui réduit le risque de problèmes de connexion.
@@ -73,6 +71,7 @@ Customer Insights permet une actualisation incrémentielle des sources de donné
 
    1. Accédez au dossier racine qui contient les fichiers .csv ou .parquet pour les données complètes, les mises à jour de données incrémentielles et les suppressions de données incrémentielles.
    1. Entrez l'extension pour les données complètes et les deux fichiers incrémentiels (\.csv or \.parquet).
+   1. Pour les fichiers .csv, sélectionnez le délimiteur de colonne et si vous voulez la première ligne du fichier comme en-tête de colonne.
    1. Cliquez sur **Enregistrer**.
 
 1. Pour **Dernière mise à jour**, sélectionnez l'attribut d'horodatage de date.

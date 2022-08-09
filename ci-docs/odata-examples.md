@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
+ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081216"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "9121559"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Exemples de requêtes OData pour les API Customer Insights
 
@@ -23,7 +23,7 @@ Cet article répertorie quelques exemples de requêtes fréquemment demandés po
 
 Vous devez modifier les exemples de requêtes pour les faire fonctionner sur les environnements cibles : 
 
-- {serviceRoot} : `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}` où {instanceId} est le GUID de l’environnement Customer Insights que vous souhaitez interroger. L’[opération ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) vous permet de trouver l’{InstanceId} à laquelle vous avez accès.
+- {serviceRoot} : `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` où {instanceId} est le GUID de l’environnement Customer Insights que vous souhaitez interroger. L’[opération ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) vous permet de trouver l’{InstanceId} à laquelle vous avez accès.
 - {CID} : GUID d’un enregistrement de client unifié. Exemple :`ce759201f786d590bf2134bff576c369`.
 - {AlternateKey} : Identifiant de la clé primaire d’un enregistrement de client dans une source de données. Exemple : `CNTID_1002`
 - {DSname} : Chaîne avec le nom d’entité d’une source de données qui est ingéré dans Customer Insights. Exemple :`Website_contacts`.
@@ -39,9 +39,10 @@ Le tableau suivant contient un ensemble d’exemples de requêtes pour l’entit
 |Clé secondaire    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Les clés secondaires persistent dans l’entité client unifiée       |
 |Sélectionner   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |Intérieur    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Clé secondaire + In   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|Clé secondaire + In   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Recherche  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Renvoie les 10 premiers résultats pour une chaîne de recherche      |
 |Appartenance aux segments  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Renvoie un nombre prédéfini de lignes à partir de l’entité de segmentation.      |
+|Appartenance à un segment pour un client | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Renvoie le profil du client s’il est membre du segment donné     |
 
 ## <a name="unified-activity"></a>Activité unifiée
 

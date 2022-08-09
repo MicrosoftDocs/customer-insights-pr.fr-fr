@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646396"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171046"
 ---
 # <a name="subscription-churn-prediction"></a>Prédiction de la résiliation d’abonnement
 
@@ -121,7 +121,7 @@ La prédiction du taux de désabonnement permet de déterminer si un client risq
    - **Nom de la prédiction :** Nom de la prédiction fourni lors de sa création.
    - **Type de prédiction :** Type de modèle utilisé pour la prédiction
    - **Entité de sortie :** Nom de l’entité pour stocker la sortie de la prédiction. Vous pouvez trouver une entité portant ce nom sur **Données** > **Entités**.    
-     Dans l’entité de sortie, *ChurnScore* est la probabilité prédite d’attrition et *IsChurn* est une étiquette binaire basée sur *ChurnScore* avec un seuil de 0,5. Le seuil par défaut peut ne pas fonctionner pour votre scénario. [Créez un nouveau segment](segments.md#create-a-new-segment) avec votre seuil préféré.
+     Dans l’entité de sortie, *ChurnScore* est la probabilité prédite d’attrition et *IsChurn* est une étiquette binaire basée sur *ChurnScore* avec un seuil de 0,5. Le seuil par défaut peut ne pas fonctionner pour votre scénario. [Créez un nouveau segment](segments.md#create-a-segment) avec votre seuil préféré.
    - **Champ prévu :** Ce champ est renseigné uniquement pour certains types de prédictions et n’est pas utilisé dans la prédiction du taux de désabonnement.
    - **Statut :** Statut actuel de l’exécution de la prédiction.
         - **Mis en file d’attente :** La prédiction attend actuellement l’exécution d’autres processus.

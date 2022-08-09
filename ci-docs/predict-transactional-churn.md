@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646476"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171092"
 ---
 # <a name="transaction-churn-prediction"></a>Prédiction de l’attrition des transactions
 
@@ -240,7 +240,7 @@ Ajoutez une liste de vos clients et comptes professionnels que vous souhaitez ut
    - **Nom de la prédiction :** Nom de la prédiction fournie lors de sa création.
    - **Type de prédiction :** Type de modèle utilisé pour la prédiction
    - **Entité de sortie** : Nom de l’entité destinée à stocker la sortie de la prédiction. Vous pouvez trouver une entité portant ce nom sur **Données** > **Entités**.
-     Dans l’entité de sortie, *ChurnScore* est la probabilité prédite d’attrition et *IsChurn* est une étiquette binaire basée sur *ChurnScore* avec un seuil de 0,5. Le seuil par défaut peut ne pas fonctionner pour votre scénario. [Créez un nouveau segment](segments.md#create-a-new-segment) avec votre seuil préféré.
+     Dans l’entité de sortie, *ChurnScore* est la probabilité prédite d’attrition et *IsChurn* est une étiquette binaire basée sur *ChurnScore* avec un seuil de 0,5. Le seuil par défaut peut ne pas fonctionner pour votre scénario. [Créez un nouveau segment](segments.md#create-a-segment) avec votre seuil préféré.
      Tous les clients ne sont pas nécessairement des clients actifs. Certains d’entre eux n’ont peut-être pas eu d’activité pendant un certain temps et sont déjà considérés comme perdus, selon votre définition d’attrition. Prédire le risque d’attrition pour les clients qui ont déjà abandonné n’est pas utile car ils ne sont pas l’audience d’intérêt.
    - **Champ prédit** : ce champ n’est renseigné que pour certains types de prédictions et n’est pas utilisé dans la prédiction de l’attrition.
    - **Statut :** Statut de l’exécution de la prédiction.

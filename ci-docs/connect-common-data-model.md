@@ -1,7 +1,7 @@
 ---
 title: Se connecter à un dossier Common Data Model à l’aide d’un compte Azure Data Lake
 description: Utilisez les données Common Data Model avec Azure Data Lake Storage.
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081013"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206996"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Se connecter aux données dans Azure Data Lake Storage
 
@@ -82,7 +82,7 @@ Ingérez des données dans Dynamics 365 Customer Insights en utilisant votre com
    :::image type="content" source="media/ADLS_required.png" alt-text="Boîte de dialogue indiquant Obligatoire pour la clé primaire":::
 
    > [!TIP]
-   > Pour modifier les entités dans une interface d'édition JSON, sélectionnez **Afficher plus** > **Modifier le fichier de schéma**. Apportez vos modifications, puis sélectionnez **Enregistrer**.
+   > Pour modifier une entité dans une interface d’édition JSON, sélectionnez-la, puis sélectionner **Modifier le fichier de schéma**. Apportez vos modifications, puis sélectionnez **Enregistrer**.
 
 1. Pour les entités sélectionnées nécessitant une ingestion incrémentielle, **Obligatoire** s'affiche sous **Actualisation incrémentielle**. Pour chacune de ces entités, voir [Configurer une actualisation incrémentielle pour les sources de données Azure Data Lake](incremental-refresh-data-sources.md).
 
@@ -101,6 +101,10 @@ Ingérez des données dans Dynamics 365 Customer Insights en utilisant votre com
    1. Cliquez sur **Terminé**.
 
 1. Cliquez sur **Enregistrer**. La page **Source de données** s'ouvre et affiche la nouvelle source de données avec le statut **Actualisation en cours**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Le chargement des données peut prendre du temps. Après une actualisation réussie, les données ingérées peuvent être consultées à partir de la page [**Entités**](entities.md).
 
 ### <a name="create-a-new-schema-file"></a>Créer un fichier de schéma
 
@@ -148,6 +152,9 @@ Ingérez des données dans Dynamics 365 Customer Insights en utilisant votre com
 
 1. Cliquez sur **Enregistrer**. La page **Source de données** s'ouvre et affiche la nouvelle source de données avec le statut **Actualisation en cours**.
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Le chargement des données peut prendre du temps. Après une actualisation réussie, les données ingérées peuvent être consultées à partir de la page [**Entités**](entities.md).
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Modifier une source de données Azure Data Lake Storage
 
@@ -179,8 +186,16 @@ Vous pouvez mettre à jour l'option *Se connecter au compte de stockage à l'aid
       > [!IMPORTANT]
       > S’il existe des dépendances sur le fichier model.json ou manifest.json existant et sur l’ensemble d’entités, vous verrez un message d’erreur et vous ne pourrez pas sélectionner un autre fichier model.json ou manifest.json. Supprimez ces dépendances avant de modifier le fichier model.json ou manifest.json ou créez une source de données avec le fichier model.json ou manifest.json que vous souhaitez utiliser pour éviter de supprimer les dépendances.
    - Pour modifier l'emplacement du fichier de données ou la clé primaire, sélectionnez **Modifier**.
-   - Pour modifier les données d'ingestion incrémentielle, consultez [Configurer une actualisation incrémentielle pour les sources de données Azure Data Lake](incremental-refresh-data-sources.md)
+   - Pour modifier les données d’ingestion incrémentielle, consultez [Configurer une actualisation incrémentielle pour les sources de données Azure Data Lake](incremental-refresh-data-sources.md).
+   - Modifiez uniquement le nom de l’entité pour qu’il corresponde au nom de l’entité dans le fichier .json.
+
+     > [!NOTE]
+     > Conservez toujours le même nom d’entité dans Customer Insights que le nom d’entité dans le fichier model.json ou manifest.json après l’ingestion. Customer Insights valide tous les noms d’entité avec model.json ou manifest.json lors de chaque actualisation du système. Si un nom d’entité est modifié à l’intérieur ou à l’extérieur de Customer Insights, une erreur se produit car Customer Insights ne peut pas trouver le nouveau nom d’entité dans le fichier .json. Si un nom d’entité ingéré a été accidentellement modifié, modifiez le nom de l’entité dans Customer Insights pour qu’il corresponde au nom dans le fichier .json.
 
 1. Sélectionnez **Attributs** pour ajouter ou modifier des attributs, ou pour activer le profilage des données. Puis sélectionnez **Terminé**.
 
 1. Cliquez sur **Enregistrer** pour appliquer vos modifications et revenir à la page **Sources de données**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

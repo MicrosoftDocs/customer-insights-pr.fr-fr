@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 39d68011df9e4341244af627bb71f4e3635256bb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081219"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195655"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestion de données en temps réel (préversion)
 
@@ -28,7 +28,7 @@ La fonctionnalité en temps réel fournit des données immédiatement pour la co
 
 Les mises à jour en temps réel ont un délai d’expiration au-delà duquel elles ne remplacent plus la valeur de la source de données :
 
-- Les mises à jour du profil seront conservées pendant 4 heures
+- Les mises à jour du profil seront conservées pendant quatre heures
 - Les activités seront conservées pendant 30 jours
 
 Ces valeurs sont des paramètres d’appel API que vous pouvez modifier. Elles visent à garantir que vos données sources demeurent votre source de référence. Si vous souhaitez que les mises à jour en temps réel soient conservées plus longtemps, vous devez les ajouter à une source de données afin qu’elles soient extraites lors de la prochaine actualisation programmée.

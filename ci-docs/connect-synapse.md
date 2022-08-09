@@ -1,7 +1,7 @@
 ---
 title: Se connecter à une source de données Azure Synapse (version préliminaire)
 description: Utilisez une base de données dans Azure Synapse en tant que source de données de Dynamics 365 Customer Insights.
-ms.date: 03/25/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052696"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206904"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Se connecter à une source de données Azure Synapse Analytics (version préliminaire)
 
@@ -66,3 +66,9 @@ Pour plus d’informations, voir [Vue d’ensemble de Azure Synapse](/azure/syna
 1. Choisissez éventuellement les entités de données sur lesquelles autoriser le profilage des données.
 
 1. Sélectionnez **Enregistrer** pour appliquer votre sélection et démarrer l’ingestion des données de votre source de données nouvellement créée liée aux tables de la base de données en lac de Azure Synapse Analytics. La page **Source de données** s'ouvre et affiche la nouvelle source de données avec le statut **Actualisation en cours**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Le chargement des données peut prendre du temps. Après une actualisation réussie, les données ingérées peuvent être consultées à partir de la page [**Entités**](entities.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

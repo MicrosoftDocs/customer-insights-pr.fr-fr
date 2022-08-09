@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 77b09b6eb0a916e724542d503d96d19c5581aca1
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "8947497"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188044"
 ---
 # <a name="use-customer-consent"></a>Utiliser le consentement du client
 
@@ -50,13 +50,13 @@ Exemple de tableau d'une base de données de consentement simple avec plusieurs 
 
 ## <a name="import-and-unify-consent-data"></a>Importer et unifier les données de consentement
 
-Vous pouvez importer des données de consentement de la même manière que vous ingérez d'autres sources de données dans Customer Insights. Pour plus d'informations sur les sources de données prises en charge et sur la manière de les importer, consultez [Présentation des sources de données](data-sources.md).
+Importez des données de consentement de la même manière que vous ingérez d’autres sources de données dans Customer Insights. Pour plus d'informations sur les sources de données prises en charge et sur la manière de les importer, consultez [Présentation des sources de données](data-sources.md).
 
 Pour plus d'informations sur l'unification de vos sources de données, consultez [Présentation de l'unification des données](data-unification.md).
 
 ## <a name="use-consent-data"></a>Utiliser les données de consentement
 
-Une fois que vos données de consentement font partie de vos profils client unifiés, vous pouvez les utiliser dans Customer Insights. Par exemple, créez un segment avec une règle pour vous assurer que vous respectez les préférences de confidentialité et de protection des données de vos clients. Les règles prenant en charge les préférences de consentement sont utilisées pour exclure les utilisateurs d'un segment en fonction des attributs de profil. Ajout d'une règle à un segment qui exclut les profils clients qui n'ont pas donné leur consentement au contact.
+Une fois que vos données de consentement font partie de vos profils client unifiés, vous pouvez les utiliser dans Customer Insights. Par exemple, créez un segment avec une règle pour vous assurer que vous respectez les préférences de confidentialité et de protection des données de vos clients. Les règles prenant en charge les préférences de consentement sont utilisées pour exclure les utilisateurs d'un segment en fonction des attributs de profil. Ajoutez une règle à un segment qui exclut les profils clients qui n’ont pas donné leur consentement au contact.
 
 En vous référant à l'exemple de tableau ci-dessus, un segment peut contenir cette règle : `Consent option=Newsletter & Consent value=True`. Cette configuration se traduit par un segment qui respecte les préférences de contact pour l'envoi d'une newsletter.
 
@@ -71,3 +71,5 @@ Il est important de maintenir à jour le statut de consentement de vos clients. 
 En d'autres termes, assurez-vous que les données sources importées dans Customer Insights disposent toujours des informations les plus récentes.
 
 Pour plus d'informations, voir [Actualiser les segments manuellement](segments.md#refresh-segments) ou [configurer une actualisation planifiée](system.md#schedule-tab).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

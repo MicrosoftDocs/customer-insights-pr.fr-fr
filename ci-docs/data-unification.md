@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: 0dbc3b2c75365e94758a1b6330e8cb557e6bd768
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 766e688cb80c50a0d620943f87b76eb84a2fb89a
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081003"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139484"
 ---
 # <a name="data-unification-overview"></a>Vue d’ensemble de l’unification des données
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Une fois la [configuration des sources de données](data-sources.md) terminée, vous pouvez unifier les données. L’unification des données vous permet d’unifier des sources de données qui étaient auparavant disparates en un seul jeu de données principal qui en fournit une vue unifiée. Pour les clients particuliers (B2C) où les données sont centrées sur les individus, l’unification fournit une vue unifiée de vos clients. Pour les comptes professionnels (B2B) où les données sont centrées sur les comptes, l’unification fournit une vue unifiée de vos comptes.
 

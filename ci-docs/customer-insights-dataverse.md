@@ -1,7 +1,7 @@
 ---
 title: Utiliser des données Customer Insights dans Microsoft Dataverse
 description: Apprenez à connecter Customer Insights et Microsoft Dataverse et comprenez les entités de sortie exportées vers Dataverse.
-ms.date: 05/30/2022
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011517"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153401"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Utiliser des données Customer Insights dans Microsoft Dataverse
 
@@ -31,13 +31,25 @@ La connexion à votre environnement Dataverse vous permet également [d’ingér
 - Aucun autre environnement Customer Insights n’est déjà associé à l’environnement Dataverse auquel vous souhaitez vous connecter. Découvrez comment [supprimer une connexion existante à un environnement Dataverse](#remove-an-existing-connection-to-a-dataverse-environment).
 - Un environnement Microsoft Dataverse ne peut se connecter qu’à un seul compte de stockage. Cela ne s’applique que si vous configurez l’environnement pour [utiliser votre Azure Data Lake Storage](own-data-lake-storage.md).
 
+## <a name="dataverse-storage-capacity-entitlement"></a>Autorisation de capacité de stockage Dataverse
+
+Un abonnement Customer Insights vous donne droit à une capacité supplémentaire pour les ressources existantes de votre organisation [capacité de stockage Dataverse](/power-platform/admin/capacity-storage). La capacité supplémentaire dépend du nombre de profils utilisés par votre abonnement.
+
+**Exemple :**
+
+En supposant que vous obteniez 15 Go de stockage de base de données et 20 Go de stockage de fichiers pour 100 000 profils clients. Si votre abonnement comprend 300 000 profils client, votre capacité de stockage totale serait de 45 Go (3 x 15 Go) de stockage de base de données et de 60 Go de stockage de fichiers (3 x 20 Go). De même, si vous avez un abonnement B2B avec 30 000 comptes, votre capacité de stockage totale sera de 45 Go (3 x 15 Go) de stockage de base de données et de 60 Go de stockage de fichiers (3 x 20 Go).
+
+La capacité de journalisation n’est pas incrémentielle et fixe pour votre organisation.
+
+Pour en savoir sur les autorisations de capacité détaillées, consultez le [Guide des licences Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Connecter un environnement Dataverse à Customer Insights
 
 L’étape **Microsoft Dataverse** vous permet de connecter Customer Insights à votre environnement Dataverse lors de la [création d’un environnement Customer Insights](create-environment.md).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="Partage de données avec Microsoft Dataverse activé automatiquement pour les nouveaux environnements.":::
 
-Les administrateurs peuvent configurer Customer Insights pour connecter un environnement Dataverse existant. En fournissant l’URL à l’environnement Dataverse, celui-ci est associé à leur nouvel environnement Customer Insights.
+Les administrateurs peuvent configurer Customer Insights pour connecter un environnement Dataverse existant. En fournissant l’URL à l’environnement Dataverse, celui-ci est associé à leur nouvel environnement Customer Insights. Après avoir établi la connexion entre Customer Insights et Dataverse, ne modifiez pas le nom de l’organisation pour l’environnement Dataverse. Le nom de l’organisation est utilisé dans l’URL de Dataverse et un nom modifié rompt la connexion avec Customer Insights.
 
 Si vous ne souhaitez pas utiliser un environnement Dataverse existant, le système crée un nouvel environnement pour les données Customer Insights dans votre locataire. [Les administrateurs Power Platform peuvent contrôler qui peut créer des environnements](/power-platform/admin/control-environment-creation). Lorsque vous configurez un nouvel environnement Customer Insights et que l’administrateur a désactivé la création d’environnements Dataverse pour tous les utilisateurs sauf les administrateurs, vous ne pourrez peut-être pas créer un nouvel environnement.
 
@@ -84,7 +96,7 @@ Pour exécuter les scripts PowerShell, vous devez d’abord configurer PowerShel
 
     2. `ByolSetup.ps1`
         - Les autorisations de *Propriétaire des données d’objet blob de stockage* au niveau du compte/conteneur de stockage sont nécessaires pour exécuter ce script ou ce script en créera une pour vous. Votre attribution de rôle peut être supprimée manuellement après l’exécution réussie du script.
-        - Ce script PowerShell ajoute le contrôle d’accès en fonction du rôle (RBAC) requis pour le service Microsoft Dataverse et les applications métier basées sur Dataverse. Il met également à jour la liste de contrôle d’accès (ACL) sur le conteneur CustomerInsights pour les groupes de sécurité créés avec le script `CreateSecurityGroups.ps1`. Le groupe Contributeur aura l’autorisation *rwx* et le groupe Lecteur aura l’autorisation *r-x* uniquement.
+        - Ce script PowerShell ajoute le contrôle d’accès en fonction du rôle requis pour le service Microsoft Dataverse et les applications métier basées sur Dataverse. Il met également à jour la liste de contrôle d’accès (ACL) sur le conteneur CustomerInsights pour les groupes de sécurité créés avec le script `CreateSecurityGroups.ps1`. Le groupe Contributeur aura l’autorisation *rwx* et le groupe Lecteur aura l’autorisation *r-x* uniquement.
         - Exécutez ce script PowerShell dans Windows PowerShell en fournissant l’ID d’abonnement Azure contenant votre Azure Data Lake Storage, le nom du compte de stockage, le nom du groupe de ressources et les valeurs d’ID du groupe de sécurité Lecteur et Contributeur. Ouvrez le script PowerShell dans un éditeur pour consulter les informations supplémentaires et la logique implémentée.
         - Copiez la chaîne de sortie après avoir exécuté correctement le script. La chaîne de sortie doit se présenter comme suit : `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 

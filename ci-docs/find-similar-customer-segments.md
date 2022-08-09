@@ -12,69 +12,59 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 09fe36a4da45d114cbfccf8dad1e7b80b4b7e320
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054798"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170724"
 ---
 # <a name="find-similar-customers-with-ai-preview"></a>Rechercher des clients similaires avec l’IA (version préliminaire)
 
-Cette fonctionnalité vous permet de trouver des clients similaires dans votre clientèle en utilisant l’intelligence artificielle. Vous devez avoir créé au moins un segment pour utiliser cette fonction. L’élargissement des critères d’un segment existant permet de trouver des clients similaires à ce segment.
+Trouvez des clients similaires dans votre clientèle grâce à l’intelligence artificielle. Vous devez avoir créé au moins un segment pour utiliser cette fonction. L’élargissement des critères d’un segment existant permet de trouver des clients similaires à ce segment.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
-> *Rechercher des clients similaires* utilise des moyens automatisés pour évaluer les données et faire des prévisions sur la base de ces données, et a donc la capacité d’être utilisé comme méthode de profilage, tel que ce terme est défini par le Règlement général sur la protection des données (« RGPD »). L’utilisation par le client de cette fonctionnalité pour traiter des données peut être soumise au RGPD ou à d’autres lois ou réglementations. Vous êtes tenu de vous assurer que votre utilisation de Dynamics 365 Customer Insights, notamment les prédictions, est conforme à toutes les lois et réglementations applicables, notamment les lois relatives à la confidentialité, aux données personnelles, aux données biométriques, à la protection des données et à la confidentialité des communications.
+> *Trouver des clients similaires* utilise des moyens automatisés pour évaluer les données et faire des prédictions basées sur ces données. Par conséquent, il a la capacité d’être utilisé comme méthode de profilage, tel que ce terme est défini par le Règlement général sur la protection des données (« RGPD »). L’utilisation par le client de cette fonctionnalité pour traiter des données peut être soumise au RGPD ou à d’autres lois ou réglementations. Vous êtes tenu de vous assurer que votre utilisation de Dynamics 365 Customer Insights, notamment les prédictions, est conforme à toutes les lois et réglementations applicables, notamment les lois relatives à la confidentialité, aux données personnelles, aux données biométriques, à la protection des données et à la confidentialité des communications.
 
-## <a name="finding-similar-customers"></a>Rechercher les clients similaires
+## <a name="find-similar-customers"></a>Trouver des clients similaires
 
 1. Accédez à **Segments** et sélectionnez le segment sur lequel vous souhaitez baser votre nouveau segment. C’est votre *segment source*.
 
-1. Dans la barre d’actions, sélectionnez **Rechercher des clients similaires**.
+1. Sélectionnez **Trouver des clients similaires**.
 
 1. Vérifiez le nom suggéré pour votre nouveau segment et modifiez-le si nécessaire.
 
 1. Si nécessaire, ajoutez des [étiquettes](work-with-tags-columns.md#manage-tags) au nouveau segment.
 
-1. Passez en revue les champs qui définissent votre nouveau segment. Ces champs définissent la base sur laquelle le système tentera de trouver des clients similaires à votre segment source. Le système sélectionnera les champs recommandés par défaut.
+1. Passez en revue les champs qui définissent votre nouveau segment. Ces champs définissent la base sur laquelle le système tentera de trouver des clients similaires à votre segment source. Le système sélectionne les champs recommandés par défaut. Si nécessaire, ajoutez d’autres champs.
   Les champs susceptibles de réduire considérablement les performances du modèle sont automatiquement exclus :
   
    - Champs avec les types de données suivants : StringType, BooleanType, CharType, LongType, IntType, DoubleType, FloatType, ShortType
    - Champs avec une cardinalité (le nombre d’éléments dans un champ) inférieure à 2 ou supérieure à 30
 
-1. Choisissez si vous souhaitez inclure **Tous les clients** ou seulement des clients dans un **Segment existant spécifique** dans votre nouveau segment.
+1. Choisissez si vous souhaitez inclure **Tous les clients** à l’exception du segment source ou seulement des clients d’un **segment différent** dans votre nouveau segment.
 
 1. Par défaut, le système suggère d’inclure seulement 20 % de la taille cible audience dans votre sortie. Modifiez ce seuil si nécessaire. L’augmentation du seuil réduira la précision.
 
 1. Ajoutez des clients dans votre segment source en cochant la case **Inclure les membres de votre segment source en plus des clients avec des attributs similaires**.
 
-1. Sélectionnez **Exécuter** en bas de la page pour démarrer une tâche de classification binaire (une méthode de Machine Learning) qui analyse le jeu de données.
+1. Sélectionnez **Exécuter** en bas de la page pour démarrer une [tâche de classification binaire](#about-similarity-scores) (une méthode de machine learning) qui analyse le jeu de données.
 
 ## <a name="view-the-similar-segment"></a>Voir le segment similaire
 
-Après avoir traité le segment similaire, vous rechercherez le nouveau segment répertorié sur la page **Segments**.
+Après avoir traité le segment similaire, vous rechercherez le nouveau segment répertorié sur la page **Segments** avec le type **Expansion**.
 
-> [!div class="mx-imgBorder"]
-> ![Segment des clients similaires.](media/expanded-segment.png "Segment des clients similaires")
+Sélectionnez **Afficher** pour voir la distribution des résultats à travers des [scores de similarité](#about-similarity-scores) et les valeurs de score de similarité sous **Aperçu des membres du segment**.
 
-Sélectionnez **Vue** dans la barre d’action pour ouvrir le détail du segment. Cette vue contient des informations sur la distribution des résultats sur les [scores de similarité](#about-similarity-scores). Vous trouverez également les valeurs des scores de similarité dans l’**Aperçu des membres du segment**.
+:::image type="content" source="media/expanded-segment.png" alt-text="Segment des clients similaires.":::
 
-## <a name="use-the-output-of-a-similar-segment"></a>Utiliser la sortie d’un segment similaire
+## <a name="manage-a-similar-segment"></a>Gérer un segment similaire
 
-Vous pouvez [utiliser le résultat d’un segment similaire](segments.md) comme vous le faites avec d’autres segments. Par exemple, exportez le segment ou créez une mesure.
+[Utilisez le résultat d’un segment similaire](segments.md#manage-existing-segments) comme vous le faites avec d’autres segments. Par exemple, exportez le segment ou créez une mesure.
 
-## <a name="refresh-and-edit-a-similar-segment"></a>Actualiser et modifier un segment similaire
-
-Pour actualiser un segment similaire, sélectionnez-le sur la page **Segments** et sélectionnez **Actualiser** dans la barre d’actions.
-
-La modification d’un segment similaire retraitera vos données. Le segment précédemment créé est mis à jour avec des données actualisées.
-Pour modifier un segment similaire, sélectionnez-le sur la page **Segments** et sélectionnez **Modifier** dans la barre d’actions. Appliquez vos modifications et sélectionnez **Exécuter** pour démarrer le traitement.
-
-## <a name="delete-a-similar-segment"></a>Supprimer un segment similaire
-
-Sélectionnez le segment sur la page **Segments** et sélectionnez **Supprimer** dans la barre d’actions. Puis confirmez votre suppression.
+Modifier, actualiser, renommer, télécharger et supprimer un segment similaire. La modification d’un segment similaire retraite vos données. Le segment précédemment créé est mis à jour avec des données actualisées.
 
 ## <a name="about-similarity-scores"></a>À propos des scores de similarité
 

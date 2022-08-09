@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081030"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195793"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Enrichir les profils clients avec l’importation personnalisée SFTP (version préliminaire)
 
@@ -104,7 +104,7 @@ Votre administrateur Dynamics 365 Customer Insights peut supprimer cet enrichiss
 
 1. Passez la synthèse en revue et sélectionnez **Suivant**.
 
-1. Sélectionnez la connexion. Contactez un Administrateur si aucun n'est disponible.
+1. Sélectionnez la connexion. Contactez un administrateur si aucune connexion n’est disponible.
 
 1. Sélectionnez le **Jeu de données client**, puis choisissez le profil ou segment que vous souhaitez enrichir. L’entité *Client* enrichit tous vos profils clients tandis qu'un segment enrichit uniquement les profils clients contenus dans ce segment.
 

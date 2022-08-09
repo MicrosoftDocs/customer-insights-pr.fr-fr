@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051680"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170770"
 ---
 # <a name="create-measures-from-templates"></a>Créer des mesures à partir de modèles
 
-Vous pouvez utiliser des modèles prédéfinis de [mesures](measures.md) couramment utilisées pour les créer. Les descriptions détaillées des modèles et une expérience guidée vous aident à créer des mesures de manière efficace. Les modèles reposent sur les données mappées de l’entité *Activité unifiée*. Assurez-vous donc d’avoir configuré les [activités client](activities.md) avant de créer une mesure à partir d’un modèle.
+Utilisez des modèles prédéfinis de [mesures](measures.md) couramment utilisées pour les créer. Les modèles reposent sur les données mappées de l’entité *Activité unifiée*. Assurez-vous donc d’avoir configuré les [activités client](activities.md) avant de créer une mesure à partir d’un modèle.
 
-Pour créer des mesures personnalisées, voir [Utiliser le générateur de mesures pour créer des mesures à partir de zéro](measure-builder.md).
+Les modèles de mesures ne sont pris en charge que dans les environnements pour les **clients particuliers**. Pour créer des mesures personnalisées ou créer des mesures pour le B2B, voir [Utiliser le générateur de mesures](measure-builder.md).
 
-# <a name="individual-consumers-b-to-c"></a>[Consommateurs individuels (B-to-C)](#tab/b2c)
-
-Modèles de mesure disponibles : 
+Modèles de mesure disponibles :
 - Valeur moyenne de la transaction (ATV)
 - Valeur totale des transactions
 - Chiffre d’affaires quotidien moyen
+- Revenu mensuel moyen
 - Chiffre d’affaires annuel moyen
 - Nombre de transactions
 - Points de fidélité gagnés
@@ -57,21 +56,22 @@ Modèles de mesure disponibles :
 
 1. Cliquez sur **Terminé**.
 
-1. Dans la section **Définir la période de temps**, définissez la période de temps des données à utiliser. Choisissez si vous souhaitez que la nouvelle mesure couvre l’ensemble du jeu de données en sélectionnant **Tout le temps**, ou si vous souhaitez que la mesure se concentre sur une **Période spécifique**.
+1. Dans la section **Définir la période de temps**, définissez la période de temps des données. Choisissez si vous souhaitez que la nouvelle mesure couvre l’ensemble du jeu de données en sélectionnant **Tout le temps**, ou si vous souhaitez que la mesure se concentre sur une **Période spécifique**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Capture d’écran montrant la section de la période de temps lors de la configuration d’une mesure à partir d’un modèle.":::
 
 1. Dans la section suivante, sélectionnez **Ajouter des données** pour choisir les activités et mapper les données correspondantes de votre entité *Activité unifiée*.
 
-    1. Étape 1 sur 2 : dans **Type d’activité**, choisissez le type d’entité que vous souhaitez utiliser. Pour **Activités**, sélectionnez les entités que vous souhaitez mapper.
-    1. Étape 2 sur 2 : choisissez l’attribut de l’entité *Activité unifiée* pour le composant requis par la formule. Par exemple, pour la valeur de transaction moyenne, il s’agit de l’attribut représentant la valeur de la transaction. Pour **Horodateur de l’activité**, choisissez l’attribut de l’entité Activité unifiée qui représente la date et l’heure de l’activité.
-   
-1. Une fois le mappage des données terminé, vous pouvez voir le statut défini sur **Terminer** et le nom des activités et des attributs mappés.
+    1. Étape 1 sur 2 : dans **Type d’activité**, choisissez le type d’entité que vous souhaitez utiliser. Pour **Activités**, sélectionnez les entités à mapper, puis sélectionnez **Suivant**.
+    1. Étape 2 sur 2 : choisissez l’attribut de l’entité *Activité unifiée* pour le composant requis par la formule. Par exemple, pour la valeur de transaction moyenne, il s’agit de l’attribut représentant la valeur de la transaction. Pour **Horodateur de l’activité**, choisissez l’attribut de l’entité *Activité unifiée* qui représente la date et l’heure de l’activité.
+    1. Cliquez sur **Enregistrer**.
 
-1. Vous pouvez maintenant sélectionner **Exécuter** pour calculer les résultats de la mesure. Pour l’affiner ultérieurement, sélectionnez **Enregistrer le brouillon**.
+    Une fois le mappage des données terminé, vous pouvez voir le statut défini sur **Terminer** et le nom des activités et des attributs mappés.
 
-# <a name="business-accounts-b-to-b"></a>[Comptes d’entreprise (B-to-B)](#tab/b2b)
+1. Sélectionnez **Exécuter** pour calculer les résultats de la mesure. Sélectionnez **Enregistrer la version préliminaire** si vous souhaitez conserver la configuration actuelle et exécuter la mesure ultérieurement. La page **Mesures** s’affiche.
 
-Cette fonctionnalité n’est disponible que pour les mesures créées dans des environnements avec des clients individuels comme audience cible principale.
+## <a name="next-step"></a>Étape suivante
 
----
+Utilisez des mesures existantes pour créer un [segment de clients](segments.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]
