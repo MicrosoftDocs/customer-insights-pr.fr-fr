@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a70aadda4fc0eff3ddb4c89665506762613c291a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194965"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245324"
 ---
 # <a name="exports-preview-overview"></a>Vue d’ensemble des exportations (version préliminaire)
 
@@ -79,7 +79,7 @@ Sélectionnez une exportation pour afficher les actions disponibles.
 
 ## <a name="schedule-and-run-exports"></a>Planifier et exécuter les exportations
 
-Chaque exportation que vous configurez comporte une planification d’actualisation. Lors d'une actualisation, le système recherche des données nouvelles ou mises à jour à inclure dans une exportation. Par défaut, les exportations sont exécutées dans le cadre de chaque [actualisation du système planifiée](system.md#schedule-tab). Vous pouvez personnaliser la planification d’actualisation ou la désactiver pour exécuter les exportations manuellement.
+Chaque exportation que vous configurez comporte une planification d’actualisation. Lors d'une actualisation, le système recherche des données nouvelles ou mises à jour à inclure dans une exportation. Par défaut, les exportations sont exécutées dans le cadre de chaque [actualisation du système planifiée](schedule-refresh.md). Vous pouvez personnaliser la planification d’actualisation ou la désactiver pour exécuter les exportations manuellement.
 
 Les planifications d'exportation dépendent de l'état de votre environnement. Si des mises à jour sont en cours sur les [dépendances](system.md#refresh-processes) lorsqu’une exportation planifiée doit commencer, le système finalisera d’abord les mises à jour, puis exécutera l’exportation. La colonne **Actualisé** indique la dernière actualisation d’une exportation.
 

@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053864"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245876"
 ---
 # <a name="data-enrichment-preview-overview"></a>Présentation de l’enrichissement des données (version préliminaire)
 
@@ -76,7 +76,7 @@ Sélectionnez l’enrichissement pour afficher les actions disponibles.
 - **Affichez** les détails de l’enrichissement avec le nombre de profils clients enrichis.
 - **Modifiez** la configuration de l’enrichissement.
 - [**Exécutez**](#run-or-refresh-enrichments) l’enrichissement pour mettre à jour les profils clients avec les données les plus récentes. Exécutez plusieurs enrichissements simultanément en les sélectionnant dans la liste.
-- **Activez** ou **désactivez** un enrichissement. Les enrichissements inactifs ne seront pas actualisés pendant une [actualisation planifiée](system.md#schedule-tab).
+- **Activez** ou **désactivez** un enrichissement. Les enrichissements inactifs ne seront pas actualisés pendant une [actualisation planifiée](schedule-refresh.md).
 - **Supprimez** l’enrichissement.
 
 Vous pouvez également créer des [segments](segments.md) ou des [mesures](measures.md) à partir des enrichissements.
@@ -85,7 +85,7 @@ Vous pouvez également créer des [segments](segments.md) ou des [mesures](measu
 
 Une fois exécutés, les enrichissements peuvent être actualisés selon une planification automatique ou actualisés manuellement à la demande.
 
-1. Pour actualiser manuellement un ou plusieurs enrichissements, sélectionnez-les et choisissez **Exécuter**. Pour [planifier une actualisation automatique](system.md#schedule-tab), accédez à **Administrateur** > **Système** > **Planification**. Le temps de traitement dépend de la taille de vos données client.
+1. Pour actualiser manuellement un ou plusieurs enrichissements, sélectionnez-les et choisissez **Exécuter**. Pour [planifier une actualisation automatique](schedule-refresh.md), accédez à **Administrateur** > **Système** > **Planification**. Le temps de traitement dépend de la taille de vos données client.
 
 1. En option, [voir l'avancement du processus d'enrichissement](#see-the-progress-of-the-enrichment-process).
 
@@ -102,6 +102,8 @@ Vous trouverez des détails sur le traitement d’un enrichissement, y compris s
 1. Dans le volet **Détails de la progression**, développez la section **Enrichissements**.
 1. Sous l’enrichissement dont vous souhaitez voir la progression, sélectionnez **Voir les détails**.
 1. Dans le volet **Détails de la tâche**, sélectionnez **Afficher les détails** pour voir les processus impliqués dans la mise à jour de l’enrichissement et leur statut.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Afficher les résultats de l’enrichissement
 

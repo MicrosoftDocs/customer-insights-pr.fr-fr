@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195655"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246105"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestion de données en temps réel (préversion)
 
 La fonctionnalité en temps quasi réel vous permet de voir, en quelques secondes, les dernières interactions de vos clients avec vos produits ou services.
 
-Les [actualisations programmées](system.md#schedule-tab) comprennent un grand nombre d’enregistrements et plusieurs opérations complexes. Tout d’abord, les données sont extraites de la source de données. Ensuite, les données sont unifiées, puis enrichies avec des informations supplémentaires. Chaque exécution de ce processus peut prendre quelques minutes à plusieurs heures.
+Les [actualisations programmées](schedule-refresh.md) comprennent un grand nombre d’enregistrements et plusieurs opérations complexes. Tout d’abord, les données sont extraites de la source de données. Ensuite, les données sont unifiées, puis enrichies avec des informations supplémentaires. Chaque exécution de ce processus peut prendre quelques minutes à plusieurs heures.
 
 La fonctionnalité en temps réel fournit des données immédiatement pour la consommation, jusqu’à ce que l’actualisation programmée suivante extrait ces données de la source de données.
 
@@ -85,7 +85,7 @@ Les détails de cette API, notamment les paramètres et les réponses, sont disp
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Comprendre votre utilisation en temps réel avec la télémétrie
 
-Obtenez une vue d’ensemble du volume de demandes adressées à l’API en temps réel ainsi que des informations sur les problèmes que le système peut rencontrer. Vous pouvez [accéder à la télémétrie en temps réel](system.md#api-usage-tab). 
+Obtenez une vue d’ensemble du volume de demandes adressées à l’API en temps réel ainsi que des informations sur les problèmes que le système peut rencontrer. Vous pouvez [accéder à la télémétrie en temps réel](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

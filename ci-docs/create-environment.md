@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142816"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245554"
 ---
 # <a name="how-to-create-a-new-environment"></a>Procédure pour créer un nouvel environnement
 
@@ -48,7 +48,7 @@ Vous avez besoin d’[autorisations administrateur](permissions.md) dans Custome
 
 Indiquez les détails suivants :
 
-- **Nom** : nom de cet environnement. Ce champ est déjà rempli si vous copiez à partir d’un environnement existant, mais vous pouvez le modifier.
+- **Nom** : nom de cet environnement. Ce champ est déjà rempli si vous copiez à partir d’un environnement existant, mais vous pouvez le modifier. Si vous avez plusieurs environnements de travail, donnez un nom facilement identifiable à chacun d’eux.
 - **Choisissez votre entreprise** : Choisissez l’audience principale pour le nouvel environnement. Vous pouvez travailler avec des clients particuliers (B2C) ou des [comptes professionnels](work-with-business-accounts.md) (B2B). Si votre organisation traite principalement avec des individus, comme un détaillant ou un café, choisissez des consommateurs individuels. Si votre audience principale est constituée d’autres entreprises, comme un constructeur automobile ou une papeterie, choisissez des comptes professionnels.
 - **Type** : Indiquez si vous souhaitez créer un environnement de Production ou Sandbox. Les environnements sandbox n’autorisent pas l’actualisation planifiée des données et sont destinés à la pré-implémentation et aux tests. Les environnements de bac à sable utilisent la même audience principale que l’environnement de production actuellement sélectionné.
 - **Région** : Région dans laquelle le service est déployé et hébergé. Pour [utiliser votre propre compte Azure Data Lake Storage](own-data-lake-storage.md) ou pour [vous connecter à une organisation Microsoft Dataverse existante](customer-insights-dataverse.md), l’environnement Customer Insights doit être dans la même région.

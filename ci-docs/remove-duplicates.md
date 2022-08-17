@@ -2,7 +2,7 @@
 title: Supprimer les doublons avant d’unifier les données
 description: La deuxième étape du processus d’unification consiste à sélectionner l’enregistrement à conserver lorsque des doublons sont détectés.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,16 +13,25 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139426"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213624"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Supprimer les doublons avant d’unifier les données
 
-Cette étape de l’unification vous permet, si vous le souhaitez, de définir des règles de gestion des enregistrements en double au sein d’une entité. La règle de *déduplication* identifie les enregistrements en double et les fusionne en un seul enregistrement. Les enregistrements sources sont liés à l’enregistrement fusionné avec d’autres identifiants. Si aucune règle n’est configurée, les règles définies par le système sont appliquées.
+Cette étape facultative de l’unification vous permet de définir des règles de suppression des enregistrements en double **au sein** d’une entité. La déduplication identifie plusieurs enregistrements pour un client et sélectionne le meilleur enregistrement à conserver (en fonction des préférences de fusion de base) ou fusionne les enregistrements en un seul (en fonction des préférences de fusion avancées). Les enregistrements sources sont liés à l’enregistrement fusionné avec d’autres identifiants. Si aucune règle n’est configurée, les règles définies par le système sont appliquées.
+
+## <a name="default-deduplication"></a>Déduplication par défaut
+
+Les règles définies par le système sont appliquées si aucune règle de déduplication n’est ajoutée.
+
+- La clé primaire est dédupliquée.
+  Pour tous les enregistrements comportant la même clé primaire, l'enregistrement **Les plus remplis** (celui présentant le moins de valeurs nulles) est retenu.
+- Toutes les règles de correspondance entre entités sont appliquées à l’entité.
+  Par exemple : dans l’étape de mise en correspondance, si l’entité A est mise en correspondance avec l’entité B sur les clés *FullName* et *DateofBirth*, alors l’entité A est également dédupliquée par *FullName* et *DateofBirth*. Dans la mesure où *FullName* et *DateofBirth* sont des clés valides pour identifier un client dans l’entité A, ces clés sont également valides pour identifier les clients en double dans l’entité A.
 
 ## <a name="include-enriched-entities-preview"></a>Inclure les entités enrichies (version préliminaire)
 

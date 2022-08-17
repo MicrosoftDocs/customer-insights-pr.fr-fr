@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206996"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245784"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Se connecter aux données dans Azure Data Lake Storage
 
@@ -56,8 +56,8 @@ Ingérez des données dans Dynamics 365 Customer Insights en utilisant votre com
 
 1. Choisissez l'une des options suivantes pour **Connecter votre stockage à l'aide de**. Pour plus d’informations, consultez [Connecter Customer Insights à un compte Azure Data Lake Storage Gen2 avec un principal de service Azure](connect-service-principal.md).
 
-   - **Ressource Azure** : Entrez l'**ID de ressource**. Facultativement, si vous souhaitez ingérer des données à partir d'un compte de stockage via une liaison Azure Private Link, sélectionnez **Activer la liaison privée**. Pour plus d’informations, consultez [Liaisons privées](security-overview.md#private-links-tab).
-   - **Abonnement Azure** : Sélectionnez le compte **Abonnement**, puis le **Groupe de ressources** et le **Compte de stockage**. Facultativement, si vous souhaitez ingérer des données à partir d'un compte de stockage via un lien privé Azure, sélectionnez **Activer la liaison privée**. Pour plus d’informations, consultez [Liaisons privées](security-overview.md#private-links-tab).
+   - **Ressource Azure** : Entrez l'**ID de ressource**. Facultativement, si vous souhaitez ingérer des données à partir d'un compte de stockage via une liaison Azure Private Link, sélectionnez **Activer la liaison privée**. Pour plus d’informations, consultez [Liaisons privées](security-overview.md#set-up-an-azure-private-link).
+   - **Abonnement Azure** : Sélectionnez le compte **Abonnement**, puis le **Groupe de ressources** et le **Compte de stockage**. Facultativement, si vous souhaitez ingérer des données à partir d'un compte de stockage via un lien privé Azure, sélectionnez **Activer la liaison privée**. Pour plus d’informations, consultez [Liaisons privées](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > L’un des rôles suivants pour le conteneur ou le compte de stockage est nécessaire pour créer la source de données :
@@ -176,7 +176,7 @@ Vous pouvez mettre à jour l'option *Se connecter au compte de stockage à l'aid
         > - Propriétaire de données d’objets BLOB de stockage
         > - Contributeur de données BLOB de stockage
 
-   - **Activez la liaison privée** si vous souhaitez ingérer des données à partir d'un compte de stockage via une liaison Azure Private Link. Pour plus d’informations, consultez [Liaisons privées](security-overview.md#private-links-tab).
+   - **Activez la liaison privée** si vous souhaitez ingérer des données à partir d'un compte de stockage via une liaison Azure Private Link. Pour plus d’informations, consultez [Liaisons privées](security-overview.md#set-up-an-azure-private-link).
 
 1. Cliquez sur **Suivant**.
 1. Modifiez ce qui suit :

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 6c951219410b55adc34691f677158b574cea1e01
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188044"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245692"
 ---
 # <a name="use-customer-consent"></a>Utiliser le consentement du client
 
@@ -70,6 +70,6 @@ Il est important de maintenir à jour le statut de consentement de vos clients. 
 
 En d'autres termes, assurez-vous que les données sources importées dans Customer Insights disposent toujours des informations les plus récentes.
 
-Pour plus d'informations, voir [Actualiser les segments manuellement](segments.md#refresh-segments) ou [configurer une actualisation planifiée](system.md#schedule-tab).
+Pour plus d'informations, voir [Actualiser les segments manuellement](segments.md#refresh-segments) ou [configurer une actualisation planifiée](schedule-refresh.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

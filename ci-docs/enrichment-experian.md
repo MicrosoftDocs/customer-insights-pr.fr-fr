@@ -1,19 +1,19 @@
 ---
 title: Enrichir les profils client avec les données démographiques de Experian (version préliminaire)
 description: Informations générales sur l’enrichissement tiers d’Experian.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fccb37cde3f05a70009c18b6c52db01a5ede094d
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195933"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237993"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enrichir les profils client avec les données démographiques de Experian (version préliminaire)
 
@@ -41,13 +41,9 @@ Vous devez être un [administrateur](permissions.md#admin) dans Customer Insight
 
 1. Saisissez un nom pour la connexion et un ID utilisateur, un ID de partie et un numéro de modèle valides pour votre Compte Transport Sécurisé Experian.
 
-1. Vérifiez et donnez votre consentement pour [Confidentialité et conformité des données](#data-privacy-and-compliance) en sélectionnant **J’accepte**.
+1. Passez en revue la [confidentialité et conformité des données](connections.md#data-privacy-and-compliance) et sélectionnez **J’accepte**.
 
 1. Sélectionnez **Vérifier** pour valider la configuration, puis sélectionnez **Enregistrer**.
-
-### <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données
-
-Lorsque vous activez Dynamics 365 Customer Insights pour transmettre des données à Experian, vous autorisez le transfert de données en dehors de la limite de conformité pour Dynamics 365 Customer Insights, y compris les données potentiellement sensibles telles que les données personnelles. Microsoft transférera ces données selon vos instructions, mais vous êtes tenu de vous assurer qu’Experian respecte vos éventuelles obligations de confidentialité ou de sécurité. Pour plus d’informations, consultez [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). Votre administrateur Dynamics 365 Customer Insights peut supprimer cet enrichissement à tout moment pour ne plus utiliser cette fonctionnalité.
 
 ## <a name="configure-the-enrichment"></a>Configurer l’enrichissement
 

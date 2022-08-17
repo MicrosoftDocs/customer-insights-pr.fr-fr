@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170817"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245370"
 ---
 # <a name="measures-overview"></a>Vue d’ensemble des mesures
 
@@ -53,7 +53,7 @@ Sélectionnez en regard d’une mesure pour afficher les actions disponibles. S�
 - **Modifier** la mesure pour modifier ses propriétés.
 - **Actualiser** la mesure pour inclure les dernières données.
 - **Renommer** la mesure.
-- **Activer** ou **Désactiver** la mesure. Les mesures inactives ne seront pas actualisées pendant une [actualisation planifiée](system.md#schedule-tab) et auront le **statut** **Ignoré**, indiquant qu’aucune actualisation n’a été tentée.
+- **Activer** ou **Désactiver** la mesure. Les mesures inactives ne seront pas actualisées pendant une [actualisation planifiée](schedule-refresh.md) et auront le **statut** **Ignoré**, indiquant qu’aucune actualisation n’a été tentée.
 - **Étiquette** pour [gérer les étiquettes](work-with-tags-columns.md#manage-tags) de la mesure.
 - **Supprimer** la mesure.
 - **Colonnes** pour [personnaliser les colonnes](work-with-tags-columns.md#customize-columns) qui s’affichent.
@@ -62,7 +62,7 @@ Sélectionnez en regard d’une mesure pour afficher les actions disponibles. S�
 
 ## <a name="refresh-measures"></a>Actualiser les mesures
 
-Les mesures peuvent être actualisées selon un calendrier automatique ou actualisées manuellement à la demande. Pour actualiser manuellement un ou plusieurs mesures, sélectionnez-les et choisissez **Actualiser**. Pour [planifier une actualisation automatique](system.md#schedule-tab), accédez à **Administrateur** > **Système** > **Planification**.
+Les mesures peuvent être actualisées selon un calendrier automatique ou actualisées manuellement à la demande. Pour actualiser manuellement un ou plusieurs mesures, sélectionnez-les et choisissez **Actualiser**. Pour [planifier une actualisation automatique](schedule-refresh.md), accédez à **Administrateur** > **Système** > **Planification**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

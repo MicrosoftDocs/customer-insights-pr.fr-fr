@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: d2ff49c324c5c5c28213f362ff330d441fcb6052
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011930"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246198"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Utiliser votre propre compte Azure Data Lake Storage Gen2
 
@@ -37,7 +37,7 @@ Lorsque vous créez un nouvel environnement, assurez-vous que le compte Data Lak
 1. Choisissez comment **Connecter votre stockage**. Vous pouvez choisir entre une option basée sur une ressource et une option basée sur un abonnement pour l’authentification. Pour plus d’informations, consultez [Se connecter à un compte Azure Data Lake Storage en utilisant un principal de service Azure](connect-service-principal.md).
    - Pour l’**Abonnement Azure**, choisissez l’**Abonnement**, le **Groupe de ressources** et le **Compte de stockage** qui contient le conteneur `customerinsights`.
    - Pour la **Clé du compte**, fournissez le **Nom du compte** et la **Clé du compte** pour le compte Data Lake Storage. L’utilisation de cette méthode d’authentification implique que vous êtes informé si votre organisation effectue une rotation des clés. Vous devez [mettre à jour la configuration de l’environnement](manage-environments.md#edit-an-existing-environment) avec la nouvelle clé lors de sa rotation.
-1. Choisissez si vous souhaitez utiliser Azure Private Link pour vous connecter au compte de stockage et [créez la connexion à Private Link](security-overview.md#private-links-tab) avec un processus en deux étapes.
+1. Choisissez si vous souhaitez utiliser Azure Private Link pour vous connecter au compte de stockage et [créez la connexion à Private Link](security-overview.md#set-up-an-azure-private-link) avec un processus en deux étapes.
 
 Lorsque les processus système tels que l’ingestion de données sont terminés, le système crée les dossiers correspondants dans le compte de stockage. Les fichiers de données et les fichiers *model.json* sont créés et ajoutés aux dossiers en fonction du nom du processus.
 

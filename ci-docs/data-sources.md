@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207088"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245646"
 ---
 # <a name="data-sources-overview"></a>Vue d’ensemble des sources de données
 
@@ -67,7 +67,7 @@ Sélectionnez une source de données pour afficher les actions disponibles.
 
 Les sources de données peuvent être actualisées selon un calendrier automatique ou actualisées manuellement à la demande. Les [Sources de données sur site](connect-power-query.md#add-data-from-on-premises-data-sources) s'actualisent selon leurs propres horaires qui sont configurés lors de l'ingestion de données. Pour les sources de données attachées, l'ingestion de données utilise les dernières données disponibles à partir de ce source de données.
 
-Accédez à **Administrateur** > **Système** > [**Programme**](system.md#schedule-tab) pour configurer les actualisations planifiées par le système de vos sources de données ingérées.
+Accédez à **Administrateur** > **Système** > [**Programme**](schedule-refresh.md) pour configurer les actualisations planifiées par le système de vos sources de données ingérées.
 
 Pour actualiser une source de données à la demande :
 

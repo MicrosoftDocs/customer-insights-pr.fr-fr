@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139654"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213579"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Unifier les champs client pour l’unification des données
 
@@ -58,6 +58,9 @@ Dans cette étape du processus d’unification, choisissez et excluez les attrib
 
 1. Spécifiez comment combiner ou fusionner les champs de l’une des trois options :
     - **Importance** : identifie la valeur gagnante en fonction du rang d’importance spécifié pour les champs participants. C’est l’option de fusion par défaut. Sélectionnez **Monter/Descendre** pour définir le classement par importance.
+
+      > [!NOTE]
+      > Customer Insights utilise la première valeur non nulle. Par exemple, pour les entités A, B et C classées dans cet ordre, si A.Nom et B.Nom sont nuls, alors la valeur de C.Nom est utilisée.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Option Importance dans la boîte de dialogue de champs de fusion.":::
 

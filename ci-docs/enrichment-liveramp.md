@@ -1,19 +1,19 @@
 ---
 title: Enrichir les profils de clients avec les données d’identité de LiveRamp (version préliminaire)
 description: Enrichissez les profils de clients avec des données LiveRamp.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0aa6dc144602741b87843a5373779855ee3e334c
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196345"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237809"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Enrichir les profils de clients avec les données d’identité de LiveRamp (version préliminaire)
 
@@ -41,13 +41,9 @@ Vous devez être un [Administrateur](permissions.md#admin) dans Customer Insight
 
 1. Saisissez un nom pour la connexion, un ID client LiveRamp valide et un secret.
 
-1. Vérifiez et donnez votre consentement pour [Confidentialité et conformité des données](#data-privacy-and-compliance) en sélectionnant **J’accepte**.
+1. Passez en revue la [confidentialité et conformité des données](connections.md#data-privacy-and-compliance) et sélectionnez **J’accepte**.
 
 1. Sélectionnez **Vérifier** pour valider la configuration, puis sélectionnez **Enregistrer**.
-
-### <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données
-
-Lorsque vous activez Dynamics 365 Customer Insights pour transmettre des données vers LiveRamp, vous autorisez le transfert de données en dehors de la limite de conformité de Dynamics 365 Customer Insights, notamment des données potentiellement sensibles, telles que des données personnelles. Microsoft transférera ces données selon vos instructions, mais vous devez vous assurer que LiveRamp respecte toutes les obligations de confidentialité ou de sécurité qui vous incombent. Pour plus d’informations, voir [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). Votre administrateur Dynamics 365 Customer Insights peut supprimer cet enrichissement à tout moment pour interrompre l’utilisation de cette fonctionnalité.
 
 ## <a name="configure-the-enrichment"></a>Configurer l’enrichissement
 

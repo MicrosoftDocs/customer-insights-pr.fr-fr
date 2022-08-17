@@ -1,19 +1,19 @@
 ---
 title: Enrichir les profils clients avec HERE Technologies (version préliminaire)
 description: Informations générales sur l’enrichissement tiers de HERE Technologies.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 26de9fce863c9832b70adf3ce39cb2ae0ce43d0e
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 86a070342193dd7afda38823d90f4bd28c8b862e
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196253"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237855"
 ---
 # <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Enrichir les profils clients avec HERE Technologies (version préliminaire)
 
@@ -33,16 +33,11 @@ Vous devez être un [administrateur](permissions.md#admin) dans Customer Insight
 
 1. Entrez un nom pour la connexion et une clé API HERE Technologies valide.
 
-1. Vérifiez et donnez votre consentement pour [Confidentialité et conformité des données](#data-privacy-and-compliance) en sélectionnant **J’accepte**.
+1. Passez en revue la [confidentialité et conformité des données](connections.md#data-privacy-and-compliance) et sélectionnez **J’accepte**.
 
 1. Sélectionnez **Vérifier** pour valider la configuration, puis sélectionnez **Enregistrer**.
 
    :::image type="content" source="media/enrichment-HERE-connection.png" alt-text="Page de configuration de la connexion de HERE technologies.":::
-
-### <a name="data-privacy-and-compliance"></a>Confidentialité et conformité des données
-
-Lorsque vous activez Dynamics 365 Customer Insights pour transmettre des données vers HERE Technologies, vous autorisez le transfert de données en dehors de la limite de conformité de Dynamics 365 Customer Insights, notamment des données potentiellement sensibles, telles que des données personnelles. Microsoft transférera ces données selon vos instructions, mais vous êtes tenu de vous assurer que HERE Technologies respecte les obligations de confidentialité ou de sécurité qui vous incombent. Pour plus d’informations, consultez [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Votre administrateur Dynamics 365 Customer Insights peut supprimer cet enrichissement à tout moment pour ne plus utiliser cette fonctionnalité.
 
 ## <a name="configure-the-enrichment"></a>Configurer l’enrichissement
 

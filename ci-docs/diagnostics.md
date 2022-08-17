@@ -1,7 +1,7 @@
 ---
-title: Transfert de journaux dans Dynamics 365 Customer Insights avec Azure Monitor (version préliminaire)
+title: Exporter les journaux de diagnostic (aperçu)
 description: Apprenez à envoyer des journaux vers Microsoft Azure Monitor.
-ms.date: 12/14/2021
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: article
@@ -11,71 +11,92 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052650"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245922"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Transfert de journaux dans Dynamics 365 Customer Insights avec Azure Monitor (version préliminaire)
+# <a name="export-diagnostic-logs-preview"></a>Exporter les journaux de diagnostic (aperçu)
 
-Dynamics 365 Customer Insights fournit une intégration directe avec Azure Monitor. Les journaux de ressources Azure Monitor vous permettent de surveiller et d’envoyer des journaux vers le [Stockage Azure](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), ou de les diffuser sur [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/).
+Transférer les journaux de Customer Insights à l'aide de Azure Monitor. Les journaux de ressources Azure Monitor vous permettent de surveiller et d’envoyer des journaux vers le [Stockage Azure](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), ou de les diffuser sur [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights envoie les journaux d’événements suivants :
 
 - **Événements d’audit**
-  - **APIEvent** : active le suivi des modifications effectué via l’interface utilisateur de Dynamics 365 Customer Insights.
+  - **APIEvent** : active le suivi des modifications via l’interface utilisateur de Dynamics 365 Customer Insights.
 - **Événements opérationnels**
-  - **WorkflowEvent** : le workflow vous permet de configurer des [Sources de données](data-sources.md), d’[unifier](data-unification.md), d’[enrichir](enrichment-hub.md) et enfin d’[exporter](export-destinations.md) des données dans d’autres systèmes. Toutes ces étapes peuvent être effectuées individuellement (par exemple, déclencher une seule exportation). Elles peuvent également s’exécuter de manière orchestrée (par exemple, l’actualisation des données à partir de sources de données qui déclenche le processus d’unification, qui va ensuite extraire des enrichissements et une fois terminé, exportera les données dans un autre système). Pour plus d’informations, consultez [Schéma de WorkflowEvent](#workflow-event-schema).
-  - **APIEvent** : tous les appels d’API à l’instance clients de Dynamics 365 Customer Insights. Pour plus d’informations, consultez [Schéma d’APIEvent](#api-event-schema).
+  - **WorkflowEvent** : vous permet de configurer des [sources de données](data-sources.md), d’[unifier](data-unification.md), d’[enrichir](enrichment-hub.md) et d’[exporter](export-destinations.md) des données dans d’autres systèmes. Ces étapes peuvent être effectuées individuellement (par exemple, déclencher une seule exportation). Elles peuvent également s’exécuter de manière orchestrée (par exemple, l’actualisation des données à partir de sources de données qui déclenche le processus d’unification, qui va ensuite extraire des enrichissements et exportera les données dans un autre système). Pour plus d’informations, consultez [Schéma de WorkflowEvent](#workflow-event-schema).
+  - **APIEvent** : envoie tous les appels d’API à l’instance clients de Dynamics 365 Customer Insights. Pour plus d’informations, consultez [Schéma d’APIEvent](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Configurer les paramètres de diagnostic
 
 ### <a name="prerequisites"></a>Conditions préalables
 
-Pour configurer les diagnostics dans Customer Insights, les conditions préalables suivantes doivent être remplies :
-
-- Vous disposez d’un [Abonnement Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) actif.
-- Vous disposez d’autorisations [administrateur](permissions.md#admin) dans Customer Insights.
-- Vous disposez du rôle **Contributeur** et **Administrateur de l’accès utilisateur** sur la ressource de destination dans Azure. La ressource peut être un compte Azure Data Lake Storage, un hub d’événements Azure ou un espace de travail Azure Log Analytics. Pour plus d’informations, consultez [Ajouter ou supprimer des attributions de rôles Azure à l’aide du portail Azure](/azure/role-based-access-control/role-assignments-portal). Cette autorisation est nécessaire lors de la configuration des paramètres de diagnostic dans Customer Insights ; elle peut être modifiée après une configuration réussie.
+- Un [abonnement Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) actif.
+- Autorisations [administrateur](permissions.md#admin) dans Customer Insights.
+- [Rôle Contributeur et Administrateur de l’accès utilisateur](/azure/role-based-access-control/role-assignments-portal) sur la ressource de destination dans Azure. La ressource peut être un compte Azure Data Lake Storage, un hub d’événements Azure ou un espace de travail Azure Log Analytics. Cette autorisation est nécessaire lors de la configuration des paramètres de diagnostic dans Customer Insights, mais elle peut être modifiée après une configuration réussie.
 - Les [Exigences de destination](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pour le stockage Azure, Azure Event Hub ou Azure Log Analytics sont remplies.
-- Vous disposez au moins du rôle **Lecteur** sur le groupe de ressources auquel appartient la ressource.
+- Au moins du rôle **Lecteur** sur le groupe de ressources auquel appartient la ressource.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Configurer les diagnostics avec Azure Monitor
 
-1. Dans Customer Insights, sélectionnez **Système** > **Diagnostics** pour voir les destinations de diagnostics configurées pour cette instance.
+1. Dans Customer Insights, accédez à **Admin** > **Système** et sélectionnez l'onglet **Diagnostic**.
 
 1. Sélectionnez **Ajouter une destination**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Connexion aux diagnostics](media/diagnostics-pane.png "Connexion aux diagnostics")
+   :::image type="content" source="media/diagnostics-pane.png" alt-text="Connexion aux diagnostics.":::
 
 1. Fournissez un nom dans le champ **Nom de la destination des diagnostics**.
 
-1. Choisissez le **Client** de l’abonnement Azure avec la ressource de destination et sélectionnez **Se connecter**.
+1. Sélectionnez le **Type de ressource** (Compte de stockage, Event Hub ou Log Analytics).
 
-1. Sélectionnez le **Type de ressource** (compte de stockage, Event Hub ou Log Analytics).
+1. Sélectionnez l'**Abonnement**, le **Groupe de ressources** et la **Ressource** pour la ressource de destination. Voir [Configuration de la ressource de destination](#configuration-on-the-destination-resource) pour les autorisations et les informations de connexion.
 
-1. Sélectionnez l’**Abonnement** pour la ressource de destination.
-
-1. Sélectionnez le **Groupe de ressources** pour la ressource de destination.
-
-1. Sélectionnez la **Ressource**.
-
-1. Confirmez la déclaration **Confidentialité et conformité des données**.
+1. Passez en revue la [confidentialité et conformité des données](connections.md#data-privacy-and-compliance) et sélectionnez **J’accepte**.
 
 1. Sélectionnez **Se connecter au système** pour se connecter à la ressource de destination. Les journaux commencent à apparaître dans la destination après 15 minutes, si l’API est en cours d’utilisation et génère des événements.
 
-### <a name="remove-a-destination"></a>Supprimer une destination
+## <a name="configuration-on-the-destination-resource"></a>Configuration de la ressource de destination
 
-1. Accédez à **Système** > **Diagnostics**.
+En fonction du type de ressources que vous avez choisi, les modifications suivantes sont automatiquement apportées :
+
+### <a name="storage-account"></a>Storage account
+
+Le principal de service Customer Insights obtient l’autorisation **Contributeur du compte de stockage** sur la ressource sélectionnée et crée deux conteneurs dans l’espace de noms sélectionné :
+
+- `insight-logs-audit` contenant les **événements d’audit**
+- `insight-logs-operational` contenant les **événements opérationnels**
+
+### <a name="event-hub"></a>Hub d’événements
+
+Le principal de service Customer Insights obtient l’autorisation **Propriétaire des données Azure Event Hubs** sur la ressource et crée deux Event Hubs dans l’espace de noms sélectionné :
+
+- `insight-logs-audit` contenant les **événements d’audit**
+- `insight-logs-operational` contenant les **événements opérationnels**
+
+### <a name="log-analytics"></a>Log Analytics
+
+Le principal de service Customer Insights obtient l’autorisation **Contributeur Log Analytics** sur la ressource. Les journaux sont disponibles sous **Journaux** > **Tables** > **Gestion des journaux** dans l’espace de travail Log Analytics sélectionné. Développez la solution **Gestion des journaux** et localisez les tables `CIEventsAudit` et `CIEventsOperational`.
+
+- `CIEventsAudit` contenant les **événements d’audit**
+- `CIEventsOperational` contenant les **événements opérationnels**
+
+Dans la fenêtre **Requêtes**, développez la solution **Audit** et localisez les exemples de requêtes fournis en recherchant `CIEvents`.
+
+## <a name="remove-a-diagnostics-destination"></a>Supprimer une destination des diagnostics
+
+1. Accédez à **Administrateur** > **Système** et sélectionnez l’onglet **Diagnostics**.
 
 1. Sélectionnez la destination des diagnostics dans la liste.
 
+   > [!TIP]
+   > La suppression de la destination arrête le transfert des journaux, mais ne supprime pas la ressource sur l’abonnement Azure. Pour supprimer la ressource dans Azure, vous pouvez sélectionner le lien dans la colonne **Actions** pour ouvrir le portail Azure pour la ressource sélectionnée et la supprimer à cet endroit. Ensuite, supprimez la destination des diagnostics.
+
 1. Dans la colonne **Actions**, sélectionnez l’icône **Supprimer**.
 
-1. Confirmez la suppression pour arrêter le transfert de journaux. La ressource sur l’abonnement Azure ne sera pas supprimée. Vous pouvez sélectionner le lien dans la colonne **Actions** pour ouvrir le portail Azure pour la ressource sélectionnée et la supprimer à cet endroit.
+1. Confirmez la suppression pour supprimer la destination et arrêter le transfert du journal.
 
 ## <a name="log-categories-and-event-schemas"></a>Catégories de journaux et schémas d’événements
 
@@ -89,36 +110,9 @@ Customer Insights propose deux catégories :
 - **Événements d’audit** : [événements d’API](#api-event-schema) pour suivre les changements de configuration du service. Les opérations `POST|PUT|DELETE|PATCH` entrent dans cette catégorie.
 - **Événements opérationnels** : [événements d’API](#api-event-schema) ou [événements de workflow](#workflow-event-schema) générés lors de l’utilisation du service.  Par exemple, les requêtes `GET` ou les événements d’exécution d’un workflow.
 
-## <a name="configuration-on-the-destination-resource"></a>Configuration de la ressource de destination
-
-En fonction du type de ressource choisi, les étapes suivantes s’appliqueront automatiquement :
-
-### <a name="storage-account"></a>Storage account
-
-Le principal de service Customer Insights obtient l’autorisation **Contributeur du compte de stockage** sur la ressource sélectionnée et crée deux conteneurs dans l’espace de noms sélectionné :
-
-- `insight-logs-audit` contenant les **événements d’audit**
-- `insight-logs-operational` contenant les **événements opérationnels**
-
-### <a name="event-hub"></a>Hub d’événements
-
-Le principal de service Customer Insights obtient l’autorisation **Propriétaire des données Azure Event Hubs** sur la ressource et créera deux Event Hubs dans l’espace de noms sélectionné :
-
-- `insight-logs-audit` contenant les **événements d’audit**
-- `insight-logs-operational` contenant les **événements opérationnels**
-
-### <a name="log-analytics"></a>Log Analytics
-
-Le principal de service Customer Insights obtient l’autorisation **Contributeur Log Analytics** sur la ressource. Les journaux seront disponibles sous **Journaux** > **Tables** > **Gestion des journaux** dans l’espace de travail Log Analytics sélectionné. Développez la solution **Gestion des journaux** et localisez les tables `CIEventsAudit` et `CIEventsOperational`.
-
-- `CIEventsAudit` contenant les **événements d’audit**
-- `CIEventsOperational` contenant les **événements opérationnels**
-
-Dans la fenêtre **Requêtes**, développez la solution **Audit** et localisez les exemples de requêtes fournis en recherchant `CIEvents`.
-
 ## <a name="event-schemas"></a>Schémas d’événements
 
-Les événements d’API et les événements de workflow ont une structure commune et des détails sur leurs différences, consultez [Schéma de l’événement d’API](#api-event-schema) ou [Schéma de l’événement de workflow](#workflow-event-schema).
+Les événements d’API et les événements de workflow ont une structure commune, mais avec quelques différences. Pour plus d’informations, consultez [Schéma de l’événement d’API](#api-event-schema) ou [Schéma de l’événement de workflow](#workflow-event-schema).
 
 ### <a name="api-event-schema"></a>Schéma de l’événement d’API
 
@@ -220,7 +214,6 @@ Le workflow contient plusieurs étapes. [Ingérez des sources de données](data-
 | `durationMs`    | Long      | Facultatif          | Durée de l’opération en millisecondes.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Facultatif          | Objet JSON avec plus de propriétés pour la catégorie particulière d’événements.                                                                                        | Consultez la sous-section [Propriétés du workflow](#workflow-properties-schema)                                                                                                       |
 | `level`         | String    | Requise          | Niveau de gravité de l’événement.                                                                                                                                  | `Informational`, `Warning` ou `Error`                                                                                                                                   |
-|                 |
 
 #### <a name="workflow-properties-schema"></a>Schéma des propriétés du workflow
 
@@ -247,3 +240,5 @@ Les événements de workflow ont les propriétés suivantes.
 | `properties.additionalInfo.AffectedEntities` | No       | Oui  | Facultatif. Pour OperationType `Export` uniquement. Contient une liste des entités configurées dans l’exportation.                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | No       | Oui  | Facultatif. Pour OperationType `Export` uniquement. Message détaillé pour l’exportation.                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | No       | Oui  | Facultatif. Pour OperationType `Segmentation` uniquement. Indique le nombre total de membres du segment.                                                                                                                                                    |
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

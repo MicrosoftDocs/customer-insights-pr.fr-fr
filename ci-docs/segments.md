@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170678"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246290"
 ---
 # <a name="segments-overview"></a>Vue d’ensemble des segments
 
@@ -58,7 +58,7 @@ Sélectionnez un segment pour afficher les actions disponibles.
 - **Modifier** le segment pour modifier ses propriétés.
 - **Créez un doublon** d’un segment. Vous pouvez choisir de modifier immédiatement ses propriétés ou d’enregistrer le doublon.
 - [**Actualiser**](#refresh-segments) le segment pour inclure les dernières données.
-- **Activer** ou **Désactiver** le segment. Les segments inactifs ne seront pas actualisés pendant une [actualisation planifiée](system.md#schedule-tab) et auront le **statut** **Ignoré**, indiquant qu’aucune actualisation n’a été tentée. Les segments actifs sont actualisés en fonction de leur type : statique ou dynamique.
+- **Activer** ou **Désactiver** le segment. Les segments inactifs ne seront pas actualisés pendant une [actualisation planifiée](schedule-refresh.md) et auront le **statut** **Ignoré**, indiquant qu’aucune actualisation n’a été tentée. Les segments actifs sont actualisés en fonction de leur type : statique ou dynamique.
 - **Rendre statique** ou **Rendre dynamique** le type de segment. Les segments statiques ne doivent pas être actualisés manuellement. Les segments dynamiques seront actualisés automatiquement lors des actualisations du système
 - [**Rechercher des clients similaires**](find-similar-customer-segments.md) dans le segment.
 - **Renommer** le segment.
@@ -88,7 +88,7 @@ La partie inférieure contient la liste des membres du segment.
 
 Les segments peuvent être actualisés selon un calendrier automatique ou actualisées manuellement à la demande. Pour actualiser manuellement un ou plusieurs segments, sélectionnez-les et choisissez **Actualiser**.
 
-Pour [planifier une actualisation automatique](system.md#schedule-tab), accédez à **Administrateur** > **Système** > **Planification**. Les règles suivantes s’appliquent :
+Pour [planifier une actualisation automatique](schedule-refresh.md), accédez à **Administrateur** > **Système** > **Planification**. Les règles suivantes s’appliquent :
 
 - Tous les segments avec le type **Dynamique** ou **Expansion** seront actualisés automatiquement à la fréquence définie. Une fois l’actualisation terminée, le **Statut** indique si des problèmes se sont produits pendant l’actualisation du segment. L’option **Dernière actualisation** affiche un horodatage de la dernière actualisation réussie. Si une erreur s’est produite, sélectionnez l’erreur pour voir les détails.
 - Les segments avec le type **Statique** *ne seront pas* actualisés automatiquement. L’option **Dernière actualisation** affiche un horodatage de la dernière exécution ou actualisation manuelle du segment statique.

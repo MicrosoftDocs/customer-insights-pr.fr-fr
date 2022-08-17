@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139576"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245591"
 ---
 # <a name="update-the-unification-settings"></a>Mettre à jour les paramètres d’unification
 
@@ -42,7 +42,7 @@ Pour revoir ou modifier les paramètres d’unification une fois qu’un profil 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Capture d’écran de la page Données unifiées avec les options Unifier en surbrillance.":::
 
    - [Exécuter les conditions de correspondance](#run-matching-conditions) pour évaluer rapidement la qualité de vos conditions de correspondance (déduplication et règles de correspondance) sans mettre à jour le profil unifié. L’option **Exécuter les conditions de correspondance uniquement** ne s’affiche pas pour une seule entité.
-   - [Unifier les profils clients](#run-updates-to-the-unified-customer-profile) pour exécuter des conditions et mettre à jour l'entité de profil client unifié sans affecter les dépendances (telles que les enrichissements, les segments ou les mesures). Les processus dépendants ne sont pas exécutés, mais seront actualisés au fur et à mesure comme [défini dans le calendrier d’actualisation](system.md#schedule-tab).
+   - [Unifier les profils clients](#run-updates-to-the-unified-customer-profile) pour exécuter des conditions et mettre à jour l'entité de profil client unifié sans affecter les dépendances (telles que les enrichissements, les segments ou les mesures). Les processus dépendants ne sont pas exécutés, mais seront actualisés au fur et à mesure comme [défini dans le calendrier d’actualisation](schedule-refresh.md).
    - [Unifier les profils clients et les dépendances](#run-updates-to-the-unified-customer-profile) pour exécuter des conditions et mettre à jour l'entité de profil client unifié et toutes les dépendances (telles que les enrichissements, les segments ou les mesures). Tous les processus sont réexécutés automatiquement.
 
 ## <a name="edit-source-fields"></a>Modifier les champs source
@@ -154,7 +154,7 @@ Exécutez les conditions de correspondance exécute uniquement les règles de d�
 
 1. À partir de la page **Données** > **Unifier**, sélectionnez :
 
-   - **Unifier les profils clients** : Exécute des conditions et met à jour l'entité de profil client unifié sans affecter les dépendances (telles que les enrichissements, les segments ou les mesures). Les processus dépendants ne sont pas exécutés, mais seront actualisés au fur et à mesure comme [défini dans le calendrier d’actualisation](system.md#schedule-tab).
+   - **Unifier les profils clients** : Exécute des conditions et met à jour l'entité de profil client unifié sans affecter les dépendances (telles que les enrichissements, les segments ou les mesures). Les processus dépendants ne sont pas exécutés, mais seront actualisés au fur et à mesure comme [défini dans le calendrier d’actualisation](schedule-refresh.md).
 
    - **Unifier les profils clients et les dépendances** : Exécute les conditions correspondantes et met à jour le profil unifié et toutes les dépendances. Tous les processus sont réexécutés automatiquement. Une fois tous les processus en aval terminés, le profil client reflète les données mises à jour.
 
