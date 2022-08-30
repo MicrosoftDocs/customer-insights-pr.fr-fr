@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213624"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304470"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Supprimer les doublons avant d’unifier les données
 
@@ -47,7 +47,7 @@ Si vous avez enrichi des entités au niveau source de données pour améliorer v
 
 1. Sur la page **Enregistrements en double**, sélectionnez une entité, puis **Ajouter une règle** pour définir les règles de déduplication.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Capture d’écran de la page Enregistrements en double avec Afficher plus en surbrillance":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Capture d’écran de la page Enregistrements en double avec l’entité en surbrillance et Ajouter une règle affichée"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. Entrez les informations suivantes dans le volet **Ajouter une règle** :
       - **Sélectionner un champ** : Choisissez l’entité dont vous souhaitez vérifier les doublons dans la liste des champs disponibles. Choisissez des champs susceptibles d’être uniques pour chaque client. Par exemple, une adresse e-mail ou la combinaison du nom, de la ville et du numéro de téléphone.
@@ -80,9 +80,9 @@ Si vous avez enrichi des entités au niveau source de données pour améliorer v
       - **Les plus remplis** : identifie l’enregistrement avec les champs d’attributs les plus remplis comme enregistrement gagnant. C’est l’option de fusion par défaut.
       - **Les plus récents** : identifie l’enregistrement gagnant en fonction du plus récent. Nécessite une date ou un champ numérique pour définir l’ancienneté.
       - **Les moins récents** : identifie l’enregistrement gagnant en fonction du moins récent. Nécessite une date ou un champ numérique pour définir l’ancienneté.
-      
+
       En cas d’égalité, l’enregistrement gagnant est celui avec le MAX(PK) ou la plus grande valeur de clé primaire.
-      
+
    1. Vous pouvez aussi définir des préférences de fusion sur des attributs individuels d’une entité, pour cela sélectionnez **Avancé** en bas du volet. Par exemple, vous pouvez choisir de conserver l’e-mail le plus récent ET l’adresse la plus complète de différents enregistrements. Développez l’entité pour voir tous ses attributs et définissez l’option à utiliser pour les attributs individuels. Si vous choisissez une option basée sur la récence, vous devez également spécifier un champ de date/heure qui définit la récence.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Volet des préférences de fusion avancées affichant les e-mails récents et l’adresse complète":::
@@ -96,18 +96,5 @@ Si vous avez enrichi des entités au niveau source de données pour améliorer v
 
 > [!div class="nextstepaction"]
 > [Étape suivante pour plusieurs entités : Conditions de correspondance](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Sortie de déduplication en tant qu’entité
-
-Le processus de déduplication crée une nouvelle entité dédupliquée pour chacune des entités source. Ces entités peuvent être trouvées avec **ConflationMatchPairs:CustomerInsights** dans la section **Système** de la page **Entités**, avec le nom **Deduplication_DataSource_Entity**.
-
-Une entité de sortie de déduplication contient les informations suivantes :
-
-- ID/clés
-  - Champs Clé primaire et ID secondaire. Le champ ID secondaire comprend tous les ID secondaires identifiés pour un enregistrement.
-  - Le champ Deduplication_GroupId affiche le groupe ou le cluster identifié dans une entité qui regroupe tous les enregistrements similaires en fonction des champs de déduplication spécifiés. Il est utilisé à des fins de traitement du système. Si aucune règle de déduplication manuelle n’est spécifiée et que les règles de déduplication définies par le système s’appliquent, vous ne trouverez peut-être pas ce champ dans l’entité de sortie de déduplication.
-  - Deduplication_WinnerId : ce champ contient l’ID gagnant des groupes ou clusters identifiés. Si Deduplication_WinnerId est identique à la valeur de clé primaire d’un enregistrement, cela signifie que l’enregistrement est l’enregistrement gagnant.
-- Champs utilisés pour définir les règles de déduplication.
-- Champs de règle et de score pour indiquer les règles de déduplication appliquées et le score renvoyé par l’algorithme de correspondance.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Vue d’ensemble des segments
 description: Présentation des segments, de leur création et de leur gestion.
-ms.date: 05/20/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d4de3a6af6bc7d54305a23e3fbd3cc95d464d352
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246290"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304792"
 ---
 # <a name="segments-overview"></a>Vue d’ensemble des segments
 
 Les segments vous permettent de regrouper vos clients en fonction des attributs démographiques, transactionnels ou comportementaux. Vous pouvez utiliser les segments pour cibler les campagnes promotionnelles, les activités commerciales et les actions de support client pour atteindre vos objectifs commerciaux.
 
-Les profils client qui correspondent aux filtres d’une définition de segment sont appelés *membres* d’un segment. Certaines [limites du service](/dynamics365/customer-insights/service-limits) s’appliquent.
+Les profils client ou contact qui correspondent aux filtres d’une définition de segment sont appelés *membres* d’un segment. Certaines [limites du service](/dynamics365/customer-insights/service-limits) s’appliquent.
 
 ## <a name="create-a-segment"></a>Créer un segment
 
@@ -41,13 +41,19 @@ Choisissez comment créer un segment basé sur votre audience cible.
 
 # <a name="business-accounts-b-to-b"></a>[Comptes d’entreprise (B-to-B)](#tab/b2b)
 
-- Segments simples ou complexes avec générateur de segment : [créez les vôtres](segment-builder.md)
+Segment de comptes ou segment de contacts (aperçu) avec le générateur de segments : [Créer le vôtre](segment-builder.md)
+
+> [!NOTE]
+> La plupart des destinations d’exportation exigent des informations de contact à des fins de marketing. Par conséquent, créez des segments de contacts à utiliser pour ces exportations.
 
 ---
 
 ## <a name="manage-existing-segments"></a>Gérer les segments existants
 
-Accédez à la page **Segments** pour afficher les segments que vous avez créés, leur statut et leur état, le nombre de membres et la dernière fois que les données ont été actualisées. Vous pouvez trier la liste des segments par colonne ou utiliser la zone de recherche pour trouver le segment que vous souhaitez gérer.
+Accédez à la page **Segments** pour afficher les segments que vous avez créés, leur statut et leur état, ainsi que la dernière fois que les données ont été actualisées. Vous pouvez trier la liste des segments par colonne ou utiliser la zone de recherche pour trouver le segment que vous souhaitez gérer.
+
+> [!TIP]
+> Dans les environnements B to B, la colonne **Type audience** identifie si un segment est basé sur des comptes ou des contacts.
 
 Sélectionnez un segment pour afficher les actions disponibles.
 
@@ -82,7 +88,7 @@ La partie inférieure contient la liste des membres du segment.
 > [!NOTE]
 > Les champs qui apparaissent dans cette liste sont basés sur les attributs des entités de votre segment.
 >
->La liste est un aperçu des membres du segment correspondant et affiche les 100 premiers enregistrements de votre segment afin que vous puissiez rapidement l’évaluer et revoir ses définitions si nécessaire. Pour voir tous les enregistrements correspondants, [exportez le segment](export-destinations.md).
+> La liste est un aperçu des membres du segment correspondant et affiche les 100 premiers enregistrements de votre segment afin que vous puissiez rapidement l’évaluer et revoir ses définitions si nécessaire. Pour voir tous les enregistrements correspondants, sélectionnez **Afficher plus** qui ouvre la page [**Entités**](entities.md) ou [exportez le segment](export-destinations.md).
 
 ## <a name="refresh-segments"></a>Actualiser des segments
 

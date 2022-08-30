@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188090"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303780"
 ---
 # <a name="view-customer-profiles"></a>Afficher les profils de client
 
@@ -78,7 +78,7 @@ Les détails du client comprennent :
 **Vignette de profil client** : montre les différentes valeurs de l’entité *Client* unifiée. Si un champ n'a pas de valeur pour le profil client sélectionné, il ne s'affichera pas sauf pour le champ d'adresse. La vignette est structurée en sections :
 
 - La première section affiche un ensemble prédéfini de champs suivi de tous les champs faisant partie de l’index de recherche et de filtrage. Tous les champs liés à l'adresse sont combinés sur une seule ligne, qui s'affiche même si le profil ne contient aucune information d'adresse.
-- Les **Contacts pour ce client** s’affichent dans les environnements pour les comptes professionnels. Chaque contact est affiché avec ses champs. Les champs vides sont masqués.
+- **Contacts pour ce client** s’affichent dans des environnements pour comptes professionnels (B-to-B). Chaque contact est affiché avec ses champs. Les champs vides sont masqués.
 - **Champs supplémentaires** : affiche les champs restants du client sélectionné, à l’exception des ID.
 - **ID** : répertorie tous les ID sous leur nom d’entité correspondant. Les champs sont identifiés comme ID par leur sémantique.
 

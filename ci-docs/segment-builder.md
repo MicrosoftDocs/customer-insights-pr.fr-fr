@@ -1,7 +1,7 @@
 ---
 title: Créer des segments complexes avec le générateur de segments
 description: Utilisez le générateur de segments pour créer des segments complexes de clients en les regroupant en fonction de divers attributs.
-ms.date: 03/25/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
@@ -13,19 +13,19 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: cde373cd65e296675e1b3c92f3024e1093853842
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 7f691fd0b2ea76a2960d5adf766a4b166f02ebb4
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170632"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304746"
 ---
 # <a name="create-complex-segments-with-segment-builder"></a>Créer des segments complexes avec le générateur de segments
 
-Définissez des filtres complexes autour de l’entité de client unifié et ses entités liées. Chaque segment, après le traitement, crée un ensemble d’enregistrement d’entité client que vous pouvez exporter et utiliser pour entreprendre des actions.
+Définissez des filtres complexes autour du client unifié ou du contact unifié et ses entités associées. Chaque segment, après le traitement, génère un ensemble d’enregistrement d’entité client ou de contact que vous pouvez exporter et utiliser pour entreprendre des actions.
 
 > [!TIP]
-> Les segments basés sur des **clients particuliers** incluent automatiquement les informations de contact disponibles pour les membres du segment. Dans des environnements pour les **comptes d’entreprise**, les segments sont basés sur des comptes (sociétés ou filiales). Pour inclure des informations de contact dans un segment, utilisez la fonctionnalité **Attributs du projet** du générateur de segments. Assurez-vous que les sources de données de contact sont [mappées sémantiquement à l'entité ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+> Les segments basés sur des **clients particuliers** incluent automatiquement les informations de contact disponibles pour les membres du segment. Dans **comptes d’entreprise**, si vous avez [unifié](data-unification.md) à la fois des comptes et des contacts, choisissez si le segment est basé sur des comptes ou des contacts professionnels. Pour exporter vers une destination qui attend des informations de contact, utilisez un segment de contacts. Pour exporter vers une destination qui attend des informations de compte, utilisez un segment de compte.
 
 ## <a name="segment-builder"></a>Générateur de segments
 
@@ -57,6 +57,11 @@ L’exemple ci-dessus illustre la fonctionnalité de segmentation. Nous avons d�
 
 1. Sélectionnez **Nouveau** > **Créer votre propre segment**. Sur la page du générateur de segments, définissez ou composez des règles. Une règle se compose d’une ou plusieurs conditions qui définissent un ensemble de clients.
 
+   > [!NOTE]
+   > Pour les environnements basés sur des comptes professionnels, sélectionnez **Nouveau** > **Segments de comptes** ou **Segment de contacts (aperçu)** en fonction du type de segment que vous souhaitez créer. Si une [hiérarchie des comptes](relationships.md#set-up-account-hierarchies) a été définie et que vous souhaitez créer des règles pour filtrer les données en fonction de la relation entre l’enfant et le parent, sélectionnez **Utiliser la hiérarchie ? (Aperçu)**, sélectionnez la hiérarchie, puis **Appliquer**.
+   >
+   > :::image type="content" source="media/segment_acct_hierarchy.png" alt-text="Volet Segment Sélectionner la hiérarchie de compte":::
+
 1. Sélectionnez **Modifier les détails** en regard de Segment sans titre. Fournissez un nom pour votre segment et mettez à jour le **Nom de l’entité de sortie** suggéré pour le segment. Si nécessaire, ajoutez une description et des [étiquettes](work-with-tags-columns.md#manage-tags) au segment.
 
    :::image type="content" source="media/segments_edit_details.png" alt-text="Boîte de dialogue Modifier les détails.":::
@@ -65,11 +70,11 @@ L’exemple ci-dessus illustre la fonctionnalité de segmentation. Nous avons d�
    - Consultez la liste des entités et attributs disponibles dans le volet **Ajouter à la règle** et sélectionnez l’icône **+** en regard de l’attribut à ajouter. Choisissez si vous souhaitez ajouter l’attribut à une règle existante ou l’utiliser pour créer une nouvelle règle.
    - Tapez le nom de l’attribut dans la section Règle pour voir les suggestions correspondantes.
 
-1. Choisissez les opérateurs pour spécifier les valeurs correspondantes de la condition. L’attribut peut avoir l’un des quatre types de données comme valeur : numérique, chaîne, date ou booléen. Selon le type de données de l’attribut, différents opérateurs sont disponibles pour spécifier la condition. Pour les segments avec des comptes professionnels, deux opérateurs spéciaux sont disponibles pour inclure des hiérarchies potentielles entre les comptes ingérés. Utilisez les opérateurs *enfant de* et *parent de* pour inclure des comptes associés.
+1. Choisissez les opérateurs pour spécifier les valeurs correspondantes de la condition. L’attribut peut avoir l’un des quatre types de données comme valeur : numérique, chaîne, date ou booléen. Selon le type de données de l’attribut, différents opérateurs sont disponibles pour spécifier la condition.
 
 1. Sélectionnez **Ajouter une condition** pour ajouter d’autres conditions à une règle. Pour créer une règle sous la règle actuelle, sélectionnez **Ajouter une sous-règle**.
 
-1. Si une règle utilise d’autres entités que l’entité *Client*, sélectionnez **Définir le chemin de la relation** pour mapper l’entité sélectionnée à l’entité client unifiée. S’il n’existe qu’un seul chemin d’accès à la relation possible, le système le sélectionne automatiquement. Différents [chemins d’accès à la relation](relationships.md#relationship-paths) peuvent donner des résultats différents. Chaque règle peut avoir son propre chemin d’accès à la relation.
+1. Si une règle utilise d’autres entités que l’entité *Client* (ou l’entité *ContactProfile* pour B-to-B), sélectionnez **Définir le chemin de la relation** pour mapper l’entité sélectionnée à l’entité client unifiée. S’il n’existe qu’un seul chemin d’accès à la relation possible, le système le sélectionne automatiquement. Différents [chemins d’accès à la relation](relationships.md#relationship-paths) peuvent donner des résultats différents. Chaque règle peut avoir son propre chemin d’accès à la relation.
 
    :::image type="content" source="media/relationship-path.png" alt-text="Chemin d’accès à la relation potentiel lors de la création d’une règle basée sur une entité associée à l’entité client unifiée.":::
 
@@ -92,24 +97,22 @@ L’exemple ci-dessus illustre la fonctionnalité de segmentation. Nous avons d�
       - **Intersection** fait se chevaucher les deux groupes. Seules les données qui *sont communes* aux deux groupes sont conservées dans le groupe unifié.
       - **Exception** combine les deux groupes. Seules les données du groupe A qui *ne sont pas communes* aux données du groupe B sont conservées.
 
-1. Par défaut, l’entité de sortie contient automatiquement tous les attributs des profils clients qui correspondent aux filtres définis. Si un segment est basé sur d’autres entités que l’entité *Client*, sélectionnez **Attributs de projet** pour ajouter d’autres attributs de ces entités à l’entité de sortie.
-
-   > [!IMPORTANT]
-   > Pour les segments basés sur des comptes professionnels, les détails d’un ou plusieurs contacts de chaque compte à partir de l’entité *ContactProfile* doivent être inclus dans le segment pour permettre à ce segment d’être activé ou exporté vers des destinations nécessitant des informations de contact. Pour plus d'informations sur l'entité *ContactProfil*, voir [Mappages sémantiques](semantic-mappings.md).
-   > Un exemple de sortie pour un segment basé sur des comptes d'entreprise avec des attributs projetés de contacts pourrait ressembler à ceci :
-   >
-   > |ID  |Nom du compte  |Revenus  |Nom du contact  | Rôle du contact|
-   > |---------|---------|---------|---------|---|
-   > |10021     | Contoso | 100K | [Abbie Moss, Ruth Soto]  | [CEO, Gestion des approvisionnements]
-
-   :::image type="content" source="media/segments-project-attributes.png" alt-text="Exemple d'attributs projetés sélectionnés dans le volet latéral à ajouter à l’entité de sortie.":::
-  
+1. Par défaut, l’entité de sortie contient automatiquement tous les attributs des profils clients qui correspondent aux filtres définis. Dans B-to-B, lors de l’utilisation de l’entité *ContactProfile*, l’ID de compte est automatiquement inclus. Si un segment est basé sur d’autres entités que l’entité *Client* ou doit inclure plus d’attributs de l’entité *ContactProfile*, sélectionnez **Attributs du projet** pour ajouter plus d’attributs de ces entités à l’entité de sortie.
+ 
    Par exemple : Un segment est basé sur une entité qui contient des données d’achat, qui sont liées à l’entité *Client*. Le segment recherche tous les clients d’Espagne qui ont acheté des marchandises au cours de l’année en cours. Vous pouvez choisir d’ajouter des attributs tels que le prix des marchandises ou la date d’achat à tous les enregistrements clients correspondants dans l’entité de sortie. Ces informations peuvent être utiles pour analyser les corrélations saisonnières avec les dépenses totales.
 
+   :::image type="content" source="media/segments-project-attributes.png" alt-text="Exemple d'attributs projetés sélectionnés dans le volet latéral à ajouter à l’entité de sortie.":::
+ 
+   Un exemple de sortie pour un segment basé sur des comptes d'entreprise avec des attributs projetés de contacts pourrait ressembler à ceci :
+
+   |ID  |Nom du compte  |Revenus  |Nom du contact  | Rôle du contact|
+   |---------|---------|---------|---------|---|
+   |10021     | Contoso | 100K | [Abbie Moss, Ruth Soto]  | [CEO, Gestion des approvisionnements]
+
    > [!NOTE]
-   > - **Attributs du projet** ne fonctionne que pour les entités qui ont une relation un-à-plusieurs avec l’entité cliente. Par exemple, un client peut avoir plusieurs abonnements.
-   > - Si l’attribut que vous souhaitez projeter est à plus d’un saut de l’entité *Client*, telle que définie par la relation, cet attribut doit être utilisé dans chaque règle de la requête de segment que vous créez.
-   > - Si l’attribut que vous souhaitez projeter n’est qu’à un saut de l’entité *Client*, cet attribut ne doit pas être présent dans chaque règle de la requête de segment que vous créez.
+   > - **Attributs du projet** ne fonctionne que pour les entités qui ont une relation un-à-plusieurs avec l’entité *Client* ou *ContactProfile*. Par exemple, un client peut avoir plusieurs abonnements.
+   > - Si l’attribut que vous souhaitez projeter est à plus d’un saut de l’entité  *Client* ou *ContactProfile*, telle que définie par la relation, cet attribut doit être utilisé dans chaque règle de la requête de segment que vous créez.
+   > - Si l’attribut que vous souhaitez projeter n’est qu’à un saut de l’entité *Client* ou *ContactProfile*, cet attribut ne doit pas être présent dans chaque règle de la requête de segment que vous créez.
    > - Les **attributs projetés** sont pris en compte lors de l’utilisation d’opérateurs définis.
 
 1. Sélectionnez **Exécuter** pour créer le segment. Sélectionnez **Enregistrer** si vous souhaitez conserver la configuration actuelle et exécuter le segment ultérieurement. La page **Segments** s’affiche.

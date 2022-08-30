@@ -2,7 +2,7 @@
 title: Mettre en correspondance des conditions pour l’unification des données
 description: Mettez en correspondance des données pour créer des profils clients unifiés.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139700"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304654"
 ---
 # <a name="match-conditions-for-data-unification"></a>Mettre en correspondance des conditions pour l’unification des données
 
@@ -27,6 +27,8 @@ Cette étape de l’unification définit l’ordre de correspondance et les règ
 
 > [!NOTE]
 > Une fois que vous avez créé vos conditions de correspondance et sélectionné **Suivant**, vous ne pouvez pas supprimer une entité ou un attribut sélectionné. Si nécessaire, sélectionnez **Retour** pour passer en revue les entités et les attributs sélectionnés avant de continuer.
+
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
 
 ## <a name="include-enriched-entities-preview"></a>Inclure les entités enrichies (version préliminaire)
 
@@ -43,14 +45,14 @@ Si vous avez enrichi des entités au niveau source de données pour améliorer v
 Chaque correspondance unifie deux entités ou plus en une seule entité consolidée. Dans le même temps, elle conserve les enregistrements de client uniques. L’ordre de correspondance indique l’ordre dans lequel le système essaie de faire correspondre les enregistrements.
 
 > [!IMPORTANT]
-> La première entité de la liste s’appelle l’entité principale. L’entité principale sert de base à votre jeu de données de profils unifié. Les entités supplémentaires sélectionnées seront ajoutées à cette entité.
+> La première entité est appelée l’entité principale, qui sert de base pour vos profils unifiés. Les entités supplémentaires sélectionnées seront ajoutées à cette entité.
 >
 > Remarques importantes :
 >
 > - Choisissez l’entité ayant les données de profil les plus complètes et les plus fiables sur vos clients comme entité principale.
 > - Choisissez l’entité ayant plusieurs attributs en commun avec d’autres entités (par exemple, nom, numéro de téléphone ou adresse de messagerie) comme entité principale.
 
-1. Sur la page **Conditions de correspondance**, utilisez les flèches de déplacement vers le haut et vers le bas pour déplacer les entités dans l’ordre que vous souhaitez, ou faites-les glisser et déposez-les. Par exemple, sélectionnez **Contacts:eCommerce** en tant qu’entité principale et **CustomerLoyalty:Loyalty** comme deuxième entité.
+1. Sur la page **Conditions de correspondance**, utilisez les flèches de déplacement vers le haut et vers le bas pour déplacer les entités dans l’ordre que vous souhaitez, ou faites-les glisser et déposez-les. Par exemple, sélectionnez **eCommerceCustomers** en tant qu’entité principale et **loyCustomers** comme deuxième entité.
 
 1. Pour chaque enregistrement de l’entité comme client unique (qu’une correspondance soit trouvée ou non), sélectionnez **Inclure tous les enregistrements**. Tous les enregistrements de cette entité qui ne correspondent pas aux enregistrements d’autres entités sont inclus dans le profil unifié. Les enregistrements qui n’ont pas de correspondance sont appelés singletons.
   
@@ -70,7 +72,7 @@ L’avertissement à côté d’un nom d’entité signifie qu’aucune règle d
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Capture d’écran du volet Ajouter une règle.":::
 
-   - **Sélectionner Entité/Champ (première ligne)**  : choisissez une entité associée et un attribut pour spécifier une propriété d’enregistrement susceptible d’être unique pour un client. Par exemple, un numéro de téléphone ou une adresse e-mail. Évitez de faire correspondre par attributs du type Activité. Par exemple, un ID d’achat ne trouvera probablement aucune correspondance dans d’autres types d’enregistrement.
+   - **Sélectionner Entité/Champ (première ligne)**  : choisissez une entité et un attribut susceptible d’être unique pour un client. Par exemple, un numéro de téléphone ou une adresse e-mail. Évitez de faire correspondre par attributs du type Activité. Par exemple, un ID d’achat ne trouvera probablement aucune correspondance dans d’autres types d’enregistrement.
 
    - **Sélectionner Entité/Champ (deuxième ligne)**  : choisissez un attribut lié à l’attribut de l’entité spécifiée dans la première ligne.
 
@@ -116,7 +118,7 @@ Les règles de correspondance représentent des ensembles de conditions. Pour fa
 
 ### <a name="add-exceptions-to-a-rule"></a>Ajouter des exceptions à une règle
 
-Dans la plupart des cas, la mise en correspondance des entités conduit à des profils client uniques avec des données consolidées. Pour traiter dynamiquement les rares cas de faux positifs et de faux négatifs, vous pouvez définir des exceptions pour une règle de correspondance. Les exceptions sont appliquées après le traitement des règles de correspondance et évitent la correspondance de tous les enregistrements qui répondent aux critères d’exception.
+Dans la plupart des cas, la mise en correspondance des entités conduit à des profils client uniques avec des données consolidées. Pour traiter les rares cas de faux positifs et de faux négatifs, vous pouvez définir des exceptions pour une règle de correspondance. Les exceptions sont appliquées après le traitement des règles de correspondance et évitent la correspondance de tous les enregistrements qui répondent aux critères d’exception.
 
 Par exemple, si votre règle de correspondance combine le nom, la ville et la date de naissance, le système identifiera les jumeaux portant le même nom qui vivent dans la même ville que le même profil. Vous pouvez spécifier une exception qui ne correspond pas aux profils si les prénoms des entités que vous combinez ne sont pas les mêmes.
 
@@ -134,7 +136,7 @@ Vous pouvez spécifier des conditions qui remplacent la logique de correspondanc
 |---------|---------|---------|
 |Toujours correspondre     | Définit des valeurs qui correspondent toujours.         |  Toujours correspondre *Mike* et *MikeR*.       |
 |Jamais correspondre     | Définit des valeurs qui ne correspondent jamais.        | Jamais correspondre *John* et *Jonathan*.        |
-|Contournement personnalisé     | Définit les valeurs que le système doit toujours ignorer dans la phase de correspondance. |  Ignorer les valeurs *11111* et *Inconnu* pendant la correspondance.        |
+|Contourner            | Définit les valeurs que le système doit toujours ignorer dans la phase de correspondance. |  Ignorer les valeurs *11111* et *Inconnu* pendant la correspondance.        |
 |Mise en correspondance d’alias    | Définir des valeurs que le système doit considérer comme identiques.         | Considérer *Joe* comme égal à *Joseph*.        |
 
 1. Sélectionnez **Personnalisé**.

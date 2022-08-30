@@ -1,23 +1,23 @@
 ---
 title: Mise en route de Dynamics 365 Customer Insights
-description: Une présentation des ressources d’aide de Customer Insights pour démarrer rapidement
-ms.reviewer: v-wendysmith
+description: Présentation des ressources d’aide de Customer Insights pour un démarrage rapide.
+ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
-ms.date: 04/12/2022
-ms.subservice: engagement-insights
+ms.date: 08/31/2021
+ms.subservice: audience-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: ce0336c4bf853bc81ec01c45410169a63b69eb03
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011976"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304608"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Mise en route de Dynamics 365 Customer Insights
 

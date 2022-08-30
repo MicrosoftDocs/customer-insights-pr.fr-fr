@@ -1,19 +1,19 @@
 ---
 title: Exporter des segments vers LinkedIn Ads (version préliminaire)
 description: Apprenez à configurer la connexion et à exporter vers LinkedIn Ads.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196805"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304700"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Exporter des segments vers LinkedIn Ads (version préliminaire)
 
@@ -24,7 +24,7 @@ Exportez des segments de profils clients unifiés vers LinkedIn Ads pour créer 
 - Un [compte LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) et les informations d’identification de l’administrateur correspondantes.
 - Un [ID de compte LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a424270).
 - [Segments configurés](segments.md) dans Customer Insights.
-- Les profils clients unifiés dans les segments exportés contiennent un champ représentant une adresse e-mail.
+- Les segments exportés nécessitent au moins un champ spécifique selon que vous choisissez [ciblage des contacts](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ou [ciblage de l’entreprise](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) sur LinkedIn. Les champs possibles sont répertoriés dans l’étape **Correspondance des données** lors de la [configuration de l’exportation](#configure-an-export).
 
 ## <a name="known-limitations"></a>Limitations connues
 

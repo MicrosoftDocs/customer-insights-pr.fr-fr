@@ -1,7 +1,7 @@
 ---
 title: Vue d’ensemble des exportations (version préliminaire)
 description: Gérez les exportations pour partager des données.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245324"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304056"
 ---
 # <a name="exports-preview-overview"></a>Vue d’ensemble des exportations (version préliminaire)
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245324"
 
 Il existe deux types principaux d’exportations :  
 
-- Les **exportations de données de sortie** : exportez tout type d’entité disponible dans Customer Insights. Les entités que vous sélectionnez pour l’exportation sont exportées avec tous les champs de données, métadonnées, schémas et détails de mappage.
-- Les **exportations de segments** : exportez des entités de segment à partir de Customer Insights. Les segments représentent une liste de profils clients. Lors de la configuration de l’exportation, vous sélectionnez les champs de données inclus, en fonction du système cible vers lequel vous exportez les données.
+- Les **exportations de données de sortie** vous permettent d’exporter tout type d’entité disponible dans Customer Insights. Les entités que vous sélectionnez pour l’exportation sont exportées avec tous les champs de données, métadonnées, schémas et détails de mappage.
+- Les **exportations de segments** vous permettent d’exporter des entités de segment à partir de Customer Insights. Pour les consommateurs individuels (B-to-C), les segments représentent une liste de profils de clients. Pour les entreprises (B to B), [les segments peuvent représenter une liste de comptes ou de contacts](segment-builder.md#create-a-new-segment-with-segment-builder). Lors de la configuration de l’exportation, vous sélectionnez les champs de données inclus, en fonction du système cible vers lequel vous exportez les données.
 
 ### <a name="export-segments"></a>Exporter les segments
 
@@ -38,14 +38,15 @@ La plupart des options d’exportation prennent en charge les deux types d’env
 **Exportations de segments dans des environnements pour clients particuliers (B2C)**  
 - Les segments dans le cadre des environnements pour les clients individuels sont construits sur l’entité *profil de client unifié*. Chaque segment qui répond aux exigences des systèmes cibles (par exemple, une adresse e-mail) peut être exporté.
 
-**Segmenter les environnements d'exportation pour les comptes d'entreprise (B2B)**  
-- Les segments dans le cadre des environnements pour les comptes professionnels sont construits sur l’entité *Compte*. Pour exporter des segments de compte tels quels, le système cible doit prendre en charge les segments de compte purs. C’est le cas pour [LinkedIn](export-linkedin-ads.md) lorsque vous choisissez l’option **entreprise** lors de la définition de l’export.
-- Tous les autres systèmes cibles nécessitent des champs de l’entité de contact. Pour garantir que les segments de compte peuvent récupérer les données des contacts associés, votre définition de segment doit projeter les attributs de l’entité de contact. En savoir plus sur la façon de [configurer les segments et les attributs du projet](segment-builder.md).
+**Segmenter les exportations dans les environnements pour les comptes d’entreprise (B2B)**  
+- Les segments dans le cadre des environnements pour les comptes professionnels sont construits sur l’entité *compte* ou *contact*. Pour exporter des segments de compte tels quels, le système cible doit prendre en charge les segments de compte purs. C’est le cas pour [LinkedIn](export-linkedin-ads.md) lorsque vous choisissez l’option **entreprise** lors de la définition de l’export.
+- Tous les autres systèmes cibles nécessitent des champs de l’entité de contact.
+- Avec deux types de segments (contacts et comptes), Customer Insights identifie automatiquement les types de segments éligibles à l’exportation en fonction du système cible. Par exemple, pour un système cible axé sur les contacts comme Mailchimp, Customer Insights vous permet uniquement de choisir les segments de contacts à exporter.
 
 **Limites sur les exportations de segments**  
 - Les systèmes cibles tiers peuvent limiter le nombre de profils clients que vous pouvez exporter. 
 - Pour les clients individuels, vous verrez le nombre réel de membres du segment lorsque vous sélectionnez un segment à exporter. Vous recevrez un avertissement si un segment est trop grand. 
-- Pour les comptes professionnels, vous verrez le nombre de comptes dans un segment ; cependant, le nombre de contacts pouvant être projetés ne s’affiche pas. Dans certains cas, cela pourrait conduire à ce que le segment exporté contienne en réalité plus de profils clients que le système cible n’en accepte. Si les limites du système cible sont dépassées, l’exportation est ignorée.
+- Pour les comptes professionnels, vous verrez le nombre de comptes ou de contacts en fonction du segment. Vous recevrez un avertissement si le segment est trop grand. Le dépassement des limites des résultats des systèmes cibles ignorera l’exportation.
 
 ## <a name="set-up-a-new-export"></a>Configurer une nouvelle exportation
 
@@ -110,6 +111,20 @@ Pour exporter des données sans attendre une actualisation planifiée, accédez 
 
 - Pour exécuter toutes les exportations, sélectionnez **Tout exécuter** dans la barre de commandes. Cette action n’exécutera que les exportations ayant une planification active. Pour exécuter une exportation qui n’est pas active, exécutez une seule exportation.
 - Pour exécuter une seule exportation, sélectionnez-la dans la liste et sélectionnez **Exécuter** dans la barre de commandes.
+
+## <a name="troubleshooting"></a>Dépannage
+
+### <a name="segment-not-eligible-for-export"></a>Segment non éligible à l’exportation
+
+**Problème** Dans un environnement de comptes professionnels, vos exportations échouent avec le message d’erreur : « Le segment suivant n’est pas éligible pour cette destination d’exportation : ’{ nom de segment}’. Veuillez choisir uniquement des segments de type ContactProfile et réessayer. »
+
+**Résolution** Les environnements Customer Insights pour les comptes professionnels ont été mis à jour pour prendre en charge les segments de contact en plus des segments de compte. En raison de ce changement, les exportations nécessitant des coordonnées ne fonctionnent qu’avec des segments basés sur des contacts.
+
+1. [Créer un segment basé sur les contacts](segment-builder.md) qui correspond à votre segment utilisé précédemment.
+
+1. Une fois ce segment de contact exécuté, modifiez l’exportation correspondante et sélectionnez le nouveau segment.
+
+1. Sélectionnez **Enregistrer** pour enregistrer la configuration ou **Enregistrer et exécuter** pour tester tout de suite cet exportation.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

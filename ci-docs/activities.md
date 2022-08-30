@@ -1,9 +1,9 @@
 ---
-title: Activités du client
-description: Définissez les activités clientes et visualisez-les dans une chronologie des profils clients.
-ms.date: 07/22/2022
+title: Activités des clients ou des contacts commerciaux
+description: Définissez les activités des clients ou des contacts commerciaux et visualisez-les dans une chronologie des profils clients.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -16,19 +16,19 @@ searchScope:
 - ci-activities-wizard
 - ci-measures
 - ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+- customerInsights
+ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188136"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304102"
 ---
-# <a name="customer-activities"></a>Activités du client
+# <a name="customer-or-business-contact-activities"></a>Activités des clients ou des contacts commerciaux
 
-Les activités client sont des actions ou des événements effectués par les clients. Par exemple, les transactions, la durée des appels au support, les avis sur le site web, les achats ou les retours. Ces activités sont contenues dans une ou plusieurs sources de données. Avec Customers Insights, consolidez vos activités clients à partir de ces [sources d’informations](data-sources.md) et associez-les à des profils clients. Ces activités s’affichent chronologiquement sur le profil client. Intégrez la chronologie dans les applications Dynamics 365 avec la solution [Complément de carte client](customer-card-add-in.md).
+Les activités client sont des actions ou des événements effectués par les clients ou les contacts commerciaux. Par exemple, les transactions, la durée des appels au support, les avis sur le site web, les achats ou les retours. Ces activités sont contenues dans une ou plusieurs sources de données. Avec Customers Insights, consolidez vos activités clients à partir de ces [sources d’informations](data-sources.md) et associez-les à des profils clients. Ces activités s’affichent chronologiquement sur le profil client. Intégrez la chronologie dans les applications Dynamics 365 avec la solution [Complément de carte client](customer-card-add-in.md).
 
-## <a name="define-an-activity"></a>Définir une activité
+## <a name="define-a-customer-activity"></a>Définir une activité du client
 
 Pour être incluse dans une chronologie client, une entité doit avoir au moins un attribut du type **Date**. Le contrôle **Ajouter une activité** est désactivé si aucune entité de ce type n’est trouvée.
 
@@ -38,9 +38,9 @@ Pour être incluse dans une chronologie client, une entité doit avoir au moins 
 
 1. Lors de l’étape **Données d’activité**, saisissez les informations suivantes :
 
-   - **Nom de l’activité** : nom de votre activité.
-   - **Entité de l’activité** : entité qui contient des données transactionnelles ou d’activité.
-   - **Clé primaire** : champ identifiant de manière unique un enregistrement. Il ne doit contenir aucune valeur en double, vide ou manquante.
+   - **Nom de l’activité** : Sélectionnez un nom pour votre activité.
+   - **Entité d’activité** : sélectionnez une entité contenant des données transactionnelles ou d’activité.
+   - **Clé primaire** : Sélectionnez le champ qui identifie de manière unique un enregistrement. Il ne doit contenir aucune valeur en double, vide ou manquante.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Configurez les données de l’activité avec le nom, l’entité et la clé primaire.":::
 
@@ -48,9 +48,9 @@ Pour être incluse dans une chronologie client, une entité doit avoir au moins 
 
 1. Lors de l’étape **Relation**, sélectionnez **Ajouter une relation** pour connecter vos données d’activité à l’enregistrement client correspondant. Cette étape visualise la connexion entre les entités.  
 
-   - **Clé étrangère de l’entité** : champ de votre entité d’activité qui sera utilisé pour établir une relation avec une autre entité.
+   - **Clé étrangère** : champ externe de votre entité d’activité qui sera utilisé pour établir une relation avec une autre entité.
    - **Au nom de l’entité** : entité client source correspondante avec laquelle votre entité d’activité sera en relation. Vous ne pouvez établir de relation qu’avec les entités client sources utilisées dans le processus d’unification des données.
-   - **Nom de la relation** : nom identifiant la relation entre les entités. S’il existe déjà une relation entre cette entité d’activité et l’entité client source sélectionnée, le nom de la relation est en mode lecture seule.
+   - **Nom de la relation** : S’il existe déjà une relation entre cette entité d’activité et l’entité client source sélectionnée, le nom de la relation sera en mode lecture seule. S’il n’existe aucune relation de ce type, une nouvelle relation sera créée avec le nom que vous indiquez dans cette zone.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Définissez la relation entre les entités.":::
 
@@ -90,7 +90,7 @@ Pour être incluse dans une chronologie client, une entité doit avoir au moins 
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-activities"></a>Gérer les activités existantes
+## <a name="manage-existing-customer-activities"></a>Gérer les activités client existantes
 
 Accédez à **Données** > **Activités** pour afficher vos activités enregistrées, leur entité source, le type d’activité et si elles sont incluses dans la chronologie du client. Vous pouvez trier la liste des activités par colonne ou utiliser la zone de recherche pour trouver l’activité que vous souhaitez gérer.
 
@@ -116,9 +116,43 @@ Sélectionnez une activité pour afficher les actions disponibles.
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Utilisez le volet de filtre pour configurer les conditions de filtrage.":::
 
-1. Pour supprimer les filtres, sélectionnez **Effacer les filtres** ou **Filtre** et décochez la case du filtre.
-
 > [!NOTE]
 > Les filtres d’activité sont supprimés lorsque vous quittez un profil client. Vous devez les appliquer chaque fois que vous ouvrez un profil client.
+
+## <a name="define-a-contact-activity"></a>Définir une activité de contact
+
+Pour les comptes professionnels (B-to-B), utilisez une entité *ContactProfile* pour capturer les activités des contacts. Vous pouvez voir dans la chronologie des activités d’un compte quel contact était responsable de chaque activité. La plupart des étapes suivent la configuration du mappage d’activité du client classique.
+
+   > [!NOTE]
+   > Pour définir une activité au niveau du contact, une entité *ContactProfile* doit être créée, soit en tant que [profil de contact unifié](data-unification-contacts.md) ou à travers un [mappage sémantique](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+   >
+   > Vous devez avoir les deux attributs **AccountID** et **ContactID** pour chaque enregistrement dans vos données d’activité.
+  
+1. Accédez à **Données** > **Activités**.
+
+1. Sélectionnez **Ajouter une activité**.
+
+1. Nommez l’activité, sélectionnez l’entité d’activité source et sélectionnez la clé primaire de l’entité d’activité.
+
+1. Dans l’étape **Relations**, créez une relation indirecte entre vos données d’activité sources et vos comptes, en utilisant vos données de contact comme entité intermédiaire. Pour plus d’informations, consultez [Chemins de relations directes et indirectes](relationships.md#relationship-paths).
+   - Exemple de relation pour une activité appelée *Achats* :
+      - **Données d’activité sources des achats** > **Données du contact** sur l’attribut **ContactID**
+      - **Données du contact** > **Données du compte** sur l’attribut **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Configuration d’un exemple de relation.":::
+
+1. Après avoir configuré la ou les relations, sélectionnez **Suivant** et finalisez la configuration de votre mappage d’activité. Pour obtenir des étapes détaillées sur la création d’une activité, consultez [Définir une activité du client](#define-a-customer-activity).
+
+1. Exécutez vos mappages d’activité.
+
+1. Vos activités au niveau du contact seront maintenant visibles sur votre chronologie client.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Résultat final après configuration des activités du contact":::
+
+## <a name="contact-level-activity-timeline-filtering"></a>Filtrage de la chronologie des activités au niveau du contact
+
+Après avoir configuré un mappage d’activité au niveau du contact et l’avoir exécuté, la chronologie des activités de vos clients sera mise à jour. Elle inclut leurs ID ou noms, selon votre configuration *ContactProfile*, pour les activités concernées. Vous pouvez filtrer les activités par contacts dans la chronologie pour voir les contacts spécifiques qui vous intéressent. De plus, vous pouvez voir toutes les activités qui ne sont pas affectées à un contact spécifique en sélectionnant **Activités non mappées à un contact**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Options de filtrage disponibles pour les activités au niveau du contact.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

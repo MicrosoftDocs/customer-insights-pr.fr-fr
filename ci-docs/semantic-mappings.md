@@ -1,9 +1,9 @@
 ---
 title: Mappages sémantiques (version préliminaire)
 description: Présentation et utilisation des mappages sémantiques.
-ms.date: 12/01/2021
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -11,18 +11,19 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: 8780c11c8b091717349f0fd75a36b99c3a63ab49
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183628"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303873"
 ---
 # <a name="semantic-mappings-preview"></a>Mappages sémantiques (version préliminaire)
 
-Les mappages sémantiques vous permettent de mapper vos données de non-activité à des schémas prédéfinis. Ces schémas aident Customer Insights à mieux comprendre vos attributs de données. Le mappage sémantique et les données fournies permettent de nouvelles informations et fonctionnalités dans Customer Insights. Pour mapper vos données d’activité aux schémas, consultez la documentation des [activités](activities.md).
+> [!NOTE]
+> La page **Mappages sémantiques** est disponible uniquement pour les environnements professionnels (B-to-B) où des profils de contact ont déjà été créés à l’aide de cette page. Vous pouvez continuer à créer et à gérer les profils de contact individuels à l’aide de la page **Mappages sémantiques**. Ou bien, [unifiez vos données de contact](data-unification-contacts.md) pour supprimer les doublons, identifier les correspondances entre les entités et créer un profil de contact unifié. Vous pouvez utiliser le profil de contact unifié pour créer des activités au niveau du contact.
 
-**Les mappages sémantiques sont actuellement activés pour les environnements basés sur des comptes d’entreprise**. *ContactProfile* est le seul type de mappage sémantique actuellement disponible dans Customer Insights.
+Les mappages sémantiques vous permettent de mapper vos données de non-activité à des schémas prédéfinis. Ces schémas aident Customer Insights à mieux comprendre vos attributs de données. Le mappage sémantique et les données fournies permettent de nouvelles informations et fonctionnalités dans Customer Insights. Pour mapper vos données d’activité aux schémas, consultez la documentation des [activités](activities.md).
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Définir un mappage d’entité sémantique ContactProfile
 
@@ -87,41 +88,5 @@ Sélectionnez le mappage sémantique pour afficher les actions disponibles.
 - **Actualisez** le mappage sémantique pour inclure les dernières données. L’actualisation d’un mappage sémantique donné actualise tous les mappages sémantiques du même type.
 - **Renommez** le mappage sémantique. Cliquez sur **Enregistrer**.
 - **Supprimez** le mappage sémantique. Pour supprimer plusieurs mappages sémantiques à la fois, sélectionnez les mappages sémantiques et l’icône de suppression. Sélectionnez **Supprimer** pour confirmer la suppression.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Utiliser un mappage d’entité sémantique ContactProfile pour créer des activités au niveau du contact
-
-Après avoir créé un mappage d’entité sémantique *ContactProfile*, vous pouvez capturer les activités des contacts. Il vous permet de voir dans la chronologie des activités d’un compte quel contact était responsable de chaque activité. La plupart des étapes suivent la configuration du mappage d’activité classique.
-
-   > [!NOTE]
-   > Pour que les activités au niveau du contact puissent fonctionner, vous devez avoir les deux attributs **AccountID** et **ContactID** pour chaque enregistrement dans vos données d’activité.
-
-1. [Définissez un mappage d’entités sémantiques *ContactProfile*](#define-a-contactprofile-semantic-entity-mapping) et exécutez le mappage sémantique.
-
-1. Accédez à **Données** > **Activités**.
-
-1. Sélectionnez **Ajouter une activité** pour créer une nouvelle activité.
-
-1. Nommez l’activité, sélectionnez l’entité d’activité source et sélectionnez la clé primaire de l’entité d’activité.
-
-1. Dans l’étape **Relations**, créez une relation indirecte entre vos données d’activité sources et vos comptes, en utilisant vos données de contact comme entité intermédiaire. Pour plus d’informations, consultez [Chemins de relations directes et indirectes](relationships.md#relationship-paths).
-   - Exemple de relation pour une activité appelée *Achats* :
-      - **Données d’activité sources des achats** > **Données du contact** sur l’attribut **ContactID**
-      - **Données du contact** > **Données du compte** sur l’attribut **AccountID**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Configuration d’un exemple de relation.":::
-
-1. Après avoir configuré la ou les relations, sélectionnez **Suivant** et finalisez la configuration de votre mappage d’activité. Pour obtenir des étapes détaillées sur la création d’une activité, consultez [Définir une activité](activities.md).
-
-1. Exécutez vos mappages d’activité.
-
-1. Après l’exécution d’un mappage d’activités au niveau du contact, sélectionnez **Clients**. Les activités au niveau du contact s’affichent sur votre chronologie client.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Résultat final après configuration des activités du contact":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Filtrage de la chronologie des activités au niveau du contact
-
-Le chronologie de l’activité pour vos clients inclut leurs ID ou noms, selon votre configuration *ContactProfile*, pour les activités concernées. Filtrez les activités par contacts dans la chronologie pour voir les contacts spécifiques qui vous intéressent. Pour afficher toutes les activités qui ne sont pas affectées à un contact spécifique, sélectionnez **Activités non mappées à un contact**.
-
-:::image type="content" source="media/Contact_Activities3.png" alt-text="Options de filtrage disponibles pour les activités au niveau du contact.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
