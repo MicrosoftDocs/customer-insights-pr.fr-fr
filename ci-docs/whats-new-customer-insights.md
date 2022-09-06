@@ -1,19 +1,19 @@
 ---
 title: Nouveautés de Dynamics 365 Customer Insights
 description: Informations sur les nouvelles fonctionnalités, les améliorations et les corrections de bogues.
-ms.date: 08/03/2022
+ms.date: 08/31/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246008"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387291"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nouveautés de Dynamics 365 Customer Insights
 
@@ -23,6 +23,24 @@ Nous déployons des mises à jour région par région. Ainsi, certaines régions
 
 > [!TIP]
 > Pour envoyer et voter sur les demandes de fonctionnalités et les suggestions de produits, accédez au [portail Idées d’application Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2022-updates"></a>Mises à jour d’août 2022
+
+Les mises à jour d’août 2022 incluent de nouvelles fonctionnalités, des améliorations de performances et des corrections de bugs.
+
+### <a name="contact-unification-in-b-to-b-environments"></a>Unification des contacts dans les environnements B-to-B
+
+Les environnements B-to-B dans Customer Insights prennent désormais en charge une expérience d’unification des données améliorée.
+
+Vous pouvez désormais unifier les contacts en plus des comptes pour obtenir une vue complète de vos contacts professionnels. Les contacts unifiés sont associés à des comptes unifiés et sont désormais répertoriés sur les fiches clients. 
+
+Pour en savoir plus, consultez [Créer un profil de contact unifié](data-unification-contacts.md).
+
+### <a name="create-and-export-of-segments-based-on-unified-contacts"></a>Créer et exporter des segments basés sur des contacts unifiés
+
+Grâce à la nouvelle unification des contacts, vous pouvez créer des segments de contacts en utilisant des critères de contacts, de comptes ou des deux. Ces segments peuvent être exportés pour être activés dans d’autres services.
+
+Pour plus d’informations, voir [Présentation des exportations](export-destinations.md).
 
 ## <a name="july-2022-updates"></a>Mises à jour de juillet 2022
 

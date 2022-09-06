@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d20d57e9b7724e9921f9341eeaa39141b4555ff1
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246059"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387246"
 ---
 # <a name="configure-security-settings"></a>Configurer les paramètres de sécurité
 
@@ -23,7 +23,7 @@ Gérez les clés API, accédez aux données client et configurez une liaison pri
 
 Affichez et gérez les clés pour utiliser les [API Customer Insights](apis.md) avec les données dans votre environnement.
 
-1. Accédez à **Système** > **Sécurité** et sélectionnez l’onglet **API**.
+1. Accédez à **Administrateur** > **Sécurité** et sélectionnez l’onglet **API**.
 
 1. Si l’accès API à l’environnement n’a pas été configuré, sélectionnez **Activer**. Ou, pour bloquer l’accès de l’API à l’environnement, sélectionnez **Désactiver** et confirmer l'opération.
 

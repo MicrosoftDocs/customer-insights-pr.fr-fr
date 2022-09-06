@@ -1,27 +1,27 @@
 ---
 title: Exemples de requêtes OData pour les API Customer Insights
 description: Exemples couramment utilisés pour le protocole Open Data Protocol (OData) pour interroger les API Customer Insights afin d’examiner les données.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121559"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387199"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Exemples de requêtes OData pour les API Customer Insights
 
 L’Open Data Protocol (OData) est un protocole d’accès aux données basé sur des protocoles de base comme HTTP. Il utilise des méthodologies communément acceptées comme REST pour le Web. Il existe différents types de bibliothèques et d’outils qui peuvent être utilisés pour utiliser les services OData.
 
-Cet article répertorie quelques exemples de requêtes fréquemment demandés pour vous aider à créer vos propres implémentations basées sur les [API Customer Insights](apis.md).
+Pour vous aider à créer vos propres implémentations basées sur les [API Customer Insights](apis.md), passez en revue certains des exemples de requêtes fréquemment demandées.
 
-Vous devez modifier les exemples de requêtes pour les faire fonctionner sur les environnements cibles : 
+Modifiez les exemples de requêtes pour les faire fonctionner sur les environnements cibles :
 
 - {serviceRoot} : `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` où {instanceId} est le GUID de l’environnement Customer Insights que vous souhaitez interroger. L’[opération ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) vous permet de trouver l’{InstanceId} à laquelle vous avez accès.
 - {CID} : GUID d’un enregistrement de client unifié. Exemple :`ce759201f786d590bf2134bff576c369`.
@@ -31,7 +31,7 @@ Vous devez modifier les exemples de requêtes pour les faire fonctionner sur les
 
 ## <a name="customer"></a>Customer
 
-Le tableau suivant contient un ensemble d’exemples de requêtes pour l’entité *Client*.
+Exemples de requêtes pour l’entité *Customer*.
 
 |Type de requête |Exemple  | Note  |
 |---------|---------|---------|
@@ -46,7 +46,7 @@ Le tableau suivant contient un ensemble d’exemples de requêtes pour l’entit
 
 ## <a name="unified-activity"></a>Activité unifiée
 
-Le tableau suivant contient un ensemble d’exemples de requêtes pour l’entité *UnifiedActivity*.
+Exemples de requêtes pour l’entité *UnifiedActivity*.
 
 |Type de requête |Exemple  | Note  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ Le tableau suivant contient un ensemble d’exemples de requêtes pour l’entit
 
 ## <a name="other-examples"></a>Autres exemples
 
-Le tableau suivant contient un ensemble d’exemples de requêtes pour d’autres entités.
+Exemples de requêtes pour d’autres entités.
 
 |Type de requête |Exemple  | Note  |
 |---------|---------|---------|
