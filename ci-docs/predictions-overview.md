@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081199"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411828"
 ---
 # <a name="predictions-overview"></a>Présentation des prédictions
 
@@ -39,14 +39,11 @@ Le moyen le plus simple de commencer à prédire les données est de recourir à
 
 > [!TIP]
 > Nous vous recommandons d’actualiser régulièrement les modèles prédéfinis avec les données mises à jour pour vous assurer qu’ils informent avec précision votre cas d’utilisation métier. Les données sont actualisées de manière ad hoc lorsque le système ingère des sources de données nouvelles ou mises à jour. Cependant, les modèles ne seront restaurés que dans ce cas et continueront à utiliser les données de formation existantes.
-> 
+>
 > Vous pouvez configurer un **Calendrier de mise à jour** en définissant le calendrier de réentraînement du modèle dans l’expérience de configuration. Le modèle sera réentraîné et restauré selon ce calendrier, que vous pouvez modifier à tout moment.
-
 
 ## <a name="azure-machine-learning-integration"></a>Intégration d’Azure Machine Learning
 
 Si une organisation utilise déjà des scénarios de Machine Learning basés sur des expériences Azure Machine Learning, la fonctionnalité de modèles personnalisés dans Customer Insights permet de connecter les points. Créez des flux de travail qui vous aident à choisir les données pour lesquelles vous souhaitez générer des informations et à mettre en correspondance les résultats avec vos profils de client unifiés. Pour plus d’informations, voir [Modèles personnalisés Machine Learning](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>Prédiction AI Builder
-
-Parfois, les jeux de données sont incomplets et certaines valeurs sont manquantes. Customer Insights peut aider à prédire les valeurs manquantes pour l’entité et les segments Client. Pour plus d’informations, consultez [Compléter vos données partielles avec des prédictions](predictions.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

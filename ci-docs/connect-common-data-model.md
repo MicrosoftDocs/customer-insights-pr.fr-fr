@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245784"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396043"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Se connecter aux données dans Azure Data Lake Storage
 
@@ -39,6 +39,8 @@ Ingérez des données dans Dynamics 365 Customer Insights en utilisant votre com
   - Lecteur de données d’objets BLOB de stockage
   - Propriétaire de données d’objets BLOB de stockage
   - Contributeur de données BLOB de stockage
+
+- L’utilisateur qui configure la connexion source de données a besoin du minimum d’autorisations Contributeur de données Blob de stockage sur le compte de stockage.
 
 - Les données de votre Data Lake Storage doivent suivre la norme Common Data Model pour le stockage de vos données et avoir le manifeste du modèle de données commun pour représenter le schéma des fichiers de données (*.csv ou *.parquet). Le manifeste doit fournir les détails des entités telles que les colonnes d'entité et les types de données, ainsi que l'emplacement du fichier de données et le type de fichier. Pour plus d’informations, voir [Manifeste Common Data Model](/common-data-model/sdk/manifest). Si le manifeste n'est pas présent, les utilisateurs administrateurs disposant d'un accès Propriétaire des données blob de stockage ou Contributeur de données blob de stockage peuvent définir le schéma lors de l'ingestion des données.
 
@@ -62,7 +64,7 @@ Ingérez des données dans Dynamics 365 Customer Insights en utilisant votre com
    > [!NOTE]
    > L’un des rôles suivants pour le conteneur ou le compte de stockage est nécessaire pour créer la source de données :
    >
-   >  - Le rôle Lecteur des données blob de stockage est suffisant pour lire à partir d’un compte de stockage et ingérer les données dans Customer Insights. 
+   >  - Le rôle Lecteur des données blob de stockage est suffisant pour lire à partir d’un compte de stockage et ingérer les données dans Customer Insights.
    >  - Le rôle Contributeur ou propriétaire des données blob de stockage est nécessaire si vous souhaitez modifier les fichiers manifeste directement dans Customer Insights.  
   
 1. Choisissez le nom du **Conteneur** contenant les données et le schéma (fichier model.json ou manifest.json) à partir desquels importer les données, puis sélectionnez **Suivant**.

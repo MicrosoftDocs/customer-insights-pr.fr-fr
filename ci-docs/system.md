@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246244"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395998"
 ---
 # <a name="view-system-configuration"></a>Afficher la configuration du système
 
@@ -38,12 +38,6 @@ Affichez des détails sur l’utilisation de l’API en temps réel et voyez que
    - **Appels API** – un graphique qui visualise le nombre total d’appels à l’API dans le délai d’exécution sélectionné.
    - **Transfert de données** – un graphique qui montre la quantité de données transférées via l’API dans le délai d’exécution sélectionné.
    - **Opérations** – un tableau avec des lignes pour chaque opération API disponible et des détails sur l’utilisation des opérations. Sélectionnez un nom d’opération pour accéder à [la référence API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Les opérations qui utilisent [l’ingestion de données en temps réel](real-time-data-ingestion.md) contiennent un symbole de jumelles pour visualiser l’utilisation de l’API en temps réel.
-
-   1. Sélectionnez la jumelle pour ouvrir le volet **Utilisation de l'API en temps réel** contenant les détails d'utilisation de l'opération.
-   1. **Sélectionner un délai d’exécution** pour afficher les données.
-   1. Utilisez la zone **Par groupe** pour choisir la meilleure façon de présenter vos interactions en temps réel. Regroupez les données par **Méthode** API, **Nom qualifié d’entité** (entité ingérée), **Créé par** (source de l’événement), **Résultat** (succès ou échec) ou **Codes d’erreur**. Les données sont disponibles sous forme de graphique historique et sous forme de tableau.
 
 ## <a name="view-system-information"></a>Afficher les informations système
 

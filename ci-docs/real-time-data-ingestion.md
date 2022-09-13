@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: dd433b57e8695891a08d6f7fdb8c87befd2e1cfa
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246105"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396058"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestion de données en temps réel (préversion)
 
@@ -82,10 +82,5 @@ Vous pouvez utiliser les fonctionnalités en temps réel en créant votre propre
 Vous pouvez publier une activité au format de votre système source ou au format UnifiedActivity. Procurez-vous le format en effectuant un appel d’API vers /api/instances/{instanceId}/manage/entities/UnifiedActivity.
 
 Les détails de cette API, notamment les paramètres et les réponses, sont disponibles dans la section **EntityData** du [Guide de référence des API de Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Pour plus d’informations, consultez [Utiliser les API de Customer Insights](apis.md).
-
-## <a name="understand-your-real-time-usage-with-telemetry"></a>Comprendre votre utilisation en temps réel avec la télémétrie
-
-Obtenez une vue d’ensemble du volume de demandes adressées à l’API en temps réel ainsi que des informations sur les problèmes que le système peut rencontrer. Vous pouvez [accéder à la télémétrie en temps réel](system.md#view-api-usage). 
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 421e1aa41a54a4b8c34ac27fc7c02e510d2bb588
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387153"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411737"
 ---
 # <a name="service-limits-in-customer-insights"></a>Limites de service dans Customer Insights
 
@@ -23,7 +23,7 @@ ms.locfileid: "9387153"
 
 | Area  | Limites  | Remarques |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segments, mesures et prédictions | 300  | Le nombre total de [segments](segments.md), de [mesures](measures.md) et de [prédictions](predictions.md) combinés ne peut pas dépasser 300.  |
+| Segments, mesures et prédictions | 300  | Le nombre total de [segments](segments.md), de [mesures](measures.md) et de [prédictions](predictions-overview.md) combinés ne peut pas dépasser 300.  |
 | Relations | 20 niveaux de profondeur sur les relations dans les chemins d'entité. | Lors de la création de [segments](segments.md) ou de [mesures](measures.md) en utilisant l’interface du générateur, les chemins d’entité peuvent avoir jusqu’à 20 sauts de relation entre l’entité de départ et l’entité cible.  |
 
 ## <a name="fair-scheduling-of-jobs"></a>Ordonnancement équitable des travaux

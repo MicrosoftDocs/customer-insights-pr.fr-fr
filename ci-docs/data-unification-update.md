@@ -1,7 +1,7 @@
 ---
 title: Mettre à jour les paramètres d’unification des clients, des comptes ou des contacts
 description: Mettez à jour les règles de duplication, les règles de correspondance ou les champs unifiés dans les paramètres d’unification des clients ou des comptes.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304332"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392468"
 ---
 # <a name="update-unification-settings"></a>Mettre à jour les paramètres d’unification
 
@@ -38,7 +38,7 @@ Pour revoir ou modifier les paramètres d’unification une fois qu’un profil 
    > La vignette **Conditions de mise en correspondance** s’affiche uniquement si plusieurs entités ont été sélectionnées.
 
 1. Choisissez ce que vous voulez mettre à jour :
-   - [Champs source](#edit-source-fields) pour ajouter des entités ou des attributs ou modifier les types d’attributs.
+   - [Champs source](#edit-source-fields) pour ajouter des entités ou des attributs ou modifier les types d’attributs. Pour supprimer un attribut, voir [Supprimer un champ unifié](#remove-a-unified-field). Pour supprimer une entité, voir [Supprimer une entité unifiée](#remove-a-unified-entity).
    - [Enregistrements en double](#manage-deduplication-rules) pour gérer les règles de déduplication ou les préférences de fusion.
    - [Conditions de correspondance](#manage-match-rules) pour mettre à jour les règles de correspondance entre deux ou plusieurs entités.
    - [Champs client unifiés](#manage-unified-fields) pour combiner ou exclure des champs. Vous pouvez également regrouper des profils associés dans des clusters.
@@ -53,8 +53,6 @@ Pour revoir ou modifier les paramètres d’unification une fois qu’un profil 
 
 ## <a name="edit-source-fields"></a>Modifier les champs source
 
-Vous ne pouvez pas supprimer un attribut ou une entité s’ils ont déjà été unifiés.
-
 1. Sélectionnez **Modifier** sur la vignette **Champs source**.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Capture d’écran de la page Champs source indiquant le nombre de clés primaires, les champs mappés et non mappés":::
@@ -66,6 +64,80 @@ Vous ne pouvez pas supprimer un attribut ou une entité s’ils ont déjà été
 1. Vous pouvez, si vous le souhaitez, modifier la clé primaire d’une entité, les types d’attributs et activer ou désactiver le **Mappage intelligent**. Pour plus d’informations, voir [Sélectionner les champs source](map-entities.md).
 
 1. Sélectionnez **Suivant** pour apporter des modifications aux règles de déduplication, ou sélectionnez **Enregistre et fermer** pour revenir dans [Mettre à jour les paramètres d’unification](#update-unification-settings).
+
+### <a name="remove-a-unified-field"></a>Supprimer un champ unifié
+
+Pour supprimer un champ qui a été unifié, le champ doit être supprimé de toutes les dépendances telles que les segments, les mesures, les enrichissements ou relations.
+
+1. Une fois que toutes les dépendances du champ ont été supprimées, accédez à **Données** > **Unifier**.
+
+1. Sélectionnez **Modifier** sur la vignette **Champs clients unifiés**.
+
+1. Sélectionnez toutes les occurrences du champ, puis sélectionnez **Exclure**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Capture d’écran de la page Champs unifiés montrant les champs sélectionnés et le bouton Exclure":::
+
+1. Sélectionnez **Terminé** pour confirmer, puis sélectionnez **Enregistrer et fermer**.
+
+   > [!TIP]
+   > Si vous voyez le message « Impossible d’enregistrer unify. Impossible de modifier ou de supprimer la ressource spécifiée en raison de dépendances en aval », le champ est encore utilisé dans une dépendance en aval.
+
+1. Si le champ est utilisé dans une règle pour les enregistrements en double ou les conditions de correspondance, procédez comme suit. Sinon, passez à l’étape suivante.
+   1. Sélectionnez **Modifier** sur la vignette **Enregistrements en double**.
+   1. Supprimez le champ de toutes les règles dans lesquelles il est utilisé, le cas échéant, puis sélectionnez **Suivant**.
+   1. Sur la page **Conditions de correspondance**, supprimez le champ de toutes les règles dans lesquelles il est utilisé, le cas échéant, puis sélectionnez **Enregistrer et fermer**.
+   1. Sélectionnez **Unifier** > **Unifier les profils des clients et les dépendances**. Attendez que l’unification soit terminée avant de passer à l’étape suivante.
+
+1. Sélectionnez **Modifier** sur la vignette **Champs source**.
+
+1. Sélectionnez **Sélectionner des entités et des champs** et décochez la case à côté de chaque occurrence du champ.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Capture d’écran de la boîte de dialogue Sélectionner des entités et des champs affichant des cases à cocher désactivées":::
+
+1. Cliquez sur **Appliquer**.
+
+1. Cliquez sur **Enregistrer et fermer**.
+
+1. Sélectionnez **Unifier** > **Unifier les profils clients et les dépendances** pour mettre à jour le profil unifié.
+
+### <a name="remove-a-unified-entity"></a>Supprimer une entité unifiée
+
+Pour supprimer une entité qui a été unifiée, l’entité doit être supprimée de toutes les dépendances telles que les segments, les mesures, les enrichissements ou relations.
+
+1. Une fois que toutes les dépendances de l’entité ont été supprimées, accédez à **Données** > **Unifier**.
+
+1. Sélectionnez **Modifier** sur la vignette **Champs clients unifiés**.
+
+1. Sélectionnez tous les champs pour l’entité, puis sélectionnez **Exclure**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Capture d’écran de la page Champs unifiés avec tous les champs pour une entité sélectionnée et le bouton Exclure":::
+
+1. Sélectionnez **Terminé** pour confirmer, puis sélectionnez **Enregistrer et fermer**.
+
+   > [!TIP]
+   > Si vous voyez le message « Impossible d’enregistrer unify. Impossible de modifier ou de supprimer la ressource spécifiée en raison de dépendances en aval », l’entité est encore utilisée dans une dépendance en aval.
+
+1. Sélectionnez **Modifier** sur la vignette **Enregistrements en double**.
+
+1. Supprimez toutes les règles de l’entité, le cas échéant, puis sélectionnez **Suivant**.
+
+1. Sur la page **Conditions de correspondance**, sélectionnez l’entité, puis **Supprimer**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Capture d’écran des conditions de correspondance avec l’entité sélectionnée et le bouton Supprimer":::
+
+1. Cliquez sur **Enregistrer et fermer**.
+
+1. Sélectionnez **Modifier** sur la vignette **Champs source**.
+
+1. Sélectionnez **Sélectionner des entités et des champs** et décochez la case à côté de l’entité.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Capture d’écran de la boîte de dialogue Sélectionner des entités et des champs affichant la case à cocher désactivée":::
+
+1. Cliquez sur **Appliquer**.
+
+1. Cliquez sur **Enregistrer et fermer**.
+
+1. Sélectionnez **Unifier** > **Unifier les profils clients et les dépendances** pour mettre à jour le profil unifié.
 
 ## <a name="manage-deduplication-rules"></a>Gérer les règles de déduplication
 
