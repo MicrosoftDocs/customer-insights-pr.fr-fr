@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304056"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460187"
 ---
 # <a name="exports-preview-overview"></a>Vue d’ensemble des exportations (version préliminaire)
 
@@ -81,6 +81,11 @@ Sélectionnez une exportation pour afficher les actions disponibles.
 ## <a name="schedule-and-run-exports"></a>Planifier et exécuter les exportations
 
 Chaque exportation que vous configurez comporte une planification d’actualisation. Lors d'une actualisation, le système recherche des données nouvelles ou mises à jour à inclure dans une exportation. Par défaut, les exportations sont exécutées dans le cadre de chaque [actualisation du système planifiée](schedule-refresh.md). Vous pouvez personnaliser la planification d’actualisation ou la désactiver pour exécuter les exportations manuellement.
+
+> [!TIP]
+> Réduisez le temps de traitement des exportations de segments grâce aux bonnes pratiques suivantes :
+> - Distribuez les entités de segment sur plusieurs exportations.
+> - Évitez de programmer toutes les exportations en même temps. Laissez 30 minutes ou une heure entre l’heure programmée de chaque exportation.
 
 Les planifications d'exportation dépendent de l'état de votre environnement. Si des mises à jour sont en cours sur les [dépendances](system.md#refresh-processes) lorsqu’une exportation planifiée doit commencer, le système finalisera d’abord les mises à jour, puis exécutera l’exportation. La colonne **Actualisé** indique la dernière actualisation d’une exportation.
 

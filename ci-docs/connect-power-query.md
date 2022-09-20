@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207042"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463262"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Se connecter à une source de données Power Query
 
@@ -63,7 +63,9 @@ L’ajout de sources de données basées sur les connecteurs Power Query suit g�
 Le chargement des données peut prendre du temps. Après une actualisation réussie, les données ingérées peuvent être consultées à partir de la page [**Entités**](entities.md).
 
 > [!CAUTION]
-> Une source de données basée sur Power Query crée un [flux de données dans Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Ne modifiez pas le nom d’un flux de données dans le Centre d’administration de Power Platform utilisé dans Customer Insights. Renommer un flux de données entraîne des problèmes avec les références entre la source de données Customer Insights et le flux de données Dataverse.
+>
+> - Une source de données basée sur Power Query crée un [flux de données dans Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Ne modifiez pas le nom d’un flux de données dans le Centre d’administration de Power Platform utilisé dans Customer Insights. Renommer un flux de données entraîne des problèmes avec les références entre la source de données Customer Insights et le flux de données Dataverse.
+> - Les évaluations simultanées pour les sources de données Power Query dans Customer Insights ont les mêmes [limites d’actualisation que les flux de données dans PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Si une actualisation des données échoue parce qu’elle a atteint la limite d’évaluation, nous vous recommandons d’ajuster la planification d’actualisation pour chaque flux de données afin de vous assurer que les sources de données ne sont pas traitées en même temps.
 
 ### <a name="available-power-query-data-sources"></a>Sources de données Power Query disponibles
 
@@ -77,7 +79,7 @@ L’ingestion de données à partir de sources de données locales est prise en 
 
 Les sources de données créées après avoir associé un environnement Dataverse à Customer Insights utilisent les [flux de données Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) par défaut. Les flux de données prennent en charge la connectivité locale à l’aide de la passerelle de données. Vous pouvez supprimer et recréer des sources de données qui existaient avant l’association d’un environnement Dataverse [en utilisant les passerelles de données locales](/data-integration/gateway/service-gateway-app).
 
-Les passerelles de données d’un environnement Power BI ou Power Apps existant seront visibles et vous pourrez les réutiliser dans Customer Insights. La page des sources de données affiche des liens pour accéder à l’environnement Microsoft Power Platform dans lequel vous pouvez afficher et configurer les passerelles de données locales.
+Les passerelles de données à partir d’un environnement Power BI ou Power Apps seront visibles et vous pourrez les réutiliser dans Customer Insights si la passerelle de données et l’environnement Customer Insights se trouvent dans la même région Azure. La page des sources de données affiche des liens pour accéder à l’environnement Microsoft Power Platform dans lequel vous pouvez afficher et configurer les passerelles de données locales.
 
 > [!IMPORTANT]
 > Assurez-vous que vos passerelles sont mises à jour vers la version la plus récente. Vous pouvez installer une mise à jour et reconfigurer une passerelle à partir d’une invite affichée sur l’écran de la passerelle directement ou [télécharger la version la plus récente](https://powerapps.microsoft.com/downloads/). Si vous n’utilisez pas la version la plus récente de la passerelle, l’actualisation du flux de données échoue avec des messages d’erreur comme **Le mot clé n’est pas pris en charge : propriétés de configuration. Nom du paramètre : mot clé**.
