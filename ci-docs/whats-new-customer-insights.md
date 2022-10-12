@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
-ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
+ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "9409354"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609589"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nouveautés de Dynamics 365 Customer Insights
 
@@ -228,9 +228,9 @@ Pour plus d’informations, voir [Changer le propriétaire d’un environnement]
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Le processus de préparation des données répertorie les raisons de la corruption des enregistrements corrompus
 
-La préparation des données affiche désormais la raison de la corruption pour tous les champs contenant des données corrompues. Ces informations sont fournies au niveau de l’enregistrement individuel afin de faciliter l’identification. 
+La préparation des données affiche désormais la raison de la corruption pour tous les champs contenant des données corrompues. Ces informations sont fournies au niveau de l’enregistrement individuel afin de faciliter l’identification.
 
-Pour plus d’informations, voir [Sources de données endommagées](entities.md#corrupted-data-sources).
+Pour plus d’informations, voir [Sources de données endommagées](data-sources.md#corrupt-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Fin de l’aperçu des fonctionnalités de création de rapports dans la fonctionnalité d’informations sur l’engagement
 

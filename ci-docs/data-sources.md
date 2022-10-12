@@ -1,7 +1,7 @@
 ---
 title: Vue d’ensemble des sources de données
 description: Découvrez comment importer ou ingérer des données à partir de diverses sources.
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f89da3cf5b56e367bd673740f80cd82ec0907b28
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245646"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610049"
 ---
 # <a name="data-sources-overview"></a>Vue d’ensemble des sources de données
 
@@ -65,7 +65,9 @@ Sélectionnez une source de données pour afficher les actions disponibles.
 
 ## <a name="refresh-data-sources"></a>Actualiser les sources de données
 
-Les sources de données peuvent être actualisées selon un calendrier automatique ou actualisées manuellement à la demande. Les [Sources de données sur site](connect-power-query.md#add-data-from-on-premises-data-sources) s'actualisent selon leurs propres horaires qui sont configurés lors de l'ingestion de données. Pour les sources de données attachées, l'ingestion de données utilise les dernières données disponibles à partir de ce source de données.
+Les sources de données peuvent être actualisées selon un calendrier automatique ou actualisées manuellement à la demande. Les [Sources de données sur site](connect-power-query.md#add-data-from-on-premises-data-sources) s'actualisent selon leurs propres horaires qui sont configurés lors de l'ingestion de données. Pour obtenir des conseils de résolution des problèmes, consultez [Résoudre les problèmes d’actualisation de la source de données PPDF basée sur Power Query](connect-power-query.md#troubleshoot-ppdf-power-query-based-data-source-refresh-issues).
+
+Pour les sources de données attachées, l'ingestion de données utilise les dernières données disponibles à partir de ce source de données.
 
 Accédez à **Administrateur** > **Système** > [**Programme**](schedule-refresh.md) pour configurer les actualisations planifiées par le système de vos sources de données ingérées.
 
@@ -76,5 +78,37 @@ Pour actualiser une source de données à la demande :
 1. Sélectionnez la source de données que vous souhaitez actualiser et sélectionnez **Actualiser**. La source de données est maintenant déclenchée pour une actualisation manuelle. Si vous actualisez une source de données, à la fois le schéma de l’entité et les données seront mis à jour pour toutes les entités spécifiées dans la source de données.
 
 1. Sélectionnez le statut pour ouvrir le volet **Détails de la progression** et afficher la progression. Pour annuler la tâche, sélectionnez **Annuler la tâche** en bas du volet.
+
+## <a name="corrupt-data-sources"></a>Sources de données endommagées
+
+Les données ingérées peuvent contenir des enregistrements endommagés, pouvant entraîner des erreurs ou des avertissements dans le processus d’ingestion des données.
+
+> [!NOTE]
+> Si l’ingestion des données se termine avec des erreurs, le traitement ultérieur (tel que l’unification ou la création d’activités) qui utilise cette source de données sera ignoré. Si l’ingestion s’est terminée avec des avertissements, le traitement ultérieur se poursuit, mais certains enregistrements peuvent ne pas être inclus.
+
+Ces erreurs peuvent être visualisées dans les détails de la tâche.
+
+:::image type="content" source="media/corrupt-task-error.png" alt-text="Détails de la tâche montrant une erreur de données endommagées.":::
+
+Les enregistrements endommagés sont affichés dans les entités créées par le système.
+
+### <a name="fix-corrupt-data"></a>Corriger les données endommagées
+
+1. Pour afficher les données endommagées, accédez à **Données** > **Entités** et recherchez les entités endommagées dans la section **Système**. Schéma d’affectation de nom des entités endommagées : « DataSourceName_EntityName_corrupt ».
+
+1. Sélectionnez une entité endommagée, puis l’onglet **Données**.
+
+1. Identifiez les champs endommagés dans un enregistrement et la raison.
+
+   :::image type="content" source="media/corruption-reason.png" alt-text="Raison de la corruption." lightbox="media/corruption-reason.png":::
+
+   > [!NOTE]
+   > **Données** > **Entités** affiche uniquement une partie des enregistrements endommagés. Pour afficher tous les enregistrements endommagés, exportez les fichiers vers un conteneur du compte de stockage en utilisant le [Processus d’exportation de Customer Insights](export-destinations.md). Si vous avez utilisé votre propre compte de stockage, vous pouvez également consulter le dossier Customer Insights de votre compte de stockage.
+
+1. Corrigez les données endommagées. Par exemple, pour les sources de données Azure Data Lake, [corrigez les données dans Data Lake Storage ou mettez à jour les types de données dans le fichier manifest/model.json](connect-common-data-model.md#common-reasons-for-ingestion-errors-or-corrupt-data). Pour les sources de données Power Query, corrigez les données dans le fichier source et [corrigez le type de données dans l’étape de transformation](connect-power-query.md#data-type-does-not-match-data) de la page **Power Query - Modifier les requêtes**.
+
+Après la prochaine actualisation de la source de données, les enregistrements corrigés sont ingérés dans Customer Insights et transmis aux processus en aval.
+
+Par exemple, une colonne « anniversaire » a le type de données défini comme « date ». La date de naissance d’un enregistrement client est le « 01/01/19777 ». Le système marque cet enregistrement comme endommagé. Modifiez la date d’anniversaire du système source en « 1977 ». Après une actualisation automatique des sources de données, le champ a désormais un format valide et l’enregistrement est supprimé de l’entité endommagée.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

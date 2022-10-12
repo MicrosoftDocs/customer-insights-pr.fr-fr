@@ -1,23 +1,23 @@
 ---
 title: Créer un segment basé sur un modèle de prédiction
 description: Créez des segments basés sur l’entité de sortie d’un modèle de prédiction.
-ms.date: 03/24/2021
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: d67594f2467c1a0fde84b1ba0bd1afa4025e7b71
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ed9c6247a1f9148628dc9b5217484e98a576224e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081053"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610417"
 ---
 # <a name="create-a-segment-based-on-a-prediction-model-preview"></a>Créer un segment basé sur un modèle de prédiction (version préliminaire)
 
-Les résultats des prédictions ne s’appliquent parfois qu’à un sous-ensemble de vos clients. Augmentez la personnalisation des recommandations en créant des segments à partir des résultats des modèles de prédiction. Par exemple, vous souhaitez peut-être donner des recommandations spécifiques aux clients qui préfèrent un certain type de service. 
+Les résultats des prédictions ne s’appliquent parfois qu’à un sous-ensemble de vos clients. Augmentez la personnalisation des recommandations en créant des segments à partir des résultats des modèles de prédiction. Par exemple, vous souhaitez peut-être donner des recommandations spécifiques aux clients qui préfèrent un certain type de service.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -34,10 +34,15 @@ Les résultats des prédictions ne s’appliquent parfois qu’à un sous-ensemb
 
 1. Accédez à **Intelligence** > **Prédictions** et sélectionnez l’onglet **Mes prédictions**.
 
-1. Sélectionnez les points de suspension verticaux en regard du modèle que vous souhaitez réviser et sélectionnez **Afficher**.
+1. Sélectionnez le modèle que vous souhaitez réviser et sélectionnez **Afficher**.
 
 1. Sur la page de résultats, sélectionnez **Créer un segment**. Pour obtenir plus d’informations sur la page de résultats, consultez l’article sur le modèle.
 
    :::image type="content" source="media/prediction-create-segment.png" alt-text="Capture d’écran de la page des résultats de prédiction avec l’action Créer un segment mise en surbrillance.":::
 
-1. Créer un nouveau segment basé sur l’entité de sortie du modèle sélectionné. Pour plus d’informations, consultez [Créer et gérer les segments](segments.md).
+1. Créez un nouveau segment en utilisant des attributs de l’entité de sortie du modèle sélectionné. Pour plus d’informations, consultez [Créer et gérer les segments](segments.md).
+
+> [!TIP]
+> Vous pouvez également créer un segment pour un modèle de prédiction à partir de la page **Segments** en sélectionnant **Nouveau** et en choisissant **Créer à partir de** > **Intelligence**. Pour plus d’informations, consultez [Créer un nouveau segment avec des segments rapides](segment-quick.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

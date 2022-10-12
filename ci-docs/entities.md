@@ -1,7 +1,7 @@
 ---
 title: Entités dans Customer Insights
 description: Affichez les données sur la page Entités.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183548"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610095"
 ---
 # <a name="entities-in-customer-insights"></a>Entités dans Customer Insights
 
@@ -61,27 +61,5 @@ Accédez à **Données** > **Entités** pour afficher une liste d’entités. Le
   - **Créé** : date et heure de création de l’entité.
   - **Modifié par** : nom de la personne qui a modifié l’entité.
   - **Modifié** : date et heure de modification de l’entité.
-
-## <a name="entity-specific-information"></a>Informations propres à une entité
-
-La section suivante fournit des informations sur certaines entités créées par le système.
-
-### <a name="corrupted-data-sources"></a>Sources de données endommagée
-
-Les champs d’une source de données ingérées peuvent contenir des données endommagées. Les enregistrements avec des champs endommagés sont exposés dans des entités créées par le système. Connaître les enregistrements endommagés vous aide à identifier les données à examiner et à mettre à jour sur le système source. Après la prochaine actualisation de la source de données, les enregistrements corrigés sont ingérés dans Customer Insights et transmis aux processus en aval. 
-
-Par exemple, une colonne « anniversaire » a le type de données défini comme « date ». La date de naissance d’un enregistrement client est le « 01/01/19777 ». Le système marque cet enregistrement comme endommagé. Quelqu’un peut maintenant changer l’anniversaire dans le système source avec « 1977 ». Après une actualisation automatique des sources de données, le champ a désormais un format valide et l’enregistrement est supprimé de l’entité endommagée.
-
-Accédez à **Données** > **Entités** et recherchez les entités corrompues dans la section **Système**. Schéma d’affectation de nom des entités endommagées : « DataSourceName_EntityName_corrupt ». Sélectionnez une entité corrompue pour identifier les champs corrompus et la raison au niveau de l’enregistrement individuel.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Raison de la corruption.":::
-
-Customer Insights traite toujours les enregistrements endommagés. Cependant, ils peuvent causer des problèmes lors de l’utilisation des données unifiées.
-
-Les vérifications suivantes s’exécutent sur les données ingérées pour exposer les enregistrements endommagés :
-
-- La valeur d’un champ ne correspond pas au type de données de sa colonne.
-- Les champs contiennent des caractères qui font que les colonnes ne correspondent pas au schéma attendu. Par exemple : guillemets mal formatés, guillemets sans échappement ou caractères de nouvelle ligne.
-- S’il existe des colonnes datetime/date/datetimeoffset, leur format doit être spécifié dans le modèle s’il ne respecte pas le format ISO standard.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
