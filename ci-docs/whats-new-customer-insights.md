@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
-ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
+ms.openlocfilehash: dcee60a73e0c32278553253040478c31e45237ae
+ms.sourcegitcommit: 618ef15b434de0a68213383b6521ce2a60753afb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "9609589"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "9638348"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nouveautés de Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Nous déployons des mises à jour région par région. Ainsi, certaines régions
 
 > [!TIP]
 > Pour envoyer et voter sur les demandes de fonctionnalités et les suggestions de produits, accédez au [portail Idées d’application Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2022-updates"></a>Mises à jour de septembre 2022
+
+Les mises à jour de septembre 2022 incluent de nouvelles fonctionnalités, des améliorations de performances et des corrections de bogues.
+
+### <a name="export-data-to-hubspot"></a>Exporter les données vers HubSpot
+
+Exportez des segments de profils clients unifiés vers HubSpot et utilisez-les pour le marketing par e-mail.
+
+Pour plus d’informations, consultez [Exporter des segments vers HubSpot](export-hubspot.md).
+
+### <a name="remove-a-unified-field-or-entity-from-data-unification"></a>Supprimer un champ ou une entité unifié de l’unification des données
+
+Vous pouvez supprimer des champs et des entités du processus d’unification des données.
+
+Plus d’informations, voir : [Supprimer un champ unifié](data-unification-update.md#remove-a-unified-field).
+
+### <a name="manage-unknown-customer-profiles"></a>Gérer les profils clients inconnus
+
+La personnalisation mémorable dépend de la richesse et de l’exhaustivité de vos données clients et Customer Insights vous aide à atteindre ces objectifs. Vous pouvez gérer les profils clients des utilisateurs pour lesquels vous ne disposez d’aucune information autre qu’un ID.
+
+Pour plus d’informations, consultez [Gérer les profils inconnus avec Customer Insights](manage-unknown-profiles.md).
 
 ## <a name="august-2022-updates"></a>Mises à jour d’août 2022
 
