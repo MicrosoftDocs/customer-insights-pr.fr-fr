@@ -2,7 +2,7 @@
 title: Mettre en correspondance des conditions pour l’unification des données
 description: Mettez en correspondance des données pour créer des profils clients unifiés.
 recommendations: false
-ms.date: 07/27/2022
+ms.date: 10/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: bbd2c5f441b85460250c11f02358ea67260278d6
+ms.sourcegitcommit: 52ea58c872b10f1e6f9d120be93df93cca1a12dd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304654"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "9721518"
 ---
 # <a name="match-conditions-for-data-unification"></a>Mettre en correspondance des conditions pour l’unification des données
 
@@ -130,12 +130,12 @@ Par exemple, si votre règle de correspondance combine le nom, la ville et la da
 
 ### <a name="specify-custom-match-conditions"></a>Spécifier des conditions de correspondance personnalisées
 
-Vous pouvez spécifier des conditions qui remplacent la logique de correspondance par défaut. Il existe quatre options disponibles :
+Spécifier des conditions qui remplacent la logique de correspondance par défaut. Il existe quatre options disponibles :
 
 |Option  |Description |Exemple  |
 |---------|---------|---------|
-|Toujours correspondre     | Définit des valeurs qui correspondent toujours.         |  Toujours correspondre *Mike* et *MikeR*.       |
-|Jamais correspondre     | Définit des valeurs qui ne correspondent jamais.        | Jamais correspondre *John* et *Jonathan*.        |
+|Toujours correspondre     | Définit des valeurs pour les clés primaires qui trouvent toujours une correspondance.         |  Fait toujours correspondre la ligne avec la clé primaire *12345* à la ligne avec la clé primaire *54321*.       |
+|Jamais correspondre     | Définit des valeurs pour les clés primaires qui ne trouvent jamais de correspondance.        | Ne fait jamais correspondre la ligne avec la clé primaire *12345* à la ligne avec la clé primaire *54321*.        |
 |Contourner            | Définit les valeurs que le système doit toujours ignorer dans la phase de correspondance. |  Ignorer les valeurs *11111* et *Inconnu* pendant la correspondance.        |
 |Mise en correspondance d’alias    | Définir des valeurs que le système doit considérer comme identiques.         | Considérer *Joe* comme égal à *Joseph*.        |
 
@@ -143,17 +143,18 @@ Vous pouvez spécifier des conditions qui remplacent la logique de correspondanc
 
    :::image type="content" source="media/m3_match_custom.png" alt-text="Bouton personnalisé":::
 
-1. Choisissez le **Type personnalisé** et sélectionnez **Télécharger le modèle**. Vous avez besoin d’un modèle distinct pour chaque option de correspondance.
+1. Choisissez le **Type personnalisé** et sélectionnez **Télécharger le modèle**. Renommez le modèle sans utiliser d’espaces. Utilisez un modèle distinct pour chaque option de correspondance.
 
-1. Ouvrez le fichier de modèle téléchargé et remplissez les détails. Le modèle contient des champs pour spécifier l’entité et les valeurs de clé primaire d’entité à utiliser dans la correspondance personnalisée. Par exemple, si vous souhaitez que la clé primaire *12345* de l’entité *Ventes* corresponde toujours à la clé primaire *34567* de l’entité *Contact*, remplissez le modèle :
-    - Entité 1 : Ventes
-    - Clé d’entité 1 : 12345
-    - Entité 2 : Contact
-    - Clé d’entité 2 : 34567
+1. Ouvrez le fichier de modèle téléchargé et remplissez les détails. Le modèle contient des champs pour spécifier l’entité et les valeurs de clé primaire d’entité à utiliser dans la correspondance personnalisée. Les noms des entités respectent la casse. Par exemple, si vous souhaitez que la clé primaire *12345* de l’entité *Ventes* corresponde toujours à la clé primaire *34567* de l’entité *Contact*, remplissez le modèle :
+   - Entité 1 : Ventes
+   - Clé d’entité 1 : 12345
+   - Entité 2 : Contact
+   - Clé d’entité 2 : 34567
 
    Le même fichier modèle peut spécifier des enregistrements de correspondance personnalisés à partir de plusieurs entités.
 
-   Si vous souhaitez spécifier une correspondance personnalisée pour la déduplication sur une entité, fournissez la même entité que Entity1 et Entity2 et définissez les différentes valeurs de clé primaire.
+   > [!NOTE]
+   > Si vous souhaitez spécifier une correspondance personnalisée pour la déduplication sur une entité, fournissez la même entité que Entity1 et Entity2 et définissez les différentes valeurs de clé primaire. Vous devez définir au moins une règle de déduplication sur l’entité pour utiliser la correspondance personnalisée.
 
 1. Après avoir ajouté tous les remplacements, enregistrez le modèle de fichier.
 
@@ -169,6 +170,8 @@ Vous pouvez spécifier des conditions qui remplacent la logique de correspondanc
    - Pour **Contournement** ou **Mappage d’alias**, sélectionnez **Modifier** sur une règle de correspondance existante ou créez une règle. Dans la liste déroulante Standardisations, choisissez l’option **Contournement personnalisé** ou **Mappage d’alias** et sélectionnez **Terminé**.
 
 1. Sélectionnez **Terminé** sur le volet **Personnalisé** pour appliquer la configuration de correspondance personnalisée.
+
+   Chaque fichier de modèle ingéré est sa propre source de données. Si des enregistrements nécessitant un traitement de correspondance spécial sont découverts, mettez à jour la source de données appropriée. La mise à jour sera utilisée lors du prochain processus d’unification. Par exemple, vous identifiez des jumeaux ayant presque le même nom et habitant à la même adresse qui ont été fusionnés en une seule personne. Mettez à jour la source de données pour identifier les jumeaux en tant qu’enregistrements distincts et uniques.
 
 > [!div class="nextstepaction"]
 > [Étape suivante : Unifier les champs](merge-entities.md)
