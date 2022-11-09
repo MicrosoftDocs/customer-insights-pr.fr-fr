@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 54aec10e24b6356e2e4317cf33e740a1a086a2dd
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d74672768afec94e899ff0aec8c118c2afcde368
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196851"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725029"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Exporter des segments vers Mailchimp (version préliminaire)
 
@@ -28,6 +28,7 @@ Exportez des segments de profils clients unifiés vers Mailchimp pour créer des
 
 ## <a name="known-limitations"></a>Limitations connues
 
+- Le lien privé en combinaison avec Bring your own storage (BYOS) n’est pas pris en charge.
 - Jusqu’à 1 million de profils clients par exportation vers Mailchimp, ce qui peut prendre jusqu’à trois heures. Le nombre de profils clients que vous pouvez exporter vers Mailchimp dépend de votre contrat avec Mailchimp.
 - Segments uniquement.
 

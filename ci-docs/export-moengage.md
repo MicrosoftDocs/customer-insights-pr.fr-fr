@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ffc591c01a5a9434cde41f2da25fa930a515b8c1
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: df38e9e88a9c116252fba26983b5f3711b46f051
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9199120"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725263"
 ---
 # <a name="export-segments-to-moengage-preview"></a>Exporter des segments vers MoEngage (version préliminaire)
 
@@ -27,6 +27,7 @@ Exportez des segments de profils clients unifiés vers MoEngage et utilisez-les 
 
 ## <a name="known-limitations"></a>Limitations connues
 
+- Le lien privé en combinaison avec Bring your own storage (BYOS) n’est pas pris en charge.
 - Un maximum de 100 000 profils clients par exportation vers MoEngage peut prendre jusqu’à 15 minutes. Le nombre de profils clients que vous pouvez exporter vers MoEngage dépend de votre contrat avec MoEngage.
 - Segments uniquement.
 

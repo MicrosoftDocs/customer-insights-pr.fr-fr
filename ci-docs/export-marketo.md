@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f57cdfbb24df8a8ffa1670b426d50dbba2c5f40f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: cba40b74b86a40fc41db856760c9361b755a8864
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195241"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724937"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exporter des segments vers Marketo (version préliminaire)
 
@@ -29,6 +29,7 @@ Exportez des segments de profils clients unifiés pour générer des campagnes, 
 
 ## <a name="known-limitations"></a>Limitations connues
 
+- Le lien privé en combinaison avec Bring your own storage (BYOS) n’est pas pris en charge.
 - Jusqu’à 1 million de profils clients par exportation vers Marketo, ce qui peut prendre jusqu’à 3 heures. Le nombre de profils clients que vous pouvez exporter vers Marketo dépend de votre contrat avec Marketo.
 - Segments uniquement.
 

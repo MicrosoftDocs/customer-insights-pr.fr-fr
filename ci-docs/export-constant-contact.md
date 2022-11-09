@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c0affd3ed45f462696850813bd50331061dde780
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196483"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724498"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Exporter des segments vers Constant Contact (version préliminaire)
 
@@ -28,6 +28,7 @@ Exportez des segments de profils client unifiés vers Constant Contact et utilis
 
 ## <a name="known-limitations"></a>Limitations connues
 
+- Le lien privé en combinaison avec Bring your own storage (BYOS) n’est pas pris en charge.
 - Un maximum d’un million de profils clients par exportation vers Constant Contact, ce qui peut prendre jusqu’à une heure. Le nombre de profils clients que vous pouvez exporter vers Constant Contact dépend de votre contrat avec Autopilot et est limité à Constant Contact.
 - Segments uniquement.
 

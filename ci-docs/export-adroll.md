@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8110eab199920ab8fc2ea15678139faf264a242a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 81adad4caf2d4c6f792bf920b29fc7c67eef42b0
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195747"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724675"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Exporter des segments vers AdRoll (version préliminaire)
 
@@ -28,6 +28,7 @@ Exportez des segments de profils clients unifiés vers AdRoll et utilisez-les po
 
 ## <a name="known-limitations"></a>Limitations connues
 
+- Le lien privé en combinaison avec Bring your own storage (BYOS) n’est pas pris en charge.
 - Un maximum de 250 000 profils clients par exportation vers AdRoll, ce qui peut prendre jusqu’à 10 minutes. Le nombre de profils clients que vous pouvez exporter vers AdRoll dépend de votre contrat avec AdRoll.
 - Segments uniquement. Un segment doit contenir au moins 100 profils clients.
 
